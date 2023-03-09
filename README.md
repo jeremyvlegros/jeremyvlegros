@@ -1,4 +1,4 @@
-# Link-tree
+# Link tree
 
 https://www.linkedin.com/in/jeremyvlegros
 
