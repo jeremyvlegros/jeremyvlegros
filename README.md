@@ -8,4 +8,4 @@ https://www.tumblr.com/jeremyvlegros  *no posts*
 
 https://www.reddit.com/user/jeremyvlegros  *no posts*
 
-https://www.nexusmods.com/users/152566508  *not posted yet*
+https://www.nexusmods.com/users/152566508 (jeremyvlegros) *not posted yet*
