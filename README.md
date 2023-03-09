@@ -17,3 +17,5 @@ https://www.nexusmods.com/users/152566508 (jeremyvlegros) *not started yet*
 https://github.com/jeremyvlegros *not started yet*
 
 https://steamcommunity.com/id/jeremyvlegros *not started yet*
+
+https://www.twitch.tv/jeremyvlegros *won't stream there (not implying that I will stream one day)*
