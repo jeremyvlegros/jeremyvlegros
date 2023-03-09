@@ -1,6 +1,6 @@
 # Quick about me
 
-I am a living paradoxical, a very private person going online, with its real name hence my unusual ways to deal with social media.
+I am a living paradox, a very private person going online, with its real name hence my unusual ways to deal with social media.
 
 # Links
 
