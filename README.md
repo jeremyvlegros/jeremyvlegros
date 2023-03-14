@@ -1,4 +1,4 @@
-# Quick about me
+# A quick `about me`
 
 I am a living paradox, a very private person going online, with its real name ... therefore I have unusual ways to deal with social media.
 
@@ -8,7 +8,7 @@ https://twitter.com/jeremyvlegros *inactive since March 2023*
 
 https://www.linkedin.com/in/jeremyvlegros  *rarely active*
 
-https://www.tumblr.com/jeremyvlegros  *no posts*
+https://www.tumblr.com/jeremyvlegros
 
 https://www.reddit.com/user/jeremyvlegros  *no posts*
 
