@@ -8,7 +8,7 @@ https://twitter.com/jeremyvlegros *inactive since March 2023*
 
 https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card  *rarely active*
 
-https://www.tumblr.com/jeremyvlegros
+https://jeremyvlegros.tumblr.com/
 
 https://www.reddit.com/user/jeremyvlegros  *no posts*
 
