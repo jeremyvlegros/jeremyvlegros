@@ -4,11 +4,11 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
+https://jeremyvlegros.tumblr.com/
+
 https://twitter.com/jeremyvlegros *inactive since March 2023*
 
 https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card  *rarely active*
-
-https://jeremyvlegros.tumblr.com/
 
 https://www.reddit.com/user/jeremyvlegros  *no posts*
 
