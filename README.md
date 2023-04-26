@@ -6,7 +6,7 @@ I am a living paradox, a very private person going online, with its real name ..
 
 https://twitter.com/jeremyvlegros *inactive since March 2023*
 
-https://www.linkedin.com/in/jeremyvlegros  *rarely active*
+https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card  *rarely active*
 
 https://www.tumblr.com/jeremyvlegros
 
