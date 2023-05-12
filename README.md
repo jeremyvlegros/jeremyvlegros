@@ -4,18 +4,18 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
-https://jeremyvlegros.tumblr.com/
+[Tumblr](https://jeremyvlegros.tumblr.com/)
 
-https://twitter.com/jeremyvlegros *inactive since March 2023*
+[Twitter](https://twitter.com/jeremyvlegros) *inactive since March 2023*
 
-https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card  *rarely active*
+[LinkedIn](https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card)  *rarely active*
 
-https://www.reddit.com/user/jeremyvlegros  *no posts*
+[Reddit](https://www.reddit.com/user/jeremyvlegros)  *no posts*
 
-https://www.nexusmods.com/users/152566508 (jeremyvlegros) *not started yet*
+[Nexusmods](https://www.nexusmods.com/users/152566508) (jeremyvlegros) *not started yet*
 
-https://github.com/jeremyvlegros *not started yet*
+[Github](https://github.com/jeremyvlegros) *no uploaded code, yet*
 
-https://steamcommunity.com/id/jeremyvlegros *not started yet*
+[Steam](https://steamcommunity.com/id/jeremyvlegros) *not started yet*
 
-https://www.twitch.tv/jeremyvlegros *won't stream there (not implying that I will stream one day)*
+[Twitch](https://www.twitch.tv/jeremyvlegros) *won't stream there (not implying that I will stream one day)*
