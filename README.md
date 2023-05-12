@@ -12,7 +12,7 @@ I am a living paradox, a very private person going online, with its real name ..
 
 [Reddit](https://www.reddit.com/user/jeremyvlegros)  *no posts*
 
-[Nexusmods](https://www.nexusmods.com/users/152566508) (jeremyvlegros) *not started yet*
+[Nexusmods](https://www.nexusmods.com/users/152566508) *not started yet*
 
 [Github](https://github.com/jeremyvlegros) *no uploaded code, yet*
 
