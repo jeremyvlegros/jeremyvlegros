@@ -4,7 +4,7 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
-[`Tumblr`](https://jeremyvlegros.tumblr.com/)
+[`Tumblr`](https://jeremyvlegros.tumblr.com/) *curent posting platform*
 
 [`Twitter`](https://twitter.com/jeremyvlegros) *inactive since March 2023*
 
