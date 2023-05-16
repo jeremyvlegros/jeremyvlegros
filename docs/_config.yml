@@ -4,5 +4,6 @@
 # where I found after some more effort that https://jekyllrb.com/docs/configuration/default/
 # which is not even enough
 # It is literaly my life to search for documentation instead of programming, oh, wait ... there is not what I am looking for
-headline : "My links v1684233092"
+# ... what a pain... I will put a dirty style tag in my markdown I don't care anymore
+headline : "My links"
 name : "jeremyvlegros"
