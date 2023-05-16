@@ -1,4 +1,4 @@
-v1684230182
+v1684230432
 
 # A quick about me
 
@@ -45,7 +45,7 @@ I am a living paradox, a very private person going online, with its real name ..
 	<a style="text-decoration:none;color:white" href="https://github.com/jeremyvlegros">
 	 <div class="scaled" style="background-color:black;border-radius:5px;padding:20px;margin:10px;text-align:center">Github</div>
 	</a>
-	<div style="text-align: center;color:gray;"><i> only for code<//i></div>
+	<div style="text-align: center;color:gray;"><i> only for code</i></div>
  </div>
 
 <div>
@@ -59,5 +59,5 @@ I am a living paradox, a very private person going online, with its real name ..
 	<a style="text-decoration:none;color:white" href="https://steamcommunity.com/id/jeremyvlegros">
 	 <div style="background-color:black;border-radius:5px;padding:20px;margin:10px;text-align:center">Steam</div>
 	</a>
- </div>
+</div>
 
