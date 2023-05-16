@@ -1,5 +1,8 @@
-description: "This is my link tree done by myself v1684231626"
 # do you believe that it is infinitly faster to hack the code spawned in the HTML to get YAML variables than to find help on it ... 
-# headline : ""
-name : "My links"
-theme: minima
+# oh boy ... I had to go there https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll 
+# which sent me there https://jekyllrb.com/docs/configuration/
+# where I found after some more effort that https://jekyllrb.com/docs/configuration/default/
+# which is not even enough
+# It is literaly my life to search for documentation instead of programming, oh, wait ... there is not what I am looking for
+headline : "My links v1684233092"
+name : "jeremyvlegros"
