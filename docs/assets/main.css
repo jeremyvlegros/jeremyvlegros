@@ -1,14 +1,78 @@
-@import "minima";
-  
-.scaled:hover
+bbody
 {
-  transform: scale(1.2)
+  font-family:"Helvetica Neue",sans-serif!important;
+  /*background-color: #241e1e;*/
 }
 
-.scaled 
-{ 
-  transition: all .2s ease-in-out; 
+
+.home
+{
+  margin-left: 30%;
+  margin-right: 30%;
 }
+
+H1
+{
+  color:#00b8ff;
+}
+a
+{
+	text-decoration:none;
+
+}
+
+div div /*okay I'll admit I am having fun writing this instead of a class XD*/
+{
+  color:gray;
+  text-align: center;
+}
+
+
+a div
+{
+
+  color:white;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px grey;
+}
+
+
+a div:hover
+{
+  /*transform: scale(1.02);*/
+  transform: scale(0.99);
+  box-shadow: 2px 2px 2px #00b8ff;
+
+}
+
+a div
+{
+ transition: all .2s ease-in-out;
+ background-color:black;
+ border-radius:50px;
+ padding:20px;
+ margin:10px;
+ text-align:center;
+}
+
+}
+
+#version
+{
+	color : grey;
+}
+
+.text_gray
+{
+	color:gray;
+}
+
+.text_centered
+{
+	text-align: center
+}
+
+/*disabling more Jekyll stuff*/
 
 .site-nav
 {
