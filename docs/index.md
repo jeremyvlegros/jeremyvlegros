@@ -53,10 +53,3 @@ I am a living paradox, a very private person going online, with its real name ..
 	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Steam</div>
 	</a>
  </div>
-
-
-<div class="scaled">
-	<a style="text-decoration:none;color:white" href="zzzzzzzzzzzzzzz">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">test</div>
-	</a>
-</div>
