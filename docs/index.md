@@ -1,7 +1,3 @@
-v1684230432
-
-# A quick about me
-
 I am a living paradox, a very private person going online, with its real name ... therefore I have unusual ways to deal with social media.
 
 # Links
