@@ -5,6 +5,7 @@
 # which is not even enough
 # It is literaly my life to search for documentation instead of programming, oh, wait ... there is not what I am looking for
 # ... what a pain... I will put a dirty style tag in my markdown I don't care anymore
-headline : "My links"
 name : "jeremyvlegros"
 theme : minima
+headline : "Quick about me"
+url: ""
