@@ -6,7 +6,7 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
-<a href="https://jeremyvlegros.tumblr.com/"> Tumblr </a> *curent posting platform*
+<a href="https://jeremyvlegros.tumblr.com/" style="background-color:#0366d6;color:white;border-radius:5px;padding:10px"> Tumblr </a> *current posting platform*
 
 ---
 
