@@ -1,3 +1,7 @@
+
+![avatar_2023_squared_face_cool_sunglasses](https://github.com/jeremyvlegros/Link-tree/assets/102573413/83b59bc8-8116-4012-bb14-71ae557290ba)
+
+
 I am a living paradox, a very private person going online, with its real name ... therefore I have unusual ways to deal with social media.
 
 # Links
