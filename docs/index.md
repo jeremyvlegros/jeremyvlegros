@@ -1,5 +1,3 @@
-# A quick about me
-
 I am a living paradox, a very private person going online, with its real name ... therefore I have unusual ways to deal with social media.
 
 # Links
@@ -46,7 +44,7 @@ I am a living paradox, a very private person going online, with its real name ..
 	<div class="text_gray text_centered"><i> only for code</i></div>
  </div>
 
-<div>
+<div >
 	<a href="https://www.twitch.tv/jeremyvlegros">
 	 <div>Twitch</div>
 	</a>
@@ -63,6 +61,5 @@ I am a living paradox, a very private person going online, with its real name ..
 </div>
 
 <span id="version">
-	1684242256
+	Link tree version 1684242558
 </span>
-
