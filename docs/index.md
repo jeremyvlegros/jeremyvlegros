@@ -1,4 +1,4 @@
-V1684229493
+v1684229611
 
 # A quick about me
 
@@ -14,8 +14,8 @@ I am a living paradox, a very private person going online, with its real name ..
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://twitter.com/jeremyvlegros">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitter</div>
-	</a> *inactive since March 2023*
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitter *inactive since March 2023* </div>
+	</a> 
  </div>
 
 <div class="scaled">
@@ -51,6 +51,7 @@ I am a living paradox, a very private person going online, with its real name ..
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://steamcommunity.com/id/jeremyvlegros">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Steam</div>
+	 <div style="background-color:black;border-radius:5px;padding:20px;margin:10px;text-align:center">Steam</div>
 	</a>
  </div>
+
