@@ -4,10 +4,9 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
-
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://jeremyvlegros.tumblr.com/">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Tumblr</div>
+	 <div style="background-color:#001935;border-radius:5px;padding:20px;margin:10px;text-align:center">Tumblr</div>
 	</a> *current posting platform*
  </div>
 
@@ -19,32 +18,32 @@ I am a living paradox, a very private person going online, with its real name ..
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">LinkedIn</div>
+	 <div style="background-color:#0366d6;border-radius:5px;padding:20px;margin:10px;text-align:center">LinkedIn</div>
 	</a> *rarely active*
  </div>
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://www.reddit.com/user/jeremyvlegros">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Reddit</div>
+	 <div style="background-color:#ff4500;;border-radius:5px;padding:20px;margin:10px;text-align:center">Reddit</div>
 	</a> *no posts*
  </div>
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://www.nexusmods.com/users/152566508"> Nexus
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">mods</div>
+	 <div style="background-color:#d98f40;border-radius:5px;padding:20px;margin:10px;text-align:center">mods</div>
 	</a> *not started yet*
  </div>
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://github.com/jeremyvlegros">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Github</div>
+	 <div style="background-color:black;border-radius:5px;padding:20px;margin:10px;text-align:center">Github</div>
 	</a>
  </div>
 
 
 <div class="scaled">
 	<a style="text-decoration:none;color:white" href="https://www.twitch.tv/jeremyvlegros">
-	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitch</div>
+	 <div style="background-color:#5c16c5;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitch</div>
 	</a> *I won't stream there (not implying that I will stream one day)*
  </div>
 
