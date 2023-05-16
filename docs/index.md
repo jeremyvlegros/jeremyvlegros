@@ -4,35 +4,59 @@ I am a living paradox, a very private person going online, with its real name ..
 
 # Links
 
-<div style="background-color:#001935;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://jeremyvlegros.tumblr.com/"> Tumblr </a> *current posting platform*
+
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://jeremyvlegros.tumblr.com/">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Tumblr</div>
+	</a> *current posting platform*
  </div>
 
-<div style="background-color:#1da1f2;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://twitter.com/jeremyvlegros"> Twitter </a> *inactive since March 2023*
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://twitter.com/jeremyvlegros">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitter</div>
+	</a> *inactive since March 2023*
  </div>
 
-<div style="background-color:#0366d6;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card"> LinkedIn </a> *rarely active*
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">LinkedIn</div>
+	</a> *rarely active*
  </div>
 
-<div style="background-color:#ff4500;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://www.reddit.com/user/jeremyvlegros"> Reddit </a> *no posts*
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://www.reddit.com/user/jeremyvlegros">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Reddit</div>
+	</a> *no posts*
  </div>
 
-<div style="background-color:#d98f40;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://www.nexusmods.com/users/152566508"> Nexus mods </a> *not started yet*
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://www.nexusmods.com/users/152566508"> Nexus
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">mods</div>
+	</a> *not started yet*
  </div>
 
-<div style="background-color:black;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://github.com/jeremyvlegros">  Github </a>
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://github.com/jeremyvlegros">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Github</div>
+	</a>
  </div>
 
 
-<div style="background-color:#5c16c5;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://www.twitch.tv/jeremyvlegros"> Twitch </a> *I won't stream there (not implying that I will stream one day)*
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://www.twitch.tv/jeremyvlegros">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Twitch</div>
+	</a> *I won't stream there (not implying that I will stream one day)*
  </div>
 
-<div style="background-color:black;color:white;border-radius:5px;padding:20px;margin:10px;text-align:center">
-	<a style="text-decoration:none;color:white" href="https://steamcommunity.com/id/jeremyvlegros"> Steam </a>
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="https://steamcommunity.com/id/jeremyvlegros">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">Steam</div>
+	</a>
  </div>
+
+
+<div class="scaled">
+	<a style="text-decoration:none;color:white" href="zzzzzzzzzzzzzzz">
+	 <div style="background-color:#1da1f2;border-radius:5px;padding:20px;margin:10px;text-align:center">test</div>
+	</a>
+</div>
