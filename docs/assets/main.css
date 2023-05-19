@@ -14,26 +14,18 @@ body
 H1
 {
   color:#00b8ff;
+  text-align: center;
 }
+
 a
 {
 	text-decoration:none;
-
 }
 
 div div /*okay I'll admit I am having fun writing this instead of a class XD*/
 {
   color:gray;
   text-align: center;
-}
-
-
-a div
-{
-
-  color:white;
-  border: 1px solid white;
-  box-shadow: 2px 2px 2px grey;
 }
 
 
@@ -48,13 +40,62 @@ a div:hover
 a div
 {
  transition: all .2s ease-in-out;
- background-color:black;
+/* background-color:black;*/
  border-radius:50px;
  padding:20px;
  margin:10px;
  text-align:center;
+ box-shadow: 2px 2px 2px grey;
+ border: 1px solid white;
+ color : white;
 }
 
+#Steam
+{
+	background-color:#171A21 ;
+	border: 3px solid #196195;
+}
+
+#Github
+{
+	background-color:#272B33 ;
+	border: 3px solid white;
+}
+
+#Nexus
+{
+	background-color:#D98F40 ;
+	border: 3px solid white;
+}
+
+#Reddit
+{
+	background-color:#FA4400 ;
+	border: 3px solid white;
+}
+
+#Tumblr
+{
+	background-color:#001935 ;
+	border: 3px solid white;
+}
+
+#Twitter
+{
+	background-color:#1DA1F2 ;
+	border: 3px solid white;
+}
+
+#LinkedIn
+{
+	background-color:#0077B5 ;
+	border: 3px solid white;
+}
+
+#Twitch
+{
+	background-color:#9147FF ;
+	border: 3px solid white;
 }
 
 #version
