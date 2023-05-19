@@ -101,10 +101,8 @@ I am a living paradox, a very private person going online, with its real name ..
 
 
 
---- TESTING ---
-<a href="about_me.md"> about me - html link</a>
-
-[about me markdown link](about_me.md)
+--- In CSS-ing progress ---
+[about me](about_me.md)
 
 
 
