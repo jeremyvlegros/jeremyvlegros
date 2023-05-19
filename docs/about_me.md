@@ -3,25 +3,13 @@ title: About me
 layout: template
 filename: about_me.md
 --- 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  <style>
-    h1 
-    {
-      color : blue;
-    }
-  <style>
-  </head>
-  <body>
+
 I am French, and I am going to be 40 years in two years.
 
 I chose to seek a job where I can thrive, so I am creating my own.
 
 
-## Where I come from
+<h1 style="color:blue"> Where I come from </h1>
 
 ### Until 2017
 
@@ -109,11 +97,7 @@ This is the best definition I can come with right now.
 The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games
 
 
-version 1684489237
-    
-  </body>
-</html>
-
+version 1684490297
 
 
 
