@@ -2,20 +2,20 @@
 title: About me
 layout: template
 filename: about_me.md
---- 
+---
 
 I am French, and I am going to be 40 years in two years.
 
 I chose to seek a job where I can thrive, so I am creating my own.
 
 
-<h1 style="color:blue"> Where I come from </h1>
+<h1 style="color:#00b8ff;text-align: center;"> Where I come from </h1>
 
-### Until 2017
+<h2 style="color:#123;text-align: center;"> Until 2017 </h2>
 
 I was self-employed, helping high school students to get back on their wheels.
 
-### 2017 - 2018
+<h2 style="color:#123;text-align: center;"> 2017 - 2018 </h2>
 
 I went back to university at the age of 32 to get my bachelor degree in computer science.
 
@@ -23,13 +23,13 @@ During the first year, I kept dispensing courses at a much lower frequency until
 
 I got my diploma and went on a developer job hunt.
 
-### 2018 - 2020
+<h2 style="color:#123;text-align: center;"> 2018 - 2020 </h2>
 
 I went back and forth in the French governemental employement system, looking a job as a developper (not WEB).
 
 I lowered my expectations again and again until I candidated to two jobs that weren't not about developers.
 
-#### context
+<h3 style="color:#456;text-align: center;"> context </h3>
 
 During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, candidating for a job in proximity with hundreds of people each day.
 
@@ -39,7 +39,7 @@ I thought that getting a job was a fair game :
 - I was ready to take tests to prove those qualifications
 - I didn't candidate for a job description not matching my qualifications
 
-#### job reality
+<h3 style="color:#456;text-align: center;"> job reality </h3>
 
 I went to two job applications, both not about developing because I was that desesperate.
 
@@ -52,7 +52,7 @@ And were humiliating in their own ways :
 - in the second, I failed a practical test that I wasn't aware nor even qualified for, followed by an oral interview, where I learned the truth about the job
 
 
-#### Choice
+<h3 style="color:#456;text-align: center;"> Choice </h3>
 
 I've been mostly unhappy most of my life.
 
@@ -74,9 +74,9 @@ The main decision factor was that after work hours I would just rest, hence desc
 If my life time is just unhappy meaningless hours, what does it tell about its worth ?
 
 
-## Where I am today
+<h1 style="color:#00b8ff;text-align: center;">  Where I am today </h1>
 
-### My official job
+<h2 style="color:#123;text-align: center;"> My official job </h2>
 
 I am self-employed again, I help people with anything computer related, this is my day job when I get calls.
 
@@ -86,7 +86,7 @@ I am certainly not proud to be in this situation, constantly in fear, in guilt w
 
 I am creating my own job, while nobody, but me understands what it is about.
 
-### Building my dream job
+<h2 style="color:#123;text-align: center;"> Building my dream job </h2>
 
 I don't have a name for it, if I were to define what it is, I would say that "my job is me", but it doesn't make much sense does it ?.
 
@@ -97,7 +97,4 @@ This is the best definition I can come with right now.
 The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games
 
 
-version 1684490297
-
-
-
+version 1684491146
