@@ -1,6 +1,7 @@
 ---
 title: About me
 layout: template
+css : /Link-tree/assets/main.css
 filename: about_me.md
 --- 
 
