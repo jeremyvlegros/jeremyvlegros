@@ -1,5 +1,5 @@
 ---
-title : \@jeremyvlegros links
+title : jeremyvlegros links
 ---
 <div>
 	<a href="https://jeremyvlegros.tumblr.com/">
@@ -60,9 +60,9 @@ title : \@jeremyvlegros links
 </div>
 
 <span id="version">
-	Link tree version 1684499040
+	Link tree version 1684501622
 </span>
 
-<span id=#about_me>
+<span id="about_me">
 	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
 </span>	
