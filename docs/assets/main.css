@@ -32,9 +32,8 @@ div div /*okay I'll admit I am having fun writing this instead of a class XD*/
 a div:hover
 {
   /*transform: scale(1.02);*/
-  transform: scale(0.99);
+  transform: scale(0.97);
   box-shadow: 2px 2px 2px #00b8ff;
-
 }
 
 a div
