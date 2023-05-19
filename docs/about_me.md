@@ -3,16 +3,22 @@ title: About me
 layout: template
 filename: about_me.md
 ---
+
+<div id="body_dummy">
+
 <div id="page"
-  style="
-    text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding:10px;
-    box-shadow: 3px 3px 7px hsl(197,0%,60%);
-    border:1px solid hsl(197,0%,60%);
-    border-radius:10px;"
->
+style="
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding:10px;
+  box-shadow: 3px 3px 7px hsl(197,0%,60%);
+  border:1px solid hsl(197,0%,60%);
+  border-radius:10px;
+  background-color: hsl(800,60%,80%);
+  color :#222;
+
+">
 
 <h1 style="font-variant: small-caps;color:#00b8ff;
            font-family: Helvetica Neue,sans-serif;"> About me </h1>
@@ -24,12 +30,12 @@ filename: about_me.md
 <h1 style="font-variant: small-caps;color:#00b8ff;
            font-family: Helvetica Neue,sans-serif;"> Where I come from </h1>
 
-<h2 style="font-variant: small-caps;color:#123;
+<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;
            font-family: Helvetica Neue,sans-serif;"> Until 2017 </h2>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I was self-employed, helping high school students to get back on their wheels.</p>
 
-<h2 style="font-variant: small-caps;color:#123;
+<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;
            font-family: Helvetica Neue,sans-serif;"> 2017 - 2018 </h2>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I went back to university at the age of 32 to get my bachelor degree in computer science.</p>
@@ -38,14 +44,14 @@ filename: about_me.md
 
 <p style="font-family: Helvetica Neue,sans-serif;">I got my diploma and went on a developer job hunt.</p>
 
-<h2 style="font-variant: small-caps;color:#123;
+<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;
            font-family: Helvetica Neue,sans-serif;"> 2018 - 2020 </h2>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I went back and forth in the French governemental employement system, looking a job as a developper (not WEB).</p>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I lowered my expectations again and again until I candidated to two jobs that weren’t not about developers.</p>
 
-<h3 style="font-variant: small-caps;color:#456;
+<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;
            font-family: Helvetica Neue,sans-serif;"> Context </h3>
 
 <p style="font-family: Helvetica Neue,sans-serif;">During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, candidating for a job in proximity with hundreds of people each day.</p>
@@ -58,7 +64,7 @@ filename: about_me.md
   <li style="font-family: Helvetica Neue,sans-serif;">- I didn’t candidate for a job description not matching my qualifications</li>
 </ul>
 
-<h3 style="font-variant: small-caps;color:#456;
+<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;
            font-family: Helvetica Neue,sans-serif;"> Job reality </h3>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I went to two job applications, both not about developing because I was that desesperate.</p>
@@ -75,7 +81,7 @@ filename: about_me.md
   <li style="font-family: Helvetica Neue,sans-serif;">- in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job</li>
 </ul>
 
-<h3 style="font-variant: small-caps;color:#456;
+<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;
            font-family: Helvetica Neue,sans-serif;"> Choice </h3>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I’ve been mostly unhappy most of my life.</p>
@@ -104,7 +110,7 @@ filename: about_me.md
 <h1 style="font-variant: small-caps;color:#00b8ff;
            font-family: Helvetica Neue,sans-serif;">  Where I am today </h1>
 
-<h2 style="font-variant: small-caps;color:#123;
+<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;
            font-family: Helvetica Neue,sans-serif;"> My official job </h2>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I am self-employed again, I help people with anything computer related, this is my day job when I get calls.</p>
@@ -115,7 +121,7 @@ filename: about_me.md
 
 <p style="font-family: Helvetica Neue,sans-serif;">I am creating my own job, while nobody, but me understands what it is about.</p>
 
-<h2 style="font-variant: small-caps;color:#123;
+<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;
            font-family: Helvetica Neue,sans-serif;"> Building my dream job </h2>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I don’t have a name for it, if I were to define what it is, I would say that “my job is me”, but it doesn’t make much sense does it ?.</p>
@@ -124,8 +130,10 @@ filename: about_me.md
 
 <p style="font-family: Helvetica Neue,sans-serif;">This is the best definition I can come with right now.</p>
 
-<p style="font-family: Helvetica Neue,sans-serif;">The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games</p>
+<p style="font-family: Helvetica Neue,sans-serif;"> The goal of all of this being to be able to sponsor my dream job while building tools for it : <b>modding video-games</b></p>
 
-<p style="font-family: Helvetica Neue,sans-serif;">version 1684495213</p>
+<p style="font-family: Helvetica Neue,sans-serif;">version 1684498536</p>
+
+</div>
 
 </div>
