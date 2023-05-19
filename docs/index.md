@@ -64,7 +64,7 @@ I am a living paradox, a very private person going online, with its real name ..
 </div>
 
 <span id="version">
-	Link tree version 1684487834 - @Jeremyvlegros
+	Link tree version 1684488285 - @Jeremyvlegros
 </span>
 
 
@@ -102,7 +102,9 @@ I am a living paradox, a very private person going online, with its real name ..
 
 
 --- TESTING ---
-<a href="about_me.md"> about me</a>
+<a href="about_me.md"> about me - html link</a>
+
+[about me markdown link](about_me.md)
 
 
 
