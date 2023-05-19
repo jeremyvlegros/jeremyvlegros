@@ -1,5 +1,5 @@
 ---
-title : @jeremyvlegros links
+title : \@jeremyvlegros links
 ---
 <div>
 	<a href="https://jeremyvlegros.tumblr.com/">
