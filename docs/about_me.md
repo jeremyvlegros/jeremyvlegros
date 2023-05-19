@@ -4,6 +4,10 @@ layout: template
 filename: about_me.md
 ---
 
+<div id="page" style="margin-left: 30%;margin-right: 30%;">
+
+<h1 style="color:#00b8ff;font-family: Helvetica Neue,sans-serif;"> About me </h1>
+
 <p style="font-family: Helvetica Neue,sans-serif;">I am French, and I am going to be 40 years in two years.</p>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I chose to seek a job where I can thrive, so I am creating my own.</p>
@@ -28,7 +32,7 @@ filename: about_me.md
 
 <p style="font-family: Helvetica Neue,sans-serif;">I lowered my expectations again and again until I candidated to two jobs that weren’t not about developers.</p>
 
-<h3 style="color:#456;font-family: Helvetica Neue,sans-serif;"> context </h3>
+<h3 style="color:#456;font-family: Helvetica Neue,sans-serif;"> Context </h3>
 
 <p style="font-family: Helvetica Neue,sans-serif;">During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, candidating for a job in proximity with hundreds of people each day.</p>
 
@@ -40,7 +44,7 @@ filename: about_me.md
   <li style="font-family: Helvetica Neue,sans-serif;">I didn’t candidate for a job description not matching my qualifications</li>
 </ul>
 
-<h3 style="color:#456;font-family: Helvetica Neue,sans-serif;"> job reality </h3>
+<h3 style="color:#456;font-family: Helvetica Neue,sans-serif;"> Job reality </h3>
 
 <p style="font-family: Helvetica Neue,sans-serif;">I went to two job applications, both not about developing because I was that desesperate.</p>
 
@@ -104,3 +108,5 @@ filename: about_me.md
 <p style="font-family: Helvetica Neue,sans-serif;">The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games</p>
 
 <p style="font-family: Helvetica Neue,sans-serif;">version 1684491783</p>
+
+</div>
