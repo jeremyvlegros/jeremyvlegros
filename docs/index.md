@@ -1,5 +1,5 @@
 ---
-title : jeremyvlegros links
+title : jeremyvlegros
 ---
 <div>
 	<a href="https://jeremyvlegros.tumblr.com/">
