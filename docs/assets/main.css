@@ -98,6 +98,14 @@ a div
 	border: 3px solid white;
 }
 
+#about_me a
+{
+	color : White;
+	background-color: #00b8ff;
+	border-radius: 10px;
+	padding: 10px;
+}
+
 #version
 {
 	color : grey;
@@ -124,3 +132,4 @@ a div
 {
   visibility : hidden;
 }
+
