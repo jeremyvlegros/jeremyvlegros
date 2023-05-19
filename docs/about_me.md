@@ -1,3 +1,9 @@
+---
+title: About me
+layout: template
+filename: about_me.md
+--- 
+
 I am French, and I am going to be 40 years in two years.
 
 I chose to seek a job where I can thrive, so I am creating my own.
@@ -69,7 +75,6 @@ If my life time is just unhappy meaningless hours, what does it tell about its w
 
 
 ## Where I am today
-
 
 ### My official job
 
