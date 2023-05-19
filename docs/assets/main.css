@@ -100,12 +100,11 @@ a div
 
 #about_me a
 {
-	color : White;
-	background-color: #00b8ff;
+	color : #00b8ff;
+/*	background-color: #00b8ff;
 	border-radius: 10px;
-	padding: 10px;
+	padding: 10px;*/
 }
-
 #version
 {
 	color : grey;
