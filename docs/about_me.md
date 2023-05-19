@@ -98,4 +98,4 @@ This is the best definition I can come with right now.
 The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games
 
 
-#date 2023-05-19 1041 1684478466
+version 1684489237
