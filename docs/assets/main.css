@@ -34,6 +34,7 @@ a div:hover
   /*transform: scale(1.02);*/
   transform: scale(0.97);
   box-shadow: 2px 2px 2px #00b8ff;
+
 }
 
 a div
@@ -45,56 +46,47 @@ a div
  margin:10px;
  text-align:center;
  box-shadow: 2px 2px 2px grey;
- border: 1px solid white;
  color : white;
 }
 
 #Steam
 {
 	background-color:#171A21 ;
-	border: 3px solid #196195;
 }
 
 #Github
 {
 	background-color:#272B33 ;
-	border: 3px solid white;
 }
 
 #Nexus
 {
 	background-color:#D98F40 ;
-	border: 3px solid white;
 }
 
 #Reddit
 {
 	background-color:#FA4400 ;
-	border: 3px solid white;
 }
 
 #Tumblr
 {
 	background-color:#001935 ;
-	border: 3px solid white;
 }
 
 #Twitter
 {
 	background-color:#1DA1F2 ;
-	border: 3px solid white;
 }
 
 #LinkedIn
 {
 	background-color:#0077B5 ;
-	border: 3px solid white;
 }
 
 #Twitch
 {
 	background-color:#9147FF ;
-	border: 3px solid white;
 }
 
 #about_me a
@@ -104,6 +96,7 @@ a div
 	border-radius: 10px;
 	padding: 10px;*/
 }
+
 #version
 {
 	color : grey;
@@ -130,4 +123,3 @@ a div
 {
   visibility : hidden;
 }
-
