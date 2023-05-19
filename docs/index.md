@@ -1,5 +1,5 @@
 
-![avatar_2023_squared_face_cool_sunglasses](https://github.com/jeremyvlegros/Link-tree/assets/102573413/8d807d5f-186e-4995-837e-265ec9191843)
+![avatar_2023_squared_face_cool_sunglasses](https://github.com/jeremyvlegros/Link-tree/assets/avatar_2023_face.png)
 
 I am a living paradox, a very private person going online, with its real name ... therefore I have unusual ways to deal with social media.
 
