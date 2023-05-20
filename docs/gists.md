@@ -1,6 +1,6 @@
 ---
 tile : gists
-file : gists.md
+filename : gists.md
 ---
 
 ```xml
