@@ -1,7 +1,14 @@
 ---
-title: About me
+title: null
 filename: about_me.md
 ---
+
+<div id="about_me page"
+style="
+  margin-left: 30%;
+  margin-right: 30%;
+  padding:10px;
+  font-family: Helvetica Neue,sans-serif;">
 
 <h1 class="about_me" style="font-variant: small-caps;color:#00b8ff;"> About me </h1>
 
@@ -125,4 +132,6 @@ filename: about_me.md
   <li class="about_me"> Surviving unhappy or surviving happy ? </li>
 </ul>
 
-<p class="about_me">version 1684600954</p>
+<p class="about_me">version 1684601187</p>
+
+</div>
