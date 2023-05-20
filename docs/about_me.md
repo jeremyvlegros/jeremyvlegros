@@ -15,13 +15,19 @@ style="
 
 <h1 style="font-variant: small-caps;color:#00b8ff;"> About me </h1>
 
+<hr>
+
 <p>I am French, and I am going to be 40 years in two years.</p>
 
 <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
 
 <h1 style="font-variant: small-caps;color:#00b8ff;">  Where I am today </h1>
 
+<hr>
+
 <h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> My official job </h2>
+
+<hr>
 
 <p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
 
@@ -33,21 +39,29 @@ style="
 
 <h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> Building my dream job </h2>
 
+<hr>
+
 <p>I don’t have a name for it, if I were to define what it is, I would say that “my job is me”, but it doesn’t make much sense does it ?.</p>
 
 <p>I am building a place where I can produce content about everything I do, automating most of the creation and publishing process, while publishing about it.</p>
 
-<p>This is the best definition I can come with right now.</p>
+<p>This is the best definition I can come with, right now.</p>
 
-<p>The goal of all of this being to be able to sponsor my dream job while building tools for it : modding video-games.</p>
+<p>The goal of all of this being to be able to sponsor my dream job while building tools for it, modding video-games.</p>
 
 <h1 style="font-variant: small-caps;color:#00b8ff;"> Where I come from </h1>
 
+<hr>
+
 <h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> Until 2017 </h2>
+
+<hr>
 
 <p>I was self-employed, helping high school students to get back on their wheels.</p>
 
 <h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> 2017 - 2018 </h2>
+
+<hr>
 
 <p>I went back to university at the age of 32 to get my bachelor degree in computer science.</p>
 
@@ -56,6 +70,8 @@ style="
 <p>I got my diploma and went on a developer job hunt.</p>
 
 <h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> 2018 - 2020 </h2>
+
+<hr>
 
 <p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
 
@@ -93,10 +109,11 @@ style="
 
 </ul>
 
-<p>And were humiliating in their own ways :</p>
+<p>And were distressing in their own ways :</p>
 
 <ul>
-  <li>in the first I was treated like a fool, but I didn't leave nor protest</li>
+
+  <li>in the first, I got silly questions and my answers were met with condescendence</li>
 
   <li>in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job </li>
 
@@ -112,21 +129,27 @@ style="
 
 <ul>
 
-  <li> being paid okay, suffer 8 hours a day, 7 days a week</li>
+  <li> being paid okay & suffer 8 hours a day & 7 days a week</li>
 
-  <li> being paid poorly, suffer 8 hours a day, 7 days a week, but being happy doing it</li>
+  <li> being paid poorly & suffer 8 hours a day & 7 days a week & happy</li>
 
 </ul>
 
 <p>It was choosing between, surviving unhappy and surviving happy.</p>
 
-<p>I watched my parents talked about work when coming back home, their life from 8 AM to 3PM, six days a week was just about that, the rest of the time being rest.</p>
+<p>I watched my parents work :</p>
 
-<p>Does life begin when earning a pension ? Does the remaining time what's left to live happy ?</p>
+<ul>
+  <li>from 8 AM to 3PM, six days a week</li>
 
-<p>If most of my life hours, are work hours, they sure have to matter. life would begin when earning a pension, and if the work has no meaning for me, what does it tell about my life ?</p>
+  <li>coming home talking about work</li>
 
+  <li>their remaining time was split between finishing more work brought home, house work, rest, and leisure.</li>
 
-<p>If my life time is just unhappy meaningless hours, what does it tell about its worth ?<p>
+</ul>
 
-<p>version 1684553307</p> </div> </div>
+<p>If most of my life hours are work hours, they sure have to matter to me, I can't stand meaningless for too long.</p>
+
+<p>version 1684555220</p>
+</div>
+</div>
