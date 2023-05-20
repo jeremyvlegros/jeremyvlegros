@@ -67,9 +67,13 @@ I lowered my expectations again and again until I applied to two jobs that weren
 During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.
 
 I thought that getting a job was a fair game :
+
 - I have qualifications
+
 - recruiters can ask questions on those qualifications
+
 - I was ready to take tests to prove those qualifications
+
 - I didn’t candidate for a job description not matching my qualifications
 
 
@@ -79,13 +83,14 @@ I went to two job applications, both not about software development, because I w
 
 The two interviews were distressing experiences, with common points :
 
-- what was asked of me was not in my qualifications nor in the job description
-- asking me to do the job of an IT technician full/part time while hiring me under another “lesser” job title
+  - what was asked of me was not in my qualifications nor in the job description
+  - asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid
 
 And were humiliating in their own ways :
 
-- in the first I was treated like a fool, and I only protested to my friend afterwards that I should have left
-- in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job
+  - in the first I was treated like a fool, but I didn't leave nor protest
+
+  - in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job
 
 
 <h3 style="text-decoration: underline;font-variant: small-caps;color:#456;"> I chose to survive happy </h3>
@@ -94,21 +99,25 @@ I’ve been mostly unhappy most of my life.
 
 I floated around, doing what was best in regards to what I wanted and what could ease the minds of people who worried about me.
 
-The perspective to be stuck forever with a job that I don’t feel happy in, popped a serious question, what do I prefer between :
-- being paid okay, suffer 8 hours a day, 7 days a week
-- being paid poorly, suffer 8 hours a day, 7 days a week, but being happy doing it
+The perspective to be stuck forever with a job that I don’t feel happy in, prompted a serious question, what do I prefer between :
 
-to resume, to choose between :
-- surviving unhappy
-- surviving happy
+<ul>
+  <li> being paid okay, suffer 8 hours a day, 7 days a week</li>
+  <li> being paid poorly, suffer 8 hours a day, 7 days a week, but being happy doing it</li>
+</ul>
 
+It was choosing between, surviving unhappy and surviving happy.
 
-The main decision factor was that after work hours I would just rest, hence describing what I would do in working hours would just be describing my life.
+I watched my parents talked about work when coming back home, their life from 8 AM to 3PM, six days a week was just about that, the rest of the time being rest.
+
+Does life begin when earning a pension ? How much time does it
+
+If most of my life hours, are work hours, they sure have to matter. life would begin when earning a pension, and if the work has no meaning for me, what does it tell about my life ?
+
 
 If my life time is just unhappy meaningless hours, what does it tell about its worth ?
 
-
-version 1684551655
+version 1684552781
 
 </div>
 
