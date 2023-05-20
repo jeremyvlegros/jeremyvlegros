@@ -1,6 +1,5 @@
 ---
 title: About me
-layout: template
 filename: about_me.md
 ---
 
