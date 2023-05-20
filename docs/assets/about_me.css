@@ -1,14 +1,35 @@
-#about_me h1 
+#about_me
 {
+  margin-left: 30%;
+  margin-right: 30%;
+  padding:10px;
+  font-family: Helvetica Neue,sans-serif;  
+}
+
+#about_me h1
+{
+  font-variant: small-caps;
+  color:#00b8ff;
   text-align: center
 }
 
 #about_me h2
 {
+  font-variant: small-caps;
+  text-decoration: underline;
+  color:#123;
   text-align: center
 }
 
-#about_me h3 
+#about_me h3
 {
+  text-decoration: underline;
+  font-variant: small-caps;
+  color:#456;
   text-align: center
+}
+
+#about_me hr_h1
+{
+  color:#00b8ff;
 }
