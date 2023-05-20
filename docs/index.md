@@ -4,7 +4,7 @@ title : jeremyvlegros
 
 <div id="index">
 
-<span id="about_me">
+<span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
 </span>
 
@@ -67,7 +67,7 @@ title : jeremyvlegros
 </div>
 
 <span id="version">
-	Link tree version 1684602732
+	Link tree version 1684606385
 </span>
 
 </div>
