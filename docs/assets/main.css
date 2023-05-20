@@ -85,12 +85,13 @@
 	background-color:#9147FF ;
 }
 
-#index #about_me
+#index #about_me_link
 {
 	text-align: center;
 }
 
-#index #about_me a
+
+#index #about_me_link a
 {
 	color : #00b8ff;
 /*	background-color: #00b8ff;
@@ -124,3 +125,4 @@
 {
   visibility : hidden;
 }
+/* version 1684606073*/
