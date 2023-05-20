@@ -1,35 +1,28 @@
-body
-{
-  font-family:"Helvetica Neue",sans-serif!important;
-  /*background-color: #241e1e;*/
-}
-
-
-.home
+.home #index
 {
   margin-left: 30%;
   margin-right: 30%;
+  font-family:"Helvetica Neue",sans-serif!important;
 }
 
-H1
+.page-heading
 {
   color:#00b8ff;
   text-align: center;
 }
 
-a
+#index H1
+{
+  color:#00b8ff;
+  text-align: center;
+}
+
+#index a
 {
 	text-decoration:none;
 }
 
-div div /*okay I'll admit I am having fun writing this instead of a class XD*/
-{
-  color:gray;
-  text-align: center;
-}
-
-
-a div:hover
+#index a div:hover
 {
   /*transform: scale(1.02);*/
   transform: scale(0.97);
@@ -37,7 +30,7 @@ a div:hover
 
 }
 
-a div
+#index a div
 {
  transition: all .2s ease-in-out;
 /* background-color:black;*/
@@ -50,47 +43,53 @@ a div
  font-weight: bolder;
 }
 
-#Steam
+#index #Steam
 {
 	background-color:#171A21 ;
 }
 
-#Github
+#index #Github
 {
 	background-color:#272B33 ;
 }
 
-#Nexus
+#index #Nexus
 {
 	background-color:#D98F40 ;
 }
 
-#Reddit
+#index #Reddit
 {
 	background-color:#FA4400 ;
 }
 
-#Tumblr
+#index #Tumblr
 {
 	background-color:#001935 ;
 }
 
-#Twitter
+#index #Twitter
 {
 	background-color:#1DA1F2 ;
 }
 
-#LinkedIn
+#index #LinkedIn
 {
 	background-color:#0077B5 ;
 }
 
-#Twitch
+#index #Twitch
 {
 	background-color:#9147FF ;
 }
 
-#about_me a
+#index #about_me
+{
+	text-align: center;
+}
+
+
+#index #about_me a
 {
 	color : #00b8ff;
 /*	background-color: #00b8ff;
@@ -98,17 +97,17 @@ a div
 	padding: 10px;*/
 }
 
-#version
+#index #version
 {
 	color : grey;
 }
 
-.text_gray
+#index .text_gray
 {
 	color:gray;
 }
 
-.text_centered
+#index .text_centered
 {
 	text-align: center
 }
