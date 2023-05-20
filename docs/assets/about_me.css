@@ -29,7 +29,9 @@
   text-align: center
 }
 
-#about_me hr_h1
+#about_me .hr_h1
 {
   color:#00b8ff;
 }
+
+/* version 1684606930*/
