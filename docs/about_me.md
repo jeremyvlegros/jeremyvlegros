@@ -3,7 +3,7 @@ title: null
 filename: about_me.md
 ---
 
-<div id="about_me_link">
+<div id="about_me">
 
 <h1 style=""> About me </h1>
 
