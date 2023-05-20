@@ -3,26 +3,21 @@ title: null
 filename: about_me.md
 ---
 
-<div id="about_me"
-style="
-  margin-left: 30%;
-  margin-right: 30%;
-  padding:10px;
-  font-family: Helvetica Neue,sans-serif;">
+<div id="about_me_link">
 
-<h1 style="font-variant: small-caps;color:#00b8ff;"> About me </h1>
+<h1 style=""> About me </h1>
 
-<hr class=" hr_h1" style="color:#00b8ff;">
+<hr class="hr_h1">
 
 <p>I am French, and I am going to be 40 years in two years.</p>
 
 <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
 
-<h1 style="font-variant: small-caps;color:#00b8ff;">  Where I am today </h1>
+<h1>  Where I am today </h1>
 
-<hr class=" hr_h1" style="color:#00b8ff;">
+<hr class="hr_h1">
 
-<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> My day job </h2>
+<h2> My day job </h2>
 
 <p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
 
@@ -32,7 +27,7 @@ style="
 
 <p>I am creating my own job, while nobody, but me understands what it is about.</p>
 
-<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> Building my dream job </h2>
+<h2> Building my dream job </h2>
 
 <p>I don’t have a name for my dream job, the best definition I can come with other than “my job is me” would be : </p>
 
@@ -43,15 +38,15 @@ style="
     <li> sponsoring my dream job of modding video-games, while building tools for it</li>
   </ul>
 
-<h1 style="font-variant: small-caps;color:#00b8ff;"> Where I come from </h1>
+<h1> Where I come from </h1>
 
-<hr class=" hr_h1" style="color:#00b8ff;">
+<hr class="hr_h1">
 
-<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> Until 2016 </h2>
+<h2> Until 2016 </h2>
 
 <p>I was self-employed, helping high school students to get back on their wheels.</p>
 
-<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> 2016 - 2018 </h2>
+<h2> 2016 - 2018 </h2>
 
 <p>I went back to university at the age of 31 finish my bachelor degree in computer science.</p>
 
@@ -59,13 +54,13 @@ style="
 
 <p>When I got my diploma I went on a software developer job hunt.</p>
 
-<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> 2018 - 2021 </h2>
+<h2> 2018 - 2021 </h2>
 
 <p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
 
 <p>I lowered my expectations again and again until I applied to two jobs that weren’t not about developers.</p>
 
-<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;"> Context </h3>
+<h3> Context </h3>
 
 <p>During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.</p>
 
@@ -83,7 +78,7 @@ style="
 
 </ul>
 
-<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;"> Job reality </h3>
+<h3> Job reality </h3>
 
 <p>I went to two job applications, both not about software development, because I was that desperate.</p>
 
@@ -107,7 +102,7 @@ style="
 
 </ul>
 
-<h3 style="text-decoration: underline;font-variant: small-caps;color:#456;"> I chose to survive happy </h3>
+<h3> I chose to survive happy </h3>
 
 <p>I’ve been mostly unhappy most of my life.</p>
 
@@ -132,5 +127,6 @@ style="
   <li> Surviving unhappy or surviving happy ? </li>
 </ul>
 
-<p>version 1684603891</p>
+<p>version 1684606239</p>
+
 </div>
