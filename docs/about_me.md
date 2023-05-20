@@ -122,15 +122,11 @@ style="
 
 <p>I watched my parents talked about work when coming back home, their life from 8 AM to 3PM, six days a week was just about that, the rest of the time being rest.</p>
 
-<p>Does life begin when earning a pension ? How much time does it</p>
+<p>Does life begin when earning a pension ? Does the remaining time what's left to live happy ?</p>
 
 <p>If most of my life hours, are work hours, they sure have to matter. life would begin when earning a pension, and if the work has no meaning for me, what does it tell about my life ?</p>
 
 
 <p>If my life time is just unhappy meaningless hours, what does it tell about its worth ?<p>
 
-<p>version 1684553307</p>
-
-</div>
-
-</div>
+<p>version 1684553307</p> </div> </div>
