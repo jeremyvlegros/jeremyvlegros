@@ -131,10 +131,10 @@ style="
 
 <ul>
   <li> What's the point of living a life that's not mine ?</li>
-  <li> Is surviving enough ?
+  <li> Is surviving enough ? </li>
   <li> Surviving unhappy or surviving happy ? </li>
 </ul>
 
-<p>version 1684560365</p>
+<p>version 1684560838</p>
 </div>
 </div>
