@@ -1,9 +1,13 @@
 ---
 title : jeremyvlegros
 ---
+
+<div id="index">
+
 <span id="about_me">
 	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
-</span>	
+</span>
+
 <div>
 	<a href="https://jeremyvlegros.tumblr.com/">
 	 <div id="Tumblr">Tumblr</div>
@@ -63,7 +67,7 @@ title : jeremyvlegros
 </div>
 
 <span id="version">
-	Link tree version 1684501622
+	Link tree version 1684602732
 </span>
 
-
+</div>
