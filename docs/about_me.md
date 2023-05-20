@@ -15,7 +15,7 @@ style="
 
 <h1 style="font-variant: small-caps;color:#00b8ff;"> About me </h1>
 
-<hr>
+<hr class="hr_h1" style="color:#00b8ff;">
 
 <p>I am French, and I am going to be 40 years in two years.</p>
 
@@ -23,11 +23,9 @@ style="
 
 <h1 style="font-variant: small-caps;color:#00b8ff;">  Where I am today </h1>
 
-<hr>
+<hr class="hr_h1" style="color:#00b8ff;">
 
-<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> My official job </h2>
-
-<hr>
+<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> My day job </h2>
 
 <p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
 
@@ -37,41 +35,34 @@ style="
 
 <p>I am creating my own job, while nobody, but me understands what it is about.</p>
 
-<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> Building my dream job </h2>
+<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> Building my dream job </h2>
 
-<hr>
+<p>I don’t have a name for my dream job, the best definition I can come with other than “my job is me” would be : </p>
 
-<p>I don’t have a name for it, if I were to define what it is, I would say that “my job is me”, but it doesn’t make much sense does it ?.</p>
-
-<p>I am building a place where I can produce content about everything I do, automating most of the creation and publishing process, while publishing about it.</p>
-
-<p>This is the best definition I can come with, right now.</p>
-
-<p>The goal of all of this being to be able to sponsor my dream job while building tools for it, modding video-games.</p>
+  <ul>
+    <li> I am building a place where I can produce content about everything I do</li>
+    <li> automating most of the creation and publishing process </li>
+    <li> while publishing about it</li>
+    <li> sponsoring my dream job of modding video-games, while building tools for it</li>
+  </ul>
 
 <h1 style="font-variant: small-caps;color:#00b8ff;"> Where I come from </h1>
 
-<hr>
+<hr class="hr_h1" style="color:#00b8ff;">
 
-<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> Until 2017 </h2>
-
-<hr>
+<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> Until 2016 </h2>
 
 <p>I was self-employed, helping high school students to get back on their wheels.</p>
 
-<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> 2017 - 2018 </h2>
+<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> 2016 - 2018 </h2>
 
-<hr>
+<p>I went back to university at the age of 31 finish my bachelor degree in computer science.</p>
 
-<p>I went back to university at the age of 32 to get my bachelor degree in computer science.</p>
+<p>During the first year, I kept dispensing courses at a much lower frequency until my high-school students earned their baccalaureate, and closed my business some time after.</p>
 
-<p>During the first year, I kept dispensing courses at a much lower frequency until my students earned their baccalaureate.</p>
+<p>When I got my diploma I went on a software developer job hunt.</p>
 
-<p>I got my diploma and went on a developer job hunt.</p>
-
-<h2 style="text-decoration: underline;font-variant: small-caps;color:#123;"> 2018 - 2020 </h2>
-
-<hr>
+<h2 style="font-variant: small-caps;text-decoration: underline;color:#123;"> 2018 - 2021 </h2>
 
 <p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
 
@@ -87,11 +78,11 @@ style="
 
   <li>I have qualifications</li>
 
-  <li>recruiters can ask questions on those qualifications</li>
+  <li>recruiters could ask questions on those qualifications</li>
 
   <li>I was ready to take tests to prove those qualifications</li>
 
-  <li>I didn’t candidate for a job description not matching my qualifications</li>
+  <li>I was applying for a job, matching the job description</li>
 
 </ul>
 
@@ -123,33 +114,27 @@ style="
 
 <p>I’ve been mostly unhappy most of my life.</p>
 
-<p>I floated around, doing what was best in regards to what I wanted and what could ease the minds of people who worried about me.</p>
-
-<p>The perspective to be stuck forever with a job that I don’t feel happy in, prompted a serious question, what do I prefer between :</p>
-
-<ul>
-
-  <li> being paid okay & suffer 8 hours a day & 7 days a week</li>
-
-  <li> being paid poorly & suffer 8 hours a day & 7 days a week & happy</li>
-
-</ul>
-
-<p>It was choosing between, surviving unhappy and surviving happy.</p>
+<p>I was okay floating around, doing what was expected of me if It didn't bother me too much, easing the minds of people worried about me mattered the most, and not taking decisions was mostly easy.</p>
 
 <p>I watched my parents work :</p>
 
 <ul>
-  <li>from 8 AM to 3PM, six days a week</li>
+  <li>from 8 AM to 3:30PM, five days a week</li>
 
   <li>coming home talking about work</li>
 
-  <li>their remaining time was split between finishing more work brought home, house work, rest, and leisure.</li>
+  <li>bringing work home each day, their remaining time split between house chores, rest, and leisure.</li>
 
 </ul>
 
-<p>If most of my life hours are work hours, they sure have to matter to me, I can't stand meaningless for too long.</p>
+<p>The perspective of defining most of my life by my job, prompted serious questions :</p>
 
-<p>version 1684555220</p>
+<ul>
+  <li> What's the point of living a life that's not mine ?</li>
+  <li> Is surviving enough ?
+  <li> Surviving unhappy or surviving happy ? </li>
+</ul>
+
+<p>version 1684560365</p>
 </div>
 </div>
