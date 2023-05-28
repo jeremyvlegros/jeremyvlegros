@@ -8,3 +8,9 @@
 name : "jeremyvlegros"
 theme : minima
 highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  
+Markdown:
+  syntax_highlighter: rouge
