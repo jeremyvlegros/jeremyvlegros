@@ -69,5 +69,4 @@ url : links
 <span id="version">
 	Link tree version 1685273544930905850
 </span>
-	
 </div>
