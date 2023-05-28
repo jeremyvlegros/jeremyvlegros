@@ -1,109 +1,68 @@
 ---
 title: null
-description : "about me"
 filename: about_me.md
 ---
 
+
+
 <div id="about_me">
 
-<h1 style=""> About me </h1>
 
-<hr class="hr_h1">
 
-<p>I am French, and I am going to be 40 years in two years.</p>
+ <div id="preface">
 
-<p>I chose to seek a job where I can thrive, so I am creating my own.</p>
+  <h1 id="title"> Now </h1>
 
-<h1>  Where I am today </h1>
+   <!-- <hr class="hr_h1"> -->
 
-<hr class="hr_h1">
+   <p>I am French, and I am going to be 40 years in two years.</p>
+
+   <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
+
+ </div>
+
+<!-- <h1>  Where I am today </h1> -->
+
+<!-- <div id="where_I_am_today"> -->
+
+
+<!-- <hr class="hr_h1"> -->
+
+<div id="day_job">
 
 <h2> My day job </h2>
 
-<p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
 
-<p>I am still dependent on the help of the government and my parents.</p>
 
-<p>I am certainly not proud to be in this situation, constantly in fear, in guilt while pushing forward to a future where I can be happy.</p>
+   <p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
 
-<p>I am creating my own job, while nobody, but me understands what it is about.</p>
+   <p>I am still dependent on the help of the government and my parents.</p>
+
+   <p>I am certainly not proud to be in this situation, constantly in fear, in guilt while pushing forward to a future where I can be happy.</p>
+
+   <p>I am creating my own job, while nobody, but me understands what it is about.</p>
+
+ </div>
+
+
+<div id="dream_job">
 
 <h2> Building my dream job </h2>
 
-<p>I don’t have a name for my dream job, the best definition I can come with other than “my job is me” would be : </p>
+ <p>I don’t have a name for my dream job, the best definition I can come with other than “my job is me” would be : </p>
 
-  <ul>
-    <li> I am building a place where I can produce content about everything I do</li>
-    <li> automating most of the creation and publishing process </li>
-    <li> while publishing about it</li>
-    <li> sponsoring my dream job of modding video-games, while building tools for it</li>
-  </ul>
+   <ul>
+     <li> I am building a place where I can produce content about everything I do</li>
+     <li> automating most of the creation and publishing process </li>
+     <li> while publishing about it</li>
+     <li> sponsoring my dream job of modding video-games, while building tools for it</li>
+   </ul>
 
-<h1> Where I come from </h1>
+</div>
 
-<hr class="hr_h1">
-
-<h2> Until 2016 </h2>
-
-<p>I was self-employed, helping high school students to get back on their wheels.</p>
-
-<h2> 2016 - 2018 </h2>
-
-<p>I went back to university at the age of 31 finish my bachelor degree in computer science.</p>
-
-<p>During the first year, I kept dispensing courses at a much lower frequency until my high-school students earned their baccalaureate, and closed my business some time after.</p>
-
-<p>When I got my diploma I went on a software developer job hunt.</p>
-
-<h2> 2018 - 2021 </h2>
-
-<p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
-
-<p>I lowered my expectations again and again until I applied to two jobs that weren’t not about developers.</p>
-
-<h3> Context </h3>
-
-<p>During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.</p>
-
-<p>I thought that getting a job was a fair game :</p>
-
-<ul>
-
-  <li>I have qualifications</li>
-
-  <li>recruiters could ask questions on those qualifications</li>
-
-  <li>I was ready to take tests to prove those qualifications</li>
-
-  <li>I was applying for a job, matching the job description</li>
-
-</ul>
-
-<h3> Job reality </h3>
-
-<p>I went to two job applications, both not about software development, because I was that desperate.</p>
-
-<p>The two interviews were distressing experiences, with common points :</p>
-
-<ul>
-
-  <li>what was asked of me was not in my qualifications nor in the job description</li>
-
-  <li>asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid</li>
-
-</ul>
-
-<p>And were distressing in their own ways :</p>
-
-<ul>
-
-  <li>in the first, I got silly questions and my answers were met with condescendence</li>
-
-  <li>in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job </li>
-
-</ul>
-
+<div id="happy">
 <h3> I chose to survive happy </h3>
+
 
 <p>I’ve been mostly unhappy most of my life.</p>
 
@@ -128,6 +87,82 @@ filename: about_me.md
   <li> Surviving unhappy or surviving happy ? </li>
 </ul>
 
-<p>version 1685273360810663218</p>
+</div>
+
+<!-- <h1> Where I come from </h1> -->
+
+<!-- <div id="where_I_come_from"> -->
+<div id="job_reality">
+
+ <h3> Job reality </h3>
+
+ <p>I went to two job applications, both not about software development, because I was that desperate.</p>
+
+ <p>The two interviews were distressing experiences, with common points :</p>
+
+ <ul>
+
+  <li>what was asked of me was not in my qualifications nor in the job description</li>
+
+  <li>asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid</li>
+
+ </ul>
+
+ <p>And were distressing in their own ways :</p>
+
+ <ul>
+
+  <li>in the first, I got silly questions and my answers were met with condescendence</li>
+
+  <li>in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job </li>
+
+ </ul></div>
+<div id="context">
+
+ <h3> context </h3>
+
+ <p>During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.</p>
+
+ <p>I thought that getting a job was a fair game :</p>
+
+ <ul>
+
+   <li>I have qualifications</li>
+
+   <li>recruiters could ask questions on those qualifications</li>
+
+   <li>I was ready to take tests to prove those qualifications</li>
+
+   <li>I was applying for a job, matching the job description</li>
+
+ </ul></div>
+<div id="date_2018_2021">
+
+  <h2> 2018 - 2021 </h2>
+
+  <p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
+
+  <p>I lowered my expectations again and again until I applied to two jobs that weren’t not about developers.</p></div>
+
+<div id="date_2016_2018">
+
+ <h2> 2016 - 2018 </h2>
+
+ <p>I went back to university at the age of 31 finish my bachelor degree in computer science.</p>
+
+ <p>During the first year, I kept dispensing courses at a much lower frequency until my high-school students earned their baccalaureate, and closed my business some time after.</p>
+
+ <p>When I got my diploma I went on a software developer job hunt.</p></div>
+<div id="date_2016">
+
+
+ <!-- <hr class="hr_h1"> -->
+
+
+ <h2> 2016 </h2>
+
+ <p>I was self-employed, helping high school students to get back on their wheels.</p></div>
+
+<p style="color:gray;text-align: center;">version 1685303100177247060</p>
 
 </div>
