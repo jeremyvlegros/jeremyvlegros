@@ -36,36 +36,55 @@ def ${1:TYPE}_${2:FUNCTION_NAME}_for (${3:ARGUMENTS}) -> ${1:TYPE}:
   <scope>source.python - meta.function.parameters - meta.function-call - meta.statement - meta.mapping - meta.sequence - meta.set - comment - string</scope>
 </snippet>
 ```
-with Rouge & Jekyll
+```python
+#--------------------------------------------------------------------------------------------------------------------------------------------
+ANY = any
 
-{% highlight xml %}
-<snippet>
-	<content>
-		<![CDATA[#--------------------------------------------------------------------------------------------------------------------------------------------
-def ${1:TYPE}_${2:FUNCTION_NAME}_for (${3:ARGUMENTS}) -> ${1:TYPE}:
+def bool_the_parameter_is_a_str_object (_ : ANY = None , bool_print = None) -> bool:
   """
-  # description :
+  True if the parameter is an object instantiated from the `str` class # <-- default coloration as default comment
 
-  >>> #>
-  >>> tuple_arguments = (${3:ARGUMENTS}:=)
-  >>> ${1:TYPE}_${2:FUNCTION_NAME}_for (*tuple_arguments)
+  >>> #> str # str object <-- `docstring > doctest > title > inner comment`
+  >>> _= str()
+  >>> bool_the_parameter_is_a_str_object(_)
+  True
+
+  >>> #> int
+  >>> _= 1
+  >>> bool_the_parameter_is_a_str_object(_)
+  False
   """
+  import inspect
 
-  # initialization
+  # initialization # Only variables before main code <-- `comment > title 1 > inner comment`
 
-  ## main value
+  ## main value    # the return value <-- `comment > title 1 > 1`
 
-  ${1:TYPE}_${2:FUNCTION_NAME} =
+  bool_parameter_is_a_str_object: bool = False
+
+  # instance
+
+  if inspect.isclass(_) is False:
+
+    # from str    # instantiated from str class <-- `comment > title 2 > inner comment`
+
+    if isinstance(_, str) is True:
+
+      # str object
+
+      bool_parameter_is_a_str_object = True
+
+  # option print
+
+  if bool_print is True :
+
+    # printing the result
+
+    print(bool_parameter_is_a_str_object)
 
   # result
 
-  return ${1:TYPE}_${2:FUNCTION_NAME}
+  return bool_parameter_is_a_str_object
+#--------------------------------------------------------------------------------------------------------------------------------------------
 
-]]>
-	</content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>def</tabTrigger>
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-  <scope>source.python - meta.function.parameters - meta.function-call - meta.statement - meta.mapping - meta.sequence - meta.set - comment - string</scope>
-</snippet>
-{% endhighlight %}
+```
