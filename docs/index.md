@@ -2,7 +2,6 @@
 title : jeremyvlegros
 url : links
 ---
-
 <div id="index">
 
 <span id="about_me_link">
@@ -70,5 +69,4 @@ url : links
 <span id="version">
 	Link tree version 1685273544930905850
 </span>
-
 </div>
