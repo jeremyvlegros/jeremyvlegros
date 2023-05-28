@@ -1,32 +1,10 @@
 #about_me
 {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding:10px;
-  font-family: Helvetica Neue,sans-serif;  
-}
-
-#about_me h1
-{
-  font-variant: small-caps;
-  color:#00b8ff;
-  text-align: center
-}
-
-#about_me h2
-{
-  font-variant: small-caps;
-  text-decoration: underline;
-  color:#123;
-  text-align: center
-}
-
-#about_me h3
-{
-  text-decoration: underline;
-  font-variant: small-caps;
-  color:#456;
-  text-align: center
+  font-family: Helvetica Neue,sans-serif;
+  font-size: 1.2em;
 }
 
 #about_me .hr_h1
@@ -34,4 +12,176 @@
   color:#00b8ff;
 }
 
-/* version 1684606930*/
+#about_me #preface
+{
+  background-color: hsl(100,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  margin-left :20%;
+  width: 20%;
+}
+
+
+#about_me h1,h2,h3
+{
+  text-align: center;
+  font-size: 2em;
+  background-color: white;
+  border-radius: 50px;
+}
+
+#about_me #preface #title
+{
+  color:hsl(100,100%,30%);
+  padding: 1%;
+}
+
+#about_me #day_job h2
+{
+  color:hsl(200,100%,30%);
+  padding: 1%;
+}
+
+#about_me #day_job
+{
+  background-color: hsl(200,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  width: 32%;
+}
+
+#about_me #dream_job h2
+{
+  color: hsl(300,40%,40%);
+  padding: 1%;
+}
+
+#about_me #dream_job
+{
+  background-color: hsl(300,40%,40%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-left: 20%;
+  width: 30%;
+}
+
+#about_me #happy h3
+{
+  color :hsl(900,100%,30%);
+  padding: 1%;
+}
+
+#about_me #happy
+{
+  background-color: hsl(900,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+  margin-left: 20%;
+  width: 45%;
+/*  margin-top: 2%;*/
+}
+
+#about_me #job_reality h3
+{
+  color :hsl(800,100%,30%);
+  padding: 1%;
+}
+
+#about_me #job_reality
+{
+  background-color: hsl(800,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+  margin-right: 10%;
+  margin-left : 5%;
+  width : 45%;
+}
+
+#about_me #context h3
+{
+  color : hsl(700,70%,30%);
+  padding: 1%;
+}
+
+#about_me #context
+{
+  background-color: hsl(700,70%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  width: 35%;
+}
+
+#about_me #date_2018_2021 h2
+{
+  color :hsl(600,30%,30%);
+  padding: 1%;
+}
+#about_me #date_2018_2021
+{
+  background-color: hsl(600,30%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-left: 20%;
+  width: 26%;
+}
+
+#about_me #date_2016_2018 h2
+{
+  color :hsl(500,100%,30%);
+  padding: 1%;
+}
+
+#about_me #date_2016_2018
+{
+  background-color: hsl(500,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 10%;*/
+  margin-right : 20%;
+  width : 28%;
+
+}
+
+#about_me #date_2016 h2
+{
+  color :hsl(400,100%,30%);
+  padding: 1%;
+}
+
+#about_me #date_2016
+{
+  background-color: hsl(400,100%,30%);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 10%;*/
+  margin-right : 30%;
+  margin-left : 20%;
+  width: 20%;
+}
+/* version 1685303134105599188*/
