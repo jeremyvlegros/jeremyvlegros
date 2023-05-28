@@ -2,7 +2,8 @@
 title : jeremyvlegros
 filename : links.md
 ---
-<div id="index">
+
+<div id="links">
 
 <span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
@@ -67,6 +68,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1685273544930905850
+	Link tree version 1685288719362615930
 </span>
+
 </div>
