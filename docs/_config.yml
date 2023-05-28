@@ -7,3 +7,4 @@
 # ... what a pain... I will put a dirty style tag in my markdown I don't care anymore
 name : "jeremyvlegros"
 theme : minima
+highlighter: rouge
