@@ -15,9 +15,11 @@ filename: about_me.md
 
    <!-- <hr class="hr_h1"> -->
 
-   <p>I am French, and I am going to be 40 years in two years.</p>
+   <p>My name is Jeremy Legros, I am French, and I am going to be 40 years in two years.</p>
 
    <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
+
+   <p>Nowadays I am programming my library in the Python language, writing my naming convention and my programming paradigms </p>
 
  </div>
 
@@ -163,6 +165,6 @@ filename: about_me.md
 
  <p>I was self-employed, helping high school students to get back on their wheels.</p></div>
 
-<p style="color:gray;text-align: center;">version 1685303100177247060</p>
+<p style="color:gray;text-align: center;">version 1685304137873796021</p>
 
 </div>
