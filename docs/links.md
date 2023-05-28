@@ -1,9 +1,12 @@
 ---
-title : jeremyvlegros
+title : null
 filename : links.md
 ---
 
 <div id="links">
+
+
+<h1 id="title">jeremyvlegros</h1> <!-- can't rely on Jekyll -->
 
 <span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
@@ -68,7 +71,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1685288719362615930
+	Link tree version 1685289907696270580
 </span>
 
 </div>
