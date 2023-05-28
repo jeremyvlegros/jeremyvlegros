@@ -1,11 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href={{page.style}}>
-  </head>
-  <body>
-    {{ content }}
-  </body>
+{%- include top.html -%}
+
+<body class="wrap">
+  {%- include header.html -%}
+
+  {{- content -}}
+
+  {%- include footer.html -%}
+  {%- include anchor_links.html -%}
+  {%- include analytics.html -%}
+  {%- include search/script.html -%}
+</body>
 </html>
