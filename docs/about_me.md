@@ -19,7 +19,13 @@ filename: about_me.md
 
    <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
 
-   <p>Nowadays I am programming my library in the Python language, writing my naming convention and my programming paradigms </p>
+   Nowadays I am :
+   <ul>
+    <li>programming my library in the Python language</li>
+    <li>writing my naming convention</li>
+    <li>writing my programming paradigms</li>
+    <li>specializing myself in Python programming</li>
+   </ul>
 
  </div>
 
@@ -165,6 +171,6 @@ filename: about_me.md
 
  <p>I was self-employed, helping high school students to get back on their wheels.</p></div>
 
-<p style="color:gray;text-align: center;">version 1685304137873796021</p>
+<p style="color:gray;text-align: center;">version 1685304444047344216</p>
 
 </div>
