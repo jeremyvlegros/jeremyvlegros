@@ -1,6 +1,6 @@
 ---
 title : TEST
-style : "../assets/about_me.css"
+
 ---
 
 # title 1
