@@ -1,6 +1,10 @@
 @import "about_me.css";
 @import "links.css";
 @import "dracula.css";
+*
+{
+	font-family:"Helvetica Neue",sans-serif!important;
+}
 
 .background_rectangle_rounded_corners
 {
@@ -14,7 +18,6 @@
 {
   margin-left: 30%;
   margin-right: 30%;
-  font-family:"Helvetica Neue",sans-serif!important;
 /*  text-align: center !important; */
 }
 
@@ -138,4 +141,4 @@
   visibility : hidden;
 }
 
-/* version 1685444600082357573*/
+/* version 1685445442936140576*/
