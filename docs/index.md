@@ -1,9 +1,8 @@
 ---
-title : jeremyvlegros
+title : My website goals
 ---
 
 <div id="index">
- <h1> My website goals</h1>
   <ul>
     <li>no cookies (things can still ask cookies such as video players, but it will not be me, and I’ll try to not let that happen)</li>
     <li>no external advertisements, promoting only my stuff</li>
