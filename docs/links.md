@@ -1,10 +1,10 @@
 ---
-title : null
+title : Links
 filename : links.md
 ---
 <div id="links">
 
-<h1 id="title">@jeremyvlegros</h1>
+<!-- <h1 id="title">@jeremyvlegros</h1> I will try the YAML again -->
 
 <span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/website/about_me.html"> About me </a>
@@ -69,7 +69,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1685448544492204862
+	Link tree version 1685449958906876333
 </span>
 
 </div>
