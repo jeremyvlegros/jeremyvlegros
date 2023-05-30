@@ -27,6 +27,13 @@
   text-align: center;
 }
 
+.post-title /* title of most pages until I know how `_layout` really works */
+{
+  color:#00b8ff;
+  text-align: center;
+	font-size: 2em;
+}
+
 #index H1
 {
   color:#00b8ff;
@@ -141,4 +148,4 @@
   visibility : hidden;
 }
 
-/* version 1685445442936140576*/
+/* version 1685450219619626825*/
