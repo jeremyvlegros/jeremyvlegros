@@ -2,12 +2,20 @@
 @import "links.css";
 @import "dracula.css";
 
+.background_rectangle_rounded_corners
+{
+	background-color: blue;
+	border-radius: 50px;
+}
+
+/*I will use Bootstrap or something else at some point*/
+
 .home #index
 {
   margin-left: 30%;
   margin-right: 30%;
   font-family:"Helvetica Neue",sans-serif!important;
-  text-align: center !important; /*I got sick of searching why ... will use Bootcamp or something else at some point*/	
+/*  text-align: center !important; */
 }
 
 .page-heading
@@ -25,6 +33,7 @@
 #index a
 {
 	text-decoration:none;
+	color:#00b8ff;
 }
 
 #index a div:hover
@@ -129,4 +138,4 @@
   visibility : hidden;
 }
 
-/* version 1685287695500644363*/
+/* version 1685444600082357573*/
