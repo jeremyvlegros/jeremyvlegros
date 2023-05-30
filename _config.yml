@@ -1,0 +1,18 @@
+# do you believe that it is infinitly faster to hack the code spawned in the HTML to get YAML variables than to find help on it ... 
+# oh boy ... I had to go there https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll 
+# which sent me there https://jekyllrb.com/docs/configuration/
+# where I found after some more effort that https://jekyllrb.com/docs/configuration/default/ which is not even enough
+# looking at the minima theme README.md was FAR more better than the Jekyll website, Github pages, Jekyll source readme COMBINED
+# for people cloning this repository : 
+# - this repository is not licensed, and not "unlicensed", meaning I keep ownership of things I write
+# - I broke the minima theme voluntarily, I use my own CSS
+
+name : "jeremyvlegros"
+theme : minima
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  
+Markdown:
+  syntax_highlighter: rouge
