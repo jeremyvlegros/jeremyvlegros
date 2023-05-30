@@ -9,7 +9,7 @@ filename : links.md
 <h1 id="title">jeremyvlegros</h1> <!-- can't rely on Jekyll -->
 
 <span id="about_me_link">
-	<a href="https://jeremyvlegros.github.io/Link-tree/about_me.html"> About me </a>
+	<a href="https://jeremyvlegros.github.io/website/about_me.html"> About me </a>
 </span>
 
 <div>
@@ -23,14 +23,14 @@ filename : links.md
 	<a href="https://twitter.com/jeremyvlegros">
 	 <div id="Twitter">Twitter</div>
 	</a>
-	<div class="text_gray text_centered"><i>communication and news redirection hub</i></div>
+	<div class="text_gray text_centered"><i>inactive since March 2023</i></div>
  </div>
 
 <div >
 	<a href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
 	 <div id="LinkedIn">LinkedIn</div>
 	</a>
-	<div class="text_gray text_centered"><i>communication / no posts</i></div>
+	<div class="text_gray text_centered"><i>rarely active</i></div>
  </div>
 
 <div >
@@ -71,7 +71,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1685289907696270580
+	Link tree version 1685447387595250805
 </span>
 
 </div>
