@@ -1,0 +1,231 @@
+:root
+{
+  --color_preface: hsl(100,100%,30%);
+  --color_preface_shadow: hsl(100,100%,20%);
+  --color_day_job: hsl(200,100%,30%);
+  --color_day_job_shadow: hsl(200,100%,20%);
+  --color_dream_job: hsl(300,40%,40%);
+  --color_dream_job_shadow: hsl(300,40%,20%);
+  --color_happy: hsl(900,100%,30%);
+  --color_happy_shadow: hsl(900,100%,20%);
+  --color_job_reality: hsl(800,100%,30%);
+  --color_job_reality_shadow: hsl(800,100%,20%);
+  --color_context: hsl(700,70%,30%);
+  --color_context_shadow: hsl(700,70%,20%);
+  --color_date_2018_2021: hsl(600,30%,30%);
+  --color_date_2018_2021_shadow: hsl(600,30%,32%);
+  --color_date_2016_2018: hsl(500,100%,30%);
+  --color_date_2016_2018_shadow: hsl(500,100%,20%);
+  --color_date_2016:hsl(400,100%,30%);
+  --color_date_2016_shadow:hsl(400,100%,20%);
+  --color_border: hsl(400,100%,20%);
+}
+
+#about_me
+{
+  margin-left: 20%;
+  margin-right: 20%;
+  padding:10px;
+  font-family: Helvetica Neue,sans-serif;
+  font-size: 1.2em;
+}
+
+/*#about_me .hr_h1
+{
+  color:#00b8ff;
+}
+*/
+
+#about_me #preface
+{
+  background-color: var(--color_preface);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  margin-left :20%;
+  width: 20%;
+/*  box-shadow: 4px 4px 1px var(--color_preface_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+
+#about_me h1,h2,h3
+{
+  text-align: center;
+  font-size: 2em;
+  background-color: white;
+  border-radius: 50px;
+}
+
+#about_me #preface #title
+{
+  color:hsl(100,100%,30%);
+  padding: 1%;
+}
+
+#about_me #day_job h2
+{
+  color:var(--color_day_job);
+  padding: 1%;
+}
+
+#about_me #day_job
+{
+  background-color: var(--color_day_job);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  width: 32%;
+/*  box-shadow: 4px 4px 1px var(--color_day_job_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+#about_me #dream_job h2
+{
+  color: var(--color_dream_job);
+  padding: 1%;
+}
+
+#about_me #dream_job
+{
+  background-color: var(--color_dream_job);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-left: 20%;
+  width: 30%;
+/*  box-shadow: 4px 4px 1px var(--color_dream_job_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+#about_me #happy h3
+{
+  color :var(--color_happy);
+  padding: 1%;
+}
+
+#about_me #happy
+{
+  background-color: var(--color_happy);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+  margin-left: 20%;
+  width: 45%;
+/*  box-shadow: 4px 4px 1px var(--color_happy_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+/*  margin-top: 2%;*/
+}
+
+#about_me #job_reality h3
+{
+  color :var(--color_job_reality);
+  padding: 1%;
+}
+
+#about_me #job_reality
+{
+  background-color: var(--color_job_reality);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+  margin-right: 10%;
+  margin-left : 5%;
+  width : 45%;
+/*  box-shadow: 4px 4px 1px var(--color_job_reality_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+#about_me #context h3
+{
+  color : var(--color_context);
+  padding: 1%;
+}
+
+#about_me #context
+{
+  background-color: var(--color_context);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-right: 20%;
+  width: 35%;
+/*  box-shadow: 4px 4px 1px var(--color_context_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+#about_me #date_2018_2021 h2
+{
+  color :var(--color_date_2018_2021);
+  padding: 1%;
+}
+#about_me #date_2018_2021
+{
+  background-color: var(--color_date_2018_2021);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 2%;*/
+  margin-left: 20%;
+  width: 26%;
+/*  box-shadow: 4px 4px 1px var(--color_date_2018_2021_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+#about_me #date_2016_2018 h2
+{
+  color :var(--color_date_2016_2018);
+  padding: 1%;
+}
+
+#about_me #date_2016_2018
+{
+  background-color: var(--color_date_2016_2018);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 10%;*/
+  margin-right : 20%;
+  width : 28%;
+/*  box-shadow: 4px 4px 1px var(--color_date_2016_2018_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+
+}
+
+#about_me #date_2016 h2
+{
+  color :var(--color_date_2016);
+  padding: 1%;
+}
+
+#about_me #date_2016
+{
+  background-color: var(--color_date_2016);
+  border-radius: 20px;
+  color: white;
+  text-align: ;
+  padding: 5%;
+/*  margin-top: 10%;*/
+  margin-right : 30%;
+  margin-left : 20%;
+  width: 20%;
+/*  box-shadow: 4px 4px 1px var(--color_date_2016_shadow);*/
+/*  border: 1px solid var(--color_border);*/
+}
+
+
+/* version 1685356499504861829*/
