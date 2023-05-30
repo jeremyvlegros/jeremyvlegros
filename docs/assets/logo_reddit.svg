@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 495 160"
+   version="1.1"
+   sodipodi:docname="reddit_logo_horizontal_on_orangered.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.389899"
+     inkscape:cx="228.67075"
+     inkscape:cy="79.501268"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#fff;}.cls-2{fill:#ff4500;}</style>
+  </defs>
+  <circle
+     class="cls-2"
+     cx="82.36"
+     cy="80"
+     r="73"
+     transform="translate(-32.45 81.67) rotate(-45)"
+     id="circle20" />
+  <path
+     class="cls-1"
+     d="M82.36,13a67,67,0,1,1-67,67,67,67,0,0,1,67-67m0-12a79,79,0,1,0,79,79,79.09,79.09,0,0,0-79-79Z"
+     id="path22" />
+  <path
+     class="cls-1"
+     d="M127,80a9.77,9.77,0,0,0-16.55-7c-6.68-4.82-15.88-7.93-26.13-8.29l4.45-20.94,14.55,3.09a7,7,0,1,0,.71-3.41L87.81,40a1.73,1.73,0,0,0-1.31.24,1.76,1.76,0,0,0-.76,1.1l-5,23.37C70.37,65,61,68.08,54.26,73a9.76,9.76,0,1,0-10.76,16,19.37,19.37,0,0,0-.23,3c0,15,17.5,27.22,39.08,27.22s39.09-12.19,39.09-27.22a19.21,19.21,0,0,0-.23-2.94A9.77,9.77,0,0,0,127,80ZM60,87a7,7,0,1,1,7,7A7,7,0,0,1,60,87ZM99,105.43c-4.77,4.75-13.89,5.12-16.58,5.12s-11.81-.37-16.57-5.12a1.81,1.81,0,0,1,2.56-2.56c3,3,9.42,4.07,14,4.07s11-1.07,14-4.07A1.81,1.81,0,0,1,99,105.43ZM97.72,94a7,7,0,1,1,7-7A7,7,0,0,1,97.72,94Z"
+     id="path24" />
+</svg>
