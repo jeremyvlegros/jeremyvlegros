@@ -1,12 +1,9 @@
 ---
-title : null
+title : jeremyvlegros
 filename : links.md
 ---
 
 <div id="links">
-
-
-<h1 id="title">jeremyvlegros</h1> <!-- can't rely on Jekyll -->
 
 <span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/website/about_me.html"> About me </a>
@@ -19,42 +16,42 @@ filename : links.md
 	<div class="text_gray text_centered"><i>current posting platform</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://twitter.com/jeremyvlegros">
 	 <div id="Twitter">Twitter</div>
 	</a>
-	<div class="text_gray text_centered"><i>inactive since March 2023</i></div>
+	<div class="text_gray text_centered"><i>communication and news redirection hub</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
 	 <div id="LinkedIn">LinkedIn</div>
 	</a>
-	<div class="text_gray text_centered"><i>rarely active</i></div>
+	<div class="text_gray text_centered"><i>communication / no posts</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://www.reddit.com/user/jeremyvlegros">
 	 <div id="Reddit">Reddit</div>
 	</a>
 	<div class="text_gray text_centered"><i>no posts</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://www.nexusmods.com/users/152566508">
 	 <div id="Nexus">Nexus mods</div>
 	</a>
 	<div class="text_gray text_centered"><i>not started yet</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://github.com/jeremyvlegros">
 	 <div id="Github">Github</div>
 	</a>
 	<div class="text_gray text_centered"><i> only for code</i></div>
  </div>
 
-<div >
+<div>
 	<a href="https://www.twitch.tv/jeremyvlegros">
 	 <div id="Twitch">Twitch</div>
 	</a>
@@ -71,7 +68,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1685447387595250805
+	Link tree version 1685448096290857832
 </span>
 
 </div>
