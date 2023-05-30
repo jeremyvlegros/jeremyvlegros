@@ -23,14 +23,14 @@ filename : links.md
 	<a href="https://twitter.com/jeremyvlegros">
 	 <div id="Twitter">Twitter</div>
 	</a>
-	<div class="text_gray text_centered"><i>inactive since March 2023</i></div>
+	<div class="text_gray text_centered"><i>communication and news redirection hub</i></div>
  </div>
 
 <div >
 	<a href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
 	 <div id="LinkedIn">LinkedIn</div>
 	</a>
-	<div class="text_gray text_centered"><i>rarely active</i></div>
+	<div class="text_gray text_centered"><i>communication / no posts</i></div>
  </div>
 
 <div >
