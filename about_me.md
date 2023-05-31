@@ -1,17 +1,13 @@
 ---
-title: null
+title: jeremyvlegros
 filename: about_me.md
 ---
 
-
-
 <div id="about_me">
-
-
 
  <div id="preface">
 
-  <h1 id="title"> Now </h1>
+  <h1 id="title"> Me, now </h1>
 
    <!-- <hr class="hr_h1"> -->
 
@@ -171,6 +167,6 @@ filename: about_me.md
 
  <p>I was self-employed, helping high school students to get back on their wheels.</p></div>
 
-<p style="color:gray;text-align: center;">version 1685304638954371334</p>
+<p style="color:gray;text-align: center;">version 1685550801556925984</p>
 
 </div>
