@@ -148,4 +148,13 @@
   visibility : hidden;
 }
 
-/* version 1685450219619626825*/
+
+@media screen and (max-width: 573px) {
+  .post-content {
+    margin: 0;
+  }
+}
+
+
+/* #date 2023-06-07 0231 1686090678671177138 */
+
