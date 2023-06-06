@@ -1,8 +1,11 @@
 ---
 title : Links
 filename : links.md
+layout : base
 ---
 <div id="links">
+
+<h1>Links</h1>
 
 <span id="about_me_link">
 	<a href="https://jeremyvlegros.github.io/website/about_me.html">
@@ -93,7 +96,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	#date 2023-06-07 0234 1686090844292396249
+	#date 2023-06-07 0335 1686094516906962696
 </span>
 
 </div>
