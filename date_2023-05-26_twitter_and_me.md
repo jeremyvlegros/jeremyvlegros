@@ -1,3 +1,6 @@
+
+<div id="date_2023-05-26">
+
 # Twitter original plan : a HUB
 
 At the time I wanted to use `Twitter` as a HUB and `Tumblr` as a blog.
@@ -52,3 +55,7 @@ There are no alternatives to what Twitter was about :
 Because I don’t really care about Twitter as a text posting platform anymore, I will do mostly what companies do.
 
 It’s rather sad to think that I will exist there mostly for business communication.
+
+version #date 2023-06-07 0102 1686085322307301201
+
+</div>
