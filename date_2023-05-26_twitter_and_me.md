@@ -11,8 +11,7 @@ So Twitter became a all in one solution.
 I will not describe the very many reasons why I stopped posting, and focus on where I think Twitter is right now.
 
 without an account :
-
-- there are no more searching bar, you can’t search for people anymore => it is less public | you can watch the explore without - any control on what you see, when they are matches you see mostly only result matches … great …
+- there are no more searching bar, you can’t search for people anymore (it is less public | you can watch the explore without - any control on what you see, when they are matches you see mostly only result matches … great …)
 - you can watch the entire timeline of a person without an account (while bugged with login prompts at “x” number of posts)
 - you can’t watch the pictures of a person in “Media” but still can click on the picture gallery thing on the right `’(-_-)`
 
