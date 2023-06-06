@@ -4,6 +4,7 @@
 *
 {
 	font-family:"Helvetica Neue",sans-serif!important;
+  	overflow-inline: scroll;
 }
 
 .background_rectangle_rounded_corners
@@ -149,6 +150,9 @@
 }
 
 
+/* responsive tweaks */
+
+
 @media screen and (max-width: 573px) {
   .post-content {
     margin: 0;
@@ -156,5 +160,5 @@
 }
 
 
-/* #date 2023-06-07 0231 1686090678671177138 */
+/* #date 2023-06-07 0315 1686093350489874723 */
 
