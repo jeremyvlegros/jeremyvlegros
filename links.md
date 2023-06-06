@@ -5,13 +5,13 @@ filename : links.md
 <div id="links">
 
 <span id="about_me_link">
-	<a href="https://jeremyvlegros.github.io/website/about_me.html" target=”_blank”>
+	<a href="https://jeremyvlegros.github.io/website/about_me.html">
 	 About me
     </a>
 </span>
 
 <div class="line">
-	<a href="https://jeremyvlegros.tumblr.com/" target=”_blank”>
+	<a href="https://jeremyvlegros.tumblr.com/">
 	 <div id="Tumblr">
 	   Tumblr
 	   <!-- <img class="logo_tumblr" src="https://jeremyvlegros.github.io/website/assets/logo_tumblr.svg" alt="tumblr logo"/> -->
@@ -21,7 +21,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://twitter.com/jeremyvlegros" target=”_blank”>
+	<a href="https://twitter.com/jeremyvlegros">
 	 <div id="Twitter">
 	 	Twitter
 	   <!-- <img class="logo_twitter" src="https://jeremyvlegros.github.io/website/assets/logo_twitter_white.svg" alt="twitter logo"/> -->
@@ -31,7 +31,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card" target=”_blank”>
+	<a href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card">
 	 <div id="LinkedIn">
 	   LinkedIn
 	   <!-- <img class="logo_linkedin" src="https://jeremyvlegros.github.io/website/assets/logo_linkedin.svg" alt="linkedin logo"/> -->
@@ -41,7 +41,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://www.reddit.com/user/jeremyvlegros" target=”_blank”>
+	<a href="https://www.reddit.com/user/jeremyvlegros">
 	 <div id="Reddit">
 	 	Reddit
 	   <!-- <img class="logo_reddit" src="https://jeremyvlegros.github.io/website/assets/logo_reddit.svg" alt="reddit logo"/> -->
@@ -51,7 +51,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://www.nexusmods.com/users/152566508" target=”_blank”>
+	<a href="https://www.nexusmods.com/users/152566508">
 	 <div id="Nexus">
 	 	Nexus mods
 	   <!-- <img class="logo_nexus_mods" src="https://jeremyvlegros.github.io/website/assets/logo_nexus_mods.png" alt="nexus mods logo"/> -->
@@ -61,7 +61,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://github.com/jeremyvlegros" target=”_blank”>
+	<a href="https://github.com/jeremyvlegros">
 	 <div id="Github">
 	 	Github
 	   <!-- <img class="logo_github" src="https://jeremyvlegros.github.io/website/assets/logo_github.svg" alt="github logo"/> -->
@@ -71,7 +71,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://www.twitch.tv/jeremyvlegros" target=”_blank”>
+	<a href="https://www.twitch.tv/jeremyvlegros">
 	 <div id="Twitch">
 	 	Twitch
 	   <!-- <img class="logo_twitch" src="https://jeremyvlegros.github.io/website/assets/logo_twitch.svg" alt="twitch logo"/> -->
@@ -81,7 +81,7 @@ filename : links.md
  </div>
 
 <div class="line">
-	<a href="https://steamcommunity.com/id/jeremyvlegros" target=”_blank”>
+	<a href="https://steamcommunity.com/id/jeremyvlegros">
 	 <div id="Steam">
 	 	Steam
 	   <!-- <img class="logo_steam" src="https://jeremyvlegros.github.io/website/assets/logo_steam.svg" alt="steam logo"/> -->
@@ -93,7 +93,7 @@ filename : links.md
 </div>
 
 <span id="version">
-	Link tree version 1686063171669373655
+	#date 2023-06-07 0234 1686090844292396249
 </span>
 
 </div>
