@@ -1,6 +1,8 @@
 @import "about_me.css";
 @import "links.css";
 @import "dracula.css";
+@import "post.css";
+
 *
 {
 	font-family:"Helvetica Neue",sans-serif!important;
@@ -149,15 +151,5 @@
 }
 
 
-/* responsive tweaks */
-
-
-@media screen and (max-width: 573px) {
-  .post-content {
-    margin: 0;
-  }
-}
-
-
-/* #date 2023-06-07 0315 1686093350489874723 */
+/* #date 2023-06-07 0350 1686095440075395192 */
 
