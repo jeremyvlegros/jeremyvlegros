@@ -1,6 +1,7 @@
 ---
 title: jeremyvlegros
 filename: about_me.md
+layout : base
 ---
 
 <div id="about_me">
