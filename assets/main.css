@@ -4,6 +4,7 @@
 @import "post.css";
 @import "index.css";
 @import "syntax.css";
+@import "navigation.css";
 
 *
 {
@@ -22,4 +23,10 @@
   visibility : hidden;
 }
 
-/*#date 2023-06-07 0551 1686102697965657575*/
+.page-link /* to remove after modifying the layout ?*/
+{
+  visibility: hidden;
+}
+
+
+/*#date 2023-06-08 0027 1686169647023441891*/

@@ -1,3 +1,9 @@
+:root
+{
+  --color_post_content_background:white;
+/*  --color_post_content_background:hsl(4,7%,90%);*/
+}
+
 /*.page-heading
 {
   color:#00b8ff;
@@ -21,7 +27,7 @@
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;
-  //background-color: hsl(1900,100%,10%);
+  background-color: var(--color_post_content_background);
   overflow-inline: scroll;
 
 }
@@ -45,4 +51,4 @@
   }
 }
 
-/*#date 2023-06-07 0459 1686099585731881574*/
+/*#date 2023-06-07 2259 1686164341301739677*/
