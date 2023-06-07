@@ -1,0 +1,26 @@
+
+/* backticks */
+.language-plaintext
+{
+	background-color: #EEE;
+	padding: .3%;
+	border-radius: 7px;
+}
+
+.language-plaintext:before
+{
+	content: "`";
+	color:yellowgreen;
+	font-size: 1.1em;
+	font-weight:bold;
+}
+
+.language-plaintext:after
+{
+	content: "`";
+	color:yellowgreen;
+	font-size: 1.1em;
+	font-weight:bold;
+}
+
+/*#date 2023-06-07 0554 1686102881522913894*/
