@@ -2,6 +2,7 @@
 @import "links.css";
 @import "dracula.css";
 @import "post.css";
+@import "index.css";
 
 *
 {
@@ -12,42 +13,6 @@
 {
 	background-color: blue;
 	border-radius: 50px;
-}
-
-
-.home
-{
-  margin-left: 30%;
-  margin-right: 30%;
-}
-
-/* index */
-
-.home a
-{
-	text-decoration:none;
-	color:#00b8ff;
-	text-align: center;
-}
-
-.home a:hover
-{
-  /*transform: scale(1.02);*/
-  transform: scale(0.97);
-  box-shadow: 2px 2px 2px #00b8ff;
-}
-
-.home a
-{
- transition: all .2s ease-in-out;
-/* background-color:black;*/
- border-radius:50px;
- padding:20px;
- margin:10px;
- text-align:center;
- box-shadow: 2px 2px 2px grey;
- color : white;
- font-weight: bolder;
 }
 
 /*disabling more Jekyll stuff*/
@@ -62,4 +27,4 @@
   visibility : hidden;
 }
 
-/*#date 2023-06-07 0459 1686099548669766412*/
+/*#date 2023-06-07 0526 1686101202950539743*/
