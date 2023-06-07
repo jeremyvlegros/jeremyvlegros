@@ -46,7 +46,7 @@
 /*  margin-top: 2%;*/
   margin-right: 20%;
   margin-left :20%;
-  width: 20%;
+
 /*  box-shadow: 4px 4px 1px var(--color_preface_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
@@ -81,7 +81,7 @@
   padding: 5%;
 /*  margin-top: 2%;*/
   margin-right: 20%;
-  width: 32%;
+
 /*  box-shadow: 4px 4px 1px var(--color_day_job_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
@@ -101,7 +101,7 @@
   padding: 5%;
 /*  margin-top: 2%;*/
   margin-left: 20%;
-  width: 30%;
+
 /*  box-shadow: 4px 4px 1px var(--color_dream_job_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
@@ -120,7 +120,7 @@
   text-align: ;
   padding: 5%;
   margin-left: 20%;
-  width: 45%;
+
 /*  box-shadow: 4px 4px 1px var(--color_happy_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 /*  margin-top: 2%;*/
@@ -161,7 +161,7 @@
   padding: 5%;
 /*  margin-top: 2%;*/
   margin-right: 20%;
-  width: 35%;
+
 /*  box-shadow: 4px 4px 1px var(--color_context_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
@@ -180,7 +180,7 @@
   padding: 5%;
 /*  margin-top: 2%;*/
   margin-left: 20%;
-  width: 26%;
+
 /*  box-shadow: 4px 4px 1px var(--color_date_2018_2021_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
@@ -200,7 +200,7 @@
   padding: 5%;
 /*  margin-top: 10%;*/
   margin-right : 20%;
-  width : 28%;
+
 /*  box-shadow: 4px 4px 1px var(--color_date_2016_2018_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 
@@ -222,10 +222,10 @@
 /*  margin-top: 10%;*/
   margin-right : 30%;
   margin-left : 20%;
-  width: 20%;
+
 /*  box-shadow: 4px 4px 1px var(--color_date_2016_shadow);*/
 /*  border: 1px solid var(--color_border);*/
 }
 
 
-/* version 1685356499504861829*/
+/*#date 2023-06-08 0212 1686175942665343171*/
