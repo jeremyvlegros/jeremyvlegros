@@ -7,12 +7,6 @@ layout : base
 
 <h1>Links</h1>
 
-<span id="about_me_link">
-	<a href="https://jeremyvlegros.github.io/website/about_me.html">
-	 About me
-    </a>
-</span>
-
 <div class="line">
 	<a href="https://jeremyvlegros.tumblr.com/">
 	 <div id="Tumblr">
