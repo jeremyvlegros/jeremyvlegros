@@ -1,3 +1,17 @@
+/*.page-heading
+{
+  color:#00b8ff;
+  text-align: center;
+}*/
+
+.post-title
+{
+  color : black;
+  text-align: center;
+  font-size: 2em;
+  font-variant-caps: all-petite-caps;
+}
+
 .post-content
 {
   margin-left: 20%;
@@ -31,4 +45,4 @@
   }
 }
 
-/*#date 2023-06-07 0352 1686095568900739332*/
+/*#date 2023-06-07 0459 1686099585731881574*/

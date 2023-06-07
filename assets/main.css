@@ -14,49 +14,30 @@
 	border-radius: 50px;
 }
 
-/*I will use Bootstrap or something else at some point*/
 
-.home #index
+.home
 {
   margin-left: 30%;
   margin-right: 30%;
-/*  text-align: center !important; */
 }
 
-.page-heading
-{
-  color:#00b8ff;
-  text-align: center;
-}
+/* index */
 
-.post-title /* title of most pages until I know how `_layout` really works */
-{
-  color:#00b8ff;
-  text-align: center;
-	font-size: 2em;
-}
-
-#index H1
-{
-  color:#00b8ff;
-  text-align: center;
-}
-
-#index a
+.home a
 {
 	text-decoration:none;
 	color:#00b8ff;
+	text-align: center;
 }
 
-#index a div:hover
+.home a:hover
 {
   /*transform: scale(1.02);*/
   transform: scale(0.97);
   box-shadow: 2px 2px 2px #00b8ff;
-
 }
 
-#index a div
+.home a
 {
  transition: all .2s ease-in-out;
 /* background-color:black;*/
@@ -67,75 +48,6 @@
  box-shadow: 2px 2px 2px grey;
  color : white;
  font-weight: bolder;
-}
-
-#index #Steam
-{
-	background-color:#171A21 ;
-}
-
-#index #Github
-{
-	background-color:#272B33 ;
-}
-
-#index #Nexus
-{
-	background-color:#D98F40 ;
-}
-
-#index #Reddit
-{
-	background-color:#FA4400 ;
-}
-
-#index #Tumblr
-{
-	background-color:#001935 ;
-}
-
-#index #Twitter
-{
-	background-color:#1DA1F2 ;
-}
-
-#index #LinkedIn
-{
-	background-color:#0077B5 ;
-}
-
-#index #Twitch
-{
-	background-color:#9147FF ;
-}
-
-#index #about_me_link
-{
-	text-align: center;
-}
-
-
-#index #about_me_link a
-{
-	color : #00b8ff;
-/*	background-color: #00b8ff;
-	border-radius: 10px;
-	padding: 10px;*/
-}
-
-#index #version
-{
-	color : grey;
-}
-
-#index .text_gray
-{
-	color:gray;
-}
-
-#index .text_centered
-{
-	text-align: center
 }
 
 /*disabling more Jekyll stuff*/
@@ -150,6 +62,4 @@
   visibility : hidden;
 }
 
-
-/* #date 2023-06-07 0350 1686095440075395192 */
-
+/*#date 2023-06-07 0459 1686099548669766412*/
