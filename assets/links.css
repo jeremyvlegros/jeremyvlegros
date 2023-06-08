@@ -1,45 +1,40 @@
 :root
 {
-
-
-	--color_background_tumblr:#001935;
-	--color_background_twitter:#1DA1F2;
-	--color_background_linkedin:#0077B5;
-	--color_background_reddit:#FA4400;
-	--color_background_nexus_mods:#D98F40;
-	--color_background_github:#272B33;
-	--color_background_twitch:#9147FF;
-	--color_background_steam:#171A21;
+  --color_background_tumblr:#001935;
+  --color_background_twitter:#1DA1F2;
+  --color_background_linkedin:#0077B5;
+  --color_background_reddit:#FA4400;
+  --color_background_nexus_mods:#D98F40;
+  --color_background_github:#272B33;
+  --color_background_twitch:#9147FF;
+  --color_background_steam:#171A21;
 
 
   /* keeping those for a while until I am sure I don't need it */
-	--color_background_hover_tumblr:#001935;
-	--color_background_hover_twitter:#1DA1F2;
-	--color_background_hover_linkedin:#0077B5;
-	--color_background_hover_reddit:#FA4400;
-	--color_background_hover_nexus_mods:#D98F40;
-	--color_background_hover_github:#272B33;
-	--color_background_hover_twitch:#9147FF;
-	--color_background_hover_steam:#171A21;
+  --color_background_hover_tumblr:#001935;
+  --color_background_hover_twitter:#1DA1F2;
+  --color_background_hover_linkedin:#0077B5;
+  --color_background_hover_reddit:#FA4400;
+  --color_background_hover_nexus_mods:#D98F40;
+  --color_background_hover_github:#272B33;
+  --color_background_hover_twitch:#9147FF;
+  --color_background_hover_steam:#171A21;
 
 }
 
 #links
 {
-	//margin-top:0%;
   margin-left: 30%;
   margin-right: 30%;
-	margin-bottom: 5%;
-  font-family:"Helvetica Neue",sans-serif!important;
-  text-align: center !important;
+  text-align: center;
   position: absolute;
-	top: 0;
+  top:1%;
+  bottom: 1%;
 }
+
 
 #links .social_logo
 {
-	/*margin: 0 0 0 0;*/  /*not taking risks*/
-	/*padding: 0 0 0 0;*/ /*not taking risks*/
   /*height: 5%;*/
   /*width: 5%;*/
 }
@@ -47,7 +42,7 @@
 
 #links li
 {
-	list-style: none;
+  list-style: none;
 }
 
 #links h1
@@ -58,8 +53,8 @@
 #links hr
 {
   margin-bottom:4%;
-	//color: yellowgreen;
-	visibility: hidden;
+  //color: yellowgreen;
+  visibility: hidden;
 }
 
 #links h1:after
@@ -68,122 +63,122 @@
 
 #links a
 {
-	text-decoration:none;
+  text-decoration:none;
 
 }
 
 #links .list_line
 {
-	margin-top : 3%;
-	margin-bottom: 3%;
+  margin-top : 3%;
+  margin-bottom: 3%;
 }
 
 #links #steam
 {
-	background-color: var(--color_background_steam);
+  background-color: var(--color_background_steam);
 }
 
 #links #github
 {
-	background-color: var(--color_background_github);
+  background-color: var(--color_background_github);
 }
 
 #links #nexus_mods
 {
-	background-color: var(--color_background_nexus_mods);
+  background-color: var(--color_background_nexus_mods);
 }
 
 #links #reddit
 {
-	background-color: var(--color_background_reddit);
+  background-color: var(--color_background_reddit);
 }
 
 #links #tumblr
 {
-	background-color: var(--color_background_tumblr);
+  background-color: var(--color_background_tumblr);
 }
 
 #links #twitter
 {
-	background-color: var(--color_background_twitter);
+  background-color: var(--color_background_twitter);
 }
 
 #links #linkedin
 {
-	background-color: var(--color_background_linkedin);
+  background-color: var(--color_background_linkedin);
 }
 
 #links #twitch
 {
-	background-color: var(--color_background_twitch);
+  background-color: var(--color_background_twitch);
 }
 
 /*hover colors*/
 
 #links #steam:hover
 {
-	background-color: var(--color_background_hover_steam);
+  background-color: var(--color_background_hover_steam);
 }
 
 #links #github:hover
 {
-	background-color: var(--color_background_hover_github);
+  background-color: var(--color_background_hover_github);
 }
 
 #links #nexus_mods:hover
 {
-	background-color: var(--color_background_hover_nexus_mods);
+  background-color: var(--color_background_hover_nexus_mods);
 }
 
 #links #reddit:hover
 {
-	background-color: var(--color_background_hover_reddit);
+  background-color: var(--color_background_hover_reddit);
 }
 
 #links #tumblr:hover
 {
-	background-color: var(--color_background_hover_tumblr);
+  background-color: var(--color_background_hover_tumblr);
 }
 
 #links #twitter:hover
 {
-	background-color: var(--color_background_hover_twitter);
+  background-color: var(--color_background_hover_twitter);
 }
 
 #links #linkedin:hover
 {
-	background-color: var(--color_background_hover_linkedin);
+  background-color: var(--color_background_hover_linkedin);
 }
 
 #links #twitch:hover
 {
-	background-color: var(--color_background_hover_twitch);
+  background-color: var(--color_background_hover_twitch);
 }
 
 #links #version
 {
-	color : grey;
+  color : grey;
 }
 
 #links .text_gray
 {
-	color:gray;
+  color:gray;
 }
 
 #links .text_centered
 {
-	text-align: center
+  text-align: center
 }
 
 @media screen and (max-width:573px)
 {
-	#links
-	{
-		margin-right:7%;
-		margin-left:7%;
-		//background-color:blue;
-		//border: 10px solid blue;
-	}
+  #links
+  {
+    margin-right:7%;
+    margin-left:7%;
+/* background-color:blue;*/
+/* border: 10px solid blue;*/
+  }
 }
 
-/*#date 2023-06-08 1424 1686219848435031179*/
+/*#date 2023-06-08 1529 1686223743438510872*/
