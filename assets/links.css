@@ -1,3 +1,27 @@
+:root
+{
+
+	--color_background_tumblr:#001935;
+	--color_background_twitter:#1DA1F2;
+	--color_background_linkedin:#0077B5;
+	--color_background_reddit:#FA4400;
+	--color_background_nexus_mods:#D98F40;
+	--color_background_github:#272B33;
+	--color_background_twitch:#9147FF;
+	--color_background_steam:#171A21;
+
+
+	--color_background_hover_tumblr:#001935;
+	--color_background_hover_twitter:#1DA1F2;
+	--color_background_hover_linkedin:#0077B5;
+	--color_background_hover_reddit:#FA4400;
+	--color_background_hover_nexus_mods:#D98F40;
+	--color_background_hover_github:#272B33;
+	--color_background_hover_twitch:#9147FF;
+	--color_background_hover_steam:#171A21;
+
+}
+
 #links
 {
   margin-left: 30%;
@@ -15,98 +39,144 @@
 }
 
 
+#links li
+{
+	list-style: none;
+}
+
 #links h1
 {
   color:black;
-  text-align: center;
+}
+
+#links hr
+{
+  margin-bottom:7%;
+	//color: yellowgreen;
+}
+
+#links h1:after
+{
 }
 
 #links a
 {
 	text-decoration:none;
-}
-
-#links a div:hover
-{
-  /*transform: scale(1.02);*/
-  transform: scale(0.97);
-  box-shadow: 2px 2px 2px #00b8ff;
 
 }
 
-#links .line
+#links .list_line
 {
 	margin-top : 3%;
 	margin-bottom: 3%;
 }
 
-#links a div /*I thought I named that a while ago... well XD */
+#links .button
 {
  transition: all .2s ease-in-out;
 /* background-color:black;*/
- border-radius:50px;
+ border-radius:5px;
  padding:20px;
- margin:10px;
  text-align:center;
- box-shadow: 2px 2px 2px grey;
  color : white;
  font-weight: bolder;
- width: 100%;
- height: 100%;
+ border:1px solid black;
+ box-shadow: 2px 2px 2px #000;
+/* width: 100%;*/
+/* height: 100%;*/
 }
 
-#links #Steam
+#links .button:hover
 {
-	background-color:#171A21 ;
-}
-
-#links #Github
-{
-	background-color:#272B33 ;
-}
-
-#links #Nexus
-{
-	background-color:#D98F40 ;
-}
-
-#links #Reddit
-{
-	background-color:#FA4400 ;
-}
-
-#links #Tumblr
-{
-	background-color:#001935 ;
-}
-
-#links #Twitter
-{
-	background-color:#1DA1F2 ;
-}
-
-#links #LinkedIn
-{
-	background-color:#0077B5 ;
-}
-
-#links #Twitch
-{
-	background-color:#9147FF ;
-}
-
-#links #about_me_link
-{
-	text-align: center;
+  /*transform: scale(1.02);*/
+  transform: scale(0.97);
+  box-shadow: none;
+  color : white;
+	border:1px solid rgba(0,0,0,0.5)
 }
 
 
-#links #about_me_link a
+
+#links #steam
 {
-	color : #00b8ff;
-/*	background-color: #00b8ff;
-	border-radius: 10px;
-	padding: 10px;*/
+	background-color: var(--color_background_steam);
+}
+
+#links #github
+{
+	background-color: var(--color_background_github);
+}
+
+#links #nexus_mods
+{
+	background-color: var(--color_background_nexus_mods);
+}
+
+#links #reddit
+{
+	background-color: var(--color_background_reddit);
+}
+
+#links #tumblr
+{
+	background-color: var(--color_background_tumblr);
+}
+
+#links #twitter
+{
+	background-color: var(--color_background_twitter);
+}
+
+#links #linkedin
+{
+	background-color: var(--color_background_linkedin);
+}
+
+#links #twitch
+{
+	background-color: var(--color_background_twitch);
+}
+
+/*hover colors*/
+
+#links #steam:hover
+{
+	background-color: var(--color_background_hover_steam);
+}
+
+#links #github:hover
+{
+	background-color: var(--color_background_hover_github);
+}
+
+#links #nexus_mods:hover
+{
+	background-color: var(--color_background_hover_nexus_mods);
+}
+
+#links #reddit:hover
+{
+	background-color: var(--color_background_hover_reddit);
+}
+
+#links #tumblr:hover
+{
+	background-color: var(--color_background_hover_tumblr);
+}
+
+#links #twitter:hover
+{
+	background-color: var(--color_background_hover_twitter);
+}
+
+#links #linkedin:hover
+{
+	background-color: var(--color_background_hover_linkedin);
+}
+
+#links #twitch:hover
+{
+	background-color: var(--color_background_hover_twitch);
 }
 
 #links #version
@@ -124,4 +194,15 @@
 	text-align: center
 }
 
-/*#date 2023-06-08 0203 1686175385739514570*/
+@media screen and (max-width:573px)
+{
+	#links
+	{
+		margin-right:7%;
+		margin-left:7%;
+		//background-color:blue;
+		//border: 10px solid blue;
+	}
+}
+
+/*#date 2023-06-08 1245 1686213932807207371*/

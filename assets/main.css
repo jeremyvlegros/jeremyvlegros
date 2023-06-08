@@ -1,3 +1,4 @@
+@import "all.css";
 @import "about_me.css";
 @import "links.css";
 @import "dracula.css";
@@ -5,28 +6,6 @@
 @import "index.css";
 @import "syntax.css";
 @import "navigation.css";
-
-*
-{
-	font-family:"Helvetica Neue",sans-serif!important;
-}
-
-/*disabling more Jekyll stuff*/
-
-.site-nav
-{
-  visibility : hidden;
-}
-
-.site-footer
-{
-  visibility : hidden;
-}
-
-.page-link /* to remove after modifying the layout ?*/
-{
-  visibility: hidden;
-}
-
+@import "draft.css"
 
 /*#date 2023-06-08 0027 1686169647023441891*/

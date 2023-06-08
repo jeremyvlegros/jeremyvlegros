@@ -1,0 +1,24 @@
+*
+{
+  font-family:"Helvetica Neue",sans-serif!important;
+  margin:0;  /* *sigh* default is not zero ... it always messes with alignement */
+  padding:0; /* *sigh* */
+}
+
+/* disabling Jekyll stuff */
+.page-link
+{
+  visibility: hidden;
+}
+
+.site-nav
+{
+  visibility : hidden;
+}
+
+.site-footer
+{
+  visibility : hidden;
+}
+
+/*#date 2023-06-08 1328 1686216536562940627*/
