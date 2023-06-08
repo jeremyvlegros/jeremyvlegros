@@ -6,28 +6,35 @@ layout : base
 <div id="links">
 
 <span id="about_me_link">
+	
 	<a href="https://jeremyvlegros.github.io/website/about_me.html">
 	 About me
     </a>
 </span>
 
 <div class="line">
-	<a href="https://jeremyvlegros.tumblr.com/">
+	<hr>
+	BLANK with HTML
+	<a href="https://jeremyvlegros.tumblr.com/" target="_blank">
 	 <div id="Tumblr">
 	   Tumblr
 	   <!-- <img class="logo_tumblr" src="https://jeremyvlegros.github.io/website/assets/logo_tumblr.svg" alt="tumblr logo"/> -->
 	 </div>
 	</a>
+	<hr>
 	<div class="text_gray text_centered"><i>current posting platform</i></div>
  </div>
 
 <div class="line">
-	<a href="https://twitter.com/jeremyvlegros">
+	<hr>
+	BLANK with Jekyll "blank_"
+	<a href="https://twitter.com/jeremyvlegros" {{ "blank_" }}>
 	 <div id="Twitter">
 	 	Twitter
 	   <!-- <img class="logo_twitter" src="https://jeremyvlegros.github.io/website/assets/logo_twitter_white.svg" alt="twitter logo"/> -->
 	 </div>
 	</a>
+	<hr>
 	<div class="text_gray text_centered"><i>communication and news redirection hub</i></div>
  </div>
 
