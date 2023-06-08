@@ -1,6 +1,7 @@
 :root
 {
 
+
 	--color_background_tumblr:#001935;
 	--color_background_twitter:#1DA1F2;
 	--color_background_linkedin:#0077B5;
@@ -11,6 +12,7 @@
 	--color_background_steam:#171A21;
 
 
+  /* keeping those for a while until I am sure I don't need it */
 	--color_background_hover_tumblr:#001935;
 	--color_background_hover_twitter:#1DA1F2;
 	--color_background_hover_linkedin:#0077B5;
@@ -24,10 +26,14 @@
 
 #links
 {
+	//margin-top:0%;
   margin-left: 30%;
   margin-right: 30%;
+	margin-bottom: 5%;
   font-family:"Helvetica Neue",sans-serif!important;
   text-align: center !important;
+  position: absolute;
+	top: 0;
 }
 
 #links .social_logo
@@ -51,8 +57,9 @@
 
 #links hr
 {
-  margin-bottom:7%;
+  margin-bottom:4%;
 	//color: yellowgreen;
+	visibility: hidden;
 }
 
 #links h1:after
@@ -70,32 +77,6 @@
 	margin-top : 3%;
 	margin-bottom: 3%;
 }
-
-#links .button
-{
- transition: all .2s ease-in-out;
-/* background-color:black;*/
- border-radius:5px;
- padding:20px;
- text-align:center;
- color : white;
- font-weight: bolder;
- border:1px solid black;
- box-shadow: 2px 2px 2px #000;
-/* width: 100%;*/
-/* height: 100%;*/
-}
-
-#links .button:hover
-{
-  /*transform: scale(1.02);*/
-  transform: scale(0.97);
-  box-shadow: none;
-  color : white;
-	border:1px solid rgba(0,0,0,0.5)
-}
-
-
 
 #links #steam
 {
@@ -205,4 +186,4 @@
 	}
 }
 
-/*#date 2023-06-08 1245 1686213932807207371*/
+/*#date 2023-06-08 1424 1686219848435031179*/
