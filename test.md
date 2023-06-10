@@ -42,7 +42,7 @@ So `Twitter` became a all-in-one solution.
 
 ### 1) Twitter
 
-#### People without accounts :
+#### People without accounts
 
 - have are no more search options :
  - can’t search for people anymore (it is less public,you can watch the explore without
@@ -51,13 +51,13 @@ So `Twitter` became a all-in-one solution.
  - can't do anything with the hashtags
 - can’t watch the pictures of a person in “Media”, but still can click on the picture gallery thing on the right (don't ask me why ...)
 
-#### The API is restricted :
+#### The API is restricted
 
 - I don’t have to ask that to myself anymore, it’s one less problem
 - there is a free version
 
 
-#### Some unique features are gone :
+#### Some unique features are gone
 
 - short posts, embedding media effortlessly, with a preview
 - verified identity on Twitter was like existing official on the web
@@ -65,7 +65,7 @@ So `Twitter` became a all-in-one solution.
 	- That's one less pros argument ...
 	- I didn't want to use my website link because It has no preview, but now that it is the same, let's finish the social exodus.
 
-#### Policy (?) :
+#### Policy (?)
 
 - The direction `Twitter` is going
 
@@ -76,7 +76,7 @@ So `Twitter` became a all-in-one solution.
 - The CEO is new but ... the old CEO is still sitting not far
 
 
-### 2) I tried `Tumblr` :
+### 2) I tried `Tumblr`
 
 - posting there made me realize that social platforms should be only be about social, about human networking
 
