@@ -4,7 +4,7 @@ title : "About Twitter & me"
 
 ---
 
-1
+2
 
 ---
 
@@ -78,7 +78,7 @@ So `Twitter` became a all-in-one solution.
 - `Twitter` decides what is okay or not and I can't do anything about it, it is in the terms of use (I believe)
 - The CEO is new but ... the old CEO is still sitting not far
 
-### 2) I tried Tumblr
+### 2) I tried `Tumblr`
 
 - posting there made me realize that social platforms should be only be about social, about human networking
 - posting is more complete than Twitter but not polished
