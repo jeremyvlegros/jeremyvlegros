@@ -42,9 +42,7 @@ So `Twitter` became a all-in-one solution.
 
 ### 1) Twitter
 
----
-
-#### people without accounts :
+#### People without accounts :
 
 - have are no more search options :
  - can’t search for people anymore (it is less public,you can watch the explore without
@@ -78,7 +76,7 @@ So `Twitter` became a all-in-one solution.
 - The CEO is new but ... the old CEO is still sitting not far
 
 
-### 2) I tried `Tumblr`
+### 2) I tried `Tumblr` :
 
 - posting there made me realize that social platforms should be only be about social, about human networking
 
