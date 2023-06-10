@@ -17,7 +17,29 @@
   font-variant-caps: all-petite-caps;
 }
 
-.post-content h1,
+.post
+{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 3%;
+  border: 1px solid;
+  padding: 3%;
+  border-radius: 10px;
+  box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;
+  background-color: var(--color_post_content_background);
+  overflow-inline: scroll;
+}
+
+/* error highlighting if using h1 in post content*/
+.post-content h1
+{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: purple;
+  font-size : 2.3em;
+  text-align: left;
+}
+
 .post-content h2,
 .post-content h3,
 .post-content h4,
@@ -82,24 +104,6 @@
 .post p:first-letter
 {
   font-size: 1.1em;
-}
-
-.post
-{
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 3%;
-  border: 1px solid;
-  padding: 3%;
-  border-radius: 10px;
-  box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;
-  background-color: var(--color_post_content_background);
-  overflow-inline: scroll;
-}
-.post-content h1
-{
-  font-variant: small-caps;
-  text-align: center;
 }
 
 .post-content li
