@@ -2,6 +2,13 @@
 title : "About Twitter & me"
 ---
 
+---
+
+1
+
+---
+
+
 ## Now, I will only use Twitter as a human networking platform
 
 ---
@@ -71,7 +78,7 @@ So `Twitter` became a all-in-one solution.
 - `Twitter` decides what is okay or not and I can't do anything about it, it is in the terms of use (I believe)
 - The CEO is new but ... the old CEO is still sitting not far
 
-### 2) I tried `Tumblr`
+### 2) I tried Tumblr
 
 - posting there made me realize that social platforms should be only be about social, about human networking
 - posting is more complete than Twitter but not polished
@@ -86,5 +93,3 @@ So `Twitter` became a all-in-one solution.
 - I discovered a way to optimize the use of `Twitter`
 - I want more functionalities and why should I wait for them, when I can write them
 - I obtained a shard of courage, and started writing my website
-
-#date 2023-06-10 2212 1686420742459729386
