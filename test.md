@@ -56,7 +56,6 @@ So `Twitter` became a all-in-one solution.
 - I don’t have to ask that to myself anymore, it’s one less problem
 - there is a free version
 
-
 #### Some unique features are gone
 
 - short posts, embedding media effortlessly, with a preview
@@ -68,38 +67,24 @@ So `Twitter` became a all-in-one solution.
 #### Policy (?)
 
 - The direction `Twitter` is going
-
 - The CEO is new but ... the old CEO is still sitting not far
-
 - `Twitter` decides what is okay or not and I can't do anything about it, it is in the terms of use (I believe)
-
 - The CEO is new but ... the old CEO is still sitting not far
-
 
 ### 2) I tried `Tumblr`
 
 - posting there made me realize that social platforms should be only be about social, about human networking
-
 - posting is more complete than Twitter but not polished
-
 - the website builder gave me the taste of freedom, but :
-
 	- it asks for cookies and sign-up
-
 	- adult bots liking my posts, and showing on the post likes ...
-
 	- I want more flexibility, even the HTML posting format is constrained
 
 ### 3) Me
-
 - the weather forecast on my personal life has become clouded with dark gray clouds : I am less about ethics than usual, the business side won.
-
 - I want to keep my handle, I need to post, there are rumors about inactive accounts being ...
-
 - I discovered a way to optimize the use of `Twitter`
-
 - I want more functionalities and why should I wait for them, when I can write them
-
 - I obtained a shard of courage, and started writing my website
 
 #date 2023-06-10 2212 1686420742459729386
