@@ -17,7 +17,7 @@ layout : base
 	   <!-- <img class="logo_tumblr" src="https://jeremyvlegros.github.io/website/assets/logo_tumblr.svg" alt="tumblr logo"/> -->
 	</a>
 	<div class="text_gray text_centered">
-		<i>current posting platform</i>
+		<i> no posts </i>
 	</div>
  </li>
 
