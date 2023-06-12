@@ -1,10 +1,11 @@
 ---
-title : "About Twitter & me"
+title : "TESTING LAYOUT"
+layout : base_test
 ---
 
 ---
 
-2
+3
 
 ---
 
