@@ -1,5 +1,4 @@
 ---
-title : "TESTING LAYOUT"
 layout : base_test
 ---
 
