@@ -1,10 +1,12 @@
+---
+title : about
+layout : post
+---
 # Author
 
-Jeremy Legros
+[Jeremy Legros] (https://github.com/jeremyvlegros)
 
-https://github.com/jeremyvlegros
-
-# License
+## License
 
 I, Jeremy Legros, keep ownership of things I write.
 
@@ -19,7 +21,7 @@ The `Dracula` `CSS` theme :
 - is licensed
 - the `CSS` contains the MIT license header
 
-# I broke the `Minima` theme voluntarily, I use my own `CSS`
+## I broke the `Minima` theme voluntarily, I use my own `CSS`
 
 This repository is not a good example of a custom `Minima` theme, I have overwitten a lot of things.
 
@@ -36,7 +38,7 @@ As for the why :
 - I know my code, I can modify it
 - paradoxically, to have a minimal theme
 
-# My website goals
+## My website goals
 - no cookies prompt from me (things such as video players can still ask for cookies)
 - no external advertisements, promoting only my stuff
 - no hosted paid things
