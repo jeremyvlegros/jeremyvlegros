@@ -8,7 +8,7 @@ layout : post
 
 ---
 
-{{ "<img class="image" src="/website/assets/avatar_2023_face.png">" }}
+<img class="image" src="/website/assets/avatar_2023_face.png">"
 
 
 ## Now, I will only use Twitter as a human networking platform
