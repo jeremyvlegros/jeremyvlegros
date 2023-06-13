@@ -1,6 +1,7 @@
 name : "jeremyvlegros"
 theme : minima
 highlighter: rouge
+variable : "THIS IS THE VARIABLE CONTENT"
 
 kramdown:
   syntax_highlighter: rouge
