@@ -1,23 +1,3 @@
----
-title : "Testing Liquid"
----
-{% liquid
-%}
-
-# TEST ASSIGNING VARIABLE
-
-{% assign variable =" ***PRINTED*** " %}
-
-# TEST VARIABLE HIDDEN
-
-{% variable %}
-
-# TEST VARIABLE SHOWING
-
-{variable}
-
-# TEST HTML
-
-{% "<hr>" %}
+{% include test.html %}
 
 
