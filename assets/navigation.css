@@ -1,8 +1,8 @@
 :root
 {
-  --color_post_navigation_li_background:hsla(0,7%,100%,1);
+  --color_post_navigation_li_background:hsla(0,7%,20%,1);
   --color_arrow_go_top_background:hsla(0,7%,30%,.6);
-  --color_post_navigation_text_color: black;
+  --color_post_navigation_text_color: white;
 /*  --color_post_navigation_text_color: yellowgreen;*/
 }
 
@@ -50,7 +50,7 @@
   //border-radius: 18px; 
   padding: 10px;
   width: 10%;
-  box-shadow: 2px 1px 1px 1px, 2px 1px 1px 1px;
+  box-shadow: 2px 1px 1px 1px black, 2px 1px 1px 1px black;
   background-color: var(--color_post_navigation_li_background);
 }
 
