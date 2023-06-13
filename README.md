@@ -30,7 +30,9 @@ As for the why :
   - if I need to migrate the website
   - dependencies are a serious problem, it wastes a lot of my time :
     - maintenance × documentation
-    - when the dependent code is modified
+    - modified dependencies not stated as modified
+    - dependencies that are not stated as dependencies in the documentation
+    - dependant documentation forwarding to the dependency documentation
 - I know my code, I can modify it
 - paradoxically, to have a minimal theme
 
