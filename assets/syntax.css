@@ -1,3 +1,10 @@
+:root
+{
+    --background_color_dracula:#282a36;
+
+    /* need to change for each Pygment theme */
+    --background_color_code:var(--background_color_dracula);
+}
 
 /* backticks */
 .language-plaintext
@@ -27,18 +34,17 @@
 
 .highlighter-rouge
 {
-  overflow-x: scroll;  /*overflow 1 part 1*/
-  margin-top : 1%;
-  margin-bottom: 1%;
-  border: 2px solid;
-  border-radius : 6px
+  overflow-x       : scroll;  /*overflow part 1*/
+  margin-top       : 1%;
+  margin-bottom    : 1%;
+  border           : 2px solid;
+  border-radius    : 6px;
+  background-color : var(--background_color_code); /*overflow part 3 - filling the color gap*/
 }
 
 .highlighter-rouge .highlight
 {
-  width: fit-content; /*overflow 1 part 2*/
+  width: fit-content; /*overflow part 2*/
 }
-
-
 
 /*#date 2023-06-13*/
