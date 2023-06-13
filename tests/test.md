@@ -1,6 +1,9 @@
 ---
 title : "Testing Liquid"
 ---
+{% liquid
+%}
+
 # TEST ASSIGNING VARIABLE
 
 {% assign variable =" ***PRINTED*** " %}
