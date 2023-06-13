@@ -1,5 +1,5 @@
 ---
-title : My website goals
+title : home
 ---
 
 {% include navigation.html %}
