@@ -21,7 +21,7 @@ The `Dracula` `CSS` theme :
 
 # I broke the `Minima` theme voluntarily, I use my own `CSS`
 
-This repository is not a good example of a custom Minima but an overwritten one
+This repository is not a good example of a custom `Minima` theme, I have overwitten a lot of things.
 
 As for the why :
 - I ~~had my share of~~ have to search, find, then read lots of documentation
