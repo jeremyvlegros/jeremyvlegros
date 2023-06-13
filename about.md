@@ -44,7 +44,7 @@ As for the why :
 - no hosted paid things
 - post history
 - no obfuscated code
-- no `JavaScript` needed to browse the website (external things can ask for it, but the website won't be broke without `JavaScript`)
+- no `JavaScript` needed to browse the website (external things can ask for it, but the website won't be broken without `JavaScript`)
 - have more control on how I write posts
 - reserving social media platforms for communication
 - safeguard / backup
