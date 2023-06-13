@@ -1,34 +1,55 @@
-.home
+:root
 {
-  margin-left: 30%;
-  margin-right: 30%;
-  border:1px solid;
-  border-radius: 10px;
-  padding:3%;
-  box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;
+    --background_color_dracula:#282a36;
+
+    /* need to change for each Pygment theme */
+    --background_color_code:var(--background_color_dracula);
 }
 
-.home li
+
+
+/* backticks */
+.language-plaintext
 {
-  margin-left: 7%;
-  list-style: square;
+    background-color: #EEE !important; /*prevent to be overwritten by highlight background color */
+    border-color : #EEE! important; /*prevent to be overwritten by highlight background color */
+    padding: .3%;
+    border-radius: 7px;
 }
 
-.home ul
+.language-plaintext:before
 {
-  margin-top: 1%;
-  margin-bottom: 1%;
+    content: "`";
+    color:yellowgreen;
+    font-size: 1.1em;
+    font-weight:bold;
 }
 
-.home p
+.language-plaintext:after
 {
-  margin-bottom: 2%;
+    content: "`";
+    color:yellowgreen;
+    font-size: 1.1em;
+    font-weight:bold;
 }
 
-.home p:first-letter
+/* code highlighter */
+
+.highlighter-rouge
 {
-  font-size: 1.1em;
+  overflow-x       : scroll;  /*overflow part 1*/
+  margin-top       : 1%;
+  margin-bottom    : 1%;
+  border           : 2px solid;
+  border-radius    : 6px;
+  background-color : var(--background_color_code); /*overflow part 3 - filling the color gap*/
 }
+
+.highlighter-rouge .highlight
+{
+  width: fit-content; /*overflow part 2*/
+}
+
 
 
 /*#date 2023-06-13*/
