@@ -1,14 +1,17 @@
 ---
 title : "Testing Liquid"
 ---
+# TEST ASSIGNING VARIABLE
+
+{% assign variable =" ***PRINTED*** " %}
 
 # TEST VARIABLE HIDDEN
 
-{% page.variable %}
+{% variable %}
 
-# TEST VARIABLE SHOWN
+# TEST VARIABLE SHOWING
 
-{page.variable}
+{variable}
 
 # TEST HTML
 
