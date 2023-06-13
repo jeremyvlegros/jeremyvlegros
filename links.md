@@ -8,6 +8,10 @@ layout : base
 <ul>
 
 <li class="list_line">
+	<img class="image_avatar" src="/website/assets/avatar_2023_face.png" alt="avatar with a square head, cool glasses, and a short beard">
+</li>
+
+<li class="list_line">
 	<h1>Links</h1>
 </li>
 
@@ -17,7 +21,7 @@ layout : base
 	   <!-- <img class="logo_tumblr" src="https://jeremyvlegros.github.io/website/assets/logo_tumblr.svg" alt="tumblr logo"/> -->
 	</a>
 	<div class="text_gray text_centered">
-		<i> no posts </i>
+		<i>no posts</i>
 	</div>
  </li>
 
@@ -88,7 +92,7 @@ layout : base
 </li>
 
 <span id="version">
-#date 2023-06-09 1629 1686313761101927724
+#date 2023-06-13
 </span>
 
 </ul>
