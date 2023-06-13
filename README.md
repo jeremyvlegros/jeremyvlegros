@@ -10,10 +10,10 @@ I, Jeremy Legros, keep ownership of things I write.
 
 If you use this repository, you use it at your own risks.
 
-The `Minima` code is licensed by a MIT license (`_layouts`, `_includes`).The license is not included in the directory because :
-
-- it is not a substantial portion of code
+The MIT `Minima` code license is not included in the directory because :
+- there are no substantial portion of codes
 - most `Minima` files are empty
+- the theme is loaded from `GitHub`
 
 The `Dracula` `CSS` theme :
 - is licensed
