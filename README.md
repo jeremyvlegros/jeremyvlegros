@@ -19,9 +19,9 @@ The `Dracula` `CSS` theme :
 - is licensed
 - the `CSS` contains the MIT license header
 
-# This repository is not a good example of a custom Minima but an overwritten one
+# I broke the `Minima` theme voluntarily, I use my own `CSS`
 
-I broke the `Minima` theme voluntarily, I use my own `CSS`.
+This repository is not a good example of a custom Minima but an overwritten one
 
 As for the why :
 - I ~~had my share of~~ have to search, find, then read lots of documentation
