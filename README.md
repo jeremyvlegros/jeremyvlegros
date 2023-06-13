@@ -32,7 +32,7 @@ As for the why :
     - maintenance × documentation
     - modified dependencies not stated as modified
     - dependencies that are not stated as dependencies in the documentation
-    - dependant documentation forwarding to the dependency documentation
+    - dependent documentation forwarding to the dependency documentation
 - I know my code, I can modify it
 - paradoxically, to have a minimal theme
 
