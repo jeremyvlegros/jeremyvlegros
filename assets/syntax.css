@@ -2,38 +2,43 @@
 /* backticks */
 .language-plaintext
 {
-	background-color: #EEE;
-	padding: .3%;
-	border-radius: 7px;
+    background-color: #EEE;
+    padding: .3%;
+    border-radius: 7px;
 }
 
 .language-plaintext:before
 {
-	content: "`";
-	color:yellowgreen;
-	font-size: 1.1em;
-	font-weight:bold;
+    content: "`";
+    color:yellowgreen;
+    font-size: 1.1em;
+    font-weight:bold;
 }
 
 .language-plaintext:after
 {
-	content: "`";
-	color:yellowgreen;
-	font-size: 1.1em;
-	font-weight:bold;
+    content: "`";
+    color:yellowgreen;
+    font-size: 1.1em;
+    font-weight:bold;
 }
 
-/* code overflow */
+/* code highlighter */
 
 .highlighter-rouge
 {
-  overflow-x: scroll;
+  overflow-x: scroll;  /*overflow 1 part 1*/
+  margin-top : 1%;
+  margin-bottom: 1%;
+  border: 2px solid;
+  border-radius : 6px
 }
 
 .highlighter-rouge .highlight
 {
-  width: fit-content;
+  width: fit-content; /*overflow 1 part 2*/
 }
+
 
 
 /*#date 2023-06-13*/
