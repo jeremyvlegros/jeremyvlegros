@@ -2,7 +2,7 @@
 title : about
 layout : post
 ---
-# Author
+## Author
 
 [Jeremy Legros](https://github.com/jeremyvlegros)
 
