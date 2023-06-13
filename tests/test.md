@@ -17,6 +17,6 @@ variable : "THIS IS THE VARIABLE CONTENT"
 
 # TEST `echo` HTML
 
-{ %echo "<hr>" %}
+{%echo "<hr>" %}
 
 
