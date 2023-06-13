@@ -23,4 +23,17 @@
 	font-weight:bold;
 }
 
-/*#date 2023-06-07 0554 1686102881522913894*/
+/* code overflow */
+
+.highlighter-rouge
+{
+  overflow-x: scroll;
+}
+
+.highlighter-rouge .highlight
+{
+  width: fit-content;
+}
+
+
+/*#date 2023-06-13*/
