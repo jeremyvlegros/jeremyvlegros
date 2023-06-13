@@ -1,5 +1,6 @@
 ---
-title : home
+title : website
+layout : post
 ---
 
 {% include navigation.html %}
