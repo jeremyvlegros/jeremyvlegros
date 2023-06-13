@@ -24,10 +24,13 @@ The `Dracula` `CSS` theme :
 I broke the `Minima` theme voluntarily, I use my own `CSS`.
 
 As for the why :
-- I had my share of documentation read
+- I ~~had my share of~~ have to search, find, then read lots of documentation
 - keeping some independence :
   - if `GitHub` stops using `Jekyll`
   - if I need to migrate the website
+  - dependencies are a serious problem, it wastes a lot of my time :
+    - maintenance × documentation
+    - when the dependent code is modified
 - I know my code, I can modify it
 - paradoxically, to have a minimal theme
 
