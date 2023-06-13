@@ -4,15 +4,13 @@ title : My website goals
 
 <div id="index">
   <ul>
-    <li>no cookies (things can still ask cookies such as video players, but it will not be me, and I’ll try to not let that happen)</li>
+    <li>no cookies prompt from me (things such as video players can still ask for cookies)</li>
     <li>no external advertisements, promoting only my stuff</li>
     <li>free</li>
     <li>paid things elsewhere</li>
-    <li>idealy no use of javascript, but if really needed using it as little as possible</li>
-    <li>to stop posting on social media platforms</li>
-    <li>trying to reserve social media platforms for communication</li>
-  </ul>  
-  
-  <a href="https://jeremyvlegros.github.io/website/links.html" style="color:#00b8ff"> Links </a>
-  
+    <li>ideally without using JavaScript</li>
+    <li>a HUB where I have more control on how I write posts</li>
+    <li>reserving social media platforms for communication</li>
+    <li>#date 2023-06-13</li>
+  </ul>
 </div>
