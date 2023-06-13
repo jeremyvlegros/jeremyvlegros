@@ -5,11 +5,11 @@ variable : "THIS IS THE VARIABLE CONTENT"
 
 # TEST VARIABLE HIDDEN
 
-{% variable %}
+{% page.variable %}
 
 # TEST VARIABLE SHOWN
 
-{variable}
+{page.variable}
 
 # TEST HTML
 
