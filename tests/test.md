@@ -4,9 +4,11 @@ layout : post
 
 ---
 
-3
+4
 
 ---
+
+{{ "<img class="image" src="/website/assets/avatar_2023_face.png">" }}
 
 
 ## Now, I will only use Twitter as a human networking platform
