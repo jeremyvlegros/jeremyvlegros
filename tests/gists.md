@@ -3,8 +3,6 @@ tile : gists
 filename : gists.md
 ---
 
-with Markdown
-
 ```xml
 <snippet>
 	<content>
@@ -36,6 +34,11 @@ def ${1:TYPE}_${2:FUNCTION_NAME}_for (${3:ARGUMENTS}) -> ${1:TYPE}:
   <scope>source.python - meta.function.parameters - meta.function-call - meta.statement - meta.mapping - meta.sequence - meta.set - comment - string</scope>
 </snippet>
 ```
+
+
+
+
+
 ```python
 #--------------------------------------------------------------------------------------------------------------------------------------------
 ANY = any
