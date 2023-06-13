@@ -3,10 +3,6 @@ title : "Testing Liquid"
 variable : "THIS IS THE VARIABLE CONTENT"
 ---
 
-# TEST `echo` variable
-
-{% echo variable %}
-
 # TEST VARIABLE HIDDEN
 
 {% variable %}
@@ -15,8 +11,8 @@ variable : "THIS IS THE VARIABLE CONTENT"
 
 {variable}
 
-# TEST `echo` HTML
+# TEST HTML
 
-{%echo "<hr>" %}
+{% "<hr>" %}
 
 
