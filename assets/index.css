@@ -10,28 +10,25 @@
 
 .home li
 {
-	list-style: hiragana;
-}
-.home a:hover
-{
-  /*transform: scale(1.02);*/
-  transform: scale(0.97);
-  box-shadow: 2px 2px 2px #00b8ff;
+  margin-left: 7%;
+  list-style: square;
 }
 
-.home a
+.home ul
 {
- transition: all .2s ease-in-out;
- background-color:black;
- border-radius:10px;
- padding:10px;
- margin:10px;
- margin-top: 10px;
- text-align:center;
- box-shadow: 2px 2px 2px grey;
- color : white;
- font-weight: bolder;
- text-decoration:none;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-/*#date 2023-06-07 0526 1686101172804645559*/
+.home p
+{
+  margin-bottom: 2%;
+}
+
+.home p:first-letter
+{
+  font-size: 1.1em;
+}
+
+
+/*#date 2023-06-13*/
