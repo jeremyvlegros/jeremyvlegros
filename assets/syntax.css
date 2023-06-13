@@ -6,10 +6,13 @@
     --background_color_code:var(--background_color_dracula);
 }
 
+
+
 /* backticks */
 .language-plaintext
 {
-    background-color: #EEE;
+    background-color: #EEE !important; /*prevent to be overwritten by highlight background color */
+    border-color : #EEE! important; /*prevent to be overwritten by highlight background color */
     padding: .3%;
     border-radius: 7px;
 }
@@ -46,5 +49,7 @@
 {
   width: fit-content; /*overflow part 2*/
 }
+
+
 
 /*#date 2023-06-13*/
