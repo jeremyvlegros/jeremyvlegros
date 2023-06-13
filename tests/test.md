@@ -1,6 +1,5 @@
 ---
 title : "Testing Liquid"
-variable : "THIS IS THE VARIABLE CONTENT"
 ---
 
 # TEST VARIABLE HIDDEN
