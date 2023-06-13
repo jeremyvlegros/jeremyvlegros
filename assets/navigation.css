@@ -1,8 +1,8 @@
 :root
 {
-  --color_post_navigation_li_background:hsla(0,7%,0%,1);
+  --color_post_navigation_li_background:hsla(0,7%,100%,1);
   --color_arrow_go_top_background:hsla(0,7%,30%,.6);
-  --color_post_navigation_text_color: white;
+  --color_post_navigation_text_color: black;
 /*  --color_post_navigation_text_color: yellowgreen;*/
 }
 
@@ -56,7 +56,32 @@
 
 .navigation .button:hover
 {
-  background-color:yellowgreen;
+  background-color:hsl(30,50%,40%);
+}
+
+.navigation .button_color_home:hover
+{
+  background-color: hsl(90,50%,40%);
+}
+.navigation .button_color_links:hover
+{
+  background-color: hsl(225,50%,40%);
+}
+.navigation .button_color_opinions:hover
+{
+  background-color: hsl(240,50%,60%);
+}
+.navigation .button_color_informations:hover
+{
+  background-color: hsl(105,50%,60%);
+}
+.navigation .button_color_references:hover
+{
+  background-color: hsl(55,50%,20%);
+}
+.navigation .button_color_about_me:hover
+{
+  background-color: hsl(300,50%,40%);
 }
 
 @media screen and (max-width: 902px){
@@ -90,8 +115,15 @@
   .navigation li
   {
     display:block;
-    margin: 10%;
-    padding:10%;
+    margin-right: 12%; /* couldn't find the right tag changing it here */
+    padding:4%;
+  }
+  
+  .navigation .button
+  {
+    display: block;
+    width: 100%;
+    
   }
 }
 
