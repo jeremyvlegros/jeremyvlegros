@@ -4,7 +4,7 @@ layout : post
 ---
 # Author
 
-[Jeremy Legros] (https://github.com/jeremyvlegros)
+[Jeremy Legros](https://github.com/jeremyvlegros)
 
 ## License
 
