@@ -19,27 +19,20 @@
   box-shadow: 2px 1px 1px 1px, 2px 1px 1px 1px black;  
 }
 
-.navigation
-{
-  position: fixed;
-  left: 0;
-  top: 10%;
-  bottom: auto;
-  margin:0;  
-}
-
 .navigation ul
 {
-/*  display: flex;*/
-   
+    display: flex; 
+    flex-direction: row; 
 }
 
 .navigation li
 {
   list-style: none;
   /*border-radius: 50px;*/
-  margin: 30%;
-  padding: 0;
+/*  margin: 30%;*/
+  padding: 4%;
+  width: 100%;
+
 }
 
 .navigation a
@@ -89,18 +82,16 @@
   .navigation
   {
    transition: all .2s ease-in-out; 
-   left: 3%;
-   right: auto;
-   top: 0;   
-   position :relative;
   }
   
   .navigation li
   {
     transition: all .2s ease-in-out;
-    display:inline-block;
-    margin: 1%;
-    padding:5%;
+    
+  }
+  
+  .navigation ul
+  {
   }
 }
 
@@ -112,7 +103,7 @@
    left: 3%;
    right: auto;
    top: 0;   
-   position :relative;
+   position :relative;    
   }
   
   .navigation li
@@ -121,19 +112,25 @@
     display:block;
     margin-right: 12%; /* couldn't find the right tag changing it here */
     padding:4%;
+    width: auto;
   }
   
   .navigation .button
   {
     display: block;
-    width: 100%;
-    
+    width: 100%;    
   }
+  .navigation ul
+  {
+    display: flex; 
+    flex-direction: column;
+  }  
 }
 
 /*in animation */
 
-@media screen and (min-width: 902px){
+@media screen and (min-width: 902px)
+{
 
   .navigation
   {
@@ -144,9 +141,14 @@
   {
     transition: all .2s ease-in-out;
   }
+  
+    .navigation ul
+  {
+  }  
 }
 
-@media screen and (min-width: 597px){
+@media screen and (min-width: 597px)
+{
 
   .navigation
   {
@@ -157,7 +159,7 @@
   {
     transition: all .2s ease-in-out;    
   }
-  
+    
 }
 
 
