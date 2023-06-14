@@ -1,6 +1,8 @@
 ---
-title : "About Twitter & me"
+title : "Status"
 ---
+
+# About Twitter & me
 
 ## I won't use Twitter as a blog anymore
 
