@@ -8,10 +8,6 @@ layout : base
 <ul>
 
 <li class="list_line">
-	<img class="image_avatar" src="/website/assets/avatar_2023_face.png" alt="avatar with a square head, cool glasses, and a short beard">
-</li>
-
-<li class="list_line">
 	<h1>Links</h1>
 </li>
 
