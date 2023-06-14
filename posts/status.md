@@ -2,6 +2,10 @@
 title : "Status"
 ---
 
+# Removing avatars
+
+#date 2023-06-14
+
 # About Twitter & me
 
 ## I won't use Twitter as a blog anymore
