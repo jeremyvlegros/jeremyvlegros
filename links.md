@@ -11,7 +11,7 @@ layout : base
 	<h1>Links</h1>
 </li>
 
-<p id="introduction"> I am a living paradox, I use social media in an unusual way : I love my privacy, but I like constructive discussions more</p>
+<p id="introduction"> I use social media in an unusual way : I love my privacy, but I like constructive discussions more</p>
 
 <li class="list_line">
 	<a id="tumblr" class="button" href="https://jeremyvlegros.tumblr.com/" target="_blank">
