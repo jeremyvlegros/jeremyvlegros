@@ -1,18 +1,17 @@
 ---
-title : "@jeremyvlegros"
-filename : links.md
-layout : base
+title : Links
+layout : custom_page
 ---
-<div id="links">
 
 <ul>
 
 <li class="list_line">
-	<h1>Links</h1>
+	<img class="image_avatar" src="/website/assets/avatar_2023_face.png" alt="avatar with a square head, cool glasses, and a short beard">
 </li>
 
-<p id="introduction"> I am a living paradox, I like to communicate, I love my privacy, hence my unusual way of handling social media</p>
-
+<li class="list_line">
+	<h1>Links</h1>
+</li>
 
 <li class="list_line">
 	<a id="tumblr" class="button" href="https://jeremyvlegros.tumblr.com/" target="_blank">
@@ -35,7 +34,7 @@ layout : base
  </li>
 
 <li class="list_line">
-	<a id="linkedin" class="button" href="https://www.linkedin.com/in/jeremyvlegros/" target="_blank">
+	<a id="linkedin" class="button" href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card" target="_blank">
 	   LinkedIn
 	   <!-- <img class="logo_linkedin" src="https://jeremyvlegros.github.io/website/assets/logo_linkedin.svg" alt="linkedin logo"/> -->
 	</a>
@@ -76,7 +75,7 @@ layout : base
 	   <!-- <img class="logo_twitch" src="https://jeremyvlegros.github.io/website/assets/logo_twitch.svg" alt="twitch logo"/> -->
 	</a>
 	<div class="text_gray text_centered">
-		<i>I won't stream there unless Life forces my hand</i>
+		<i>I won't stream there (not implying that I will stream one day)</i>
 	</div>
  </li>
 
@@ -91,7 +90,7 @@ layout : base
 </li>
 
 <span id="version">
-#date 2023-06-15
+#date 2023-06-13
 </span>
 
 </ul>
