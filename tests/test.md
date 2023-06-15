@@ -1,9 +1,9 @@
 ---
-title : Links
+title : "@jeremyvlegros"
 filename : links.md
 layout : base
 ---
-<div id="@jeremyvlegros">
+<div id="links">
 
 <ul>
 
