@@ -8,7 +8,7 @@ layout : custom_page
 <ul>
 
 <li class="list_line">
-	<h1>Links</h1>
+	<h1>TESTING TWITTER CARD REFRESH IF HTML REFRESH </h1>
 </li>
 
 <li class="list_line">
