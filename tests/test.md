@@ -3,20 +3,16 @@ title : Links
 filename : links.md
 layout : base
 ---
-<div id="links">
-
-<p> I am a living paradoxical, a very private person going online, with its real name hence my unusual ways to deal with social media.
-</p>
+<div id="@jeremyvlegros">
 
 <ul>
 
 <li class="list_line">
-	<img class="image_avatar" src="/website/assets/avatar_2023_face.png" alt="avatar with a square head, cool glasses, and a short beard">
-</li>
-
-<li class="list_line">
 	<h1>Links</h1>
 </li>
+
+<p id="introduction"> I am a living paradox, I like to communicate, I love my privacy, hence my unusual way of handling social media</p>
+
 
 <li class="list_line">
 	<a id="tumblr" class="button" href="https://jeremyvlegros.tumblr.com/" target="_blank">
