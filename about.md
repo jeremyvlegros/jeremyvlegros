@@ -6,6 +6,10 @@ layout : post
 
 [Jeremy Legros](https://github.com/jeremyvlegros)
 
+## Content
+
+I have eclectic tastes, but mostly the content will be about programming, video games, technology, and me.
+
 ## My website goals
 
 ### A reliable website
