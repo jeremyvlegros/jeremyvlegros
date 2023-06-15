@@ -27,6 +27,7 @@ I have eclectic tastes, but mostly the content will be about programming, video 
 - people can see the post history
 - people can read my code
 - people can see my coding struggles and learn from those I solved
+- sharing links
 
 ### Safeguard / backup
 
