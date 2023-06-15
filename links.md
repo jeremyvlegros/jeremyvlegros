@@ -1,5 +1,5 @@
 ---
-title : Links
+title : "@jeremyvlegros"
 filename : links.md
 layout : base
 ---
@@ -10,6 +10,8 @@ layout : base
 <li class="list_line">
 	<h1>Links</h1>
 </li>
+
+<p id="introduction"> I am a living paradox, I use social media in an unusual way : I love my privacy, but I like constructive discussions more</p>
 
 <li class="list_line">
 	<a id="tumblr" class="button" href="https://jeremyvlegros.tumblr.com/" target="_blank">
@@ -32,7 +34,7 @@ layout : base
  </li>
 
 <li class="list_line">
-	<a id="linkedin" class="button" href="https://fr.linkedin.com/in/jeremyvlegros?trk=people-guest_people_search-card" target="_blank">
+	<a id="linkedin" class="button" href="https://www.linkedin.com/in/jeremyvlegros/" target="_blank">
 	   LinkedIn
 	   <!-- <img class="logo_linkedin" src="https://jeremyvlegros.github.io/website/assets/logo_linkedin.svg" alt="linkedin logo"/> -->
 	</a>
@@ -73,7 +75,7 @@ layout : base
 	   <!-- <img class="logo_twitch" src="https://jeremyvlegros.github.io/website/assets/logo_twitch.svg" alt="twitch logo"/> -->
 	</a>
 	<div class="text_gray text_centered">
-		<i>I won't stream there (not implying that I will stream one day)</i>
+		<i>I won't stream there unless Life forces my hand</i>
 	</div>
  </li>
 
@@ -88,7 +90,7 @@ layout : base
 </li>
 
 <span id="version">
-#date 2023-06-13
+#date 2023-06-15
 </span>
 
 </ul>
