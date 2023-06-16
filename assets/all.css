@@ -1,8 +1,19 @@
+:root
+{
+  --color_background_color:hsl(4,7%,91%);
+}
+
+html
+{
+  background-color: var(--color_background_color)
+}
+
 *
 {
   font-family:"Helvetica Neue",sans-serif!important;
   margin:0;  /* *sigh* default is not zero ... it always messes with alignement */
   padding:0; /* *sigh* */
+  font-size: 1em;  
 }
 
 /* disabling Jekyll stuff */
@@ -21,4 +32,4 @@
   visibility : hidden;
 }
 
-/*#date 2023-06-08 1328 1686216536562940627*/
+/*#date 2023-06-16 2025 1686932758730340834 GMT/
