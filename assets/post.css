@@ -1,16 +1,9 @@
 :root
 {
   /* Markdown titles have generated ids, it's complex to deal with*/
-/*  --color_post_content_background:blue;*/
+  --color_post_content_background:white;
 }
 
-.post-title
-{
-  color : black;
-  text-align: center;
-  font-size: 3em;
-  font-variant-caps: all-petite-caps;
-}
 
 .post
 {
@@ -23,47 +16,28 @@
   border-radius: 10px;
   /*box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;*/
   background-color: var(--color_post_content_background);
-  overflow-inline: scroll;
+  /*overflow-inline: scroll; overwrites the bottom border ... when Firefox "always show scrollbar" is set*/
 }
 
 
-/*I HATE CSS, since 20 years ago, and It didn't get better.
-
-1) Selecting `.c` that is child of `.b` that is child of `#a` is easy
-
-#a > .b > .c
+.post a
 {
-  background-color: red;
+  color :#333;
 }
 
-2) how do you select #a that HAS childs .b that HAS child .c
-
-This is as bad as writing SQL requests
-
-And `has:` now exists 20 years later,but ... still too recent for Firefox
-
-I hate CSS, I truly, dearly, sincerely hate it.
-
-My solution would have been this :
-
-.post:has(> .post-content):has(> #i-wont-use-twitter-as-a-blog-anymore)
+.post hr
 {
-  background-color: red;
+  /* for later */
+  color : #333;
 }
 
-or this :
-
-.post:has(> #i-wont-use-twitter-as-a-blog-anymore)
+.post-title
 {
-  background-color: red;
+  color : black;
+  text-align: center;
+  font-size: 3em;
+  font-variant-caps: all-petite-caps;
 }
-
-Sometimes I feel like that it is not the world that is mad, but me.
-
-It would make much more sense.
-
-
-*/
 
 
 /* error highlighting if using h1 in post content*/
@@ -160,4 +134,47 @@ It would make much more sense.
   }
 }
 
-/*#date 2023-06-16 2158 1686938280251573908 GMT*/
+
+/*I HATE CSS, since 20 years ago, and It didn't get better.
+
+1) Selecting `.c` that is child of `.b` that is child of `#a` is easy
+
+#a > .b > .c
+{
+  background-color: red;
+}
+
+2) how do you select #a that HAS childs .b that HAS child .c
+
+This is as bad as writing SQL requests
+
+And `has:` now exists 20 years later,but ... still too recent for Firefox
+
+I hate CSS, I truly, dearly, sincerely hate it.
+
+My solution would have been this :
+
+.post:has(> .post-content):has(> #i-wont-use-twitter-as-a-blog-anymore)
+{
+  background-color: red;
+}
+
+or this :
+
+.post:has(> #i-wont-use-twitter-as-a-blog-anymore)
+{
+  background-color: red;
+}
+
+Sometimes I feel like that it is not the world that is mad, but me.
+
+It would make much more sense.
+
+
+*/
+
+
+
+
+
+/*#date 2023-06-16 2336 1686944201554939733 GMT*/
