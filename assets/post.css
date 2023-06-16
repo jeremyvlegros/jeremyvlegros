@@ -1,12 +1,7 @@
 :root
 {
-  --color_post_content_background:white;
-/*  --color_post_content_background:hsl(4,7%,90%);*/
-}
-
-*
-{
-  font-size: 1em;
+  /* Markdown titles have generated ids, it's complex to deal with*/
+/*  --color_post_content_background:blue;*/
 }
 
 .post-title
@@ -19,16 +14,57 @@
 
 .post
 {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 25%;
+  margin-right: 25%;
   margin-bottom: 3%;
+  margin-top: 3%;
   border: 1px solid;
   padding: 3%;
   border-radius: 10px;
-  box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;
+  /*box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;*/
   background-color: var(--color_post_content_background);
   overflow-inline: scroll;
 }
+
+
+/*I HATE CSS, since 20 years ago, and It didn't get better.
+
+1) Selecting `.c` that is child of `.b` that is child of `#a` is easy
+
+#a > .b > .c
+{
+  background-color: red;
+}
+
+2) how do you select #a that HAS childs .b that HAS child .c
+
+This is as bad as writing SQL requests
+
+And `has:` now exists 20 years later,but ... still too recent for Firefox
+
+I hate CSS, I truly, dearly, sincerely hate it.
+
+My solution would have been this :
+
+.post:has(> .post-content):has(> #i-wont-use-twitter-as-a-blog-anymore)
+{
+  background-color: red;
+}
+
+or this :
+
+.post:has(> #i-wont-use-twitter-as-a-blog-anymore)
+{
+  background-color: red;
+}
+
+Sometimes I feel like that it is not the world that is mad, but me.
+
+It would make much more sense.
+
+
+*/
+
 
 /* error highlighting if using h1 in post content*/
 .post-content h1
@@ -38,6 +74,7 @@
   text-decoration-color: purple;
   font-size : 2.3em;
   text-align: left;
+/*  background-color : red;*/
 }
 
 .post-content h2,
@@ -50,7 +87,8 @@
   margin : 0 0 0 0;
   margin-bottom: 3%;
   margin-top: 3%;
-  border: none;
+  border: unset;
+  background-color: var(--color_post_content_background)
 }
 
 .post-content h2
@@ -84,6 +122,7 @@
   margin-bottom: 3%;
   margin-top: 3%;
 }
+
 
 .post li
 {
@@ -121,4 +160,4 @@
   }
 }
 
-/*#date 2023-06-10 2212 1686420742459729386*/
+/*#date 2023-06-16 2158 1686938280251573908 GMT*/
