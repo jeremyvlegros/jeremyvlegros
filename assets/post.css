@@ -11,7 +11,7 @@
   margin-right: 25%;
   margin-bottom: 3%;
   margin-top: 3%;
-  border: 1px solid;
+  border: 1px solid hsl(4,7%,81%);
   padding: 3%;
   border-radius: 10px;
   /*box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;*/
@@ -27,8 +27,8 @@
 
 .post hr
 {
-  /* for later */
-  color : #333;
+  
+  color : hsl(100,0%,100%); /* the lightest gray I can make by myself*/
 }
 
 .post-title
@@ -177,4 +177,4 @@ It would make much more sense.
 
 
 
-/*#date 2023-06-16 2336 1686944201554939733 GMT*/
+/*#date 2023-06-17 0014 1686946448027855091 GMT*/
