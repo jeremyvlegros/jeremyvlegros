@@ -4,6 +4,7 @@
 
     /* need to change for each Pygment theme */
     --background_color_code:var(--background_color_dracula);
+    --color :#999;
 }
 
 
@@ -11,9 +12,10 @@
 /* backticks */
 .language-plaintext
 {
-    background-color: #EEE !important; /*prevent to be overwritten by highlight background color */
-    border-color : #EEE! important; /*prevent to be overwritten by highlight background color */
-    padding: .3%;
+    
+    background-color: var(--color) !important; /*prevent to be overwritten by highlight background color */
+    border-color : var(--color) !important; /*prevent to be overwritten by highlight background color */
+    padding: 1px;
     border-radius: 7px;
 }
 
@@ -21,7 +23,6 @@
 {
     content: "`";
     color:yellowgreen;
-    font-size: 1.1em;
     font-weight:bold;
 }
 
@@ -29,7 +30,6 @@
 {
     content: "`";
     color:yellowgreen;
-    font-size: 1.1em;
     font-weight:bold;
 }
 
@@ -52,4 +52,5 @@
 
 
 
-/*#date 2023-06-13*/
+/*#date 2023-06-17 0141 1686951693645160817 GMT*/
+
