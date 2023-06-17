@@ -1,7 +1,8 @@
 :root
 {
   /* Markdown titles have generated ids, it's complex to deal with*/
-  --color_post_content_background:white;
+  --color_post_content_background:hsl(4,0%,95%);
+  --color_background_color:hsl(4,0%,91%); /*overriding color in all.css*/
 }
 
 
@@ -175,6 +176,6 @@ It would make much more sense.
 
 
 
+/*#date 2023-06-17 0027 1686947249430521997 GMT*/
 
 
-/*#date 2023-06-17 0014 1686946448027855091 GMT*/
