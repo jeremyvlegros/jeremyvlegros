@@ -1,19 +1,20 @@
 :root
 {
   /* Markdown titles have generated ids, it's complex to deal with*/
-  --color_post_content_background:hsl(4,0%,95%);
-  --color_background_color:hsl(4,0%,91%); /*overriding color in all.css*/
+  --color_post_content_background:hsl(9,50%,50%);
 }
 
 
 .post
 {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 15%;
+  margin-right: 15%;
   margin-bottom: 3%;
   margin-top: 3%;
   border: 1px solid hsl(4,7%,81%);
-  padding: 3%;
+  padding: 5%;
+  padding-right: 10%;
+  padding-left: 10%;
   border-radius: 10px;
   /*box-shadow: 5px 1px 0px 1px, 5px 7px 1px 1px;*/
   background-color: var(--color_post_content_background);
@@ -28,28 +29,16 @@
 
 .post hr
 {
-  
-  color : hsl(100,0%,100%); /* the lightest gray I can make by myself*/
+  //color : #DDD;
+  display: none;
 }
 
 .post-title
 {
-  color : black;
+  color : #FFF;
   text-align: center;
   font-size: 3em;
   font-variant-caps: all-petite-caps;
-}
-
-
-/* error highlighting if using h1 in post content*/
-.post-content h1
-{
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: purple;
-  font-size : 2.3em;
-  text-align: left;
-/*  background-color : red;*/
 }
 
 .post-content h2,
@@ -63,33 +52,48 @@
   margin-bottom: 3%;
   margin-top: 3%;
   border: unset;
-  background-color: var(--color_post_content_background)
+  background-color: var(--color_post_content_background);
 }
 
 .post-content h2
 {
   font-size : 2.3em;
   text-align: left;
+  color : #EEE;
+  text-decoration: underline
 }
 
 .post-content h3
 {
   font-size : 2em;
+  color : #DDD;
+  text-decoration: underline
 }
 
 .post-content h4
 {
   font-size : 1.7em;
+  color : #CCC;
+  text-decoration: underline
 }
 
 .post-content h5
 {
   font-size : 1.4em;
+  color : #BBB;
+  text-decoration: underline
 }
 
 .post-content h6
 {
   font-size : 1.3em;
+  color : #AAA;
+  text-decoration: underline
+}
+
+.post
+{
+  color : #EEE;
 }
 
 .post-content hr
@@ -128,13 +132,24 @@
 /* responsive tweaks */
 
 
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 885px) {
   .post {
-    margin-left : 3%;
-    margin-right: 3%;
+    margin-left : 5%;
+    margin-right: 5%;
   }
 }
 
+/* error highlighting if using h1 in post content*/
+.post-content h1
+{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: purple;
+  font-size : 2.3em;
+  text-align: left;
+  color : black;
+/*  background-color : red;*/
+}
 
 /*I HATE CSS, since 20 years ago, and It didn't get better.
 
@@ -176,6 +191,6 @@ It would make much more sense.
 
 
 
-/*#date 2023-06-17 0027 1686947249430521997 GMT*/
+/*#date 2023-06-17 0141 1686951702596200655 GMT*/
 
 
