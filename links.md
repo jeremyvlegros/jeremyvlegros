@@ -1,5 +1,5 @@
 ---
-title : "@jeremyvlegros links"
+title : "links"
 filename : links.md
 layout : base
 ---
@@ -88,7 +88,7 @@ layout : base
 </li>
 
 <span id="version">
-#date 2023-06-16 1845 1686926748064029190 GMT
+#date 2023-06-17 0143 1686951785849450483 GMT
 </span>
 
 </ul>
