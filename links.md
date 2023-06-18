@@ -11,8 +11,6 @@ layout : base
 	<h1>Links</h1>
 </li>
 
-<p id="introduction"> I use social media in an unusual way : I love my privacy, but I like constructive discussions more</p>
-
 <li class="list_line">
 	<a id="tumblr" class="button" href="https://jeremyvlegros.tumblr.com/" target="_blank">
 	   Tumblr
@@ -88,7 +86,7 @@ layout : base
 </li>
 
 <span id="version">
-#date 2023-06-17 0143 1686951785849450483 GMT
+#date 2023-06-18 2330 1687116635926833788 GMT
 </span>
 
 </ul>
