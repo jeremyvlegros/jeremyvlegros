@@ -1,9 +1,7 @@
 ---
-title         : "status > this resumes my relationship with CSS"
-layout        : post
-category      : "status"
-date          : "2023-06-16"
-date_modified : "#date 2023-06-19 2149 1687196948186730626 GMT"
+title            : "status > this resumes my relationship with CSS"
+category         : "status"
+date_of_creation : "2023-06-16"
 ---
 
 At this time of writing, the whole Firefox column is red, version 2 to version 115, and my version is the 113 ...
