@@ -2,7 +2,4 @@
 title : "Testing variables"
 layout : base
 ---
-
-# Do I need to put something else for the file to exist ??
-
 {{ site.social_links.twitter }}
