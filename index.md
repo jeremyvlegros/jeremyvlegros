@@ -1,10 +1,10 @@
 ---
 title : website
 layout : home
-date_modified : "#date 2023-06-19 2149 1687196948186730626 GMT"
+date_modified : "#date 2023-06-19 2309 1687201771347686565 GMT"
 ---
 
-{% include navigation.html %}
+
 
 {{ page.date_modified }}
 
