@@ -3,42 +3,73 @@ title : "Testing liquid `for` loop"
 layout : base
 ---
 
-# list a b c
+
+---
+
+# `_config.yml`
+
+## list a b c
 
 {% for value in site.test_list %}
 {{ value }}
 {% endfor %}
 
 
-# link from social_links
+## link social_links
 
 {% for link in site.social_links %}
 {{ link }}
 {% endfor %}
 
-# link name from social_links
+## link name social_links
 
 {% for link in site.social_links %}
 {{ link.name }}
 {% endfor %}
 
-# link url from social_links
+## link url social_links
 
 {% for link in site.social_links %}
 {{ link.url }}
 {% endfor %}
 
 
-# link name from social_links, accessing as a dictionary
+## link name social_links, accessing as a dictionary
 
 {% for link in site.social_links %}
 {{ link[link.name] }}
 {% endfor %}
 
-# link url from social_links, accessing as a dictionary
+## link url social_links, accessing as a dictionary
 
 {% for link in site.social_links %}
 {{ link[link.url]}}
 {% endfor %}
 
-#date 2023-06-19 0830 1687149057148594805 GMT
+---
+
+
+# `_data > social_links.yml`
+
+## link social_links
+
+{% for link in site.data.social_links %}
+{{ link }}
+{% endfor %}
+
+## link name social_links
+
+{% for link in site.data.social_links %}
+{{ link.name }}
+{% endfor %}
+
+## link url social_links
+
+{% for link in site.data.social_links %}
+{{ link.url }}
+{% endfor %}
+
+
+
+
+#date 2023-06-19 0840 1687149656095196022 GMT
