@@ -11,35 +11,35 @@ Markdown:
 
 social_links :
 
-  link :
+  github :
     name : "GitHub"
     url  : "https://github.com/jeremyvlegros"
 
-  link :
+  linkedin :
     name : "LinkedIn"
     url  : "https://www.linkedin.com/in/jeremyvlegros/"
 
-  link :
+  twitter :
     name : "Twitter"
     url  : "http://twitter.com/jeremyvlegros"
 
-  link :
+  tumblr :
     name : "Tumblr"
     url  : "https://jeremyvlegros.tumblr.com/"
 
-  link :
+  nexus_mods :
     name : "Nexus Mods"
     url  : "https://www.nexusmods.com/users/152566508"
 
-  link :
+  steam :
     name : "Steam"
     url  : "https://steamcommunity.com/id/jeremyvlegros"
 
-  link :
+  twitch :
     name : "Twitch"
     url  : "https://www.twitch.tv/jeremyvlegros"
 
-  link :
+  reddit :
     name : "Reddit"
     url  : "https://www.reddit.com/user/jeremyvlegros"
 
@@ -51,4 +51,4 @@ test_list :
 
 
 
-#date 2023-06-19 0804 1687147473516920743 GMT
+#date 2023-06-19 0814 1687148042577604766 GMT
