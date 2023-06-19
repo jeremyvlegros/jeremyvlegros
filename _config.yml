@@ -18,11 +18,11 @@ social_links :
   link :
     name : "LinkedIn"
     url  : "https://www.linkedin.com/in/jeremyvlegros/"
-     :
+
   link :
     name : "Twitter"
     url  : "http://twitter.com/jeremyvlegros"
-      :
+
   link :
     name : "Tumblr"
     url  : "https://jeremyvlegros.tumblr.com/"
