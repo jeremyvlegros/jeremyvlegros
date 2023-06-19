@@ -4,12 +4,12 @@ layout : base
 ---
 
 {% for value in site.test_list %}
-    {{ value }}
+{{ value }}
 {% endfor %}
 
 
 {% for link in site.social_links %}
-    {{ link }}
+{{ link }}
 {% endfor %}
 
 
