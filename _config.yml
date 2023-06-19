@@ -10,14 +10,38 @@ Markdown:
 
 
 social_links :
-  github    : "https://github.com/jeremyvlegros"
-  linkedin  : "https://www.linkedin.com/in/jeremyvlegros/"
-  twitter   : "http://twitter.com/jeremyvlegros"
-  tumblr    : "https://jeremyvlegros.tumblr.com/"
-  nexusmods : "http://twitter.com"
-  steam     : "https://steamcommunity.com/id/jeremyvlegros"
-  twitch    : "https://www.twitch.tv/jeremyvlegros"
-  reddit    : "http://twitter.com"
+
+  link :
+    name : "GitHub"
+    url  : "https://github.com/jeremyvlegros"
+
+  link :
+    name : "LinkedIn"
+    url  : "https://www.linkedin.com/in/jeremyvlegros/"
+     :
+  link :
+    name : "Twitter"
+    url  : "http://twitter.com/jeremyvlegros"
+      :
+  link :
+    name : "Tumblr"
+    url  : "https://jeremyvlegros.tumblr.com/"
+
+  link :
+    name : "Nexus Mods"
+    url  : "https://www.nexusmods.com/users/152566508"
+
+  link :
+    name : "Steam"
+    url  : "https://steamcommunity.com/id/jeremyvlegros"
+
+  link :
+    name : "Twitch"
+    url  : "https://www.twitch.tv/jeremyvlegros"
+
+  link :
+    name : "Reddit"
+    url  : "https://www.reddit.com/user/jeremyvlegros"
 
 
 test_list :
@@ -27,4 +51,4 @@ test_list :
 
 
 
-#date 2023-06-19 0749 1687146568485610047 GMT
+#date 2023-06-19 0804 1687147473516920743 GMT
