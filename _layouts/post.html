@@ -1,7 +1,6 @@
 ---
 layout: base
-date : nil
-date_modified : nil
+date_creation : null
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -14,11 +13,8 @@ date_modified : nil
   </div>
 
   
-{% if page.date %}
-created  : {{ page.date }}
-{% endif %}
-{% if page.date_modified %}
-modified  : {{ page.date_modified }}
-{% endif %}
+{% if page.date %} Created : {{ page.date_creation }} {% endif %}
+  
+{% if page.date %} Modified : {{ page.date }} {% endif %}
   
 </article>
