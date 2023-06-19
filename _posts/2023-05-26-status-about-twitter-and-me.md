@@ -94,5 +94,3 @@ So `Twitter` became a all-in-one solution.
 - I discovered a way to optimize the use of `Twitter`
 - I want more functionalities and why should I wait for them, when I can write them
 - I obtained a shard of courage, and started writing my website
-
-{{ page.date_modified }}
