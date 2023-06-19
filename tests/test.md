@@ -29,5 +29,16 @@ layout : base
 {% endfor %}
 
 
-#date 2023-06-19 0816 1687148179676469576 GMT
+# link name from social_links, accessing as a dictionary
 
+{% for link in site.social_links %}
+{{ link[link.name] }}
+{% endfor %}
+
+# link url from social_links, accessing as a dictionary
+
+{% for link in site.social_links %}
+{{ link[link.url]}}
+{% endfor %}
+
+#date 2023-06-19 0830 1687149057148594805 GMT
