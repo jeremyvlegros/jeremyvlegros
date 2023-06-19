@@ -1,8 +1,10 @@
 ---
-title            : "Status about Twitter & me"
-category         : "status"
-date_of_creation : "#date 2023-05-26"
+title                : "About Twitter & me"
+category             : "status"
+date_of_creation     : "#date 2023-05-26"
+date_of_modification : "#date 2023-06-19 2141 1687196512316505067 GMT"
 ---
+
 
 ## I won't use Twitter as a blog anymore
 
