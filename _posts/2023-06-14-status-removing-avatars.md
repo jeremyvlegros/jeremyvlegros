@@ -1,5 +1,5 @@
 ---
-title         : "Removing avatars"
+title         : "Status > removing avatars"
 category      : "status"
 date          : "2023-06-14"
 date_modified : "#date 2023-06-19 2143 1687196622516623576 GMT"
