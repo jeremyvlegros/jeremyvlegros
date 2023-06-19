@@ -1,3 +1,5 @@
+#date 2023-06-19 0749 1687146568485610047 GMT
+
 name : "jeremyvlegros"
 theme : minima
 highlighter: rouge
@@ -8,6 +10,7 @@ kramdown:
 Markdown:
   syntax_highlighter: rouge
 
+permalink: /:categories/:year/:month/:day/:title:output_ext
 
 social_links :
 
@@ -51,4 +54,5 @@ test_list :
 
 
 
-#date 2023-06-19 0814 1687148042577604766 GMT
+
+
