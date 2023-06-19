@@ -1,7 +1,7 @@
 ---
 title            : "Status about Twitter & me"
 category         : "status"
-date_of_creation : "2023-05-26"
+date_of_creation : "#date 2023-05-26"
 ---
 
 ## I won't use Twitter as a blog anymore
