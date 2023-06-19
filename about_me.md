@@ -1,173 +1,113 @@
 ---
-title: "About Jeremy Legros"
-filename: about_me.md
-layout : base
+title: "About"
+layout : about_me
+date : "#date 2023-06-19 2052 1687193527531460450 GMT"
 ---
 
-<div id="about_me">
+My name is Jeremy Legros, I am French, 38 years old.
 
- <div id="preface">
+I chose to seek a job where I can thrive, so I am creating my own.
 
-  <h1 id="title"> Me, now </h1>
+Currently I am :
 
-   <!-- <hr class="hr_h1"> -->
+- writing my library in the Python language / specializing myself in Python programming
+- writing my naming convention
+- writing my programming style paradigms
+- writing my own website
 
-   <p>My name is Jeremy Legros, I am French, and I am going to be 40 years in two years.</p>
+### 2021 - now
 
-   <p>I chose to seek a job where I can thrive, so I am creating my own.</p>
+#### My day job
 
-   Nowadays I am writing:
-   <ul>
-    <li>my library in the Python language</li>
-    <li>my naming convention</li>
-    <li>my programming paradigms</li>
-   </ul>
-   <p> and specializing myself in Python programming</p>
+I am :
 
- </div>
+- self-employed, I help people with anything computer related, this is my day job when I get calls.
+- still dependent on the help of the government and my parents.
+- certainly not proud to be in this situation, constantly in fear, in guilt while pushing forward to a future where I can be happy.
 
-<!-- <h1>  Where I am today </h1> -->
+#### Building my dream job
 
-<!-- <div id="where_I_am_today"> -->
+I don’t have a name for my dream job.
 
+The best definition I can come with, other than “basically it's me” would be a workshop :
 
-<!-- <hr class="hr_h1"> -->
+- where I register almost everything I do
+- automate most the creation and publishing process, by creating tools and a pipeline × workflow
+- publish about the publishing process
 
-<div id="day_job">
+In the one goal of sponsoring my dream job of modding video-games
 
-<h2> My day job </h2>
 
+### 2018 - 2021
 
+I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).
 
-   <p>I am self-employed, I help people with anything computer related, this is my day job when I get calls.</p>
+I lowered my expectations again and again until I applied to two jobs that weren’t not about developers.
 
-   <p>I am still dependent on the help of the government and my parents.</p>
 
-   <p>I am certainly not proud to be in this situation, constantly in fear, in guilt while pushing forward to a future where I can be happy.</p>
+#### Job reality
 
-   <p>I am creating my own job, while nobody, but me understands what it is about.</p>
+I went to two job applications, both not about software development, because I was that desperate.
 
- </div>
+The two interviews were distressing experiences, with common points :
 
+- what was asked of me was not in my qualifications nor in the job description
 
-<div id="dream_job">
+- asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid
 
-<h2> Building my dream job </h2>
 
- <p>I don’t have a name for my dream job, the best definition I can come with other than “my job is me” would be : </p>
+Those interviews were distressing in their own ways :
 
-   <ul>
-     <li> I am building a place where I can produce content about everything I do</li>
-     <li> automating most of the creation and publishing process </li>
-     <li> while publishing about it</li>
-     <li> sponsoring my dream job of modding video-games, while building tools for it</li>
-   </ul>
+- in the first, I got silly questions and my answers were met with condescendence
 
-</div>
+- in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job
 
-<div id="happy">
-<h3> I chose to survive happy </h3>
+#### context
 
+During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.
 
-<p>I’ve been mostly unhappy most of my life.</p>
+I thought that getting a job was a fair game :
 
-<p>I was okay floating around, doing what was expected of me if It didn't bother me too much, easing the minds of people worried about me mattered the most, and not taking decisions was mostly easy.</p>
+ - I have qualifications
 
-<p>I watched my parents work :</p>
+ - recruiters could ask questions on those qualifications
 
-<ul>
-  <li>from 8 AM to 3:30PM, five days a week</li>
+ - I was ready to take tests to prove those qualifications
 
-  <li>coming home talking about work</li>
+ - I was applying for a job, matching the job description
 
-  <li>bringing work home each day, their remaining time split between house chores, rest, and leisure.</li>
+### 2016 - 2018
 
-</ul>
+I went back to university at the age of 31 finish my bachelor degree in computer science.
 
-<p>The perspective of defining most of my life by my job, prompted serious questions :</p>
+During the first year, I kept dispensing courses at a much lower frequency until my high-school students earned their baccalaureate, and closed my business some time after.
 
-<ul>
-  <li> What's the point of living a life that's not mine ?</li>
-  <li> Is surviving enough ? </li>
-  <li> Surviving unhappy or surviving happy ? </li>
-</ul>
+When I got my diploma I went on a software developer job hunt.
 
-</div>
+### 2016
 
-<!-- <h1> Where I come from </h1> -->
+I was self-employed, helping high school students to get back on their wheels.
 
-<!-- <div id="where_I_come_from"> -->
-<div id="job_reality">
+### I chose to survive happy
 
- <h3> Job reality </h3>
+I’ve been mostly unhappy most of my life.
 
- <p>I went to two job applications, both not about software development, because I was that desperate.</p>
+For at time I was okay just floating around, doing what was expected of me if It didn't bother me too much.
 
- <p>The two interviews were distressing experiences, with common points :</p>
+Plus, if it eased the minds of people worried about me, taking decisions was mostly easy.
 
- <ul>
+I began wanting something more in my life when I fought for my student dreams and see them renouncing in the end, I asked myself what would I have done if I were them.
 
-  <li>what was asked of me was not in my qualifications nor in the job description</li>
+Then I thought the right now, me, and the most pertinent work example I had, my parents.
 
-  <li>asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid</li>
+I watched my parents work from 8 AM to 3:30PM, five days a week, coming home talking about work bringing work home each day.
 
- </ul>
+Their remaining off work was split between house chores, rest, and leisure.
 
- <p>And were distressing in their own ways :</p>
+The perspective of having my life defined into 8 hours of work that I wouldn't like, prompted some serious questions :
 
- <ul>
+-  What's the point of living a life that is not mine ?
+-  This is not living, this is surviving : is surviving enough ?
+-  In the end the choice is about : surviving unhappy or surviving happy ?
 
-  <li>in the first, I got silly questions and my answers were met with condescendence</li>
 
-  <li>in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job </li>
-
- </ul></div>
-<div id="context">
-
- <h3> context </h3>
-
- <p>During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.</p>
-
- <p>I thought that getting a job was a fair game :</p>
-
- <ul>
-
-   <li>I have qualifications</li>
-
-   <li>recruiters could ask questions on those qualifications</li>
-
-   <li>I was ready to take tests to prove those qualifications</li>
-
-   <li>I was applying for a job, matching the job description</li>
-
- </ul></div>
-<div id="date_2018_2021">
-
-  <h2> 2018 - 2021 </h2>
-
-  <p>I went back and forth in the French governmental employment system, looking a job as a software developer (not WEB).</p>
-
-  <p>I lowered my expectations again and again until I applied to two jobs that weren’t not about developers.</p></div>
-
-<div id="date_2016_2018">
-
- <h2> 2016 - 2018 </h2>
-
- <p>I went back to university at the age of 31 finish my bachelor degree in computer science.</p>
-
- <p>During the first year, I kept dispensing courses at a much lower frequency until my high-school students earned their baccalaureate, and closed my business some time after.</p>
-
- <p>When I got my diploma I went on a software developer job hunt.</p></div>
-<div id="date_2016">
-
-
- <!-- <hr class="hr_h1"> -->
-
-
- <h2> 2016 </h2>
-
- <p>I was self-employed, helping high school students to get back on their wheels.</p></div>
-
-<p style="color:gray;text-align: center;">#date 2023-06-13</p>
-
-</div>
