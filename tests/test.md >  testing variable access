@@ -1,0 +1,6 @@
+---
+title : "Testing variables"
+layout : base
+---
+
+{{ site.social_links.twitter }}
