@@ -1,5 +1,8 @@
 ---
-title : "About Twitter & me"
+title         : "About Twitter & me"
+category      : "status"
+date          : "2023-05-26"
+date_modified : "#date 2023-06-19 2141 1687196512316505067 GMT"
 ---
 
 ## I won't use Twitter as a blog anymore
@@ -92,5 +95,4 @@ So `Twitter` became a all-in-one solution.
 - I want more functionalities and why should I wait for them, when I can write them
 - I obtained a shard of courage, and started writing my website
 
-#date 2023-06-17 0030 1686947412294959607 GMT
-
+{{ page.date_modified }}
