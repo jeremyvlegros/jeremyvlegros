@@ -19,4 +19,12 @@ social_links :
   twitch    : "https://www.twitch.tv/jeremyvlegros"
   reddit    : "http://twitter.com"
 
-#date 2023-06-19 0718 1687144686757170323 GMT
+
+test_list :
+- "a"
+- "b"
+- "c"
+
+
+
+#date 2023-06-19 0749 1687146568485610047 GMT
