@@ -1,5 +1,5 @@
 ---
-title : "website better at using Jekyll"
+title : "status > website > becoming better at using Jekyll"
 category : "status"
 date : "#date 2023-06-19 2128 1687195713734027462 GMT"
 ---
