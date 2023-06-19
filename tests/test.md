@@ -1,5 +1,9 @@
 ---
-title : "Testing variables"
+title : "Testing liquid for loop"
 layout : base
 ---
-{{ site.social_links.twitter }}
+{% for link in site.social_links %}
+
+    {{ link }}
+
+{% endfor % }
