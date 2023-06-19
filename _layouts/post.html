@@ -1,5 +1,7 @@
 ---
 layout: base
+date : nil
+date_modified : nil
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -11,4 +13,12 @@ layout: base
     {{ content }}
   </div>
 
+  
+{% if page.date %}
+created  : {{ page.date }}
+{% endif %}
+{% if page.date_modified %}
+modified  : {{ page.date_modified }}
+{% endif %}
+  
 </article>
