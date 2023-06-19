@@ -1,8 +1,10 @@
 ---
 title : website
-layout : post
+layout : home
+date_modified : "#date 2023-06-19 2149 1687196948186730626 GMT"
 ---
 
 {% include navigation.html %}
 
-#date 2023-06-13 a
+{{ page.date_modified }}
+
