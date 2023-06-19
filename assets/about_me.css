@@ -1,3 +1,5 @@
+/*#date 2023-06-19 2312 1687201935314880381 GMT*/
+
 :root
 {
   --color_preface               : hsl(100,100%, 31%);
@@ -39,7 +41,7 @@
   font-size   : 1.2em;
 }
 
-#about_me h1,h2,h3
+#about_me h1, #about_me h2, #about_me h3
 {
   font-size        : 2em  ;
   background-color : white;
@@ -80,7 +82,7 @@
   padding: 5%;
 }
 
-#about_me #day_job h2
+#about_me #day_job .h2
 {
   color:var(--color_day_job);
 }
@@ -93,7 +95,7 @@
 
 }
 
-#about_me #dream_job h2
+#about_me #dream_job .h2
 {
   color: var(--color_dream_job);
 }
@@ -107,7 +109,7 @@
 
 }
 
-#about_me #happy h3
+#about_me #happy .h3
 {
   color :var(--color_happy);
 }
@@ -121,7 +123,7 @@
 
 }
 
-#about_me #job_reality h3
+#about_me #job_reality .h3
 {
   color :var(--color_job_reality);
 }
@@ -135,7 +137,7 @@
 /*  box-shadow: 4px 4px 1px var(--color_job_reality_shadow);*/
 }
 
-#about_me #context h3
+#about_me #context .h3
 {
   color : var(--color_context);
 }
@@ -148,7 +150,7 @@
 /*  box-shadow: 4px 4px 1px var(--color_context_shadow);*/
 }
 
-#about_me #date_2018_2021 h2
+#about_me #date_2018_2021 .h2
 {
   color :var(--color_date_2018_2021);
 }
@@ -160,7 +162,7 @@
 /*  box-shadow: 4px 4px 1px var(--color_date_2018_2021_shadow);*/
 }
 
-#about_me #date_2016_2018 h2
+#about_me #date_2016_2018 .h2
 {
   color :var(--color_date_2016_2018);
 }
@@ -173,7 +175,7 @@
 /*  box-shadow: 4px 4px 1px var(--color_date_2016_2018_shadow);*/
 }
 
-#about_me #date_2016 h2
+#about_me #date_2016 .h2
 {
   color :var(--color_date_2016);
 }
@@ -250,11 +252,11 @@
   #about_me
   {
     transition: all .4s ease-in;
-    //display: flex;
-    //flex-direction: row;
+/*    display: flex;*/
+/*    flex-direction: row;*/
     margin-right: 1%;
     margin-left: 1%;
-    //height: 90%;
+/*    height: 90%;*/
     position: absolute;
     margin-top: 1%;
   }
@@ -269,12 +271,10 @@
   #about_me:active
   {
     transition: all 5s ease-in-out;
-    //transform: scale(0.9 );
+/*    transform: scale(0.9 );*/
   }
 
-  
-  
 }
 
 
-/*#date 2023-06-09 2247 1686336450961978313*/
+
