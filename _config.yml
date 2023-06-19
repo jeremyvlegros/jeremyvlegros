@@ -4,6 +4,19 @@ highlighter: rouge
 
 kramdown:
   syntax_highlighter: rouge
-  
+
 Markdown:
   syntax_highlighter: rouge
+
+
+social_links :
+  github    : "https://github.com/jeremyvlegros"
+  linkedin  : "https://www.linkedin.com/in/jeremyvlegros/"
+  twitter   : "http://twitter.com/jeremyvlegros"
+  tumblr    : "https://jeremyvlegros.tumblr.com/"
+  nexusmods : "http://twitter.com"
+  steam     : "https://steamcommunity.com/id/jeremyvlegros"
+  twitch    : "https://www.twitch.tv/jeremyvlegros"
+  reddit    : "http://twitter.com"
+
+#date 2023-06-19 0718 1687144686757170323 GMT
