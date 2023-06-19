@@ -1,0 +1,33 @@
+github :
+  name : "GitHub"
+  url  : "https://github.com/jeremyvlegros"
+
+linkedin :
+  name : "LinkedIn"
+  url  : "https://www.linkedin.com/in/jeremyvlegros/"
+
+twitter :
+  name : "Twitter"
+  url  : "http://twitter.com/jeremyvlegros"
+
+tumblr :
+  name : "Tumblr"
+  url  : "https://jeremyvlegros.tumblr.com/"
+
+nexus_mods :
+  name : "Nexus Mods"
+  url  : "https://www.nexusmods.com/users/152566508"
+
+steam :
+  name : "Steam"
+  url  : "https://steamcommunity.com/id/jeremyvlegros"
+
+twitch :
+  name : "Twitch"
+  url  : "https://www.twitch.tv/jeremyvlegros"
+
+reddit :
+  name : "Reddit"
+  url  : "https://www.reddit.com/user/jeremyvlegros"
+
+#date 2023-06-19 0835 1687149312928279521 GMT
