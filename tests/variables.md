@@ -7,14 +7,13 @@ test_list :
   - "c"
 ---
 
-# `_config.yml`
-
-## local variable list a b c
+# `local variable` list `test_list` a b c
 
 {% for value in page.test_list %}
 <!----> {{ value }}
 {% endfor %}
 
+# `_config.yml`
 
 ## global variable social_links
 
@@ -67,6 +66,10 @@ test_list :
 {% for link in site.data.social_links %}
 <!----> {{ link.url }}
 {% endfor %}
+
+# `div creation`
+
+{% include html_tag content="division html content tag" str_tag=div str_id="creation" str_class="logarithm" str_url=null str_alt_image=null %}
 
 
 #date 2023-06-20 1416 1687256188459386009 GMT
