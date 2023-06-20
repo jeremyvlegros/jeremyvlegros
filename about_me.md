@@ -1,6 +1,6 @@
 ---
 title: "About"
-layout : about_me
+layout : none
 date : "#date 2023-06-19 2052 1687193527531460450 GMT"
 ---
 
