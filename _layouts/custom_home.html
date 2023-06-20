@@ -10,22 +10,13 @@ layout: base
   {{ content }}
     
 	{%- for post in posts -%}
-		<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-			<header class="post-header">
-			<h1 class="post-title p-name" itemprop="name headline">{{ post.title | escape }}</h1>
-			</header>
-		
-			<div class="post-content e-content" itemprop="articleBody">
-			{{ post.content }}
-			</div> 
-			
-			{% if post.date_of_creation %}
-			    Created&nbsp;&nbsp;;&nbsp;: {{ post.date_of_creation }}
-			{% endif %}
-			<br>  
-			{% if post.date_of_modification %}
-			    Modified&nbsp;: {{ post.date_of_modification }}
-			{% endif %}
-		</article>
+<li>
+	<h2>{{ post.title }}</h2>
+	<p class="meta">{{ post.date | date_to_string }}</p>
+
+	<div class="post">
+	{{ post.content }}
+	</div>
+</li>
 	{%- endfor -%}
 </div>
