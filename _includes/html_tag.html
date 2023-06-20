@@ -2,7 +2,6 @@
 str_tag        : null
 str_id         : null
 str_class      : null
-str_content    : null
 str_url        : null
 str_alt_image  : null
 ---
@@ -10,7 +9,6 @@ str_alt_image  : null
 {% assign str_tag        = page.str_tag        %}
 {% assign str_id         = page.str_id         %}
 {% assign str_class      = page.str_class      %}
-{% assign str_content    = page.str_content    %}
 {% assign str_url        = page.str_url        %}
 {% assign str_alt_image  = page.str_alt_image  %}
 
@@ -82,7 +80,7 @@ str_alt_image  : null
 
 <!-- main tag content -->
 
-{{content}}
+{{ include.content }}
 
 <!--------------------->
 
@@ -114,9 +112,9 @@ str_alt_image  : null
 
 <!----> <!----> remark : `str` stands for string, Python language habit.
 
-<!----> <!----> `{% include content=null html_tag str_tag=null str_id=null str_class=null str_content=null str_url=null str_alt_image=null %}`
+<!----> <!----> `{% include html_tag content=null str_tag=null str_id=null str_class=null str_url=null str_alt_image=null %}`
 
-<!----> <!----> #date 2023-06-20 1319 1687252750827736001 GMT
+<!----> <!----> #date 2023-06-20 1429 1687256949908075553 GMT
 
 <!----> {% endraw %}
 
