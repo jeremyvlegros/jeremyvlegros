@@ -67,9 +67,7 @@ test_list :
 <!----> {{ link.url }}
 {% endfor %}
 
-# `div creation`
 
-{% include html_tag content="division html content tag" str_tag=div str_id="creation" str_class="logarithm" str_url=null str_alt_image=null %}
 
 
 #date 2023-06-20 1416 1687256188459386009 GMT
