@@ -1,8 +1,8 @@
 ---
-title                : "About Twitter & me"
+title                : "Status > about Twitter & me"
 category             : "status"
 date_of_creation     : "#date 2023-05-26"
-date_of_modification : "#date 2023-06-19 2141 1687196512316505067 GMT"
+date_of_modification : "#date 2023-06-20 1511 1687259461304560078 GMT"
 ---
 
 
