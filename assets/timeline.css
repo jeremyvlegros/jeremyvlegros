@@ -1,4 +1,4 @@
-.page-content
+.timeline .page-content
 {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 
 
 
-.post-list
+.timeline .post-list
 {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@
   flex-direction: row;
 }
 
-.post
+.timeline .post
 {
   margin: 0;
   width: 100%;
