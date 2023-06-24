@@ -1,24 +1,40 @@
 ---
-layout               : base
 date_of_creation     : null
 date_of_modification : null
+post_color : ""
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-  </header>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  {%- include head.html -%}
 
-  
-{% if page.date_of_creation %}
-Created&nbsp;&nbsp;: {{ page.date_of_creation }}
-{% endif %}
-<br>  
-{% if page.date_of_modification %}
-Modified&nbsp;: {{ page.date_of_modification }}
-{% endif %}  
-</article>
+  <body>
+    
+    <main class="page-content" aria-label="Content">
+      
+      <article class="post {{page.post_color}}" itemscope itemtype="http://schema.org/BlogPosting">
+        
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        </header>
+      
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+          {% if page.date_of_creation %}
+          <span class='date date_of_creation'>Created&nbsp;&nbsp;: {{ page.date_of_creation }} </span>
+          {% endif %}
+          
+          <br>  
+          {% if page.date_of_modification %}
+          <span class="date date_of_modification">Modified&nbsp;: {{ page.date_of_modification }} </span>
+          {% endif %}
+        </div>
+        
+      </article>
+      
+    </main>
+    
+  </body>
+
+</html>
