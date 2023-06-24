@@ -25,27 +25,28 @@ layout: base
       {%- assign date_format = site.minima.date_format | default: "%Y %b %-d" -%}
       {%- for post in posts -%}
       <li>
-		  
-		<div class="post">
-			<header class="post-header">
-	    			<h1 class="post-title p-name" itemprop="name headline">{{ post.title | escape }}</h1>
-	  		</header>
-	
-			<div class="post-content e-content" itemprop="articleBody">
-	   			 {{ post.content }}
-	  		</div>
-			
-			{% if post.date_of_creation %}
-					Created&nbsp;&nbsp;: {{ post.date_of_creation }}
-			{% endif %}
-			
-			<br>  
-			
-			{% if post.date_of_modification %}
-					Modified&nbsp;: {{ post.date_of_modification }}
-			{% endif %} 
-			
-		</div>
+	      
+      <article class="post {{page.post_color}}" itemscope itemtype="http://schema.org/BlogPosting">
+        
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ post.title | escape }}</h1>
+        </header>
+      
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+	  <br>
+		
+          {% if post.date_of_creation %}
+          <span class='date date_of_creation'>Created&nbsp;&nbsp;: {{ post.date_of_creation }} </span>
+          {% endif %}          
+          <br>  	
+		
+          {% if post.date_of_modification %}
+          <span class="date date_of_modification">Modified&nbsp;: {{ post.date_of_modification }} </span>
+          {% endif %}
+        </div>
+	      
+      </article>		  
 		  
       </li>
       {%- endfor -%}
