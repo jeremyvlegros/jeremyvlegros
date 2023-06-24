@@ -26,7 +26,7 @@ layout: base
       {%- for post in posts -%}
       <li>
 	      
-      <article class="post {{page.post_color}}" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="post {{page.post_color}}" itemscope itemtype="http://schema.org/BlogPosting">
         
         <header class="post-header">
           <h1 class="post-title" itemprop="name headline">{{ post.title | escape }}</h1>
@@ -46,7 +46,7 @@ layout: base
           {% endif %}
         </div>
 	      
-      </article>		  
+      </div>		  
 		  
       </li>
       {%- endfor -%}
