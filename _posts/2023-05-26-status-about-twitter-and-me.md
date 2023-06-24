@@ -2,7 +2,7 @@
 title                : "Status > about Twitter & me"
 category             : "status"
 date_of_creation     : "#date 2023-05-26"
-date_of_modification : "#date 2023-06-20 1511 1687259461304560078 GMT"
+date_of_modification : "#date 2023-06-24 1253 1687596808940949741 GMT"
 ---
 
 
@@ -48,7 +48,7 @@ So `Twitter` became a all-in-one solution.
 
 ---
 
-### 1) Twitter
+### Twitter
 
 #### People without accounts
 
@@ -79,7 +79,7 @@ So `Twitter` became a all-in-one solution.
 - `Twitter` decides what is okay or not and I can't do anything about it, it is in the terms of use (I believe)
 
 
-### 2) I tried Tumblr
+### I tried Tumblr
 
 - posting there made me realize that social platforms should be only be about social, about human networking
 - posting is more complete than Twitter but not polished
@@ -88,7 +88,7 @@ So `Twitter` became a all-in-one solution.
 	- adult bots liking my posts, and showing on the post likes ...
 	- I want more flexibility, even the HTML posting format is constrained
 
-### 3) Me
+### Me
 
 - the weather forecast on my personal life has become clouded with dark gray clouds, I am less about ethics than usual, the business side won.
 - I want to keep my handle, I need to post, there are rumors about inactive accounts being ...
