@@ -1,6 +1,6 @@
 ---
-title : "testing post_content layout"
-layout : post_content
+title : "testing layout test layout > post_content"
+layout : test
 date_of_creation : "XXX"
 date_of_modification : "YYYY"
 ---
@@ -13,4 +13,3 @@ date_of_modification : "YYYY"
 
 ### something else 1
 
-Dates should appear below.
