@@ -1,7 +1,7 @@
 ---
 title: "About"
-layout : none
-date : "#date 2023-06-19 2052 1687193527531460450 GMT"
+layout : post
+date_of_modification : "#date 2023-06-19 2052 1687193527531460450 GMT"
 ---
 
 My name is Jeremy Legros, I am French, 38 years old.
