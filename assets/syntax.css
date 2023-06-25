@@ -1,43 +1,44 @@
+/*#date 2023-06-25 1508 1687691303425874638 GMT*/
+
 :root
 {
-    --background_color_dracula:#282a36;
+  --background_color_dracula : #282a36;
 
-    /* need to change for each Pygment theme */
-    --background_color_code:var(--background_color_dracula);
-    --color :#999;
+  /* need to change for each Pygment theme */
+  --background_color_code    : var(--background_color_dracula);
+  --color                    : #999;
 }
-
 
 
 /* backticks */
 .language-plaintext
 {
-    
-    background-color: var(--color) !important; /*prevent to be overwritten by highlight background color */
-    border-color : var(--color) !important; /*prevent to be overwritten by highlight background color */
-    padding: 1px;
-    border-radius: 7px;
+
+  background-color : var(--color) !important; /*prevent to be overwritten by highlight background color */
+  border-color     : var(--color) !important; /*prevent to be overwritten by highlight background color */
+  padding          : 1px;
+  border-radius    : 7px;
 }
 
 .language-plaintext:before
 {
-    content: "`";
-    color:yellowgreen;
-    font-weight:bold;
+  content     : "`";
+  color       : yellowgreen;
+  font-weight : bold;
 }
 
 .language-plaintext:after
 {
-    content: "`";
-    color:yellowgreen;
-    font-weight:bold;
+  content     : "`";
+  color       : yellowgreen;
+  font-weight : bold;
 }
 
 /* code highlighter */
 
 .highlighter-rouge
 {
-  overflow-x       : scroll;  /*overflow part 1*/
+  overflow-x       : scroll; /*overflow part 1*/
   margin-top       : 1%;
   margin-bottom    : 1%;
   border           : 2px solid;
@@ -47,10 +48,6 @@
 
 .highlighter-rouge .highlight
 {
-  width: fit-content; /*overflow part 2*/
+  width : fit-content; /*overflow part 2*/
 }
-
-
-
-/*#date 2023-06-17 0141 1686951693645160817 GMT*/
 

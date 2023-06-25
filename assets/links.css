@@ -1,3 +1,5 @@
+/*#date 2023-06-25 1507 1687691254528241858 GMT*/
+
 :root
 {
 
@@ -8,16 +10,6 @@
   - these colors may not be the official ones as I used a screen color picker to get them
 
   */
-
-  --color_tumblr    : hsl(212,100%,10%);/*#001935;*/
-  --color_twitter   : hsl(203, 89%,53%);/*#1DA1F2;*/
-  --color_linkedin  : hsl(201,100%,35%);/*#0077B5;*/
-  --color_reddit    : hsl( 16,100%,49%);/*#FA4400;*/
-  --color_nexus_mods: hsl( 31, 67%,55%);/*#D98F40;*/
-  --color_github    : hsl(220, 13%,18%);/*#272B33;*/
-  --color_twitch    : hsl(264,100%,64%);/*#9147FF;*/
-  --color_steam     : hsl(222, 18%,11%);/*#171A21;*/
-
   --button_color_tumblr    : var(--color_tumblr);
   --button_color_twitter   : var(--color_twitter);
   --button_color_linkedin  : var(--color_linkedin);
@@ -193,4 +185,3 @@
   }
 }
 
-/*#date 2023-06-09 2255 1686336947153098830*/
