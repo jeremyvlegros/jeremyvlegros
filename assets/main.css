@@ -1,4 +1,6 @@
+/*#date 2023-06-26 0534 1687743242578447331 GMT*/
 @import "all.css";
+@import "colors.css";
 @import "buttons.css";
 @import "about_me.css";
 @import "links.css";
@@ -10,6 +12,3 @@
 @import "syntax.css";
 @import "navigation.css";
 @import "draft.css";
-
-
-/*#date 2023-06-20 1612 1687263170955614181 GMT*/

@@ -1,16 +1,4 @@
-/*#date 2023-06-26 0517 1687742223038082029 GMT*/
-
-:root
-{
-  --background_color_dracula : #282a36;
-
-  /* need to change that for each Pygment theme */
-  --background_color_code    : var(--background_color_dracula);
-
-  --color_back_ticks          : #999;
-  --color_border_code         : rgba(0,0,0,.5);
-}
-
+/*#date 2023-06-26 0534 1687743242578447331 GMT*/
 
 /* backticks */
 .language-plaintext
@@ -18,9 +6,9 @@
 
   /*background-color : var(--color_back_ticks) !important; !*prevent to be overwritten by highlight background color *!*/
   /*border-color     : var(--color_back_ticks) !important; !*prevent to be overwritten by highlight background color *!*/
-  padding          : 1px;
-  border-radius    : 7px;
-  border-color:  var(--background_color_dracula);
+  padding       : 1px;
+  border-radius : 7px;
+  border-color  : var(--background_color_dracula);
 }
 
 .language-plaintext:before

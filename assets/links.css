@@ -1,43 +1,13 @@
-/*#date 2023-06-25 1507 1687691254528241858 GMT*/
-
-:root
-{
-
-  /* platform colors :
-
-  - ease live editing
-
-  - these colors may not be the official ones as I used a screen color picker to get them
-
-  */
-  --button_color_tumblr    : var(--color_tumblr);
-  --button_color_twitter   : var(--color_twitter);
-  --button_color_linkedin  : var(--color_linkedin);
-  --button_color_reddit    : var(--color_reddit);
-  --button_color_nexus_mods: var(--color_nexus_mods);
-  --button_color_github    : var(--color_github);
-  --button_color_twitch    : var(--color_twitch);
-  --button_color_steam     : var(--color_steam);
-
-  --button_color_hover_tumblr    : var(--color_tumblr);
-  --button_color_hover_twitter   : var(--color_twitter);
-  --button_color_hover_linkedin  : var(--color_linkedin);
-  --button_color_hover_reddit    : var(--color_reddit);
-  --button_color_hover_nexus_mods: var(--color_nexus_mods);
-  --button_color_hover_github    : var(--color_github);
-  --button_color_hover_twitch    : var(--color_twitch);
-  --button_color_hover_steam     : var(--color_steam);
-
-}
+/*#date 2023-06-26 0534 1687743242578447331 GMT*/
 
 #links
 {
-  margin-left: 30%;
-  margin-right: 30%;
-  text-align: center;
-  position: absolute;
-  top:1%;
-  bottom: 1%;
+  margin-left  : 30%;
+  margin-right : 30%;
+  text-align   : center;
+  position     : absolute;
+  top          : 1%;
+  bottom       : 1%;
 }
 
 
@@ -49,14 +19,14 @@
 
 #links h1
 {
-  color:black;
+  color : black;
 }
 
 #links hr
 {
-  margin-bottom:4%;
-  //color: yellowgreen;
-  visibility: hidden;
+  margin-bottom : 4%;
+ /*color: yellowgreen;*/
+  visibility    : hidden;
 }
 
 #links h1:after
@@ -65,98 +35,98 @@
 
 #links a
 {
-  text-decoration:none;
-  display: block;
+  text-decoration : none;
+  display         : block;
 
 }
 
 #links .list_line
 {
-  margin-top : 3%;
-  margin-bottom: 3%;
-  list-style: none;
+  margin-top    : 3%;
+  margin-bottom : 3%;
+  list-style    : none;
 }
 
 #links #steam
 {
-  background-color: var(--button_color_steam);
+  background-color : var(--button_color_steam);
 }
 
 #links #github
 {
-  background-color: var(--button_color_github);
+  background-color : var(--button_color_github);
 }
 
 #links #nexus_mods
 {
-  background-color: var(--button_color_nexus_mods);
+  background-color : var(--button_color_nexus_mods);
 }
 
 #links #reddit
 {
-  background-color: var(--button_color_reddit);
+  background-color : var(--button_color_reddit);
 }
 
 #links #tumblr
 {
-  background-color: var(--button_color_tumblr);
+  background-color : var(--button_color_tumblr);
 }
 
 #links #twitter
 {
-  background-color: var(--button_color_twitter);
+  background-color : var(--button_color_twitter);
 }
 
 #links #linkedin
 {
-  background-color: var(--button_color_linkedin);
+  background-color : var(--button_color_linkedin);
 }
 
 #links #twitch
 {
-  background-color: var(--button_color_twitch);
+  background-color : var(--button_color_twitch);
 }
 
 /*hover colors*/
 
 #links #steam:hover
 {
-  background-color: var(--button_color_hover_steam);
+  background-color : var(--button_color_hover_steam);
 }
 
 #links #github:hover
 {
-  background-color: var(--button_color_hover_github);
+  background-color : var(--button_color_hover_github);
 }
 
 #links #nexus_mods:hover
 {
-  background-color: var(--button_color_hover_nexus_mods);
+  background-color : var(--button_color_hover_nexus_mods);
 }
 
 #links #reddit:hover
 {
-  background-color: var(--button_color_hover_reddit);
+  background-color : var(--button_color_hover_reddit);
 }
 
 #links #tumblr:hover
 {
-  background-color: var(--button_color_hover_tumblr);
+  background-color : var(--button_color_hover_tumblr);
 }
 
 #links #twitter:hover
 {
-  background-color: var(--button_color_hover_twitter);
+  background-color : var(--button_color_hover_twitter);
 }
 
 #links #linkedin:hover
 {
-  background-color: var(--button_color_hover_linkedin);
+  background-color : var(--button_color_hover_linkedin);
 }
 
 #links #twitch:hover
 {
-  background-color: var(--button_color_hover_twitch);
+  background-color : var(--button_color_hover_twitch);
 }
 
 #links #version
@@ -166,22 +136,22 @@
 
 #links .text_gray
 {
-  color:gray;
+  color : gray;
 }
 
 #links .text_centered
 {
-  text-align: center
+  text-align : center
 }
 
-@media screen and (max-width:573px)
+@media screen and (max-width : 573px)
 {
   #links
   {
-    margin-right:7%;
-    margin-left:7%;
-/* background-color:blue;*/
-/* border: 10px solid blue;*/
+    margin-right : 7%;
+    margin-left  : 7%;
+    /* background-color:blue;*/
+    /* border: 10px solid blue;*/
   }
 }
 
