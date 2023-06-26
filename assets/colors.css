@@ -1,4 +1,4 @@
-/*#date 2023-06-26 0534 1687743242578447331 GMT*/
+/*#date 2023-06-26 0559 1687744777686674234 GMT*/
 :root
 {
   --color_background                    : hsl(4, 7%, 69%);
@@ -88,15 +88,6 @@ body, html
 {
   background-color : var(--color_background);
 }
-
-*
-{
-  font-family : "Helvetica Neue", sans-serif !important;
-  margin      : 0; /* *sigh* default is not zero ... it always messes with alignement */
-  padding     : 0; /* *sigh* */
-  font-size   : 1em;
-}
-
 
 .color_1
 {
