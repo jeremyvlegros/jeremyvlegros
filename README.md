@@ -1,6 +1,7 @@
 ---
 title : about
 layout : post
+date_of_modification : "#date 2023-06-26 0419 1687738791835322665 GMT"
 ---
 ## Author
 
@@ -14,16 +15,15 @@ If you use this repository, you use it at your own risks.
 
 The MIT `Minima` code license is not included in the directory because :
 - there are no substantial portion of codes
-- most `Minima` files are empty
 - the theme is loaded from `GitHub`
 
 The `Dracula` `CSS` theme :
 - is licensed
 - the `CSS` contains the MIT license header
 
-## I broke the `Minima` theme voluntarily, I use my own `CSS`
+## I modded the `Minima` theme extensively
 
-This repository is not a good example of a custom `Minima` theme, I have overwitten a lot of things.
+This repository is not a good example of a custom `Minima` theme.
 
 As for the why :
 - I ~~had my share of~~ have to search, find, then read lots of documentation
