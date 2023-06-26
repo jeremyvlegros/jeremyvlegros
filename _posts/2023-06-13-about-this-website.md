@@ -2,10 +2,10 @@
 title : "About this website"
 layout : post
 date_of_creation     : "#date 2023-06-13"
-date_of_modification : "#date 2023-06-26 0355 1687737355523271127 GMT"
+date_of_modification : "#date 2023-06-26 0432 1687739555701772513 GMT"
 ---
 
-# A reliable simple website
+## A reliable simple website
 
 - no cookies prompt from me
 - no advertisements from me, with the exception of unadvertised links in the form of a ~ "more" link
@@ -16,7 +16,7 @@ date_of_modification : "#date 2023-06-26 0355 1687737355523271127 GMT"
 - no visible images except from sources such as video players
 - no mouse hover prompts, such as tips
 
-# Transparency & being useful
+## Transparency & being useful
 
 - people can see the post history
 
@@ -37,19 +37,18 @@ date_of_modification : "#date 2023-06-26 0355 1687737355523271127 GMT"
 		- video game mods
 	- creating an online hub for myself
 
-# Safeguard / backup
+## Safeguard / backup
 
 - anybody can download the whole website
 - GitHub commits act as creation proof
 - have an online access to some of my data
 
-# More independence × flexibility
+## More independence × flexibility
 
 - I create the post format that I need
 - I can add functionalities
 - building × drafting × testing my workshop system
 
-# The `Read me`
+## The `Read me`
 
 [README.md](https://github.com/jeremyvlegros/website/blob/main/README.md)
-
