@@ -1,7 +1,7 @@
 ---
 title                : "About me"
 layout               : post
-date_of_modification : "#date 2023-06-26 0223 1687731837341920307 GMT"
+date_of_modification : "#date 2023-06-26 0344 1687736646111896056 GMT"
 date_of_creation     : "#date 2023-05-19 1041"
 post_color           : "color_19"
 ---
@@ -146,6 +146,6 @@ I was self-employed, helping high school students to get back on their wheels.
 
 ### XXXX - 2016
 
-I got a scientific baccalaureate then swam in the university system, learned a lot of things, tried of lot of things, got a 2 year diploma in computer science, a university diploma for a foreign language
+I got a scientific baccalaureate then swam in the university system, learned a lot of things, tried of lot of things, got a 2 year diploma in computer science, and a university foreign language diploma
 
 
