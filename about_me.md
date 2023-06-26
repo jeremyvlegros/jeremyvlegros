@@ -1,30 +1,32 @@
 ---
-title: "About"
-layout : post
-date_of_modification : "#date 2023-06-19 2052 1687193527531460450 GMT"
-post_color : "color_13"
+title                : "About me"
+layout               : post
+date_of_modification : "#date 2023-06-26 0223 1687731837341920307 GMT"
+date_of_creation     : "#date 2023-05-19 1041"
+post_color           : "color_19"
 ---
 
 My name is Jeremy Legros, I am French, 38 years old.
 
-I chose to seek a job where I can thrive, so I am creating my own.
+I searched a job where I can thrive, I didn't find it, so I am creating my own.
 
 Currently I am :
 
-- writing my library in the Python language / specializing myself in Python programming
+- writing my library in the Python language
+- specializing myself in the Python language
 - writing my naming convention
 - writing my programming style paradigms
 - writing my own website
+- writing my workshop
 
 ### 2021 - now
 
 #### My day job
 
-I am :
+- self-employed, helping people with anything computer related, this is my day job when I get calls
+- still relying on the help of the government and my parents
+- certainly not proud to be in this situation, constantly filled with anxiety and guilt, but I keep pushing forward to a future where I can be happy.
 
-- self-employed, I help people with anything computer related, this is my day job when I get calls.
-- still dependent on the help of the government and my parents.
-- certainly not proud to be in this situation, constantly in fear, in guilt while pushing forward to a future where I can be happy.
 
 #### Building my dream job
 
@@ -38,6 +40,50 @@ The best definition I can come with, other than “basically it's me” would be
 
 In the one goal of sponsoring my dream job of modding video-games
 
+#### The only question that mattered
+
+I’ve been mostly unhappy most of my life, not even knowing the importance of happiness, just floating around.
+
+I did what was expected of me as long as it didn't bother me too much, and if it eased the minds of people worried about me, it was a simple decision.
+
+When I was helping students, I tried to support their dreams, but when I saw all of them renouncing in the end, I started asking myself : "what about me ?"
+
+I began wanting something more in my life.
+
+Then I thought about current "me", and about who do I know, doing their dream job, or at least of job close enough and ... I found around four of them, but it does not include my parents.
+
+And my parents are the most precise example I have of what a life of work does to people and their kid.
+
+##### A life of work before my eyes
+
+I know that my parents worked around 7 hours a day, often more, and five to six days a week, bringing home more work to finish, every single day.
+
+They talk about work at breakfast, at lunch when they just came back home for the lunch break, at dinner, between siblings ...
+
+Their remaining time, was split between house chores, family care, rest, leisure, in that order.
+
+##### I chose survival with happiness
+
+The perspective of having my life defined into 8 hours of work that I wouldn't like, made my brain popped some serious questions :
+
+- What's the point of living a life that is not mine ? A life where I live for others, has the job that others are okay with, living a stranger's life
+
+- Is this what 'living' is about ?
+
+- What about 'surviving' ? What's the difference ?
+
+- Isn't this just surviving ?
+
+- What is really 'living' ?
+
+- Is it enough to just survive ?
+
+- Everyone dies, what is the meaning of my life if I don't *live it* ?
+
+In the end, there is only one question:
+
+    surviving "happy" or surviving "unhappy" ?
+
 
 ### 2018 - 2021
 
@@ -48,34 +94,43 @@ I lowered my expectations again and again until I applied to two jobs that weren
 
 #### Job reality
 
-I went to two job applications, both not about software development, because I was that desperate.
+I searched for a developer job, stumbled on either WEB, JAVAEE (... and web), PHP rarely, Python (3 or 4 times in 3 years), all of them asking for 2+ experience years.
 
-The two interviews were distressing experiences, with common points :
+I am a simple person, I don't apply for jobs that I don't have qualifications for, and not my resume matches the offer :
 
-- what was asked of me was not in my qualifications nor in the job description
+ - I show my qualifications
 
-- asking me to do the job of an IT technician full/part time while hiring me under another job title, most likely less paid
+ - I answer questions about those qualifications
 
-
-Those interviews were distressing in their own ways :
-
-- in the first, I got silly questions and my answers were met with condescendence
-
-- in the second, I failed a practical test that I wasn’t aware nor even qualified for, followed by an oral interview, where I learned the truth about the job
-
-#### context
-
-During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.
-
-I thought that getting a job was a fair game :
-
- - I have qualifications
-
- - recruiters could ask questions on those qualifications
-
- - I was ready to take tests to prove those qualifications
+ - I can prove those qualifications by taking tests
 
  - I was applying for a job, matching the job description
+
+The job that matched those, was, in hindsight, a chimera.
+
+I had to make a choice, people were worried about me, so I went to two job interviews, for jobs that were not about software development.
+
+The two interviews were distressing experiences :
+
+- both interviews asked me to do more than was in the job description
+
+- in the first one, I got silly questions and my answers were met with a patronizing tone, I should have left ... this is not okay
+
+- in the second one, I got a surprise practical test (that I failed miserably), followed by the actual oral interview, where I learned that I would need to do the technician work (a job that requires a specific exam) and not paid as an educator assistant
+
+I was, to say the least, puzzled.
+
+For both jobs, I was over qualified until they asked from me more things that I was under-qualified for.
+
+The conclusion I retain from this is the same I had before, with an added third part :
+
+    Only few humans play fair, it requires a lot a bad memories to find them, *even in government jobs*
+
+N.B : In the following years the government didn't renew contracts for qualified technicians, there were protests, but in the end people without computer science were hired in their stead.
+
+#### The context of 2020 - 2022
+
+During this period, COVID was at its peak, I still, like a lot of people, took the risk of going out, feeling the fear in my guts, applied for a job in proximity with hundreds of people each day.
 
 ### 2016 - 2018
 
@@ -89,26 +144,8 @@ When I got my diploma I went on a software developer job hunt.
 
 I was self-employed, helping high school students to get back on their wheels.
 
-### I chose to survive happy
+### XXXX - 2016
 
-I’ve been mostly unhappy most of my life.
-
-For at time I was okay just floating around, doing what was expected of me if It didn't bother me too much.
-
-Plus, if it eased the minds of people worried about me, taking decisions was mostly easy.
-
-I began wanting something more in my life when I fought for my student dreams and see them renouncing in the end, I asked myself what would I have done if I were them.
-
-Then I thought the right now, me, and the most pertinent work example I had, my parents.
-
-I watched my parents work from 8 AM to 3:30PM, five days a week, coming home talking about work bringing work home each day.
-
-Their remaining off work was split between house chores, rest, and leisure.
-
-The perspective of having my life defined into 8 hours of work that I wouldn't like, prompted some serious questions :
-
--  What's the point of living a life that is not mine ?
--  This is not living, this is surviving : is surviving enough ?
--  In the end the choice is about : surviving unhappy or surviving happy ?
+I got a scientific baccalaureate then swam in the university system, learned a lot of things, tried of lot of things, got a 2 year diploma in computer science, a university diploma for a foreign language
 
 
