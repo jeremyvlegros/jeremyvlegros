@@ -1,73 +1,76 @@
 ---
 title : "Testing variables"
-layout : base
+layout : post
 test_list :
   - "a"
   - "b"
   - "c"
 ---
 
-# `local variable` list `test_list` a b c
+## `local variable` list `test_list` a b c
 
 {% for value in page.test_list %}
-<!----> {{ value }}
+{{ value }}
 {% endfor %}
 
-# `_config.yml`
+## `_config.yml`
 
-## global variable social_links
+### global variable social_links
 
 {% for link in site.social_links %}
-<!----> {{ link }}
+{{ link }}
 {% endfor %}
 
-## global variable link name social_links
+### global variable link name social_links
 
 {% for link in site.social_links %}
-<!----> {{ link.name }}
+{{ link.name }}
 {% endfor %}
 
-## global variable link url social_links
+### global variable link url social_links
 
 {% for link in site.social_links %}
-<!----> {{ link.url }}
+{{ link.url }}
 {% endfor %}
 
 
-## global variable link name social_links, accessing as a dictionary
+### global variable link name social_links, accessing as a dictionary
 
 {% for link in site.social_links %}
-<!----> {{ link[link.name] }}
+{{ link[link.name] }}
 {% endfor %}
 
 ## global variable link url social_links, accessing as a dictionary
 
 {% for link in site.social_links %}
-<!----> {{ link[link.url]}}
+{{ link[link.url]}}
 {% endfor %}
 
 
-# `_data > social_links.yml`
+## `_data > social_links.yml`
 
-## link social_links
+### link social_links
 
 {% for link in site.data.social_links %}
-<!----> {{ link }}
+{{ link }}
 {% endfor %}
 
-## link name social_links
+### link name social_links
 
 {% for link in site.data.social_links %}
-<!----> {{ link.name }}
+{{ link.name }}
 {% endfor %}
 
-## link url social_links
+### link url social_links
 
 {% for link in site.data.social_links %}
-<!----> {{ link.url }}
+{{ link.url }}
 {% endfor %}
 
+### global variable link url social_links, accessing as a dictionary with string key
 
-
+{% for link in site.social_links %}
+{{ link["url"]}}
+{% endfor %}
 
 #date 2023-06-20 1416 1687256188459386009 GMT
