@@ -13,15 +13,23 @@ date_of_modification : "YYYY"
 
 			something code
 
+```python
+def something_python(a,b):
+"""
+something doctstring
+"""
+	print(a,b,"something string")
+ 	print(f"something `f` <{a}> string")
+```
+
+
 something doesn't work quite well here ...
 
 > something quote
 
 
 
-
 > something quote *very* spaced around ?
-
 
 
 > something quote mutli-line
@@ -29,12 +37,17 @@ something doesn't work quite well here ...
 > b
 > c
 
+> 	something quote indented with tabs
 
 
+> 	something quote multi line indented with tabs
+> 	a
+> 	b
+> 	c
 
 `something back-ticked`
 
-a list of things :
+something list of things :
 - a
   - b :
     - 1
@@ -48,11 +61,11 @@ Non breaking space html test in this very line that is seemingly long &nbsp;> fo
 
 ## Title 2'
 
-task list :
+somethin task list :
 - [x]
 - [ ]
 
-task list with back-ticks :
+someting task list with back-ticks :
 - `[x]`
 - `[ ]`
 
