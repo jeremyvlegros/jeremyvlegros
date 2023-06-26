@@ -8,13 +8,13 @@
   /*border-color     : var(--color_back_ticks) !important; !*prevent to be overwritten by highlight background color *!*/
   padding       : 1px;
   border-radius : 7px;
-  border-color  : var(--background_color_dracula);
+  border-color  : var(--color_background_dracula);
 }
 
 .language-plaintext:before
 {
   content     : "`";
-  color       : yellowgreen;
+  color       : var(--color_text_back_ticks);
   font-weight : bold;
 
 }
@@ -22,7 +22,7 @@
 .language-plaintext:after
 {
   content     : "`";
-  color       : yellowgreen;
+  color       : var(--color_text_back_ticks);
   font-weight : bold;
 }
 
@@ -35,7 +35,7 @@
   margin-bottom    : 1px;
   border           : 1px solid var(--color_border_code);
   border-radius    : 6px;
-  background-color : var(--background_color_code); /*overflow part 3 - filling the color gap*/
+  background-color : var(--color_background_code); /*overflow part 3 - filling the color gap*/
 
 }
 

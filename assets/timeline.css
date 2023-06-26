@@ -38,9 +38,9 @@
   /*margin-left  : 10px;*/
   /*margin-right : 10px;*/
   padding          : 10px;
-  background-color : var(--color_side_index_background);
-  color            : var(--color_side_index_text);
-  border           : 1px solid var(--color_side_index_border);
+  background-color : var(--color_background_side_index);
+  color            : var(--color_text_side_index);
+  border           : 1px solid var(--color_border_side_index);
   margin-right     : 40px;
   margin-left      : 40px;
 

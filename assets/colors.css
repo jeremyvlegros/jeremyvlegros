@@ -4,7 +4,7 @@
   --color_background                    : hsl(4, 7%, 69%);
 
   --post_luminosity_trigger             : 37%;
-  
+
   --color_1                             : hsl(010, 50%, var(--post_luminosity_trigger));
   --color_2                             : hsl(030, 50%, var(--post_luminosity_trigger));
   --color_3                             : hsl(040, 50%, var(--post_luminosity_trigger));
@@ -27,60 +27,63 @@
   /*--color_18                            : hsl(320, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
   --color_19                            : hsl(340, 50%, var(--post_luminosity_trigger));
 
-  --color_title_preface                 : hsl(100, 100%, 31%);
-  --color_title_day_job                 : hsl(200, 9%, 44%);
-  --color_title_dream_job               : hsl(620, 100%, 30%);
-  --color_title_happy                   : hsl(10, 99%, 34%);
-  --color_title_job_reality             : hsl(20, 100%, 30%);
-  --color_title_context                 : hsl(0, 50%, 38%);
-  --color_title_date_2016               : hsl(41, 100%, 40%);
+  --color_text_title_preface            : hsl(100, 100%, 31%);
+  --color_text_title_day_job            : hsl(200, 9%, 44%);
+  --color_text_title_dream_job          : hsl(620, 100%, 30%);
+  --color_text_title_happy              : hsl(10, 99%, 34%);
+  --color_text_title_job_reality        : hsl(20, 100%, 30%);
+  --color_text_title_context            : hsl(0, 50%, 38%);
+  --color_text_title_date_2016          : hsl(41, 100%, 40%);
 
-  --color_tumblr                        : hsl(212, 100%, 10%); /*#001935;*/
-  --color_twitter                       : hsl(203, 89%, 53%); /*#1DA1F2;*/
-  --color_linkedin                      : hsl(201, 100%, 35%); /*#0077B5;*/
-  --color_reddit                        : hsl(16, 100%, 49%); /*#FA4400;*/
-  --color_nexus_mods                    : hsl(31, 67%, 55%); /*#D98F40;*/
-  --color_github                        : hsl(220, 13%, 18%); /*#272B33;*/
-  --color_twitch                        : hsl(264, 100%, 64%); /*#9147FF;*/
-  --color_steam                         : hsl(222, 18%, 11%); /*#171A21;*/
+  --color_background_tumblr             : hsl(212, 100%, 10%); /*#001935;*/
+  --color_background_twitter            : hsl(203, 89%, 53%); /*#1DA1F2;*/
+  --color_background_linkedin           : hsl(201, 100%, 35%); /*#0077B5;*/
+  --color_background_reddit             : hsl(16, 100%, 49%); /*#FA4400;*/
+  --color_background_nexus_mods         : hsl(31, 67%, 55%); /*#D98F40;*/
+  --color_background_github             : hsl(220, 13%, 18%); /*#272B33;*/
+  --color_background_twitch             : hsl(264, 100%, 64%); /*#9147FF;*/
+  --color_background_steam              : hsl(222, 18%, 11%); /*#171A21;*/
 
-  --color_post_title                    : hsl(222, 18%, 0%);
-  --color_post_header_background        : hsl(4, 7%, 80%);
-  /*--color_post_header_background        : hsla(0, 0%, 0%, 0.7);*/
-  --color_post_content_title_background : hsla(0, 0%, 10%, 0.4);
-  --color_post_content_background       : hsl(9, 50%, 50%);
-  --color_post_button_background        : rgba(255, 255, 255, .3);
-  --color_post_button_text              : white;
+  /* @post */
+  --color_text_post_title               : hsl(222, 18%, 0%);
+  --color_background_post_header        : hsl(4, 7%, 80%);
+  --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
+  --color_background_post_content       : hsl(9, 50%, 50%);
+  --color_background_post_button        : rgba(255, 255, 255, .3);
+  --color_text_post_button              : white;
 
-  --color_side_index_background         : hsla(9, 0%, 0%, 0.5);
-  --color_side_index_text               : hsl(9, 50%, 100%);
-  --color_side_index_border             : var(--color_side_index_background); /*opacity does the job*/
+  --color_background_side_index         : hsla(9, 0%, 0%, 0.5);
+  --color_text_side_index               : hsl(9, 50%, 100%);
+  --color_border_side_index             : var(--color_background_side_index); /*opacity does the job*/
 
-  --button_color_tumblr                 : var(--color_tumblr);
-  --button_color_twitter                : var(--color_twitter);
-  --button_color_linkedin               : var(--color_linkedin);
-  --button_color_reddit                 : var(--color_reddit);
-  --button_color_nexus_mods             : var(--color_nexus_mods);
-  --button_color_github                 : var(--color_github);
-  --button_color_twitch                 : var(--color_twitch);
-  --button_color_steam                  : var(--color_steam);
+  --color_button_tumblr                 : var(--color_background_tumblr);
+  --color_button_twitter                : var(--color_background_twitter);
+  --color_button_linkedin               : var(--color_background_linkedin);
+  --color_button_reddit                 : var(--color_background_reddit);
+  --color_button_nexus_mods             : var(--color_background_nexus_mods);
+  --color_button_github                 : var(--color_background_github);
+  --color_button_twitch                 : var(--color_background_twitch);
+  --color_button_steam                  : var(--color_background_steam);
 
-  --button_color_hover_tumblr           : var(--color_tumblr);
-  --button_color_hover_twitter          : var(--color_twitter);
-  --button_color_hover_linkedin         : var(--color_linkedin);
-  --button_color_hover_reddit           : var(--color_reddit);
-  --button_color_hover_nexus_mods       : var(--color_nexus_mods);
-  --button_color_hover_github           : var(--color_github);
-  --button_color_hover_twitch           : var(--color_twitch);
-  --button_color_hover_steam            : var(--color_steam);
+  --color_button_hover_tumblr           : var(--color_background_tumblr);
+  --color_button_hover_twitter          : var(--color_background_twitter);
+  --color_button_hover_linkedin         : var(--color_background_linkedin);
+  --color_button_hover_reddit           : var(--color_background_reddit);
+  --color_button_hover_nexus_mods       : var(--color_background_nexus_mods);
+  --color_button_hover_github           : var(--color_background_github);
+  --color_button_hover_twitch           : var(--color_background_twitch);
+  --color_button_hover_steam            : var(--color_background_steam);
 
+  --color_background_post_navigation_li : hsla(0, 7%, 20%, 1);
+  --color_background_arrow_go_top       : hsla(0, 7%, 30%, .6);
+  --color_text_post_navigation          : white;
+  /*  --color_post_navigation_text_color: yellowgreen;*/
 
-  --background_color_dracula            : #282a36;
+  --color_background_dracula            : #282a36;
 
   /* need to change that for each Pygment theme */
-  --background_color_code               : var(--background_color_dracula);
-
-  --color_back_ticks                    : #999;
+  --color_background_code               : var(--color_background_dracula);
+  --color_text_back_ticks               : yellowgreen;
   --color_border_code                   : rgba(0, 0, 0, .5);
 }
 

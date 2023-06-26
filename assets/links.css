@@ -49,84 +49,84 @@
 
 #links #steam
 {
-  background-color : var(--button_color_steam);
+  background-color : var(--color_buttonsteam);
 }
 
 #links #github
 {
-  background-color : var(--button_color_github);
+  background-color : var(--color_button_github);
 }
 
 #links #nexus_mods
 {
-  background-color : var(--button_color_nexus_mods);
+  background-color : var(--color_button_nexus_mods);
 }
 
 #links #reddit
 {
-  background-color : var(--button_color_reddit);
+  background-color : var(--color_button_reddit);
 }
 
 #links #tumblr
 {
-  background-color : var(--button_color_tumblr);
+  background-color : var(--color_button_tumblr);
 }
 
 #links #twitter
 {
-  background-color : var(--button_color_twitter);
+  background-color : var(--color_button_twitter);
 }
 
 #links #linkedin
 {
-  background-color : var(--button_color_linkedin);
+  background-color : var(--color_button_linkedin);
 }
 
 #links #twitch
 {
-  background-color : var(--button_color_twitch);
+  background-color : var(--color_button_twitch);
 }
 
 /*hover colors*/
 
 #links #steam:hover
 {
-  background-color : var(--button_color_hover_steam);
+  background-color : var(--color_button_hover_steam);
 }
 
 #links #github:hover
 {
-  background-color : var(--button_color_hover_github);
+  background-color : var(--color_button_hover_github);
 }
 
 #links #nexus_mods:hover
 {
-  background-color : var(--button_color_hover_nexus_mods);
+  background-color : var(--color_button_hover_nexus_mods);
 }
 
 #links #reddit:hover
 {
-  background-color : var(--button_color_hover_reddit);
+  background-color : var(--color_button_hover_reddit);
 }
 
 #links #tumblr:hover
 {
-  background-color : var(--button_color_hover_tumblr);
+  background-color : var(--color_button_hover_tumblr);
 }
 
 #links #twitter:hover
 {
-  background-color : var(--button_color_hover_twitter);
+  background-color : var(--color_button_hover_twitter);
 }
 
 #links #linkedin:hover
 {
-  background-color : var(--button_color_hover_linkedin);
+  background-color : var(--color_button_hover_linkedin);
 }
 
 #links #twitch:hover
 {
-  background-color : var(--button_color_hover_twitch);
+  background-color : var(--color_button_hover_twitch);
 }
 
 #links #version

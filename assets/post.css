@@ -2,7 +2,7 @@
 
 :root
 {
-  --post_border_radius           : 20px;
+  --post_border_radius : 20px;
 }
 
 
@@ -13,8 +13,8 @@
 
 .post .button
 {
-  color            : var(--color_post_button_text);
-  background-color : var(--color_post_button_background);
+  color            : var(--color_text_post_button);
+  background-color : var(--color_background_post_button);
 }
 
 .post
@@ -28,15 +28,10 @@
   /*border-radius: var(--post_border_radius);*/
   border-radius    : var(--post_border_radius) var(--post_border_radius) 0 0;
   box-shadow       : 5px 1px 0 1px #333, 5px 7px 1px 1px #333;
-  background-color : var(--color_post_content_background); /* temporary */
+  background-color : var(--color_background_post_content); /* temporary */
   border-top       : 1px solid #222;
   /*overflow-inline: scroll; can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set*/
   color            : #EEE;
-}
-
-.post
-{
-
 }
 
 .post-content
@@ -46,14 +41,14 @@
 
 .post-header
 {
-  background-color : var(--color_post_header_background);
+  background-color : var(--color_background_post_header);
   display          : block;
   border-radius    : var(--post_border_radius) var(--post_border_radius) 0 0;
 }
 
 .post a
 {
-  color : #333;
+  color            : var(--color_text_post_button);
 }
 
 .post hr
@@ -63,7 +58,7 @@
 
 .post-title
 {
-  color             : var(--color_post_title);
+  color             : var(--color_text_post_title);
   text-align        : center;
   font-size         : 2em;
   font-weight       : bold;
@@ -80,7 +75,7 @@
   margin-bottom : 3%;
   margin-top    : 3%;
   border        : unset;
-  box-shadow    : 1px 1px 2px var(--color_post_content_title_background);
+  box-shadow    : 1px 1px 2px var(--color_background_post_content_title);
   border-radius : 20px 20px 20px 20px;
 
 }
@@ -133,12 +128,6 @@
   background-color : rgba(0, 0, 0, 0.3);
 }
 
-
-.post-content li
-{
-  margin-left : 7%;
-}
-
 .post-content ul
 {
   margin-top    : 1%;
@@ -158,7 +147,8 @@
 
 .post-content li
 {
-/ / list-style: square;
+  margin-left : 7%;
+  list-style  : square !important;
 }
 
 
