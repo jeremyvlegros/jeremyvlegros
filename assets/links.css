@@ -1,13 +1,10 @@
-/*#date 2023-06-26 0534 1687743242578447331 GMT*/
+/*#date 2023-06-28 15:57 1687953443352457480 GMT*/
 
 #links
 {
-  margin-left  : 30%;
-  margin-right : 30%;
+  margin-left  : 35%;
+  margin-right : 35%;
   text-align   : center;
-  position     : absolute;
-  top          : 1%;
-  bottom       : 1%;
 }
 
 
@@ -49,7 +46,7 @@
 
 #links #steam
 {
-  background-color : var(--color_buttonsteam);
+  background-color : var(--color_button_steam);
 }
 
 #links #github
