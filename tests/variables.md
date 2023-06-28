@@ -1,5 +1,5 @@
 ---
-title : "Title > Testing > variables >"
+title : "Title > Testing > variables"
 layout : post
 test_list :
   - "a"
@@ -32,7 +32,9 @@ The loop :
 value : {{ value }}
 {% endfor %}
 
-`test_list` : {{ test_list }}
+printing `test_list` : {{ test_list }}
+
+printing `test_list`  as json :  {{ test_list | json}}
 
 ## Displaying Liquid results in code ?
 
@@ -49,6 +51,8 @@ value : {{ value }}
 ### `page.url` : "{{page.url}}"
 
 ### `site.url` : "{{site.url}}"
+
+### constructed canonical page url (need to set name in `_config.yml`) : {{ site.url | append :"/" | append : site.name | append : "/" | append page.url }}
 
 ## Accessing global variables `_config.yml`
 
@@ -77,35 +81,35 @@ value : {{ value }}
 {{ link[link.name] }}
 {% endfor %}
 
-## global variable link url social_links, accessing as a dictionary
+### global variable link url social_links, accessing as a dictionary, with dot
 
 {% for link in site.social_links %}
 {{ link[link.url]}}
 {% endfor %}
 
+### global variable link url social_links, accessing as a dictionary, with string key
 
-## `_data > social_links.yml`
+{% for link in site.social_links %}
+{{ link["url"]}}
+{% endfor %}
 
-### link social_links
+## Accessing variables in `_data > social_links.yml`
+
+### social links
 
 {% for link in site.data.social_links %}
 {{ link }}
 {% endfor %}
 
-### link name social_links
+### social_links > name
 
 {% for link in site.data.social_links %}
 {{ link.name }}
 {% endfor %}
 
-### link url social_links
+### social_links > url
 
 {% for link in site.data.social_links %}
 {{ link.url }}
 {% endfor %}
 
-### global variable link url social_links, accessing as a dictionary with string key
-
-{% for link in site.social_links %}
-{{ link["url"]}}
-{% endfor %}
