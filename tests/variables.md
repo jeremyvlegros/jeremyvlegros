@@ -32,9 +32,9 @@ The loop :
 value : {{ value }}
 {% endfor %}
 
-printing `test_list` : {{ test_list }}
+printing `test_list` : `{{ test_list }}`
 
-printing `test_list`  as json :  {{ test_list | jsonify}}
+printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 ## Displaying Liquid results in code ?
 
@@ -46,13 +46,13 @@ printing `test_list`  as json :  {{ test_list | jsonify}}
 
 ## Accessing Jekyll variables
 
-### `site.name` : "{{site.name}}"
+### `site.name` : `{{site.name}}`
 
-### `page.url` : "{{page.url}}"
+### `page.url` : `{{page.url}}`
 
-### `site.url` : "{{site.url}}"
+### `site.url` : `{{site.url}}`
 
-### constructed canonical page url (need to set name in `_config.yml`) : {{ site.url | append :"/" | append : site.name | append : "/" | append : page.url }}
+### constructed canonical page url (need to set name in `_config.yml`) : `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
 ## Accessing global variables `_config.yml`
 
