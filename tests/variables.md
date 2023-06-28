@@ -101,14 +101,14 @@ Unless 1 > 4 print 1 is smaller than 4
 
 ```
 {%raw%}
-```
+
 Unless 1 > 4 print 1 is smaller than 4
 
 
 {% unless 1 > 4 %}
 1 is smaller than 4
 {% endunless %}
-```
+
 {% endraw %}
 ```
 ## String contains
@@ -127,13 +127,21 @@ abc contains a
 
 ## Accessing Jekyll variables
 
-### `site.name` : `{{site.name}}`
+### `site.name`
 
-### `page.url` : `{{page.url}}`
+`{{site.name}}`
 
-### `site.url` : `{{site.url}}`
+### `page.url`
 
-### constructed canonical page url (need to set name in `_config.yml`) : `{{ site.url | append :"/" | append : site.name | append : page.url }}`
+`{{page.url}}`
+
+### `site.url`
+
+`{{site.url}}`
+
+### constructed canonical page url (need to set name in `_config.yml`)
+
+`{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
 ## Accessing global variables `_config.yml`
 
@@ -142,55 +150,3 @@ abc contains a
 {% for link in site.social_links %}
 {{ link }}
 {% endfor %}
-
-### global variable link name social_links
-
-{% for link in site.social_links %}
-{{ link.name }}
-{% endfor %}
-
-### global variable link url social_links
-
-{% for link in site.social_links %}
-{{ link.url }}
-{% endfor %}
-
-
-### global variable link name social_links, accessing as a dictionary
-
-{% for link in site.social_links %}
-{{ link[link.name] }}
-{% endfor %}
-
-### global variable link url social_links, accessing as a dictionary, with dot
-
-{% for link in site.social_links %}
-{{ link[link.url]}}
-{% endfor %}
-
-### global variable link url social_links, accessing as a dictionary, with string key
-
-{% for link in site.social_links %}
-{{ link["url"]}}
-{% endfor %}
-
-## Accessing variables in `_data > social_links.yml`
-
-### social links
-
-{% for link in site.data.social_links %}
-{{ link }}
-{% endfor %}
-
-### social_links > name
-
-{% for link in site.data.social_links %}
-{{ link.name }}
-{% endfor %}
-
-### social_links > url
-
-{% for link in site.data.social_links %}
-{{ link.url }}
-{% endfor %}
-
