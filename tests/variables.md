@@ -22,13 +22,17 @@ html character greater than "{{character}}"
 {% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
 {% endif %}
 
-this should not break {{title}}
+this should not break : {{title}}
 
 ## `local variable` list `test_list` a b c
 
 {% for value in page.test_list %}
 {{ value }}
 {% endfor %}
+
+## website name ? : "{{site.name}}"
+
+## page URL ? : "{{page.url}}"
 
 ## `_config.yml`
 
