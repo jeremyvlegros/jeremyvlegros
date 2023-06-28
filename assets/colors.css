@@ -1,32 +1,42 @@
-/*#date 2023-06-26 0559 1687744777686674234 GMT*/
+/*#date 2023-06-28 15:21 1687951292531561023 GMT*/
 :root
 {
   --color_background                    : hsl(4, 7%, 69%);
 
-  --post_luminosity_trigger             : 37%;
+  --color_1                             : hsl(010, 50%, 31%);
+  --color_2                             : hsl(030, 50%, 31%);
+  --color_3                             : hsl(040, 50%, 31%);
+  --color_4                             : hsl(060, 50%, 31%);
+  --color_5                             : hsl(080, 50%, 31%);
+  --color_6                             : hsl(100, 50%, 31%);
+  --color_7                             : hsl(120, 40%, 31%);
+  --color_8                             : hsl(140, 40%, 31%);
+  --color_9                             : hsl(160, 40%, 31%);
+  --color_10                            : hsl(180, 40%, 31%);
+  --color_11                            : hsl(200, 50%, 31%);
+  --color_12                            : hsl(220, 50%, 31%);
+  --color_13                            : hsl(230, 50%, 31%);
+  --color_14                            : hsl(250, 50%, 31%);
+  --color_15                            : hsl(270, 40%, 31%);
+  --color_16                            : hsl(290, 40%, 31%);
+  --color_17                            : hsl(300, 40%, 31%);
+  --color_18                            : hsl(320, 40%, 31%);
+  --color_19                            : hsl(340, 50%, 31%);
+  --color_20                            : hsl(010, 30%, 31%);
+  --color_21                            : hsl(030, 30%, 31%);
+  --color_22                            : hsl(040, 30%, 31%);
+  --color_23                            : hsl(060, 30%, 31%);
+  --color_24                            : hsl(080, 30%, 31%);
+  --color_25                            : hsl(100, 30%, 31%);
+  --color_26                            : hsl(120, 30%, 31%);
+  --color_27                            : hsl(140, 30%, 31%);
+  --color_28                            : hsl(160, 30%, 31%);
+  --color_29                            : hsl(180, 30%, 31%);
+  --color_30                            : hsl(200, 30%, 31%);
+  --color_31                            : hsl(220, 30%, 31%);
 
-  --color_1                             : hsl(010, 50%, var(--post_luminosity_trigger));
-  --color_2                             : hsl(030, 50%, var(--post_luminosity_trigger));
-  --color_3                             : hsl(040, 50%, var(--post_luminosity_trigger));
-  --color_4                             : hsl(060, 50%, var(--post_luminosity_trigger));
-  --color_5                             : hsl(080, 50%, var(--post_luminosity_trigger));
-  --color_6                             : hsl(100, 50%, var(--post_luminosity_trigger));
-  --color_7                             : hsl(190, 20%, var(--post_luminosity_trigger));
-  --color_8                             : hsl(190, 100%, var(--post_luminosity_trigger));
-  /*--color_7                             : hsl(120, 50%, var(--post_luminosity_trigger)); !* NOPE verdant green too bright*!*/
-  /*--color_8                             : hsl(140, 50%, var(--post_luminosity_trigger)); !* NOPE young gree too bright *!*/
-  /*--color_9                             : hsl(160, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
-  /*--color_10                            : hsl(180, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
-  --color_11                            : hsl(200, 50%, var(--post_luminosity_trigger));
-  --color_12                            : hsl(220, 50%, var(--post_luminosity_trigger));
-  --color_13                            : hsl(230, 50%, var(--post_luminosity_trigger));
-  --color_14                            : hsl(250, 50%, var(--post_luminosity_trigger));
-  /*--color_15                            : hsl(270, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
-  /*--color_16                            : hsl(290, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
-  /*--color_17                            : hsl(300, 50%, var(--post_luminosity_trigger)); !* NOPE purple too bright*!*/
-  /*--color_18                            : hsl(320, 50%, var(--post_luminosity_trigger)); !* NOPE *!*/
-  --color_19                            : hsl(340, 50%, var(--post_luminosity_trigger));
 
+  /* about me / deprecated */
   --color_text_title_preface            : hsl(100, 100%, 31%);
   --color_text_title_day_job            : hsl(200, 9%, 44%);
   --color_text_title_dream_job          : hsl(620, 100%, 30%);
@@ -35,6 +45,7 @@
   --color_text_title_context            : hsl(0, 50%, 38%);
   --color_text_title_date_2016          : hsl(41, 100%, 40%);
 
+  /* @social */
   --color_background_tumblr             : hsl(212, 100%, 10%); /*#001935;*/
   --color_background_twitter            : hsl(203, 89%, 53%); /*#1DA1F2;*/
   --color_background_linkedin           : hsl(201, 100%, 35%); /*#0077B5;*/
@@ -46,16 +57,18 @@
 
   /* @post */
   --color_text_post_title               : hsl(222, 18%, 0%);
-  --color_background_post_header        : hsl(4, 7%, 80%);
+  --color_background_post_header        : hsl(4, 7%, 95%);
   --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
   --color_background_post_content       : hsl(9, 50%, 50%);
   --color_background_post_button        : rgba(255, 255, 255, .3);
   --color_text_post_button              : white;
 
+  /* @timeline */
   --color_background_side_index         : hsla(9, 0%, 0%, 0.5);
   --color_text_side_index               : hsl(9, 50%, 100%);
   --color_border_side_index             : var(--color_background_side_index); /*opacity does the job*/
 
+  /* @links */
   --color_button_tumblr                 : var(--color_background_tumblr);
   --color_button_twitter                : var(--color_background_twitter);
   --color_button_linkedin               : var(--color_background_linkedin);
@@ -74,11 +87,13 @@
   --color_button_hover_twitch           : var(--color_background_twitch);
   --color_button_hover_steam            : var(--color_background_steam);
 
+  /* @navigation */
   --color_background_post_navigation_li : hsla(0, 7%, 20%, 1);
   --color_background_arrow_go_top       : hsla(0, 7%, 30%, .6);
   --color_text_post_navigation          : white;
   /*  --color_post_navigation_text_color: yellowgreen;*/
 
+  /* Dracula css color*/
   --color_background_dracula            : #282a36;
 
   /* need to change that for each Pygment theme */
@@ -92,106 +107,162 @@ body, html
   background-color : var(--color_background);
 }
 
-.color_1
+.color_background_dracula
+{
+  background-color : var(--color_background_dracula) !important;
+}
+
+.color_background_1
 {
   background-color : var(--color_1) !important;
-
 }
 
-.color_2
+.color_background_2
 {
   background-color : var(--color_2) !important;
-
 }
 
-.color_3
+.color_background_3
 {
   background-color : var(--color_3) !important;
-
 }
 
-.color_4
+.color_background_4
 {
   background-color : var(--color_4) !important;
-
 }
 
-.color_5
+.color_background_5
 {
   background-color : var(--color_5) !important;
-
 }
 
-.color_6
+.color_background_6
 {
   background-color : var(--color_6) !important;
-
 }
 
-.color_7
+.color_background_7
 {
   background-color : var(--color_7) !important;
-
 }
 
-.color_8
+.color_background_8
 {
   background-color : var(--color_8) !important;
-
 }
 
-.color_9
+.color_background_9
 {
   background-color : var(--color_9) !important;
-
 }
 
-.color_10
+.color_background_10
 {
   background-color : var(--color_10) !important;
 }
 
-.color_11
+.color_background_11
 {
   background-color : var(--color_11) !important;
 }
 
-.color_12
+.color_background_12
 {
   background-color : var(--color_12) !important;
 }
 
-.color_13
+.color_background_13
 {
   background-color : var(--color_13) !important;
 }
 
-.color_14
+.color_background_14
 {
   background-color : var(--color_14) !important;
 }
 
-.color_15
+.color_background_15
 {
   background-color : var(--color_15) !important;
 }
 
-.color_16
+.color_background_16
 {
   background-color : var(--color_16) !important;
 }
 
-.color_17
+.color_background_17
 {
   background-color : var(--color_17) !important;
 }
 
-.color_18
+.color_background_18
 {
   background-color : var(--color_18) !important;
 }
 
-.color_19
+.color_background_19
 {
   background-color : var(--color_19) !important;
+}
+
+.color_background_20
+{
+  background-color : var(--color_20) !important;
+}
+
+.color_background_21
+{
+  background-color : var(--color_21) !important;
+}
+
+.color_background_22
+{
+  background-color : var(--color_22) !important;
+}
+
+.color_background_23
+{
+  background-color : var(--color_23) !important;
+}
+
+.color_background_24
+{
+  background-color : var(--color_24) !important;
+}
+
+.color_background_25
+{
+  background-color : var(--color_25) !important;
+}
+
+.color_background_26
+{
+  background-color : var(--color_26) !important;
+}
+
+.color_background_27
+{
+  background-color : var(--color_27) !important;
+}
+
+.color_background_28
+{
+  background-color : var(--color_28) !important;
+}
+
+.color_background_29
+{
+  background-color : var(--color_29) !important;
+}
+
+.color_background_30
+{
+  background-color : var(--color_30) !important;
+}
+
+.color_background_31
+{
+  background-color : var(--color_31) !important;
 }
