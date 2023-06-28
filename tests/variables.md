@@ -1,5 +1,5 @@
 ---
-title : "Testing > variables >"
+title : "Title > Testing > variables >"
 layout : post
 test_list :
   - "a"
@@ -19,7 +19,7 @@ html character greater than "{{character}}"
 
 {% assign title = page.title %}
 {% if title %}
-{% assign title = title | escape | replace : "&gt;","&nbsp;&gt;" %}
+{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
 {% endif %}
 
 this should not break {{title}}
