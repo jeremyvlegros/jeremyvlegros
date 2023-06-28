@@ -1,5 +1,5 @@
 ---
-title : "Testing variables"
+title : "Testing > variables >"
 layout : post
 test_list :
   - "a"
@@ -13,6 +13,14 @@ test_list :
 {% assign character  = character | replace : ">","&gt;" %}
                                                  
 html character greater than "{{character}}"
+
+## prefixing a html character by NBSP
+
+{% if page.title %}
+{% assign title = title | escape | replace : "&gt;","&nbsp;&gt;" %}
+{% endif %}
+
+this should not break {{title}}
 
 ## `local variable` list `test_list` a b c
 
