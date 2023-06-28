@@ -71,6 +71,15 @@ printing `test_list` : `{{ test_list }}`
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {% endraw %}
 ```
+## the To string function `inspect`
+
+The `test_list` as a string : `{{ test_list | inspect }}`
+
+```
+{%raw%}
+The `test_list` as a string : `{{ test_list | inspect }}`
+{% endraw %}
+```
 
 ## Displaying Liquid results in code ?
 
@@ -84,21 +93,22 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 Unless 1 > 4 print 1 is smaller than 4
 
-`
+```
 {% unless 1 > 4 %}
 1 is smaller than 4
 {% endunless %}
-`
+```
 
 ```
 {%raw%}
+```
 Unless 1 > 4 print 1 is smaller than 4
 
-`
+
 {% unless 1 > 4 %}
 1 is smaller than 4
 {% endunless %}
-`
+```
 {% endraw %}
 ```
 ## String contains
