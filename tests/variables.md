@@ -34,6 +34,8 @@ this should not break : {{title}}
 
 ## page URL ? : "{{page.url}}"
 
+## site URL ? : "{{site.url}}"
+
 ## `_config.yml`
 
 ### global variable social_links
