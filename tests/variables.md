@@ -7,6 +7,13 @@ test_list :
   - "c"
 ---
 
+## printing a html character
+
+{% assign character  = ">" %}
+{% assign character  = character | replace : ">","&gt;" %}
+                                                 
+html character greater than `{{character}}`
+
 ## `local variable` list `test_list` a b c
 
 {% for value in page.test_list %}
@@ -72,5 +79,3 @@ test_list :
 {% for link in site.social_links %}
 {{ link["url"]}}
 {% endfor %}
-
-#date 2023-06-20 1416 1687256188459386009 GMT
