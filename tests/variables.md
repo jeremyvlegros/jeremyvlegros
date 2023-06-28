@@ -12,7 +12,7 @@ test_list :
 {% assign character  = ">" %}
 {% assign character  = character | replace : ">","&gt;" %}
                                                  
-html character greater than `{{character}}`
+html character greater than "{{character}}"
 
 ## `local variable` list `test_list` a b c
 
