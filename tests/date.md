@@ -50,8 +50,6 @@ tags                 : null
 {% assign time_of_creation      =  date_of_creation[1]    %}
 {% assign time_of_modification  =  date_of_modification[1]%}
 
-## time of creation from array : {{time_of_creation}}
-
 <!-- hour with seconds and Time difference
 I won't calculate the seconds ... for now ?
                                => "05:16:00+00:00"
@@ -60,8 +58,6 @@ I won't calculate the seconds ... for now ?
 
 {% assign time_of_creation     =  time_of_creation     | append :":00+00:00" %}
 {% assign time_of_modification =  time_of_modification | append :":00+00:00" %}
-
-## time of creation with seconds : {{time_of_creation}}
 
 <!-- adding 'T' and hour to date
                                => "2023-06-28T05:16:00+00:00"
