@@ -16,7 +16,9 @@ html character greater than "{{character}}"
 
 ## prefixing a html character by NBSP
 
-{% if page.title %}
+
+{% assign title = page.title %}
+{% if title %}
 {% assign title = title | escape | replace : "&gt;","&nbsp;&gt;" %}
 {% endif %}
 
