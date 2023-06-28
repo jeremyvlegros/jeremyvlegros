@@ -58,8 +58,8 @@ I won't calculate the seconds ... for now ?
 -->
 
 
-{% assign time_of_creation     =  time_of_creation     | append :"00+00:00" %}
-{% assign time_of_modification =  time_of_modification | append :"00+00:00" %}
+{% assign time_of_creation     =  time_of_creation     | append :":00+00:00" %}
+{% assign time_of_modification =  time_of_modification | append :":00+00:00" %}
 
 ## time of creation with seconds : {{time_of_creation}}
 
