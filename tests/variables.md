@@ -24,19 +24,33 @@ html character greater than "{{character}}"
 
 this should not break : {{title}}
 
-## `local variable` list `test_list` a b c
+## Accessing the local variable `test_list`
+         
+The loop :
 
+{% for value in page.test_list %}
+value : {{ value }}
+{% endfor %}
+
+`test_list` : {{ test_list }}
+
+## Displaying Liquid results in code ?
+
+```
 {% for value in page.test_list %}
 {{ value }}
 {% endfor %}
+```
 
-## website name ? : "{{site.name}}"
+## Accessing Jekyll variables
 
-## page URL ? : "{{page.url}}"
+### `site.name` : "{{site.name}}"
 
-## site URL ? : "{{site.url}}"
+### `page.url` : "{{page.url}}"
 
-## `_config.yml`
+### `site.url` : "{{site.url}}"
+
+## Accessing global variables `_config.yml`
 
 ### global variable social_links
 
