@@ -89,7 +89,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endfor %}
 ```
 
-## Unless
+## `unless`
 
 Unless 1 > 4 print 1 is smaller than 4
 
@@ -101,9 +101,6 @@ Unless 1 > 4 print 1 is smaller than 4
 
 ```
 {%raw%}
-
-Unless 1 > 4 print 1 is smaller than 4
-
 
 {% unless 1 > 4 %}
 1 is smaller than 4
@@ -147,6 +144,8 @@ abc contains a
 
 ### global variable social_links
 
+```
 {% for link in site.social_links %}
 {{ link }}
 {% endfor %}
+```
