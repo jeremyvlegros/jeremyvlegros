@@ -10,7 +10,7 @@ meta_image_url           : null
 type                     : null
 ---
 
-<!-- LIQUID HEAD -->
+<!-- LIQUID -->
 
 <!--   DECLARATION -->
 
@@ -137,3 +137,15 @@ I won't calculate the seconds ... for now ?
 {% assign date_of_modification  =  date_of_modification[0]     | append : "T" | append : time_of_creation%}
 
 {% endif %}
+
+<!-- CONTENT BACKGROUND COLOR
+-->
+
+{% case page_color_background %}
+{% when "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31" %}
+{% assign page_color_background = "color_background_" | append : page_color_background %}
+{% else %}
+{% assign page_color_background = null %}  <!-- clearing the content-->
+{% endcase %}
+
+<!-- END LIQUID -->
