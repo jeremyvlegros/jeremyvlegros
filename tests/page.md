@@ -7,6 +7,10 @@ date_of_modification     : null
 color_background         : "2"
 category                 : "test"
 tags                     : "#test #page #layout #post" 
-meta_image_url           : "site.image_color_23"
+meta_image_url           : site.image_color_23
 type                     : "post"
 ---
+
+# Title 1
+
+# Title 2
