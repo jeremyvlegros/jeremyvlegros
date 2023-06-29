@@ -149,3 +149,140 @@ I won't calculate the seconds ... for now ?
 {% endcase %}
 
 <!-- END LIQUID -->
+
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en'">
+
+<head>
+
+    <!-- META COMMON -->
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    {% if date_of_creation %}
+    <meta property="article:published_time"
+          content="{{date_of_creation}}"/>
+    {% endif %}
+
+    {% if page_content_description %}
+    <meta name="description"
+          content="{{page_content_description}}"/>
+    {% endif %}
+
+    <!--  META OPEN GRAPH  -->
+    {% if page_type %}
+    <meta property="og:type"
+          content="{{page_type}}"/>
+    {% endif %}
+
+    <meta property="og:locale"
+          content="en_US"/>
+
+    {% if page_title %}
+    <meta property="og:title"
+          content="{{page_title}}"/>
+    {% endif %}
+
+    {% if page_content_description %}
+    <meta property="og:description"
+          content="{{page_content_description}}"/>
+    {% endif %}
+
+    {% if page_url %}
+    <meta property="og:url"
+          content="{{page_url}}"/>
+    {% endif %}
+
+    {% if site_name %}
+    <meta property="og:site_name"
+          content="{{site_name}}"/>
+    {% endif %}
+
+    {% if meta_image_url %}
+    <meta name='og:image'
+          content='{{meta_image_url}}'/>
+    {% endif %}
+
+    <!--  META TWITTER  -->
+
+    <meta name="twitter:card"
+          content="summary"/>
+
+    {% if page_title %}
+    <meta property="twitter:title"
+          content="{{page_title}}"/>
+    {% endif %}
+
+    {% if meta_image_url %}
+    <meta name='twitter:image'
+          content='{{meta_image_url}}'/>
+    {% endif %}
+
+    <!--  LINK CANONICAL -->
+
+    <!--suppress HtmlUnknownTarget -->
+    {% if page_url %}
+    <link rel="canonical"
+          href="{{page_url}}"/>
+    {% endif %}
+
+    <!--  STYLE SHEET -->
+
+    <link rel="stylesheet"
+          href="{{ '/assets/main.css' | relative_url }}">
+
+    <!--  PAGE TITLE -->
+
+    {% if page_title %}
+    <title>{{page_title}}</title>
+    {% endif %}}
+
+</head>
+
+<body>
+
+<main class="page-content" aria-label="Content">
+
+    <article class="post {{page_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+
+            {% if page_title %}
+            <h1 class="post-title" itemprop="name headline">
+                {{ page_title }}
+            </h1>
+            {% endif %}
+
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+
+            {{ content }}
+
+            <br>
+
+            {% if date_of_creation %}
+            <span class='date date_of_creation'>    Created&nbsp;&nbsp;: {{ date_of_creation }} </span>
+            {% endif %}
+
+            <br>
+
+            {% if date_of_modification %}
+            <span class="date date_of_modification">Modified&nbsp;: {{ date_of_modification }} </span>
+            {% endif %}
+        </div>
+
+    </article>
+
+</main>
+
+</body>
+
+</html>
