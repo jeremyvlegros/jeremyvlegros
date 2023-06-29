@@ -39,3 +39,15 @@ type                     : null
 {% unless date_of_modification %}
 {% assign date_of_modification  = "2023-05-19T00:00:00+00:00"%}
 {% endunless %}
+
+<!-- TITLE
+-->
+{% if page_title %}
+{% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
+{% endif %}
+
+<!-- PAGE URL
+-->
+{% if site_name %}
+{% assign page_url = site.url | append :"/" | append : site_name | append : page.url %}
+{% endif %}
