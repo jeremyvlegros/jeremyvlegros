@@ -27,3 +27,15 @@ type                     : null
 
 {% assign site_name            = site.name %}
 {% assign meta_image           = null %}
+
+<!--   INITILISATION -->
+
+<!-- default date
+-->
+{% if not date_of_creation %}
+{% assign date_of_creation      = "2023-05-19T00:00:00+00:00"%}
+{% endif %}
+
+{% if not date_of_modification %}
+{% assign date_of_modification  = "2023-05-19T00:00:00+00:00"%}
+{% endif %}
