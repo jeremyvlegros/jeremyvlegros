@@ -8,7 +8,7 @@ test_list :
 ---
 ## assigning a variable `test_list`
 
-{%test_list = page.test_list%}
+{% assign test_list = page.test_list%}
 
 ```
 {%raw%}
