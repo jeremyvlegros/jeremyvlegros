@@ -21,3 +21,9 @@ type                     : null
 {% assign page_content_description      = page.content_description %}
 {% assign page_content_background_color = page.content_background_color %}
 {% assign page_type                     = page.type %}
+
+{% assign date_of_creation     = page.date_of_creation %}
+{% assign date_of_modification = page.date_of_modification %}
+
+{% assign site_name            = site.name %}
+{% assign meta_image           = null %}
