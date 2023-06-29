@@ -21,33 +21,3 @@ type                     : null
 {% assign page_content_description      = page.content_description %}
 {% assign page_content_background_color = page.content_background_color %}
 {% assign page_type                     = page.type %}
-
-{% assign date_of_creation     = page.date_of_creation %}
-{% assign date_of_modification = page.date_of_modification %}
-
-{% assign site_name            = site.name %}
-{% assign meta_image           = null %}
-
-<!--   INITILISATION -->
-
-<!-- default date
--->
-{% if not date_of_creation %}
-{% assign date_of_creation      = "2023-05-19T00:00:00+00:00"%}
-{% endif %}
-
-{% if not date_of_modification %}
-{% assign date_of_modification  = "2023-05-19T00:00:00+00:00"%}
-{% endif %}
-
-<!-- TITLE
--->
-{% if page_title %}
-{% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
-{% endif %}
-
-<!-- PAGE URL
--->
-{% if site_name %}
-{% assign page_url = site.url | append :"/" | append : site_name | append : page.url %}
-{% endif %}
