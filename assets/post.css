@@ -37,7 +37,7 @@
 {
   padding       : 5% 10%;
   color         : var(--color_text_post);
-  border-radius : var(--post_border_radius) var(--post_border_radius) 0 0;
+  border-radius : 0 0 var(--post_border_radius) var(--post_border_radius);
 }
 
 
