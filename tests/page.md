@@ -42,8 +42,8 @@ type                     : null
 
 <!-- TITLE
 -->
-{% if title %}
-{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
+{% if page_title %}
+{% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
 {% endif %}
 
 <!-- PAGE URL
