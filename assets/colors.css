@@ -1,4 +1,5 @@
-/*#date 2023-06-28 15:21 1687951292531561023 GMT*/
+/*#date 2023-06-29 15:15 1688037325972361780 GMT*/
+
 :root
 {
   --color_background                    : hsl(4, 7%, 69%);
@@ -9,10 +10,10 @@
   --color_4                             : hsl(060, 50%, 31%);
   --color_5                             : hsl(080, 50%, 31%);
   --color_6                             : hsl(100, 50%, 31%);
-  --color_7                             : hsl(120, 40%, 31%);
-  --color_8                             : hsl(140, 40%, 31%);
-  --color_9                             : hsl(160, 40%, 31%);
-  --color_10                            : hsl(180, 40%, 31%);
+  --color_7                             : hsl(125, 40%, 31%);
+  --color_8                             : hsl(145, 50%, 31%);
+  --color_9                             : hsl(165, 40%, 31%);
+  --color_10                            : hsl(185, 60%, 31%);
   --color_11                            : hsl(200, 50%, 31%);
   --color_12                            : hsl(220, 50%, 31%);
   --color_13                            : hsl(230, 50%, 31%);
@@ -56,6 +57,7 @@
   --color_background_steam              : hsl(222, 18%, 11%); /*#171A21;*/
 
   /* @post */
+  --color_text_post                     : white;
   --color_text_post_title               : hsl(222, 18%, 0%);
   --color_background_post_header        : hsl(4, 7%, 95%);
   --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
@@ -93,7 +95,7 @@
   --color_text_post_navigation          : white;
   /*  --color_post_navigation_text_color: yellowgreen;*/
 
-  /* Dracula css color*/
+  /* Dracula syntax highlighting */
   --color_background_dracula            : #282a36;
 
   /* need to change that for each Pygment theme */
