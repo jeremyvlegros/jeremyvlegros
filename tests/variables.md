@@ -6,6 +6,15 @@ test_list :
   - "b"
   - "c"
 ---
+## assigning a variable `test_list`
+
+{%test_list = page.test_list%}
+
+```
+{%raw%}
+{% assign test_list = page.test_list%}
+{% endraw %}
+```
 
 ## printing a html character
 
@@ -50,7 +59,7 @@ this should not break : {{title}}
          
 The loop :
 
-{% for value in page.test_list %}
+{% for value in test_list %}
 value : {{ value }}
 {% endfor %}
 
@@ -62,7 +71,7 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {%raw%}
 The loop :
 
-{% for value in page.test_list %}
+{% for value in test_list %}
 value : {{ value }}
 {% endfor %}
 
@@ -84,7 +93,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 ## Displaying Liquid results in code ?
 
 ```
-{% for value in page.test_list %}
+{% for value in test_list %}
 {{ value }}
 {% endfor %}
 ```
