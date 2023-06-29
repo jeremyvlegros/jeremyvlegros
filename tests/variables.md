@@ -82,10 +82,13 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 ```
 ## the To string function `inspect`
 
+
+{% assign test_list = page.test_list%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 
 ```
 {%raw%}
+{% assign test_list = page.test_list%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 {% endraw %}
 ```
@@ -158,3 +161,11 @@ abc contains a
 {{ link }}
 {% endfor %}
 ```
+
+## Displaying an external image with HTML
+
+<img src="{{site.image_color_1}}" alt="image_color_1">
+
+## Displaying an external image in a Markdown link
+
+![image_color_1]({{site.image_color_1}})
