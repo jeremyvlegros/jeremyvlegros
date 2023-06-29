@@ -7,10 +7,16 @@ date_of_modification     : null
 color_background         : 2
 category                 : "test"
 tags                     : "#test #page #layout #post" 
-meta_image_url           : site.image_color_23
+meta_image_url           : null
 type                     : "post"
 ---
 
-# Title 1
+# Getting the first image URL
+
+{% assign array_image_color_urls = site.string_image_color_urls | split : "," %}
+
+<!-- images start at 1 for covenience -->
+`{{ array_image_color[1]}}`
+
 
 # Title 2
