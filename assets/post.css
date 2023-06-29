@@ -1,4 +1,4 @@
-/*#date 2023-06-25 1513 1687691630617437316 GMT*/
+/*#date 2023-06-29 15:15 1688037325972361780 GMT*/
 
 :root
 {
@@ -31,13 +31,15 @@
   background-color : var(--color_background_post_content); /* temporary */
   border-top       : 1px solid #222;
   /*overflow-inline: scroll; can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set*/
-  color            : #EEE;
 }
 
 .post-content
 {
   padding : 5% 10%;
+  color   : var(--color_text_post)
 }
+
+
 
 .post-header
 {
