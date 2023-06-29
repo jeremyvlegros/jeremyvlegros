@@ -16,7 +16,7 @@ type                     : "post"
 {% assign array_image_color_urls = site.string_image_color_urls | split : "," %}
 
 <!-- images start at 1 for covenience -->
-`{{ array_image_color[1]}}`
+`{{ array_image_color_urls[1]}}`
 
 
 # Title 2
