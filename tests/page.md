@@ -32,10 +32,10 @@ type                     : null
 
 <!-- default date
 -->
-{% if not date_of_creation %}
+{% unless date_of_creation %}
 {% assign date_of_creation      = "2023-05-19T00:00:00+00:00"%}
-{% endif %}
+{% endunless %}
 
-{% if not date_of_modification %}
+{% unless date_of_modification %}
 {% assign date_of_modification  = "2023-05-19T00:00:00+00:00"%}
-{% endif %}
+{% endunless %}
