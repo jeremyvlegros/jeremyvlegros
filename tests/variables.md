@@ -152,6 +152,87 @@ abc contains a
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
+## `case` instruction
+
+### split cases / non traversal
+
+{% assign letter = "a" %}
+
+{% case letter %}
+  {% when "a" %}
+   letter a
+  {% when "b" %}
+   letter b
+  {% when "c" %}
+   letter c
+  {% else %}
+   not a nor b nor c
+{% endcase %}
+
+expected : "letter a"
+
+expected : "letter b"
+
+{% assign letter = "b" %}
+
+{% case letter %}
+  {% when "a" %}
+   letter a
+  {% when "b" %}
+   letter b
+  {% when "c" %}
+   letter c
+  {% else %}
+   not a nor b nor c
+{% endcase %}
+
+{% assign letter = "d" %}
+
+expected : "not a nor b nor c" 
+
+{% case letter %}
+  {% when "a" %}
+   letter a
+  {% when "b" %}
+   letter b
+  {% when "c" %}
+   letter c
+  {% else %}
+   not a nor b nor c
+{% endcase %}
+
+### multiple cases / traversal / like in C
+                         
+expected : "a letter among a,b,c,d"
+
+{% assign letter = "a" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
+    a letter among a,b,c,d
+  {% else %}
+    not a letter among a,b,c,d
+{% endcase %}
+
+expected : "a letter among a,b,c,d"
+
+{% assign letter = "d" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
+    a letter among a,b,c,d 
+  {% else %}
+    not a letter among a,b,c,d
+{% endcase %}
+
+expected : "not a letter among a,b,c,d"
+
+{% assign letter = "e" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
+    a letter among a,b,c,d 
+  {% else %}
+    not a letter among a,b,c,d
+{% endcase %}
+
 ## Accessing global variables `_config.yml`
 
 ### global variable social_links
