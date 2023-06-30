@@ -17,7 +17,7 @@ I can't see tweets, accounts, or even the main page without being logged in :
 
 I won't wait for my answer ...
 
-But if it stays that way ... I don't think I won't even "post links" there.
+But if it stays that way ... I don't think I won't even post "post links" there.
 
 ## Reason 2 > I like seeing if people click on my links
 
