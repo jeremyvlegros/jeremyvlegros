@@ -25,13 +25,10 @@ Yep, the only reason I will use `linkt.ree` is ego boosting.
 
 ## Reason 3 > Contrasting my website and the outside web
 
-Surfing the web has become paddling in an ocean of ads, searching for the "do no accept cookies" :
+Surfing the web has become paddling in an ocean of ads, videos popping, playing, with hidden controls ..., windows popping out and requiring to find where the closing button is (left, right, button okay ? button dismiss ?), searching for the "do no accept cookies" :
 - written discreetly
 - opening cookie settings and un-toggling 10 elements to refuse cookies, because there are no "refuse all"
-- videos popping, playing, with hidden controls ...
-
-windows popping out and requiring to find where the closing button is (left, right, button okay ? button dismiss ?).
-
+  
 I will contribute to the web ~~personal data exploitation~~ personalized experience, to contrast with my website.
 
 ## Reason 4 > Blending in ?
