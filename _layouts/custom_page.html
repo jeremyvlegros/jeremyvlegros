@@ -270,7 +270,8 @@ I won't calculate the seconds ... for now ?
 <!-- setting color if null -->
 {% if page_image_color == null %}
     <!-- the day for image color : {{date_for_image_color}} -->
-    {% assign page_color_background = date_for_image_color %}
+    {% assign page_image_color = date_for_image_color %}
+
 {% endif %}
 
 {% case page_image_color %}
