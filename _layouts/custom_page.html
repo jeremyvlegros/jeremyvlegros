@@ -340,7 +340,7 @@ I won't calculate the seconds ... for now ?
 
 {% endcase %}
 
-
+<!-- page image color : {{page_image_color}}-->
 <!-- END LIQUID -->
 
 <!DOCTYPE html>
@@ -398,7 +398,7 @@ I won't calculate the seconds ... for now ?
           content="{{site_name}}"/>
     {% endif %}
 
-    {% if image_color %}
+    {% if page_image_color %}
     <meta name='og:image'
           content='{{page_image_color}}'/>
     {% endif %}
@@ -413,7 +413,7 @@ I won't calculate the seconds ... for now ?
           content="{{page_title}}"/>
     {% endif %}
 
-    {% if image_color %}
+    {% if page_image_color %}
     <meta name='twitter:image'
           content='{{page_image_color}}'/>
     {% endif %}
