@@ -1,40 +1,488 @@
 ---
-date_of_creation     : null
-date_of_modification : null
-post_color : ""
+title                    : null
+content_description      : null
+date_of_creation         : null
+date_of_modification     : null
+color_background         : null
+category                 : null
+tags                     : null
+image_color              : null
+type                     : null
 ---
+<!-- #date 2023-07-01 15:46 1688211969466205261 GMT -->
+
+<!-- LIQUID -->
+
+<!--   DECLARATION -->
+
+{% assign page_title                    = page.title %}
+{% assign page_tags                     = page.tags %}
+{% assign page_url                      = page.url %}
+{% assign page_category                 = page.category %}
+{% assign page_content_description      = page.content_description %}
+{% assign page_color_background         = page.color_background %}
+{% assign page_type                     = page.type %}
+{% assign page_image_color              = page.image_color %}
+{% assign date_of_creation              = page.date_of_creation %}
+{% assign date_of_modification          = page.date_of_modification %}
+{% assign site_name                     = site.name %}
+
+<!-- handling empty strings
+-->
+
+{% if page_title == "" %}
+{% assign page_title = null %}
+{% endif %}
+
+{% if page_tags == "" %}
+{% assign page_tags = null %}
+{% endif %}
+
+{% if page_url == "" %}
+{% assign page_url = null %}
+{% endif %}
+
+{% if page_category == "" %}
+{% assign page_category = null %}
+{% endif %}
+
+{% if page_content_description == "" %}
+{% assign page_content_description = null %}
+{% endif %}
+
+{% if page_color_background == "" %}
+{% assign page_color_background = null %}
+{% endif %}
+
+{% if page_type == "" %}
+{% assign page_type = null %}
+{% endif %}
+
+{% if page_image_color == "" %}
+{% assign page_image_color = null %}
+{% endif %}
+
+{% if date_of_creation == "" %}
+{% assign date_of_creation = null %}
+{% endif %}
+
+{% if date_of_modification == "" %}
+{% assign date_of_modification = null %}
+{% endif %}
+
+{% if site_name == "" %}
+{% assign site_name = null %}
+{% endif %}
+
+
+
+<!--   INITILISATION -->
+
+<!-- TITLE
+-->
+{% if page_title %}
+{% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
+{% endif %}
+
+<!-- PAGE URL
+-->
+{% if site_name %}
+{% assign page_url = site.url | append :"/" | append : site_name | append : page.url %}
+{% endif %}
+
+<!-- PROCESSING
+ -->
+
+
+<!-- DATE OF CREATION
+ -->
+{% if date_of_creation %}
+
+<!-- input                        = "#date 2023-06-28 05:16 1687914994970097614 GMT"
+     output                       =        "2023-06-28T05:16:00+00:00"
+
+-->
+
+<!-- removing "#date " and " GMT"
+                                 => "2023-06-28 05:16 1687914994970097614"
+-->
+{% assign date_of_creation       =  date_of_creation     | replace : "#date ","" | replace " GMT",""%}
+
+<!-- split date in array
+                                => "[2023-06-28, 05:16, 1687914994970097614]"
+-->
+{% assign date_of_creation      =  date_of_creation     | split:" "%}
+
+<!-- getting time
+                                => 05:16
+-->
+
+{% assign time_of_creation      =  date_of_creation[1]    %}
+
+<!-- getting day of creation for colors -->
+{% assign date_for_image_color  =  date_of_creation[0] %}
+
+<!-- hour with seconds and Time difference
+I won't calculate the seconds ... for now ?
+                               => "05:16:00+00:00"
+-->
+
+{% assign time_of_creation     =  time_of_creation     | append :":00+00:00" %}
+
+<!-- adding 'T' and hour to date
+                               => "2023-06-28T05:16:00+00:00"
+-->
+<!--                               2023-06-28                          T             05:16:00+00:00
+-->
+{% assign date_of_creation      =  date_of_creation[0]     | append : "T" | append : time_of_creation %}
+
+{% endif %}
+
+<!-- DATE OF MODIFICATION
+ -->
+{% if date_of_modification %}
+
+<!-- input                        = "#date 2023-06-28 05:16 1687914994970097614 GMT"
+     output                       =       "2023-06-28T05:16:00+00:00"
+
+-->
+
+<!-- removing "#date " and " GMT"
+                                 => "2023-06-28 05:16 1687914994970097614"
+-->
+{% assign date_of_modification   =  date_of_modification     | replace : "#date ","" | replace " GMT",""%}
+
+<!-- split date in array
+                                 => "[2023-06-28, 05:16, 1687914994970097614]"
+-->
+{% assign date_of_modification   =  date_of_modification     | split:" "%}
+
+<!-- getting time
+                                => 05:16
+-->
+
+{% assign time_of_modification   =  date_of_modification[1]    %}
+
+<!-- hour with seconds and Time difference
+I won't calculate the seconds ... for now ?
+                                => "05:16:00+00:00"
+-->
+
+{% assign time_of_modification   =  time_of_modification     | append :":00+00:00" %}
+
+<!-- adding 'T' and hour to date
+                               => "2023-06-28T05:16:00+00:00"
+-->
+<!--                               2023-06-28                          T             05:16:00+00:00
+-->
+{% assign date_of_modification  =  date_of_modification[0]     | append : "T" | append : time_of_creation%}
+
+{% endif %}
+
+
+<!-- DATE FOR IMAGE COLOR
+-->
+
+{% assign date_for_image_color = date_for_image_color | split : '-' %}
+<!-- getting the day -->
+{% assign date_for_image_color = date_for_image_color[2] %}
+
+
+<!-- CONTENT BACKGROUND COLOR
+-->
+
+<!-- setting color if null -->
+{% if page_color_background == null %}
+
+{% comment %} <!-- the day for the color : {{date_for_image_color}} --> {% endcomment %}
+
+{% assign page_color_background = date_for_image_color %}
+
+{% endif %}
+
+{% case page_color_background %}
+    {% when 1,"1" %}
+    {% assign page_color_background = "color_background_1" %}
+    {% when 2,"2" %}
+    {% assign page_color_background = "color_background_2" %}
+    {% when 3,"3" %}
+    {% assign page_color_background = "color_background_3" %}
+    {% when 4,"4" %}
+    {% assign page_color_background = "color_background_4" %}
+    {% when 5,"5" %}
+    {% assign page_color_background = "color_background_5" %}
+    {% when 6,"6" %}
+    {% assign page_color_background = "color_background_6" %}
+    {% when 7,"7" %}
+    {% assign page_color_background = "color_background_7" %}
+    {% when 8,"8" %}
+    {% assign page_color_background = "color_background_8" %}
+    {% when 9,"9" %}
+    {% assign page_color_background = "color_background_9" %}
+    {% when 10,"10" %}
+    {% assign page_color_background = "color_background_10" %}
+    {% when 11,"11" %}
+    {% assign page_color_background = "color_background_11" %}
+    {% when 12,"12" %}
+    {% assign page_color_background = "color_background_12" %}
+    {% when 13,"13" %}
+    {% assign page_color_background = "color_background_13" %}
+    {% when 14,"14" %}
+    {% assign page_color_background = "color_background_14" %}
+    {% when 15,"15" %}
+    {% assign page_color_background = "color_background_15" %}
+    {% when 16,"16" %}
+    {% assign page_color_background = "color_background_16" %}
+    {% when 17,"17" %}
+    {% assign page_color_background = "color_background_17" %}
+    {% when 18,"18" %}
+    {% assign page_color_background = "color_background_18" %}
+    {% when 19,"19" %}
+    {% assign page_color_background = "color_background_19" %}
+    {% when 20,"20" %}
+    {% assign page_color_background = "color_background_20" %}
+    {% when 21,"21" %}
+    {% assign page_color_background = "color_background_21" %}
+    {% when 22,"22" %}
+    {% assign page_color_background = "color_background_22" %}
+    {% when 23,"23" %}
+    {% assign page_color_background = "color_background_23" %}
+    {% when 24,"24" %}
+    {% assign page_color_background = "color_background_24" %}
+    {% when 25,"25" %}
+    {% assign page_color_background = "color_background_25" %}
+    {% when 26,"26" %}
+    {% assign page_color_background = "color_background_26" %}
+    {% when 27,"27" %}
+    {% assign page_color_background = "color_background_27" %}
+    {% when 28,"28" %}
+    {% assign page_color_background = "color_background_28" %}
+    {% when 29,"29" %}
+    {% assign page_color_background = "color_background_29" %}
+    {% when 30,"30" %}
+    {% assign page_color_background = "color_background_30" %}
+    {% when 31,"31" %}
+    {% assign page_color_background = "color_background_31" %}
+{% endcase %}
+
+
+
+
+<!-- IMAGE COLOR
+-->
+
+<!-- setting color if null -->
+{% if page_image_color == null %}
+
+{% comment %} <!-- the day for image color : {{date_for_image_color}} --> {% endcomment %}
+
+{% assign page_image_color = date_for_image_color %}
+
+{% endif %}
+
+{% case page_image_color %}
+    {% when 1,"1" %}
+    {% assign page_image_color = "https://i.imgur.com/BpwYECq.png" %}
+    {% when 2,"2" %}
+    {% assign page_image_color = "https://i.imgur.com/UNPogEC.png"  %}
+    {% when 3,"3" %}
+    {% assign page_image_color = "https://i.imgur.com/WeQ9pUI.png"  %}
+    {% when 4,"4" %}
+    {% assign page_image_color = "https://i.imgur.com/rwMJzJY.png"  %}
+    {% when 5,"5" %}
+    {% assign page_image_color = "https://i.imgur.com/y4GOWP8.png" %}
+    {% when 6,"6" %}
+    {% assign page_image_color = "https://i.imgur.com/XmCbs0H.png"  %}
+    {% when 7,"7" %}
+    {% assign page_image_color = "https://i.imgur.com/Oc2vg4j.png"  %}
+    {% when 8,"8" %}
+    {% assign page_image_color = "https://i.imgur.com/1LxHBZo.png" %}
+    {% when 9,"9" %}
+    {% assign page_image_color = "https://i.imgur.com/A74C7te.png"  %}
+    {% when 10,"10" %}
+    {% assign page_image_color = "https://i.imgur.com/ld3Y0ZH.png" %}
+    {% when 11,"11" %}
+    {% assign page_image_color = "https://i.imgur.com/vE1poN2.png" %}
+    {% when 12,"12" %}
+    {% assign page_image_color = "https://i.imgur.com/6H0pWyd.png"  %}
+    {% when 13,"13" %}
+    {% assign page_image_color = "https://i.imgur.com/H426FqL.png"  %}
+    {% when 14,"14" %}
+    {% assign page_image_color = "https://i.imgur.com/rvT3aBX.png" %}
+    {% when 15,"15" %}
+    {% assign page_image_color = "https://i.imgur.com/NzqdErY.png"  %}
+    {% when 16,"16" %}
+    {% assign page_image_color = "https://i.imgur.com/XRItiBv.png"  %}
+    {% when 17,"17" %}
+    {% assign page_image_color = "https://i.imgur.com/EFiyrR0.png"  %}
+    {% when 18,"18" %}
+    {% assign page_image_color = "https://i.imgur.com/HlEsCy0.png" %}
+    {% when 19,"19" %}
+    {% assign page_image_color = "https://i.imgur.com/NoDA2YL.png" %}
+    {% when 20,"20" %}
+    {% assign page_image_color = "https://i.imgur.com/LZTjWOv.png" %}
+    {% when 21,"21" %}
+    {% assign page_image_color = "https://i.imgur.com/t4trRjd.png" %}
+    {% when 22,"22" %}
+    {% assign page_image_color = "https://i.imgur.com/PWIooMi.png" %}
+    {% when 23,"23" %}
+    {% assign page_image_color = "https://i.imgur.com/Sp0JMH7.png"  %}
+    {% when 24,"24" %}
+    {% assign page_image_color = "https://i.imgur.com/iyKhqH3.png" %}
+    {% when 25,"25" %}
+    {% assign page_image_color = "https://i.imgur.com/dSz3lXU.png" %}
+    {% when 26,"26" %}
+    {% assign page_image_color = "https://i.imgur.com/1S9qN2X.png" %}
+    {% when 27,"27" %}
+    {% assign page_image_color = "https://i.imgur.com/C3KnBzl.png" %}
+    {% when 28,"28" %}
+    {% assign page_image_color = "https://i.imgur.com/kPf02Ou.png" %}
+    {% when 29,"29" %}
+    {% assign page_image_color = "https://i.imgur.com/uDvk9ZQ.png" %}
+    {% when 30,"30" %}
+    {% assign page_image_color = "https://i.imgur.com/GomogEH.png" %}
+    {% when 31,"31" %}
+    {% assign page_image_color = "https://i.imgur.com/0VgppgF.png" %}
+
+{% endcase %}
+
+
+<!-- page image color : {{page_image_color}}-->
+<!-- END LIQUID -->
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<!--suppress ALL -->
+<html lang="en'">
 
-  {%- include head.html -%}
+<head>
 
-  <body>
-    
-    <main class="page-content" aria-label="Content">
-      
-      <article class="post {{page.post_color}}" itemscope itemtype="http://schema.org/BlogPosting">
-        
-        <header class="post-header">
-          <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <!-- META COMMON -->
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    {% if date_of_creation %}
+    <meta property="article:published_time"
+          content="{{date_of_creation}}"/>
+    {% endif %}
+
+    {% if page_content_description %}
+    <meta name="description"
+          content="{{page_content_description}}"/>
+    {% endif %}
+
+    <!--  META OPEN GRAPH  -->
+    {% if page_type %}
+    <meta property="og:type"
+          content="{{page_type}}"/>
+    {% endif %}
+
+    <meta property="og:locale"
+          content="en_US"/>
+
+    {% if page_title %}
+    <meta property="og:title"
+          content="{{page_title}}"/>
+    {% endif %}
+
+    {% if page_content_description %}
+    <meta property="og:description"
+          content="{{page_content_description}}"/>
+    {% endif %}
+
+    {% if page_url %}
+    <meta property="og:url"
+          content="{{page_url}}"/>
+    {% endif %}
+
+    {% if site_name %}
+    <meta property="og:site_name"
+          content="{{site_name}}"/>
+    {% endif %}
+
+    {% if page_image_color %}
+    <meta name='og:image'
+          content='{{page_image_color}}'/>
+    {% endif %}
+
+    <!--  META TWITTER  -->
+
+    <meta name="twitter:card"
+          content="summary"/>
+
+    {% if page_title %}
+    <meta property="twitter:title"
+          content="{{page_title}}"/>
+    {% endif %}
+
+    {% if page_image_color %}
+    <meta name='twitter:image'
+          content='{{page_image_color}}'/>
+    {% endif %}
+
+    <!--  LINK CANONICAL -->
+
+    <!--suppress HtmlUnknownTarget -->
+    {% if page_url %}
+    <link rel="canonical"
+          href="{{page_url}}"/>
+    {% endif %}
+
+    <!--  STYLE SHEET -->
+
+    <link rel="stylesheet"
+          href="{{ '/assets/main.css' | relative_url }}">
+
+    <!--  PAGE TITLE -->
+
+    {% if page_title %}
+    <title>{{page_title}}</title>
+    {% endif %}}
+
+</head>
+
+<body>
+
+<main class="page-content" aria-label="Content">
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header {{page_color_background}}">
+
+            {% if page_title %}
+            <h1 class="post-title" itemprop="name headline">
+                {{ page_title }}
+            </h1>
+            {% endif %}
+
         </header>
-      
+
         <div class="post-content" itemprop="articleBody">
-          {{ content }}
-          {% if page.date_of_creation %}
-          <span class='date date_of_creation'>Created&nbsp;&nbsp;: {{ page.date_of_creation }} </span>
-          {% endif %}
-          
-          <br>  
-          {% if page.date_of_modification %}
-          <span class="date date_of_modification">Modified&nbsp;: {{ page.date_of_modification }} </span>
-          {% endif %}
+
+            {{ content }}
+
+            <br>
+
+            {% if page.date_of_creation %}
+            <span class='date date_of_creation'>    Created&nbsp;&nbsp;: {{ page.date_of_creation }} </span>
+            {% endif %}
+
+            <br>
+
+            {% if page.date_of_modification %}
+            <span class="date date_of_modification">Modified&nbsp;: {{ page.date_of_modification }} </span>
+            {% endif %}
         </div>
-        
-      </article>
-      
-    </main>
-    
-  </body>
+
+    </article>
+
+</main>
+
+</body>
 
 </html>
