@@ -9,6 +9,7 @@ tags                     : null
 image_color              : null
 type                     : null
 ---
+<!-- #date 2023-07-01 15:05 1688209534142712379 GMT -->
 
 <!-- LIQUID -->
 
@@ -192,8 +193,11 @@ I won't calculate the seconds ... for now ?
 
 <!-- setting color if null -->
 {% if page_color_background == null %}
-    <!-- the day for the color : {{date_for_image_color}} -->
-    {% assign page_color_background = date_for_image_color %}
+
+{% comment %} <!-- the day for the color : {{date_for_image_color}} --> {% endcomment %}
+
+{% assign page_color_background = date_for_image_color %}
+
 {% endif %}
 
 {% case page_color_background %}
@@ -269,8 +273,10 @@ I won't calculate the seconds ... for now ?
 
 <!-- setting color if null -->
 {% if page_image_color == null %}
-    <!-- the day for image color : {{date_for_image_color}} -->
-    {% assign page_image_color = date_for_image_color %}
+
+{% comment %} <!-- the day for image color : {{date_for_image_color}} --> {% endcomment %}
+
+{% assign page_image_color = date_for_image_color %}
 
 {% endif %}
 
@@ -339,6 +345,7 @@ I won't calculate the seconds ... for now ?
     {% assign page_image_color = "https://i.imgur.com/0VgppgF.png" %}
 
 {% endcase %}
+
 
 <!-- page image color : {{page_image_color}}-->
 <!-- END LIQUID -->
