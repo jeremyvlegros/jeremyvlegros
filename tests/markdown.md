@@ -1,6 +1,6 @@
 ---
 title : "test Markdown"
-layout : test
+layout : post
 date_of_creation : "XXX"
 date_of_modification : "YYYY"
 ---
