@@ -1,4 +1,4 @@
-/*#date 2023-06-29 15:15 1688037325972361780 GMT*/
+/*#date 2023-07-01 15:40 1688211645308289757 GMT*/
 
 :root
 {
@@ -58,12 +58,14 @@
 
   /* @post */
   --color_text_post                     : white;
-  --color_text_post_title               : hsl(222, 18%, 0%);
+  /*--color_text_post_title               : hsl(222, 18%, 0%);*/
+  --color_text_post_title               : white;
   --color_background_post_header        : hsl(4, 7%, 95%);
   --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
   --color_background_post_content       : hsl(9, 50%, 50%);
   --color_background_post_button        : rgba(255, 255, 255, .3);
   --color_text_post_button              : white;
+  --color_post_shadow                   : #111;
 
   /* @timeline */
   --color_background_side_index         : hsla(9, 0%, 0%, 0.5);

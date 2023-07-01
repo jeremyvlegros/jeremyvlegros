@@ -1,4 +1,4 @@
-/*#date 2023-06-29 17:13 1688044424326931555 GMT*/
+/* #date 2023-07-01 15:40 1688211645308289757 GMT */
 
 :root
 {
@@ -27,7 +27,7 @@
   /*border: 1 px solid #000;*/
   /*border-radius: var(--post_border_radius);*/
   border-radius    : var(--post_border_radius) var(--post_border_radius) var(--post_border_radius) var(--post_border_radius);
-  box-shadow       : 5px 1px 0 1px #333, 5px 7px 1px 1px #333;
+  box-shadow       : 5px 1px 0 1px var(--color_post_shadow), 5px 7px 1px 1px var(--color_post_shadow);
   background-color : var(--color_background_post_content); /* temporary */
   border-top       : 1px solid #222;
   /*overflow-inline: scroll; can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set*/
