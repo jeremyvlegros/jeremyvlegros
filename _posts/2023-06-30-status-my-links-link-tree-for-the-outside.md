@@ -1,7 +1,8 @@
 ---
 title                : "status > my links > `linkt.ree` for the outside"
 layout               : post
-date_of_creation     : "#date 2023-07-01 13:03 1688202192499350209 GMT"
+date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
+date_of_modification : "#date 2023-07-01 13:03 1688202192499350209 GMT"
 post_color           : "30"
 ---
 
