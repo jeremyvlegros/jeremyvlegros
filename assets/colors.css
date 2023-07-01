@@ -1,4 +1,4 @@
-/*#date 2023-07-01 15:40 1688211645308289757 GMT*/
+/*#date 2023-07-01 16:00 1688212846352717159 GMT*/
 
 :root
 {
@@ -62,7 +62,7 @@
   --color_text_post_title               : white;
   --color_background_post_header        : hsl(4, 7%, 95%);
   --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
-  --color_background_post_content       : hsl(9, 50%, 50%);
+  --color_background_post_content       : #222;
   --color_background_post_button        : rgba(255, 255, 255, .3);
   --color_text_post_button              : white;
   --color_post_shadow                   : #111;
