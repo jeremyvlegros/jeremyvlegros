@@ -1,23 +1,20 @@
 ---
 title                : "status > my links > `linkt.ree` for the outside"
 layout               : post
-date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
-color_background     : "30"
+date_of_creation     : "#date 2023-07-01 13:03 1688202192499350209 GMT"
+post_color           : "30"
 ---
-
-I decided to use `Linktr.ee` for links that are hosted outside of this website.
 
 ## Reason 1 > `Twitter` closed on itself ?
 
 I can't see tweets, accounts, or even the main page without being logged in :
-- I don't know if it is only me
 - I don't know if it is temporary
 - what's the point of `Twitter` if it becomes accessible only to `Twitter` users ...
 - It makes even less sense for advertisements, it limits them to `Twitter` users ... isn't this counter productive ?
 
 I won't wait for my answer ...
 
-But if it stays that way ... I don't think I won't even post "post links" there.
+But if it stays that way ... I don't think I won't even post "post links" there, it will just be work ...
 
 ## Reason 2 > I like seeing if people click on my links
 
