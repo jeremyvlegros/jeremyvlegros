@@ -1,7 +1,7 @@
 ---
-title : about
+title : README
 layout : post
-date_of_modification : "#date 2023-06-26 0419 1687738791835322665 GMT"
+date_of_modification : "#date 2023-07-01 18:39 1688222355202950078 GMT"
 ---
 ## Author
 
@@ -13,27 +13,9 @@ I, Jeremy Legros, keep ownership of things I write.
 
 If you use this repository, you use it at your own risks.
 
-The MIT `Minima` code license is not included in the directory because :
-- there are no substantial portion of codes
-- the theme is loaded from `GitHub`
+I constructed the website from the `Minima` template and now has removed it.
+The remaining similarities are mostly file names, there are no substantial portion of codes therefore I won't mention include The MIT LICENCE
 
 The `Dracula` `CSS` theme :
 - is licensed
-- the `CSS` contains the MIT license header
-
-## I modded the `Minima` theme extensively
-
-This repository is not a good example of a custom `Minima` theme.
-
-As for the why :
-- I ~~had my share of~~ have to search, find, then read lots of documentation
-- keeping some independence :
-  - if `GitHub` stops using `Jekyll`
-  - if I need to migrate the website
-  - dependencies are a serious problem, it wastes a lot of my time :
-    - maintenance × documentation
-    - modified dependencies not stated as modified
-    - dependencies that are not stated as dependencies in the documentation
-    - dependent documentation forwarding to the dependency documentation
-- I know my code, I can modify it
-- paradoxically, to have a minimal theme
+- the `CSS` contains the MIT license
