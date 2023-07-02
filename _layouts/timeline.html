@@ -11,7 +11,7 @@ layout : base
 
 
   <ul class="post-list">
-  {% assign posts  = site.posts %}  
+  {% assign posts  = site.posts %}
   {%- for post in posts -%}
         <li>
         	<!-- LIQUID -->
@@ -223,9 +223,9 @@ layout : base
           {% endcase %}
 
 
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="post {{post_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
 
-          <header class="post-header {{post_color_background}}">
+          <header class="post-header">
 
               {% if post_title %}
               <h1 class="post-title" itemprop="name headline">
@@ -274,4 +274,3 @@ layout : base
     </div>
 
 </div>
-
