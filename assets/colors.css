@@ -1,6 +1,4 @@
-/*#date 2023-07-02 13:48 1688291283639208485 GMT*/
-
-
+/*#date 2023-07-02 15:58 1688299101863932192 GMT*/
 :root
 {
   --color_background                    : hsl(4, 7%, 69%);
@@ -66,6 +64,12 @@
   --color_background_post_button        : rgba(255, 255, 255, .3);
   --color_text_post_button              : white;
   --color_post_shadow                   : #111;
+  --opacity_border_post_h2              : 0.7;
+  --opacity_border_post_h3              : 0.6;
+  --opacity_border_post_h4              : 0.5;
+  --opacity_border_post_h5              : 0.4;
+  --opacity_border_post_h6              : 0.3;
+
 
   /* @timeline */
   --color_background_side_index         : hsla(9, 0%, 0%, 0.5);
