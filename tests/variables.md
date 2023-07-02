@@ -199,7 +199,7 @@ POST URL : `{{post.url}}`
 
 "Dummy > something > something" : 
 
-- value                         : `{{ "Dummy > something > something" | slugify}}`
+- value                         : {{ "Dummy > something > something" | slugify }}
 - expecting something like this : `dummy--something--something`
 
 ## `case` instruction
