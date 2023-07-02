@@ -11,202 +11,202 @@ type                        : null
 boolean_remove_bootstrap    : null
 ---
 
-{% comment %}
+{%- comment -%}
 <!-- LIQUID -->
 
 <!--   DECLARATION -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% assign page_title                    = page.title %}
-{% assign page_tags                     = page.tags %}
-{% assign page_url                      = page.url %}
-{% assign page_category                 = page.category %}
-{% assign page_content_description      = page.content_description %}
-{% assign page_color_background         = page.color_background %}
-{% assign page_type                     = page.type %}
-{% assign page_image_color              = page.image_color %}
-{% assign date_of_creation              = page.date_of_creation %}
-{% assign date_of_modification          = page.date_of_modification %}
-{% assign site_name                     = site.name %}
-{% assign page_remove_bootstrap         = page.boolean_remove_bootstrap %}
+{%- assign page_title                    = page.title -%}
+{%- assign page_tags                     = page.tags -%}
+{%- assign page_url                      = page.url -%}
+{%- assign page_category                 = page.category -%}
+{%- assign page_content_description      = page.content_description -%}
+{%- assign page_color_background         = page.color_background -%}
+{%- assign page_type                     = page.type -%}
+{%- assign page_image_color              = page.image_color -%}
+{%- assign date_of_creation              = page.date_of_creation -%}
+{%- assign date_of_modification          = page.date_of_modification -%}
+{%- assign site_name                     = site.name -%}
+{%- assign page_remove_bootstrap         = page.boolean_remove_bootstrap -%}
 
 
-{% comment %}
+{%- comment -%}
 <!-- handling empty strings
 -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% if page_title == "" %}
-{% assign page_title = null %}
-{% endif %}
+{%- if page_title == "" -%}
+{%- assign page_title = null -%}
+{%- endif -%}
 
-{% if page_tags == "" %}
-{% assign page_tags = null %}
-{% endif %}
+{%- if page_tags == "" -%}
+{%- assign page_tags = null -%}
+{%- endif -%}
 
-{% if page_url == "" %}
-{% assign page_url = null %}
-{% endif %}
+{%- if page_url == "" -%}
+{%- assign page_url = null -%}
+{%- endif -%}
 
-{% if page_category == "" %}
-{% assign page_category = null %}
-{% endif %}
+{%- if page_category == "" -%}
+{%- assign page_category = null -%}
+{%- endif -%}
 
-{% if page_content_description == "" %}
-{% assign page_content_description = null %}
-{% endif %}
+{%- if page_content_description == "" -%}
+{%- assign page_content_description = null -%}
+{%- endif -%}
 
-{% if page_color_background == "" %}
-{% assign page_color_background = null %}
-{% endif %}
+{%- if page_color_background == "" -%}
+{%- assign page_color_background = null -%}
+{%- endif -%}
 
-{% if page_type == "" %}
-{% assign page_type = null %}
-{% endif %}
+{%- if page_type == "" -%}
+{%- assign page_type = null -%}
+{%- endif -%}
 
-{% if page_image_color == "" %}
-{% assign page_image_color = null %}
-{% endif %}
+{%- if page_image_color == "" -%}
+{%- assign page_image_color = null -%}
+{%- endif -%}
 
-{% if date_of_creation == "" %}
-{% assign date_of_creation = null %}
-{% endif %}
+{%- if date_of_creation == "" -%}
+{%- assign date_of_creation = null -%}
+{%- endif -%}
 
-{% if date_of_modification == "" %}
-{% assign date_of_modification = null %}
-{% endif %}
+{%- if date_of_modification == "" -%}
+{%- assign date_of_modification = null -%}
+{%- endif -%}
 
-{% if site_name == "" %}
-{% assign site_name = null %}
-{% endif %}
+{%- if site_name == "" -%}
+{%- assign site_name = null -%}
+{%- endif -%}
 
 
-{% if page_remove_bootstrap == "" %}
+{%- if page_remove_bootstrap == "" -%}
 page_remove_bootstrap == null
-{% endif %}
+{%- endif -%}
 
-{% comment %}
+{%- comment -%}
 <!--   INITILISATION -->
 
 <!-- TITLE
 -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% if page_title %}
-{% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
-{% endif %}
+{%- if page_title -%}
+{%- assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
+{%- endif -%}
 
 <!-- PAGE URL
 -->
-{% if site_name %}
-{% assign page_url = site.url | append :"/" | append : site_name | append : page.url %}
-{% endif %}
+{%- if site_name -%}
+{%- assign page_url = site.url | append :"/" | append : site_name | append : page.url -%}
+{%- endif -%}
 
-{% comment %}
+{%- comment -%}
 <!-- PROCESSING
  -->
 
 <!-- DATE OF CREATION
  -->
-{% endcomment %}
-{% if date_of_creation %}
+{%- endcomment -%}
+{%- if date_of_creation -%}
 
-{% comment %}
+{%- comment -%}
 <!-- removing "#date " and " GMT"
                                  => "2023-06-28 05:16 1687914994970097614"
 -->
-{% endcomment %}
-{% assign date_of_creation       =  date_of_creation     | replace : "#date ","" | replace " GMT",""%}
+{%- endcomment -%}
+{%- assign date_of_creation       =  date_of_creation     | replace : "#date ","" | replace " GMT",""%}
 
-{% comment %}
+{%- comment -%}
 <!-- split date in array
                                 => "[2023-06-28, 05:16, 1687914994970097614]"
 -->
-{% endcomment %}
-{% assign date_of_creation      =  date_of_creation     | split:" "%}
+{%- endcomment -%}
+{%- assign date_of_creation      =  date_of_creation     | split:" "%}
 
-{% comment %}
-{% comment %}
+{%- comment -%}
+{%- comment -%}
 <!-- getting time
                                 => 05:16
 -->
-{% endcomment %}
-{% endcomment %}
+{%- endcomment -%}
+{%- endcomment -%}
 
-{% assign time_of_creation      =  date_of_creation[1]    %}
+{%- assign time_of_creation      =  date_of_creation[1]    -%}
 
-{% comment %}
+{%- comment -%}
 <!-- getting day of creation for colors -->
-{% endcomment %}
-{% assign date_for_image_color  =  date_of_creation[0] %}
+{%- endcomment -%}
+{%- assign date_for_image_color  =  date_of_creation[0] -%}
 
-{% comment %}
+{%- comment -%}
 <!-- hour with seconds and Time difference
 I won't calculate the seconds ... for now ?
                                => "05:16:00+00:00"
 -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% assign time_of_creation     =  time_of_creation     | append :":00+00:00" %}
+{%- assign time_of_creation     =  time_of_creation     | append :":00+00:00" -%}
 
-{% comment %}
+{%- comment -%}
 <!-- adding 'T' and hour to date
                                => "2023-06-28T05:16:00+00:00"
 -->
 <!--                               2023-06-28                          T             05:16:00+00:00
 -->
-{% endcomment %}
-{% assign date_of_creation      =  date_of_creation[0]     | append : "T" | append : time_of_creation %}
+{%- endcomment -%}
+{%- assign date_of_creation      =  date_of_creation[0]     | append : "T" | append : time_of_creation -%}
 
-{% endif %}
+{%- endif -%}
 
-{% comment %}
+{%- comment -%}
 <!-- DATE OF MODIFICATION
  -->
-{% endcomment %}
-{% if date_of_modification %}
+{%- endcomment -%}
+{%- if date_of_modification -%}
 
-{% comment %}
+{%- comment -%}
 <!-- removing "#date " and " GMT"
                                  => "2023-06-28 05:16 1687914994970097614"
 -->
-{% endcomment %}
-{% assign date_of_modification   =  date_of_modification     | replace : "#date ","" | replace " GMT",""%}
+{%- endcomment -%}
+{%- assign date_of_modification   =  date_of_modification     | replace : "#date ","" | replace " GMT",""%}
 
-{% comment %}
+{%- comment -%}
 <!-- split date in array
                                  => "[2023-06-28, 05:16, 1687914994970097614]"
 -->
-{% endcomment %}
-{% assign date_of_modification   =  date_of_modification     | split:" "%}
+{%- endcomment -%}
+{%- assign date_of_modification   =  date_of_modification     | split:" "%}
 
-{% comment %}
+{%- comment -%}
 <!-- getting time
                                 => 05:16
 -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% assign time_of_modification   =  date_of_modification[1]    %}
+{%- assign time_of_modification   =  date_of_modification[1]    -%}
 
-{% comment %}
+{%- comment -%}
 <!-- hour with seconds and Time difference
 I won't calculate the seconds ... for now ?
                                 => "05:16:00+00:00"
 -->
-{% endcomment %}
+{%- endcomment -%}
 
-{% assign time_of_modification   =  time_of_modification     | append :":00+00:00" %}
+{%- assign time_of_modification   =  time_of_modification     | append :":00+00:00" -%}
 
-{% comment %}
+{%- comment -%}
 <!-- adding 'T' and hour to date
                                => "2023-06-28T05:16:00+00:00"
 -->
 <!--                               2023-06-28                          T             05:16:00+00:00
 -->
-{% endcomment %}
-{% assign date_of_modification  =  date_of_modification[0]     | append : "T" | append : time_of_creation%}
+{%- endcomment -%}
+{%- assign date_of_modification  =  date_of_modification[0]     | append : "T" | append : time_of_creation%}
 
-{% endif %}
+{%- endif -%}
 
 
 <!DOCTYPE html>
@@ -215,9 +215,9 @@ I won't calculate the seconds ... for now ?
 
 <head>
 
-    {% comment %}
+    {%- comment -%}
     <!-- META COMMON -->
-    {% endcomment %}
+    {%- endcomment -%}
 
     <meta charset="utf-8">
 
@@ -227,102 +227,99 @@ I won't calculate the seconds ... for now ?
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
 
-    {% if date_of_creation %}
+    {%- if date_of_creation -%}
     <meta property="article:published_time"
           content="{{date_of_creation}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% if page_content_description %}
+    {%- if page_content_description -%}
     <meta name="description"
           content="{{page_content_description}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% comment %}
+    {%- comment -%}
     <!--  META OPEN GRAPH  -->
-    {% endcomment %}
+    {%- endcomment -%}
 
-    {% if page_type %}
+    {%- if page_type -%}
     <meta property="og:type"
           content="{{page_type}}"/>
-    {% endif %}
+    {%- endif -%}
 
     <meta property="og:locale"
           content="en_US"/>
 
-    {% if page_title %}
+    {%- if page_title -%}
     <meta property="og:title"
           content="{{page_title}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% if page_content_description %}
+    {%- if page_content_description -%}
     <meta property="og:description"
           content="{{page_content_description}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% if page_url %}
+    {%- if page_url -%}
     <meta property="og:url"
           content="{{page_url}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% if site_name %}
+    {%- if site_name -%}
     <meta property="og:site_name"
           content="{{site_name}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% comment %}
+    {%- comment -%}
     <!--  META TWITTER  -->
-    {% endcomment %}
+    {%- endcomment -%}
 
     <meta name="twitter:card"
           content="summary"/>
 
-    {% if page_title %}
+    {%- if page_title -%}
     <meta property="twitter:title"
           content="{{page_title}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% comment %}
+    {%- comment -%}
     <!--  LINK CANONICAL -->
-    {% endcomment %}
+    {%- endcomment -%}
 
     <!--suppress HtmlUnknownTarget -->
-    {% if page_url %}
+    {%- if page_url -%}
     <link rel="canonical"
           href="{{page_url}}"/>
-    {% endif %}
+    {%- endif -%}
 
-    {% comment %}
+    {%- comment -%}
     <!--  STYLE SHEETS -->
-    {% endcomment %}
+    {%- endcomment -%}
 
-    {% comment %}
+    {%- comment -%}
     <!--  BOOTCAMP -->
-    {% endcomment %}
+    {%- endcomment -%}
 
-    {% unless page_remove_bootstrap %}
+    {%- unless page_remove_bootstrap -%}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    {% endunless %}
+    {%- endunless -%}
 
     <link rel="stylesheet"
           href="{{ '/assets/main.css' | relative_url }}">
 
-    {% comment %}
+    {%- comment -%}
     <!--  PAGE TITLE -->
-    {% endcomment %}
+    {%- endcomment -%}
 
-    {% if page_title %}
+    {%- if page_title -%}
     <title>{{page_title}}</title>
-    {% endif %}
+    {%- endif -%}
 
 </head>
 
 <body>
 <main class="page-content" aria-label="Content">
-
     {{ content }}
-
 </main>
-
 </body>
 
 </html>	
