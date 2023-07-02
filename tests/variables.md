@@ -419,3 +419,32 @@ Expecting working HTML and  title with slugified ID
 </header>
 
 ---
+    
+
+## testing markdown title in HTML tags with Liquid
+
+Expecting working HTML and  title with slugified ID
+
+### without a variable
+
+---
+
+{{ <header class="post-header"> }}
+
+#### Dummy&nbsp;&gt; status&nbsp;&gt; something&nbsp;&gt; something removing avatars
+
+{{ </header> }}
+
+---
+
+### with a variable
+
+---
+
+{{ <header class="post-header">   }}
+
+#### {{page.title}}
+
+{{ </header>  }}
+
+---
