@@ -1,7 +1,7 @@
 ---
 title            : "status > this resumes my relationship with CSS"
 category         : "status"
-date_of_creation : "#date 2023-06-16"
+date_of_creation : "#date 2023-06-16 00:00 0 GMT"
 ---
 
 At this time of writing, the whole Firefox column is red, version 2 to version 115, and my version is the 113 ...
