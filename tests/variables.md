@@ -148,6 +148,31 @@ abc contains a
 
 `{{site.url}}`
 
+
+## `post.id`
+
+<ul>
+
+{%- for post in site.posts -%}
+
+<li>
+POST ID : `{{post.id}}`
+</li>
+
+<li>
+POST URL : `{{post.url}}`
+</li>
+
+<li>
+POST URL : `{{post.url}}`
+</li>
+
+{%- comment -%}{% break %} {%- endcomment -%}
+
+{%- endfor -%}
+
+</ul>
+
 ### constructed canonical page url (need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
@@ -156,20 +181,20 @@ abc contains a
 
 ### split cases / non traversal
 
+expected : "letter a"
+
 {% assign letter = "a" %}
 
 {% case letter %}
   {% when "a" %}
-    letter a
+  `letter a`
   {% when "b" %}
-    letter b
+  `letter b`
   {% when "c" %}
-    letter c
+  `letter c`
   {% else %}
-    not a nor b nor c
+  `not a nor b nor c`
 {% endcase %}
-
-expected : "letter a"
 
 expected : "letter b"
 
@@ -177,46 +202,47 @@ expected : "letter b"
 
 {% case letter %}
   {% when "a" %}
-    letter a
+  `letter a`
   {% when "b" %}
-   letter b
+   `letter b`
   {% when "c" %}
-    letter c
+  `letter c`
   {% else %}
-    not a nor b nor c
+  `not a nor b nor c`
 {% endcase %}
 
-{% assign letter = "d" %}
 
 expected : "not a nor b nor c" 
 
+{% assign letter = "d" %}
+
 {% case letter %}
   {% when "a" %}
-    letter a
+    `letter a`
   {% when "b" %}
-    letter b
+    `letter b`
   {% when "c" %}
-    letter c
+    `letter c`
   {% else %}
-    not a nor b nor c
+    `not a nor b nor c`
 {% endcase %}
 
 ```
 {%raw%}
+expected : "letter a"
+
 {% assign letter = "a" %}
 
 {% case letter %}
   {% when "a" %}
-    letter a
+  `letter a`
   {% when "b" %}
-    letter b
+  `letter b`
   {% when "c" %}
-    letter c
+  `letter c`
   {% else %}
-    not a nor b nor c
+  `not a nor b nor c`
 {% endcase %}
-
-expected : "letter a"
 
 expected : "letter b"
 
@@ -224,28 +250,29 @@ expected : "letter b"
 
 {% case letter %}
   {% when "a" %}
-    letter a
+  `letter a`
   {% when "b" %}
-   letter b
+   `letter b`
   {% when "c" %}
-    letter c
+  `letter c`
   {% else %}
-    not a nor b nor c
+  `not a nor b nor c`
 {% endcase %}
 
-{% assign letter = "d" %}
 
 expected : "not a nor b nor c" 
 
+{% assign letter = "d" %}
+
 {% case letter %}
   {% when "a" %}
-    letter a
+    `letter a`
   {% when "b" %}
-    letter b
+    `letter b`
   {% when "c" %}
-    letter c
+    `letter c`
   {% else %}
-    not a nor b nor c
+    `not a nor b nor c`
 {% endcase %}
 {% endraw %}
 ```
