@@ -1,4 +1,4 @@
-/* #date 2023-07-02 15:35 1688297755051095866 GMT */
+/*#date 2023-07-02 16:04 1688299468665020076 GMT*/
 
 :root
 {
@@ -40,7 +40,6 @@
 }
 
 
-
 .post-header
 {
   background-color : var(--color_background_post_header);
@@ -51,7 +50,7 @@
 
 .post a
 {
-  color            : var(--color_text_post_button);
+  color : var(--color_text_post_button);
 }
 
 .post hr
@@ -77,7 +76,7 @@
 {
   margin-bottom : 3%;
   margin-top    : 3%;
-  border        : unset;
+  border        : 2px solid; /* common border */
   box-shadow    : 1px 1px 2px var(--color_background_post_content_title);
   border-radius : 20px 20px 20px 20px;
 
@@ -88,8 +87,8 @@
   font-size        : 1.8em;
   text-align       : left;
   padding          : 2.5%;
-  border           : 1px solid rgba(0, 0, 0, .4);
-  background-color : rgba(0, 0, 0, 0.7);
+  border-color     : rgba(0, 0, 0, var(--opacity_border_post_h2));
+  background-color : rgba(0, 0, 0, var(--opacity_border_post_h2));
 }
 
 
@@ -100,7 +99,9 @@
   color            : #DDD;
   padding          : 2%;
   text-align       : left;
-  background-color : rgba(0, 0, 0, 0.6);
+  border-color     : rgba(0, 0, 0, var(--opacity_border_post_h3));
+  background-color : rgba(0, 0, 0, var(--opacity_border_post_h3));
+
 }
 
 
@@ -110,7 +111,9 @@
   font-size        : 1.6em;
   color            : #CCC;
   padding          : 1.5%;
-  background-color : rgba(0, 0, 0, 0.5);
+  border-color     : rgba(0, 0, 0, var(--opacity_border_post_h4));
+  background-color : rgba(0, 0, 0, var(--opacity_border_post_h4));
+
 }
 
 .post-content h5
@@ -119,7 +122,9 @@
   font-size        : 1.5em;
   color            : #BBB;
   padding          : 1%;
-  background-color : rgba(0, 0, 0, 0.4);
+  border-color     : rgba(0, 0, 0, var(--opacity_border_post_h5));
+  background-color : rgba(0, 0, 0, var(--opacity_border_post_h5));
+
 }
 
 .post-content h6
@@ -128,7 +133,9 @@
   font-size        : 1.4em;
   color            : #AAA;
   padding          : .5%;
-  background-color : rgba(0, 0, 0, 0.3);
+  border-color     : rgba(0, 0, 0, var(--opacity_border_post_h6));
+  background-color : rgba(0, 0, 0, var(--opacity_border_post_h6));
+
 }
 
 .post-content ul
