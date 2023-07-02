@@ -149,7 +149,7 @@ abc contains a
 `{{site.url}}`
 
 
-## `post.id`
+## `post.id` and `post.url`
 
 <ul>
 
@@ -163,15 +163,33 @@ POST ID : `{{post.id}}`
 POST URL : `{{post.url}}`
 </li>
 
-<li>
-POST URL : `{{post.url}}`
-</li>
-
-{%- comment -%}{% break %} {%- endcomment -%}
+{% break %}
 
 {%- endfor -%}
 
 </ul>
+
+```
+{%- raw -%}
+<ul>
+
+{%- for post in site.posts -%}
+
+<li>
+POST ID : `{{post.id}}`
+</li>
+
+<li>
+POST URL : `{{post.url}}`
+</li>
+
+{% break %}
+
+{%- endfor -%}
+
+</ul>
+{%- endraw -%}
+```
 
 ### constructed canonical page url (need to set name in `_config.yml`)
 
