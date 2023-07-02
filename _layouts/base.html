@@ -1,17 +1,21 @@
 ---
-title                    : null
-content_description      : null
-date_of_creation         : null
-date_of_modification     : null
-color_background         : null
-category                 : null
-tags                     : null
-image_color              : null
-type                     : null
+title                       : null
+content_description         : null
+date_of_creation            : null
+date_of_modification        : null
+color_background            : null
+category                    : null
+tags                        : null
+image_color                 : null
+type                        : null
+boolean_remove_bootstrap    : null
 ---
+
+{% comment %}
 <!-- LIQUID -->
 
 <!--   DECLARATION -->
+{% endcomment %}
 
 {% assign page_title                    = page.title %}
 {% assign page_tags                     = page.tags %}
@@ -24,9 +28,13 @@ type                     : null
 {% assign date_of_creation              = page.date_of_creation %}
 {% assign date_of_modification          = page.date_of_modification %}
 {% assign site_name                     = site.name %}
+{% assign page_remove_boolstrap         = page.boolean_remove_boolstrap %}
 
+
+{% comment %}
 <!-- handling empty strings
 -->
+{% endcomment %}
 
 {% if page_title == "" %}
 {% assign page_title = null %}
@@ -73,11 +81,17 @@ type                     : null
 {% endif %}
 
 
+{% if page_remove_boolstrap == "" %}
+page_remove_boolstrap == null
+{% endif %}
 
+{% comment %}
 <!--   INITILISATION -->
 
 <!-- TITLE
 -->
+{% endcomment %}
+
 {% if page_title %}
 {% assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" %}
 {% endif %}
@@ -88,8 +102,111 @@ type                     : null
 {% assign page_url = site.url | append :"/" | append : site_name | append : page.url %}
 {% endif %}
 
+{% comment %}
 <!-- PROCESSING
  -->
+
+<!-- DATE OF CREATION
+ -->
+{% endcomment %}
+{% if date_of_creation %}
+
+{% comment %}
+<!-- removing "#date " and " GMT"
+                                 => "2023-06-28 05:16 1687914994970097614"
+-->
+{% endcomment %}
+{% assign date_of_creation       =  date_of_creation     | replace : "#date ","" | replace " GMT",""%}
+
+{% comment %}
+<!-- split date in array
+                                => "[2023-06-28, 05:16, 1687914994970097614]"
+-->
+{% endcomment %}
+{% assign date_of_creation      =  date_of_creation     | split:" "%}
+
+{% comment %}
+{% comment %}
+<!-- getting time
+                                => 05:16
+-->
+{% endcomment %}
+{% endcomment %}
+
+{% assign time_of_creation      =  date_of_creation[1]    %}
+
+{% comment %}
+<!-- getting day of creation for colors -->
+{% endcomment %}
+{% assign date_for_image_color  =  date_of_creation[0] %}
+
+{% comment %}
+<!-- hour with seconds and Time difference
+I won't calculate the seconds ... for now ?
+                               => "05:16:00+00:00"
+-->
+{% endcomment %}
+
+{% assign time_of_creation     =  time_of_creation     | append :":00+00:00" %}
+
+{% comment %}
+<!-- adding 'T' and hour to date
+                               => "2023-06-28T05:16:00+00:00"
+-->
+<!--                               2023-06-28                          T             05:16:00+00:00
+-->
+{% endcomment %}
+{% assign date_of_creation      =  date_of_creation[0]     | append : "T" | append : time_of_creation %}
+
+{% endif %}
+
+{% comment %}
+<!-- DATE OF MODIFICATION
+ -->
+{% endcomment %}
+{% if date_of_modification %}
+
+{% comment %}
+<!-- removing "#date " and " GMT"
+                                 => "2023-06-28 05:16 1687914994970097614"
+-->
+{% endcomment %}
+{% assign date_of_modification   =  date_of_modification     | replace : "#date ","" | replace " GMT",""%}
+
+{% comment %}
+<!-- split date in array
+                                 => "[2023-06-28, 05:16, 1687914994970097614]"
+-->
+{% endcomment %}
+{% assign date_of_modification   =  date_of_modification     | split:" "%}
+
+{% comment %}
+<!-- getting time
+                                => 05:16
+-->
+{% endcomment %}
+
+{% assign time_of_modification   =  date_of_modification[1]    %}
+
+{% comment %}
+<!-- hour with seconds and Time difference
+I won't calculate the seconds ... for now ?
+                                => "05:16:00+00:00"
+-->
+{% endcomment %}
+
+{% assign time_of_modification   =  time_of_modification     | append :":00+00:00" %}
+
+{% comment %}
+<!-- adding 'T' and hour to date
+                               => "2023-06-28T05:16:00+00:00"
+-->
+<!--                               2023-06-28                          T             05:16:00+00:00
+-->
+{% endcomment %}
+{% assign date_of_modification  =  date_of_modification[0]     | append : "T" | append : time_of_creation%}
+
+{% endif %}
 
 
 <!DOCTYPE html>
@@ -98,7 +215,9 @@ type                     : null
 
 <head>
 
+    {% comment %}
     <!-- META COMMON -->
+    {% endcomment %}
 
     <meta charset="utf-8">
 
@@ -118,7 +237,10 @@ type                     : null
           content="{{page_content_description}}"/>
     {% endif %}
 
+    {% comment %}
     <!--  META OPEN GRAPH  -->
+    {% endcomment %}
+
     {% if page_type %}
     <meta property="og:type"
           content="{{page_type}}"/>
@@ -147,7 +269,9 @@ type                     : null
           content="{{site_name}}"/>
     {% endif %}
 
+    {% comment %}
     <!--  META TWITTER  -->
+    {% endcomment %}
 
     <meta name="twitter:card"
           content="summary"/>
@@ -157,7 +281,9 @@ type                     : null
           content="{{page_title}}"/>
     {% endif %}
 
+    {% comment %}
     <!--  LINK CANONICAL -->
+    {% endcomment %}
 
     <!--suppress HtmlUnknownTarget -->
     {% if page_url %}
@@ -165,12 +291,24 @@ type                     : null
           href="{{page_url}}"/>
     {% endif %}
 
-    <!--  STYLE SHEET -->
+    {% comment %}
+    <!--  STYLE SHEETS -->
+    {% endcomment %}
+
+    {% comment %}
+    <!--  BOOTCAMP -->
+    {% endcomment %}
+
+    {% unless page_remove_boolstrap %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    {% endif %}
 
     <link rel="stylesheet"
           href="{{ '/assets/main.css' | relative_url }}">
 
+    {% comment %}
     <!--  PAGE TITLE -->
+    {% endcomment %}
 
     {% if page_title %}
     <title>{{page_title}}</title>
@@ -180,11 +318,11 @@ type                     : null
 
 <body>
 <main class="page-content" aria-label="Content">
-  
-  {{ content }}
-  
+
+    {{ content }}
+
 </main>
 
-</body>  
+</body>
 
 </html>	
