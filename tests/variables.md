@@ -149,7 +149,7 @@ abc contains a
 `{{site.url}}`
 
 
-## `post.id` and `post.url`
+### `post.id` and `post.url`
 
 <ul>
 
@@ -194,6 +194,13 @@ POST URL : `{{post.url}}`
 ### constructed canonical page url (need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
+
+## Jekyll filter `slugify`
+
+"Dummy > something > something" : 
+
+- value                         : `{{ Dummy > something > something | slugify}}`
+- expecting something like this : `dummy--something--something`
 
 ## `case` instruction
 
@@ -379,3 +386,5 @@ expected : "not a letter among a,b,c,d"
 ## Displaying an external image in a Markdown link
 
 ![image_color_1]({{site.image_color_1}})
+
+
