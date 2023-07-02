@@ -197,6 +197,8 @@ POST URL : `{{post.url}}`
 
 ## Jekyll filter `slugify`
 
+I suspect this thing to only work in HTML but I won't rely on it ...
+
 "Dummy > something > something" : 
 
 - value                         : {{ "Dummy > something > something" | slugify }}
@@ -388,3 +390,32 @@ expected : "not a letter among a,b,c,d"
 ![image_color_1]({{site.image_color_1}})
 
 
+---
+
+## testing markdown title in HTML tags
+
+Expecting working HTML and  title with slugified ID
+
+### without a variable
+
+---
+
+<header class="post-header">
+
+#### Dummy&nbsp;&gt; status&nbsp;&gt; something&nbsp;&gt; something removing avatars
+
+</header>
+
+---
+
+### with a variable
+
+---
+
+<header class="post-header">
+
+#### {{page.title}}
+
+</header>
+
+---
