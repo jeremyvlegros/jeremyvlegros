@@ -3,12 +3,12 @@ date_of_creation         : "#date 2023-06-29 16:53 1688043201580071656 GMT"
 ---
 
 
-# printing everything in posts
+# URL TESTING
 
 <ul>
-{%- for post in posts -%}
+{%- for post in site.posts -%}
   <li>
-  {{ post.content }}
+  <a href="#{{ post.title }}"> {{ post.title | escape }} </a>
   </li>
   {% endfor%}
 </ul>
