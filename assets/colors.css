@@ -1,4 +1,5 @@
-/*#date 2023-07-01 16:00 1688212846352717159 GMT*/
+/*#date 2023-07-02 13:48 1688291283639208485 GMT*/
+
 
 :root
 {
@@ -58,8 +59,7 @@
 
   /* @post */
   --color_text_post                     : white;
-  /*--color_text_post_title               : hsl(222, 18%, 0%);*/
-  --color_text_post_title               : white;
+  --color_text_post_title               : hsl(222, 18%, 0%);
   --color_background_post_header        : hsl(4, 7%, 95%);
   --color_background_post_content_title : hsla(0, 0%, 10%, 0.4);
   --color_background_post_content       : #222;
