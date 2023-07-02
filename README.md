@@ -14,7 +14,7 @@ I, Jeremy Legros, keep ownership of things I write.
 If you use this repository, you use it at your own risks.
 
 I constructed the website from the `Minima` template and now has removed it.
-The remaining similarities are mostly file names, there are no substantial portion of codes therefore I won't include The MIT LICENCE
+The remaining similarities are mostly file and CSS class names, there are no substantial portion of codes therefore I won't include The MIT LICENCE
 
 The `Dracula` `CSS` theme :
 - is licensed
