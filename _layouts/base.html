@@ -28,7 +28,7 @@ boolean_remove_bootstrap    : null
 {% assign date_of_creation              = page.date_of_creation %}
 {% assign date_of_modification          = page.date_of_modification %}
 {% assign site_name                     = site.name %}
-{% assign page_remove_boolstrap         = page.boolean_remove_boolstrap %}
+{% assign page_remove_bootstrap         = page.boolean_remove_bootstrap %}
 
 
 {% comment %}
@@ -81,8 +81,8 @@ boolean_remove_bootstrap    : null
 {% endif %}
 
 
-{% if page_remove_boolstrap == "" %}
-page_remove_boolstrap == null
+{% if page_remove_bootstrap == "" %}
+page_remove_bootstrap == null
 {% endif %}
 
 {% comment %}
@@ -299,7 +299,7 @@ I won't calculate the seconds ... for now ?
     <!--  BOOTCAMP -->
     {% endcomment %}
 
-    {% unless page_remove_boolstrap %}
+    {% unless page_remove_bootstrap %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     {% endif %}
 
