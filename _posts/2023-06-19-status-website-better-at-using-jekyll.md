@@ -1,7 +1,7 @@
 ---
 title            : "status > website > becoming better at using Jekyll"
 category         : "status"
-date of creation : "#date 2023-06-19 00:00 0 GMT"
+date of creation : "#date 2023-06-19 00:00 1687132800000 GMT"
 date_of_creation : "#date 2023-07-02 15:04 1688295852048116075 GMT"
 layout           : post
 ---
