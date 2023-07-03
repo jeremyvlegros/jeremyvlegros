@@ -1,7 +1,7 @@
 ---
 title            : "status > this resumes my relationship with CSS"
 category         : "status"
-date_of_creation : "#date 2023-06-16 00:00 0 GMT"
+date_of_creation : "#date 2023-06-16 00:01 1686873660000 GMT"
 layout           : post
 ---
 
