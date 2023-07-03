@@ -2,7 +2,7 @@
 layout : base
 ---
 <!-- timeline layout
-#date 2023-07-03 17:30 1688391051620508604 GMT
+#date 2023-07-03 17:51 1688392316711285771 GMT
 -->
 <div class="timeline container-fluid">
 
@@ -283,13 +283,19 @@ layout : base
                             <br>
 
                             {%- if post.date_of_creation -%}
-                            <span class='date date_of_creation'>    Created&nbsp;&nbsp;: {{ date_of_creation }} </span>
+                            <span class='date date_of_creation'> {{ post.date_of_creation }} </span>
                             {%- endif -%}
 
                             <br>
 
                             {%- if post.date_of_modification -%}
-                            <span class="date date_of_modification">Modified&nbsp;: {{ date_of_modification }} </span>
+                            <span class="date date_of_modification">
+                                {%- assign short_date = post.date_of_modification | split : " " -%}
+                                {%- comment -%} using a variable to get some feedback
+                                {%- endcomment -%}
+                                {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
+                                {{  short_date }}
+                            </span>
                             {%- endif -%}
                         </div>
 
@@ -306,13 +312,19 @@ layout : base
         <br>
 
         {%- if page.date_of_creation -%}
-        <span class='date date_of_creation'>    Created&nbsp;&nbsp;: {{ date_of_creation }} </span>
+        <span class='date date_of_creation'> {{ page.date_of_creation }} </span>
         {%- endif -%}
 
         <br>
 
         {%- if page.date_of_modification -%}
-        <span class="date date_of_modification">Modified&nbsp;: {{ date_of_modification }} </span>
+        <span class="date date_of_modification">
+        {%- assign short_date = page.date_of_modification | split : " " -%}
+        {%- comment -%} using a variable to get some feedback
+        {%- endcomment -%}
+        {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
+        {{  short_date }}
+        </span>
         {%- endif -%}
 
     </div>
