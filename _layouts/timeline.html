@@ -2,10 +2,37 @@
 layout : base
 ---
 <!-- timeline layout
-#date 2023-07-03 17:51 1688392316711285771 GMT
+#date 2023-07-05 14:05 1688551528420194226 GMT
 -->
 <div class="timeline container-fluid">
+    <!--  precaution : not getting the array element in one instruction -->
+    {%- assign posts = site.posts -%}
 
+    <!--  this will fail if posts is not compatible with array indexes... -->
+
+    <!-- post -->
+    {%- assign first_post = posts[0] -%}
+    <!-- array -->
+    {%- assign first_post = first_post.date_of_creation | split : " " -%}
+    {%- assign first_post_id = first_post[-2]-%}
+
+    <!-- post -->
+    {%- assign last_post = posts[-1] -%}
+    <!-- array -->
+    {%- assign last_post = last_post.date_of_creation | split : " " -%}
+    {%- assign last_post_id = last_post[-2]-%}
+
+    <!--  precaution -->
+    {%- assign posts = null -%}
+
+    <span class="arrow_to_page_top">
+	                    <!--suppress HtmlUnknownAnchorTarget -->
+        <a class="button" href="#{{first_post_id}}" title="lastest post / top page"> &UpArrowBar; </a>
+    </span>
+    <span class="arrow_to_page_bottom">
+	                    <!--suppress HtmlUnknownAnchorTarget -->
+         <a class="button" href="#{{last_post_id}}" title="older post / bottom page"> &DownArrowBar; </a>
+    </span>
     {{ content }}
 
     <div class="row g-sm-5">
@@ -19,11 +46,29 @@ layout : base
                             <h1 class="page-heading">{{ page.title }}</h1>
                             {%- endif -%}
                         </li>
+
                         {%- for post in site.posts -%}
+                        {%- assign date_of_creation = post.date_of_creation -%}
+                        <!-- cannot be too prudent -->
+                        {%- assign day_of_creation = null -%}
+                        {%- if date_of_creation == "" -%} {%- assign date_of_creation = null -%} {%- endif -%}
+                        <!--  #date 2023-07-05 17:23-->
+                        {%- if date_of_creation-%}
+                        {%- assign day_of_creation = date_of_creation | split : " " -%}
+                        <!--  array [#date,2023-07-05,17:23]-->
+                        {%- assign day_of_creation = date_of_creation[1] | split : "-" -%}
+                        <!--  string 2023-07-05-->
+                        {%- assign day_of_creation = date_of_creation[2] -%}
+                        <!--  string 05-->
+                        {%- endif -%}
+
+                        {%- assign color_for_index = "color_background_"| append : day_of_creation -%}
+
                         <li>
-                            <a href="{{ post.url | relative_url }}"> {{ post.title | escape }}</a>
+                            <a class="{{color_for_index}}" href="{{ post.url | relative_url }}"> {{ post.title | escape }}</a>
                         </li>
                         {%- endfor -%}
+
                     </ul>
                 </div>
             </div>
@@ -34,11 +79,8 @@ layout : base
                 {%- assign posts = site.posts -%}
                 {%- for post in posts -%}
                 <li>
-
                     {%- comment -%}<!-- LIQUID --> {%- endcomment -%}
-
                     {%- comment -%}<!--   DECLARATION --> {%- endcomment -%}
-
 
                     {%- assign post_title = post.title -%}
                     {%- assign post_tags = post.tags -%}
@@ -50,6 +92,7 @@ layout : base
                     {%- assign post_image_color = post.image_color -%}
                     {%- assign date_of_creation = post.date_of_creation -%}
                     {%- assign date_of_modification = post.date_of_modification -%}
+                    {%- assign post_id = "unknown" -%}
 
                     {%- comment -%}<!-- handling empty strings--> {%- endcomment -%}
 
@@ -103,6 +146,7 @@ layout : base
                     {%- endcomment -%}
 
                     {%- assign date_of_creation = date_of_creation | split:" "%}
+                    {%- assign post_id = date_of_creation[2] -%}
 
                     {%- comment -%}
                     <!-- getting time
@@ -269,7 +313,7 @@ layout : base
                         <header class="post-header">
 
                             {%- if post_title -%}
-                            <h1 class="post-title" itemprop="name headline">
+                            <h1 id="#{{post_id}}" class="post-title" itemprop="name headline">
                                 {{ post_title }}
                             </h1>
                             {%- endif -%}
