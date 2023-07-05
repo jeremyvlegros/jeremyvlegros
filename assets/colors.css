@@ -1,17 +1,17 @@
-/*#date 2023-07-02 15:58 1688299101863932192 GMT*/
+/*##date 2023-07-05 13:36 1688549783580299955 GMT */
 :root
 {
   --color_background                    : hsl(4, 7%, 69%);
 
-  --color_1                             : hsl(010, 50%, 31%);
-  --color_2                             : hsl(030, 50%, 31%);
-  --color_3                             : hsl(040, 50%, 31%);
-  --color_4                             : hsl(060, 50%, 31%);
-  --color_5                             : hsl(080, 50%, 31%);
-  --color_6                             : hsl(100, 50%, 31%);
-  --color_7                             : hsl(125, 40%, 31%);
-  --color_8                             : hsl(145, 50%, 31%);
-  --color_9                             : hsl(165, 40%, 31%);
+  --color_01                            : hsl(010, 50%, 31%);
+  --color_02                            : hsl(030, 50%, 31%);
+  --color_03                            : hsl(040, 50%, 31%);
+  --color_04                            : hsl(060, 50%, 31%);
+  --color_05                            : hsl(080, 50%, 31%);
+  --color_06                            : hsl(100, 50%, 31%);
+  --color_07                            : hsl(125, 40%, 31%);
+  --color_08                            : hsl(145, 50%, 31%);
+  --color_09                            : hsl(165, 40%, 31%);
   --color_10                            : hsl(185, 60%, 31%);
   --color_11                            : hsl(200, 50%, 31%);
   --color_12                            : hsl(220, 50%, 31%);
@@ -120,49 +120,49 @@ body, html
   background-color : var(--color_background_dracula) !important;
 }
 
-.color_background_1
+.color_background_01
 {
-  background-color : var(--color_1) !important;
+  background-color : var(--color_01) !important;
 }
 
-.color_background_2
+.color_background_02
 {
-  background-color : var(--color_2) !important;
+  background-color : var(--color_02) !important;
 }
 
-.color_background_3
+.color_background_03
 {
-  background-color : var(--color_3) !important;
+  background-color : var(--color_03) !important;
 }
 
-.color_background_4
+.color_background_04
 {
-  background-color : var(--color_4) !important;
+  background-color : var(--color_04) !important;
 }
 
-.color_background_5
+.color_background_05
 {
-  background-color : var(--color_5) !important;
+  background-color : var(--color_05) !important;
 }
 
-.color_background_6
+.color_background_06
 {
-  background-color : var(--color_6) !important;
+  background-color : var(--color_06) !important;
 }
 
-.color_background_7
+.color_background_07
 {
-  background-color : var(--color_7) !important;
+  background-color : var(--color_07) !important;
 }
 
-.color_background_8
+.color_background_08
 {
-  background-color : var(--color_8) !important;
+  background-color : var(--color_08) !important;
 }
 
-.color_background_9
+.color_background_09
 {
-  background-color : var(--color_9) !important;
+  background-color : var(--color_09) !important;
 }
 
 .color_background_10
