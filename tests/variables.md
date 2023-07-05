@@ -10,7 +10,11 @@ test_list :
 
 {% assign test_list = page.test_list%}
 
-... *sigh*
+```
+{%raw%}
+{% assign test_list = page.test_list%}
+{% endraw %}
+```
 
 ## printing a html character
 
@@ -453,10 +457,7 @@ expected : &lcub;&lcub; something &rcub;&rcub;
 result  :
 
 ```html
-{%- raw -%} {{ {%- endraw -%}
-something
 
-{%- raw -%} }} {%- endraw -%}
 ```
 
 ## testing Jekyll example
