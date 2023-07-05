@@ -482,4 +482,8 @@ caption="This is the Jekyll logo." %
 
 ```         
 
-[//]: # (## testing Jekyll example without curly braces)
+## testing Jekyll example without curly braces
+
+print this "this is the sentence printed with include"
+
+{% include testing_variables.html string="this is the sentence printed with include" %}
