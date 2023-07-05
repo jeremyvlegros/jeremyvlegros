@@ -2,27 +2,27 @@
 layout : base
 ---
 <!-- timeline layout
-#date 2023-07-05 14:42 1688553726807408220 GMT
+#date 2023-07-05 15:06 1688555192943325977 GMT
 -->
 <div class="timeline container-fluid">
-    <!--  precaution : not getting the array element in one instruction -->
+    {%- comment -%}<!--  precaution : not getting the array element in one instruction --> {%- endcomment -%}
     {%- assign posts = site.posts -%}
 
-    <!--  this will fail if posts is not compatible with array indexes... -->
+    {%- comment -%}<!--  this will fail if posts is not compatible with array indexes... --> {%- endcomment -%}
 
-    <!-- post -->
+    {%- comment -%}<!-- post --> {%- endcomment -%}
     {%- assign first_post = posts[0] -%}
     <!-- array -->
     {%- assign first_post = first_post.date_of_creation | split : " " -%}
     {%- assign first_post_id = first_post[-2]-%}
 
-    <!-- post -->
+    {%- comment -%}<!-- post --> {%- endcomment -%}
     {%- assign last_post = posts[-1] -%}
-    <!-- array -->
+    {%- comment -%}<!-- array --> {%- endcomment -%}
     {%- assign last_post = last_post.date_of_creation | split : " " -%}
     {%- assign last_post_id = last_post[-2]-%}
 
-    <!--  precaution -->
+    {%- comment -%}<!--  precaution --> {%- endcomment -%}
     {%- assign posts = null -%}
 
     <span class="arrow_to_page_top">
@@ -35,7 +35,7 @@ layout : base
     </span>
     {{ content }}
 
-    <div class="row g-sm-5">
+    <div class="row g-sm-6">
 
         <div class="col-12 col-sm-5 col-lg-4">
             <div id="side_index" class="row">
