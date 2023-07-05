@@ -460,7 +460,7 @@ result  :
 
 ```
 
-## testing Jekyll example
+## testing Jekyll `includes` example
 
 In the include file (everywhere with `include` should be surrounded by brackets)
 
@@ -482,8 +482,27 @@ caption="This is the Jekyll logo." %
 
 ```         
 
-## testing Jekyll example without curly braces
+## testing Jekyll `includes` example without curly braces
 
 print this "this is the sentence printed with include"
 
 {% include testing_variables.html string="this is the sentence printed with include" %}
+
+## testing Jekyll `includes` as a function
+
+expected :
+
+```
+1
+2
+3
+4
+5
+```
+result :
+
+```
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{%- include print_array_content.html array = array_numbers -%}
+```
+
