@@ -141,20 +141,20 @@ abc contains a
 
 ## &#35;&#35; Accessing Jekyll variables
 
-### &#35;&#35; &#35;`site.name`
+### &#35;&#35;&#35; `site.name`
 
 `{{site.name}}`
 
-### &#35;&#35; &#35;`page.url`
+### &#35;&#35;&#35; `page.url`
 
 `{{page.url}}`
 
-### &#35;&#35; &#35;`site.url`
+### &#35;&#35;&#35; `site.url`
 
 `{{site.url}}`
 
 
-### &#35;&#35; &#35;`post.id` and `post.url`
+### &#35;&#35;&#35; `post.id` and `post.url`
 
 <ul>
 
@@ -196,7 +196,7 @@ POST URL : `{{post.url}}`
 {%- endraw -%}
 ```
 
-### &#35;&#35; &#35;constructed canonical page url (need to set name in `_config.yml`)
+### &#35;&#35;&#35; constructed canonical page url (need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
@@ -211,7 +211,7 @@ I suspect this thing to only work in HTML but I won't rely on it ...
 
 ## &#35;&#35; `case` instruction
 
-### &#35;&#35; &#35;split cases / non traversal
+### &#35;&#35;&#35; split cases / non traversal
 
 expected : "letter a"
 
@@ -309,7 +309,7 @@ expected : "not a nor b nor c"
 {% endraw %}
 ```
 
-### &#35;&#35; &#35;multiple cases / traversal / like in C
+### &#35;&#35;&#35; multiple cases / traversal / like in C
                          
 expected : "a letter among a,b,c,d"
 
@@ -378,7 +378,7 @@ expected : "not a letter among a,b,c,d"
 
 ## &#35;&#35; Accessing global variables `_config.yml`
 
-### &#35;&#35; &#35;global variable social_links
+### &#35;&#35;&#35; global variable social_links
 
 ```
 {% for link in site.social_links %}
@@ -415,12 +415,6 @@ max-width="200px" file="logo.png" alt="Jekyll logo"
 caption="This is the Jekyll logo." %
 
 ```         
-
-## &#35;&#35; testing Jekyll `includes` example without curly braces
-
-print this "this is the sentence printed with include"
-
-{% include testing_variables.html string="this is the sentence printed with include" %}
 
 ## &#35;&#35; testing Jekyll `includes` as a function
 
@@ -473,4 +467,18 @@ result :
 ```
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {% include print_array.liquid array=array_numbers %}
+```
+
+## &#35;&#35; testing Jekyll `includes` as a sum function
+
+expected :
+```
+5 
+```
+
+result :
+
+```
+{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{{ result }}
 ```
