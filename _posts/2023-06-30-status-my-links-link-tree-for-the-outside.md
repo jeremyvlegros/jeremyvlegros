@@ -29,7 +29,7 @@ Surfing the web has become paddling in an ocean of :
 - obscure closing buttons (left, right, button okay ? button dismiss ?)
 - the button to refuse cookies "do no accept cookies" is either : 
   - written discreetly
-  - requires un-toggling 10 elements because a there are no "refuse all cookies"
+  - requiring un-toggling 10 elements because a there are no "refuse all cookies"
   
 I will contribute to this ocean, to hammer the nail in the ~~personal data exploitation~~ personalized experience, that way it will contrast even more with my website.
 
