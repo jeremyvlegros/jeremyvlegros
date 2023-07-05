@@ -452,12 +452,12 @@ Expecting working HTML and  title with slugified ID
 
 ## testing escaping curly brackets in code
 
-expected : "something" surrounded by curly brackets
+expected : &lcub;&lcub; something &rcub;&rcub;
 
 result  :
 
 ```html
-&lcub;&lcub; something &rcub;&rcub;
+{%- raw -%} {{ {%- endraw -%} something {%- raw -%} }} {%- endraw -%}
 ```
 
 ## testing Jekyll example
@@ -473,9 +473,13 @@ In the include file (everywhere with `include` should be surrounded by brackets)
    <figcaption> include.caption </figcaption>
 </figure>
 ```
+
+```html
+{%- raw -%}
 {% include testing_jekyll_example.html url="http://jekyllrb.com"
 max-width="200px" file="logo.png" alt="Jekyll logo"
 caption="This is the Jekyll logo." %}
+{%- endraw -%}
+```         
 
-         
-
+[//]: # (## testing Jekyll example without curly braces)
