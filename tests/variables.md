@@ -10,11 +10,7 @@ test_list :
 
 {% assign test_list = page.test_list%}
 
-```
-{%raw%}
-{% assign test_list = page.test_list%}
-{% endraw %}
-```
+... *sigh*
 
 ## printing a html character
 
