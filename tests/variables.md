@@ -475,11 +475,11 @@ In the include file (everywhere with `include` should be surrounded by brackets)
 ```
 
 ```html
-{%- raw -%}
-{% include testing_jekyll_example.html url="http://jekyllrb.com"
+
+% include testing_jekyll_example.html url="http://jekyllrb.com"
 max-width="200px" file="logo.png" alt="Jekyll logo"
-caption="This is the Jekyll logo." %}
-{%- endraw -%}
+caption="This is the Jekyll logo." %
+
 ```         
 
 [//]: # (## testing Jekyll example without curly braces)
