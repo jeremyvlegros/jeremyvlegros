@@ -1,4 +1,4 @@
-/* #date 2023-07-04 18:27 1688480861266600058 GMT */
+/* #date 2023-07-05 14:16 1688552182483710533 GMT */
 
 /* dev stuff */
 .page-content
@@ -9,11 +9,16 @@
 .timeline
 {
   /*background-color : yellow;*/
+
 }
 
 #side_index
 {
   /*background-color : orange;*/
+  /*border :3px solid black;*/
+  /*border-top: none;*/
+  /*border-left: none;*/
+  /*border-bottom: none;*/
 }
 
 .timeline .post-list li
@@ -53,13 +58,32 @@
 .timeline .page-heading
 {
   /*display: none;*/
-  text-align  : center;
-  font-weight : bolder;
-  display     : flex;
-  color       : #111;
-  /*position      : fixed;*/
+  /*text-align  : center;*/
+  font-weight               : bolder;
+  display                   : flex;
+  color                     : black;
+  position                  : fixed;
+  left                      : 17px;
+  top                       : 1%;
+  writing-mode              : vertical-lr;
+  text-orientation          : revert;
+  font-family               : "monospace";
+  /*text-decoration: underline;*/
+  /*text-decoration-color: white;*/
+  text-decoration-thickness : 3px;
+  border                    : 2px solid black;
+  border-right              : none;
+  border-top                : none;
+  border-bottom             : none;
+  height                    : 100%;
 }
 
+.timeline .page-heading:after
+{
+  content  : ": last to first";
+  position : relative;
+  top      : 1%;
+}
 
 .timeline .page-content
 {
@@ -69,11 +93,12 @@
 .page-content li
 {
   list-style : none;
+
 }
 
 .timeline .post-list
 {
-  margin-top   : 0;
+  margin-top   : 30px;
   margin-left  : 0;
   padding-left : 0;
 }
@@ -88,6 +113,12 @@
 {
   list-style : square;
   margin-top : 2%;
+}
+
+
+.right
+{
+  /*margin-top : 50px;*/
 }
 
 /* ------------------ INDEX --------------------------- */
@@ -112,24 +143,27 @@
 #side_index
 {
   overflow-y : scroll;
-  height     : calc(100% - 30px + 3px);
+  height     : 99%;
 
-  /*  firefox */
 }
+
 
 /*noinspection CssUnknownProperty*/
 #side_index
 {
+  /*  firefox */
   scrollbar-width : none;
 }
 
 #side_index::-webkit-scrollbar
 {
+  /* untested */
   display : none;
 }
 
 #side_index::-webkit-scrollbar
 {
+  /* untested */
   display : none;
 }
 
@@ -159,15 +193,19 @@
 /* buttons */
 #side_index .side_index_content a
 {
-  background-color : var(--color_background_post_header);
-  color            : black;
-  padding          : 10px;
-  text-decoration  : none;
-  border-radius    : 20px;
-  transition       : all .2s ease-in-out;
-  border           : 2px solid #222;
+  /*background-color : var(--color_background_post_header);*/
+  /*color            : black;*/
+  /*background-color : #DDD;*/
+  color           : white;
+  padding         : 20px;
+  text-decoration : none;
+  border-radius   : 30px;
+  transition      : all .2s ease-in-out;
+  border          : 2px solid #222;
   /*box-shadow       : 1px 3px 1px 1px var(--color_post_shadow), 1px 3px 1px 1px var(--color_post_shadow);*/
-  box-shadow       : 1px 3px 1px 1px #222, 1px 3px 1px 1px #222;
+  box-shadow      : 1px 3px 1px 1px #222, 1px 3px 1px 1px #222;
+  width           : 100%;
+  font-weight     : lighter;
 
 }
 
@@ -186,7 +224,6 @@
   #side_index
   {
     position      : relative;
-    /*width        : 100vw;*/
     margin-right  : 0;
     padding-left  : 0;
     padding-right : 0;
@@ -196,30 +233,69 @@
   #side_index .side_index_content
   {
     position : relative;
-
-    /*width         : 100vw;*/
-    /*margin-right  : 0;*/
-    /*padding-left  : 0;*/
-    /*padding-right : 0;*/
-
   }
 
   #side_index .side_index_content ul
   {
     position : relative;
-    /*margin-right  : 0;*/
-    /*padding-left  : 0;*/
-    /*padding-right : 0;*/
-
-  }
-
-  #side_index .side_index_content li
-  {
-    /*margin-left : 40px;*/
   }
 
   .timeline .post-list
   {
-    margin-left  : 13%;
+    margin-left : 13%;
   }
+}
+
+/* navigation */
+
+/*.arrow_to_page_top*/
+/*{*/
+/*  position : fixed;*/
+/*  left    : 12px;*/
+/*  top      : 450px;*/
+/*  z-index  : 2;*/
+/*}*/
+
+/*.arrow_to_page_bottom*/
+/*{*/
+/*  position : fixed;*/
+/*  left    : 12px;*/
+/*  bottom   : 300px;*/
+/*  z-index  : 2;*/
+/*}*/
+
+.arrow_to_page_top
+{
+  position : fixed;
+  right    : 6px;
+  top      : 10px;
+  z-index  : 2;
+}
+
+.arrow_to_page_bottom
+{
+  position : fixed;
+  right    : 6px;
+  bottom   : 10px;
+  z-index  : 2;
+}
+
+
+.arrow_to_page_top .button
+{
+  padding          : 6px;
+  color            : white;
+  font-size        : 1.5em;
+  border           : 2px solid black;
+  border-radius    : 20px;
+}
+
+
+.arrow_to_page_bottom .button
+{
+  padding          : 6px;
+  color            : white;
+  font-size        : 1.5em;
+  border           : 2px solid black;
+  border-radius    : 20px;
 }
