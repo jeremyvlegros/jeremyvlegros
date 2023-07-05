@@ -11,7 +11,7 @@ print_array : print_array_content.html
 
 
 
-## &#35;&#35;assigning a variable `test_list`
+## &#35;&#35; assigning a variable `test_list`
 
 {% assign test_list = page.test_list%}
 
@@ -21,7 +21,7 @@ print_array : print_array_content.html
 {% endraw %}
 ```
 
-## &#35;&#35;printing a html character
+## &#35;&#35; printing a html character
 
 {% assign character  = ">" %}
 {% assign character  = character | replace : ">","&gt;" %}
@@ -39,7 +39,7 @@ html character greater than "{{character}}"
 
 
 
-## &#35;&#35;prefixing a html character by NBSP
+## &#35;&#35; prefixing a html character by NBSP
 
 
 {% assign title = page.title %}
@@ -60,7 +60,7 @@ this should not break : {{title}}
 {% endraw %}
 ```
 
-## &#35;&#35;Accessing the local variable `test_list`
+## &#35;&#35; Accessing the local variable `test_list`
          
 The loop :
 
@@ -85,7 +85,7 @@ printing `test_list` : `{{ test_list }}`
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {% endraw %}
 ```
-## &#35;&#35;the To string function `inspect`
+## &#35;&#35; the To string function `inspect`
 
 
 {% assign test_list = page.test_list%}
@@ -98,7 +98,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endraw %}
 ```
 
-## &#35;&#35;Displaying Liquid results in code ?
+## &#35;&#35; Displaying Liquid results in code ?
 
 ```
 {% for value in test_list %}
@@ -106,7 +106,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endfor %}
 ```
 
-## &#35;&#35;`unless`
+## &#35;&#35; `unless`
 
 Unless 1 > 4 print 1 is smaller than 4
 
@@ -125,7 +125,7 @@ Unless 1 > 4 print 1 is smaller than 4
 
 {% endraw %}
 ```
-## &#35;&#35;String contains
+## &#35;&#35; String contains
 
 {% if "abc" contains "a" %}
 abc contains a
@@ -139,22 +139,22 @@ abc contains a
 {% endraw %}
 ```
 
-## &#35;&#35;Accessing Jekyll variables
+## &#35;&#35; Accessing Jekyll variables
 
-### &#35;&#35;&#35;`site.name`
+### &#35;&#35; &#35;`site.name`
 
 `{{site.name}}`
 
-### &#35;&#35;&#35;`page.url`
+### &#35;&#35; &#35;`page.url`
 
 `{{page.url}}`
 
-### &#35;&#35;&#35;`site.url`
+### &#35;&#35; &#35;`site.url`
 
 `{{site.url}}`
 
 
-### &#35;&#35;&#35;`post.id` and `post.url`
+### &#35;&#35; &#35;`post.id` and `post.url`
 
 <ul>
 
@@ -196,11 +196,11 @@ POST URL : `{{post.url}}`
 {%- endraw -%}
 ```
 
-### &#35;&#35;&#35;constructed canonical page url (need to set name in `_config.yml`)
+### &#35;&#35; &#35;constructed canonical page url (need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
-## &#35;&#35;Jekyll filter `slugify`
+## &#35;&#35; Jekyll filter `slugify`
 
 I suspect this thing to only work in HTML but I won't rely on it ...
 
@@ -209,9 +209,9 @@ I suspect this thing to only work in HTML but I won't rely on it ...
 - value                         : {{ "Dummy > something > something" | slugify }}
 - expecting something like this : `dummy--something--something`
 
-## &#35;&#35;`case` instruction
+## &#35;&#35; `case` instruction
 
-### &#35;&#35;&#35;split cases / non traversal
+### &#35;&#35; &#35;split cases / non traversal
 
 expected : "letter a"
 
@@ -309,7 +309,7 @@ expected : "not a nor b nor c"
 {% endraw %}
 ```
 
-### &#35;&#35;&#35;multiple cases / traversal / like in C
+### &#35;&#35; &#35;multiple cases / traversal / like in C
                          
 expected : "a letter among a,b,c,d"
 
@@ -376,9 +376,9 @@ expected : "not a letter among a,b,c,d"
 {% endraw %}
 ```
 
-## &#35;&#35;Accessing global variables `_config.yml`
+## &#35;&#35; Accessing global variables `_config.yml`
 
-### &#35;&#35;&#35;global variable social_links
+### &#35;&#35; &#35;global variable social_links
 
 ```
 {% for link in site.social_links %}
@@ -386,86 +386,15 @@ expected : "not a letter among a,b,c,d"
 {% endfor %}
 ```
 
-## &#35;&#35;Displaying an external image with HTML
+## &#35;&#35; Displaying an external image with HTML
 
 <img src="{{site.image_color_1}}" alt="image_color_1">
 
-## &#35;&#35;Displaying an external image in a Markdown link
+## &#35;&#35; Displaying an external image in a Markdown link
 
 ![image_color_1]({{site.image_color_1}})
 
-
----
-
-## &#35;&#35;testing markdown title in HTML tags
-
-Expecting working HTML and  title with slugified ID
-
-### &#35;&#35;&#35;without a variable
-
----
-
-<header class="post-header">
-
-#### &#35;&#35;&#35;&#35;Dummy&nbsp;&gt; status&nbsp;&gt; something&nbsp;&gt; something removing avatars
-
-</header>
-
----
-
-### &#35;&#35;&#35;with a variable
-
----
-
-<header class="post-header">
-
-#### &#35;&#35;&#35;&#35;{{page.title}}
-
-</header>
-
----
-    
-
-## &#35;&#35;testing markdown title in HTML tags with Liquid
-
-Expecting working HTML and  title with slugified ID
-
-### &#35;&#35;&#35;without a variable
-
----
-
-{{ <header class="post-header"> }}
-
-#### &#35;&#35;&#35;&#35;Dummy&nbsp;&gt; status&nbsp;&gt; something&nbsp;&gt; something removing avatars
-
-{{ </header> }}
-
----
-
-### &#35;&#35;&#35;with a variable
-
----
-
-{{ <header class="post-header">   }}
-
-#### &#35;&#35;&#35;&#35;{{page.title}}
-
-{{ </header>  }}
-
----
- 
-
-## &#35;&#35;testing escaping curly brackets in code
-
-expected : &lcub;&lcub; something &rcub;&rcub;
-
-result  :
-
-```html
-
-```
-
-## &#35;&#35;testing Jekyll `includes` example
+## &#35;&#35; testing Jekyll `includes` example
 
 In the include file (everywhere with `include` should be surrounded by brackets)
 
@@ -487,13 +416,13 @@ caption="This is the Jekyll logo." %
 
 ```         
 
-## &#35;&#35;testing Jekyll `includes` example without curly braces
+## &#35;&#35; testing Jekyll `includes` example without curly braces
 
 print this "this is the sentence printed with include"
 
 {% include testing_variables.html string="this is the sentence printed with include" %}
 
-## &#35;&#35;testing Jekyll `includes` as a function
+## &#35;&#35; testing Jekyll `includes` as a function
 
 expected :
 
@@ -512,7 +441,7 @@ result :
 ```
 
 
-## &#35;&#35;testing Jekyll `includes` as a function called with a variable
+## &#35;&#35; testing Jekyll `includes` as a function called with a variable
 expected :
 
 ```
@@ -527,3 +456,21 @@ result :
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {%- assign print_array = page.print_array -%}
 {%- include {{print_array}} array=array_numbers -%}
+
+## &#35;&#35; testing Jekyll `includes` as a function with file extension `.liquid`
+
+expected
+```
+1
+2
+3
+4
+5
+```
+
+result :
+
+```
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% include print_array.liquid array=array_numbers %}
+```
