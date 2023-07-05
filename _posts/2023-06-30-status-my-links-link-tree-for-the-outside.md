@@ -2,7 +2,7 @@
 title                : "status > my external links will be on `linkt.ree` "
 layout               : post
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
-date_of_modification : "#date 2023-07-05 20:38 1688575101450274441 GMT"
+date_of_modification : "#date 2023-07-05 20:46 1688575571323984790 GMT"
 ---
 
 ## Reasons
@@ -21,11 +21,17 @@ Yep, the only reason I will use `linkt.ree` is ego boosting.
 
 ### Contrasting my website and the outside web
 
-Surfing the web has become paddling in an ocean of ads, videos popping, playing, with hidden controls ..., windows popping out and requiring to find where the closing button is (left, right, button okay ? button dismiss ?), searching for the "do no accept cookies" :
-- written discreetly
-- opening cookie settings and un-toggling 10 elements to refuse cookies, because there are no "refuse all"
+Surfing the web has become paddling in an ocean of :
+- ads
+- face hugger videos
+- hidden video controls
+- face hugger windows
+- obscure closing buttons (left, right, button okay ? button dismiss ?)
+- the button to refuse cookies "do no accept cookies" is either : 
+  - written discreetly
+  - requires un-toggling 10 elements because a there are no "refuse all cookies"
   
-I will contribute to the web ~~personal data exploitation~~ personalized experience, to contrast with my website.
+I will contribute to this ocean, to hammer the nail in the ~~personal data exploitation~~ personalized experience, that way it will contrast even more with my website.
 
 ### Blending in ?
 
