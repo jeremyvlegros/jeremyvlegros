@@ -5,7 +5,7 @@ test_list :
   - "a"
   - "b"
   - "c"
-print_array = print_array_content.html
+print_array : print_array_content.html
 ---
 
 
