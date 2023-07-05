@@ -2,7 +2,7 @@
 layout : base
 ---
 <!-- timeline layout
-#date 2023-07-05 14:05 1688551528420194226 GMT
+#date 2023-07-05 14:42 1688553726807408220 GMT
 -->
 <div class="timeline container-fluid">
     <!--  precaution : not getting the array element in one instruction -->
@@ -48,24 +48,40 @@ layout : base
                         </li>
 
                         {%- for post in site.posts -%}
-                        {%- assign date_of_creation = post.date_of_creation -%}
-                        <!-- cannot be too prudent -->
+                        {%- comment -%}<!-- cannot be too prudent --> {%- endcomment -%}
                         {%- assign day_of_creation = null -%}
+
+                        {%- assign date_of_creation = post.date_of_creation -%}
+
+                        <!--date of creation initial : {{date_of_creation}}-->
+
                         {%- if date_of_creation == "" -%} {%- assign date_of_creation = null -%} {%- endif -%}
-                        <!--  #date 2023-07-05 17:23-->
+
+                        {%- comment -%}<!--  #date 2023-07-05 17:23 9900090909 GMT--> {%- endcomment -%}
                         {%- if date_of_creation-%}
-                        {%- assign day_of_creation = date_of_creation | split : " " -%}
-                        <!--  array [#date,2023-07-05,17:23]-->
-                        {%- assign day_of_creation = date_of_creation[1] | split : "-" -%}
-                        <!--  string 2023-07-05-->
+
+                        {%- assign date_of_creation = date_of_creation | split : " " -%}
+                        {%- comment -%}<!-- [#date,2023-07-05,17:23,9900090909,GMT]--> {%- endcomment -%}
+                        <!-- date of creation array : {{date_of_creation}}-->
+                        
+                        {% assign post_id = date_of_creation[-2] %}
+
+
+                        {%- assign date_of_creation = date_of_creation[1] | split : "-" -%}
+                        {%- comment -%}<!--  string 2023-07-05--> {%- endcomment -%}
+
+                        <!-- date of creation array : {{date_of_creation}}-->
+
+
                         {%- assign day_of_creation = date_of_creation[2] -%}
-                        <!--  string 05-->
+                        {%- comment -%}<!--  string 05--> {%- endcomment -%}
+
                         {%- endif -%}
 
                         {%- assign color_for_index = "color_background_"| append : day_of_creation -%}
 
                         <li>
-                            <a class="{{color_for_index}}" href="{{ post.url | relative_url }}"> {{ post.title | escape }}</a>
+                            <a class="{{color_for_index}}" href="#{{post_id}}"> {{ post.title | escape }}</a>
                         </li>
                         {%- endfor -%}
 
@@ -313,7 +329,7 @@ layout : base
                         <header class="post-header">
 
                             {%- if post_title -%}
-                            <h1 id="#{{post_id}}" class="post-title" itemprop="name headline">
+                            <h1 id="{{post_id}}" class="post-title" itemprop="name headline">
                                 {{ post_title }}
                             </h1>
                             {%- endif -%}
