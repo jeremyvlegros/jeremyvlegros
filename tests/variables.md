@@ -448,3 +448,34 @@ Expecting working HTML and  title with slugified ID
 {{ </header>  }}
 
 ---
+ 
+
+## testing escaping curly brackets in code
+
+expected : "something" surrounded by curly brackets
+
+result  :
+
+```html
+&lcub;&lcub; something &rcub;&rcub;
+```
+
+## testing Jekyll example
+
+In the include file (everywhere with `include` should be surrounded by brackets)
+
+```html
+<figure>
+   <a href=" include.url ">
+   <img src=" include.file " style="max-width:  include.max-width ;"
+      alt=" include.alt "/>
+   </a>
+   <figcaption> include.caption </figcaption>
+</figure>
+```
+{% include testing_jekyll_example.html url="http://jekyllrb.com"
+max-width="200px" file="logo.png" alt="Jekyll logo"
+caption="This is the Jekyll logo." %}
+
+         
+
