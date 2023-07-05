@@ -480,14 +480,17 @@ result :
 
 ```
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-{{ result }}
+{%- comment -%} {{ result }} {%- endcomment -%}
 ```
 
 ## &#35;&#35; testing Jekyll `includes` as a sum function with capture
 expected :
+
 ```
 5 
 ```
+
+result :
 
 ```
 {%- capture result -%}
@@ -495,3 +498,5 @@ expected :
 {%- endcapture -%}
 {{ result }}
 ```
+
+#date 2023-07-05 20:24 1688574268628817348 GMT
