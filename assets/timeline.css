@@ -1,4 +1,4 @@
-/* #date 2023-07-05 14:16 1688552182483710533 GMT */
+/* #date 2023-07-05 15:10 1688555436059748542 GMT */
 
 /* dev stuff */
 .page-content
@@ -205,7 +205,7 @@
   /*box-shadow       : 1px 3px 1px 1px var(--color_post_shadow), 1px 3px 1px 1px var(--color_post_shadow);*/
   box-shadow      : 1px 3px 1px 1px #222, 1px 3px 1px 1px #222;
   width           : 100%;
-  font-weight     : lighter;
+  /*font-weight     : lighter;*/
 
 }
 
@@ -284,7 +284,8 @@
 .arrow_to_page_top .button
 {
   padding          : 6px;
-  color            : white;
+  color            : black;
+  background-color : white; /*temporary ?*/
   font-size        : 1.5em;
   border           : 2px solid black;
   border-radius    : 20px;
@@ -294,7 +295,8 @@
 .arrow_to_page_bottom .button
 {
   padding          : 6px;
-  color            : white;
+  color            : black;
+  background-color : white; /*temporary ?*/
   font-size        : 1.5em;
   border           : 2px solid black;
   border-radius    : 20px;
