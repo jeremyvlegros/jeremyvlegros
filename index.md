@@ -1,11 +1,14 @@
 ---
 title : website
-layout : index
-date_modified : "#date 2023-06-30 17:56 1688133365193749030 GMT"
+layout : post
+date_modified : #date 2023-07-05 21:02 1688576538424069652 GMT"
 ---
 
 
 N.B : this page is not meant to be seen.If you are there, well, you can look around, but expect for barebones and random changes.
 
-{{ page.date_modified }}
+
+[Timeline](https://jeremyvlegros.github.io/website/timeline.html)
+[Links](https://jeremyvlegros.github.io/website/links)
+
 
