@@ -526,4 +526,4 @@ expected :
 result :
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {%- assign print_array = page.print_array -%}
-{%- include print_array array=array_numbers -%}
+{%- include {{print_array}} array=array_numbers -%}
