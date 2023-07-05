@@ -457,7 +457,10 @@ expected : &lcub;&lcub; something &rcub;&rcub;
 result  :
 
 ```html
-{%- raw -%} {{ {%- endraw -%} something {%- raw -%} }} {%- endraw -%}
+{%- raw -%} {{ {%- endraw -%}
+something
+
+{%- raw -%} }} {%- endraw -%}
 ```
 
 ## testing Jekyll example
