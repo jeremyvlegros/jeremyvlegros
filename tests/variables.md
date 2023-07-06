@@ -551,7 +551,26 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 {{ about_me }}
 ```
 
-#date 2023-07-06 11:40 1688629253322847822 GMT
+#date 2023-07-06 11:45
 
 
+## &#35;&#35; testing Jekyll capture > content
 
+{% capture captured_text %}
+
+this is the text to capture
+
+{% endcapture %}
+
+expected :
+
+```
+this,is,the,text,to,capture
+```
+
+result :
+
+```
+{{ captured_text|replace : " ", "," }}
+```
+#date 2023-07-06 11:48
