@@ -469,7 +469,7 @@ result :
 {% include print_array.liquid array=array_numbers %}
 ```
 
-## &#35;&#35; testing Jekyll `includes` as a sum function
+## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
 
 expected :
 ```
@@ -480,12 +480,11 @@ result :
 
 ```
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-{%- comment -%} {{ result }} {%- endcomment -%}
 ```
 
-## &#35;&#35; testing Jekyll `includes` as a sum function with capture
-expected :
+## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
 
+expected :
 ```
 5 
 ```
@@ -493,10 +492,23 @@ expected :
 result :
 
 ```
-{%- capture result -%}
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-{%- endcapture -%}
+```
+
+
+## &#35;&#35; testing Jekyll `includes` as a sum function printing variable
+
+expected :
+```
+5 
+```
+
+result :
+
+```
+{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 {{ result }}
 ```
+#date 2023-07-06 11:14 1688627663004163310 GMT
 
-#date 2023-07-05 20:24 1688574268628817348 GMT
+
