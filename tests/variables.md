@@ -2,14 +2,13 @@
 title : "Title > Testing > variables"
 layout : post
 test_list :
-  - "a"
-  - "b"
-  - "c"
-print_array : print_array_content.html
+
+- "a"
+- "b"
+- "c"
+  print_array : print_array_content.html
+
 ---
-
-
-
 
 ## &#35;&#35; assigning a variable `test_list`
 
@@ -23,9 +22,9 @@ print_array : print_array_content.html
 
 ## &#35;&#35; printing a html character
 
-{% assign character  = ">" %}
-{% assign character  = character | replace : ">","&gt;" %}
-                                                 
+{% assign character = ">" %}
+{% assign character = character | replace : ">","&gt;" %}
+
 html character greater than "{{character}}"
 
 ```
@@ -37,10 +36,7 @@ html character greater than "{{character}}"
 {% endraw %}
 ```
 
-
-
 ## &#35;&#35; prefixing a html character by NBSP
-
 
 {% assign title = page.title %}
 {% if title %}
@@ -61,7 +57,7 @@ this should not break : {{title}}
 ```
 
 ## &#35;&#35; Accessing the local variable `test_list`
-         
+
 The loop :
 
 {% for value in test_list %}
@@ -85,8 +81,8 @@ printing `test_list` : `{{ test_list }}`
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {% endraw %}
 ```
-## &#35;&#35; the To string function `inspect`
 
+## &#35;&#35; the To string function `inspect`
 
 {% assign test_list = page.test_list%}
 The `test_list` as a string : `{{ test_list | inspect }}`
@@ -125,6 +121,7 @@ Unless 1 > 4 print 1 is smaller than 4
 
 {% endraw %}
 ```
+
 ## &#35;&#35; String contains
 
 {% if "abc" contains "a" %}
@@ -152,7 +149,6 @@ abc contains a
 ### &#35;&#35;&#35; `site.url`
 
 `{{site.url}}`
-
 
 ### &#35;&#35;&#35; `post.id` and `post.url`
 
@@ -204,7 +200,7 @@ POST URL : `{{post.url}}`
 
 I suspect this thing to only work in HTML but I won't rely on it ...
 
-"Dummy > something > something" : 
+"Dummy > something > something" :
 
 - value                         : {{ "Dummy > something > something" | slugify }}
 - expecting something like this : `dummy--something--something`
@@ -218,14 +214,14 @@ expected : "letter a"
 {% assign letter = "a" %}
 
 {% case letter %}
-  {% when "a" %}
-  `letter a`
-  {% when "b" %}
-  `letter b`
-  {% when "c" %}
-  `letter c`
-  {% else %}
-  `not a nor b nor c`
+{% when "a" %}
+`letter a`
+{% when "b" %}
+`letter b`
+{% when "c" %}
+`letter c`
+{% else %}
+`not a nor b nor c`
 {% endcase %}
 
 expected : "letter b"
@@ -233,30 +229,29 @@ expected : "letter b"
 {% assign letter = "b" %}
 
 {% case letter %}
-  {% when "a" %}
-  `letter a`
-  {% when "b" %}
-   `letter b`
-  {% when "c" %}
-  `letter c`
-  {% else %}
-  `not a nor b nor c`
+{% when "a" %}
+`letter a`
+{% when "b" %}
+`letter b`
+{% when "c" %}
+`letter c`
+{% else %}
+`not a nor b nor c`
 {% endcase %}
 
-
-expected : "not a nor b nor c" 
+expected : "not a nor b nor c"
 
 {% assign letter = "d" %}
 
 {% case letter %}
-  {% when "a" %}
-    `letter a`
-  {% when "b" %}
-    `letter b`
-  {% when "c" %}
-    `letter c`
-  {% else %}
-    `not a nor b nor c`
+{% when "a" %}
+`letter a`
+{% when "b" %}
+`letter b`
+{% when "c" %}
+`letter c`
+{% else %}
+`not a nor b nor c`
 {% endcase %}
 
 ```
@@ -310,37 +305,36 @@ expected : "not a nor b nor c"
 ```
 
 ### &#35;&#35;&#35; multiple cases / traversal / like in C
-                         
+
 expected : "a letter among a,b,c,d"
 
 {% assign letter = "a" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+a letter among a,b,c,d
+{% else %}
+not a letter among a,b,c,d
 {% endcase %}
 
 expected : "a letter among a,b,c,d"
 
 {% assign letter = "d" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d 
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+a letter among a,b,c,d
+{% else %}
+not a letter among a,b,c,d
 {% endcase %}
 
 expected : "not a letter among a,b,c,d"
 
 {% assign letter = "e" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d 
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+a letter among a,b,c,d
+{% else %}
+not a letter among a,b,c,d
 {% endcase %}
-
 
 ```
 {%raw%}
@@ -399,12 +393,13 @@ expected : "not a letter among a,b,c,d"
 In the include file (everywhere with `include` should be surrounded by brackets)
 
 ```html
+
 <figure>
-   <a href=" include.url ">
-   <img src=" include.file " style="max-width:  include.max-width ;"
-      alt=" include.alt "/>
-   </a>
-   <figcaption> include.caption </figcaption>
+    <a href=" include.url ">
+        <img src=" include.file " style="max-width:  include.max-width ;"
+             alt=" include.alt "/>
+    </a>
+    <figcaption> include.caption</figcaption>
 </figure>
 ```
 
@@ -427,6 +422,7 @@ expected :
 4
 5
 ```
+
 result :
 
 ```
@@ -434,8 +430,8 @@ result :
 {%- include print_array_content.html array = array_numbers -%}
 ```
 
-
 ## &#35;&#35; testing Jekyll `includes` as a function called with a variable
+
 expected :
 
 ```
@@ -454,6 +450,7 @@ result :
 ## &#35;&#35; testing Jekyll `includes` as a function with file extension `.liquid`
 
 expected
+
 ```
 1
 2
@@ -472,6 +469,7 @@ result :
 ## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
 
 expected :
+
 ```
 5 
 ```
@@ -485,6 +483,7 @@ result :
 ## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
 
 expected :
+
 ```
 5 
 ```
@@ -495,10 +494,27 @@ result :
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 ```
 
+```
+{%- raw -%}
+expected :
+
+
+5 
+
+
+result :
+
+
+{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+
+{%- endraw -%}
+```
+
 
 ## &#35;&#35; testing Jekyll `includes` as a sum function printing variable
 
 expected :
+
 ```
 5 
 ```
@@ -509,6 +525,37 @@ result :
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 {{ result }}
 ```
-#date 2023-07-06 11:14 1688627663004163310 GMT
+
+```
+{%- raw -%}
+expected :
+
+5 
 
 
+result :
+
+
+{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{{ result }}
+
+{%- endraw -%}
+```
+
+## &#35;&#35; testing Jekyll capture text
+
+{% capture captured_text %}
+
+{{ this is the text to capture }}
+
+{% capture %}
+
+expected :
+
+this is the text to capture
+
+result :
+
+{{ capture_text }}
+
+#date 2023-07-06 11:21 1688628072606545873 GMT
