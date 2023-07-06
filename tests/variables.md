@@ -390,16 +390,16 @@ expected : "not a letter among a,b,c,d"
 
 ## &#35;&#35; testing `Jekyll` `includes` example
 
-In the include file (everywhere with `include` should be surrounded by brackets)
+In the include file (everywhere `{include ...}` should be surrounded by another bracket, escaping double brackets is a headheck)
 
 ```html
 
 <figure>
-    <a href=" include.url ">
-        <img src=" include.file " style="max-width:  include.max-width ;"
-             alt=" include.alt "/>
+    <a href=" {include.url} ">
+        <img src=" {include.file} " style="max-width:  include.max-width ;"
+             alt=" {include.alt} "/>
     </a>
-    <figcaption> include.caption</figcaption>
+    <figcaption> {include.caption}</figcaption>
 </figure>
 ```
 
@@ -443,9 +443,12 @@ expected :
 ```
 
 result :
-{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
+
+```
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {%- assign print_array = page.print_array -%}
 {%- include {{print_array}} array=array_numbers -%}
+```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a function with file extension `.liquid`
 
@@ -592,5 +595,25 @@ result :
 {% endcapture %}
 {{ captured_text }}
 ```
+ 
 
-#date 2023-07-06 12:38 GMT
+
+## &#35;&#35; testing Jekyll `include` function without `.liquid` extension
+
+It should work, I saw things withtout `.html` many times ... 
+
+expected :
+
+```
+5
+```
+result :
+
+```
+{% capture captured_text %}
+  {%- include function_persistent_sum_of_a_and_b a=3 b=2 -%}
+{% endcapture %}
+{{ captured_text }}
+```
+
+#date 2023-07-06 12:51 GMT
