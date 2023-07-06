@@ -597,23 +597,4 @@ result :
 ```
  
 
-
-## &#35;&#35; testing Jekyll `include` function without `.liquid` extension
-
-It should work, I saw things withtout `.html` many times ... 
-
-expected :
-
-```
-5
-```
-result :
-
-```
-{% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b a=3 b=2 -%}
-{% endcapture %}
-{{ captured_text }}
-```
-
-#date 2023-07-06 12:51 GMT
+#date 2023-07-06 12:52 GMT
