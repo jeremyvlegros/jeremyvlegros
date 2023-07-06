@@ -2,10 +2,10 @@
 title : "Title > Testing > variables"
 layout : post
 test_list :
-
 - "a"
 - "b"
 - "c"
+
   print_array : print_array_content.html
 
 ---
