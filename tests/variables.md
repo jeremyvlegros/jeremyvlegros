@@ -12,57 +12,57 @@ print_array : print_array_content.html
 
 ## &#35;&#35; assigning a variable `test_list`
 
-{% assign test_list = page.test_list%}
+{%- assign test_list = page.test_list%}
 
 ```
 {%raw%}
-{% assign test_list = page.test_list%}
-{% endraw %}
+{%- assign test_list = page.test_list%}
+{%- endraw -%}
 ```
 
-## &#35;&#35; printing a html character
+## &#35;&#35; printing a `HTML` character
 
-{% assign character = ">" %}
-{% assign character = character | replace : ">","&gt;" %}
+{%- assign character = ">" -%}
+{%- assign character = character | replace : ">","&gt;" -%}
 
 html character greater than "{{character}}"
 
 ```
 {%raw%}
-{% assign character  = ">" %}
-{% assign character  = character | replace : ">","&gt;" %}
+{%- assign character  = ">" -%}
+{%- assign character  = character | replace : ">","&gt;" -%}
                                                  
 html character greater than "{{character}}"
-{% endraw %}
+{%- endraw -%}
 ```
 
-## &#35;&#35; prefixing a html character by NBSP
+## &#35;&#35; prefixing a HTML character by `NBSP`
 
-{% assign title = page.title %}
-{% if title %}
-{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
-{% endif %}
+{%- assign title = page.title -%}
+{%- if title -%}
+{%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
+{%- endif -%}
 
 this should not break : {{title}}
 
 ```
 {%raw%}
-{% assign title = page.title %}
-{% if title %}
-{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
-{% endif %}
+{%- assign title = page.title -%}
+{%- if title -%}
+{%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
+{%- endif -%}
 
 this should not break : {{title}}
-{% endraw %}
+{%- endraw -%}
 ```
 
 ## &#35;&#35; Accessing the local variable `test_list`
 
 The loop :
 
-{% for value in test_list %}
+{%- for value in test_list -%}
 value : {{ value }}
-{% endfor %}
+{%- endfor -%}
 
 printing `test_list` : `{{ test_list }}`
 
@@ -72,34 +72,34 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {%raw%}
 The loop :
 
-{% for value in test_list %}
+{%- for value in test_list -%}
 value : {{ value }}
-{% endfor %}
+{%- endfor -%}
 
 printing `test_list` : `{{ test_list }}`
 
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
-{% endraw %}
+{%- endraw -%}
 ```
 
 ## &#35;&#35; the To string function `inspect`
 
-{% assign test_list = page.test_list%}
+{%- assign test_list = page.test_list%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 
 ```
 {%raw%}
-{% assign test_list = page.test_list%}
+{%- assign test_list = page.test_list%}
 The `test_list` as a string : `{{ test_list | inspect }}`
-{% endraw %}
+{%- endraw -%}
 ```
 
-## &#35;&#35; Displaying Liquid results in code ?
+## &#35;&#35; Displaying `Liquid` results in code ?
 
 ```
-{% for value in test_list %}
+{%- for value in test_list -%}
 {{ value }}
-{% endfor %}
+{%- endfor -%}
 ```
 
 ## &#35;&#35; `unless`
@@ -107,36 +107,36 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 Unless 1 > 4 print 1 is smaller than 4
 
 ```
-{% unless 1 > 4 %}
+{%- unless 1 > 4 -%}
 1 is smaller than 4
-{% endunless %}
+{%- endunless -%}
 ```
 
 ```
 {%raw%}
 
-{% unless 1 > 4 %}
+{%- unless 1 > 4 -%}
 1 is smaller than 4
-{% endunless %}
+{%- endunless -%}
 
-{% endraw %}
+{%- endraw -%}
 ```
 
-## &#35;&#35; String contains
+## &#35;&#35; String `contains`
 
-{% if "abc" contains "a" %}
+{%- if "abc" contains "a" -%}
 abc contains a
-{% endif %}
+{%- endif -%}
 
 ```
 {%raw%}
-{% if "abc" contains "a" %}
+{%- if "abc" contains "a" -%}
 abc contains a
-{% endif %}
-{% endraw %}
+{%- endif -%}
+{%- endraw -%}
 ```
 
-## &#35;&#35; Accessing Jekyll variables
+## &#35;&#35; Accessing `Jekyll` variables
 
 ### &#35;&#35;&#35; `site.name`
 
@@ -164,7 +164,7 @@ POST ID : `{{post.id}}`
 POST URL : `{{post.url}}`
 </li>
 
-{% break %}
+{%- break -%}
 
 {%- endfor -%}
 
@@ -184,7 +184,7 @@ POST ID : `{{post.id}}`
 POST URL : `{{post.url}}`
 </li>
 
-{% break %}
+{%- break -%}
 
 {%- endfor -%}
 
@@ -192,11 +192,11 @@ POST URL : `{{post.url}}`
 {%- endraw -%}
 ```
 
-### &#35;&#35;&#35; constructed canonical page url (need to set name in `_config.yml`)
+### &#35;&#35;&#35; constructed canonical page `URL` (need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
-## &#35;&#35; Jekyll filter `slugify`
+## &#35;&#35; `Jekyll` filter `slugify`
 
 I suspect this thing to only work in HTML but I won't rely on it ...
 
@@ -211,163 +211,163 @@ I suspect this thing to only work in HTML but I won't rely on it ...
 
 expected : "letter a"
 
-{% assign letter = "a" %}
+{%- assign letter = "a" -%}
 
-{% case letter %}
-{% when "a" %}
+{%- case letter -%}
+{%- when "a" -%}
 `letter a`
-{% when "b" %}
+{%- when "b" -%}
 `letter b`
-{% when "c" %}
+{%- when "c" -%}
 `letter c`
-{% else %}
+{%- else -%}
 `not a nor b nor c`
-{% endcase %}
+{%- endcase -%}
 
 expected : "letter b"
 
-{% assign letter = "b" %}
+{%- assign letter = "b" -%}
 
-{% case letter %}
-{% when "a" %}
+{%- case letter -%}
+{%- when "a" -%}
 `letter a`
-{% when "b" %}
+{%- when "b" -%}
 `letter b`
-{% when "c" %}
+{%- when "c" -%}
 `letter c`
-{% else %}
+{%- else -%}
 `not a nor b nor c`
-{% endcase %}
+{%- endcase -%}
 
 expected : "not a nor b nor c"
 
-{% assign letter = "d" %}
+{%- assign letter = "d" -%}
 
-{% case letter %}
-{% when "a" %}
+{%- case letter -%}
+{%- when "a" -%}
 `letter a`
-{% when "b" %}
+{%- when "b" -%}
 `letter b`
-{% when "c" %}
+{%- when "c" -%}
 `letter c`
-{% else %}
+{%- else -%}
 `not a nor b nor c`
-{% endcase %}
+{%- endcase -%}
 
 ```
 {%raw%}
 expected : "letter a"
 
-{% assign letter = "a" %}
+{%- assign letter = "a" -%}
 
-{% case letter %}
-  {% when "a" %}
+{%- case letter -%}
+  {%- when "a" -%}
   `letter a`
-  {% when "b" %}
+  {%- when "b" -%}
   `letter b`
-  {% when "c" %}
+  {%- when "c" -%}
   `letter c`
-  {% else %}
+  {%- else -%}
   `not a nor b nor c`
-{% endcase %}
+{%- endcase -%}
 
 expected : "letter b"
 
-{% assign letter = "b" %}
+{%- assign letter = "b" -%}
 
-{% case letter %}
-  {% when "a" %}
+{%- case letter -%}
+  {%- when "a" -%}
   `letter a`
-  {% when "b" %}
+  {%- when "b" -%}
    `letter b`
-  {% when "c" %}
+  {%- when "c" -%}
   `letter c`
-  {% else %}
+  {%- else -%}
   `not a nor b nor c`
-{% endcase %}
+{%- endcase -%}
 
 
 expected : "not a nor b nor c" 
 
-{% assign letter = "d" %}
+{%- assign letter = "d" -%}
 
-{% case letter %}
-  {% when "a" %}
+{%- case letter -%}
+  {%- when "a" -%}
     `letter a`
-  {% when "b" %}
+  {%- when "b" -%}
     `letter b`
-  {% when "c" %}
+  {%- when "c" -%}
     `letter c`
-  {% else %}
+  {%- else -%}
     `not a nor b nor c`
-{% endcase %}
-{% endraw %}
+{%- endcase -%}
+{%- endraw -%}
 ```
 
-### &#35;&#35;&#35; multiple cases / traversal / like in C
+### &#35;&#35;&#35; multiple cases / traversal / like in `C`
 
 expected : "a letter among a,b,c,d"
 
-{% assign letter = "a" %}
-{% case letter %}
-{% when "a", "b", "c", "d" %}
+{%- assign letter = "a" -%}
+{%- case letter -%}
+{%- when "a", "b", "c", "d" -%}
 a letter among a,b,c,d
-{% else %}
+{%- else -%}
 not a letter among a,b,c,d
-{% endcase %}
+{%- endcase -%}
 
 expected : "a letter among a,b,c,d"
 
-{% assign letter = "d" %}
-{% case letter %}
-{% when "a", "b", "c", "d" %}
+{%- assign letter = "d" -%}
+{%- case letter -%}
+{%- when "a", "b", "c", "d" -%}
 a letter among a,b,c,d
-{% else %}
+{%- else -%}
 not a letter among a,b,c,d
-{% endcase %}
+{%- endcase -%}
 
 expected : "not a letter among a,b,c,d"
 
-{% assign letter = "e" %}
-{% case letter %}
-{% when "a", "b", "c", "d" %}
+{%- assign letter = "e" -%}
+{%- case letter -%}
+{%- when "a", "b", "c", "d" -%}
 a letter among a,b,c,d
-{% else %}
+{%- else -%}
 not a letter among a,b,c,d
-{% endcase %}
+{%- endcase -%}
 
 ```
 {%raw%}
 expected : "a letter among a,b,c,d"
 
-{% assign letter = "a" %}
-{% case letter %}
-  {% when "a", "b", "c", "d" %}
+{%- assign letter = "a" -%}
+{%- case letter -%}
+  {%- when "a", "b", "c", "d" -%}
     a letter among a,b,c,d
-  {% else %}
+  {%- else -%}
     not a letter among a,b,c,d
-{% endcase %}
+{%- endcase -%}
 
 expected : "a letter among a,b,c,d"
 
-{% assign letter = "d" %}
-{% case letter %}
-  {% when "a", "b", "c", "d" %}
+{%- assign letter = "d" -%}
+{%- case letter -%}
+  {%- when "a", "b", "c", "d" -%}
     a letter among a,b,c,d 
-  {% else %}
+  {%- else -%}
     not a letter among a,b,c,d
-{% endcase %}
+{%- endcase -%}
 
 expected : "not a letter among a,b,c,d"
 
-{% assign letter = "e" %}
-{% case letter %}
-  {% when "a", "b", "c", "d" %}
+{%- assign letter = "e" -%}
+{%- case letter -%}
+  {%- when "a", "b", "c", "d" -%}
     a letter among a,b,c,d 
-  {% else %}
+  {%- else -%}
     not a letter among a,b,c,d
-{% endcase %}
-{% endraw %}
+{%- endcase -%}
+{%- endraw -%}
 ```
 
 ## &#35;&#35; Accessing global variables `_config.yml`
@@ -375,20 +375,20 @@ expected : "not a letter among a,b,c,d"
 ### &#35;&#35;&#35; global variable social_links
 
 ```
-{% for link in site.social_links %}
+{%- for link in site.social_links -%}
 {{ link }}
-{% endfor %}
+{%- endfor -%}
 ```
 
-## &#35;&#35; Displaying an external image with HTML
+## &#35;&#35; Displaying an external image with `HTML`
 
 <img src="{{site.image_color_1}}" alt="image_color_1">
 
-## &#35;&#35; Displaying an external image in a Markdown link
+## &#35;&#35; Displaying an external image in a `Markdown` link
 
 ![image_color_1]({{site.image_color_1}})
 
-## &#35;&#35; testing Jekyll `includes` example
+## &#35;&#35; testing `Jekyll` `includes` example
 
 In the include file (everywhere with `include` should be surrounded by brackets)
 
@@ -411,7 +411,7 @@ caption="This is the Jekyll logo." %
 
 ```         
 
-## &#35;&#35; testing Jekyll `includes` as a function
+## &#35;&#35; testing `Jekyll` `includes` as a function
 
 expected :
 
@@ -426,11 +426,11 @@ expected :
 result :
 
 ```
-{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
 {%- include print_array_content.html array = array_numbers -%}
 ```
 
-## &#35;&#35; testing Jekyll `includes` as a function called with a variable
+## &#35;&#35; testing `Jekyll` `includes` as a function called with a variable
 
 expected :
 
@@ -443,11 +443,11 @@ expected :
 ```
 
 result :
-{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
 {%- assign print_array = page.print_array -%}
 {%- include {{print_array}} array=array_numbers -%}
 
-## &#35;&#35; testing Jekyll `includes` as a function with file extension `.liquid`
+## &#35;&#35; testing `Jekyll` `includes` as a function with file extension `.liquid`
 
 expected
 
@@ -462,11 +462,11 @@ expected
 result :
 
 ```
-{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{% include print_array.liquid array=array_numbers %}
+{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
+{%- include print_array.liquid array=array_numbers -%}
 ```
 
-## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
+## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
 
 expected :
 
@@ -480,7 +480,7 @@ result :
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 ```
 
-## &#35;&#35; testing Jekyll `includes` as a sum function not printing variable
+## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
 
 expected :
 
@@ -493,8 +493,9 @@ result :
 ```
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 ```
+FAILED
 
-## &#35;&#35; testing Jekyll `includes` as a sum function printing variable
+## &#35;&#35; testing `Jekyll` `includes` as a sum function printing variable
 
 expected :
 
@@ -509,13 +510,13 @@ result :
 {{ result }}
 ```
 
-## &#35;&#35; testing Jekyll capture text
+## &#35;&#35; testing `Jekyll` `capture` text
 
-{% capture captured_text %}
+{%- capture captured_text -%}
 
 this is the text to capture
 
-{% endcapture %}
+{%- endcapture -%}
 
 expected :
 
@@ -529,7 +530,7 @@ result :
 {{ captured_text }}
 ```
 
-## &#35;&#35; testing Jekyll capture Shopify example
+## &#35;&#35; testing `Jekyll` `capture` `Shopify` example
 
 expected :
 
@@ -540,12 +541,12 @@ I am 35 and my favourite food is pizza.
 result :
 
 ```
-{% assign favorite_food = "pizza" %}
-{% assign age = 35 %}
+{%- assign favorite_food = "pizza" -%}
+{%- assign age = 35 -%}
 
-{% capture about_me %}
+{%- capture about_me -%}
 I am {{ age }} and my favorite food is {{ favorite_food }}.
-{% endcapture %}
+{%- endcapture -%}
 
 
 {{ about_me }}
@@ -554,13 +555,13 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 #date 2023-07-06 11:45
 
 
-## &#35;&#35; testing Jekyll capture > content
+## &#35;&#35; testing `Jekyll` `capture` > content
 
-{% capture captured_text %}
+{%- capture captured_text -%}
 
 this is the text to capture
 
-{% endcapture %}
+{%- endcapture -%}
 
 expected :
 
@@ -574,3 +575,23 @@ result :
 {{ captured_text|replace : " ", "," }}
 ```
 #date 2023-07-06 11:48
+
+## &#35;&#35; testing Jekyll `capture` `include` without printing
+
+(at last ...)
+
+expected :
+
+```
+5
+```
+result :
+
+```
+{%- capture captured_text -%}
+  {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{%- endcapture -%}
+{{ captured_text }}
+```
+
+#date 2023-07-06 12:01 1688630487903140278 GMT
