@@ -515,7 +515,7 @@ result :
 
 {{ this is the text to capture }}
 
-{% capture %}
+{% endcapture %}
 
 expected :
 
