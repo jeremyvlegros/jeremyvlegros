@@ -525,5 +525,28 @@ result :
 
 {{ captured_text }}
 
-#date 2023-07-06 11:31 1688628704872330548 GMT
+
+## &#35;&#35; testing Jekyll capture Shopify example
+
+expected :
+
+`I am 35 and my favourite food is pizza.`
+                                       
+result :
+
+
+```
+{% assign favorite_food = "pizza" %}
+{% assign age = 35 %}
+
+{% capture about_me %}
+I am {{ age }} and my favorite food is {{ favorite_food }}.
+{% endcapture %}
+```
+
+{{ about_me }}
+
+
+#date 2023-07-06 11:36 1688629013058292957 GMT
+
 
