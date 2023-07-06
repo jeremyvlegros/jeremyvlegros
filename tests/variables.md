@@ -477,7 +477,7 @@ expected :
 result :
 
 ```
-{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
@@ -491,7 +491,7 @@ expected :
 result :
 
 ```
-{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 ```
 FAILED
 
@@ -506,7 +506,7 @@ expected :
 result :
 
 ```
-{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 {{ result }}
 ```
 
@@ -588,9 +588,9 @@ result :
 
 ```
 {% capture captured_text %}
-  {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
+  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 {% endcapture %}
 {{ captured_text }}
 ```
 
-#date 2023-07-06 12:10
+#date 2023-07-06 12:38 GMT
