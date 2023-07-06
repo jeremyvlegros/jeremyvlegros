@@ -494,23 +494,6 @@ result :
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 ```
 
-```
-{%- raw -%}
-expected :
-
-
-5 
-
-
-result :
-
-
-{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-
-{%- endraw -%}
-```
-
-
 ## &#35;&#35; testing Jekyll `includes` as a sum function printing variable
 
 expected :
@@ -524,22 +507,6 @@ result :
 ```
 {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
 {{ result }}
-```
-
-```
-{%- raw -%}
-expected :
-
-5 
-
-
-result :
-
-
-{%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-{{ result }}
-
-{%- endraw -%}
 ```
 
 ## &#35;&#35; testing Jekyll capture text
