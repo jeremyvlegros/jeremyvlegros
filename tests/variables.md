@@ -600,7 +600,7 @@ result :
 
 Resetting the `result` variable
 
-{%- assign result = null -%}
+{% assign result = null %}
 
 value of result before call include : `{{ result }}`
 
@@ -612,4 +612,21 @@ value of result after call include : `{{ result }}`
 
 #times 26
 
+## &#35;&#35; testing Jekyll `capture` `include` function non-persistent
+
+Resetting the `result` variable
+
+{% assign result = null %}
+
+value of result before call include : `{{ result }}`
+
+{% capture sum %}
+  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% endcapture %}
+
+value of result after call include : `{{ result }}`
  
+value of the function : `{{ sum }}`
+
+
+#times 33
