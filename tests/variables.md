@@ -513,27 +513,31 @@ result :
 
 {% capture captured_text %}
 
-{{ this is the text to capture }}
+this is the text to capture
 
 {% endcapture %}
 
 expected :
 
+```
 this is the text to capture
+```
 
 result :
 
+```
 {{ captured_text }}
-
+```
 
 ## &#35;&#35; testing Jekyll capture Shopify example
 
 expected :
 
-`I am 35 and my favourite food is pizza.`
+```
+I am 35 and my favourite food is pizza.
+```
                                        
 result :
-
 
 ```
 {% assign favorite_food = "pizza" %}
@@ -542,11 +546,12 @@ result :
 {% capture about_me %}
 I am {{ age }} and my favorite food is {{ favorite_food }}.
 {% endcapture %}
-```
+
 
 {{ about_me }}
+```
 
+#date 2023-07-06 11:40 1688629253322847822 GMT
 
-#date 2023-07-06 11:36 1688629013058292957 GMT
 
 
