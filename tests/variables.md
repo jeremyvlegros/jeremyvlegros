@@ -523,6 +523,6 @@ this is the text to capture
 
 result :
 
-{{ capture_text }}
+{{ captured_text }}
 
 #date 2023-07-06 11:21 1688628072606545873 GMT
