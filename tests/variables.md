@@ -596,5 +596,20 @@ result :
 {{ captured_text }}
 ```
  
+## &#35;&#35; testing Jekyll `capture` `include` internal variable persistency
 
-#date 2023-07-06 12:52 GMT
+Resetting the `result` variable
+
+{%- assign result = null -%}
+
+value of result before call include : `{{ result }}`
+
+{% capture captured_text %}
+  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% endcapture %}
+
+value of result after call include : `{{ result }}`
+
+#times 26
+
+ 
