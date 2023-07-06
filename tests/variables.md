@@ -15,9 +15,9 @@ print_array : print_array_content.html
 {%- assign test_list = page.test_list -%}
 
 ```
-{%- raw -%}
+{% raw %}
 {%- assign test_list = page.test_list -%}
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; printing a `HTML` character
@@ -28,12 +28,12 @@ print_array : print_array_content.html
 html character greater than "{{character}}"
 
 ```
-{%- raw -%}
+{% raw %}
 {%- assign character  = ">" -%}
 {%- assign character  = character | replace : ">","&gt;" -%}
                                                  
 html character greater than "{{character}}"
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; prefixing a HTML character by `NBSP`
@@ -46,14 +46,14 @@ html character greater than "{{character}}"
 this should not break : {{title}}
 
 ```
-{%- raw -%}
+{% raw %}
 {%- assign title = page.title -%}
 {%- if title -%}
 {%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
 {%- endif -%}
 
 this should not break : {{title}}
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; Accessing the local variable `test_list`
@@ -69,7 +69,7 @@ printing `test_list` : `{{ test_list }}`
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 ```
-{%- raw -%}
+{% raw %}
 The loop :
 
 {%- for value in test_list -%}
@@ -79,7 +79,7 @@ value : {{ value }}
 printing `test_list` : `{{ test_list }}`
 
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; the To string function `inspect`
@@ -88,10 +88,10 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 The `test_list` as a string : `{{ test_list | inspect }}`
 
 ```
-{%- raw -%}
+{% raw %}
 {%- assign test_list = page.test_list -%}
 The `test_list` as a string : `{{ test_list | inspect }}`
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; Displaying `Liquid` results in code ?
@@ -113,13 +113,13 @@ Unless 1 > 4 print 1 is smaller than 4
 ```
 
 ```
-{%- raw -%}
+{% raw %}
 
 {%- unless 1 > 4 -%}
 1 is smaller than 4
 {%- endunless -%}
 
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; String `contains`
@@ -129,11 +129,11 @@ abc contains a
 {%- endif -%}
 
 ```
-{%- raw -%}
+{% raw %}
 {%- if "abc" contains "a" -%}
 abc contains a
 {%- endif -%}
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; Accessing `Jekyll` variables
@@ -171,7 +171,7 @@ POST URL : `{{post.url}}`
 </ul>
 
 ```
-{%- raw -%}
+{% raw %}
 <ul>
 
 {%- for post in site.posts -%}
@@ -189,7 +189,7 @@ POST URL : `{{post.url}}`
 {%- endfor -%}
 
 </ul>
-{%- endraw -%}
+{% endraw %}
 ```
 
 ### &#35;&#35;&#35; constructed canonical page `URL` (need to set name in `_config.yml`)
@@ -255,7 +255,7 @@ expected : "not a nor b nor c"
 {%- endcase -%}
 
 ```
-{%- raw -%}
+{% raw %}
 expected : "letter a"
 
 {%- assign letter = "a" -%}
@@ -301,7 +301,7 @@ expected : "not a nor b nor c"
   {%- else -%}
     `not a nor b nor c`
 {%- endcase -%}
-{%- endraw -%}
+{% endraw %}
 ```
 
 ### &#35;&#35;&#35; multiple cases / traversal / like in `C`
@@ -337,7 +337,7 @@ not a letter among a,b,c,d
 {%- endcase -%}
 
 ```
-{%- raw -%}
+{% raw %}
 expected : "a letter among a,b,c,d"
 
 {%- assign letter = "a" -%}
@@ -367,7 +367,7 @@ expected : "not a letter among a,b,c,d"
   {%- else -%}
     not a letter among a,b,c,d
 {%- endcase -%}
-{%- endraw -%}
+{% endraw %}
 ```
 
 ## &#35;&#35; Accessing global variables `_config.yml`
