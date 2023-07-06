@@ -541,13 +541,12 @@ I am 35 and my favourite food is pizza.
 result :
 
 ```
-{%- assign favorite_food = "pizza" -%}
+{% assign favorite_food = "pizza" %}
 {%- assign age = 35 -%}
 
 {%- capture about_me -%}
 I am {{ age }} and my favorite food is {{ favorite_food }}.
 {%- endcapture -%}
-
 
 {{ about_me }}
 ```
@@ -588,10 +587,10 @@ expected :
 result :
 
 ```
-{%- capture captured_text -%}
+{% capture captured_text %}
   {%- include sum_of_two_numbers.liquid number_a=3 number_b=2 -%}
-{%- endcapture -%}
+{% endcapture %}
 {{ captured_text }}
 ```
 
-#date 2023-07-06 12:01 1688630487903140278 GMT
+#date 2023-07-06 12:10
