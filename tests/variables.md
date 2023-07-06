@@ -12,11 +12,11 @@ print_array : print_array_content.html
 
 ## &#35;&#35; assigning a variable `test_list`
 
-{%- assign test_list = page.test_list%}
+{%- assign test_list = page.test_list -%}
 
 ```
-{%raw%}
-{%- assign test_list = page.test_list%}
+{%- raw -%}
+{%- assign test_list = page.test_list -%}
 {%- endraw -%}
 ```
 
@@ -28,7 +28,7 @@ print_array : print_array_content.html
 html character greater than "{{character}}"
 
 ```
-{%raw%}
+{%- raw -%}
 {%- assign character  = ">" -%}
 {%- assign character  = character | replace : ">","&gt;" -%}
                                                  
@@ -46,7 +46,7 @@ html character greater than "{{character}}"
 this should not break : {{title}}
 
 ```
-{%raw%}
+{%- raw -%}
 {%- assign title = page.title -%}
 {%- if title -%}
 {%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
@@ -69,7 +69,7 @@ printing `test_list` : `{{ test_list }}`
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 ```
-{%raw%}
+{%- raw -%}
 The loop :
 
 {%- for value in test_list -%}
@@ -84,12 +84,12 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 ## &#35;&#35; the To string function `inspect`
 
-{%- assign test_list = page.test_list%}
+{%- assign test_list = page.test_list -%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 
 ```
-{%raw%}
-{%- assign test_list = page.test_list%}
+{%- raw -%}
+{%- assign test_list = page.test_list -%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 {%- endraw -%}
 ```
@@ -113,7 +113,7 @@ Unless 1 > 4 print 1 is smaller than 4
 ```
 
 ```
-{%raw%}
+{%- raw -%}
 
 {%- unless 1 > 4 -%}
 1 is smaller than 4
@@ -129,7 +129,7 @@ abc contains a
 {%- endif -%}
 
 ```
-{%raw%}
+{%- raw -%}
 {%- if "abc" contains "a" -%}
 abc contains a
 {%- endif -%}
@@ -255,7 +255,7 @@ expected : "not a nor b nor c"
 {%- endcase -%}
 
 ```
-{%raw%}
+{%- raw -%}
 expected : "letter a"
 
 {%- assign letter = "a" -%}
@@ -337,7 +337,7 @@ not a letter among a,b,c,d
 {%- endcase -%}
 
 ```
-{%raw%}
+{%- raw -%}
 expected : "a letter among a,b,c,d"
 
 {%- assign letter = "a" -%}
