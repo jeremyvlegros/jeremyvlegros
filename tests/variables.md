@@ -20,6 +20,10 @@ print_array : print_array_content.html
 {% endraw %}
 ```
 
+
+
+
+
 ## &#35;&#35; printing a `HTML` character
 
 {% assign character = ">" %}
@@ -198,7 +202,7 @@ POST URL : `{{post.url}}`
 
 ## &#35;&#35; `Jekyll` filter `slugify`
 
-I suspect this thing to only work in HTML but I won't rely on it ...
+I suspect this thing to only work in HTML, but I won't rely on it ...
 
 "Dummy > something > something" :
 
@@ -382,6 +386,7 @@ expected : "not a letter among a,b,c,d"
 
 ## &#35;&#35; Displaying an external image with `HTML`
 
+<!--suppress HtmlUnknownTarget -->
 <img src="{{site.image_color_1}}" alt="image_color_1">
 
 ## &#35;&#35; Displaying an external image in a `Markdown` link
@@ -392,24 +397,34 @@ expected : "not a letter among a,b,c,d"
 
 In the include file (everywhere `{include ...}` should be surrounded by another bracket, escaping double brackets is a headheck)
 
-```html
+`Liquid` file
 
+```liquid
+{% raw %}
 <figure>
-    <a href=" {include.url} ">
-        <img src=" {include.file} " style="max-width:  include.max-width ;"
-             alt=" {include.alt} "/>
+    <a href=" {{include.url}} ">
+        <img src=" {{include.file}} " style="max-width:  include.max-width ;"
+             alt=" {{include.alt}} "/>
     </a>
     <figcaption> {include.caption}</figcaption>
 </figure>
+{% endraw %}
 ```
 
-```html
 
-% include testing_jekyll_example.html url="http://jekyllrb.com"
+`HTML` file
+
+```liquid
+{% raw %}
+{% include testing_jekyll_example.html url="http://jekyllrb.com"
 max-width="200px" file="logo.png" alt="Jekyll logo"
-caption="This is the Jekyll logo." %
+caption="This is the Jekyll logo." %}
+{% endraw %}
+```
 
-```         
+
+
+
 
 ## &#35;&#35; testing `Jekyll` `includes` as a function
 
@@ -428,6 +443,13 @@ result :
 ```liquid
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {% include print_array_content.html array = array_numbers %}
+```
+
+```liquid
+{% raw %}
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% include print_array_content.html array = array_numbers %}
+{% endraw %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a function called with a variable
@@ -450,6 +472,15 @@ result :
 {% include {{print_array}} array=array_numbers %}
 ```
 
+```liquid
+{% raw %}
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% assign print_array = page.print_array %}
+{% include {{print_array}} array=array_numbers %}
+{% endraw %}
+```
+
+
 ## &#35;&#35; testing `Jekyll` `includes` as a function with file extension `.liquid`
 
 expected
@@ -469,6 +500,14 @@ result :
 {% include print_array.liquid array=array_numbers %}
 ```
 
+```liquid
+{% raw %}
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% include print_array.liquid array=array_numbers %}
+{% endraw %}
+```
+
+
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
 
 expected :
@@ -481,6 +520,12 @@ result :
 
 ```liquid
 {% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
+```
+
+```liquid
+{% raw %}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
+{% endraw %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
@@ -498,6 +543,12 @@ result :
 ```
 FAILED
 
+```liquid
+{% raw %}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
+{% endraw %}
+```
+
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function printing variable
 
 expected :
@@ -511,6 +562,13 @@ result :
 ```liquid
 {% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 {{ result }}
+```
+
+```liquid
+{% raw %}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
+{{ result }}
+{% endraw %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `capture` text
@@ -533,6 +591,16 @@ result :
 {{ captured_text }}
 ```
 
+```liquid
+{% raw %}
+{% capture captured_text %}
+  this is the text to capture
+{% endcapture %}
+
+{{ captured_text }}
+{% endraw %}
+```
+
 ## &#35;&#35; testing `Jekyll` `capture` `Shopify` example
 
 expected :
@@ -552,6 +620,19 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 {% endcapture %}
 
 {{ about_me }}
+```
+
+```liquid
+{% raw %}
+{% assign favorite_food = "pizza" %}
+{% assign age = 35 %}
+
+{% capture about_me %}
+I am {{ age }} and my favorite food is {{ favorite_food }}.
+{% endcapture %}
+
+{{ about_me }}
+{% endraw %}
 ```
 
 #date 2023-07-06 11:45
@@ -576,6 +657,20 @@ result :
 ```liquid
 {{ captured_text|replace : " ", "," }}
 ```
+
+```liquid
+{% raw %}
+
+{% capture captured_text %}
+  this is the text to capture
+{% endcapture %}
+
+{{ captured_text|replace : " ", "," }}
+{% endraw %}
+```
+
+
+
 #date 2023-07-06 11:48
 
 ## &#35;&#35; testing Jekyll `capture` `include` without printing
@@ -662,4 +757,4 @@ value of the function : `{{ sum }}`
 {% endraw %}
 ```
 ---
-#times 39
+#times 56
