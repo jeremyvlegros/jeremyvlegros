@@ -11,14 +11,14 @@
 {%- endif -%}
 
 {% comment %} option warnings {% endcomment %}
-{%- if _with_warnings -%}
+{%- if _with_warning -%}
     {%- if _this == null and _that == null -%}
-        {%- assign _with_warnings = "WARNING tested null values" -%}
+        {%- assign _with_warning = "WARNING tested null values" -%}
     {%- endif -%}
 {%- endif -%}
 
 {%- if _this != _that -%}
-    Failed test for `{{ this }} == {{ that }}`, {{ _with_warnings }}
+    Failed test for `{{ this }} == {{ that }}`, {{ _with_warning }}
 {%- endif -%}
 
 {% comment %} resetting the variables {% endcomment %}
