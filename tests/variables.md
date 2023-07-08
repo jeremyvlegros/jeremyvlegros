@@ -12,25 +12,25 @@ print_array : print_array_content.html
 
 ## &#35;&#35; assigning a variable `test_list`
 
-{%- assign test_list = page.test_list -%}
+{% assign test_list = page.test_list %}
 
 ```liquid
 {% raw %}
-{%- assign test_list = page.test_list -%}
+{% assign test_list = page.test_list %}
 {% endraw %}
 ```
 
 ## &#35;&#35; printing a `HTML` character
 
-{%- assign character = ">" -%}
-{%- assign character = character | replace : ">","&gt;" -%}
+{% assign character = ">" %}
+{% assign character = character | replace : ">","&gt;" %}
 
 html character greater than "{{character}}"
 
 ```liquid
 {% raw %}
-{%- assign character  = ">" -%}
-{%- assign character  = character | replace : ">","&gt;" -%}
+{% assign character  = ">" %}
+{% assign character  = character | replace : ">","&gt;" %}
                                                  
 html character greater than "{{character}}"
 {% endraw %}
@@ -38,19 +38,19 @@ html character greater than "{{character}}"
 
 ## &#35;&#35; prefixing a HTML character by `NBSP`
 
-{%- assign title = page.title -%}
-{%- if title -%}
-{%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
-{%- endif -%}
+{% assign title = page.title %}
+{% if title %}
+{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
+{% endif %}
 
 this should not break : {{title}}
 
 ```liquid
 {% raw %}
-{%- assign title = page.title -%}
-{%- if title -%}
-{%- assign title = title | escape | replace : " &gt;","&nbsp;&gt;" -%}
-{%- endif -%}
+{% assign title = page.title %}
+{% if title %}
+{% assign title = title | escape | replace : " &gt;","&nbsp;&gt;" %}
+{% endif %}
 
 this should not break : {{title}}
 {% endraw %}
@@ -60,9 +60,9 @@ this should not break : {{title}}
 
 The loop :
 
-{%- for value in test_list -%}
+{% for value in test_list %}
 value : {{ value }}
-{%- endfor -%}
+{% endfor %}
 
 printing `test_list` : `{{ test_list }}`
 
@@ -72,9 +72,9 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {% raw %}
 The loop :
 
-{%- for value in test_list -%}
+{% for value in test_list %}
 value : {{ value }}
-{%- endfor -%}
+{% endfor %}
 
 printing `test_list` : `{{ test_list }}`
 
@@ -84,12 +84,12 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
 ## &#35;&#35; the To string function `inspect`
 
-{%- assign test_list = page.test_list -%}
+{% assign test_list = page.test_list %}
 The `test_list` as a string : `{{ test_list | inspect }}`
 
 ```liquid
 {% raw %}
-{%- assign test_list = page.test_list -%}
+{% assign test_list = page.test_list %}
 The `test_list` as a string : `{{ test_list | inspect }}`
 {% endraw %}
 ```
@@ -97,9 +97,9 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 ## &#35;&#35; Displaying `Liquid` results in code ?
 
 ```liquid
-{%- for value in test_list -%}
+{% for value in test_list %}
 {{ value }}
-{%- endfor -%}
+{% endfor %}
 ```
 
 ## &#35;&#35; `unless`
@@ -107,32 +107,32 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 Unless 1 > 4 print 1 is smaller than 4
 
 ```liquid
-{%- unless 1 > 4 -%}
+{% unless 1 > 4 %}
 1 is smaller than 4
-{%- endunless -%}
+{% endunless %}
 ```
 
 ```liquid
 {% raw %}
 
-{%- unless 1 > 4 -%}
+{% unless 1 > 4 %}
 1 is smaller than 4
-{%- endunless -%}
+{% endunless %}
 
 {% endraw %}
 ```
 
 ## &#35;&#35; String `contains`
 
-{%- if "abc" contains "a" -%}
+{% if "abc" contains "a" %}
 abc contains a
-{%- endif -%}
+{% endif %}
 
 ```liquid
 {% raw %}
-{%- if "abc" contains "a" -%}
+{% if "abc" contains "a" %}
 abc contains a
-{%- endif -%}
+{% endif %}
 {% endraw %}
 ```
 
@@ -154,7 +154,7 @@ abc contains a
 
 <ul>
 
-{%- for post in site.posts -%}
+{% for post in site.posts %}
 
 <li>
 POST ID : `{{post.id}}`
@@ -164,9 +164,9 @@ POST ID : `{{post.id}}`
 POST URL : `{{post.url}}`
 </li>
 
-{%- break -%}
+{% break %}
 
-{%- endfor -%}
+{% endfor %}
 
 </ul>
 
@@ -174,7 +174,7 @@ POST URL : `{{post.url}}`
 {% raw %}
 <ul>
 
-{%- for post in site.posts -%}
+{% for post in site.posts %}
 
 <li>
 POST ID : `{{post.id}}`
@@ -184,9 +184,9 @@ POST ID : `{{post.id}}`
 POST URL : `{{post.url}}`
 </li>
 
-{%- break -%}
+{% break %}
 
-{%- endfor -%}
+{% endfor %}
 
 </ul>
 {% endraw %}
@@ -211,9 +211,9 @@ I suspect this thing to only work in HTML but I won't rely on it ...
 
 expected : "letter a"
 
-{%- assign letter = "a" -%}
+{% assign letter = "a" %}
 
-{%- case letter -%}
+{% case letter %}
 {% when "a" %}
 `letter a`
 {% when "b" %}
@@ -222,13 +222,13 @@ expected : "letter a"
 `letter c`
 {% else %}
 `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 
 expected : "letter b"
 
-{%- assign letter = "b" -%}
+{% assign letter = "b" %}
 
-{%- case letter -%}
+{% case letter %}
 {% when "a" %}
 `letter a`
 {% when "b" %}
@@ -237,13 +237,13 @@ expected : "letter b"
 `letter c`
 {% else %}
 `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 
 expected : "not a nor b nor c"
 
-{%- assign letter = "d" -%}
+{% assign letter = "d" %}
 
-{%- case letter -%}
+{% case letter %}
 {% when "a" %}
 `letter a`
 {% when "b" %}
@@ -252,55 +252,55 @@ expected : "not a nor b nor c"
 `letter c`
 {% else %}
 `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 
 ```liquid
 {% raw %}
 expected : "letter a"
 
-{%- assign letter = "a" -%}
+{% assign letter = "a" %}
 
-{%- case letter -%}
-  {%- when "a" -%}
+{% case letter %}
+  {% when "a" %}
   `letter a`
-  {%- when "b" -%}
+  {% when "b" %}
   `letter b`
-  {%- when "c" -%}
+  {% when "c" %}
   `letter c`
-  {%- else -%}
+  {% else %}
   `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 
 expected : "letter b"
 
-{%- assign letter = "b" -%}
+{% assign letter = "b" %}
 
-{%- case letter -%}
-  {%- when "a" -%}
+{% case letter %}
+  {% when "a" %}
   `letter a`
-  {%- when "b" -%}
+  {% when "b" %}
    `letter b`
-  {%- when "c" -%}
+  {% when "c" %}
   `letter c`
-  {%- else -%}
+  {% else %}
   `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 
 
 expected : "not a nor b nor c" 
 
-{%- assign letter = "d" -%}
+{% assign letter = "d" %}
 
-{%- case letter -%}
-  {%- when "a" -%}
+{% case letter %}
+  {% when "a" %}
     `letter a`
-  {%- when "b" -%}
+  {% when "b" %}
     `letter b`
-  {%- when "c" -%}
+  {% when "c" %}
     `letter c`
-  {%- else -%}
+  {% else %}
     `not a nor b nor c`
-{%- endcase -%}
+{% endcase %}
 {% endraw %}
 ```
 
@@ -308,65 +308,65 @@ expected : "not a nor b nor c"
 
 expected : "a letter among a,b,c,d"
 
-{%- assign letter = "a" -%}
-{%- case letter -%}
-{%- when "a", "b", "c", "d" -%}
+{% assign letter = "a" %}
+{% case letter %}
+{% when "a", "b", "c", "d" %}
 a letter among a,b,c,d
-{%- else -%}
+{% else %}
 not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 
 expected : "a letter among a,b,c,d"
 
-{%- assign letter = "d" -%}
-{%- case letter -%}
-{%- when "a", "b", "c", "d" -%}
+{% assign letter = "d" %}
+{% case letter %}
+{% when "a", "b", "c", "d" %}
 a letter among a,b,c,d
-{%- else -%}
+{% else %}
 not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 
 expected : "not a letter among a,b,c,d"
 
-{%- assign letter = "e" -%}
-{%- case letter -%}
-{%- when "a", "b", "c", "d" -%}
+{% assign letter = "e" %}
+{% case letter %}
+{% when "a", "b", "c", "d" %}
 a letter among a,b,c,d
-{%- else -%}
+{% else %}
 not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 
 ```liquid
 {% raw %}
 expected : "a letter among a,b,c,d"
 
-{%- assign letter = "a" -%}
-{%- case letter -%}
-  {%- when "a", "b", "c", "d" -%}
+{% assign letter = "a" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
     a letter among a,b,c,d
-  {%- else -%}
+  {% else %}
     not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 
 expected : "a letter among a,b,c,d"
 
-{%- assign letter = "d" -%}
-{%- case letter -%}
-  {%- when "a", "b", "c", "d" -%}
+{% assign letter = "d" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
     a letter among a,b,c,d 
-  {%- else -%}
+  {% else %}
     not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 
 expected : "not a letter among a,b,c,d"
 
-{%- assign letter = "e" -%}
-{%- case letter -%}
-  {%- when "a", "b", "c", "d" -%}
+{% assign letter = "e" %}
+{% case letter %}
+  {% when "a", "b", "c", "d" %}
     a letter among a,b,c,d 
-  {%- else -%}
+  {% else %}
     not a letter among a,b,c,d
-{%- endcase -%}
+{% endcase %}
 {% endraw %}
 ```
 
@@ -375,9 +375,9 @@ expected : "not a letter among a,b,c,d"
 ### &#35;&#35;&#35; global variable social_links
 
 ```liquid
-{%- for link in site.social_links -%}
+{% for link in site.social_links %}
 {{ link }}
-{%- endfor -%}
+{% endfor %}
 ```
 
 ## &#35;&#35; Displaying an external image with `HTML`
@@ -426,8 +426,8 @@ expected :
 result :
 
 ```liquid
-{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
-{%- include print_array_content.html array = array_numbers -%}
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% include print_array_content.html array = array_numbers %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a function called with a variable
@@ -446,8 +446,8 @@ result :
 
 ```liquid
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- assign print_array = page.print_array -%}
-{%- include {{print_array}} array=array_numbers -%}
+{% assign print_array = page.print_array %}
+{% include {{print_array}} array=array_numbers %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a function with file extension `.liquid`
@@ -465,8 +465,8 @@ expected
 result :
 
 ```liquid
-{%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
-{%- include print_array.liquid array=array_numbers -%}
+{% assign array_numbers = "1,2,3,4,5" | split : ',' %}
+{% include print_array.liquid array=array_numbers %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
@@ -480,7 +480,7 @@ expected :
 result :
 
 ```liquid
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 ```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
@@ -494,7 +494,7 @@ expected :
 result :
 
 ```liquid
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 ```
 FAILED
 
@@ -509,17 +509,17 @@ expected :
 result :
 
 ```liquid
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 {{ result }}
 ```
 
 ## &#35;&#35; testing `Jekyll` `capture` text
 
-{%- capture captured_text -%}
+{% capture captured_text %}
 
 this is the text to capture
 
-{%- endcapture -%}
+{% endcapture %}
 
 expected :
 
@@ -545,11 +545,11 @@ result :
 
 ```liquid
 {% assign favorite_food = "pizza" %}
-{%- assign age = 35 -%}
+{% assign age = 35 %}
 
-{%- capture about_me -%}
+{% capture about_me %}
 I am {{ age }} and my favorite food is {{ favorite_food }}.
-{%- endcapture -%}
+{% endcapture %}
 
 {{ about_me }}
 ```
@@ -559,11 +559,11 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 
 ## &#35;&#35; testing `Jekyll` `capture` > content
 
-{%- capture captured_text -%}
+{% capture captured_text %}
 
 this is the text to capture
 
-{%- endcapture -%}
+{% endcapture %}
 
 expected :
 
@@ -591,7 +591,7 @@ result :
 
 ```liquid
 {% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 {% endcapture %}
 {{ captured_text }}
 ```
@@ -605,7 +605,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -619,7 +619,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -636,7 +636,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture sum %}
-  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {% include function_sum_of_a_and_b.liquid a=3 b=2 %}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -652,7 +652,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture sum %}
-  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {% include function_sum_of_a_and_b.liquid a=3 b=2 %}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -662,4 +662,4 @@ value of the function : `{{ sum }}`
 {% endraw %}
 ```
 ---
-#times 24
+#times 39
