@@ -4,25 +4,88 @@
 {%- assign _this = include.this -%}
 {%- assign _that = include.that -%}
 {%- assign _with_warning = include.with_warning -%}
+{%- assign _with_success = include.with_success -%}
+{%- assign _with_test_name = include.test_name -%}
+{%- assign _with_version = include.with_version -%}
 
 {% comment %} dealing with empty strings {% endcomment %}
+
 {%- if _with_warning == "" -%}
+    {% comment %}resetting{% endcomment %}
     {%- assign _with_warning = null -%}
+{%- endif -%}
+
+{%- if _with_success == "" -%}
+    {% comment %}resetting{% endcomment %}
+    {%- assign _with_success = null -%}
+{%- endif -%}
+
+{%- if _with_test_name == "" -%}
+    {% comment %}resetting{% endcomment %}
+    {%- assign _with_test_name = null -%}
+{%- endif -%}
+
+{%- if _with_version == "" -%}
+    {% comment %}resetting{% endcomment %}
+    {%- assign _with_version = null -%}
+{%- endif -%}
+
+{% comment %} option with version{% endcomment %}
+{%- if _with_version -%}
+    {% comment %} formatting version => `version version_name ` >{% endcomment %}
+    {%- assign _with_version = "version `"|  append : _with_version | append : " >"-%}
+{%- endif -%}
+
+{% comment %} option with test name{% endcomment %}
+{%- if _with_test_name -%}
+    {% comment %} option with version {% endcomment %}
+    {%- if _with_version -%}
+        {% comment %} formatting test name => test : `test_name` version >{% endcomment %}
+        {%- assign _with_test_name = "test : `" |  append : _with_test_name | append : "`" | append : _with_version -%}
+    {%- else -%}
+        {% comment %} formatting test name => test : `test_name` >{% endcomment %}
+        {%- assign _with_test_name = "test : `" |  append : _with_test_name | append : "` > "-%}
+    {% endif %}
 {%- endif -%}
 
 {% comment %} option warnings {% endcomment %}
 {%- if _with_warning -%}
+    {% comment %} null == null {% endcomment %}
     {%- if _this == null and _that == null -%}
-        {%- assign _with_warning = "WARNING tested null values" -%}
+        {% comment %} warning contains a message {% endcomment %}
+        {%- assign _with_warning = "> WARNING tested null values" -%}
     {%- endif -%}
+    {% comment %} null == ""{% endcomment %}
+    {%- if _this == null and _that == "" -%}
+        {% comment %} warning contains a message {% endcomment %}
+        {%- assign _with_warning = _with_warning | append: "> WARNING tested null value `this` and empty string `that`" -%}
+    {%- endif -%}
+
+    {% comment %} "" == null {% endcomment %}
+    {%- if _this == "" and _that == null -%}
+        {% comment %} warning contains a message {% endcomment %}
+        {%- assign _with_warning = _with_warning | append: "> WARNING tested empty string `this` and null value `that`" -%}
+    {%- endif -%}
+   
 {%- endif -%}
 
+{% comment %} failed test {% endcomment %}
 {%- if _this != _that -%}
-    Failed test for `{{ this }} == {{ that }}`, {{ _with_warning }}
+    {% comment %} fail message {% endcomment %}
+    Failed test for {{_with_test_name}}`{{_with_version}}{{this}} == {{that}}`{{_with_warning}}
+    {% comment %} succesfull test {% endcomment %}
+{%- else -%}
+    {% comment %} option with success {% endcomment %}
+    {%- if _with_success -%}
+        {% comment %} succesfull message {% endcomment %}
+        Successfull test for {{_with_test_name}}`{{_with_version}}{{this}} == {{that}}`{{_with_warning}}
+    {%- endif -%}
 {%- endif -%}
 
 {% comment %} resetting the variables {% endcomment %}
 {%- assign _this = null -%}
 {%- assign _that = null -%}
 {%- assign _with_warning = null -%}
-{%- assign _final = null -%}
+{%- assign _with_success = null -%}
+{%- assign _with_test_name = null -%}
+{%- assign _with_version = null -%}
