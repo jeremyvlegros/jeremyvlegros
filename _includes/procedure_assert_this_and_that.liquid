@@ -1,0 +1,28 @@
+{% comment %} it does not check types nor strip spaces {% endcomment %}
+
+{% comment %} initialization {% endcomment %}
+{%- assign _this = include.this -%}
+{%- assign _that = include.that -%}
+{%- assign _with_warning = include.with_warning -%}
+
+{% comment %} dealing with empty strings {% endcomment %}
+{%- if _with_warning == "" -%}
+    {%- assign _with_warning = null -%}
+{%- endif -%}
+
+{% comment %} option warnings {% endcomment %}
+{%- if _with_warnings -%}
+    {%- if _this == null and _that == null -%}
+        {%- assign _with_warnings = "WARNING tested null values" -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- if _this != _that -%}
+    Failed test for `{{ this }} == {{ that }}`, {{ _with_warnings }}
+{%- endif -%}
+
+{% comment %} resetting the variables {% endcomment %}
+{%- assign _this = null -%}
+{%- assign _that = null -%}
+{%- assign _with_warning = null -%}
+{%- assign _final = null -%}
