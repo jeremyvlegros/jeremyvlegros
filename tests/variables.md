@@ -14,7 +14,7 @@ print_array : print_array_content.html
 
 {%- assign test_list = page.test_list -%}
 
-```
+```liquid
 {% raw %}
 {%- assign test_list = page.test_list -%}
 {% endraw %}
@@ -27,7 +27,7 @@ print_array : print_array_content.html
 
 html character greater than "{{character}}"
 
-```
+```liquid
 {% raw %}
 {%- assign character  = ">" -%}
 {%- assign character  = character | replace : ">","&gt;" -%}
@@ -45,7 +45,7 @@ html character greater than "{{character}}"
 
 this should not break : {{title}}
 
-```
+```liquid
 {% raw %}
 {%- assign title = page.title -%}
 {%- if title -%}
@@ -68,7 +68,7 @@ printing `test_list` : `{{ test_list }}`
 
 printing `test_list`  as json :  `{{ test_list | jsonify}}`
 
-```
+```liquid
 {% raw %}
 The loop :
 
@@ -87,7 +87,7 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {%- assign test_list = page.test_list -%}
 The `test_list` as a string : `{{ test_list | inspect }}`
 
-```
+```liquid
 {% raw %}
 {%- assign test_list = page.test_list -%}
 The `test_list` as a string : `{{ test_list | inspect }}`
@@ -96,7 +96,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 
 ## &#35;&#35; Displaying `Liquid` results in code ?
 
-```
+```liquid
 {%- for value in test_list -%}
 {{ value }}
 {%- endfor -%}
@@ -106,13 +106,13 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 
 Unless 1 > 4 print 1 is smaller than 4
 
-```
+```liquid
 {%- unless 1 > 4 -%}
 1 is smaller than 4
 {%- endunless -%}
 ```
 
-```
+```liquid
 {% raw %}
 
 {%- unless 1 > 4 -%}
@@ -128,7 +128,7 @@ Unless 1 > 4 print 1 is smaller than 4
 abc contains a
 {%- endif -%}
 
-```
+```liquid
 {% raw %}
 {%- if "abc" contains "a" -%}
 abc contains a
@@ -214,13 +214,13 @@ expected : "letter a"
 {%- assign letter = "a" -%}
 
 {%- case letter -%}
-{%- when "a" -%}
+{% when "a" %}
 `letter a`
-{%- when "b" -%}
+{% when "b" %}
 `letter b`
-{%- when "c" -%}
+{% when "c" %}
 `letter c`
-{%- else -%}
+{% else %}
 `not a nor b nor c`
 {%- endcase -%}
 
@@ -229,13 +229,13 @@ expected : "letter b"
 {%- assign letter = "b" -%}
 
 {%- case letter -%}
-{%- when "a" -%}
+{% when "a" %}
 `letter a`
-{%- when "b" -%}
+{% when "b" %}
 `letter b`
-{%- when "c" -%}
+{% when "c" %}
 `letter c`
-{%- else -%}
+{% else %}
 `not a nor b nor c`
 {%- endcase -%}
 
@@ -244,17 +244,17 @@ expected : "not a nor b nor c"
 {%- assign letter = "d" -%}
 
 {%- case letter -%}
-{%- when "a" -%}
+{% when "a" %}
 `letter a`
-{%- when "b" -%}
+{% when "b" %}
 `letter b`
-{%- when "c" -%}
+{% when "c" %}
 `letter c`
-{%- else -%}
+{% else %}
 `not a nor b nor c`
 {%- endcase -%}
 
-```
+```liquid
 {% raw %}
 expected : "letter a"
 
@@ -336,7 +336,7 @@ a letter among a,b,c,d
 not a letter among a,b,c,d
 {%- endcase -%}
 
-```
+```liquid
 {% raw %}
 expected : "a letter among a,b,c,d"
 
@@ -374,7 +374,7 @@ expected : "not a letter among a,b,c,d"
 
 ### &#35;&#35;&#35; global variable social_links
 
-```
+```liquid
 {%- for link in site.social_links -%}
 {{ link }}
 {%- endfor -%}
@@ -425,7 +425,7 @@ expected :
 
 result :
 
-```
+```liquid
 {%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
 {%- include print_array_content.html array = array_numbers -%}
 ```
@@ -444,7 +444,7 @@ expected :
 
 result :
 
-```
+```liquid
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
 {%- assign print_array = page.print_array -%}
 {%- include {{print_array}} array=array_numbers -%}
@@ -464,7 +464,7 @@ expected
 
 result :
 
-```
+```liquid
 {%- assign array_numbers = "1,2,3,4,5" | split : ',' -%}
 {%- include print_array.liquid array=array_numbers -%}
 ```
@@ -479,7 +479,7 @@ expected :
 
 result :
 
-```
+```liquid
 {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 ```
 
@@ -493,7 +493,7 @@ expected :
 
 result :
 
-```
+```liquid
 {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 ```
 FAILED
@@ -508,7 +508,7 @@ expected :
 
 result :
 
-```
+```liquid
 {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 {{ result }}
 ```
@@ -529,7 +529,7 @@ this is the text to capture
 
 result :
 
-```
+```liquid
 {{ captured_text }}
 ```
 
@@ -543,7 +543,7 @@ I am 35 and my favourite food is pizza.
                                        
 result :
 
-```
+```liquid
 {% assign favorite_food = "pizza" %}
 {%- assign age = 35 -%}
 
@@ -573,7 +573,7 @@ this,is,the,text,to,capture
 
 result :
 
-```
+```liquid
 {{ captured_text|replace : " ", "," }}
 ```
 #date 2023-07-06 11:48
@@ -589,7 +589,7 @@ expected :
 ```
 result :
 
-```
+```liquid
 {% capture captured_text %}
   {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
 {% endcapture %}
@@ -610,7 +610,22 @@ value of result before call include : `{{ result }}`
 
 value of result after call include : `{{ result }}`
 
-#times 26
+```liquid
+{% raw %}
+Resetting the `result` variable
+
+{% assign result = null %}
+
+value of result before call include : `{{ result }}`
+
+{% capture captured_text %}
+  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% endcapture %}
+
+value of result after call include : `{{ result }}`
+{% endraw %}
+```
+
 
 ## &#35;&#35; testing Jekyll `capture` `include` function non-persistent
 
@@ -628,5 +643,23 @@ value of result after call include : `{{ result }}`
  
 value of the function : `{{ sum }}`
 
+```liquid
+{% raw %}
+Resetting the `result` variable
 
-#times 33
+{% assign result = null %}
+
+value of result before call include : `{{ result }}`
+
+{% capture sum %}
+  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+{% endcapture %}
+
+value of result after call include : `{{ result }}`
+ 
+value of the function : `{{ sum }}`
+
+{% endraw %}
+```
+---
+#times 24
