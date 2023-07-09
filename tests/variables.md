@@ -1,5 +1,5 @@
 ---
-title : "Title > Testing > variables"
+title : "Learning `Jekyll` and `Liquid`"
 layout : post
 test_list :
 - "a"
@@ -528,26 +528,6 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
-
-expected :
-
-```
-5 
-```
-
-result :
-
-```liquid
-{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
-```
-FAILED
-
-```liquid
-{% raw %}
-{% include function_persistent_sum_of_a_and_b.liquid a=3 b=2 %}
-{% endraw %}
-```
 
 ## &#35;&#35; testing `Jekyll` `includes` as a sum function printing variable
 
@@ -691,7 +671,7 @@ result :
 {{ captured_text }}
 ```
  
-## &#35;&#35; testing Jekyll `capture` `include` internal variable persistency
+## &#35;&#35; testing `Jekyll` `capture` `include` internal variable persistency
 
 Resetting the `result` variable
 
@@ -722,7 +702,7 @@ value of result after call include : `{{ result }}`
 ```
 
 
-## &#35;&#35; testing Jekyll `capture` `include` function non-persistent
+## &#35;&#35; testing `Jekyll` `capture` `include` function non-persistent
 
 Resetting the `result` variable
 
@@ -756,5 +736,55 @@ value of the function : `{{ sum }}`
 
 {% endraw %}
 ```
+## &#35;&#35; testing `Jekyll` `liquid` assert
+
+expected success for 1 == 1
+
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=1 that=1 %}
+ {% endcapture %}
+```
+
+expected failure for 1 == 0 
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=1 that=0 %}
+ {% endcapture %}
+```
+expected failure for 0 == ""
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=0 that="" %}
+ {% endcapture %}
+``` 
+expected failure for null == 0
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=null that=0 %}
+ {% endcapture %}
+``` 
+expected failure for null == ""
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=null that="" %}
+ {% endcapture %}
+``` 
+expected success for null == null
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=null that=null %}
+ {% endcapture %}
+``` 
+
+expected success for "" == ""
+```liquid
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this="" that="" %}
+ {% endcapture %}
+``` 
+
+
+
 ---
-#times 56
+#times 28
