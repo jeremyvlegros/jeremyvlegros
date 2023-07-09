@@ -742,49 +742,94 @@ expected success for 1 == 1
 
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=1 that=1 with_success=1%}
+ {% include procedure_assert_this_and_that.liquid this=1 that=1 with_success=1 with_warning=1 %}
  {% endcapture %}{{test}}
 ```
 
 expected failure for 1 == 0 
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=1 that=0 %}
+ {% include procedure_assert_this_and_that.liquid this=1 that=0 with_warning=1%}
  {% endcapture %}{{test}}
 ```
 expected failure for 0 == ""
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=0 that="" %}
+ {% include procedure_assert_this_and_that.liquid this=0 that="" with_warning=1%}
  {% endcapture %}{{test}}
 ``` 
 expected failure for null == 0
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=null that=0 %}
+ {% include procedure_assert_this_and_that.liquid this=null that=0 with_warning=1%}
  {% endcapture %}{{test}}
 ``` 
 expected failure for null == ""
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=null that="" %}
+ {% include procedure_assert_this_and_that.liquid this=null that="" with_warning=1%}
  {% endcapture %}{{test}}
 ``` 
 expected success for null == null
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=null that=null with_success=1%}
+ {% include procedure_assert_this_and_that.liquid this=null that=null with_success=1 with_warning=1%}
  {% endcapture %}{{test}}
 ``` 
 
 expected success for "" == ""
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this="" that="" with_success=1 %}
+ {% include procedure_assert_this_and_that.liquid this="" that="" with_success=1 with_warning=1%}
+ {% endcapture %}{{test}}
+``` 
+
+expected success for ["1,2,3"] == ["1,2,3"]
+
+```liquid
+{% comment %} not taking chances {% endcomment %}
+{% assign array_1 = null %}
+{% assign array_2 = null %}
+
+{% assign array_1 = "1,2,3"|split : "," %}
+{% assign array_2 = "1,2,3"|split : "," %}
+
+
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1%}
+ {% endcapture %}{{test}}
+``` 
+
+expected success for [""] == [""]
+
+```liquid
+{% comment %} not taking chances {% endcomment %}
+{% assign array_1 = null %}
+{% assign array_2 = null %}
+
+{% assign array_1 = ",,"|split : "," %}
+{% assign array_2 = ",,"|split : "," %}
+
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1%}
+ {% endcapture %}{{test}}
+``` 
+
+expected failure for ["1,2,4"] == ["1,2,3"]
+
+```liquid
+{% comment %} not taking chances {% endcomment %}
+{% assign array_1 = null %}
+{% assign array_2 = null %}
+
+{% assign array_1 = "1,2,4"|split : "," %}
+{% assign array_2 = "1,2,3"|split : "," %}
+
+ {% capture test %}
+ {% include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1%}
  {% endcapture %}{{test}}
 ``` 
 
 
-
 ---
-#times 34
+#times 48
