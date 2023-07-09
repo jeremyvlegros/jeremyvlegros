@@ -1,4 +1,4 @@
-{%- assign _date = include.date -%}
+{%- assign _date = include.custom_date -%}
 {%-comment-%} Dealing with empty string {%-endcomment-%}
 
 {%- if _date == "" -%}
@@ -10,7 +10,7 @@
 
     {%-comment-%}
     date without "#date " and " GMT"
-        input  : "#date 2023-06-28 05:16 1687914994970097614 GMT
+        input  : "#date 2023-06-28 05:16 1687914994970097614 GMT"
         output : "2023-06-28 05:16 1687914994970097614"
     {%-endcomment-%}
     {%- assign _date = _date | replace: "#date ", "" | replace: " GMT", "" %}
@@ -58,6 +58,7 @@
     {%- assign _date = _date | append: _time | append: "," | append: _id -%}
 
     {% comment %} return {% endcomment %}
+    <!-- version #date 2023-07-09 13:13 1688894026323152323 GMT -->
     {{ _date }}
 
     {% comment %} resetting the variables {% endcomment %}
