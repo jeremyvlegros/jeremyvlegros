@@ -140,21 +140,19 @@ abc contains a
 {% endraw %}
 ```
 
-## &#35;&#35; Accessing `Jekyll` variables
-
-### &#35;&#35;&#35; `site.name`
+## &#35;&#35; Accessing `Jekyll` variables >`site.name`
 
 `{{site.name}}`
 
-### &#35;&#35;&#35; `page.url`
+## &#35;&#35; Accessing `Jekyll` variables >`page.url`
 
 `{{page.url}}`
 
-### &#35;&#35;&#35; `site.url`
+## &#35;&#35; Accessing `Jekyll` variables >`site.url`
 
 `{{site.url}}`
 
-### &#35;&#35;&#35; `post.id` and `post.url`
+## &#35;&#35; Accessing `Jekyll` variables > `post.id` and `post.url`
 
 <ul>
 
@@ -196,11 +194,19 @@ POST URL : `{{post.url}}`
 {% endraw %}
 ```
 
-### &#35;&#35;&#35; constructed canonical page `URL` (need to set name in `_config.yml`)
+## &#35;&#35; constructed canonical page `URL` 
+
+(need to set name in `_config.yml`)
 
 `{{ site.url | append :"/" | append : site.name | append : page.url }}`
 
-## &#35;&#35; `Jekyll` filter `slugify`
+```liquid
+{% raw %}
+`{{ site.url | append :"/" | append : site.name | append : page.url }}`
+{% endraw %}
+```
+
+## &#35;&#35; ## &#35;&#35;  filter `slugify`
 
 I suspect this thing to only work in HTML, but I won't rely on it ...
 
@@ -393,7 +399,7 @@ expected : "not a letter among a,b,c,d"
 
 ![image_color_1]({{site.image_color_1}})
 
-## &#35;&#35; testing `Jekyll` `includes` example
+## &#35;&#35; `Jekyll` > `includes` > testing  example
 
 In the include file (everywhere `{include ...}` should be surrounded by another bracket, escaping double brackets is a headheck)
 
@@ -423,10 +429,7 @@ caption="This is the Jekyll logo." %}
 ```
 
 
-
-
-
-## &#35;&#35; testing `Jekyll` `includes` as a function
+## &#35;&#35; `includes` > testing as a function
 
 expected :
 
@@ -452,7 +455,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; testing `Jekyll` `includes` as a function called with a variable
+## &#35;&#35; `includes` > as a function called with a variable
 
 expected :
 
@@ -481,7 +484,7 @@ result :
 ```
 
 
-## &#35;&#35; testing `Jekyll` `includes` as a function with file extension `.liquid`
+## &#35;&#35; `includes` > as a function with file extension `.liquid`
 
 expected
 
@@ -508,7 +511,7 @@ result :
 ```
 
 
-## &#35;&#35; testing `Jekyll` `includes` as a sum function not printing variable
+## &#35;&#35; `includes` > as a sum function not printing variable
 
 expected :
 
@@ -529,7 +532,7 @@ result :
 ```
 
 
-## &#35;&#35; testing `Jekyll` `includes` as a sum function printing variable
+## &#35;&#35; `includes` > as a sum function printing variable
 
 expected :
 
@@ -551,7 +554,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; testing `Jekyll` `capture` text
+## &#35;&#35; `capture` > testing text
 
 {% capture captured_text %}
 
@@ -581,7 +584,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; testing `Jekyll` `capture` `Shopify` example
+## &#35;&#35; `capture` >`Shopify` > example
 
 expected :
 
@@ -618,7 +621,7 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 #date 2023-07-06 11:45
 
 
-## &#35;&#35; testing `Jekyll` `capture` > content
+## &#35;&#35; `capture` > testing content
 
 {% capture captured_text %}
 
@@ -653,7 +656,7 @@ result :
 
 #date 2023-07-06 11:48
 
-## &#35;&#35; testing Jekyll `capture` `include` without printing
+## &#35;&#35; `capture` > `include` > without printing
 
 (at last ...)
 
@@ -671,7 +674,7 @@ result :
 {{ captured_text }}
 ```
  
-## &#35;&#35; testing `Jekyll` `capture` `include` internal variable persistency
+## &#35;&#35; `capture` > `include` > internal variable persistency
 
 Resetting the `result` variable
 
@@ -702,7 +705,7 @@ value of result after call include : `{{ result }}`
 ```
 
 
-## &#35;&#35; testing `Jekyll` `capture` `include` function non-persistent
+## &#35;&#35; `capture` >`include` > function non-persistent
 
 Resetting the `result` variable
 
@@ -736,7 +739,7 @@ value of the function : `{{ sum }}`
 
 {% endraw %}
 ```
-## &#35;&#35; testing `Jekyll` `liquid` assert
+## &#35;&#35;  testing my assert procedure
 
 expected success for 1 == 1
 
@@ -830,6 +833,28 @@ expected failure for ["1,2,4"] == ["1,2,3"]
  {% endcapture %}{{test}}
 ``` 
 
+## &#35;&#35; testing my date function
+
+```liquid
+{% assign expected = null %}
+{% assign result = null %}
+{% assign assert = null %}
+
+{% assign expected = "2023-06-28T05:16:00+00:00,1687914994970097614" %}
+
+{% capture result %}
+    {% include as_date_utc_and_id_from_custom_date.liquid custom_date="#date 2023-06-28 05:16 1687914994970097614 GMT"%}
+{% endcapture %}
+
+{% capture assert %}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
+{% endcapture %}
+{{assert}}
+{% assign assert = null %}
+{% assign expected = null %}
+{% assign result = null %}
+```
+
 
 ---
-#times 48
+#times 56
