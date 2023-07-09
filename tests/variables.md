@@ -742,7 +742,7 @@ expected success for 1 == 1
 
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=1 that=1 %}
+ {% include procedure_assert_this_and_that.liquid this=1 that=1 with_success=1%}
  {% endcapture %}{{test}}
 ```
 
@@ -773,18 +773,18 @@ expected failure for null == ""
 expected success for null == null
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this=null that=null %}
+ {% include procedure_assert_this_and_that.liquid this=null that=null with_success=1%}
  {% endcapture %}{{test}}
 ``` 
 
 expected success for "" == ""
 ```liquid
  {% capture test %}
- {% include procedure_assert_this_and_that.liquid this="" that="" %}
+ {% include procedure_assert_this_and_that.liquid this="" that="" with_success=1 %}
  {% endcapture %}{{test}}
 ``` 
 
 
 
 ---
-#times 31
+#times 34
