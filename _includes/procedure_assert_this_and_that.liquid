@@ -5,9 +5,9 @@
 {%- assign _that = include.that -%}
 {%- assign _with_warning = include.with_warning -%}
 {%- assign _with_success = include.with_success -%}
-{%- assign _with_test_name = include.test_name -%}
+{%- assign _with_name = include.name -%}
 {%- comment -%}{%- assign _with_version = include.with_version -%}{%- endcomment -%}
-{%- assign _with_version = "1689011014085668354" -%}
+{%- assign _with_version = "1689012860907734493" -%}
 {%- assign _message = null -%}
 
 {%- comment -%} dealing with empty strings {%- endcomment -%}
@@ -22,9 +22,9 @@
     {%- assign _with_success = null -%}
 {%- endif -%}
 
-{%- if _with_test_name == "" -%}
+{%- if _with_name == "" -%}
     {%- comment -%}resetting{%- endcomment -%}
-    {%- assign _with_test_name = null -%}
+    {%- assign _with_name = null -%}
 {%- endif -%}
 
 {%- if _with_version == "" -%}
@@ -39,15 +39,15 @@
 {%- endif -%}
 
 {%- comment -%} option with test name{%- endcomment -%}
-{%- if _with_test_name -%}
+{%- if _with_name -%}
 
     {%- comment -%} option with version {%- endcomment -%}
     {%- if _with_version -%}
         {%- comment -%} formatting test name => test : `test_name` version >{%- endcomment -%}
-        {%- assign _with_test_name = "test : `" | append: _with_test_name | append: "`" | append: _with_version -%}
+        {%- assign _with_name = "test : `" | append: _with_name | append: "`" | append: _with_version -%}
     {%- else -%}
         {%- comment -%} formatting test name => test : `test_name` >{%- endcomment -%}
-        {%- assign _with_test_name = "test : `" | append: _with_test_name | append: "` > " -%}
+        {%- assign _with_name = "test : `" | append: _with_name | append: "` > " -%}
     {%- endif -%}
 
 {%- endif -%}
@@ -78,12 +78,16 @@
 
 {%- endif -%}
 
+{%- comment -%} prettier print {%- endcomment -%}
+{%- assign _this = _this | jsonify -%}
+{%- assign _that = _that | jsonify -%}
+
 {%- comment -%} failed test {%- endcomment -%}
 {%- if _this != _that -%}
 
     {%- comment -%} fail message {%- endcomment -%}
     {%- capture _message -%}
-        Failed test for {{ _with_test_name }}`{{ _with_version }}{{ _this }} == {{ _that }}`{{ _with_warning }}
+        Failed test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
     {%- endcapture -%}
 
     {%- comment -%} succesfull test {%- endcomment -%}
@@ -93,7 +97,7 @@
 
         {%- comment -%} succesfull message {%- endcomment -%}
         {%- capture _message -%}
-            Successfull test for {{ _with_test_name }}`{{ _with_version }}{{ _this }} == {{ _that }}`{{ _with_warning }}
+            Successfull test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
         {%- endcapture -%}
 
     {%- endif -%}
@@ -108,8 +112,6 @@
 {%- assign _that = null -%}
 {%- assign _with_warning = null -%}
 {%- assign _with_success = null -%}
-{%- assign _with_test_name = null -%}
+{%- assign _with_name = null -%}
 {%- assign _with_version = null -%}
 {%- assign _message = null -%}
-
-{%- comment -%}#date 2023-07-10 21:43 1689011014085668354 GMT{%- endcomment -%}
