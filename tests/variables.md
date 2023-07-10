@@ -851,15 +851,26 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% endcapture %}
 {{assert}}
 
-Expected : {{expected}}
-Result   : {{result}}
+{% comment %} testing `strip_newlines` {% endcomment %}
+    {% comment %}{% assign assert = null %}{% endcomment %}
+    {% comment %}{% assign expected = null %}{% endcomment %}
+    {% comment %}{% assign result = null %} {% endcomment %}
+```
 
+### &#35;&#35; testing `strip_newlines` on `result`
+
+```liquid
+{% assign result = result | strip_newlines %}
+
+{% capture assert %}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
+{% endcapture %}
+{{assert}}
 
 {% assign assert = null %}
 {% assign expected = null %}
-{% assign result = null %}
+{% assign result = null %} 
 ```
 
-
 ---
-#times 28
+
