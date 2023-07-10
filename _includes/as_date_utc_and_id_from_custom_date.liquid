@@ -59,7 +59,7 @@
 
     {% comment %} return {% endcomment %}
     {% comment %}<!-- version #date 2023-07-09 13:13 1688894026323152323 GMT --> {% endcomment %}
-    {{ _date }}
+    {{ _date | strip | strip_newlines }}
 
     {% comment %} resetting the variables {% endcomment %}
     {%- assign _date = null -%}
