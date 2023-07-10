@@ -3,7 +3,6 @@
 {%- if _date == "" -%}
     {%- assign _date = null -%}
 {%- endif -%}
-
 {%-comment-%} There is date {%-endcomment-%}
 {%- if _date -%}
     {%-comment-%}
@@ -24,28 +23,24 @@
          output : "1687914994970097614"
     {%-endcomment-%}
     {%- assign _id = _date[2] -%}
-
     {%-comment-%}
     time
          input  : ["2023-06-28", "05:16", "1687914994970097614"]
          output :  05:16
     {%-endcomment-%}
     {%- assign _time = _date[1] -%}
-
     {%-comment-%}
     time UTC
           input  :  "05:16"
           output :  "T05:16:00+00:00"
     {%-endcomment-%}
     {%- assign _time = "T" | append: _time | append: ":00+00:00" -%}
-
     {%-comment-%}
     date as string
           input  :  ["2023-06-28", "05:16", "1687914994970097614"]
           output :  "2023-06-28"
     {%-endcomment-%}
     {%- assign _date = _date[0] -%}
-
     {%-comment-%}
     Main value
            input  : "2023-06-28", _time, _id
@@ -54,7 +49,6 @@
     {%- assign _date = _date | append: _time | append: "," | append: _id -%}
     {%- comment -%} stripping white spaces and new lines {%- endcomment -%}
     {%- assign _date = _date | strip | strip_newlines -%}
-
     {%- comment -%} return {%- endcomment -%}
     {%- comment -%}<!-- #date 2023-07-10 20:58 1689008305139613270 GMT --> {%- endcomment -%}
     {{ _date }}
