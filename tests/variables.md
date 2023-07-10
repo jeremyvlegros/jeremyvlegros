@@ -847,9 +847,12 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% endcapture %}
 
 {% capture assert %}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_test_name="testing the date"%}
 {% endcapture %}
 {{assert}}
+
+expected :"{{ expected }}"
+result :"{{ result }}"
 
 {% comment %} testing `strip_newlines` {% endcomment %}
     {% comment %}{% assign assert = null %}{% endcomment %}
