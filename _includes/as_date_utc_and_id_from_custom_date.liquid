@@ -51,15 +51,18 @@
     {%- assign _date = _date[0]-%}
     
     {%-comment-%}
-    Final value
+    Main value
            input  : "2023-06-28", _time, _id
            output : "2023-06-28T05:16:00+00:00,1687914994970097614"
     {%-endcomment-%}
     {%- assign _date = _date | append: _time | append: "," | append: _id -%}
+    
+    {% comment %} stripping white spaces and new lines{% endcomment %}
+    {%- assign _date = _date | strip | strip_newlines -%}
 
     {% comment %} return {% endcomment %}
-    {% comment %}<!-- version #date 2023-07-09 13:13 1688894026323152323 GMT --> {% endcomment %}
-    {{ _date | strip | strip_newlines }}
+    {% comment %}<!-- #date 2023-07-10 20:58 1689008305139613270 GMT --> {% endcomment %}
+    {{ _date }}
 
     {% comment %} resetting the variables {% endcomment %}
     {%- assign _date = null -%}
