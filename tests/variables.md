@@ -857,10 +857,10 @@ expected failure for ["1,2,4"] == ["1,2,3"]
     {% comment %}{% assign result = null %} {% endcomment %}
 ```
 
-### &#35;&#35; testing `strip_newlines` on `result`
+### &#35;&#35; testing `strip` and `strip_newlines` on `result`
 
 ```liquid
-{% assign result = result | strip_newlines %}
+{% assign result = result | strip | strip_newlines %}
 
 {% capture assert %}
     {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
