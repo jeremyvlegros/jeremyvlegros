@@ -40,16 +40,8 @@
 
 {%- comment -%} option with test name{%- endcomment -%}
 {%- if _with_name -%}
-
-    {%- comment -%} option with version {%- endcomment -%}
-    {%- if _with_version -%}
-        {%- comment -%} formatting test name => test : `test_name` version >{%- endcomment -%}
-        {%- assign _with_name = "test : `" | append: _with_name | append: "`" | append: _with_version -%}
-    {%- else -%}
-        {%- comment -%} formatting test name => test : `test_name` >{%- endcomment -%}
-        {%- assign _with_name = "test : `" | append: _with_name | append: "` > " -%}
-    {%- endif -%}
-
+    {%- comment -%} formatting test name => test : `test_name` >{%- endcomment -%}
+    {%- assign _with_name = "`" | append: _with_name | append: "` > " -%}
 {%- endif -%}
 
 {%- comment -%} option warnings {%- endcomment -%}
