@@ -1,13 +1,14 @@
 ---
-title : "Learning `Jekyll` and `Liquid`"
+title  : "Learning `Jekyll` and `Liquid`"
 layout : post
 test_list :
 - "a"
 - "b"
 - "c"
 
-print_array : print_array_content.html
-date_of_creation : "#date 2023-06-20 00:00 000 GMT"
+print_array          : print_array_content.html
+date_of_creation     : "#date 2023-06-20 00:00 000 GMT"
+date_of_modification : "#date 2023-07-10 23:04 1689015849433644080 GMT"
 ---
 
 ## &#35;&#35; assigning a variable `test_list`
@@ -855,5 +856,5 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign expected = null %}
 {% assign result = null %} 
 ```
----
-#date 2023-07-10 23:00 1689015627862684442 GMT
+
+
