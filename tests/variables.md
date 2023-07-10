@@ -847,33 +847,16 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_test_name="testing the date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 name="testing the date"%}
 {%- endcapture -%}
 {{assert}}
 
-expected :"{{ expected }}"
-result :"{{ result }}"
-
-{% comment %} testing `strip_newlines` {% endcomment %}
-    {% comment %}{% assign assert = null %}{% endcomment %}
-    {% comment %}{% assign expected = null %}{% endcomment %}
-    {% comment %}{% assign result = null %} {% endcomment %}
-```
-
-### &#35;&#35; testing `strip` and `strip_newlines` on `result`
-
-```liquid
-{% assign result = result | strip | strip_newlines %}
-
-{%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
-{%- endcapture -%}
-{{assert}}
+{% comment %}expected :"{{ expected }}"{% endcomment %}
+{% comment %}result :"{{ result }}"{% endcomment %}
 
 {% assign assert = null %}
 {% assign expected = null %}
 {% assign result = null %} 
 ```
-
 ---
-
+#date 2023-07-10 22:31 1689013886644392432 GMT
