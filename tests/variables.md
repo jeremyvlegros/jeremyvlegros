@@ -7,7 +7,7 @@ test_list :
 - "c"
 
 print_array : print_array_content.html
-
+date_of_creation : "#date 2023-06-20 00:00 000 GMT"
 ---
 
 ## &#35;&#35; assigning a variable `test_list`
@@ -422,7 +422,7 @@ In the include file (everywhere `{include ...}` should be surrounded by another 
 
 ```liquid
 {% raw %}
-{% include testing_jekyll_example.html url="http://jekyllrb.com"
+{% include testing_jekyll_example.html url="https://jekyllrb.com"
 max-width="200px" file="logo.png" alt="Jekyll logo"
 caption="This is the Jekyll logo." %}
 {% endraw %}
@@ -617,9 +617,6 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 {{ about_me }}
 {% endraw %}
 ```
-
-#date 2023-07-06 11:45
-
 
 ## &#35;&#35; `capture` > testing content
 
@@ -859,4 +856,4 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign result = null %} 
 ```
 ---
-#date 2023-07-10 22:31 1689013886644392432 GMT
+#date 2023-07-10 23:00 1689015627862684442 GMT
