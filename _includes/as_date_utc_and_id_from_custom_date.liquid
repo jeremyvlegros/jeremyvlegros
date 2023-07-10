@@ -1,72 +1,72 @@
-{%- assign _date = include.custom_date -%}
-{%-comment-%} Dealing with empty string {%-endcomment-%}
+{% assign _date = include.custom_date %}
+{%comment%} Dealing with empty string {%endcomment%}
 
-{%- if _date == "" -%}
-    {%- assign _date = null -%}
-{%- endif -%}
+{% if _date == "" %}
+    {% assign _date = null %}
+{% endif %}
 
-{%-comment-%} There is date {%-endcomment-%}
-{%- if _date -%}
+{%comment%} There is date {%endcomment%}
+{% if _date %}
 
-    {%-comment-%}
+    {%comment%}
     date without "#date " and " GMT"
         input  : "#date 2023-06-28 05:16 1687914994970097614 GMT"
         output : "2023-06-28 05:16 1687914994970097614"
-    {%-endcomment-%}
-    {%- assign _date = _date | replace: "#date ", "" | replace: " GMT", "" %}
+    {%endcomment%}
+    {% assign _date = _date | replace: "#date ", "" | replace: " GMT", "" %}
 
-    {%-comment-%}
+    {%comment%}
     date as array
          input  : "2023-06-28 05:16 1687914994970097614"
          output : ["2023-06-28", "05:16", "1687914994970097614"]
-    {%-endcomment-%}
-    {%- assign _date = _date | split: " " %}
+    {%endcomment%}
+    {% assign _date = _date | split: " " %}
 
-    {%-comment-%}
+    {%comment%}
     id
          input  : ["2023-06-28", "05:16", "1687914994970097614"]
          output : "1687914994970097614"
-    {%-endcomment-%}
-    {%- assign _id = _date[2] -%}
+    {%endcomment%}
+    {% assign _id = _date[2] %}
 
-    {%-comment-%}
+    {%comment%}
     time
          input  : ["2023-06-28", "05:16", "1687914994970097614"]
          output :  05:16
-    {%-endcomment-%}
-    {%- assign _time = _date[1] -%}
+    {%endcomment%}
+    {% assign _time = _date[1] %}
 
-    {%-comment-%}
+    {%comment%}
     time UTC
           input  :  "05:16"
           output :  "T05:16:00+00:00"
-    {%-endcomment-%}
-    {%- assign _time = "T" | append: _time | append: ":00+00:00" -%}
+    {%endcomment%}
+    {% assign _time = "T" | append: _time | append: ":00+00:00" %}
 
-    {%-comment-%}
+    {%comment%}
     date as string
           input  :  ["2023-06-28", "05:16", "1687914994970097614"]
           output :  "2023-06-28"
-    {%-endcomment-%}
-    {%- assign _date = _date[0]-%}
-    
-    {%-comment-%}
+    {%endcomment%}
+    {% assign _date = _date[0]%}
+
+    {%comment%}
     Main value
            input  : "2023-06-28", _time, _id
            output : "2023-06-28T05:16:00+00:00,1687914994970097614"
-    {%-endcomment-%}
-    {%- assign _date = _date | append: _time | append: "," | append: _id -%}
-    
+    {%endcomment%}
+    {% assign _date = _date | append: _time | append: "," | append: _id %}
+
     {% comment %} stripping white spaces and new lines{% endcomment %}
-    {%- assign _date = _date | strip | strip_newlines -%}
+    {% assign _date = _date | strip | strip_newlines %}
 
     {% comment %} return {% endcomment %}
     {% comment %}<!-- #date 2023-07-10 20:58 1689008305139613270 GMT --> {% endcomment %}
     {{ _date }}
 
     {% comment %} resetting the variables {% endcomment %}
-    {%- assign _date = null -%}
-    {%- assign _time = null -%}
-    {%- assign _id = null -%}
+    {% assign _date = null %}
+    {% assign _time = null %}
+    {% assign _id = null %}
 
-{%- endif -%}
+{% endif %}
