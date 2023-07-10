@@ -850,6 +850,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
     {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
 {% endcapture %}
 {{assert}}
+
+Expected : {{expected}}
+Result   : {{result}}
+
+
 {% assign assert = null %}
 {% assign expected = null %}
 {% assign result = null %}
