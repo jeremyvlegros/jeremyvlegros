@@ -83,7 +83,7 @@
 
   {% comment %} fail message {% endcomment %}
   {% capture _message %}
-    Failed test for {{ _with_test_name }}`{{ _with_version }}{{ this }} == {{ that }}`{{ _with_warning }}
+    Failed test for {{ _with_test_name }}`{{ _with_version }}{{ _this }} == {{ _that }}`{{ _with_warning }}
   {% endcapture %}
 
   {% comment %} succesfull test {% endcomment %}
@@ -93,7 +93,7 @@
 
     {% comment %} succesfull message {% endcomment %}
     {% capture _message %}
-      Successfull test for {{ _with_test_name }}`{{ _with_version }}{{ this }} == {{ that }}`{{ _with_warning }}
+      Successfull test for {{ _with_test_name }}`{{ _with_version }}{{ _this }} == {{ _that }}`{{ _with_warning }}
     {% endcapture %}
 
   {%- endif -%}
@@ -112,4 +112,4 @@
 {%- assign _with_version = null -%}
 {%- assign _message = null -%}
 
-{% comment %}#date 2023-07-09 12:54 1688892840728673424 GMT{% endcomment %}
+{% comment %}#date 2023-07-10 20:32 1689006756317543514 GMT{% endcomment %}
