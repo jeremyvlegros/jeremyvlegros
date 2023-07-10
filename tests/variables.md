@@ -842,13 +842,13 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 
 {% assign expected = "2023-06-28T05:16:00+00:00,1687914994970097614" %}
 
-{% capture result %}
+{%- capture result -%}
     {% include as_date_utc_and_id_from_custom_date.liquid custom_date="#date 2023-06-28 05:16 1687914994970097614 GMT"%}
-{% endcapture %}
+{%- endcapture -%}
 
-{% capture assert %}
+{%- capture assert -%}
     {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_test_name="testing the date"%}
-{% endcapture %}
+{%- endcapture -%}
 {{assert}}
 
 expected :"{{ expected }}"
@@ -865,9 +865,9 @@ result :"{{ result }}"
 ```liquid
 {% assign result = result | strip | strip_newlines %}
 
-{% capture assert %}
+{%- capture assert -%}
     {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
-{% endcapture %}
+{%- endcapture -%}
 {{assert}}
 
 {% assign assert = null %}
