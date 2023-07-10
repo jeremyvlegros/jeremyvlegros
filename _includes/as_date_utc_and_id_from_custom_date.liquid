@@ -48,7 +48,7 @@
           input  :  ["2023-06-28", "05:16", "1687914994970097614"]
           output :  "2023-06-28"
     {%-endcomment-%}
-    {%- assign _date = date[0]-%}
+    {%- assign _date = _date[0]-%}
     
     {%-comment-%}
     Final value
@@ -58,7 +58,7 @@
     {%- assign _date = _date | append: _time | append: "," | append: _id -%}
 
     {% comment %} return {% endcomment %}
-    <!-- version #date 2023-07-09 13:13 1688894026323152323 GMT -->
+    {% comment %}<!-- version #date 2023-07-09 13:13 1688894026323152323 GMT --> {% endcomment %}
     {{ _date }}
 
     {% comment %} resetting the variables {% endcomment %}
