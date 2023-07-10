@@ -35,7 +35,7 @@
 {%- comment -%} option with version{%- endcomment -%}
 {%- if _with_version -%}
     {%- comment -%} formatting version => `version version_name ` >{%- endcomment -%}
-    {%- assign _with_version = "version `" | append: _with_version | append: " >" -%}
+    {%- assign _with_version = "version `" | append: _with_version | append: "` >" -%}
 {%- endif -%}
 
 {%- comment -%} option with test name{%- endcomment -%}
