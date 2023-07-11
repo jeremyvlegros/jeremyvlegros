@@ -901,7 +901,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="custom date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="custom date"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -928,7 +928,7 @@ normal date
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="normal date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -957,7 +957,7 @@ normal date
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="custom_date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="custom_date"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -982,7 +982,7 @@ normal date
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="normal date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date"%}
 {%- endcapture -%}
 {{assert}}
 

@@ -16,7 +16,7 @@
 
         {%- comment -%}
         everything as array
-            => [#date,2023-04-01,10:30,168784723873385 GMT]
+            => [#date,2023-04-01,10:30,168784723873385,GMT]
         {%- endcomment -%}
         {%- assign _date = _date | split: " " -%}
 
@@ -33,7 +33,7 @@
         {%- comment -%} Main value : day
             => 01
         {%- endcomment -%}
-        {%- assign _day = date[2] -%}
+        {%- assign _day = _date[2] -%}
 
     {%- endif -%}
     {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
@@ -57,7 +57,7 @@
     {%- comment -%} Main value : day
     => 01
     {%- endcomment -%}
-    {%- assign _date = _date[2] -%}
+    {%- assign _day = _date[2] -%}
     
 {%- endif -%}
 
