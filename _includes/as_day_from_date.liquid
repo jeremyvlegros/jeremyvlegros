@@ -1,0 +1,68 @@
+{%- comment -%} initialization {%- endcomment -%}
+{%- assign _date = include.date -%}
+{%- assign _day = null -%}
+
+{%- comment -%} empty string {%- endcomment -%}
+{%- if _date == "" -%}
+    {% assign _date = null %}
+{%- endif -%}
+
+
+{%- if _date -%}
+    {%- comment -%} date is custom (mine) {%- endcomment -%}
+    {%- if _date contains "GMT" -%}
+
+        {%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
+
+        {%- comment -%}
+        everything as array
+            => [#date,2023-04-01,10:30,168784723873385 GMT]
+        {%- endcomment -%}
+        {%- assign _date = _date | split: " " -%}
+
+        {%- comment -%}  get year month day
+            => 2023-04-01
+        {%- endcomment -%}
+        {%- assign _date = _date[1] -%}
+
+        {%- comment -%} split date in year month day
+            => [2023,04,01]
+        {%- endcomment -%}
+        {%- assign _date = _date[1] | split: "-" -%}
+
+        {%- comment -%} Main value : day
+            => 01
+        {%- endcomment -%}
+        {%- assign _day = date[2] -%}
+
+    {%- endif -%}
+    {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
+    {%- comment -%} hmm... parsing joy {%- endcomment -%}
+
+    {%- comment -%}  splitting the date by `T` to array
+    => [2023-04-01,10:30:00+00:00]
+    {%- endcomment -%}
+    {%- assign _date = _date | split :"T" -%}
+
+    {%- comment -%}  getting the year-month-day
+    => "2023-04-01"
+    {%- endcomment -%}
+    {%- assign _date = _date[0] -%}
+
+    {%- comment -%}  splitting in year,month,day
+    => [2023,04,01]
+    {%- endcomment -%}
+    {%- assign _date = _date | split :"-" -%}
+
+    {%- comment -%} Main value : day
+    => 01
+    {%- endcomment -%}
+    {%- assign _date = _date[2] -%}
+    
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{{ _day }}
+
+{%- assign _date = null -%}
+{%- assign _day = null -%}
