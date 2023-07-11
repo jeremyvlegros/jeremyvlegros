@@ -387,12 +387,12 @@ expected : "not a letter among a,b,c,d"
 {% endfor %}
 ```
 
-## ## Global variable `_config.yml` > external image with `HTML`
+## Global variable `_config.yml` > external image with `HTML`
 
 <!--suppress HtmlUnknownTarget -->
 <img src="{{site.image_color_1}}" alt="image_color_1">
 
-## ## Global variable `_config.yml` > external image in a `Markdown` link
+## Global variable `_config.yml` > external image in a `Markdown` link
 
 ![image_color_1]({{site.image_color_1}})
 
@@ -733,7 +733,7 @@ value of the function : `{{ sum }}`
 
 {% endraw %}
 ```
-##  testing my assert procedure
+## Testing my assert procedure
 
 expected success for 1 == 1
 
@@ -977,7 +977,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date"%}
+    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date" -%}
 {%- endcapture -%}
 {{assert}}
 
