@@ -22,7 +22,7 @@
          input  : ["2023-06-28", "05:16", "1687914994970097614"]
          output : "1687914994970097614"
     {%-endcomment-%}
-    {%- assign _id = _date[2] -%}
+    {%- comment -%}{%- assign _id = _date[2] -%} {%- endcomment -%}
     {%-comment-%}
     time
          input  : ["2023-06-28", "05:16", "1687914994970097614"]
@@ -56,5 +56,5 @@
     {%- comment -%} resetting the variables {%- endcomment -%}
     {%- assign _date = null -%}
     {%- assign _time = null -%}
-    {%- assign _id = null -%}
+    {%- comment -%}{%- assign _id = null -%} {%- endcomment -%}
 {%- endif -%}
