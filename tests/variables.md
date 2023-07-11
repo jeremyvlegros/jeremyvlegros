@@ -884,9 +884,10 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 ## &#35;&#35; testing shorter assert implementation
 
 ```liquid
+{%- assign _function = as_id_from_date_with_parameter.liquid -%}
 {%- capture assert -%}
 {% include procedure_assert_function_with_parameter.liquid 
-    function=as_id_from_date_with_parameter.liquid 
+    function=_function 
     parameter="#date 2023-06-28 05:16 1687914994970097614 GMT" 
     expected="1687914994970097614"
     with_name="compact assert on id" 
