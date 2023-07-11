@@ -46,7 +46,8 @@
            input  : "2023-06-28", _time, _id
            output : "2023-06-28T05:16:00+00:00,1687914994970097614"
     {%-endcomment-%}
-    {% comment %}{%- assign _date = _date | append: _time | append: "," | append: _id -%}{% endcomment %}
+    {%- comment -%}{%- assign _date = _date | append: _time | append: "," | append: _id -%}{%- endcomment -%}
+    {%- assign _date = _date | append: _time -%}
     {%- comment -%} stripping white spaces and new lines {%- endcomment -%}
     {%- assign _date = _date | strip | strip_newlines -%}
     {%- comment -%} return {%- endcomment -%}
