@@ -857,4 +857,9 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign result = null %} 
 ```
 
+## &#35;&#35; `post` `date_of_creation` ?
+
+post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
+
+
 
