@@ -834,14 +834,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ## &#35;&#35; testing my date function
 
 ```liquid
-{% assign expected = null %}
-{% assign result = null %}
-{% assign assert = null %}
-
+{% assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" %}
 {% assign expected = "2023-06-28T05:16:00+00:00" %}
 
 {%- capture result -%}
-    {% include as_date_utc_from_custom_date.liquid custom_date="#date 2023-06-28 05:16 1687914994970097614 GMT"%}
+    {% include as_date_utc_from_custom_date.liquid custom_date=input%}
 {%- endcapture -%}
 
 {%- capture assert -%}
@@ -849,17 +846,40 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- endcapture -%}
 {{assert}}
 
-{% comment %}expected :"{{ expected }}"{% endcomment %}
-{% comment %}result :"{{ result }}"{% endcomment %}
-
-{% assign assert = null %}
+{% assign assert   = null %}
 {% assign expected = null %}
-{% assign result = null %} 
+{% assign result   = null %} 
 ```
 
 ## &#35;&#35; `post` `date_of_creation` ?
 
 post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
+```liquid
+{% raw %}
+post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
+{% endraw %}
+```
+## &#35;&#35; testing `as_id_from_date.liquid`
+
+```liquid
+
+{% assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" %}
+{% assign expected = "1687914994970097614" %}
+
+{%- capture result -%}
+    {% include as_id_from_date.liquid date=input%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" name=""%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+```
 
 
