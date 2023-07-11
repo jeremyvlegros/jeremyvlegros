@@ -11,11 +11,11 @@
 
 {%- if _date -%}
 
-    {%- assign _debug = " > entered first if > " -%}
+    {%- comment -%}{%- assign _debug = " > entered first if > " -%} {%- endcomment -%}
 
     {%- comment -%} date is custom (mine) {%- endcomment -%}
     {%- if _date contains "GMT" -%}
-        {%- assign _debug = _debug | append: "> entered `if` GMT > " -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> entered `if` GMT > " -%} {%- endcomment -%}
 
         {%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
 
@@ -24,51 +24,56 @@
             => [#date,2023-04-01,10:30,168784723873385,GMT]
         {%- endcomment -%}
         {%- assign _date = _date | split: " " -%}
-        {%- assign _debug = _debug | append: "> value of date as array :" | append: _date | append : " >" -%}
+
 
         {%- comment -%}  get year month day
             => 2023-04-01
         {%- endcomment -%}
         {%- assign _date = _date[1] -%}
-        {%- assign _debug = _debug | append: "> value of date as Y-M-D:" | append: _date | append : " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D:" | append: _date | append : " >" -%} {%- endcomment -%}
 
         {%- comment -%} split date in year month day
             => [2023,04,01]
         {%- endcomment -%}
         {%- assign _date = _date | split: "-" -%}
-        {%- assign _debug = _debug | append: "> value of date as Y,M,D:" | append: _date | append : " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y,M,D:" | append: _date | append : " >" -%} {%- endcomment -%}
 
         {%- comment -%} Main value : day
             => 01
         {%- endcomment -%}
         {%- assign _day = _date[2] -%}
-        {%- assign _debug = _debug | append: "> value of date as day :" | append: _date | append : " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as day :" | append: _date | append : " >" -%} {%- endcomment -%}
 
     {%- endif -%}
 {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
+
     {%- comment -%} hmm... parsing joy {%- endcomment -%}
+
     {%- assign _debug = _debug | append: "> entered `if` normal > " -%}
     {%- comment -%}  splitting the date by `T` to array
     => [2023-04-01,10:30:00+00:00]
     {%- endcomment -%}
     {%- assign _date = _date | split: "T" -%}
+    {%- assign _debug = _debug | append: "> value of date as Y-M-D, hour :" | append: _date | append : " >" -%}
 
     {%- comment -%}  getting the year-month-day
     => "2023-04-01"
     {%- endcomment -%}
     {%- assign _date = _date[0] -%}
+    {%- assign _debug = _debug | append: "> value of date as Y-M-D :" | append: _date | append : " >" -%}
 
     {%- comment -%}  splitting in year,month,day
     => [2023,04,01]
     {%- endcomment -%}
     {%- assign _date = _date | split: "-" -%}
+    {%- assign _debug = _debug | append: "> value of date as Y,M,D :" | append: _date | append : " >" -%}
 
     {%- comment -%} Main value : day
     => 01
     {%- endcomment -%}
     {%- assign _day = _date[2] -%}
 
-    {%- assign _debug = _debug | append: "> value of day :" | append: _day -%}
+    {%- assign _debug = _debug | append: "> value of date as day :" | append: _day -%}
 
 {%- endif -%}
 
