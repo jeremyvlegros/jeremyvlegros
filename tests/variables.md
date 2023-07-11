@@ -921,7 +921,7 @@ normal date
 {% comment %} blank {% endcomment %} 
 
 {%- assign input    = "2023-04-01T10:30:00+00:00" -%}
-{%- assign expected = "28" -%}
+{%- assign expected = "01" -%}
 
 {%- capture result -%}
     {% include  as_day_from_date.liquid date=input %}
@@ -975,7 +975,7 @@ normal date
 {% comment %} blank {% endcomment %} 
 
 {%- assign input    = "2023-04-01T10:30:00+00:00" -%}
-{%- assign expected = "color_background_28" -%}
+{%- assign expected = "color_background_01" -%}
 
 {%- capture result -%}
     {% include  as_color_background_from_date.liquid date=input %}
