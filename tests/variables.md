@@ -838,10 +838,10 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign result = null %}
 {% assign assert = null %}
 
-{% assign expected = "2023-06-28T05:16:00+00:00,1687914994970097614" %}
+{% assign expected = "2023-06-28T05:16:00+00:00" %}
 
 {%- capture result -%}
-    {% include as_date_utc_and_id_from_custom_date.liquid custom_date="#date 2023-06-28 05:16 1687914994970097614 GMT"%}
+    {% include as_date_utc_from_custom_date.liquid custom_date="#date 2023-06-28 05:16 1687914994970097614 GMT"%}
 {%- endcapture -%}
 
 {%- capture assert -%}
