@@ -25,6 +25,7 @@
         {%- endcomment -%}
         {%- assign _date = _date | split: " " -%}
         {%- assign _debug = _debug | append: "> value of date as array :" | append: _date | append : " >" -%}
+
         {%- comment -%}  get year month day
             => 2023-04-01
         {%- endcomment -%}
@@ -34,7 +35,7 @@
         {%- comment -%} split date in year month day
             => [2023,04,01]
         {%- endcomment -%}
-        {%- assign _date = _date[1] | split: "-" -%}
+        {%- assign _date = _date | split: "-" -%}
         {%- assign _debug = _debug | append: "> value of date as Y,M,D:" | append: _date | append : " >" -%}
 
         {%- comment -%} Main value : day
