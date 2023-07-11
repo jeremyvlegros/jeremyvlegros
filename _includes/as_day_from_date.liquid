@@ -1,7 +1,7 @@
 {%- comment -%} initialization {%- endcomment -%}
 {%- assign _date = include.date -%}
 {%- assign _day = null -%}
-{%- assign _debug = null -%}
+{%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
 
 {%- comment -%} empty string {%- endcomment -%}
 {%- if _date == "" -%}
@@ -49,37 +49,37 @@
 
         {%- comment -%} hmm... parsing joy {%- endcomment -%}
 
-        {%- assign _debug = _debug | append: "> entered `if` normal > " -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> entered `if` normal > " -%} {%- endcomment -%}
         {%- comment -%}  splitting the date by `T` to array
         => [2023-04-01,10:30:00+00:00]
         {%- endcomment -%}
         {%- assign _date = _date | split: "T" -%}
-        {%- assign _debug = _debug | append: "> value of date as Y-M-D, hour :" | append: _date | append: " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D, hour :" | append: _date | append: " >" -%} {%- endcomment -%}
 
         {%- comment -%}  getting the year-month-day
         => "2023-04-01"
         {%- endcomment -%}
         {%- assign _date = _date[0] -%}
-        {%- assign _debug = _debug | append: "> value of date as Y-M-D :" | append: _date | append: " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D :" | append: _date | append: " >" -%} {%- endcomment -%}
 
         {%- comment -%}  splitting in year,month,day
         => [2023,04,01]
         {%- endcomment -%}
         {%- assign _date = _date | split: "-" -%}
-        {%- assign _debug = _debug | append: "> value of date as Y,M,D :" | append: _date | append: " >" -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y,M,D :" | append: _date | append: " >" -%} {%- endcomment -%}
 
         {%- comment -%} Main value : day
         => 01
         {%- endcomment -%}
         {%- assign _day = _date[2] -%}
 
-        {%- assign _debug = _debug | append: "> value of date as day :" | append: _day -%}
+        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as day :" | append: _day -%} {%- endcomment -%}
     {%- endif -%}
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{{ _day | append: _debug }}
+{{ _day | strip_newlines }}
 
 {%- assign _date = null -%}
 {%- assign _day = null -%}
-{%- assign _debug = null -%}
+{%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
