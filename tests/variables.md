@@ -973,7 +973,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- assign expected = "color_background_01" -%}
 
 {%- capture result -%}
-    {% include  as_color_background_from_date.liquid date=input %}
+    {%- include as_color_background_from_date.liquid date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
