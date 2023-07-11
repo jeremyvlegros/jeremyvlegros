@@ -11,7 +11,7 @@ date_of_creation     : "#date 2023-06-20 00:00 000 GMT"
 date_of_modification : "#date 2023-07-10 23:04 1689015849433644080 GMT"
 ---
 
-## &#35;&#35; assigning a variable `test_list`
+## Assigning a variable `test_list`
 
 {% assign test_list = page.test_list %}
 
@@ -25,7 +25,7 @@ date_of_modification : "#date 2023-07-10 23:04 1689015849433644080 GMT"
 
 
 
-## &#35;&#35; printing a `HTML` character
+## Printing a `HTML` character
 
 {% assign character = ">" %}
 {% assign character = character | replace : ">","&gt;" %}
@@ -41,7 +41,7 @@ html character greater than "{{character}}"
 {% endraw %}
 ```
 
-## &#35;&#35; prefixing a HTML character by `NBSP`
+## Prefixing a HTML character by `NBSP`
 
 {% assign title = page.title %}
 {% if title %}
@@ -61,7 +61,7 @@ this should not break : {{title}}
 {% endraw %}
 ```
 
-## &#35;&#35; Accessing the local variable `test_list`
+## Accessing the local variable `test_list`
 
 The loop :
 
@@ -87,7 +87,7 @@ printing `test_list`  as json :  `{{ test_list | jsonify}}`
 {% endraw %}
 ```
 
-## &#35;&#35; the To string function `inspect`
+## The To string function `inspect`
 
 {% assign test_list = page.test_list %}
 The `test_list` as a string : `{{ test_list | inspect }}`
@@ -99,7 +99,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endraw %}
 ```
 
-## &#35;&#35; Displaying `Liquid` results in code ?
+## Displaying `Liquid` results in code ?
 
 ```liquid
 {% for value in test_list %}
@@ -107,7 +107,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endfor %}
 ```
 
-## &#35;&#35; `unless`
+## `unless`
 
 Unless 1 > 4 print 1 is smaller than 4
 
@@ -127,7 +127,7 @@ Unless 1 > 4 print 1 is smaller than 4
 {% endraw %}
 ```
 
-## &#35;&#35; String `contains`
+## String `contains`
 
 {% if "abc" contains "a" %}
 abc contains a
@@ -141,19 +141,19 @@ abc contains a
 {% endraw %}
 ```
 
-## &#35;&#35; Accessing `Jekyll` variables >`site.name`
+## Accessing `Jekyll` variables >`site.name`
 
 `{{site.name}}`
 
-## &#35;&#35; Accessing `Jekyll` variables >`page.url`
+## Accessing `Jekyll` variables >`page.url`
 
 `{{page.url}}`
 
-## &#35;&#35; Accessing `Jekyll` variables >`site.url`
+## Accessing `Jekyll` variables >`site.url`
 
 `{{site.url}}`
 
-## &#35;&#35; Accessing `Jekyll` variables > `post.id` and `post.url`
+## Accessing `Jekyll` variables > `post.id` and `post.url`
 
 <ul>
 
@@ -195,7 +195,7 @@ POST URL : `{{post.url}}`
 {% endraw %}
 ```
 
-## &#35;&#35; constructed canonical page `URL` 
+## Constructed canonical page `URL` 
 
 (need to set name in `_config.yml`)
 
@@ -207,18 +207,15 @@ POST URL : `{{post.url}}`
 {% endraw %}
 ```
 
-## &#35;&#35; ## &#35;&#35;  filter `slugify`
+## `slugify`
 
-I suspect this thing to only work in HTML, but I won't rely on it ...
 
 "Dummy > something > something" :
 
 - value                         : {{ "Dummy > something > something" | slugify }}
 - expecting something like this : `dummy--something--something`
 
-## &#35;&#35; `case` instruction
-
-### &#35;&#35;&#35; split cases / non traversal
+## `case` > split cases / non traversal
 
 expected : "letter a"
 
@@ -315,7 +312,7 @@ expected : "not a nor b nor c"
 {% endraw %}
 ```
 
-### &#35;&#35;&#35; multiple cases / traversal / like in `C`
+## `case` >  multiple cases / traversal / like in `C`
 
 expected : "a letter among a,b,c,d"
 
@@ -381,9 +378,8 @@ expected : "not a letter among a,b,c,d"
 {% endraw %}
 ```
 
-## &#35;&#35; Accessing global variables `_config.yml`
 
-### &#35;&#35;&#35; global variable social_links
+## Global variable `_config.yml` > social_links
 
 ```liquid
 {% for link in site.social_links %}
@@ -391,16 +387,16 @@ expected : "not a letter among a,b,c,d"
 {% endfor %}
 ```
 
-## &#35;&#35; Displaying an external image with `HTML`
+## ## Global variable `_config.yml` > external image with `HTML`
 
 <!--suppress HtmlUnknownTarget -->
 <img src="{{site.image_color_1}}" alt="image_color_1">
 
-## &#35;&#35; Displaying an external image in a `Markdown` link
+## ## Global variable `_config.yml` > external image in a `Markdown` link
 
 ![image_color_1]({{site.image_color_1}})
 
-## &#35;&#35; `Jekyll` > `includes` > testing  example
+## `Jekyll` > `includes` > testing  example
 
 In the include file (everywhere `{include ...}` should be surrounded by another bracket, escaping double brackets is a headheck)
 
@@ -430,7 +426,7 @@ caption="This is the Jekyll logo." %}
 ```
 
 
-## &#35;&#35; `includes` > testing as a function
+## `includes` > testing as a function
 
 expected :
 
@@ -456,7 +452,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; `includes` > as a function called with a variable
+## `includes` > as a function called with a variable
 
 expected :
 
@@ -485,7 +481,7 @@ result :
 ```
 
 
-## &#35;&#35; `includes` > as a function with file extension `.liquid`
+## `includes` > as a function with file extension `.liquid`
 
 expected
 
@@ -512,7 +508,7 @@ result :
 ```
 
 
-## &#35;&#35; `includes` > as a sum function not printing variable
+## `includes` > as a sum function not printing variable
 
 expected :
 
@@ -533,7 +529,7 @@ result :
 ```
 
 
-## &#35;&#35; `includes` > as a sum function printing variable
+## `includes` > as a sum function printing variable
 
 expected :
 
@@ -555,7 +551,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; `capture` > testing text
+## `capture` > testing text
 
 {% capture captured_text %}
 
@@ -585,7 +581,7 @@ result :
 {% endraw %}
 ```
 
-## &#35;&#35; `capture` >`Shopify` > example
+## `capture` >`Shopify` > example
 
 expected :
 
@@ -619,7 +615,7 @@ I am {{ age }} and my favorite food is {{ favorite_food }}.
 {% endraw %}
 ```
 
-## &#35;&#35; `capture` > testing content
+## `capture` > testing content
 
 {% capture captured_text %}
 
@@ -654,7 +650,7 @@ result :
 
 #date 2023-07-06 11:48
 
-## &#35;&#35; `capture` > `include` > without printing
+## `capture` > `include` > without printing
 
 (at last ...)
 
@@ -672,7 +668,7 @@ result :
 {{ captured_text }}
 ```
  
-## &#35;&#35; `capture` > `include` > internal variable persistency
+## `capture` > `include` > internal variable persistency
 
 Resetting the `result` variable
 
@@ -703,7 +699,7 @@ value of result after call include : `{{ result }}`
 ```
 
 
-## &#35;&#35; `capture` >`include` > function non-persistent
+## `capture` >`include` > function non-persistent
 
 Resetting the `result` variable
 
@@ -737,7 +733,7 @@ value of the function : `{{ sum }}`
 
 {% endraw %}
 ```
-## &#35;&#35;  testing my assert procedure
+##  testing my assert procedure
 
 expected success for 1 == 1
 
@@ -831,7 +827,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
  {% endcapture %}{{test}}
 ``` 
 
-## &#35;&#35; testing my date function
+## Testing my date function
 
 ```liquid
 {% assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" %}
@@ -851,7 +847,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign result   = null %} 
 ```
 
-## &#35;&#35; `post` `date_of_creation` ?
+## `post` `date_of_creation` ?
 
 post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
@@ -860,7 +856,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {% endraw %}
 ```
-## &#35;&#35; testing `as_id_from_date.liquid`
+## Testing `as_id_from_date.liquid`
 
 ```liquid
 {% comment %} testing to keep a blank {% endcomment %}
@@ -886,7 +882,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 ```
 
-## &#35;&#35; testing `as_day_from_date.liquid`
+## Testing `as_day_from_date.liquid`
 
 
 ```liquid
@@ -914,7 +910,6 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 ```
 
-normal date
 
 ```liquid
 
@@ -942,7 +937,7 @@ normal date
 ```
 
 
-## &#35;&#35; testing `as_color_background_from_date.liquid`
+## Testing `as_color_background_from_date.liquid`
 
 
 ```liquid
