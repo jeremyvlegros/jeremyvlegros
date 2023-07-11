@@ -881,5 +881,22 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- assign assert   = null -%}
 {%- assign input    = null -%}
 ```
+## &#35;&#35; testing shorter assert implementation
+
+```liquid
+{%- capture assert -%}
+{% include procedure_assert_function_with_parameter.liquid 
+    function=as_id_from_date_with_parameter.liquid 
+    parameter="#date 2023-06-28 05:16 1687914994970097614 GMT" 
+    expected="1687914994970097614"
+    with_name="compact assert on id" 
+    with_version=""
+    with_success=1 
+%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign assert = null -%}
+```
 
 
