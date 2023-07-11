@@ -886,5 +886,112 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 ```
 
+## &#35;&#35; testing `as_day_from_date.liquid`
 
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
+{%- assign expected = "28" -%}
+
+{%- capture result -%}
+    {% include  as_day_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="custom date"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
+
+normal date
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "2023-04-01T10:30:00+00:00" -%}
+{%- assign expected = "28" -%}
+
+{%- capture result -%}
+    {% include  as_day_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="normal date"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
+
+
+## &#35;&#35; testing `as_color_background_from_date.liquid`
+
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
+{%- assign expected = "color_background_28" -%}
+
+{%- capture result -%}
+    {% include  as_color_background_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="custom_date"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "2023-04-01T10:30:00+00:00" -%}
+{%- assign expected = "color_background_28" -%}
+
+{%- capture result -%}
+    {% include  as_color_background_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" name="normal date"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
 
