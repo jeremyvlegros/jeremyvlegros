@@ -842,7 +842,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 name="testing the date"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -863,6 +863,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 ## &#35;&#35; testing `as_id_from_date.liquid`
 
 ```liquid
+{% comment %} testing to keep a blank {% endcomment %}
 
 {% assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" %}
 {% assign expected = "1687914994970097614" %}
@@ -872,7 +873,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" name=""%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name=""%}
 {%- endcapture -%}
 {{assert}}
 
@@ -880,6 +881,9 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- assign result   = null -%}
 {%- assign assert   = null -%}
 {%- assign input    = null -%}
+
+{% comment %} testing to keep a blank {% endcomment %}
+
 ```
 
 
