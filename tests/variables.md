@@ -1015,7 +1015,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
             {%- comment -%} background color {%- endcomment -%}
             {%- capture _background_color -%}
-                {%- include as_color_background_from_custom_date.liquid date=_date_of_creation -%}
+                {%- include as_color_background_from_date.liquid date=_date_of_creation -%}
             {%- endcapture -%}
 
             {%- comment -%} post id {%- endcomment -%}
