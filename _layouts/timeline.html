@@ -35,7 +35,7 @@ layout : base
                             {%- endif -%}
                         </li>
 
-                        {%- comment -%}{%- assign _posts = site.posts-%}
+                        {%- assign _posts = site.posts-%}
 
                         {%- capture html_post_index_list -%}
                         {%- include as_html_the_post_index_list_from_posts.liquid posts=_posts-%}
@@ -43,7 +43,7 @@ layout : base
 
                         {{ html_post_index_list }}
 
-                        {%- assign html_post_index_list = null -%} {%- endcomment -%}
+                        {%- assign html_post_index_list = null -%}
 
                     </ul>
                 </div>
