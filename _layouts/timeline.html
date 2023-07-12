@@ -5,34 +5,19 @@ layout : base
 #date 2023-07-05 15:06 1688555192943325977 GMT
 -->
 <div class="timeline container-fluid">
-    {%- comment -%}<!--  precaution : not getting the array element in one instruction --> {%- endcomment -%}
-    {%- assign posts = site.posts -%}
 
-    {%- comment -%}<!--  this will fail if posts is not compatible with array indexes... --> {%- endcomment -%}
+    {%- comment -%} dates {%- endcomment -%}
+    {%- assign _date_top    = site.posts[0].date_of_creation -%}
+    {%- assign _date_bottom = site.posts[-1].date_of_creation -%}
 
-    {%- comment -%}<!-- post --> {%- endcomment -%}
-    {%- assign first_post = posts[0] -%}
-    <!-- array -->
-    {%- assign first_post = first_post.date_of_creation | split : " " -%}
-    {%- assign first_post_id = first_post[-2]-%}
+    {%- capture html_top_and_bottom_arrows -%}
+        {%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid date_top=_date_top
+        date_bottom=_date_bottom -%}
+    {%- endcapture -%}
+    {%- comment -%} N.B : variables are reset in the include {%- endcomment -%}
 
-    {%- comment -%}<!-- post --> {%- endcomment -%}
-    {%- assign last_post = posts[-1] -%}
-    {%- comment -%}<!-- array --> {%- endcomment -%}
-    {%- assign last_post = last_post.date_of_creation | split : " " -%}
-    {%- assign last_post_id = last_post[-2]-%}
-
-    {%- comment -%}<!--  precaution --> {%- endcomment -%}
-    {%- assign posts = null -%}
-
-    <span class="arrow_to_page_top">
-	                    <!--suppress HtmlUnknownAnchorTarget -->
-        <a class="button" href="#{{first_post_id}}" title="lastest post / top page"> &UpArrowBar; </a>
-    </span>
-    <span class="arrow_to_page_bottom">
-	                    <!--suppress HtmlUnknownAnchorTarget -->
-         <a class="button" href="#{{last_post_id}}" title="older post / bottom page"> &DownArrowBar; </a>
-    </span>
+    {{html_top_and_bottom_arrows}}
+    
     {{ content }}
 
     <div class="row g-sm-6">
