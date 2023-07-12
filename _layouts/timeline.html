@@ -1,26 +1,54 @@
 ---
 layout : base
 ---
-<!-- timeline layout
-#date 2023-07-05 15:06 1688555192943325977 GMT
--->
+
+{%- comment -%}<!-- LIQUID PROCESSING -->{%- endcomment -%}
+
+{%- comment -%}<!-- site posts --> {%- endcomment -%}
+{%- assign posts = site.posts-%}
+
+{%- comment -%}<!-- short modification date -->{%- endcomment -%}
+{%- assign date_of_modification_short = page.date_of_modification | split : " " -%}
+{%- assign date_of_modification_short = "#modified "
+| append : date_of_modification_short[1]
+| append : " "
+| append : date_of_modification_short[2]
+-%}
+
+{%- comment -%}  <!-- dates of first/top and last/bottom posts --> {%- endcomment -%}
+{%- assign _date_top = posts[0].date_of_creation -%}
+{%- assign _date_bottom = posts[-1].date_of_creation -%}
+
+{%- comment -%}  <!-- HTML top and bottom arrows --> {%- endcomment -%}
+{%- capture html_top_and_bottom_arrows -%}
+{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid date_top=_date_top
+date_bottom=_date_bottom
+-%}
+{%- endcapture -%}{%- comment -%}  <!-- N.B : variables `_date_top` `_date_bottom` are reset in the `include` --> {%- endcomment -%}
+
+
+{%- comment -%}<!-- HTML index post list --> {%- endcomment -%}
+{%- capture html_post_index_list -%}
+{%- include as_html_the_post_index_list_from_posts.liquid posts=posts-%}
+{%- endcapture -%}
+
+{%- comment -%}<!-- HTML post list --> {%- endcomment -%}
+{%- capture html_post_list -%}
+{%- include as_html_the_post_list_from_posts.liquid posts=posts-%}
+{%- endcapture -%}
+
+
+{%- comment -%}<!-- END OF LIQUID PROCESSING -->{%- endcomment -%}
+
 <div class="timeline container-fluid">
 
-    {%- assign _date_top = site.posts[0].date_of_creation -%}
-    {%- assign _date_bottom = site.posts[-1].date_of_creation -%}
-
-    {%- capture html_top_and_bottom_arrows -%}
-    {%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid date_top=_date_top
-    date_bottom=_date_bottom
-    -%}
-    {%- endcapture -%}
-
-    {%- comment -%} N.B : variables are reset in the include {%- endcomment -%}
-
+    {%- comment -%}<!-- printing HTML top and bottom arrows --> {%- endcomment -%}
     {{html_top_and_bottom_arrows}}
 
+    {%- comment -%}  <!-- resetting the html variable --> {%- endcomment -%}
     {%- assign html_top_and_bottom_arrows = null -%}
 
+    {%- comment -%}<!-- printing content of the next thing --> {%- endcomment -%}
     {{ content }}
 
     <div class="row g-sm-6">
@@ -34,20 +62,9 @@ layout : base
                             <h1 class="page-heading">{{ page.title }}</h1>
                             {%- endif -%}
                         </li>
-                        
-                        {%- comment -%}<!-- posts --> {%- endcomment -%}
-                        {%- assign _posts = site.posts-%}
 
-                        {%- comment -%}<!-- post list -->{%- endcomment -%}
-                        {%- capture html_post_index_list -%}
-                        {%- include as_html_the_post_index_list_from_posts.liquid posts=_posts-%}
-                        {%- endcapture -%}
-
-                        {%- comment -%}<!-- printing the post list --> {%- endcomment -%}
+                        {%- comment -%}<!-- printing HTML index post list --> {%- endcomment -%}
                         {{ html_post_index_list }}
-
-                        {%- comment -%}<!-- resetting --> {%- endcomment -%}
-                        {%- assign html_post_index_list = null -%}
 
                     </ul>
                 </div>
@@ -56,92 +73,10 @@ layout : base
 
         <div class="col-12 col-sm-7 col-lg-8 g-0">
             <ul class="post-list">
-                
-                {%- assign posts = site.posts -%}
 
-                
-                {%- for post in posts -%}
-                <li>
-                    {%- comment -%}<!-- initialization --> {%- endcomment -%}
-                    {%- assign post_title = post.title -%}
-                    {%- assign date_of_creation = post.date_of_creation -%}
-                    {%- assign date_of_modification = post.date_of_modification -%}
+                {%- comment -%}<!-- printing HTML post list --> {%- endcomment -%}
+                {{ html_post_list }}
 
-                    {%- comment -%}<!-- handling empty strings--> {%- endcomment -%}
-
-                    {%- if post_title == "" -%}
-                    {%- assign post_title = null -%}
-                    {%- endif -%}
-
-                    {%- if post_tags == "" -%}
-                    {%- assign post_tags = null -%}
-                    {%- endif -%}
-
-                    {%- if date_of_creation == "" -%}
-                    {%- assign date_of_creation = null -%}
-                    {%- endif -%}
-
-                    {%- if date_of_modification == "" -%}
-                    {%- assign date_of_modification = null -%}
-                    {%- endif -%}
-
-                    {%- comment -%}<!-- Processing -->{%- endcomment -%}
-
-                    {%- capture date_of_creation -%}
-                    {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_creation-%}
-                    {%- endcapture -%}
-
-                    {%- capture date_of_modification -%}
-                    {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_modification-%}
-                    {%- endcapture -%}
-
-                    {%- capture post_id -%}
-                    {%- include as_id_from_date.liquid date=date_of_creation-%}
-                    {%- endcapture -%}
-
-                    {%- capture post_color_background -%}
-                    {%- include as_color_background_from_date.liquid date=date_of_creation -%}
-                    {%- endcapture -%}
-
-                    {%- assign short_date = post.date_of_modification | split : " " -%}
-                    {%- comment -%} using a variable to get some feedback
-                    {%- endcomment -%}
-                    {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
-
-                    <article class="post {{post_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
-
-                        <header class="post-header">
-
-                            {%- if post_title -%}
-                            <h1 id="{{post_id}}" class="post-title" itemprop="name headline">
-                                {{ post_title }}
-                            </h1>
-                            {%- endif -%}
-
-                        </header>
-
-                        <div class="post-content" itemprop="articleBody">
-
-                            {{ post.content }}
-
-                            <br>
-
-                            {%- if post.date_of_creation -%}
-                            <span class='date date_of_creation'> {{ post.date_of_creation }} </span>
-                            {%- endif -%}
-
-                            <br>
-
-                            {%- if post.date_of_modification -%}
-                            <span class="date date_of_modification">
-                                {{  short_date }}
-                            </span>
-                            {%- endif -%}
-                        </div>
-
-                    </article>
-                </li>
-                {%- endfor -%}
             </ul>
         </div>
 
@@ -159,14 +94,18 @@ layout : base
 
         {%- if page.date_of_modification -%}
         <span class="date date_of_modification">
-        {%- assign short_date = page.date_of_modification | split : " " -%}
-        {%- comment -%} using a variable to get some feedback
-        {%- endcomment -%}
-        {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
-        {{  short_date }}
+        {{  date_of_modification_short }}
         </span>
         {%- endif -%}
 
     </div>
 
 </div>
+{%- comment -%}<!-- LIQUID POST-PROCESSING -->{%- endcomment -%}
+
+{%- assign html_post_index_list = null -%}
+{%- assign html_post_list = null -%}
+{%- assign posts = null -%}
+{%- assign date_of_modification_short = null -%}
+
+{%- comment -%}<!-- END OF LIQUID POST-PROCESSING -->{%- endcomment -%}
