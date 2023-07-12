@@ -4,5 +4,9 @@
 {%- capture _day -%}
     {%- include as_day_from_date.liquid date=include.date -%}
 {%- endcapture -%}
+
 {{ "color_background_" | append: _day | strip_newlines }}
-{%- comment -%} {%- endcomment -%}
+
+{%- comment -%} resetting variables {%- endcomment -%}
+{%- assign _day = null -%}
+{%- assign _color_background = null -%}
