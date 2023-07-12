@@ -99,6 +99,10 @@ layout : base
                     {%- include as_id_from_date.liquid date=date_of_creation-%}
                     {%- endcapture -%}
 
+                    {%- capture post_color_background -%}
+                    {%- include as_color_background_from_date.liquid date=date_of_creation -%}
+                    {%- endcapture -%}
+
                     {%- assign short_date = post.date_of_modification | split : " " -%}
                     {%- comment -%} using a variable to get some feedback
                     {%- endcomment -%}
