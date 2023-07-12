@@ -35,8 +35,12 @@ layout : base
                             {%- endif -%}
                         </li>
 
+                        {%- -%}
+
+                        {%- assign _posts = site.posts-%}
+
                         {%- capture html_post_index_list -%}
-                        {%- include as_html_the_post_index_list_from_posts.liquid posts=site.posts-%}
+                        {%- include as_html_the_post_index_list_from_posts.liquid posts=_posts-%}
                         {%- endcapture -%}
 
                         {{ html_post_index_list }}
