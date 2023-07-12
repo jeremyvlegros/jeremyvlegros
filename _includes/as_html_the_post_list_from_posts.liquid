@@ -28,19 +28,19 @@
             {%- comment -%} Processing {%- endcomment -%}
 
             {%- capture _date_of_creation -%}
-                {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_creation -%}
+                {%- include as_date_utc_from_custom_date.liquid custom_date=_date_of_creation -%}
             {%- endcapture -%}
 
             {%- capture _date_of_modification -%}
-                {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_modification -%}
+                {%- include as_date_utc_from_custom_date.liquid custom_date=_date_of_modification -%}
             {%- endcapture -%}
 
             {%- capture _post_id -%}
-                {%- include as_id_from_date.liquid date=date_of_creation -%}
+                {%- include as_id_from_date.liquid date=_date_of_creation -%}
             {%- endcapture -%}
 
             {%- capture _post_color_background -%}
-                {%- include as_color_background_from_date.liquid date=date_of_creation -%}
+                {%- include as_color_background_from_date.liquid date=_date_of_creation -%}
             {%- endcapture -%}
 
             {%- assign _short_date = post.date_of_modification | split: " " -%}
