@@ -26,15 +26,7 @@
             {%- endif -%}
 
             {%- comment -%} Processing {%- endcomment -%}
-
-            {%- capture _date_of_creation -%}
-                {%- include as_date_utc_from_custom_date.liquid custom_date=_date_of_creation -%}
-            {%- endcapture -%}
-
-            {%- capture _date_of_modification -%}
-                {%- include as_date_utc_from_custom_date.liquid custom_date=_date_of_modification -%}
-            {%- endcapture -%}
-
+            
             {%- capture _post_id -%}
                 {%- include as_id_from_date.liquid date=_date_of_creation -%}
             {%- endcapture -%}
@@ -43,8 +35,12 @@
                 {%- include as_color_background_from_date.liquid date=_date_of_creation -%}
             {%- endcapture -%}
 
-            {%- assign _short_date = post.date_of_modification | split: " " -%}
-            {%- assign _short_date = "#modified " | append: short_date[1] | append: " " | append: short_date[2] -%}
+            {%- if _date_of_modification-%}
+
+            {%- assign _short_date = _date_of_modification | split: " " -%}
+            {%- assign _short_date = "#modified " | append: _short_date[1] | append: " " | append: _short_date[2] -%}
+
+            {%- endif -%}
 
             <article class="post {{ _post_color_background }}" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -72,7 +68,7 @@
 
                     <br>
 
-                    {%- if post.date_of_modification -%}
+                    {%- if _date_of_modification -%}
                         <span class="date date_of_modification">
                             {{ _short_date }}
                         </span>
