@@ -14,7 +14,7 @@ layout : base
     date_bottom=_date_bottom
     -%}
     {%- endcapture -%}
-    
+
     {%- comment -%} N.B : variables are reset in the include {%- endcomment -%}
 
     {{html_top_and_bottom_arrows}}
@@ -34,15 +34,19 @@ layout : base
                             <h1 class="page-heading">{{ page.title }}</h1>
                             {%- endif -%}
                         </li>
-
+                        
+                        {%- comment -%}<!-- posts --> {%- endcomment -%}
                         {%- assign _posts = site.posts-%}
 
+                        {%- comment -%}<!-- post list -->{%- endcomment -%}
                         {%- capture html_post_index_list -%}
                         {%- include as_html_the_post_index_list_from_posts.liquid posts=_posts-%}
                         {%- endcapture -%}
 
+                        {%- comment -%}<!-- printing the post list --> {%- endcomment -%}
                         {{ html_post_index_list }}
 
+                        {%- comment -%}<!-- resetting --> {%- endcomment -%}
                         {%- assign html_post_index_list = null -%}
 
                     </ul>
@@ -52,23 +56,16 @@ layout : base
 
         <div class="col-12 col-sm-7 col-lg-8 g-0">
             <ul class="post-list">
+                
                 {%- assign posts = site.posts -%}
+
+                
                 {%- for post in posts -%}
                 <li>
-                    {%- comment -%}<!-- LIQUID --> {%- endcomment -%}
-                    {%- comment -%}<!--   DECLARATION --> {%- endcomment -%}
-
+                    {%- comment -%}<!-- initialization --> {%- endcomment -%}
                     {%- assign post_title = post.title -%}
-                    {%- assign post_tags = post.tags -%}
-                    {%- assign post_url = post.url -%}
-                    {%- assign post_category = post.category -%}
-                    {%- assign post_content_description = post.content_description -%}
-                    {%- assign post_color_background = post.color_background -%}
-                    {%- assign post_type = post.type -%}
-                    {%- assign post_image_color = post.image_color -%}
                     {%- assign date_of_creation = post.date_of_creation -%}
                     {%- assign date_of_modification = post.date_of_modification -%}
-                    {%- assign post_id = "unknown" -%}
 
                     {%- comment -%}<!-- handling empty strings--> {%- endcomment -%}
 
@@ -80,10 +77,6 @@ layout : base
                     {%- assign post_tags = null -%}
                     {%- endif -%}
 
-                    {%- if post_color_background == "" -%}
-                    {%- assign post_color_background = null -%}
-                    {%- endif -%}
-
                     {%- if date_of_creation == "" -%}
                     {%- assign date_of_creation = null -%}
                     {%- endif -%}
@@ -92,198 +85,24 @@ layout : base
                     {%- assign date_of_modification = null -%}
                     {%- endif -%}
 
+                    {%- comment -%}<!-- Processing -->{%- endcomment -%}
 
-                    {%- comment -%}<!-- INITILISATION --> {%- endcomment -%}
+                    {%- capture date_of_creation -%}
+                    {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_creation-%}
+                    {%- endcapture -%}
 
-                    {%- comment -%}<!-- TITLE --> {%- endcomment -%}
+                    {%- capture date_of_modification -%}
+                    {%- include as_date_utc_from_custom_date.liquid custom_date=date_of_modification-%}
+                    {%- endcapture -%}
 
-                    {%- if post_title -%}
-                    {%- assign post_title = post_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
-                    {%- endif -%}
+                    {%- capture post_id -%}
+                    {%- include as_id_from_date.liquid date=date_of_creation-%}
+                    {%- endcapture -%}
 
-                    {%- comment -%}<!-- PROCESSING--> {%- endcomment -%}
-
-
-                    {%- comment -%}<!-- DATE OF CREATION--> {%- endcomment -%}
-                    {%- if date_of_creation -%}
-
-                    {%- comment -%}
-                    <!-- removing "#date " and " GMT"
-                                                     => "2023-06-28 05:16 1687914994970097614"
-                    -->
+                    {%- assign short_date = post.date_of_modification | split : " " -%}
+                    {%- comment -%} using a variable to get some feedback
                     {%- endcomment -%}
-
-                    {%- assign date_of_creation = date_of_creation | replace : "#date ","" | replace " GMT",""%}
-
-                    {%- comment -%}
-                    <!-- split date in array
-                                                    => "[2023-06-28, 05:16, 1687914994970097614]"
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign date_of_creation = date_of_creation | split:" "%}
-                    {%- assign post_id = date_of_creation[2] -%}
-
-                    {%- comment -%}
-                    <!-- getting time
-                                                    => 05:16
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign time_of_creation = date_of_creation[1] -%}
-
-                    {%- comment -%}<!-- getting day of creation for colors --> {%- endcomment -%}
-                    {%- assign date_for_image_color = date_of_creation[0] -%}
-
-                    {%- comment -%}
-                    <!-- hour with seconds and Time difference
-                    I won't calculate the seconds ... for now ?
-                                                   => "05:16:00+00:00"
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign time_of_creation = time_of_creation | append :":00+00:00" -%}
-
-                    {%- comment -%}
-                    <!-- adding 'T' and hour to date
-                                                   => "2023-06-28T05:16:00+00:00"
-                    -->
-                    <!--                               2023-06-28                          T             05:16:00+00:00
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign date_of_creation = date_of_creation[0] | append : "T" | append : time_of_creation -%}
-
-                    {%- endif -%}
-
-                    {%- comment -%}<!-- DATE OF MODIFICATION --> {%- endcomment -%}
-                    {%- if date_of_modification -%}
-
-                    <!-- removing "#date " and " GMT"
-                                                     => "2023-06-28 05:16 1687914994970097614"
-                    -->
-                    {%- assign date_of_modification = date_of_modification | replace : "#date ","" | replace " GMT",""%}
-
-                    {%- comment -%}
-                    <!-- split date in array
-                                                     => "[2023-06-28, 05:16, 1687914994970097614]"
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign date_of_modification = date_of_modification | split:" "%}
-
-                    {%- comment -%}
-                    <!-- getting time
-                                                    => 05:16
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign time_of_modification = date_of_modification[1] -%}
-
-                    {%- comment -%}
-                    <!-- hour with seconds and Time difference
-                    I won't calculate the seconds ... for now ?
-                                                    => "05:16:00+00:00"
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign time_of_modification = time_of_modification | append :":00+00:00" -%}
-
-                    {%- comment -%}
-                    <!-- adding 'T' and hour to date
-                                                   => "2023-06-28T05:16:00+00:00"
-                    -->
-                    <!--                               2023-06-28                          T             05:16:00+00:00
-                    -->
-                    {%- endcomment -%}
-
-                    {%- assign date_of_modification = date_of_modification[0] | append : "T" | append :
-                    time_of_creation%}
-
-                    {%- endif -%}
-
-
-                    {%- comment -%}<!-- DATE FOR IMAGE COLOR --> {%- endcomment -%}
-
-                    {%- assign date_for_image_color = date_for_image_color | split : '-' -%}
-
-                    {%- comment -%}<!-- getting the day --> {%- endcomment -%}
-                    {%- assign date_for_image_color = date_for_image_color[2] -%}
-
-
-                    {%- comment -%}<!-- CONTENT BACKGROUND COLOR--> {%- endcomment -%}
-
-                    {%- comment -%}<!-- setting color if null --> {%- endcomment -%}
-
-                    {%- if post_color_background == null -%}
-                    {%- assign post_color_background = date_for_image_color -%}
-                    {%- endif -%}
-
-                    {%- case post_color_background -%}
-                    {%- when 1,"1" -%}
-                    {%- assign post_color_background = "color_background_1" -%}
-                    {%- when 2,"2" -%}
-                    {%- assign post_color_background = "color_background_2" -%}
-                    {%- when 3,"3" -%}
-                    {%- assign post_color_background = "color_background_3" -%}
-                    {%- when 4,"4" -%}
-                    {%- assign post_color_background = "color_background_4" -%}
-                    {%- when 5,"5" -%}
-                    {%- assign post_color_background = "color_background_5" -%}
-                    {%- when 6,"6" -%}
-                    {%- assign post_color_background = "color_background_6" -%}
-                    {%- when 7,"7" -%}
-                    {%- assign post_color_background = "color_background_7" -%}
-                    {%- when 8,"8" -%}
-                    {%- assign post_color_background = "color_background_8" -%}
-                    {%- when 9,"9" -%}
-                    {%- assign post_color_background = "color_background_9" -%}
-                    {%- when 10,"10" -%}
-                    {%- assign post_color_background = "color_background_10" -%}
-                    {%- when 11,"11" -%}
-                    {%- assign post_color_background = "color_background_11" -%}
-                    {%- when 12,"12" -%}
-                    {%- assign post_color_background = "color_background_12" -%}
-                    {%- when 13,"13" -%}
-                    {%- assign post_color_background = "color_background_13" -%}
-                    {%- when 14,"14" -%}
-                    {%- assign post_color_background = "color_background_14" -%}
-                    {%- when 15,"15" -%}
-                    {%- assign post_color_background = "color_background_15" -%}
-                    {%- when 16,"16" -%}
-                    {%- assign post_color_background = "color_background_16" -%}
-                    {%- when 17,"17" -%}
-                    {%- assign post_color_background = "color_background_17" -%}
-                    {%- when 18,"18" -%}
-                    {%- assign post_color_background = "color_background_18" -%}
-                    {%- when 19,"19" -%}
-                    {%- assign post_color_background = "color_background_19" -%}
-                    {%- when 20,"20" -%}
-                    {%- assign post_color_background = "color_background_20" -%}
-                    {%- when 21,"21" -%}
-                    {%- assign post_color_background = "color_background_21" -%}
-                    {%- when 22,"22" -%}
-                    {%- assign post_color_background = "color_background_22" -%}
-                    {%- when 23,"23" -%}
-                    {%- assign post_color_background = "color_background_23" -%}
-                    {%- when 24,"24" -%}
-                    {%- assign post_color_background = "color_background_24" -%}
-                    {%- when 25,"25" -%}
-                    {%- assign post_color_background = "color_background_25" -%}
-                    {%- when 26,"26" -%}
-                    {%- assign post_color_background = "color_background_26" -%}
-                    {%- when 27,"27" -%}
-                    {%- assign post_color_background = "color_background_27" -%}
-                    {%- when 28,"28" -%}
-                    {%- assign post_color_background = "color_background_28" -%}
-                    {%- when 29,"29" -%}
-                    {%- assign post_color_background = "color_background_29" -%}
-                    {%- when 30,"30" -%}
-                    {%- assign post_color_background = "color_background_30" -%}
-                    {%- when 31,"31" -%}
-                    {%- assign post_color_background = "color_background_31" -%}
-                    {%- endcase -%}
-
+                    {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
 
                     <article class="post {{post_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -311,10 +130,6 @@ layout : base
 
                             {%- if post.date_of_modification -%}
                             <span class="date date_of_modification">
-                                {%- assign short_date = post.date_of_modification | split : " " -%}
-                                {%- comment -%} using a variable to get some feedback
-                                {%- endcomment -%}
-                                {%- assign short_date = "#modified " | append : short_date[1] | append : " " | append : short_date[2] -%}
                                 {{  short_date }}
                             </span>
                             {%- endif -%}
