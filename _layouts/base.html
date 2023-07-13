@@ -35,137 +35,137 @@ boolean_remove_bootstrap : null
 {%- comment -%}<!-- handling empty strings -->{%- endcomment -%}
 
 {%- if page_title == "" -%}
-<!---->{%- assign page_title = null -%}
+{%- assign page_title = null -%}
 {%- endif -%}
 
 {%- if page_meta_description == "" -%}
-<!---->{%- assign page_meta_description = null -%}
+{%- assign page_meta_description = null -%}
 {%- endif -%}
 
 {%- if date_of_creation == "" -%}
-<!---->{%- assign date_of_creation = null -%}
+{%- assign date_of_creation = null -%}
 {%- endif -%}
 
 {%- if date_of_modification == "" -%}
-<!---->{%- assign date_of_modification = null -%}
+{%- assign date_of_modification = null -%}
 {%- endif -%}
 
 {%- if page_type == "" -%}
-<!---->{%- assign page_type = null -%}
+{%- assign page_type = null -%}
 {%- endif -%}
 
 {%- if boolean_remove_bootstrap == "" -%}
-<!---->{%- assign boolean_remove_bootstrap = null -%}
+{%- assign boolean_remove_bootstrap = null -%}
 {%- endif -%}
 
 {%- if page_url == "" -%}
-<!---->{%- assign page_url = null -%}
+{%- assign page_url = null -%}
 {%- endif -%}
 
 {%- if site_name == "" -%}
-<!---->{%- assign site_name = null -%}
+{%- assign site_name = null -%}
 {%- endif -%}
 
 {%- comment -%}<!-- PROCESSING -->{%- endcomment -%}
 
 {%- capture date_of_creation-%}
-<!---->{%- include as_date_utc_from_custom_date.liquid date=date_of_creation -%}
+{%- include as_date_utc_from_custom_date.liquid date=date_of_creation -%}
 {%- endcapture -%}
 
-{%- capture date_of_modification-%}
-<!---->{%- include as_date_utc_from_custom_date.liquid date=date_of_modification -%}
+{%- capture date_of_modification -%}
+{%- include as_date_utc_from_custom_date.liquid date=date_of_modification -%}
 {%- endcapture -%}
 
-{%- capture image_color-%}
-<!---->{%- include as_image_color_from_date.liquid date=date_of_creation -%}
+{%- capture page_image_color -%}
+{%- include as_image_color_from_date.liquid date=date_of_creation -%}
 {%- endcapture -%}
 
 {%- if page_title -%}
-<!---->{%- assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
+{%- assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
 {%- endif -%}
 
 {%- capture page_canonical_url -%}
-<!---->{%- include as_canonical_the_page_url.liquid -%}
+{%- include as_canonical_the_page_url.liquid -%}
 {%- endcapture -%}
 
 
 {%- if date_of_creation -%}
-<!---->{%- capture page_meta_date_of_creation-%}
-            <meta property="article:published_time" content="{{date_of_creation}}"/>
-<!---->{%- endcapture -%}
+{%- capture page_meta_date_of_creation-%}
+            <!--suppress ALL -->
+<meta property="article:published_time" content="{{date_of_creation}}"/>
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if page_meta_description -%}
-<!---->{%- capture page_meta_description-%}
+{%- capture page_meta_description-%}
             <meta name="description" content="{{page_meta_description}}"/>
             <meta property="og:description" content="{{page_meta_description}}"/>
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if page_meta_type -%}
-<!---->{%- capture page_meta_type-%}
+{%- capture page_meta_type-%}
             <meta property="og:type" content="{{page_type}}"/>
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if page_title -%}
-<!---->{%- capture page_meta_title-%}
+{%- capture page_meta_title-%}
           <meta property="og:title" content="{{page_title}}"/>
           <meta name="twitter:card" content="summary"/>
           <meta property="twitter:title" content="{{page_title}}"/>
           <title>{{page_title}}</title>
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if page_url -%}
-
-<!---->{%- capture page_meta_url-%}
-            <meta property="og:url" content="{{page_meta_url}}"/>
-<!---->{%- endcapture -%}
-
-<!---->{%- capture page_canonical_url -%}
-
-<!----><!---->{%- capture _page_canonical_url -%}
-<!----><!----><!---->{%- include as_canonical_the_page_url.liquid -%}
-<!----><!----><{%- endcapture -%}
-
-<!----><!---->{%- comment -%}<!--suppress HtmlUnknownTarget --> {%- endcomment -%}
-              <link rel="canonical" href="{{_page_canonical_url}}"/>
-<!---->{%- endcapture -%}
+{%- capture page_meta_url-%}
+  <meta property="og:url" content="{{page_meta_url}}"/>
+{%- endcapture -%}
 
 {%- endif -%}
 
 {%- if site_name -%}
-<!---->{%- capture page_meta_site_name-%}
+
+{%- capture _page_canonical_url -%}
+{%- include as_canonical_the_page_url.liquid -%}
+{%- endcapture -%}
+
+{%- capture page_canonical_url -%}
+  <link rel="canonical" href="{{_page_canonical_url}}"/>
+{%- endcapture -%}
+
+{%- capture page_meta_site_name-%}
             <meta property="og:site_name" content="{{site_name}}"/>
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {%- endif -%}
 
 {%- if page_image_color -%}
-<!---->{%- capture page_meta_image_color-%}
+{%- capture page_meta_image_color-%}
             <meta name='og:image' content="{{page_meta_image_color}}"/>
             <meta name='twitter:image' content='{{page_image_color}}'/>
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {%- endif -%}
 
 
 {% if page_remove_bootstrap %}
-<!---->{%- assign page_url_bootstrap = null -%}
+{%- assign page_url_bootstrap = null -%}
 {%- else -%}
-<!---->{%- capture page_url_bootstrap-%}
+{%- capture page_url_bootstrap-%}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
               crossorigin="anonymous">
-<!---->{%- endcapture -%}
+{%- endcapture -%}
 {% endif %}
 
+
 {%- capture page_url_css -%}
-<!--suppress HtmlUnknownTarget, HtmlRequiredTitleElement -->
     <link rel="stylesheet" href="{{'/assets/main.css' | relative_url}}">
 {%- endcapture -%}
 
 {%- comment -%}<!-- END LIQUID --> {%- endcomment -%}
+
 
 <!DOCTYPE html>
 <html lang="en">
