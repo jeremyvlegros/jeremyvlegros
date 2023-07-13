@@ -118,13 +118,6 @@ boolean_remove_bootstrap : null
 {%- endcapture -%}
 {%- endif -%}
 
-{%- if page_url -%}
-{%- capture page_meta_url-%}
-  <meta property="og:url" content="{{page_meta_url}}"/>
-{%- endcapture -%}
-
-{%- endif -%}
-
 {%- if site_name -%}
 
 {%- capture _page_canonical_url -%}
@@ -133,6 +126,7 @@ boolean_remove_bootstrap : null
 
 {%- capture page_canonical_url -%}
   <link rel="canonical" href="{{_page_canonical_url}}"/>
+  <meta property="og:url" content="{{_page_canonical_url}}"/>
 {%- endcapture -%}
 
 {%- capture page_meta_site_name-%}
@@ -142,7 +136,7 @@ boolean_remove_bootstrap : null
 
 {%- if page_image_color -%}
 {%- capture page_meta_image_color-%}
-            <meta name='og:image' content="{{page_meta_image_color}}"/>
+            <meta name='og:image' content="{{page_image_color}}"/>
             <meta name='twitter:image' content='{{page_image_color}}'/>
 {%- endcapture -%}
 {%- endif -%}
