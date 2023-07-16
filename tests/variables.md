@@ -1018,14 +1018,14 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 ```
 
-## testing `as_day_from_date.liquid`
+## testing `as_image_color_from_date.liquid`
 
 ```liquid
 
 {% comment %} blank {% endcomment %} 
 
 {%- assign input    = "#date 2023-07-15 15:08 1689419289162964599 GMT" -%}
-{%- assign expected = "15" -%}
+{%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
 {%- capture result -%}
     {% include  as_image_color_from_date.liquid date=input %}
@@ -1050,7 +1050,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {% comment %} blank {% endcomment %} 
 
 {%- assign input    = "2023-07-15T15:08:00+OO:OO" -%}
-{%- assign expected = "15" -%}
+{%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
 {%- capture result -%}
     {% include  as_image_color_from_date.liquid date=input %}
@@ -1058,6 +1058,56 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 {%- capture assert -%}
     {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="UTC"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "2023-07-08T15:08:00+OO:OO" -%}
+{%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
+
+{%- capture result -%}
+    {% include  as_image_color_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="UTC one relevant digit"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} blank {% endcomment %}
+
+```
+
+```liquid
+
+{% comment %} blank {% endcomment %} 
+
+{%- assign input    = "#date 2023-07-15 15:08 1689419289162964599 GMT" -%}
+{%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
+
+{%- capture result -%}
+    {% include  as_image_color_from_date.liquid date=input %}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="GMT one relevant digit"%}
 {%- endcapture -%}
 {{assert}}
 
