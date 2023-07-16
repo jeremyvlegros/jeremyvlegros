@@ -958,6 +958,25 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign result   = null -%}
 {% comment %}{% endcomment %} 
 ```
+```liquid
+{% comment %}{% endcomment %}
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign assert   = null -%}
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{% comment %}{% endcomment %} 
+```
 
 
 ## Testing `as_id_from_date.liquid`
@@ -973,6 +992,48 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 
 {%- capture assert -%}
   {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include as_id_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="date empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign input    = null -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include as_id_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1030,6 +1091,47 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% comment %}{% endcomment %}
 ```
 
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include  as_day_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = null -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include  as_day_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
 
 ## Testing `as_color_background_from_date.liquid`
 
@@ -1075,6 +1177,49 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
+
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include as_color_background_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = null -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include as_color_background_from_date.liquid date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
 
 ## testing `as_canonical_the_page_url.liquid`
 
@@ -1176,6 +1321,48 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 
 {%- capture assert -%}
   {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="GMT one relevant digit" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include  as_image_color_from_date.liquid date=input  -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+{% comment %}{% endcomment %} 
+{%- assign input    = null -%}
+{%- assign expected = null -%}
+
+{%- capture result -%}
+    {%- include  as_image_color_from_date.liquid date=input  -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
