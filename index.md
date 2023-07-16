@@ -16,6 +16,6 @@ posts :
 {% include as_html_the_post_list_with_url_from_posts.liquid posts=site.posts %}
 {% endcapture %}
 
-{{ post_list }}
+{{ post_list | markdownify }}
 
 
