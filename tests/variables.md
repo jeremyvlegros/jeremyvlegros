@@ -961,7 +961,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = "" -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
@@ -1005,7 +1005,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = "" -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include as_id_from_date.liquid date=input -%}
@@ -1026,7 +1026,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = null -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include as_id_from_date.liquid date=input -%}
@@ -1094,7 +1094,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include  as_day_from_date.liquid date=input -%}
@@ -1115,7 +1115,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include  as_day_from_date.liquid date=input -%}
@@ -1181,7 +1181,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include as_color_background_from_date.liquid date=input -%}
@@ -1202,7 +1202,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include as_color_background_from_date.liquid date=input -%}
@@ -1334,7 +1334,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include  as_image_color_from_date.liquid date=input  -%}
@@ -1355,7 +1355,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = null -%}
+{%- assign expected = "" -%}
 
 {%- capture result -%}
     {%- include  as_image_color_from_date.liquid date=input  -%}
