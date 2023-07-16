@@ -1,6 +1,6 @@
 ---
-title : Index
-layout : post
+title  : Index
+layout : index
 date_of_modification : "#date 2023-07-16 21:25 1689528308458334495 GMT"
 ---
 
@@ -12,10 +12,5 @@ N.B : this page is not meant to be seen.If you are there, well, you can look aro
 
 posts :
 
-{% capture post_list %}
-{% include as_html_the_post_list_with_url_from_posts.liquid posts=site.posts %}
-{% endcapture %}
-
-{{ post_list | markdownify }}
 
 
