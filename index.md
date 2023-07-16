@@ -10,4 +10,8 @@ N.B : this page is not meant to be seen.If you are there, well, you can look aro
 - [Timeline](https://jeremyvlegros.github.io/website/timeline.html)
 - [Links](https://jeremyvlegros.github.io/website/links)
 
+posts :
+
+{% include as_html_the_post_list_with_url_from_posts.liquid posts=site.posts %}
+
 
