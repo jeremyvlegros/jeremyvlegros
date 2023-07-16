@@ -7,8 +7,9 @@ test_list :
 - "c"
 
 print_array          : print_array_content.html
+
 date_of_creation     : "#date 2023-06-20 00:00 000 GMT"
-date_of_modification : "#date 2023-07-16 14:58 1689505132134058707 GMT"
+date_of_modification : "#date 2023-07-16 22:23 1689531810469969567 GMT"
 ---
 
 ## Assigning a variable `test_list`
@@ -23,12 +24,7 @@ date_of_modification : "#date 2023-07-16 14:58 1689505132134058707 GMT"
 {% comment %}{% endcomment %}
 ```
 
-
-
-
-
 ## Printing a `HTML` character
-
 
 {% assign character = ">" %}
 {% assign character = character | replace : ">","&gt;" %}
@@ -46,7 +42,7 @@ html character greater than "{{character}}"
 {% comment %}{% endcomment %}
 ```
 
-## Prefixing a HTML character by `NBSP`
+## Prefixing an HTML character by `NBSP`
 
 {% assign title = page.title %}
 {% if title %}
@@ -110,7 +106,7 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% comment %}{% endcomment %}
 ```
 
-## Displaying `Liquid` results in code ?
+## Displaying list elements
 
 ```liquid
 {% comment %}{% endcomment %}
@@ -119,6 +115,20 @@ The `test_list` as a string : `{{ test_list | inspect }}`
 {% endfor %}
 {% comment %}{% endcomment %}
 ```
+
+
+```liquid
+{% comment %}{% endcomment %}
+{% raw %}
+{% comment %}{% endcomment %}
+{% for value in test_list %}
+{{ value }}
+{% endfor %}
+{% comment %}{% endcomment %}
+{% endraw %}
+{% comment %}{% endcomment %}
+```
+
 
 ## `unless`
 
@@ -344,9 +354,9 @@ expected : "a letter among a,b,c,d"
 {% assign letter = "a" %}
 {% case letter %}
 {% when "a", "b", "c", "d" %}
-a letter among a,b,c,d
+`a letter among a,b,c,d`
 {% else %}
-not a letter among a,b,c,d
+`not a letter among a,b,c,d`
 {% endcase %}
 
 expected : "a letter among a,b,c,d"
@@ -354,9 +364,9 @@ expected : "a letter among a,b,c,d"
 {% assign letter = "d" %}
 {% case letter %}
 {% when "a", "b", "c", "d" %}
-a letter among a,b,c,d
+`a letter among a,b,c,d`
 {% else %}
-not a letter among a,b,c,d
+`not a letter among a,b,c,d`
 {% endcase %}
 
 expected : "not a letter among a,b,c,d"
@@ -364,9 +374,9 @@ expected : "not a letter among a,b,c,d"
 {% assign letter = "e" %}
 {% case letter %}
 {% when "a", "b", "c", "d" %}
-a letter among a,b,c,d
+`a letter among a,b,c,d`
 {% else %}
-not a letter among a,b,c,d
+`not a letter among a,b,c,d`
 {% endcase %}
 
 ```liquid
@@ -376,32 +386,31 @@ expected : "a letter among a,b,c,d"
 
 {% assign letter = "a" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+`a letter among a,b,c,d`
+{% else %}
+`not a letter among a,b,c,d`
 {% endcase %}
 
 expected : "a letter among a,b,c,d"
 
 {% assign letter = "d" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d 
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+`a letter among a,b,c,d`
+{% else %}
+`not a letter among a,b,c,d`
 {% endcase %}
 
 expected : "not a letter among a,b,c,d"
 
 {% assign letter = "e" %}
 {% case letter %}
-  {% when "a", "b", "c", "d" %}
-    a letter among a,b,c,d 
-  {% else %}
-    not a letter among a,b,c,d
+{% when "a", "b", "c", "d" %}
+`a letter among a,b,c,d`
+{% else %}
+`not a letter among a,b,c,d`
 {% endcase %}
-
 {% endraw %}
 {% comment %}{% endcomment %}
 ```
