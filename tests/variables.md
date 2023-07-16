@@ -733,7 +733,18 @@ value of the function : `{{ sum }}`
 
 {% endraw %}
 ```
-## Testing my assert procedure
+
+## `post` `date_of_creation` ?
+
+post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
+
+```liquid
+{% raw %}
+post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
+{% endraw %}
+```
+
+## Testing `procedure_assert_this_and_that.liquid`
 
 expected success for 1 == 1
 
@@ -847,15 +858,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% assign result   = null %} 
 ```
 
-## `post` `date_of_creation` ?
 
-post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
-
-```liquid
-{% raw %}
-post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
-{% endraw %}
-```
 ## Testing `as_id_from_date.liquid`
 
 ```liquid
