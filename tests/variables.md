@@ -1032,7 +1032,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="GMT"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="GMT"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1057,7 +1057,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="UTC"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="UTC"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1082,7 +1082,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="UTC one relevant digit"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="UTC one relevant digit"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1107,7 +1107,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="" with_warning="" with_name="GMT one relevant digit"%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="GMT one relevant digit"%}
 {%- endcapture -%}
 {{assert}}
 
