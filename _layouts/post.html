@@ -3,12 +3,22 @@ layout : base
 title : null
 date_of_creation : null
 date_of_modification : null
+no_color_background : null
 ---
 
-{%- capture color_background -%}
+{%- if page.no_color_background == "" -%}
+{%- assign page_no_color_background = null -%}
+{%- else -%}
+{%- assign page_no_color_background = page.no_color_background -%}
+{%- endif -%}
+
+{%- if page_no_color_background -%}
+{%- assign page_color_background = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
+{%- else -%}
+{%- capture page_color_background -%}
 {%- include as_color_background_from_date.liquid date=page.date_of_creation -%}
 {%- endcapture -%}
-
+{%- endif -%}
 
 <article class="post {{page_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
 
