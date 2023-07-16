@@ -1,15 +1,10 @@
 {%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
 {%- assign _site_name = site.name -%}
-{%- assign _page_url = page.url -%}
+{%- assign _page_url = null -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _site_name == "" -%}
-    {%- assign _site_name = null -%}
-{%- endif -%}
-
-{%- if _site_name -%}
-    {%- assign _page_url = site.url | append :"/" | append : _site_name | append : _page_url -%}
-{%- endif -%}
+{%- capture _page_url -%}
+    {%- include as_canonical_url_from_url.liquid url=page.url -%}
+{%- endcapture -%}
 
 {{ _page_url }}
 
