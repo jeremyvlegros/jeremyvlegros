@@ -1099,7 +1099,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 
 {% comment %} blank {% endcomment %} 
 
-{%- assign input    = "#date 2023-07-15 15:08 1689419289162964599 GMT" -%}
+{%- assign input    = "#date 2023-07-08 15:08 1689419289162964599 GMT" -%}
 {%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
 
 {%- capture result -%}
