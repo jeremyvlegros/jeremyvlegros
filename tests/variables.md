@@ -1001,7 +1001,7 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {%- assign expected = "https://jeremyvlegros.github.io/website/tests/variables.html" -%}
 
 {%- capture result -%}
-    {% include  as_canonical_the_page_url.liquid.liquid %}
+    {% include  as_canonical_the_page_url.liquid %}
 {%- endcapture -%}
 
 {%- capture assert -%}
