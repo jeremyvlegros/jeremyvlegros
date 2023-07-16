@@ -4,7 +4,6 @@
 {%- comment -%} main value : post list {%- endcomment -%}
 {%- capture _post_list %}
     <ul>
-    {% comment %}{% endcomment %}
     {%- comment -%} generating the post list {%- endcomment -%}
     {%- for post in _posts -%}
         <li>
@@ -25,9 +24,7 @@
             {%- comment -%} Processing {%- endcomment -%}
 
             <a href="{{ post.url }}"> {{ post.title }} {{ _date_of_creation }}</a>
-            {% comment %}{% endcomment %}
         </li>
-        {% comment %}{% endcomment %}
     {%- endfor -%}
     </ul>
 
