@@ -702,9 +702,13 @@ result   : `{{ captured_text|replace : " ", "," }}`
 
 ## `capture` > `include`
 
+```liquid
+{% comment %}{% endcomment %}
 {%- capture captured_text -%}
   {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {%- endcapture -%}
+{% comment %}{% endcomment %}
+```
 
 expected :`5`
 result : `{{ captured_text }}`
@@ -713,10 +717,11 @@ result : `{{ captured_text }}`
 ```liquid
 {% comment %}{% endcomment %}
 {% raw %}
-
+{% comment %}{% endcomment %}
 {%- capture captured_text -%}
   {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {%- endcapture -%}
+{% comment %}{% endcomment %}
 
 expected :`5`
 result : `{{ captured_text }}`
@@ -749,9 +754,9 @@ Resetting the `result` variable
 
 value of result before call include : `{{ result }}`
 
-{%- capture captured_text -%}
+{% capture captured_text %}
   {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
-{%- endcapture -%}
+{% endcapture %}
 
 value of result after call include : `{{ result }}`
 {% endraw %}
