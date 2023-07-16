@@ -1,6 +1,6 @@
 {%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
 {%- assign _site_name = site.name -%}
-{%- assign _page_url = site.name -%}
+{%- assign _page_url = page.url -%}
 
 {%- comment -%} dealing with empty string {%- endcomment -%}
 {%- if _site_name == "" -%}
@@ -8,7 +8,7 @@
 {%- endif -%}
 
 {%- if _site_name -%}
-    {%- assign _page_url = site.url | append :"/" | append : _site_name | append : page.url -%}
+    {%- assign _page_url = site.url | append :"/" | append : _site_name | append : _page_url -%}
 {%- endif -%}
 
 {{ _page_url }}
