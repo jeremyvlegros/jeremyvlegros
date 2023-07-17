@@ -2,7 +2,7 @@
 title                : "status > my external links will be on `linkt.ree` "
 layout               : post
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
-date_of_modification : "#date 2023-07-05 20:56 1688576201305391415 GMT"
+date_of_modification : "#date 2023-07-17 16:29 1689596952051145003 GMT"
 ---
 
 ## Reasons
@@ -40,3 +40,10 @@ Sometimes I want to be normal, to fit the norm.
 By doing the same things that big money earners do, relieves the pressure that ethics put on my train of thought.
 
 After all, being crazy in a crazy world, is being normal.
+
+## The way I am doing it
+
+I will refer to the two addresses if I can:
+- I don't like the link tree page, for obvious reasons
+- I feel bad
+- it distorts the perception of who I am
