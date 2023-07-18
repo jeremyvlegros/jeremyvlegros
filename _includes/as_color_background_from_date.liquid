@@ -16,7 +16,15 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{{ _color_background }}
+{%- assign _return = _color_background | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _color_background }}
+{%- endcase -%}
+{%- assign _return = null -%}
+
 
 {%- comment -%} resetting variables {%- endcomment -%}
 {%- assign _day = null -%}

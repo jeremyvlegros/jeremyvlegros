@@ -967,48 +967,9 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign result   = null -%}
 {% comment %}{% endcomment %} 
 ```
-```liquid
-{% comment %} date with "" returning "" {% endcomment %}
-{%- assign input    = "" -%}
-{%- assign expected = "" -%}
-
-{%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
-{%- endcapture -%}
-
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with empty string" -%}
-{%- endcapture -%}
-{{assert}}
-
-{%- assign assert   = null -%}
-{%- assign expected = null -%}
-{%- assign result   = null -%}
-{% comment %}{% endcomment %} 
-```
 
 ```liquid
-{% comment %}date with null returning "" {% endcomment %}
-{%- assign input    = null -%}
-{%- assign expected = "" -%}
-
-{%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
-{%- endcapture -%}
-
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with null returning empty string" -%}
-{%- endcapture -%}
-{{assert}}
-
-{%- assign assert   = null -%}
-{%- assign expected = null -%}
-{%- assign result   = null -%}
-{% comment %}{% endcomment %} 
-```
-
-```liquid
-{% comment %}refactored function : date with null returning "null" {% endcomment %}
+{% comment %} date with null returning "null" {% endcomment %}
 {%- assign input    = null -%}
 {%- assign expected = "null" -%}
 
@@ -1028,7 +989,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```
 
 ```liquid
-{% comment %}refactored function : date with "" returning "null" {% endcomment %}
+{% comment %} date with "" returning "null" {% endcomment %}
 {%- assign input    = "" -%}
 {%- assign expected = "null" -%}
 
@@ -1073,7 +1034,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = "" -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include as_id_from_date.liquid date=input -%}
@@ -1094,7 +1055,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = null -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include as_id_from_date.liquid date=input -%}
@@ -1162,7 +1123,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include  as_day_from_date.liquid date=input -%}
@@ -1183,7 +1144,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include  as_day_from_date.liquid date=input -%}
@@ -1249,7 +1210,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include as_color_background_from_date.liquid date=input -%}
@@ -1270,7 +1231,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include as_color_background_from_date.liquid date=input -%}
@@ -1402,7 +1363,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include  as_image_color_from_date.liquid date=input  -%}
@@ -1423,7 +1384,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "" -%}
+{%- assign expected = "null" -%}
 
 {%- capture result -%}
     {%- include  as_image_color_from_date.liquid date=input  -%}

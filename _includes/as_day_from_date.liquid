@@ -78,8 +78,17 @@
     {%- endif -%}
 {%- endif -%}
 
+
 {%- comment -%} return {%- endcomment -%}
-{{ _day | strip_newlines }}
+{%- assign _return = _day | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _day }}
+{%- endcase -%}
+{%- assign _return = null -%}
+
 
 {%- assign _date = null -%}
 {%- assign _day = null -%}

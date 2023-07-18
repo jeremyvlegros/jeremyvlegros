@@ -7,11 +7,24 @@
     {%- assign _site_name = null -%}
 {%- endif -%}
 
+{%- comment -%} dealing with empty string, precaution {%- endcomment -%}
+{%- if _page_url == "" -%}
+    {%- assign _page_url = null -%}
+{%- endif -%}
+
 {%- if _site_name -%}
     {%- assign _page_url = site.url | append :"/" | append : _site_name | append : _page_url -%}
 {%- endif -%}
 
-{{ _page_url }}
+{%- comment -%} return {%- endcomment -%}
+{%- assign _return = _page_url | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _page_url }}
+{%- endcase -%}
+{%- assign _return = null -%}
 
 {%- assign _site_name = null -%}
 {%- assign _page_url = null -%}

@@ -12,8 +12,17 @@
     {%- comment -%}getting id {%- endcomment -%}
     {%- assign _id = _date[3] -%}
 {%- endif -%}
-{%- comment -%}return {%- endcomment -%}
-{{ _id }}
+
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign _return = _id | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _id }}
+{%- endcase -%}
+{%- assign _return = null -%}
 
 {%- assign _date = null -%}
 {%- assign _id = null -%}

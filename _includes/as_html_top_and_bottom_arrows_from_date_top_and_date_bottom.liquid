@@ -3,6 +3,7 @@
 {%- comment -%} dates {%- endcomment -%}
 {%- assign _date_top = include.date_top -%}
 {%- assign _date_bottom = include.date_bottom -%}
+{%- assign _html = null -%}
 
 {%- comment -%} ids {%- endcomment -%}
 {%- capture _top_id -%}
@@ -13,18 +14,21 @@
     {%- include as_id_from_date.liquid date=_date_bottom -%}
 {%- endcapture -%}
 
+{%- capture _html -%}
+    <span class="arrow_to_page_top">
+            <a class="button" href="#{{ _top_id }}"> &UpArrowBar; </a>
+    </span>
+    <span class="arrow_to_page_bottom">
+             <a class="button" href="#{{ _bottom_id }}"> &DownArrowBar; </a>
+    </span>
+{%- endcapture -%}
 
-{%- comment -%} Main {%- endcomment -%}
-<span class="arrow_to_page_top">
-        <a class="button" href="#{{ _top_id }}"> &UpArrowBar; </a>
-</span>
-<span class="arrow_to_page_bottom">
-         <a class="button" href="#{{ _bottom_id }}"> &DownArrowBar; </a>
-</span>
+{{ _html }}
 
 {%- comment -%} resetting variables and stripping last line {%- endcomment -%}
 {%- assign _date_top = null -%}
 {%- assign _date_bottom = null -%}
 {%- assign _top_id = null -%}
 {%- assign _bottom_id = null -%}
+{%- assign _html = null -%}
 

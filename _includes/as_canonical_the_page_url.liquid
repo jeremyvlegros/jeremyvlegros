@@ -6,7 +6,15 @@
     {%- include as_canonical_url_from_url.liquid url=page.url -%}
 {%- endcapture -%}
 
-{{ _page_url }}
+{%- comment -%} return {%- endcomment -%}
+{%- assign _return = _page_url | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ null }}
+    {%- else -%}
+        {{ _page_url }}
+{%- endcase -%}
+{%- assign _return = null -%}
 
 {%- assign _site_name = null -%}
 {%- assign _page_url = null -%}

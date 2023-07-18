@@ -35,7 +35,14 @@
 {%- endcapture -%}
 
 {%- comment -%} return {%- endcomment -%}
-{{ _post_list }}
+{%- assign _return = _post_list | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _post_list }}
+{%- endcase -%}
+{%- assign _return = null -%}
 
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign _posts = null -%}

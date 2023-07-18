@@ -74,7 +74,14 @@
 {%- endcase -%}
 
 {%- comment -%} return {%- endcomment -%}
-{{ _image_color }}
+{%- assign _return = _image_color | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ 'null' }}
+    {%- else -%}
+        {{ _image_color }}
+{%- endcase -%}
+{%- assign _return = null -%}
 
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign _day = null -%}

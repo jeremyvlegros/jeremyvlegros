@@ -80,13 +80,13 @@ boolean_remove_bootstrap : null
 {%- include as_image_color_from_date.liquid date=page_date_of_creation_utc -%}
 {%- endcapture -%}
 
-{%- if page_title -%}
-{%- assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
-{%- endif -%}
-
 {%- capture page_canonical_url -%}
 {%- include as_canonical_the_page_url.liquid -%}
 {%- endcapture -%}
+
+{%- if page_title -%}
+{%- assign page_title = page_title | escape | replace : " &gt;","&nbsp;&gt;" -%}
+{%- endif -%}
 
 
 {%- if page_date_of_creation_utc -%}
@@ -118,7 +118,6 @@ boolean_remove_bootstrap : null
 {%- endif -%}
 
 {%- if site_name -%}
-
 {%- capture _page_canonical_url -%}
 {%- include as_canonical_the_page_url.liquid -%}
 {%- endcapture -%}
