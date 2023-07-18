@@ -1381,3 +1381,52 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
+
+## testing empty `capture` returning null
+
+```liquid
+{% comment %}{% endcomment %}
+{%- capture null_variable -%}
+{%- endcapture -%}
+
+{%- assign input    = null_variable -%}
+{%- assign expected = null -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=input with_success="1" with_warning="" with_name="an empty capture is null"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{%- assign null_variable = null -%}
+
+{% comment %}{% endcomment %}
+```
+
+## testing `capture` with `include` returning null when nothing inside
+
+```liquid
+{% comment %}{% endcomment %}
+{%- capture null_variable -%}
+    {%- include null.liquid -%}
+{%- endcapture -%}
+
+{%- assign input    = null_variable -%}
+{%- assign expected = null -%}
+
+{%- capture assert -%}
+    {% include procedure_assert_this_and_that.liquid this=expected that=input with_success="1" with_warning="" with_name="capturing an empty `include` returns null"%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign assert   = null -%}
+{%- assign input    = null -%}
+{%- assign null_variable = null -%}
+
+{% comment %}{% endcomment %}
+```
