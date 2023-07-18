@@ -1,17 +1,12 @@
 {%- comment -%}as_color_background_from_date.liquid {%- endcomment -%}
-{%- assign _day = null -%}
-{%- assign _color_background = null -%}
+{%- assign _day = "null" -%}
+{%- assign _color_background = "null" -%}
 
 {%- capture _day -%}
     {%- include as_day_from_date.liquid date=include.date -%}
 {%- endcapture -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _day == "" -%}
-    {%- assign _day = null -%}
-{%- endif -%}
-
-{%- if _day -%}
+{%- if _day != "null" -%}
     {%- assign _color_background = "color_background_" | append: _day | strip_newlines -%}
 {%- endif -%}
 

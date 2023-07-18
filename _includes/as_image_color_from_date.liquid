@@ -1,77 +1,78 @@
 {%- comment -%} as_image_color_from_date.liquid {%- endcomment -%}
-{%- assign _day = null -%}
-{%- assign _image_color = null -%}
+{%- assign _day = "null" -%}
+{%- assign _image_color = "null" -%}
 
 {%- capture _day -%}
     {%- include as_day_from_date.liquid date=include.date -%}
 {%- endcapture -%}
 
-{%- comment -%} Main value {%- endcomment -%}
-{%- case _day -%}
-    {%- when "01" -%}
-        {%- assign _image_color = "https://i.imgur.com/BpwYECq.png" -%}
-    {%- when "02" -%}
-        {%- assign _image_color = "https://i.imgur.com/UNPogEC.png" -%}
-    {%- when "03" -%}
-        {%- assign _image_color = "https://i.imgur.com/WeQ9pUI.png" -%}
-    {%- when "04" -%}
-        {%- assign _image_color = "https://i.imgur.com/rwMJzJY.png" -%}
-    {%- when "05" -%}
-        {%- assign _image_color = "https://i.imgur.com/y4GOWP8.png" -%}
-    {%- when "06" -%}
-        {%- assign _image_color = "https://i.imgur.com/XmCbs0H.png" -%}
-    {%- when "07" -%}
-        {%- assign _image_color = "https://i.imgur.com/Oc2vg4j.png" -%}
-    {%- when "08" -%}
-        {%- assign _image_color = "https://i.imgur.com/1LxHBZo.png" -%}
-    {%- when "09" -%}
-        {%- assign _image_color = "https://i.imgur.com/A74C7te.png" -%}
-    {%- when "10" -%}
-        {%- assign _image_color = "https://i.imgur.com/ld3Y0ZH.png" -%}
-    {%- when "11" -%}
-        {%- assign _image_color = "https://i.imgur.com/vE1poN2.png" -%}
-    {%- when "12" -%}
-        {%- assign _image_color = "https://i.imgur.com/6H0pWyd.png" -%}
-    {%- when "13" -%}
-        {%- assign _image_color = "https://i.imgur.com/H426FqL.png" -%}
-    {%- when "14" -%}
-        {%- assign _image_color = "https://i.imgur.com/rvT3aBX.png" -%}
-    {%- when "15" -%}
-        {%- assign _image_color = "https://i.imgur.com/NzqdErY.png" -%}
-    {%- when "16" -%}
-        {%- assign _image_color = "https://i.imgur.com/XRItiBv.png" -%}
-    {%- when "17" -%}
-        {%- assign _image_color = "https://i.imgur.com/EFiyrR0.png" -%}
-    {%- when "18" -%}
-        {%- assign _image_color = "https://i.imgur.com/HlEsCy0.png" -%}
-    {%- when "19" -%}
-        {%- assign _image_color = "https://i.imgur.com/NoDA2YL.png" -%}
-    {%- when "20" -%}
-        {%- assign _image_color = "https://i.imgur.com/LZTjWOv.png" -%}
-    {%- when "21" -%}
-        {%- assign _image_color = "https://i.imgur.com/t4trRjd.png" -%}
-    {%- when "22" -%}
-        {%- assign _image_color = "https://i.imgur.com/PWIooMi.png" -%}
-    {%- when "23" -%}
-        {%- assign _image_color = "https://i.imgur.com/Sp0JMH7.png" -%}
-    {%- when "24" -%}
-        {%- assign _image_color = "https://i.imgur.com/iyKhqH3.png" -%}
-    {%- when "25" -%}
-        {%- assign _image_color = "https://i.imgur.com/dSz3lXU.png" -%}
-    {%- when "26" -%}
-        {%- assign _image_color = "https://i.imgur.com/1S9qN2X.png" -%}
-    {%- when "27" -%}
-        {%- assign _image_color = "https://i.imgur.com/C3KnBzl.png" -%}
-    {%- when "28" -%}
-        {%- assign _image_color = "https://i.imgur.com/kPf02Ou.png" -%}
-    {%- when "29" -%}
-        {%- assign _image_color = "https://i.imgur.com/uDvk9ZQ.png" -%}
-    {%- when "30" -%}
-        {%- assign _image_color = "https://i.imgur.com/GomogEH.png" -%}
-    {%- when "31" -%}
-        {%- assign _image_color = "https://i.imgur.com/0VgppgF.png" -%}
-
-{%- endcase -%}
+{%- if _day != "null" -%}
+    {%- comment -%} Main value {%- endcomment -%}
+    {%- case _day -%}
+        {%- when "01" -%}
+            {%- assign _image_color = "https://i.imgur.com/BpwYECq.png" -%}
+        {%- when "02" -%}
+            {%- assign _image_color = "https://i.imgur.com/UNPogEC.png" -%}
+        {%- when "03" -%}
+            {%- assign _image_color = "https://i.imgur.com/WeQ9pUI.png" -%}
+        {%- when "04" -%}
+            {%- assign _image_color = "https://i.imgur.com/rwMJzJY.png" -%}
+        {%- when "05" -%}
+            {%- assign _image_color = "https://i.imgur.com/y4GOWP8.png" -%}
+        {%- when "06" -%}
+            {%- assign _image_color = "https://i.imgur.com/XmCbs0H.png" -%}
+        {%- when "07" -%}
+            {%- assign _image_color = "https://i.imgur.com/Oc2vg4j.png" -%}
+        {%- when "08" -%}
+            {%- assign _image_color = "https://i.imgur.com/1LxHBZo.png" -%}
+        {%- when "09" -%}
+            {%- assign _image_color = "https://i.imgur.com/A74C7te.png" -%}
+        {%- when "10" -%}
+            {%- assign _image_color = "https://i.imgur.com/ld3Y0ZH.png" -%}
+        {%- when "11" -%}
+            {%- assign _image_color = "https://i.imgur.com/vE1poN2.png" -%}
+        {%- when "12" -%}
+            {%- assign _image_color = "https://i.imgur.com/6H0pWyd.png" -%}
+        {%- when "13" -%}
+            {%- assign _image_color = "https://i.imgur.com/H426FqL.png" -%}
+        {%- when "14" -%}
+            {%- assign _image_color = "https://i.imgur.com/rvT3aBX.png" -%}
+        {%- when "15" -%}
+            {%- assign _image_color = "https://i.imgur.com/NzqdErY.png" -%}
+        {%- when "16" -%}
+            {%- assign _image_color = "https://i.imgur.com/XRItiBv.png" -%}
+        {%- when "17" -%}
+            {%- assign _image_color = "https://i.imgur.com/EFiyrR0.png" -%}
+        {%- when "18" -%}
+            {%- assign _image_color = "https://i.imgur.com/HlEsCy0.png" -%}
+        {%- when "19" -%}
+            {%- assign _image_color = "https://i.imgur.com/NoDA2YL.png" -%}
+        {%- when "20" -%}
+            {%- assign _image_color = "https://i.imgur.com/LZTjWOv.png" -%}
+        {%- when "21" -%}
+            {%- assign _image_color = "https://i.imgur.com/t4trRjd.png" -%}
+        {%- when "22" -%}
+            {%- assign _image_color = "https://i.imgur.com/PWIooMi.png" -%}
+        {%- when "23" -%}
+            {%- assign _image_color = "https://i.imgur.com/Sp0JMH7.png" -%}
+        {%- when "24" -%}
+            {%- assign _image_color = "https://i.imgur.com/iyKhqH3.png" -%}
+        {%- when "25" -%}
+            {%- assign _image_color = "https://i.imgur.com/dSz3lXU.png" -%}
+        {%- when "26" -%}
+            {%- assign _image_color = "https://i.imgur.com/1S9qN2X.png" -%}
+        {%- when "27" -%}
+            {%- assign _image_color = "https://i.imgur.com/C3KnBzl.png" -%}
+        {%- when "28" -%}
+            {%- assign _image_color = "https://i.imgur.com/kPf02Ou.png" -%}
+        {%- when "29" -%}
+            {%- assign _image_color = "https://i.imgur.com/uDvk9ZQ.png" -%}
+        {%- when "30" -%}
+            {%- assign _image_color = "https://i.imgur.com/GomogEH.png" -%}
+        {%- when "31" -%}
+            {%- assign _image_color = "https://i.imgur.com/0VgppgF.png" -%}
+    {%- endcase -%}
+{%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- assign _return = _image_color | upcase -%}
