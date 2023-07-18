@@ -82,7 +82,7 @@
 {%- comment -%} return {%- endcomment -%}
 {%- assign _return = _day | upcase -%}
 {%- case _return -%}
-    {%- when "" or "NULL" -%}
+    {%- when "" or "NULL" or null -%}
         {{ 'null' }}
     {%- else -%}
         {{ _day }}
