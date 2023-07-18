@@ -1,6 +1,6 @@
 {%- comment -%} as_canonical_url_from_url.liquid {%- endcomment -%}
 {%- assign _site_name = site.name -%}
-{%- assign _page_url = include.url -%}
+{%- assign _page_url = include.from_url -%}
 
 {%- comment -%} dealing with empty string {%- endcomment -%}
 {%- if _site_name == "" -%}
@@ -16,15 +16,14 @@
     {%- assign _page_url = site.url | append :"/" | append : _site_name | append : _page_url -%}
 {%- endif -%}
 
+
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _page_url | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _page_url }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_page_url -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
+
 
 {%- assign _site_name = null -%}
 {%- assign _page_url = null -%}

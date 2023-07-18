@@ -1,5 +1,5 @@
 {%- comment -%} as_html_the_post_list_with_url_from_posts.liquid {%- endcomment -%}
-{%- assign _posts = include.posts -%}
+{%- assign _posts = include.from_posts -%}
 {%- assign _post_list = 'null' -%}
 
 {%- comment -%} dealing with empty string {%- endcomment -%}
@@ -42,15 +42,14 @@
     {%- endcapture -%}
 {%- endif -%}
 
+
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _post_list | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _post_list }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_post_list -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
+
 
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign _posts = null -%}

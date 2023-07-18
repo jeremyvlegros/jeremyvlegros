@@ -1,5 +1,5 @@
 {%- comment -%} as_html_the_post_list_from_posts.liquid {%- endcomment -%}
-{%- assign _posts = include.posts -%}
+{%- assign _posts = include.from_posts -%}
 
 {%- comment -%} dealing with empty string {%- endcomment -%}
 {%- if _posts == "" -%}
@@ -37,11 +37,11 @@
                 {%- comment -%} Processing {%- endcomment -%}
 
                 {%- capture _post_id -%}
-                    {%- include as_id_from_date.liquid date=_date_of_creation -%}
+                    {%- include as_id_from_date.liquid from_date=_date_of_creation -%}
                 {%- endcapture -%}
 
                 {%- capture _post_color_background -%}
-                    {%- include as_color_background_from_date.liquid date=_date_of_creation -%}
+                    {%- include as_color_background_from_date.liquid from_date=_date_of_creation -%}
                 {%- endcapture -%}
 
                 {%- if _date_of_modification -%}
@@ -91,15 +91,11 @@
     {%- endcapture -%}
 {%- endif -%}
 
-
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _post_list | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _post_list }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_post_list -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
 
 {%- comment -%} resetting {%- endcomment -%}

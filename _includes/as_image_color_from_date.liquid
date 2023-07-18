@@ -3,7 +3,7 @@
 {%- assign _image_color = "null" -%}
 
 {%- capture _day -%}
-    {%- include as_day_from_date.liquid date=include.date -%}
+    {%- include as_day_from_date.liquid from_date=include.from_date -%}
 {%- endcapture -%}
 
 {%- if _day != "null" -%}
@@ -75,13 +75,10 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _image_color | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _image_color }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_image_color -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
 
 {%- comment -%} resetting {%- endcomment -%}

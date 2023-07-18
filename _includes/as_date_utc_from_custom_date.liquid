@@ -1,5 +1,5 @@
 {%- comment -%} as_date_utc_from_custom_date.liquid{%- endcomment -%}
-{%- assign _date = include.custom_date -%}
+{%- assign _date = include.from_custom_date -%}
 {%-comment-%} Dealing with empty string {%-endcomment-%}
 {%- if _date == "" -%}
     {%- assign _date = null -%}
@@ -54,20 +54,14 @@
 
 {%- endif -%}
 
+
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _date | upcase -%}
 {%- capture _return -%}
-    {%- case _return -%}
-        {%- when "" or "NULL" or null -%}
-            {{ 'null' }}
-        {%- else -%}
-            {{ _date }}
-    {%- endcase -%}
+    {%- include return_from.liquid from=_date -%}
 {%- endcapture -%}
-
 {{ _return }}
-
 {%- assign _return = null -%}
+
 
 {%- comment -%} resetting the variables {%- endcomment -%}
 {%- assign _date = null -%}

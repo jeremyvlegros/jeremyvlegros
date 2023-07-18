@@ -21,20 +21,20 @@ layout : base
 
 {%- comment -%}  <!-- HTML top and bottom arrows --> {%- endcomment -%}
 {%- capture html_top_and_bottom_arrows -%}
-{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid date_top=_date_top
-date_bottom=_date_bottom
+{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid from_date_top=_date_top
+from_date_bottom=_date_bottom
 -%}
 {%- endcapture -%}{%- comment -%}  <!-- N.B : variables `_date_top` `_date_bottom` are reset in the `include` --> {%- endcomment -%}
 
 
 {%- comment -%}<!-- HTML index post list --> {%- endcomment -%}
 {%- capture html_post_index_list -%}
-{%- include as_html_the_post_index_list_from_posts.liquid posts=posts-%}
+{%- include as_html_the_post_index_list_from_posts.liquid from_posts=posts-%}
 {%- endcapture -%}
 
 {%- comment -%}<!-- HTML post list --> {%- endcomment -%}
 {%- capture html_post_list -%}
-{%- include as_html_the_post_list_from_posts.liquid posts=posts-%}
+{%- include as_html_the_post_list_from_posts.liquid from_posts=posts-%}
 {%- endcapture -%}
 
 

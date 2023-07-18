@@ -1,6 +1,6 @@
 {%- comment -%} as_id_from_date.liquid {%- endcomment -%}
 {%- comment -%} initialization {%- endcomment -%}
-{%- assign _date = include.date -%}
+{%- assign _date = include.from_date -%}
 {%- assign _id = 'null' -%}
 
 {%- comment -%} dealing with empty string {%- endcomment -%}
@@ -18,16 +18,13 @@
     {%- assign _id = _date[3] -%}
 {%- endif -%}
 
-
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _id | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _id }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_return -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
+
 
 {%- assign _date = null -%}
 {%- assign _id = null -%}

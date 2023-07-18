@@ -16,7 +16,7 @@ no_color_background : null
 {%- assign page_color_background = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
 {%- else -%}
 {%- capture page_color_background -%}
-{%- include as_color_background_from_date.liquid date=page.date_of_creation -%}
+{%- include as_color_background_from_date.liquid from_date=page.date_of_creation -%}
 {%- endcapture -%}
 {%- endif -%}
 

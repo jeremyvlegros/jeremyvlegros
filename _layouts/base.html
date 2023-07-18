@@ -69,15 +69,15 @@ boolean_remove_bootstrap : null
 {%- comment -%}<!-- PROCESSING -->{%- endcomment -%}
 
 {%- capture page_date_of_creation_utc -%}
-{%- include as_date_utc_from_custom_date.liquid date=page_date_of_creation -%}
+{%- include as_date_utc_from_custom_date.liquid from_custom_date=page_date_of_creation -%}
 {%- endcapture -%}
 
 {%- capture date_of_modification -%}
-{%- include as_date_utc_from_custom_date.liquid date=date_of_modification -%}
+{%- include as_date_utc_from_custom_date.liquid from_custom_date=date_of_modification -%}
 {%- endcapture -%}
 
 {%- capture page_image_color -%}
-{%- include as_image_color_from_date.liquid date=page_date_of_creation_utc -%}
+{%- include as_image_color_from_date.liquid from_date=page_date_of_creation_utc -%}
 {%- endcapture -%}
 
 {%- capture page_canonical_url -%}

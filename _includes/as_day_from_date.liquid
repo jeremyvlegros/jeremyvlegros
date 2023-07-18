@@ -1,6 +1,6 @@
 {%- comment -%} as_day_from_date.liquid {%- endcomment -%}
 {%- comment -%} initialization {%- endcomment -%}
-{%- assign _date = include.date -%}
+{%- assign _date = include.from_date -%}
 {%- assign _day = null -%}
 {%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
 
@@ -78,17 +78,12 @@
     {%- endif -%}
 {%- endif -%}
 
-
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _day | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _day }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_day -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
-
 
 {%- assign _date = null -%}
 {%- assign _day = null -%}

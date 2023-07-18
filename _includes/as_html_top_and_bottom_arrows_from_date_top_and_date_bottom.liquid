@@ -1,17 +1,17 @@
 {%- comment -%}as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid {%- endcomment -%}
 
 {%- comment -%} dates {%- endcomment -%}
-{%- assign _date_top = include.date_top -%}
-{%- assign _date_bottom = include.date_bottom -%}
+{%- assign _date_top = include.from_date_top -%}
+{%- assign _date_bottom = include.from_date_bottom -%}
 {%- assign _html = 'null' -%}
 
 {%- comment -%} ids {%- endcomment -%}
 {%- capture _top_id -%}
-    {%- include as_id_from_date.liquid date=_date_top -%}
+    {%- include as_id_from_date.liquid from_date_top=_date_top -%}
 {%- endcapture -%}
 
 {%- capture _bottom_id -%}
-    {%- include as_id_from_date.liquid date=_date_bottom -%}
+    {%- include as_id_from_date.liquid from_date_bottom=_date_bottom -%}
 {%- endcapture -%}
 
 {%- if _top_id != "null" and _bottom_id != "null" -%}
@@ -25,7 +25,12 @@
     {%- endcapture -%}
 {%- endif -%}
 
-{{ _html }}
+{%- comment -%} return {%- endcomment -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_html -%}
+{%- endcapture -%}
+{{ _return }}
+{%- assign _return = null -%}
 
 {%- comment -%} resetting variables and stripping last line {%- endcomment -%}
 {%- assign _date_top = null -%}
@@ -33,4 +38,3 @@
 {%- assign _top_id = null -%}
 {%- assign _bottom_id = null -%}
 {%- assign _html = null -%}
-

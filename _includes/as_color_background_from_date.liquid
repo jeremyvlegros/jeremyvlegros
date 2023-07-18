@@ -3,22 +3,21 @@
 {%- assign _color_background = "null" -%}
 
 {%- capture _day -%}
-    {%- include as_day_from_date.liquid date=include.date -%}
+    {%- include as_day_from_date.liquid from_date=include.from_date -%}
 {%- endcapture -%}
 
 {%- if _day != "null" -%}
     {%- assign _color_background = "color_background_" | append: _day | strip_newlines -%}
 {%- endif -%}
 
+
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _color_background | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ 'null' }}
-    {%- else -%}
-        {{ _color_background }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_color_background -%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
+
 
 
 {%- comment -%} resetting variables {%- endcomment -%}

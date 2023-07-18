@@ -3,17 +3,14 @@
 {%- assign _page_url = 'null' -%}
 
 {%- capture _page_url -%}
-    {%- include as_canonical_url_from_url.liquid url=page.url -%}
+    {%- include as_canonical_url_from_url.liquid from_url=page.url -%}
 {%- endcapture -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _page_url | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ null }}
-    {%- else -%}
-        {{ _page_url }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- include return_from.liquid from=_page_url-%}
+{%- endcapture -%}
+{{ _return }}
 {%- assign _return = null -%}
 
 {%- assign _site_name = null -%}

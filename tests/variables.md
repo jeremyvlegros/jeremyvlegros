@@ -830,7 +830,7 @@ expected success for 1 == 1
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=1 that=1 with_success=1 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=1 from_that=1 with_success=1 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -841,7 +841,7 @@ expected failure for 1 == 0
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=1 that=0 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=1 from_that=0 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -850,7 +850,7 @@ expected failure for 0 == ""
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=0 that="" with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=0 from_that="" with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -859,7 +859,7 @@ expected failure for null == 0
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=null that=0 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=null from_that=0 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -868,7 +868,7 @@ expected failure for null == ""
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=null that="" with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=null from_that="" with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -877,7 +877,7 @@ expected success for null == null
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=null that=null with_success=1 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=null from_that=null with_success=1 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -887,7 +887,7 @@ expected success for "" == ""
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this="" that="" with_success=1 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this="" from_that="" with_success=1 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -904,7 +904,7 @@ expected success for ["1,2,3"] == ["1,2,3"]
 {%- assign array_2 = "1,2,3"|split : "," -%}
 
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -922,7 +922,7 @@ expected success for [""] == [""]
 
 
 {%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1 -%}
+{%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
 {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -940,7 +940,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 
  
 {%- capture test -%}
- {%- include procedure_assert_this_and_that.liquid this=array_1 that=array_2 with_success=1 with_warning=1-%}
+ {%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1-%}
  {%- endcapture -%}
 {{test}}
 {% comment %}{% endcomment %}
@@ -954,11 +954,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "2023-06-28T05:16:00+00:00" -%}
 
 {%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="testing the date" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="testing the date" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -974,11 +974,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with null returning 'null'" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with null returning 'null'" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -994,11 +994,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with empty string returning 'null'" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with empty string returning 'null'" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1016,11 +1016,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "1687914994970097614" -%}
 
 {%- capture result -%}
-    {%- include as_id_from_date.liquid date=input -%}
+    {%- include as_id_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1037,11 +1037,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_id_from_date.liquid date=input -%}
+    {%- include as_id_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="date empty string" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date empty string" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1058,11 +1058,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_id_from_date.liquid date=input -%}
+    {%- include as_id_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning="" with_name="date null" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1083,11 +1083,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "28" -%}
 
 {%- capture result -%}
-    {%- include  as_day_from_date.liquid date=input  -%}
+    {%- include  as_day_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="custom date" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom date" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1105,11 +1105,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "01" -%}
 
 {%- capture result -%}
-    {%- include  as_day_from_date.liquid date=input -%}
+    {%- include  as_day_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1126,11 +1126,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include  as_day_from_date.liquid date=input -%}
+    {%- include  as_day_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1147,11 +1147,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include  as_day_from_date.liquid date=input -%}
+    {%- include  as_day_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1171,11 +1171,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "color_background_28" -%}
 
 {%- capture result -%}
-    {%- include  as_color_background_from_date.liquid date=input  -%}
+    {%- include  as_color_background_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="custom_date" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom_date" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1192,11 +1192,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "color_background_01" -%}
 
 {%- capture result -%}
-    {%- include as_color_background_from_date.liquid date=input -%}
+    {%- include as_color_background_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="normal date" -%}
+    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1213,11 +1213,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_color_background_from_date.liquid date=input -%}
+    {%- include as_color_background_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1234,11 +1234,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include as_color_background_from_date.liquid date=input -%}
+    {%- include as_color_background_from_date.liquid from_date=input -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
+    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1263,7 +1263,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1282,11 +1282,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="GMT" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1303,11 +1303,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="UTC" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1324,11 +1324,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="UTC one relevant digit" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC one relevant digit" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1345,11 +1345,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="GMT one relevant digit" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT one relevant digit" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1366,11 +1366,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date empty string" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1387,11 +1387,11 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = "null" -%}
 
 {%- capture result -%}
-    {%- include  as_image_color_from_date.liquid date=input  -%}
+    {%- include  as_image_color_from_date.liquid from_date=input  -%}
 {%- endcapture -%}
 
 {%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success="1" with_warning="" with_name="date null" -%}
+  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1413,7 +1413,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = null -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=input with_success="1" with_warning="" with_name="an empty capture is null"%}
+    {% include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="an empty capture is null"%}
 {%- endcapture -%}
 {{assert}}
 
@@ -1438,7 +1438,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign expected = null -%}
 
 {%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid this=expected that=input with_success="1" with_warning="" with_name="capturing an empty `include` returns null"%}
+    {% include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="capturing an empty `include` returns null"%}
 {%- endcapture -%}
 {{assert}}
 
