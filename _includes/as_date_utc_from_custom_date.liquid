@@ -55,6 +55,7 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
+{%- assign _return = _date | upcase -%}
 {%- capture _return -%}
     {%- case _return -%}
         {%- when "" or "NULL" or null -%}
