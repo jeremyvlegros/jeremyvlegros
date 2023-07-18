@@ -51,11 +51,20 @@
     {%- assign _date = _date | append: _time -%}
     {%- comment -%} stripping white spaces and new lines {%- endcomment -%}
     {%- assign _date = _date | strip | strip_newlines -%}
-    {%- comment -%} return {%- endcomment -%}
-    {%- comment -%}<!-- #date 2023-07-10 20:58 1689008305139613270 GMT --> {%- endcomment -%}
-    {{ _date }}
-    {%- comment -%} resetting the variables {%- endcomment -%}
-    {%- assign _date = null -%}
-    {%- assign _time = null -%}
-    {%- comment -%}{%- assign _id = null -%} {%- endcomment -%}
+
 {%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign _return = _date | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ null }}
+    {%- else -%}
+        {{ _date }}
+{%- endcase -%}
+{%- assign _return = null -%}
+
+{%- comment -%} resetting the variables {%- endcomment -%}
+{%- assign _date = null -%}
+{%- assign _time = null -%}
+{%- comment -%}{%- assign _id = null -%} {%- endcomment -%}

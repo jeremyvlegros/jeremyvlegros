@@ -968,7 +968,7 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% comment %}{% endcomment %} 
 ```
 ```liquid
-{% comment %}{% endcomment %}
+{% comment %} date with "" returning "" {% endcomment %}
 {%- assign input    = "" -%}
 {%- assign expected = "" -%}
 
@@ -987,6 +987,65 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {% comment %}{% endcomment %} 
 ```
 
+```liquid
+{% comment %}date with null returning "" {% endcomment %}
+{%- assign input    = null -%}
+{%- assign expected = "" -%}
+
+{%- capture result -%}
+    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with null returning empty string" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign assert   = null -%}
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{% comment %}{% endcomment %} 
+```
+
+```liquid
+{% comment %}refactored function : date with null returning "null" {% endcomment %}
+{%- assign input    = null -%}
+{%- assign expected = "null" -%}
+
+{%- capture result -%}
+    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with null returning 'null'" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign assert   = null -%}
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{% comment %}{% endcomment %} 
+```
+
+```liquid
+{% comment %}refactored function : date with "" returning "null" {% endcomment %}
+{%- assign input    = "" -%}
+{%- assign expected = "null" -%}
+
+{%- capture result -%}
+    {%- include as_date_utc_from_custom_date.liquid custom_date=input -%}
+{%- endcapture -%}
+
+{%- capture assert -%}
+  {%- include procedure_assert_this_and_that.liquid this=expected that=result with_success=1 with_warning=1 with_name="date with empty string returning 'null'" -%}
+{%- endcapture -%}
+{{assert}}
+
+{%- assign assert   = null -%}
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{% comment %}{% endcomment %} 
+```
 
 ## Testing `as_id_from_date.liquid`
 
