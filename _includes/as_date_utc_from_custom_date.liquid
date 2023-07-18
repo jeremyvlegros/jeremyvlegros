@@ -55,13 +55,16 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign _return = _date | upcase -%}
-{%- case _return -%}
-    {%- when "" or "NULL" or null -%}
-        {{ null }}
-    {%- else -%}
-        {{ _date }}
-{%- endcase -%}
+{%- capture _return -%}
+    {%- assign _return = _date | upcase -%}
+    {%- case _return -%}
+        {%- when "" or "NULL" or null -%}
+            {{ null }}
+        {%- else -%}
+            {{ _date }}
+    {%- endcase -%}
+{%- endcapture -%}
+
 {%- assign _return = null -%}
 
 {%- comment -%} resetting the variables {%- endcomment -%}
