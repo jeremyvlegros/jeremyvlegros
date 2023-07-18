@@ -1,0 +1,8 @@
+{%- assign _return = include.return | upcase -%}
+{%- case _return -%}
+    {%- when "" or "NULL" or null -%}
+        {{ null }}
+    {%- else -%}
+        {{ include.return }}
+{%- endcase -%}
+{%- assign _return = null -%}
