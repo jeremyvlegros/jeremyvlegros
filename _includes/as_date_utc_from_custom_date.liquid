@@ -56,32 +56,12 @@
 
 {%- comment -%} return {%- endcomment -%}
 {%- capture _return -%}
-
-    {%- assign _return = _date | upcase -%}
-
-    {%- if _return == "" -%}
-
-        {{ null }}
-
-    {%- elsif _return == "NULL" -%}
-
-        {{ null }}
-
-    {%- elsif _return == null -%}
-
-        {{ null }}
-
-    {%- else -%}
-
-        {{ _date }}
-        
-    {%- endif -%}
-    {%- comment -%}{%- case _return -%}
+    {%- case _return -%}
         {%- when "" or "NULL" or null -%}
-            {{ null }}
+            {{ 'null' }}
         {%- else -%}
             {{ _date }}
-    {%- endcase -%} {%- endcomment -%}
+    {%- endcase -%}
 {%- endcapture -%}
 
 {{ _return }}
