@@ -5,7 +5,7 @@ layout : base
 {%- comment -%}<!-- LIQUID PROCESSING -->{%- endcomment -%}
 
 {%- comment -%}<!-- site posts --> {%- endcomment -%}
-{%- assign posts = site.posts-%}
+{%- assign posts = site.posts -%}
 
 {%- comment -%}<!-- short modification date -->{%- endcomment -%}
 {%- assign date_of_modification_short = page.date_of_modification | split : " " -%}

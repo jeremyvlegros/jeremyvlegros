@@ -1,6 +1,5 @@
 {%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
 {%- assign _site_name = site.name -%}
-{%- assign _page_url = 'null' -%}
 
 {%- capture _page_url -%}
     {%- include as_canonical_url_from_url.liquid from_url=page.url -%}

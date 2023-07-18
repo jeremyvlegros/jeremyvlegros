@@ -97,7 +97,7 @@ boolean_remove_bootstrap : null
 
 {%- if page_meta_description -%}
 {%- capture page_meta_description-%}
-            <meta name="description" content="{{page_meta_description}}"/>
+            <meta name="description"        content="{{page_meta_description}}"/>
             <meta property="og:description" content="{{page_meta_description}}"/>
 {%- endcapture -%}
 {%- endif -%}
@@ -123,19 +123,19 @@ boolean_remove_bootstrap : null
 {%- endcapture -%}
 
 {%- capture page_canonical_url -%}
-  <link rel="canonical" href="{{_page_canonical_url}}"/>
-  <meta property="og:url" content="{{_page_canonical_url}}"/>
+<link rel="canonical" href="{{_page_canonical_url}}"/>
+<meta property="og:url" content="{{_page_canonical_url}}"/>
 {%- endcapture -%}
 
 {%- capture page_meta_site_name-%}
-            <meta property="og:site_name" content="{{site_name}}"/>
+<meta property="og:site_name" content="{{site_name}}"/>
 {%- endcapture -%}
 {%- endif -%}
 
 {%- if page_image_color -%}
 {%- capture page_meta_image_color-%}
-            <meta name='og:image' content="{{page_image_color}}"/>
-            <meta name='twitter:image' content='{{page_image_color}}'/>
+<meta name='og:image' content="{{page_image_color}}"/>
+<meta name='twitter:image' content='{{page_image_color}}'/>
 {%- endcapture -%}
 {%- endif -%}
 
