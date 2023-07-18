@@ -1,0 +1,5 @@
+{%- capture _return -%}
+    {%- include initilialize_from.liquid from=include.from -%}
+{%- endcapture -%}
+{{ _return }}
+{%- assign _return = null -%}
