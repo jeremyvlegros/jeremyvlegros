@@ -1,7 +1,4 @@
 /offline/**
-/.idea/codeStyles/codeStyleConfig.xml
-/.idea/modules.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
-/.idea/website.iml
-/.idea/.gitignore
+/.idea/**
+/_site/**
+
