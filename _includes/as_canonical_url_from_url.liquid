@@ -1,30 +1,35 @@
 {%- comment -%} as_canonical_url_from_url.liquid {%- endcomment -%}
-{%- assign _site_name = site.name -%}
-{%- assign _page_url = include.from_url -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _site_name == "" -%}
-    {%- assign _site_name = null -%}
+{%- capture _site_name -%}
+    {%- include initialize_from.liquid from=site.name -%}
+{%- endcapture -%}
+
+{%- capture _page_url -%}
+    {%- include initialize_from.liquid from=include.from_url -%}
+{%- endcapture -%}
+
+{%- capture _site_url -%}
+    {%- include initialize_from.liquid from=site.url -%}
+{%- endcapture -%}
+
+{%- comment -%} main value {%- endcomment -%}
+{%- capture _the_canonical_url -%}
+    {%- include initialize_from.liquid from="null" -%}
+{%- endcapture -%}
+
+{%- if _site_name != "null" and _site_url != "null" and _page_url != "null" -%}
+    {%- assign _the_canonical_url = _site_url | append :"/" | append : _site_name | append : _page_url -%}
 {%- endif -%}
-
-{%- comment -%} dealing with empty string, precaution {%- endcomment -%}
-{%- if _page_url == "" -%}
-    {%- assign _page_url = null -%}
-{%- endif -%}
-
-{%- if _site_name -%}
-    {%- assign _page_url = site.url | append :"/" | append : _site_name | append : _page_url -%}
-{%- endif -%}
-
 
 {%- comment -%} return {%- endcomment -%}
 {%- capture _return -%}
-    {%- include return_from.liquid from=_page_url -%}
+    {%- include return_from.liquid from=_the_canonical_url -%}
 {%- endcapture -%}
 {{ _return }}
 
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign _return = null -%}
+{%- assign _the_canonical_url = null -%}
 {%- assign _site_name = null -%}
 {%- assign _page_url = null -%}
 

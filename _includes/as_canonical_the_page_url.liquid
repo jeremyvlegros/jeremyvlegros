@@ -1,19 +1,21 @@
 {%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
-{%- assign _site_name = site.name -%}
+{%- capture _site_name -%}
+    {%- include initialize_from.liquid from=site.name -%}
+{%- endcapture -%}
 
-{%- capture _page_url -%}
+{%- comment -%} main value {%- endcomment -%}
+{%- capture _the_page_url -%}
     {%- include as_canonical_url_from_url.liquid from_url=page.url -%}
 {%- endcapture -%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- capture _return -%}
-    {%- include return_from.liquid from=_page_url-%}
+    {%- include return_from.liquid from=_the_page_url-%}
 {%- endcapture -%}
-{{ _return }}
 
+{{ _return }}
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign _return = null -%}
 {%- assign _site_name = null -%}
-{%- assign _page_url = null -%}
-
+{%- assign _the_page_url = null -%}
 {%- comment -%} {%- endcomment -%}
