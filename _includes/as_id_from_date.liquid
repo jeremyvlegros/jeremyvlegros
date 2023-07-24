@@ -9,8 +9,8 @@
     {%- include initialize_from.liquid from=include.from_date -%}
 {%- endcapture -%}
 
-{%- comment -%} date is custom (mine) {%- endcomment -%}
-{%- if _date contains "#date" or _date contains "GMT" -%}
+{%- comment -%} date is creation date, and custom {%- endcomment -%}
+{%- if _date contains "#date" and _date contains "GMT" -%}
 
     {%- comment -%}everything as array {%- endcomment -%}
     {%- assign _date = _date | split: " " -%}
