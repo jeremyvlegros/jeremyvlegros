@@ -1,15 +1,16 @@
 {%- comment -%} as_id_from_date.liquid {%- endcomment -%}
-{%- comment -%} initialization {%- endcomment -%}
-{%- assign _date = include.from_date -%}
-{%- assign _id = 'null' -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _date == "" -%}
-    {%- assign _date = null -%}
-{%- endif -%}
+{%- comment -%} initialization {%- endcomment -%}
+{%- capture _id -%}
+    {%- include initialize_from.liquid from="" -%}
+{%- endcapture -%}
+
+{%- capture _date -%}
+    {%- include initialize_from.liquid from=include.from_date -%}
+{%- endcapture -%}
 
 {%- comment -%} date is custom (mine) {%- endcomment -%}
-{%- if _date contains "#" and _date contains "GMT" -%}
+{%- if _date contains "#date" or _date contains "GMT" -%}
 
     {%- comment -%}everything as array {%- endcomment -%}
     {%- assign _date = _date | split: " " -%}
@@ -20,7 +21,7 @@
 
 {%- comment -%} return {%- endcomment -%}
 {%- capture _return -%}
-    {%- include return_from.liquid from=_return -%}
+    {%- include return_from.liquid from=_id -%}
 {%- endcapture -%}
 {{ _return }}
 
