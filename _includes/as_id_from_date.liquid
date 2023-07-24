@@ -23,9 +23,9 @@
     {%- include return_from.liquid from=_return -%}
 {%- endcapture -%}
 {{ _return }}
+
+{%- comment -%} resetting {%- endcomment -%}
 {%- assign _return = null -%}
-
-
 {%- assign _date = null -%}
 {%- assign _id = null -%}
 

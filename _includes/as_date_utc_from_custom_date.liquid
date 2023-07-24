@@ -60,10 +60,10 @@
     {%- include return_from.liquid from=_date -%}
 {%- endcapture -%}
 {{ _return }}
-{%- assign _return = null -%}
 
 
 {%- comment -%} resetting the variables {%- endcomment -%}
+{%- assign _return = null -%}
 {%- assign _date = null -%}
 {%- assign _time = null -%}
 {%- comment -%}{%- assign _id = null -%} {%- endcomment -%}

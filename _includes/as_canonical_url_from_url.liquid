@@ -22,9 +22,9 @@
     {%- include return_from.liquid from=_page_url -%}
 {%- endcapture -%}
 {{ _return }}
+
+{%- comment -%} resetting {%- endcomment -%}
 {%- assign _return = null -%}
-
-
 {%- assign _site_name = null -%}
 {%- assign _page_url = null -%}
 

@@ -30,9 +30,9 @@
     {%- include return_from.liquid from=_html -%}
 {%- endcapture -%}
 {{ _return }}
-{%- assign _return = null -%}
 
 {%- comment -%} resetting variables and stripping last line {%- endcomment -%}
+{%- assign _return = null -%}
 {%- assign _date_top = null -%}
 {%- assign _date_bottom = null -%}
 {%- assign _top_id = null -%}

@@ -83,8 +83,9 @@
     {%- include return_from.liquid from=_day -%}
 {%- endcapture -%}
 {{ _return }}
-{%- assign _return = null -%}
 
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign _return = null -%}
 {%- assign _date = null -%}
 {%- assign _day = null -%}
 {%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
