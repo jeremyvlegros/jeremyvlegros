@@ -1,11 +1,11 @@
 {%- comment -%} as_date_utc_from_custom_date.liquid{%- endcomment -%}
-{%- assign _date = include.from_custom_date -%}
-{%-comment-%} Dealing with empty string {%-endcomment-%}
-{%- if _date == "" -%}
-    {%- assign _date = null -%}
-{%- endif -%}
+
+{%- capture _date -%}
+    {%- include initialize_from.liquid from=include.from_custom_date -%}
+{%- endcapture -%}
+
 {%-comment-%} There is date {%-endcomment-%}
-{%- if _date -%}
+{%- if _date != "null" -%}
     {%-comment-%}
     date without "#date " and " GMT"
         input  : "#date 2023-06-28 05:16 1687914994970097614 GMT"
