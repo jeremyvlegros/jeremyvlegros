@@ -1,8 +1,8 @@
-{%- assign _return = include.from | upcase -%}
-{%- case _return -%}
+{%- assign _input = include.from | upcase -%}
+{%- case _input -%}
     {%- when "" or "NULL" or null -%}
         {{ null }}
     {%- else -%}
         {{ include.from }}
 {%- endcase -%}
-{%- assign _return = null -%}
+{%- assign _input = null -%}
