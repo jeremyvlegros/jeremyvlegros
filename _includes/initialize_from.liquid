@@ -1,7 +1,7 @@
 {%- assign _input = include.from | upcase -%}
 {%- case _input -%}
     {%- when "" or "NULL" or null -%}
-        {{ null }}
+        {{ "null" }}
     {%- else -%}
         {{ include.from }}
 {%- endcase -%}
