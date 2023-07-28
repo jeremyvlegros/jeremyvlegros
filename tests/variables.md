@@ -8,7 +8,7 @@ test_list :
 
 print_array          : print_array_content.html
 
-date_of_creation     : "#date 2023-06-20 00:00 000 GMT"
+date_of_creation     : "#date 2023-06-20 00:00 0000000000000000000 GMT"
 date_of_modification : "#date 2023-07-16 22:23 1689531810469969567 GMT"
 ---
 
@@ -611,6 +611,10 @@ result :
 {% comment %}{% endcomment %}
 ```
 
+
+
+
+
 ## `capture` > testing text
 
 {% capture captured_text %}
@@ -823,16 +827,13 @@ post date of creation (mine) : `{{site.posts[0].date_of_creation}}`
 {% comment %}{% endcomment %}
 ```
 
-## Testing `procedure_assert_this_and_that.liquid`
+## Testing `procedure_assert_from_this_and_from_that.liquid`
 
 expected success for 1 == 1
 
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=1 from_that=1 with_success=1 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=1 from_that=1 with_success=1 with_warning=1 -%}
 {% comment %}{% endcomment %}
 
 ```
@@ -840,56 +841,38 @@ expected success for 1 == 1
 expected failure for 1 == 0 
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=1 from_that=0 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=1 from_that=0 with_warning=1 -%}
 {% comment %}{% endcomment %}
 ```
 expected failure for 0 == ""
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=0 from_that="" with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=0 from_that="" with_warning=1 -%}
 {% comment %}{% endcomment %}
 ``` 
 expected failure for null == 0
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=null from_that=0 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=null from_that=0 with_warning=1 -%}
 {% comment %}{% endcomment %}
 ``` 
 expected failure for null == ""
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=null from_that="" with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=null from_that="" with_warning=1 -%}
 {% comment %}{% endcomment %}
 ``` 
 expected success for null == null
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=null from_that=null with_success=1 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=null from_that=null with_success=1 with_warning=1 -%}
 {% comment %}{% endcomment %}
 ``` 
 
 expected success for "" == ""
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this="" from_that="" with_success=1 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this="" from_that="" with_success=1 with_warning=1 -%}
 {% comment %}{% endcomment %}
 ``` 
 
@@ -903,10 +886,8 @@ expected success for ["1,2,3"] == ["1,2,3"]
 {%- assign array_1 = "1,2,3"|split : "," -%}
 {%- assign array_2 = "1,2,3"|split : "," -%}
 
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
+
 {% comment %}{% endcomment %}
 ``` 
 
@@ -920,11 +901,8 @@ expected success for [""] == [""]
 {%- assign array_1 = ",,"|split : "," -%}
 {%- assign array_2 = ",,"|split : "," -%}
 
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
 
-{%- capture test -%}
-{%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1 -%}
-{%- endcapture -%}
-{{test}}
 {% comment %}{% endcomment %}
 ``` 
 
@@ -938,11 +916,8 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign array_1 = "1,2,4"|split : "," -%}
 {%- assign array_2 = "1,2,3"|split : "," -%}
 
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1-%}
  
-{%- capture test -%}
- {%- include procedure_assert_this_and_that.liquid from_this=array_1 from_that=array_2 with_success=1 with_warning=1-%}
- {%- endcapture -%}
-{{test}}
 {% comment %}{% endcomment %}
 ``` 
 
@@ -953,56 +928,63 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
 {%- assign expected = "2023-06-28T05:16:00+00:00" -%}
 
-{%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="testing the date" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- assign assert   = null -%}
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="testing the date" -%}
+
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{% comment %}{% endcomment %} 
+{% comment %}{% endcomment %}
 ```
 
 ```liquid
-{% comment %} date with null returning "null" {% endcomment %}
+{% comment %} date with null returning null {% endcomment %}
 {%- assign input    = null -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with null returning 'null'" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- assign assert   = null -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with null returning null" -%}
+
+
 {%- assign expected = null -%}
 {%- assign result   = null -%}
 {% comment %}{% endcomment %} 
 ```
 
 ```liquid
-{% comment %} date with "" returning "null" {% endcomment %}
+{% comment %}{% endcomment %}
 {%- assign input    = "" -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with empty string returning 'null'" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- assign assert   = null -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning=1 with_name="date with empty string returning null" -%}
+
+
 {%- assign expected = null -%}
 {%- assign result   = null -%}
 {% comment %}{% endcomment %} 
@@ -1015,18 +997,20 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
 {%- assign expected = "1687914994970097614" -%}
 
-{%- capture result -%}
-    {%- include as_id_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_id_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="correct date format" -%}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1034,20 +1018,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = "" -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_id_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_id_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date empty string" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date empty string" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1055,20 +1042,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %}
 {%- assign input    = null -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_id_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_id_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date null" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=1 with_warning="" with_name="date null" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1082,18 +1072,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
 {%- assign expected = "28" -%}
 
-{%- capture result -%}
-    {%- include  as_day_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_day_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom date" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom date" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1104,18 +1097,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "2023-04-01T10:30:00+00:00" -%}
 {%- assign expected = "01" -%}
 
-{%- capture result -%}
-    {%- include  as_day_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_day_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1123,20 +1119,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include  as_day_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_day_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1144,20 +1143,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include  as_day_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_day_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1170,18 +1172,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
 {%- assign expected = "color_background_28" -%}
 
-{%- capture result -%}
-    {%- include  as_color_background_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_color_background_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom_date" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="custom_date" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1191,18 +1196,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "2023-04-01T10:30:00+00:00" -%}
 {%- assign expected = "color_background_01" -%}
 
-{%- capture result -%}
-    {%- include as_color_background_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_color_background_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="normal date" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1210,20 +1218,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_color_background_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_color_background_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1231,20 +1242,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include as_color_background_from_date.liquid from_date=input -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_color_background_from_date.liquid from_date=input -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-    {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1258,18 +1272,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "" -%}
 {%- assign expected = "https://jeremyvlegros.github.io/website/tests/variables.html" -%}
 
-{%- capture result -%}
-    {%- include  as_canonical_the_page_url.liquid  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_canonical_the_page_url.liquid  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1281,18 +1298,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-07-15 15:08 1689419289162964599 GMT" -%}
 {%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1302,18 +1322,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "2023-07-15T15:08:00+OO:OO" -%}
 {%- assign expected = "https://i.imgur.com/NzqdErY.png" -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1323,18 +1346,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "2023-07-08T15:08:00+OO:OO" -%}
 {%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC one relevant digit" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="UTC one relevant digit" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1344,18 +1370,21 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = "#date 2023-07-08 15:08 1689419289162964599 GMT" -%}
 {%- assign expected = "https://i.imgur.com/1LxHBZo.png" -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT one relevant digit" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="GMT one relevant digit" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1363,20 +1392,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = "" -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date empty string" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1384,20 +1416,23 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 ```liquid
 {% comment %}{% endcomment %} 
 {%- assign input    = null -%}
-{%- assign expected = "null" -%}
+{%- assign expected = null -%}
 
-{%- capture result -%}
-    {%- include  as_image_color_from_date.liquid from_date=input  -%}
-{%- endcapture -%}
+{%- comment -%} result {%- endcomment -%}
+{%- include as_image_color_from_date.liquid from_date=input  -%}
+{% assign result = return %}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture assert -%}
-  {%- include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
-{%- endcapture -%}
-{{assert}}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{%- include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="date null" -%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {% comment %}{% endcomment %}
 ```
@@ -1412,41 +1447,501 @@ expected failure for ["1,2,4"] == ["1,2,3"]
 {%- assign input    = null_variable -%}
 {%- assign expected = null -%}
 
-{%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="an empty capture is null"%}
-{%- endcapture -%}
-{{assert}}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="an empty capture is null"%}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
 {%- assign null_variable = null -%}
 
 {% comment %}{% endcomment %}
 ```
 
-## testing `capture` with `include` returning null when nothing inside
+## testing `as_html_the_post_index_list_from_posts.liquid`
+
+
+```liquid
+{% include as_html_the_post_index_list_from_posts.liquid from_posts=site.posts %}
+{{ return | replace :" ","" | strip_newlines}}
+``` 
+
+
+
+
+## testing `as_html_top_and_bottom_arrows_from_date_top_and_date_bottom`
+
+
 
 ```liquid
 {% comment %}{% endcomment %}
-{%- capture null_variable -%}
-    {%- include null.liquid -%}
-{%- endcapture -%}
 
-{%- assign input    = null_variable -%}
-{%- assign expected = null -%}
+{%- assign _posts = site.posts -%}
+{%- assign _date_top = _posts[0].date_of_creation -%}
+{%- assign _date_bottom = _posts[-1].date_of_creation -%}
 
-{%- capture assert -%}
-    {% include procedure_assert_this_and_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="capturing an empty `include` returns null"%}
-{%- endcapture -%}
-{{assert}}
+{% comment %}{% endcomment %}
+{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid from_date_top=_date_top from_date_bottom=_date_bottom
+-%}
+{{return}}
+{% comment %}{% endcomment %}
+```
+
+
+## testing `as_html_the_post_list_with_url_from_posts.liquid`
+
+
+```liquid
+{% include as_html_the_post_list_with_url_from_posts.liquid from_posts=site.posts %}
+{{ return | replace :" ","" | strip_newlines}}
+```
+
+
+## testing `as_modification_date_from_custom_date.liquid`
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = "#date 2023-07-25 23:11 34537745322324 GMT" -%}
+{%- assign expected = "#modified 2023-07-25 23:11" -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_modification_date_from_custom_date.liquid from_custom_date=input %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="modification date" %}
+
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
-{%- assign assert   = null -%}
 {%- assign input    = null -%}
-{%- assign null_variable = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = "" -%}
+{%- assign expected = null -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_modification_date_from_custom_date.liquid from_custom_date=input %}
+{%- assign result = return -%}
+{%- assign  return = null-%}
+
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid this=expected that=result with_success="1" with_warning="1" with_name="modification date"%}
+
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %} 
+```
+
+## testing `as_posts_from_tag.liquid`
+
+```liquid
+STATUS
+{% comment %}{% endcomment %}
+
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag= "#status" -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- for post in posts -%}
+
+  {{ post.title }}
+  
+{%- endfor -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+ABOUT
+{% comment %}{% endcomment %}
+
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag= "#about" -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- for post in posts -%}
+
+  {{ post.title }}
+  
+{%- endfor -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+EMPTY TAG
+{% comment %}{% endcomment %}
+
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag= "" -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- for post in posts -%}
+
+  {{ post.title }}
+  
+{%- endfor -%}
+{% comment %}{% endcomment %}
+```
+
+```liquid
+TAG NOT PRESENT
+{% comment %}{% endcomment %}
+
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag= "fdhfhzeuihfzeuh" -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- for post in posts -%}
+
+  {{ post.title }}
+  
+{%- endfor -%}
+{% comment %}{% endcomment %}
+```
+
+
+## `append` `null` to array
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign array = "1,2,3,4" | split :"," -%}
+
+{%- assign expected = array -%}
+
+{%- comment -%} result {%- endcomment -%}
+{%- assign result = null | append : array -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="null append array" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+## `append` array to `null`
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign array = "1,2,3,4" | split :"," -%}
+
+{%- assign expected = array -%}
+
+{%- comment -%} result {%- endcomment -%}
+{%- assign result = array | append : null -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append null " %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+## `append` array to `""`
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign array = "1,2,3,4" | split :"," -%}
+
+{%- assign expected = array -%}
+
+{%- comment -%} result {%- endcomment -%}
+{%- assign result = array | append : null -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append '' " %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+
+```
+
+
+
+## testing Liquid empty array
+
+```liquid
+{% comment %}{% endcomment %}
+
+{{ "" | split :"" | jsonify }}
 
 {% comment %}{% endcomment %}
+```
+## testing `as_array_from_string_and_separator.liquid`
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign expected = "1,2,34" | split : "," -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string_and_separator.liquid from_string="1,2,34" from_separator="," %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="Split array with comma" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign expected = "1 ,2 ,3 4" | split : " " -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string_and_separator.liquid from_string="1 ,2 ,3 4" from_separator=" " %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="Split array with space" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign expected = "1 ,2 ,3 4" | split : null -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string_and_separator.liquid from_string="1 ,2 ,3 4" from_separator=null %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="Split array with space" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+## test `procedure_check_type_array_from.liquid`
+
+this test is executed once, because it stops the build.
+
+worked as expected
+
+```liquid
+{% comment %}{% endcomment %}
+{% comment %}{%- include procedure_check_type_array_from.liquid from="1,2,3" -%}{% endcomment %}
+{% comment %}{% endcomment %}
+```
+
+worked as expected
+
+```liquid
+{% comment %}{% endcomment %}
+{% comment %}{%- include procedure_check_type_array_from.liquid from="[1,2,3]" -%}{% endcomment %}
+{% comment %}{% endcomment %}
+```
+worked as expected
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign array="1,2,3" | split:"," -%}
+{%- include procedure_check_type_array_from.liquid from=array -%}
+{%- assign array = null -%}
+
+{% comment %}{% endcomment %}
+
+```
+
+## test `ARRAY_EMPTY`
+
+```liquid
+{% comment %}{% endcomment %}
+
+{%- assign liquid_empty_array = "" | split :"" -%}
+{%- if  site.ARRAY_EMPTY == liquid_empty_array -%}
+    successful test for empty array
+{%- endif -%}
+{% comment %}{% endcomment %}
+```
+
+
+
+## test `as_array_from_string`
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = "" -%}
+{%- assign expected = site.ARRAY_EMPTY -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string.liquid from_string=input %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="as array from empty string" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = "1 ,2,  3" -%}
+{%- assign expected = "1 ,2,  3"|split : "," -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string.liquid from_string=input %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="as array from string with commas and multiple spaces" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = "1  2  3" -%}
+{%- assign expected = "1  2  3"|split : " " -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string.liquid from_string=input %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="as array from string with multiple spaces" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+```liquid
+{% comment %} {% endcomment %} 
+
+{%- assign input    = null -%}
+{%- assign expected = null |split : "" -%}
+
+{%- comment -%} result {%- endcomment -%}
+{% include as_array_from_string.liquid from_string=input %}
+{%- assign result = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="as array from string with null" %}
+
+{%- assign expected = null -%}
+{%- assign result   = null -%}
+{%- assign input    = null -%}
+
+{% comment %} {% endcomment %}
+```
+
+## testing `concat`
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign array = "#status #about #liquid" | split : " " -%}
+
+{%- assign array = array | concat : site.ARRAY_EXAMPLE_INTEGER -%}
+
+{{ array | jsonify }}
+
+{% comment %}{% endcomment %}
+
+
+```
+
+## testing `post` structure
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign posts= site.posts -%}
+{%- assign post= posts[-1] -%}
+
+{{ post | jsonify }}
+
+{% for post in posts %}
+    
+  post title : `{{post.title}}`
+  
+  creation date : `{{post.date}}`
+   
+  tags : `{{post.tags}}` 
+   
+{% endfor %}
+
+{% comment %}{% endcomment %}
+```
+
+
+## testing `as_html_the_post_list_from_posts.liquid`
+
+
+```liquid
+{% include as_html_the_post_list_from_posts.liquid from_posts=site.posts %}
+{{ return | replace :" ","" | strip_newlines}}
 ```

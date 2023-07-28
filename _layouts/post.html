@@ -15,9 +15,14 @@ no_color_background : null
 {%- if page_no_color_background -%}
 {%- assign page_color_background = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
 {%- else -%}
-{%- capture page_color_background -%}
+
+{%- comment -%} page_color_background {%- endcomment -%}
 {%- include as_color_background_from_date.liquid from_date=page.date_of_creation -%}
-{%- endcapture -%}
+{%- assign page_color_background = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
 {%- endif -%}
 
 <article class="post {{page_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">

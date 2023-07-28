@@ -1,9 +1,15 @@
 ---
 title                : "Status > about Twitter & me"
 category             : "status"
-date_of_creation     : "#date 2023-05-26 00:00 1685059200000 GMT"
-date_of_modification : "#date 2023-07-02 15:04 1688295852048116075 GMT"
+date_of_creation     : "#date 2023-05-26 00:00 1685059200000000000 GMT"
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 layout               : post
+tags                 : 
+- "#status"
+- "#post"
+- "#twitter" 
+- "#me"
+- "#1685059200000000000"
 ---
 
 

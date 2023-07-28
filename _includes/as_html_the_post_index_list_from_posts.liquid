@@ -1,62 +1,61 @@
 {%- comment -%} as_html_the_post_index_list_from_posts.liquid {%- endcomment -%}
+
 {%- comment -%} Initialization {%- endcomment -%}
-{%- assign _posts = include.from_posts -%}
-{%- assign _post_list = 'null' -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _posts == "" -%}
-    {%- assign _posts = null -%}
+{%- assign _the_post_index_list_1690556288006533672 = null -%}
+
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if include.from_posts -%}
+
+    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+    {%- if include.from_posts != "" -%}
+
+        {%- comment -%} generating the post list {%- endcomment -%}
+        {%- capture _the_post_index_list_1690556288006533672 -%}
+
+            {%- for post in include.from_posts -%}
+
+                {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+                {%- if post.date_of_creation -%}
+
+                    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+                    {%- if post.date_of_creation != "" -%}
+
+                        {%- comment -%} _color_background_1690556288006533672 {%- endcomment -%}
+                        {%- include as_color_background_from_date.liquid from_date=post.date_of_creation -%}
+                        {%- assign _color_background_1690556288006533672 = return -%}
+                        {%- assign return = null -%}
+                        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+                        {%- comment -%} _post_id_1690556288006533672 {%- endcomment -%}
+                        {%- include as_id_from_date.liquid from_date=post.date_of_creation -%}
+                        {%- assign _post_id_1690556288006533672 = return -%}
+                        {%- assign return = null -%}
+                        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+                        
+                    <li>
+                        <a class="{{ _color_background_1690556288006533672 }}" href="#{{ _post_id_1690556288006533672 }}"> {{ post.title | escape }}</a>
+                    </li>
+
+                    {%- endif -%}
+
+                {%- endif -%}
+                
+            {%- endfor -%}
+
+        {%- endcapture -%}
+
+    {%- endif -%}
+
 {%- endif -%}
-
-{%- if _posts -%}
-    {%- comment -%} generating the post list {%- endcomment -%}
-    {%- capture _post_list -%}
-
-        {%- for post in _posts -%}
-
-            {%- comment -%} date of creation {%- endcomment -%}
-            {%- assign _date_of_creation = post.date_of_creation -%}
-
-            {%- comment -%} dealing with empty string {%- endcomment -%}
-            {%- if _date_of_creation == "" -%}
-                {%- assign _date_of_creation = null -%}
-            {%- endif -%}
-
-            {%- comment -%} only if there is a date of creation {%- endcomment -%}
-            {%- if _date_of_creation -%}
-
-                {%- comment -%} background color {%- endcomment -%}
-                {%- capture _background_color -%}
-                    {%- include as_color_background_from_date.liquid from_date=_date_of_creation -%}
-                {%- endcapture -%}
-
-                {%- comment -%} post id {%- endcomment -%}
-                {%- capture _post_id -%}
-                    {%- include as_id_from_date.liquid from_date=_date_of_creation -%}
-                {%- endcapture -%}
-
-                {%- comment -%}  main value {%- endcomment -%}
-                <li>
-                    <a class="{{ _background_color }}" href="#{{ _post_id }}"> {{ post.title | escape }}</a>
-                </li>
-
-            {%- endif -%}
-        {%- endfor -%}
-
-    {%- endcapture -%}
-{%- endif -%}
-
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_post_list -%}
-{%- endcapture -%}
-{{ _return }}
+{%- assign return = _the_post_index_list_1690556288006533672 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _date_of_creation = null -%}
-{%- assign _post_id = null -%}
-{%- assign _background_color = null -%}
-{%- assign _post_list = null -%}
-{%- assign _posts = null -%}
+{%- assign _the_post_index_list_1690556288006533672 = null -%}
+{%- assign _post_id_1690556288006533672 = null -%}
+{%- assign _color_background_1690556288006533672 = null -%}
+{%- comment -%} {%- endcomment -%}
+

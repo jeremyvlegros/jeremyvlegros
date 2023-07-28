@@ -1,91 +1,76 @@
 {%- comment -%} as_day_from_date.liquid {%- endcomment -%}
+
 {%- comment -%} initialization {%- endcomment -%}
-{%- assign _date = include.from_date -%}
-{%- assign _day = null -%}
-{%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
 
-{%- comment -%} empty string {%- endcomment -%}
-{%- if _date == "" -%}
-    {%- assign _date = null -%}
-{%- endif -%}
+{%- comment -%} main value {%- endcomment -%}
+{%- assign _day_1690556229516486038 = null -%}
 
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if include.from_date -%}
 
-{%- if _date -%}
+    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+    {%- if include.from_date != "" -%}
 
-    {%- comment -%}{%- assign _debug = " > entered first if > " -%} {%- endcomment -%}
+        {%- comment -%} date is custom, created, deleted, modified {%- endcomment -%}
+        {%- if include.from_date contains "#date" or include.from_date contains "#deleted" or include.from_date contains "#modified" -%}
 
-    {%- comment -%} date is custom (mine) {%- endcomment -%}
-    {%- if _date contains "GMT" -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> entered `if` GMT > " -%} {%- endcomment -%}
+            {%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
 
-        {%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
-
-        {%- comment -%}
-        everything as array
-            => [#date,2023-04-01,10:30,168784723873385,GMT]
-        {%- endcomment -%}
-        {%- assign _date = _date | split: " " -%}
+            {%- comment -%}
+            everything as array
+                => [#date,2023-04-01,10:30,168784723873385,GMT]
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = include.from_date  | split: " " -%}
 
 
-        {%- comment -%}  get year month day
-            => 2023-04-01
-        {%- endcomment -%}
-        {%- assign _date = _date[1] -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D:" | append: _date | append : " >" -%} {%- endcomment -%}
+            {%- comment -%}  get year month day
+                => 2023-04-01
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038[1] -%}
 
-        {%- comment -%} split date in year month day
+            {%- comment -%} split date in year month day
+                => [2023,04,01]
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038 | split: "-" -%}
+
+            {%- comment -%} Main value : day
+                => 01
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038[2] -%}
+
+        {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
+
+            {%- comment -%} hmm... parsing joy {%- endcomment -%}
+
+            {%- comment -%}  splitting the date by `T` to array
+            => [2023-04-01,10:30:00+00:00]
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = include.from_date  | split: "T" -%}
+
+            {%- comment -%}  getting the year-month-day
+            => "2023-04-01"
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038[0] -%}
+
+            {%- comment -%}  splitting in year,month,day
             => [2023,04,01]
-        {%- endcomment -%}
-        {%- assign _date = _date | split: "-" -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y,M,D:" | append: _date | append : " >" -%} {%- endcomment -%}
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038 | split: "-" -%}
 
-        {%- comment -%} Main value : day
+            {%- comment -%} Main value : day
             => 01
-        {%- endcomment -%}
-        {%- assign _day = _date[2] -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as day :" | append: _date | append : " >" -%} {%- endcomment -%}
+            {%- endcomment -%}
+            {%- assign _day_1690556229516486038 = _day_1690556229516486038[2] -%}
 
+        {%- endif -%}
 
-    {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
-
-        {%- comment -%} hmm... parsing joy {%- endcomment -%}
-
-        {%- comment -%}{%- assign _debug = _debug | append: "> entered `if` normal > " -%} {%- endcomment -%}
-        {%- comment -%}  splitting the date by `T` to array
-        => [2023-04-01,10:30:00+00:00]
-        {%- endcomment -%}
-        {%- assign _date = _date | split: "T" -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D, hour :" | append: _date | append: " >" -%} {%- endcomment -%}
-
-        {%- comment -%}  getting the year-month-day
-        => "2023-04-01"
-        {%- endcomment -%}
-        {%- assign _date = _date[0] -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y-M-D :" | append: _date | append: " >" -%} {%- endcomment -%}
-
-        {%- comment -%}  splitting in year,month,day
-        => [2023,04,01]
-        {%- endcomment -%}
-        {%- assign _date = _date | split: "-" -%}
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as Y,M,D :" | append: _date | append: " >" -%} {%- endcomment -%}
-
-        {%- comment -%} Main value : day
-        => 01
-        {%- endcomment -%}
-        {%- assign _day = _date[2] -%}
-
-        {%- comment -%}{%- assign _debug = _debug | append: "> value of date as day :" | append: _day -%} {%- endcomment -%}
     {%- endif -%}
+
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_day -%}
-{%- endcapture -%}
-{{ _return }}
+{%- assign return = _day_1690556229516486038 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _date = null -%}
-{%- assign _day = null -%}
-{%- comment -%}{%- assign _debug = null -%} {%- endcomment -%}
+{%- assign _day_1690556229516486038 = null -%}
+{%- comment -%}{%- endcomment -%}

@@ -1,4 +1,4 @@
-{%- comment -%} procedure_assert_this_and_that.liquid {%- endcomment -%}
+{%- comment -%} procedure_assert_from_this_and_from_that.liquid {%- endcomment -%}
 {%- comment -%} it does not check types nor strip spaces {%- endcomment -%}
 
 {%- comment -%} initialization {%- endcomment -%}
@@ -8,26 +8,28 @@
 {%- assign _with_success = include.with_success -%}
 {%- assign _with_name = include.with_name -%}
 {%- assign _with_version = include.with_version -%}
-{%- comment -%}{%- assign _with_version = "1689012860907734493" -%} {%- endcomment -%}
+{%- assign _version = "1690312959754612438" -%}
 {%- assign _message = null -%}
 
-{%- comment -%} dealing with empty strings {%- endcomment -%}
-
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if _with_warning == "" -%}
     {%- comment -%}resetting{%- endcomment -%}
     {%- assign _with_warning = null -%}
 {%- endif -%}
 
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if _with_success == "" -%}
     {%- comment -%}resetting{%- endcomment -%}
     {%- assign _with_success = null -%}
 {%- endif -%}
 
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if _with_name == "" -%}
     {%- comment -%}resetting{%- endcomment -%}
     {%- assign _with_name = null -%}
 {%- endif -%}
 
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if _with_version == "" -%}
     {%- comment -%}resetting{%- endcomment -%}
     {%- assign _with_version = null -%}
@@ -90,7 +92,9 @@
 
         {%- comment -%} succesfull message {%- endcomment -%}
         {%- capture _message -%}
+            {%- comment -%} <div style="background-color: greenyellow; padding: 10px; border-radius: 10px" > {%- endcomment -%}
             Successfull test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
+            {%- comment -%} </div> {%- endcomment -%}
         {%- endcapture -%}
 
     {%- endif -%}
@@ -107,4 +111,5 @@
 {%- assign _with_success = null -%}
 {%- assign _with_name = null -%}
 {%- assign _with_version = null -%}
+{%- assign _version = null -%}
 {%- assign _message = null -%}

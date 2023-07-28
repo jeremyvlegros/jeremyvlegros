@@ -1,22 +1,29 @@
 {%- comment -%}as_color_background_from_date.liquid {%- endcomment -%}
-{%- assign _color_background = "null" -%}
 
-{%- capture _day -%}
-    {%- include as_day_from_date.liquid from_date=include.from_date -%}
-{%- endcapture -%}
+{%- comment -%} main value {%- endcomment -%}
+{%- assign background_color_1690570371841 = null -%}
 
-{%- if _day != "null" -%}
-    {%- assign _color_background = "color_background_" | append: _day | strip_newlines -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- include as_day_from_date.liquid from_date=include.from_date -%}
+{%- assign _day_1690570371841 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if _day_1690570371841 -%}
+
+    {%- if _day_1690570371841 != "" -%}
+
+        {%- assign background_color_1690570371841 = "color_background_" | append: _day_1690570371841 | strip_newlines -%}
+
+    {%- endif -%}
+
 {%- endif -%}
 
-
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_color_background -%}
-{%- endcapture -%}
-{{ _return }}
+{%- assign return = background_color_1690570371841 -%}
 
 {%- comment -%} resetting variables {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _day = null -%}
-{%- assign _color_background = null -%}
+{%- assign _day_1690570371841 = null -%}
+{%- assign background_color_1690570371841 = null -%}

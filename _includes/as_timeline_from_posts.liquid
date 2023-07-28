@@ -1,0 +1,43 @@
+{%- comment -%}<!-- site posts --> {%- endcomment -%}
+
+{% comment %}avoiding variable names telescoping into each other by using include.from_posts {% endcomment %}
+
+{%- assign page_title = page.title -%}
+
+{%- comment -%} page_date_of_modification {%- endcomment -%}
+{%- include as_modification_date_from_custom_date.liquid from_custom_date=page.date_of_modification -%}
+{%- assign page_date_of_modification = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+
+{%- comment -%}  <!-- dates of first/top and last/bottom posts --> {%- endcomment -%}
+{%- assign _date_top_1690569561039 = include.from_posts[0].date_of_creation -%}
+{%- assign _date_bottom_1690569561039 = include.from_posts[-1].date_of_creation -%}
+
+{%- comment -%}  <!-- HTML top and bottom arrows --> {%- endcomment -%}
+{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid
+        from_date_top=_date_top_1690569561039
+        from_date_bottom=_date_bottom_1690569561039
+-%}
+{%- assign html_top_and_bottom_arrows = return -%}
+{% comment %} resetting {% endcomment %}
+{%- assign return = null -%}
+{%- assign _date_top_1690569561039 = null -%}
+{%- assign _date_bottom_1690569561039 = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%}<!-- HTML index post list --> {%- endcomment -%}
+{%- include as_html_the_post_index_list_from_posts.liquid from_posts=include.from_posts -%}
+{%- assign html_post_index_list = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%}<!-- HTML post list --> {%- endcomment -%}
+{%- include as_html_the_post_list_from_posts.liquid from_posts=include.from_posts -%}
+{%- assign html_post_list = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+

@@ -1,32 +1,22 @@
 {%- comment -%} as_id_from_date.liquid {%- endcomment -%}
 
 {%- comment -%} initialization {%- endcomment -%}
-{%- capture _id -%}
-    {%- include initialize_from.liquid from="" -%}
-{%- endcapture -%}
-
-{%- capture _date -%}
-    {%- include initialize_from.liquid from=include.from_date -%}
-{%- endcapture -%}
+{%- assign _id_1690569153107 = null -%}
 
 {%- comment -%} date is creation date, and custom {%- endcomment -%}
-{%- if _date contains "#date" and _date contains "GMT" -%}
+{%- if include.from_date  contains "#date" and include.from_date contains "GMT" -%}
 
     {%- comment -%}everything as array {%- endcomment -%}
-    {%- assign _date = _date | split: " " -%}
+    {%- assign _date_1690569153107 = include.from_date  | split: " " -%}
 
     {%- comment -%}getting id {%- endcomment -%}
-    {%- assign _id = _date[3] -%}
+    {%- assign _id_1690569153107 = _date_1690569153107[3] -%}
+
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_id -%}
-{%- endcapture -%}
-{{ _return }}
+{%- assign return = _id_1690569153107 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _date = null -%}
-{%- assign _id = null -%}
-
+{%- assign _date_1690569153107 = null -%}
+{%- assign _id_1690569153107 = null -%}

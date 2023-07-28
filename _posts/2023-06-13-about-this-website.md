@@ -1,14 +1,19 @@
 ---
 title                : "About this website"
 layout               : post
-date_of_creation     : "#date 2023-06-13 00:00 1686614400000 GMT"
-date_of_modification : "#date 2023-07-02 15:04 1688295852048116075 GMT"
+date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
+tags                 : 
+- "#about" 
+- "#post" 
+- "#website"
+- "#1686614400000000000"
 ---
 
 ## A reliable simple website
 
 - no cookies prompt from me
-- no advertisements from me, with the exception of unadvertised links in the form of a ~ "more" link
+- no advertisements from me, except unadvertised links in the form of a ~ "more" link
 - no `JavaScript` requirement from me
 - no money related things on the website
 - no data analytics on the website
@@ -41,7 +46,7 @@ date_of_modification : "#date 2023-07-02 15:04 1688295852048116075 GMT"
 
 - anybody can download the whole website
 - GitHub commits act as creation proof
-- have an online access to some of my data
+- online access to some of my data
 
 ## More independence × flexibility
 

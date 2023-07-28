@@ -6,6 +6,9 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
+ARRAY_EMPTY : []
+ARRAY_EXAMPLE_INTEGER : [1,2,3]
+
 permalink: /:categories/:year/:month/:day/:title:output_ext
 
 image_color_linkedin   : "https://i.imgur.com/YcyRAPo.png"

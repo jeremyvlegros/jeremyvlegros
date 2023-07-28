@@ -2,10 +2,22 @@
 layout: base
 ---
 {{ content }}
-<ul>
-{%- for post in site.posts -%}
-      <li>
-          <a href="{{ post.url | relative_url }}"> {{ post.title | escape }}</a>        
-      </li>
-{%- endfor -%}
-</ul>  
+
+
+{%- comment -%} html_the_post_list_with_url {%- endcomment -%}
+{%- include as_html_the_post_list_with_url_from_posts.liquid from_posts=site.posts -%}
+{%- assign html_the_post_list_with_url = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+Posts :
+
+{{ html_the_post_list_with_url }}
+
+tags :
+
+{%- assign array_tags_selected= "about liquid" | split : " " -%}
+
+{%- comment -%} {%- include tag.liquid from_array=array_tags_selected -%} {%- endcomment -%}
+
+

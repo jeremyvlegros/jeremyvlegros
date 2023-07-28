@@ -1,7 +1,14 @@
 ---
-title            : "status > website > `Jekyll`"
-date_of_creation : "#date 2023-07-25 00:38 1690231131792213244 GMT"
-layout           : post
+title                : "status > website > `Jekyll`"
+date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
+layout               : post
+tags                 : 
+- "#status"
+- "#post"
+- "#website"
+- "#jekyll"
+- "#1690231131792213244"
 ---
 
 I installed `Jekyll` :

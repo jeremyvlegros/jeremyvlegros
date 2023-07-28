@@ -1,8 +1,16 @@
 ---
 title                : "status > `Intellij` has liquid syntax highlighting"
 date_of_creation     : "#date 2023-07-08 14:03 1688810620122102232 GMT"
-date_of_modification : "#date 2023-07-08 14:28 1688812088033532071 GMT"
-layout : post
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
+layout               : post
+tags                 : 
+- "#status"
+- "#post"
+- "#intellij" 
+- "#liquid" 
+- "#syntax" 
+- "#highlighting"
+- "#1688810620122102232"
 ---
 
 It comes with an official plugin, and I didn't know about it because I copied and pasted code from HTML to the "GitHub code editor" ... '(^^).

@@ -1,36 +1,24 @@
 {%- comment -%} as_canonical_url_from_url.liquid {%- endcomment -%}
 
-{%- capture _site_name -%}
-    {%- include initialize_from.liquid from=site.name -%}
-{%- endcapture -%}
+{%- comment -%} initialization {%- endcomment -%}
 
-{%- capture _page_url -%}
-    {%- include initialize_from.liquid from=include.from_url -%}
-{%- endcapture -%}
+{%- assign _the_canonical_url_1690570308629 = null -%}
 
-{%- capture _site_url -%}
-    {%- include initialize_from.liquid from=site.url -%}
-{%- endcapture -%}
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if site.name and site.url and include.from_url -%}
 
-{%- comment -%} main value {%- endcomment -%}
-{%- capture _the_canonical_url -%}
-    {%- include initialize_from.liquid from="null" -%}
-{%- endcapture -%}
+    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+    {%- if site.name != "" and site.url != "" and include.from_url != "" -%}
 
-{%- if _site_name != "null" and _site_url != "null" and _page_url != "null" -%}
-    {%- assign _the_canonical_url = _site_url | append :"/" | append : _site_name | append : _page_url -%}
+        {%- assign _the_canonical_url_1690570308629 = site.url | append: "/" | append: site.name | append: include.from_url -%}
+
+    {%- endif -%}
+
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_the_canonical_url -%}
-{%- endcapture -%}
-{{ _return }}
+{%- assign return = _the_canonical_url_1690570308629 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _the_canonical_url = null -%}
-{%- assign _site_name = null -%}
-{%- assign _page_url = null -%}
-
+{%- assign _the_canonical_url_1690570308629 = null -%}
 {%- comment -%} {%- endcomment -%}

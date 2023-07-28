@@ -1,0 +1,27 @@
+{%- comment -%} as_posts_from_tag.liquid {%- endcomment -%}
+
+{%- assign _posts_1690556793031296570 = site.ARRAY_EMPTY -%}
+
+{%- include procedure_check_type_array_from.liquid from=_posts_1690556793031296570 -%}
+
+{% for tag in site.tags %}
+
+    {%- assign _tag_name_1690569479499 = tag[0] -%}
+    {%- assign _posts_with_tag_name_1690569479499 = tag[1] -%}
+
+    {% comment %} tag name is the tag to search {% endcomment %}
+    {%- if _tag_name_1690569479499 == include.from_tag -%}
+        {%- assign _posts_1690556793031296570 = _posts_with_tag_name_1690569479499 -%}
+        {%- break -%}
+    {%- endif -%}
+
+{% endfor %}
+
+{%- comment -%}  sanity check, but even if it is an array, concat won't work with it, because it's an array of dictionnaries {%- endcomment -%}
+{%- include procedure_check_type_array_from.liquid from=_posts_1690556793031296570 -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = _posts_1690556793031296570 -%}
+
+{%- assign _posts_1690556793031296570 = null -%}
+{%- assign _posts_with_tag_name_1690569479499 = null -%}

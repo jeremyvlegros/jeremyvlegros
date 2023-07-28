@@ -1,21 +1,16 @@
-{%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
-{%- capture _site_name -%}
-    {%- include initialize_from.liquid from=site.name -%}
-{%- endcapture -%}
 
-{%- comment -%} main value {%- endcomment -%}
-{%- capture _the_page_url -%}
-    {%- include as_canonical_url_from_url.liquid from_url=page.url -%}
-{%- endcapture -%}
+{%- comment -%} as_canonical_the_page_url.liquid {%- endcomment -%}
+{%- assign _the_page_canonical_url_1690570268209 = null -%}
+
+{%- comment -%} _the_page_canonical_url_1690570268209 {%- endcomment -%}
+{%- include as_canonical_url_from_url.liquid from_url=page.url -%}
+{%- assign _the_page_canonical_url_1690570268209 = return -%}
+{%- assign return = null -%} {%- comment -%} kept for consistency, see my point in longer code {%- endcomment -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_the_page_url-%}
-{%- endcapture -%}
+{%- assign return = _the_page_canonical_url_1690570268209 -%}
 
-{{ _return }}
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _site_name = null -%}
-{%- assign _the_page_url = null -%}
+{%- assign _the_page_canonical_url_1690570268209 = null -%}
 {%- comment -%} {%- endcomment -%}

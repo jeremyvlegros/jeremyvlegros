@@ -2,51 +2,14 @@
 layout : base
 ---
 
-{%- comment -%}<!-- LIQUID PROCESSING -->{%- endcomment -%}
+<!-- get post list from tag  -->
 
-{%- comment -%}<!-- site posts --> {%- endcomment -%}
-{%- assign posts = site.posts -%}
-
-{%- comment -%}<!-- short modification date -->{%- endcomment -%}
-{%- assign date_of_modification_short = page.date_of_modification | split : " " -%}
-{%- assign date_of_modification_short = "#modified "
-| append : date_of_modification_short[1]
-| append : " "
-| append : date_of_modification_short[2]
--%}
-
-{%- comment -%}  <!-- dates of first/top and last/bottom posts --> {%- endcomment -%}
-{%- assign _date_top = posts[0].date_of_creation -%}
-{%- assign _date_bottom = posts[-1].date_of_creation -%}
-
-{%- comment -%}  <!-- HTML top and bottom arrows --> {%- endcomment -%}
-{%- capture html_top_and_bottom_arrows -%}
-{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid from_date_top=_date_top
-from_date_bottom=_date_bottom
--%}
-{%- endcapture -%}{%- comment -%}  <!-- N.B : variables `_date_top` `_date_bottom` are reset in the `include` --> {%- endcomment -%}
-
-
-{%- comment -%}<!-- HTML index post list --> {%- endcomment -%}
-{%- capture html_post_index_list -%}
-{%- include as_html_the_post_index_list_from_posts.liquid from_posts=posts-%}
-{%- endcapture -%}
-
-{%- comment -%}<!-- HTML post list --> {%- endcomment -%}
-{%- capture html_post_list -%}
-{%- include as_html_the_post_list_from_posts.liquid from_posts=posts-%}
-{%- endcapture -%}
-
-
-{%- comment -%}<!-- END OF LIQUID PROCESSING -->{%- endcomment -%}
+{%- include as_timeline_from_posts.liquid from_posts=site.posts -%}
 
 <div class="timeline container-fluid">
 
     {%- comment -%}<!-- printing HTML top and bottom arrows --> {%- endcomment -%}
-    {{html_top_and_bottom_arrows}}
-
-    {%- comment -%}  <!-- resetting the html variable --> {%- endcomment -%}
-    {%- assign html_top_and_bottom_arrows = null -%}
+    {{ html_top_and_bottom_arrows }}
 
     {%- comment -%}<!-- printing content of the next thing --> {%- endcomment -%}
     {{ content }}
@@ -57,11 +20,11 @@ from_date_bottom=_date_bottom
             <div id="side_index" class="row">
                 <div class="side_index_content">
                     <ul>
-                        <li>
-                            {%- if page.title -%}
-                            <h1 class="page-heading">{{ page.title }}</h1>
-                            {%- endif -%}
-                        </li>
+                        {%- if page_title -%}
+                            <li>
+                                <h1 class="page-heading">{{ page_title }}</h1>
+                            </li>
+                        {%- endif -%}
 
                         {%- comment -%}<!-- printing HTML index post list --> {%- endcomment -%}
                         {{ html_post_index_list }}
@@ -77,6 +40,7 @@ from_date_bottom=_date_bottom
                 {%- comment -%}<!-- printing HTML post list --> {%- endcomment -%}
                 {{ html_post_list }}
 
+
             </ul>
         </div>
 
@@ -86,16 +50,16 @@ from_date_bottom=_date_bottom
 
         <br>
 
-        {%- if page.date_of_creation -%}
-        <span class='date date_of_creation'> {{ page.date_of_creation }} </span>
+        {%- if page_date_of_creation -%}
+            <span class='date date_of_creation'> {{ page_date_of_creation }} </span>
         {%- endif -%}
 
         <br>
 
-        {%- if page.date_of_modification -%}
-        <span class="date date_of_modification">
-        {{  date_of_modification_short }}
-        </span>
+        {%- if page_date_of_modification -%}
+            <span class="date date_of_modification">
+            {{ page_date_of_modification }}
+            </span>
         {%- endif -%}
 
     </div>
@@ -105,7 +69,8 @@ from_date_bottom=_date_bottom
 
 {%- assign html_post_index_list = null -%}
 {%- assign html_post_list = null -%}
-{%- assign posts = null -%}
 {%- assign date_of_modification_short = null -%}
+{%- assign html_top_and_bottom_arrows = null -%}
+
 
 {%- comment -%}<!-- END OF LIQUID POST-PROCESSING -->{%- endcomment -%}

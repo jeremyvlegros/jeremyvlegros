@@ -1,61 +1,38 @@
 {%- comment -%} as_html_the_post_list_with_url_from_posts.liquid {%- endcomment -%}
-{%- assign _posts = include.from_posts -%}
-{%- assign _post_list = 'null' -%}
+{%- assign _html_the_post_list_with_url_1690556572317772128 = null -%}
 
-{%- comment -%} dealing with empty string {%- endcomment -%}
-{%- if _posts == "" -%}
-    {%- assign _posts = null -%}
-{%- endif -%}
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if include.from_posts -%}
 
-{%- if _posts -%}
-    {%- comment -%} main value : post list {%- endcomment -%}
-    {%- capture _post_list %}
-        <ul>
-        {% comment %}{% endcomment %}
-            {%- comment -%} generating the post list {%- endcomment -%}
-            {% comment %}{% endcomment %}
-            {%- for post in _posts -%}
-                <li>
-                {%- comment -%} initialization  {%- endcomment -%}
-                    {%- assign _post_title = post.title -%}
-                    {%- assign _date_of_creation = post.date_of_creation -%}
+    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+    {%- if include.from_posts != "" -%}
 
-                    {%- comment -%} handling empty strings {%- endcomment -%}
+        {%- comment -%} main value {%- endcomment -%}
+        {%- capture _html_the_post_list_with_url_1690556572317772128 %}
+            <ul>
+                {% comment %} generating the post list {% endcomment %}
 
-                    {%- if _post_title == "" -%}
-                        {%- assign _post_title = null -%}
-                    {%- endif -%}
+                {%- for post in include.from_posts -%}
+                    <li>
+                        {%- comment -%} handling empty strings {%- endcomment -%}
 
-                    {%- if _date_of_creation == "" -%}
-                        {%- assign _date_of_creation = null -%}
-                    {%- endif -%}
-
-                    {%- comment -%} Processing {%- endcomment -%}
-
-                    <a href="{{ post.url | relative_url }}"> {{ post.title }} {{ _date_of_creation }}</a>
+                        <a href="{{ post.url | relative_url }}"> {{ post.title }} <br>| {{ post.date_of_creation }}</a>
+                        {% comment %}{% endcomment %}
+                    </li>
                     {% comment %}{% endcomment %}
-            </li>
-                {% comment %}{% endcomment %}
-            {%- endfor -%}
+                {%- endfor -%}
         </ul>
 
-    {%- endcapture -%}
+        {%- endcapture -%}
+
+    {%- endif -%}
+
 {%- endif -%}
 
 
 {%- comment -%} return {%- endcomment -%}
-{%- capture _return -%}
-    {%- include return_from.liquid from=_post_list -%}
-{%- endcapture -%}
-{{ _return }}
-
+{%- assign return = _html_the_post_list_with_url_1690556572317772128 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _return = null -%}
-{%- assign _posts = null -%}
-{%- assign _post_title = null -%}
-{%- assign _date_of_creation = null -%}
-{%- assign _date_of_modification = null -%}
-{%- assign _post_list = null -%}
-{%- assign _short_date = null -%}
+{%- assign _html_the_post_list_with_url_1690556572317772128 = null -%}
 

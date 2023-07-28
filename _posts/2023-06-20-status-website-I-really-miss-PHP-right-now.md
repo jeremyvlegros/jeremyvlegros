@@ -1,9 +1,15 @@
 ---
 title                : "status > website > Jekyll > I really miss PHP right now"
 category             : "status"
-date_of_creation     : "#date 2023-06-20 1449 1687258158499247037 GMT"
-date_of_modification : "#date 2023-06-20 1516 1687259799273480277 GMT"
+date_of_creation     : "#date 2023-06-20 14:49 1687258158499247037 GMT"
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 layout               : post
+tags                 :
+- "#status"
+- "#post"
+- "#website"
+- "#php"
+- "#1687258158499247037"
 ---
 The time I spent searching how Jekyll and Liquid works ... The Liquid syntax ... is ... *sigh* ... the documentations are ... *sigh*.
 

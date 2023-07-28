@@ -2,7 +2,13 @@
 title                : "status > my external links will be on `linkt.ree` "
 layout               : post
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
-date_of_modification : "#date 2023-07-17 16:29 1689596952051145003 GMT"
+date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
+tags                 :
+- "#status"
+- "#post"
+- "#links"
+- "#link_tree"
+- "#1688126427044747719"
 ---
 
 ## Reasons
