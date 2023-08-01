@@ -48,7 +48,7 @@
                         {%- if post.date_of_modification != "" -%}
 
                             {%- comment -%} post.date_of_modification {%- endcomment -%}
-                            {%- include as_modification_date_from_custom_date.liquid from_custom_date=post.date_of_modification -%}
+                            {%- include as_modification_date_without_id_from_date.liquid from_date=post.date_of_modification -%}
                             {%- assign _modification_date_1690556428999239446 = return -%}
                             {%- assign return = null -%}
 

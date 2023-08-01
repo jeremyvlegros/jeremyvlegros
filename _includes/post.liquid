@@ -1,0 +1,94 @@
+{%- assign post_no_color_background = page.no_color_background -%}
+{%- assign post_date_of_creation = page.date_of_creation -%}
+{%- assign post_date_of_modification = page.date_of_modification -%}
+{%- assign post_title = page.title -%}
+
+{%- comment -%} dealing with empty string : no_color_background  {%- endcomment -%}
+{%- if post_no_color_background == "" -%}
+    {%- assign post_no_color_background = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : date_of_creation  {%- endcomment -%}
+{%- if post_date_of_creation == "" -%}
+    {%- assign post_date_of_creation = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : date_of_modification  {%- endcomment -%}
+{%- if post_date_of_modification == "" -%}
+    {%- assign post_date_of_modification = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : title  {%- endcomment -%}
+{%- if post_title == "" -%}
+    {%- assign post_title = null -%}
+{%- endif -%}
+
+{%- comment -%} generating post_no_color_background  {%- endcomment -%}
+{%- comment -%} option {%- endcomment -%}
+{%- if post_no_color_background -%}
+    {%- assign post_color_background = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
+{%- else -%}
+
+    {%- comment -%} generating post_color_background {%- endcomment -%}
+    {%- include as_color_background_from_date.liquid from_date=page.date_of_creation -%}
+    {%- assign post_color_background = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- endif -%}
+
+{%- comment -%} date_of_creation without ID {%- endcomment -%}
+{%- if post_date_of_creation -%}
+
+    {%- comment -%}  id {%- endcomment -%}
+    {%- include as_id_from_date.liquid from_date=post_date_of_creation -%}
+    {%- assign post_id = return -%}
+    {%- assign return = null -%}
+
+    {%- comment -%} post_date_of_creation {%- endcomment -%}
+    {%- include as_date_without_id_from_date.liquid from_date=post_date_of_creation -%}
+    {%- assign post_date_of_creation = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- endif -%}
+
+{%- comment -%} post_title HTML {%- endcomment -%}
+{%- if post_title -%}
+    {%- capture post_title -%}
+        <h1 class="post-title" itemprop="name headline">
+            {{ post_title }}
+        </h1>
+    {%- endcapture -%}
+{%- endif -%}
+
+
+{%- comment -%} post_date_of_creation HTML {%- endcomment -%}
+{%- if post_date_of_creation -%}
+    {%- capture post_date_of_creation -%}
+        <span class='date date_of_creation'> {{ post_date_of_creation }} </span>
+    {%- endcapture -%}
+{%- endif -%}
+
+{%- comment -%} post_id HTML {%- endcomment -%}
+{%- if post_id -%}
+    {%- capture post_id -%}
+        <span class='date date_of_creation'> #{{ post_id }} </span>
+    {%- endcapture -%}
+{%- endif -%}
+
+{%- comment -%} post_date_of_modification processing {%- endcomment -%}
+{%- include as_modification_date_without_id_from_date.liquid from_date=post_date_of_modification -%}
+{%- assign post_date_of_modification = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} post_date_of_modification HTML {%- endcomment -%}
+{%- if post_date_of_modification -%}
+
+    {%- capture post_date_of_modification -%}
+        <span class="date date_of_modification"> {{ post_date_of_modification }} </span>
+    {%- endcapture -%}
+
+{%- endif -%}
+

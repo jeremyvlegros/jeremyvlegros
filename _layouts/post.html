@@ -1,39 +1,19 @@
 ---
-layout : base
-title : null
-date_of_creation : null
+layout               : base
+title                : null
+date_of_creation     : null
 date_of_modification : null
-no_color_background : null
+no_color_background  : null
 ---
 
-{%- if page.no_color_background == "" -%}
-{%- assign page_no_color_background = null -%}
-{%- else -%}
-{%- assign page_no_color_background = page.no_color_background -%}
-{%- endif -%}
-
-{%- if page_no_color_background -%}
-{%- assign page_color_background = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
-{%- else -%}
-
-{%- comment -%} page_color_background {%- endcomment -%}
-{%- include as_color_background_from_date.liquid from_date=page.date_of_creation -%}
-{%- assign page_color_background = return -%}
-{%- assign return = null -%}
-{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- include post.liquid -%}
 
 
-{%- endif -%}
-
-<article class="post {{page_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post {{post_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
 
-        {%- if page.title -%}
-        <h1 class="post-title" itemprop="name headline">
-            {{ page.title }}
-        </h1>
-        {%- endif -%}
+        {{ post_title }}
 
     </header>
 
@@ -43,16 +23,21 @@ no_color_background : null
 
         <br>
 
-        {%- if page.date_of_creation -%}
-        <span class='date date_of_creation'>    Created&nbsp;&nbsp;: {{ page.date_of_creation }} </span>
-        {%- endif -%}
+        {{ post_date_of_creation }}
 
         <br>
 
-        {%- if page.date_of_modification -%}
-        <span class="date date_of_modification">Modified&nbsp;: {{ page.date_of_modification }} </span>
-        {%- endif -%}
+        {{ post_date_of_modification }}
+
+        <br>
+
+        {{ post_id }}
     </div>
 
 </article>
+
+{%- assign post_title = null -%}
+{%- assign post_date_of_creation = null -%}
+{%- assign post_date_of_modification = null -%}
+{%- assign post_id = null -%}
 

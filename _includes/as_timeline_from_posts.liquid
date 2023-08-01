@@ -5,7 +5,7 @@
 {%- assign page_title = page.title -%}
 
 {%- comment -%} page_date_of_modification {%- endcomment -%}
-{%- include as_modification_date_from_custom_date.liquid from_custom_date=page.date_of_modification -%}
+{%- include as_modification_date_without_id_from_date.liquid from_date=page.date_of_modification -%}
 {%- assign page_date_of_modification = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}

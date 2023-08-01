@@ -1,0 +1,37 @@
+{%- comment -%} as_date_without_id_from_date.liquid {%- endcomment -%}
+{%- assign _date_without_id_1690822830587923761 =  null -%}
+
+{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+{%- if include.from_date -%}
+
+    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+    {%- if include.from_date != "" -%}
+
+        {% comment %}"#date 2023-07-25 23:11 34537745322324 GMT"{% endcomment %}
+
+        {%- comment -%}  {%- endcomment -%}
+
+
+        {%- include as_boolean_the_date_is_custom_from_date.liquid from_date=include.from_date -%}
+        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+        {%- comment -%} custom date {%- endcomment -%}
+        {%- if return == true -%}
+
+
+            {%- comment -%} _date_without_id_1690822830587923761_as_array {%- endcomment -%}
+            {%- include as_array_from_string.liquid from_string=include.from_date -%}
+            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+            {%- assign _date_without_id_1690822830587923761 = "" | append: return[0] | append: " " |append: return[1] | append: " " |append: return[2] | append : " " | append: return[-1] -%}
+
+
+        {%- assign return = null -%}
+        {%- endif -%}
+    {%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = _date_without_id_1690822830587923761 -%}

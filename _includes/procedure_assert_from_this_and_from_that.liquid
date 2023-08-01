@@ -82,7 +82,9 @@
 
     {%- comment -%} fail message {%- endcomment -%}
     {%- capture _message -%}
-        Failed test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
+        <div style="font-weight: bold;background-color: red; padding: 6px; border-radius: 10px;color:black">
+            Failed test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
+        </div>
     {%- endcapture -%}
 
     {%- comment -%} succesfull test {%- endcomment -%}
@@ -92,9 +94,9 @@
 
         {%- comment -%} succesfull message {%- endcomment -%}
         {%- capture _message -%}
-            {%- comment -%} <div style="background-color: greenyellow; padding: 10px; border-radius: 10px" > {%- endcomment -%}
+            <div style="font-weight: bold;background-color: greenyellow; color: dodgerblue;padding: 6px; border-radius: 10px">
             Successfull test for {{ _with_name }} {{ _with_version }}`{{ _this }}` == `{{ _that }}`{{ _with_warning }}
-            {%- comment -%} </div> {%- endcomment -%}
+             </div>
         {%- endcapture -%}
 
     {%- endif -%}
