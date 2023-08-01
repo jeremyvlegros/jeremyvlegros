@@ -1,13 +1,13 @@
 ---
 title                : "Status > removing avatars"
-category             : "status"
+category             : post
+layout               : post
 date_of_creation     : "#date 2023-06-14 00:00 1686700800000000000 GMT"
 date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
-layout               : post
+post_id              : 1686700800000000000
+permalink            : /post/1686700800000000000
 tags                 :
 - "#status"
-- "#post"
 - "#avatar"
-- "#1686700800000000000"
 ---
 Images can't be used as a person identity on the web.
