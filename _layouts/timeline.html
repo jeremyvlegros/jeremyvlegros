@@ -4,7 +4,14 @@ layout : base
 
 <!-- get post list from tag  -->
 
-{%- include as_timeline_from_posts.liquid from_posts=site.posts -%}
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag=page.tag -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- include as_timeline_from_posts.liquid from_posts=posts -%}
+{%- assign posts = null -%}
 
 <div class="timeline container-fluid">
 
