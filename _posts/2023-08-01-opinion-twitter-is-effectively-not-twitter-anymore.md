@@ -7,6 +7,7 @@ date_of_modification : "#date 2023-08-02 12:41 1690965713687686005 GMT"
 post_id              : 1690880245921914509
 permalink            : /post/1690880245921914509
 tags :
+- "#post"
 - "#opinion"
 - "#twitter"
 - "#x corp"

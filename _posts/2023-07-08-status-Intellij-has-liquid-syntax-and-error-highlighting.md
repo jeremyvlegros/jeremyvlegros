@@ -7,6 +7,7 @@ date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1688810620122102232
 permalink            : /post/1688810620122102232
 tags                 : 
+- "#post"
 - "#status"
 - "#intellij" 
 - "#liquid" 

@@ -7,10 +7,11 @@ date_of_modification : "#date 2023-08-01 13:15 1690881357981994765 GMT"
 post_id              : 1690880438954979985
 permalink            : /post/1690880438954979985
 tags                 :
-- "opinion"
-- "post"
-- "twitter"
-- "security"
+- "#post"
+- "#opinion"
+- "#post"
+- "#twitter"
+- "#security"
 ---
 
 I remembered that `Twitter` users can allow third party applications to get a person geolocation, meaning that somebody I follow can know my location.

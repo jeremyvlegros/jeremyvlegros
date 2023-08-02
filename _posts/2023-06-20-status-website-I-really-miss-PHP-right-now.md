@@ -7,6 +7,7 @@ date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1687258158499247037
 permalink            : /post/1687258158499247037
 tags                 :
+- "#post"
 - "#status"
 - "#website"
 - "#php"
