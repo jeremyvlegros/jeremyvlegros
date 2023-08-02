@@ -1,6 +1,6 @@
 ---
 title                : timeline
 layout               : timeline
-permalink            : "tag/timeline"
+permalink            : "timeline"
 tag                  : "#post"
 ---
