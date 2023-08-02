@@ -9,7 +9,6 @@ permalink            : /post/1690880438954979985
 tags                 :
 - "#post"
 - "#opinion"
-- "#post"
 - "#twitter"
 - "#security"
 ---
