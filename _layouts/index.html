@@ -1,23 +1,6 @@
 ---
 layout: base
 ---
-{{ content }}
 
-<br>
-
-<ul>
-  <li><a href="{{ '/timeline' | relative_url }}"> timeline </a></li>
-
-  <li><a href="{{ '/links' | relative_url }}"> links </a></li>
-</ul>
-
-{%- comment -%} html_the_post_list_with_url {%- endcomment -%}
-{%- include as_html_the_post_list_with_url_from_posts.liquid from_posts=site.posts -%}
-{%- assign html_the_post_list_with_url = return -%}
-{%- assign return = null -%}
-{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-Posts :
-
-{{ html_the_post_list_with_url }}
+{%- include index.liquid -%} 
 
