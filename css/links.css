@@ -1,17 +1,8 @@
-/*#date 2023-06-28 15:57 1687953443352457480 GMT*/
 
 #links
 {
-  margin-left  : 35%;
-  margin-right : 35%;
-  text-align   : center;
-}
-
-
-#links .social_logo
-{
-  /*height: 5%;*/
-  /*width: 5%;*/
+  display: flex;
+  align-items: center;
 }
 
 #links h1
@@ -33,15 +24,7 @@
 #links a
 {
   text-decoration : none;
-  display         : block;
-
-}
-
-#links .list_line
-{
-  margin-top    : 3%;
-  margin-bottom : 3%;
-  list-style    : none;
+  margin : 3px;
 }
 
 #links #steam
@@ -141,14 +124,4 @@
   text-align : center
 }
 
-@media screen and (max-width : 573px)
-{
-  #links
-  {
-    margin-right : 7%;
-    margin-left  : 7%;
-    /* background-color:blue;*/
-    /* border: 10px solid blue;*/
-  }
-}
 
