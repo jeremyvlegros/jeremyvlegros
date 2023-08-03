@@ -1,0 +1,135 @@
+{% comment %}{%- assign post =  -%}{% endcomment %}
+{%- assign post_no_color_background_1691010490420939832 = include.from_post.no_color_background -%}
+{%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
+{%- assign post_date_of_modification_1691010490420939832 = include.from_post.date_of_modification -%}
+{%- assign post_title_1691010490420939832 = include.from_post.title -%}
+{%- assign post_tags_1691010490420939832 = include.from_post.tags -%}
+{%- assign post_id_1691010490420939832 = null -%}
+
+{%- comment -%} dealing with empty string : no_color_background  {%- endcomment -%}
+{%- if post_no_color_background_1691010490420939832 == "" -%}
+    {%- assign post_no_color_background_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : date_of_creation  {%- endcomment -%}
+{%- if post_date_of_creation_1691010490420939832 == "" -%}
+    {%- assign post_date_of_creation_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : date_of_modification  {%- endcomment -%}
+{%- if post_date_of_modification_1691010490420939832 == "" -%}
+    {%- assign post_date_of_modification_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : title  {%- endcomment -%}
+{%- if post_title_1691010490420939832 == "" -%}
+    {%- assign post_title_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} generating post_no_color_background_1691010490420939832  {%- endcomment -%}
+{%- comment -%} option {%- endcomment -%}
+{%- if post_no_color_background_1691010490420939832 -%}
+    {%- assign post_color_background_1691010490420939832 = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
+{%- else -%}
+
+    {%- comment -%} generating post_color_background_1691010490420939832 {%- endcomment -%}
+    {%- include as_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+    {%- assign post_color_background_1691010490420939832 = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- endif -%}
+
+{%- comment -%} date_of_creation without ID {%- endcomment -%}
+{%- if post_date_of_creation_1691010490420939832 -%}
+
+    {%- comment -%}  id {%- endcomment -%}
+    {%- include as_id_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+    {%- assign post_id_1691010490420939832 = return -%}
+    {%- assign return = null -%}
+
+    {%- comment -%} post_date_of_creation_1691010490420939832 {%- endcomment -%}
+    {%- include as_date_without_id_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+    {%- assign post_date_of_creation_1691010490420939832 = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+{%- endif -%}
+
+{%- comment -%} post_title_1691010490420939832 HTML {%- endcomment -%}
+{%- if post_title_1691010490420939832 -%}
+    {%- capture post_title_1691010490420939832 -%}
+        <h1 id="{{ post_id_1691010490420939832 }}" class="post-title" itemprop="name headline">
+            {{ post_title_1691010490420939832 }}
+        </h1>
+    {%- endcapture -%}
+{%- endif -%}
+
+
+{%- comment -%} post_date_of_creation_1691010490420939832 HTML {%- endcomment -%}
+{%- if post_date_of_creation_1691010490420939832 -%}
+    {%- capture post_date_of_creation_1691010490420939832 -%}
+        <br>
+        <span class='date date_of_creation'> {{ post_date_of_creation_1691010490420939832 }} </span>
+    {%- endcapture -%}
+{%- endif -%}
+
+{%- comment -%} post_date_of_modification_1691010490420939832 processing {%- endcomment -%}
+{%- include as_modification_date_without_id_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
+{%- assign post_date_of_modification_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} post_date_of_modification_1691010490420939832 HTML {%- endcomment -%}
+{%- if post_date_of_modification_1691010490420939832 -%}
+    {%- capture post_date_of_modification_1691010490420939832 -%}
+        <br>
+        <span class="date date_of_modification"> {{ post_date_of_modification_1691010490420939832 }} </span>
+    {%- endcapture -%}
+{%- endif -%}
+
+{%- comment -%} getting the lines for tags{%- endcomment -%}
+{%- capture post_tags_1691010490420939832 -%}
+    <br>
+    <div class="row tags">
+        {%- for tag in post_tags_1691010490420939832 -%}
+            {%- if tag == "#post" -%}
+                <a class="col button" href={{ "/post/" | append : post_id_1691010490420939832 }} target="_blank"> {{ tag }} </a>
+            {%- elsif tag contains "#"-%}
+                <a class="col button" href={{ "/tag/" | append: tag | replace: "#", "" }} target="_blank"> {{ tag }} </a>
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
+{%- endcapture -%}
+
+{%- comment -%} main HTML {%- endcomment -%}
+
+<article class="post {{ post_color_background_1691010490420939832 }}" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+
+            {{ post_title_1691010490420939832 }}
+
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+
+            {{ include.from_post.content }}
+            
+            {{ post_date_of_creation_1691010490420939832 }}
+
+            {{ post_date_of_modification_1691010490420939832 }}
+            
+            {{ post_tags_1691010490420939832 }}
+
+        </div>
+
+</article>
+
+{%- comment -%}  resetting {%- endcomment -%}
+{%- assign post_no_color_background_1691010490420939832 = null -%}
+{%- assign post_date_of_creation_1691010490420939832 = null -%}
+{%- assign post_date_of_modification_1691010490420939832 = null -%}
+{%- assign post_title_1691010490420939832 = null -%}
+{%- assign post_tags_1691010490420939832 = null -%}
+{%- assign post_id_1691010490420939832 = null -%}
