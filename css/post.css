@@ -1,4 +1,3 @@
-/*#date 2023-07-02 16:04 1688299468665020076 GMT*/
 
 :root
 {
@@ -167,6 +166,25 @@
   margin-bottom : 3%;
   margin-top    : 3%;
 }
+
+.tags
+{
+  margin-top : 10px;
+  display: flex;
+}
+
+.tags a
+{
+  text-decoration: none;
+}
+
+.tags .button
+{
+  border-radius: 20px;
+  padding: 10px;
+  margin-left : 4px;
+}
+
 
 /*.post-content p*/
 /*{*/
