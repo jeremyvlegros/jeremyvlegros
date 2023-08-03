@@ -1,9 +1,8 @@
-/*#date 2023-06-26 0534 1687743242578447331 GMT*/
-
 *
 {
-  font-family : "Helvetica Neue", sans-serif !important;
+  font-family : SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   margin      : 0; /* *sigh* default is not zero ... it always messes with alignement */
   padding     : 0; /* *sigh* */
-  font-size   : 1em;
+  font-size   : 1.02em;
+  line-height: 2;
 }
