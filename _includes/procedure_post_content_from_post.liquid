@@ -93,10 +93,19 @@
     <br>
     <div class="row tags">
         {%- for tag in post_tags_1691010490420939832 -%}
+            
             {%- if tag == "#post" -%}
-                <a class="col button" href={{ "/post/" | append : post_id_1691010490420939832 }} target="_blank"> {{ tag }} </a>
+
+                {%- assign _tag_url_1691010490420939832 = "/post/" | append : post_id_1691010490420939832 | relative_url -%}
+
+                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag }} </a>
+
             {%- elsif tag contains "#"-%}
-                <a class="col button" href={{ "/tag/" | append: tag | replace: "#", "" }} target="_blank"> {{ tag }} </a>
+                
+                {%- assign _tag_url_1691010490420939832 = "/tag/" | append: tag | replace: "#", "" | relative_url -%}
+
+                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag }} </a>
+
             {%- endif -%}
         {%- endfor -%}
     </div>
@@ -115,13 +124,13 @@
         <div class="post-content" itemprop="articleBody">
 
             {{ include.from_post.content }}
-            
+
             {{ post_date_of_creation_1691010490420939832 }}
 
             {{ post_date_of_modification_1691010490420939832 }}
-            
-            {{ post_tags_1691010490420939832 }}
 
+            {{ post_tags_1691010490420939832 }}
+            
         </div>
 
 </article>
@@ -133,3 +142,4 @@
 {%- assign post_title_1691010490420939832 = null -%}
 {%- assign post_tags_1691010490420939832 = null -%}
 {%- assign post_id_1691010490420939832 = null -%}
+{%- assign _tag_url_1691010490420939832 = null -%}
