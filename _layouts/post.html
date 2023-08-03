@@ -6,38 +6,6 @@ date_of_modification : null
 no_color_background  : null
 ---
 
-{%- include post.liquid -%}
+{%- include procedure_post_content_from_post.liquid from_post=page -%}
 
-
-<article class="post {{post_color_background}}" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <header class="post-header">
-
-        {{ post_title }}
-
-    </header>
-
-    <div class="post-content" itemprop="articleBody">
-
-        {{ content }}
-
-        <br>
-
-        {{ post_date_of_creation }}
-
-        <br>
-
-        {{ post_date_of_modification }}
-
-        <br>
-
-        {{ post_id }}
-    </div>
-
-</article>
-
-{%- assign post_title = null -%}
-{%- assign post_date_of_creation = null -%}
-{%- assign post_date_of_modification = null -%}
-{%- assign post_id = null -%}
 
