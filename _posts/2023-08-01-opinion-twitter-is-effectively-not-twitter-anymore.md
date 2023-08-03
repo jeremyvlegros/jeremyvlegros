@@ -1,9 +1,9 @@
 ---
-title                : "opinion > `Twitter` > this is effectively not `Twitter` anymore"
+title                : "opinion > `Twitter` is effectively not `Twitter` anymore"
 layout               : post
 category             : post
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914509 GMT"
-date_of_modification : "#date 2023-08-02 12:41 1690965713687686005 GMT"
+date_of_modification : "#date 2023-08-03 01:15 1691010902009131380 GMT"
 post_id              : 1690880245921914509
 permalink            : /post/1690880245921914509
 tags :
@@ -15,9 +15,8 @@ tags :
 ---
 
 I was still okay with `Twitter`, even when it required login, I still have ways to use it,
-but when it got rename `X`, it became scary, because :
-- of how it was done :
-    - inconsistant rebranding :
+but when they rename it `X`, it became scary, because :
+- of inconsistant rebranding :
         - someparts are kept as `Twitter` and some parts named `X`
         - the blue color is still there, whereas the logo is black and white
         - the website address is `Twitter` :
@@ -26,7 +25,7 @@ but when it got rename `X`, it became scary, because :
         - the handle `Twitter` was not replaced by `X`, I don't know if it still the case
     - for a company this big to do that quality of a rebranding, worries me enough to change my plans about it
 
-- what's with the `X corp` brand ? To me it :
+- of the `X corp` brand which, to me :
   - feels unorganic
   - feels like a villain company name in a movie :
     - had them use `Corp X` I wouldn't have felt this way, but still, it's a blogging (?) platform
