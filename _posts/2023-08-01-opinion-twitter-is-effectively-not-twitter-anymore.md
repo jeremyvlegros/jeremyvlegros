@@ -17,13 +17,13 @@ tags :
 I was still okay with `Twitter`, even when it required login, I still have ways to use it,
 but when they rename it `X`, it became scary, because :
 - of inconsistant rebranding :
-        - someparts are kept as `Twitter` and some parts named `X`
-        - the blue color is still there, whereas the logo is black and white
-        - the website address is `Twitter` :
-            - whereas the website is named `X`
-            - typing `www.x.com` redirects to `Twitter`, why didn't they do it in one go ?
-        - the handle `Twitter` was not replaced by `X`, I don't know if it still the case
-    - for a company this big to do that quality of a rebranding, worries me enough to change my plans about it
+  - someparts are kept as `Twitter` and some parts named `X`
+  - the blue color is still there, whereas the logo is black and white
+  - the website address is `Twitter` :
+      - whereas the website is named `X`
+        - typing `www.x.com` redirects to `Twitter`, why didn't they do it in one go ?
+      - the handle `Twitter` was not replaced by `X`, I don't know if it still the case
+  - for a company this big to do that quality of a rebranding, worries me enough to change my plans about it
 
 - of the `X corp` brand which, to me :
   - feels unorganic
