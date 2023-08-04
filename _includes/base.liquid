@@ -118,14 +118,14 @@
 
 {%- if site_name_1690569717129 -%}
 
-    {%- capture _page_canonical_url_1690569717129 -%}
+    {%- capture page_canonical_url_1690569717129 -%}
         {%- include as_canonical_the_page_url.liquid -%}
         {{ return }}
     {%- endcapture -%}
 
     {%- capture page_canonical_url_1690569717129 -%}
-        <link rel="canonical" href="{{ _page_canonical_url_1690569717129 }}"/>
-        <meta property="og:url" content="{{ _page_canonical_url_1690569717129 }}"/>
+        <link rel="canonical" href="{{ page_canonical_url_1690569717129 }}"/>
+        <meta property="og:url" content="{{ page_canonical_url_1690569717129 }}"/>
     {%- endcapture -%}
 
     {%- capture page_meta_site_name_1690569717129 -%}
@@ -179,7 +179,7 @@
         {{ page_meta_description_1690569717129 }}
         {{ page_meta_type_1690569717129 }}
         {{ page_meta_title_1690569717129 }}
-        {% comment %}{{ page_canonical_url_1690569717129 }}{% endcomment %}
+        {{ page_canonical_url_1690569717129 }}
         {{ page_meta_site_name_1690569717129 }}
         {{ page_meta_image_color_1690569717129 }}
         {{ page_url_bootstrap_1690569717129 }}
