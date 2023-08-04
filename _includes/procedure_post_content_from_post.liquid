@@ -95,20 +95,30 @@
 
     <div class="row tags">
 
-        {%- comment -%}  post id {%- endcomment -%}
-        {%- assign _tag_url_1691010490420939832 = "/post/" | append : post_id_1691010490420939832 | relative_url -%}
-        <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ "#"|append : post_id_1691010490420939832 }} </a>
+        {%- comment -%} skipping links for now {%- endcomment -%}
+        {%- if include.from_post.title == "links" -%}
 
-        {%- for tag in post_tags_1691010490420939832 -%}
+        {%- else -%}
 
-            {%- if tag contains "#"-%}
-                
-                {%- assign _tag_url_1691010490420939832 = "/tag/" | append: tag | replace: "#", "" | relative_url -%}
+            
+                {%- comment -%}  post id {%- endcomment -%}
+                {%- assign _tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
+                <a class="col button"
+                   href={{ _tag_url_1691010490420939832 }} target="_blank"> {{ "#" | append: post_id_1691010490420939832 }} </a>
 
-                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag | replace :" ","&nbsp;"}} </a>
+                    {%- for tag in post_tags_1691010490420939832 -%}
 
-            {%- endif -%}
-        {%- endfor -%}
+                        {%- if tag contains "#"-%}
+
+                            {%- assign _tag_url_1691010490420939832 = "/tag/" | append: tag | replace: "#", "" | relative_url -%}
+
+                            <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag | replace :" ","&nbsp;"}} </a>
+
+                        {%- endif -%}
+                    {%- endfor -%}
+
+        {%- endif -%}
+
     </div>
 {%- endcapture -%}
 
