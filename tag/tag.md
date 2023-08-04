@@ -1,38 +1,29 @@
-{{ content }}
-
-<br>
-
-<div class="row">
-
-  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="{{ '/tag/post' | relative_url }}"> timeline </a>
-
-  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="{{ '/links' | relative_url }}"> links </a>
-  
-
-</div>
-
-
+---
+title                : tag
+layout               : post
+permalink            : /tag
+#tags                 : "#tag"
+date_of_creation     : "#date 2023-08-04 05:04 1691111094630537940 GMT"
+---
 
 <div class="row">
-  <p> TAGS : </p>
-
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/about"> #about</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/avatar"> #avatar</a>
-  <a class="col button" style="text-decoration:none;background-color: #214CE5" href="/tag/css"> #css</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/css"> #css</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/curriculum"> #curriculum</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/highlighting"> #highlighting</a>
-  <a class="col button" style="text-decoration:none;background-color: #0D5FEB" href="/tag/intellij"> #intellij</a>
-  <a class="col button" style="text-decoration:none;background-color: #D21010" href="/tag/jekyll"> #jekyll</a>
-  <a class="col button" style="text-decoration:none;background-color: #3399CC" href="/tag/liquid"> #liquid</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/intellij"> #intellij</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/jekyll"> #jekyll</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/liquid"> #liquid</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/opinion"> #opinion</a>
-  <a class="col button" style="text-decoration:none;background-color: #7A86B8" href="/tag/php"> #php</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/php"> #php</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/post"> #post</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/security"> #security</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/status"> #status</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/syntax"> #syntax</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/tag"> #tag</a>
-  <a class="col button" style="text-decoration:none;background-color: var(--color_background_tumblr)" href="/tag/tumblr"> #tumblr</a>
-  <a class="col button" style="text-decoration:none;background-color: var(--color_background_twitter)" href="/tag/twitter"> #twitter</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/tumblr"> #tumblr</a>
+  <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/twitter"> #twitter</a>
   <a class="col button" style="text-decoration:none;background-color: rgba(0,0,0,45%)" href="/tag/website"> #website</a>
-
 </div>
+
