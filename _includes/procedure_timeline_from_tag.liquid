@@ -7,7 +7,7 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} page title {%- endcomment -%}
-{%- assign page_title = page.title -%}
+{%- assign page_title = "#" | append : page.title -%}
 
 {%- comment -%} page_date_of_modification {%- endcomment -%}
 {%- include as_modification_date_without_id_from_date.liquid from_date=page.date_of_modification -%}
@@ -20,11 +20,11 @@
 {%- assign _date_bottom_1690569561039 = posts_1690569561039[-1].date_of_creation -%}
 
 {%- comment -%}  HTML top and bottom arrows  {%- endcomment -%}
-{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid
-        from_date_top=_date_top_1690569561039
-        from_date_bottom=_date_bottom_1690569561039 -%}
-{%- assign html_top_and_bottom_arrows = return -%}
-{%- assign return = null -%}
+{%- comment -%} {%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid
+         from_date_top=_date_top_1690569561039
+         from_date_bottom=_date_bottom_1690569561039 -%}
+ {%- assign html_top_and_bottom_arrows = return -%}
+ {%- assign return = null -%} {%- endcomment -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%}HTML index post list  {%- endcomment -%}
@@ -44,7 +44,7 @@
 <div class="timeline container-fluid">
 
     {%- comment -%}printing HTML top and bottom arrows  {%- endcomment -%}
-    {{ html_top_and_bottom_arrows }}
+    {%- comment -%} {{ html_top_and_bottom_arrows }} {%- endcomment -%}
 
     {%- comment -%}printing content of the next thing  {%- endcomment -%}
     {{ content }}
@@ -105,6 +105,6 @@
 {%- assign html_post_index_list = null -%}
 {%- assign html_post_list = null -%}
 {%- assign date_of_modification_short = null -%}
-{%- assign html_top_and_bottom_arrows = null -%}
+{%- comment -%} {%- assign html_top_and_bottom_arrows = null -%} {%- endcomment -%}
 {%- assign _date_top_1690569561039 = null -%}
 {%- assign _date_bottom_1690569561039 = null -%}
