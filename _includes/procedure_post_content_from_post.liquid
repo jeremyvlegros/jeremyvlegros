@@ -91,20 +91,21 @@
 {%- comment -%} getting the lines for tags{%- endcomment -%}
 {%- capture post_tags_1691010490420939832 -%}
     <br>
+
+
     <div class="row tags">
+
+        {%- comment -%}  post id {%- endcomment -%}
+        {%- assign _tag_url_1691010490420939832 = "/post/" | append : post_id_1691010490420939832 | relative_url -%}
+        <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ "#"|append : post_id_1691010490420939832 }} </a>
+
         {%- for tag in post_tags_1691010490420939832 -%}
-            
-            {%- if tag == "#post" -%}
 
-                {%- assign _tag_url_1691010490420939832 = "/post/" | append : post_id_1691010490420939832 | relative_url -%}
-
-                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag }} </a>
-
-            {%- elsif tag contains "#"-%}
+            {%- if tag contains "#"-%}
                 
                 {%- assign _tag_url_1691010490420939832 = "/tag/" | append: tag | replace: "#", "" | relative_url -%}
 
-                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag }} </a>
+                <a class="col button" href={{ _tag_url_1691010490420939832  }} target="_blank"> {{ tag | replace :" ","&nbsp;"}} </a>
 
             {%- endif -%}
         {%- endfor -%}
@@ -125,14 +126,17 @@
 
             {{ include.from_post.content }}
 
-            {{ post_date_of_creation_1691010490420939832 }}
 
-            {{ post_date_of_modification_1691010490420939832 }}
-
-            {{ post_tags_1691010490420939832 }}
-            
         </div>
 
+        <div class="row footer">
+
+            <div class="col">
+            {{ post_date_of_creation_1691010490420939832 }}
+            {{ post_date_of_modification_1691010490420939832 }}
+            {{ post_tags_1691010490420939832 }}
+            </div>
+        </div>
 </article>
 
 {%- comment -%}  resetting {%- endcomment -%}
