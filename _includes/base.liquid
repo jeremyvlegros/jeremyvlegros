@@ -121,7 +121,7 @@
     {%- capture page_canonical_url_1690569717129 -%}
         {%- include as_canonical_the_page_url.liquid -%}
         <link rel="canonical" href="{{ return }}"/>
-        {% comment %}<meta property="og:url" content="{{ return }}"/>{% endcomment %}
+        <meta property="og:url" content="{{ return }}"/>
     {%- endcapture -%}
 
     {%- capture page_meta_site_name_1690569717129 -%}
@@ -150,27 +150,24 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-              crossorigin="anonymous">
+              crossorigin="anonymous"/>
     {%- endcapture -%}
 
 {% endif %}
 
 {%- capture page_url_css_1690569717129 -%}
-    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
 {%- endcapture -%}
 {%- comment -%}  {%- endcomment -%}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible"
-              content="IE=edge">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1">
-        <meta property="og:locale"
-              content="en_US"/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta name="twitter:creator" content="jeremyvlegros"/>
         {%- comment -%}  {%- endcomment -%}
-        <meta name="twitter:creator" content="jeremyvlegros">
         {{ page_meta_date_of_creation_1690569717129 }}
         {{ page_meta_description_1690569717129 }}
         {{ page_meta_type_1690569717129 }}
