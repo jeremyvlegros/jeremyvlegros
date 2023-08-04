@@ -120,8 +120,8 @@
 
     {%- capture page_canonical_url_1690569717129 -%}
         {%- include as_canonical_the_page_url.liquid -%}
-        {% comment %}<link rel="canonical" href="{{ return }}"/>{% endcomment %}
-        <meta property="og:url" content="{{ return }}"/>
+        <link rel="canonical" href="{{ return }}"/>
+        {% comment %}<meta property="og:url" content="{{ return }}"/>{% endcomment %}
     {%- endcapture -%}
 
     {%- capture page_meta_site_name_1690569717129 -%}
