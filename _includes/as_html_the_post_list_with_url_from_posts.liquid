@@ -1,10 +1,10 @@
 {%- comment -%} as_html_the_post_list_with_url_from_posts.liquid {%- endcomment -%}
 {%- assign _html_the_post_list_with_url_1690556572317772128 = null -%}
 
-{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+
 {%- if include.from_posts -%}
 
-    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
+
     {%- if include.from_posts != "" -%}
 
         {%- comment -%} main value {%- endcomment -%}
@@ -13,13 +13,18 @@
                 {% comment %} generating the post list {% endcomment %}
 
                 {%- for post in include.from_posts -%}
-                    <li>
-                        {%- comment -%} handling empty strings {%- endcomment -%}
+                    
+                    {%- comment -%} enforcing posts with post layout {%- endcomment -%}
+                    {%- if post.layout == "post"-%}
+                        <li>
+                            {%- comment -%} handling empty strings {%- endcomment -%}
 
-                        <a href="{{ post.url | relative_url }}"> {{ post.title }}</a>
+                            <a href="{{ post.url | relative_url }}"> {{ post.title }}</a>
+                            {% comment %}{% endcomment %}
+                        </li>
                         {% comment %}{% endcomment %}
-                    </li>
-                    {% comment %}{% endcomment %}
+                    {%- endif -%}
+
                 {%- endfor -%}
         </ul>
 

@@ -5,10 +5,8 @@
 {%- comment -%} main value {%- endcomment -%}
 {%- assign _html_the_post_list_1690556428999239446 = null -%}
 
-{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if include.from_posts -%}
 
-    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
     {%- if include.from_posts != "" -%}
 
         {%- comment -%} main value : post list {%- endcomment -%}
@@ -17,12 +15,14 @@
             {%- comment -%} generating the post list {%- endcomment -%}
             {%- for post in include.from_posts -%}
 
-                {%- include procedure_post_content_from_post.liquid from_post=post -%}
-                
+                {%- comment -%} enforcing posts with post layout {%- endcomment -%}
+                {%- if post.layout == "post"-%}
+                    {%- include procedure_post_content_from_post.liquid from_post=post -%}
+                {%- endif -%}
+
             {%- endfor -%}
 
         {%- endcapture -%}
-
     {%- endif -%}
 
 {%- endif -%}

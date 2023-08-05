@@ -4,10 +4,8 @@
 
 {%- assign _the_post_index_list_1690556288006533672 = null -%}
 
-{%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
 {%- if include.from_posts -%}
 
-    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
     {%- if include.from_posts != "" -%}
 
         {%- comment -%} generating the post list {%- endcomment -%}
@@ -15,33 +13,34 @@
 
             {%- for post in include.from_posts -%}
 
-                {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
-                {%- if post.date_of_creation -%}
-
-                    {%- comment -%} Liquid does not have a `is null` {%- endcomment -%}
-                    {%- if post.date_of_creation != "" -%}
-
-                        {%- comment -%} _color_background_1690556288006533672 {%- endcomment -%}
-                        {%- include as_color_background_from_date.liquid from_date=post.date_of_creation -%}
-                        {%- assign _color_background_1690556288006533672 = return -%}
-                        {%- assign return = null -%}
-                        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-
-                        {%- comment -%} _post_id_1690556288006533672 {%- endcomment -%}
-                        {%- include as_id_from_date.liquid from_date=post.date_of_creation -%}
-                        {%- assign _post_id_1690556288006533672 = return -%}
-                        {%- assign return = null -%}
-                        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+                {%- comment -%} enforcing posts with post layout {%- endcomment -%}
+                {%- if post.layout == "post"-%}
+                    
+                    {%- if post.date_of_creation -%}
                         
-                    <li>
-                        <a class="{{ _color_background_1690556288006533672 }}" href="#{{ _post_id_1690556288006533672 }}"> {{ post.title | escape }}</a>
-                    </li>
+                        {%- if post.date_of_creation != "" -%}
 
+                            {%- comment -%} _color_background_1690556288006533672 {%- endcomment -%}
+                            {%- include as_color_background_from_date.liquid from_date=post.date_of_creation -%}
+                            {%- assign _color_background_1690556288006533672 = return -%}
+                            {%- assign return = null -%}
+                            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+                            {%- comment -%} _post_id_1690556288006533672 {%- endcomment -%}
+                            {%- include as_id_from_date.liquid from_date=post.date_of_creation -%}
+                            {%- assign _post_id_1690556288006533672 = return -%}
+                            {%- assign return = null -%}
+                            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+                            <li>
+                            <a class="{{ _color_background_1690556288006533672 }}"
+                               href="#{{ _post_id_1690556288006533672 }}"> {{ post.title | escape }}</a>
+                        </li>
+
+                        {%- endif -%}
                     {%- endif -%}
-
                 {%- endif -%}
-                
             {%- endfor -%}
 
         {%- endcapture -%}
