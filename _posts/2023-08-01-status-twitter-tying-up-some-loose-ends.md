@@ -3,12 +3,11 @@ title                : "status > `Twitter` > tying up some loose ends"
 layout               : post
 category             : post
 date_of_creation     : "#date 2023-08-01 13:00 1690880438954979985 GMT"
-date_of_modification : "#date 2023-08-03 02:02 1691013722023673621 GMT"
+date_of_modification : "#date 2023-08-05 13:11 1691226716114082423 GMT"
 post_id              : 1690880438954979985
 permalink            : /post/1690880438954979985
 tags                 :
 - "#post"
-- "#opinion"
 - "#twitter"
 - "#security"
 ---
