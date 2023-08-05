@@ -1,6 +1,6 @@
 ---
 title                : sandbox
-layout               : post
+layout               : base
 print_array          : print_array_content.html
 ---
 
