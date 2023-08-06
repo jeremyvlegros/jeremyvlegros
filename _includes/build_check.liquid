@@ -148,7 +148,7 @@
     
 </div>
 
-<div> {%- comment -%} <h3>`as_id_from_date.liquid`</h3> {%- endcomment -%}
+<div> {% comment  %} <h3>`as_id_from_date.liquid`</h3> {%- endcomment -%}
 
     <pre>
     {%- assign input = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
@@ -566,56 +566,10 @@
 
 </div>
 
-<div>
-    <h3>`as_html_the_post_index_list_from_posts.liquid`</h3>
 
-<pre>
-{% include as_html_the_post_index_list_from_posts.liquid from_posts=site.posts %}
-    {{ return }}
-</pre></div>
 
 <div>
-    
-    <h3>`as_html_top_and_bottom_arrows_from_date_top_and_date_bottom`</h3>
-
-    <pre>
-
-    {%- assign _posts = site.posts -%}
-        {%- assign _date_top = _posts[0].date_of_creation -%}
-        {%- assign _date_bottom = _posts[-1].date_of_creation -%}
-
-        {% comment %}{% endcomment %}
-        {%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid from_date_top=_date_top from_date_bottom=_date_bottom
-        -%}
-        {{ return }}
-    </pre>
-
-</div>
-
-<div>
-    <h3>`as_html_the_post_list_with_url_from_posts.liquid`</h3>
-
-    <pre>
-    {% include as_html_the_post_list_with_url_from_posts.liquid from_posts=site.posts %}
-        {{ return }}
-    </pre>
-
-</div>
-
-<div>
-    <h3>`as_html_the_post_list_from_posts.liquid`</h3>
-
-Uncomment to see, because it's huge.
-
-    {%- comment -%} <pre>
-     {% include as_html_the_post_list_from_posts.liquid from_posts=site.posts %}
-         {{ return }}
-     </pre>
-    {%- endcomment -%}
-</div>
-
-<div>
-    {%- comment -%} <h3>`as_boolean_the_date_is_custom_from_date.liquid`</h3> {%- endcomment -%}
+    {% comment  %} <h3>`as_boolean_the_date_is_custom_from_date.liquid`</h3> {%- endcomment -%}
 
     {%- assign input = "#date 2023-07-25 23:11 34537745322324 GMT" -%}
     {%- assign expected = true -%}
@@ -626,7 +580,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > #date 2023-07-25 23:11 34537745322324 GMT " %}
 
     {%- assign expected = null -%}
@@ -644,7 +598,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > #modified 2023-07-25 23:11 34537745322324 GMT " %}
 
     {%- assign expected = null -%}
@@ -662,7 +616,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > #deleted 2023-07-25 23:11 34537745322324 GMT " %}
 
     {%- assign expected = null -%}
@@ -683,7 +637,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > not_a_date" %}
 
     {%- assign expected = null -%}
@@ -701,7 +655,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > date lacking GMT" %}
 
     {%- assign expected = null -%}
@@ -719,7 +673,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > date lacking ID" %}
 
     {%- assign expected = null -%}
@@ -739,7 +693,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > empty string" %}
 
     {%- assign expected = null -%}
@@ -760,7 +714,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_boolean_the_date_is_custom_from_date > null" %}
 
     {%- assign expected = null -%}
@@ -784,7 +738,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > normal" %}
 
     {%- assign expected = null -%}
@@ -802,7 +756,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > no GMT" %}
 
     {%- assign expected = null -%}
@@ -820,7 +774,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > modified" %}
 
     {%- assign expected = null -%}
@@ -838,7 +792,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > deleted" %}
 
     {%- assign expected = null -%}
@@ -856,7 +810,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > no ID" %}
 
     {%- assign expected = null -%}
@@ -879,7 +833,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > null" %}
 
     {%- assign expected = null -%}
@@ -899,7 +853,7 @@ Uncomment to see, because it's huge.
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-    {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
+    <br> {% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
     {% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_without_id_from_date.liquid > empty string" %}
 
     {%- assign expected = null -%}
@@ -961,82 +915,10 @@ Uncomment to see, because it's huge.
 
 </div>
 
-<div>
-    
-    <h3>`as_posts_from_tag.liquid`</h3>
 
-    STATUS
-    <pre>
-    {% comment %}{% endcomment %}
-
-        {%- comment -%} posts {%- endcomment -%}
-        {%- include as_posts_from_tag.liquid from_tag="#status" -%}
-        {%- assign posts = return -%}
-        {%- assign return = null -%}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-        {%- for post in posts -%}
-
-            {{ post.title }}
-            <br>
-        {%- endfor -%}
-    </pre>
-
-    ABOUT
-    <pre>
-    {% comment %}{% endcomment %}
-
-        {%- comment -%} posts {%- endcomment -%}
-        {%- include as_posts_from_tag.liquid from_tag="#about" -%}
-        {%- assign posts = return -%}
-        {%- assign return = null -%}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-        {%- for post in posts -%}
-
-            {{ post.title }}
-
-        {%- endfor -%}
-    </pre>
-
-    EMPTY TAG
-    <pre>
-    {% comment %}{% endcomment %}
-
-        {%- comment -%} posts {%- endcomment -%}
-        {%- include as_posts_from_tag.liquid from_tag="" -%}
-        {%- assign posts = return -%}
-        {%- assign return = null -%}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-        {%- for post in posts -%}
-
-            {{ post.title }}
-
-        {%- endfor -%}
-    </pre>
-
-    TAG NOT PRESENT
-    <pre>
-    {% comment %}{% endcomment %}
-
-        {%- comment -%} posts {%- endcomment -%}
-        {%- include as_posts_from_tag.liquid from_tag="fdhfhzeuihfzeuh" -%}
-        {%- assign posts = return -%}
-        {%- assign return = null -%}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-        {%- for post in posts -%}
-
-            {{ post.title }}
-
-        {%- endfor -%}
-    </pre>
-
-</div>
 
 <div> 
-    {%- comment -%} <h3>`as_array_from_string_and_separator.liquid`</h3> {%- endcomment -%}
+    {% comment  %} <h3>`as_array_from_string_and_separator.liquid`</h3> {%- endcomment -%}
 
     <pre>
         {%- assign expected = "1,2,34" | split: "," -%}
@@ -1092,7 +974,7 @@ Uncomment to see, because it's huge.
 
 </div>
 
-<div>{%- comment -%} <h3> test `procedure_check_type_array_from.liquid`</h3> {%- endcomment -%}
+<div>{% comment  %} <h3> test `procedure_check_type_array_from.liquid`</h3> {%- endcomment -%}
 
     {% comment %}if it crashes it works, uncomment to test.{% endcomment %}
 
@@ -1112,7 +994,7 @@ Uncomment to see, because it's huge.
 
 </div>
 
-<div> {%- comment -%} <h3>test `as_array_from_string`</h3> {%- endcomment -%}
+<div> {% comment  %} <h3>test `as_array_from_string`</h3> {%- endcomment -%}
 
     <pre>
     {% comment %} {% endcomment %}
