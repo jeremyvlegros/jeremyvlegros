@@ -1,0 +1,23 @@
+{% comment %}procedure_website_tags.liquid{% endcomment %}
+
+{%- comment -%} tags {%- endcomment -%}
+{%- include as_array_the_website_tags.liquid -%}
+{%- assign tags = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+<div class="row">
+  {% for tag in tags %}
+
+    {%- comment -%} tag {%- endcomment -%}
+    {%- include as_tag_from_word.liquid from_word=tag-%}
+    {%- assign _tag = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+    {{ _tag }}
+  {% endfor %}
+</div>
+
+{%- assign tags = null -%}
+
+{% comment %}{% endcomment %}

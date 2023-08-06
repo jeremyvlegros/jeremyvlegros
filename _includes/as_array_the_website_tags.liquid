@@ -1,0 +1,15 @@
+
+{%- assign array_website_tags = site.ARRAY_EMPTY -%}
+
+
+{% for tag in site.tags %}
+
+  {%- assign array_website_tags = array_website_tags | push : tag[0]-%}
+
+{% endfor %}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = array_website_tags -%}
+
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign array_website_tags = null -%}
