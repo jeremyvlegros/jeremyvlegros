@@ -8,7 +8,7 @@ permalink            : links
 
 #commented until the website is okay
 #tags                 : 
-#- "#post"
+#- "#posts"
 #- "#about"
 #- "#me"
 #- "#links"
