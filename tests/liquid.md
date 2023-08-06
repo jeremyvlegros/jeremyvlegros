@@ -1,6 +1,6 @@
 ---
 title  : "Learning `Jekyll` and `Liquid`"                                         
-layout : base
+layout : post
 test_list :
 - "a"
 - "b"
