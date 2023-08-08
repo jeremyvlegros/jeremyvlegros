@@ -1,10 +1,10 @@
-{%- assign _array_from_string_and_separator_1690570208534 = null -%}
+{%- assign array_from_string_and_separator_1690570208534 = null -%}
 
-{%- assign _array_from_string_and_separator_1690570208534 = include.from_string | split : include.from_separator -%}
+{%- assign array_from_string_and_separator_1690570208534 = include.from_string | split : include.from_separator -%}
 
 {%- comment -%} checking array {%- endcomment -%}
-{%- include procedure_check_type_array_from.liquid from=_array_from_string_and_separator_1690570208534-%}
+{%- include procedure_check_type_array_from.liquid from=array_from_string_and_separator_1690570208534-%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _array_from_string_and_separator_1690570208534 -%}
-{%- assign _array_from_string_and_separator_1690570208534 = null -%}
+{%- assign return = array_from_string_and_separator_1690570208534 -%}
+{%- assign array_from_string_and_separator_1690570208534 = null -%}

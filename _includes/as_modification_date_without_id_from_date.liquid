@@ -1,7 +1,7 @@
 {%- comment -%} as_modification_date_without_id_from_date.liquid {%- endcomment -%}
 
 {%- comment -%} main value {%- endcomment -%}
-{%- assign _modification_date_1690569345905 = null -%}
+{%- assign modification_date_1690569345905 = null -%}
 
 
 {%- if include.from_date -%}
@@ -15,7 +15,7 @@
         
         {%- if return contains "#date" -%}
             {% comment %}#date 2023-07-25 23:11 GMT {% endcomment %}
-            {%- assign _modification_date_1690569345905 = return | replace :"#date", "#modified"-%}
+            {%- assign modification_date_1690569345905 = return | replace :"#date", "#modified"-%}
 
         {%- endif -%}
 
@@ -26,8 +26,8 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _modification_date_1690569345905 -%}
+{%- assign return = modification_date_1690569345905 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _modification_date_1690569345905 = null -%}
+{%- assign modification_date_1690569345905 = null -%}
 {%- comment -%} {%- endcomment -%}

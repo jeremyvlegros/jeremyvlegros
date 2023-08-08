@@ -1,5 +1,5 @@
 {%- comment -%} as_date_without_id_from_date.liquid {%- endcomment -%}
-{%- assign _date_without_id_1690822830587923761 =  null -%}
+{%- assign date_without_id_1690822830587923761 =  null -%}
 
 
 {%- if include.from_date -%}
@@ -20,11 +20,11 @@
         {%- if return == true -%}
 
 
-            {%- comment -%} _date_without_id_1690822830587923761_as_array {%- endcomment -%}
+            {%- comment -%} date_without_id_1690822830587923761_as_array {%- endcomment -%}
             {%- include as_array_from_string.liquid from_string=include.from_date -%}
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-            {%- assign _date_without_id_1690822830587923761 = "" | append: return[0] | append: " " |append: return[1] | append: " " |append: return[2] | append : " " | append: return[-1] -%}
+            {%- assign date_without_id_1690822830587923761 = "" | append: return[0] | append: " " |append: return[1] | append: " " |append: return[2] | append : " " | append: return[-1] -%}
 
 
         {%- assign return = null -%}
@@ -34,4 +34,4 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _date_without_id_1690822830587923761 -%}
+{%- assign return = date_without_id_1690822830587923761 -%}

@@ -1,27 +1,27 @@
 {%- comment -%} as_boolean_the_date_is_custom_from_date.liquid {%- endcomment -%}
 
-{%- assign _the_date_is_custom_1690822023129951239 = false -%}
+{%- assign the_date_is_custom_1690822023129951239 = false -%}
 
-{%- assign _date_1690822023129951239 = include.from_date -%}
-{%- assign _date_1690822023129951239 = _date_1690822023129951239 | split : " " -%}
+{%- assign date_1690822023129951239 = include.from_date -%}
+{%- assign date_1690822023129951239 = date_1690822023129951239 | split : " " -%}
 
-{%- if _date_1690822023129951239[0] == "#date" or _date_1690822023129951239[0] == "#modified" or _date_1690822023129951239[0] == "#deleted" -%}
+{%- if date_1690822023129951239[0] == "#date" or date_1690822023129951239[0] == "#modified" or date_1690822023129951239[0] == "#deleted" -%}
 
     {%- comment -%} [#date,YYYY-MM-DD, HH:MM, ID, GMT]
     {%- endcomment -%}
-    {%- assign _length_1690822023129951239 = _date_1690822023129951239 | size -%}
+    {%- assign length_1690822023129951239 = date_1690822023129951239 | size -%}
 
-    {%- if _length_1690822023129951239 == 5 -%}
+    {%- if length_1690822023129951239 == 5 -%}
 
-        {%- assign _the_date_is_custom_1690822023129951239 = true -%}
+        {%- assign the_date_is_custom_1690822023129951239 = true -%}
 
     {%- endif -%}
     
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _the_date_is_custom_1690822023129951239 -%}
+{%- assign return = the_date_is_custom_1690822023129951239 -%}
 
-{%- assign _the_date_is_custom_1690822023129951239 = null -%}
-{%- assign _length_1690822023129951239 = null -%}
-{%- assign _date_1690822023129951239 = null -%}
+{%- assign the_date_is_custom_1690822023129951239 = null -%}
+{%- assign length_1690822023129951239 = null -%}
+{%- assign date_1690822023129951239 = null -%}

@@ -3,7 +3,7 @@
 {%- comment -%} initialization {%- endcomment -%}
 
 {%- comment -%} main value {%- endcomment -%}
-{%- assign _day_1690556229516486038 = null -%}
+{%- assign day_1690556229516486038 = null -%}
 
 
 {%- if include.from_date -%}
@@ -20,23 +20,23 @@
             everything as array
                 => [#date,2023-04-01,10:30,168784723873385,GMT]
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = include.from_date  | split: " " -%}
+            {%- assign day_1690556229516486038 = include.from_date  | split: " " -%}
 
 
             {%- comment -%}  get year month day
                 => 2023-04-01
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038[1] -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038[1] -%}
 
             {%- comment -%} split date in year month day
                 => [2023,04,01]
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038 | split: "-" -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
 
             {%- comment -%} Main value : day
                 => 01
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038[2] -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
 
         {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
 
@@ -45,22 +45,22 @@
             {%- comment -%}  splitting the date by `T` to array
             => [2023-04-01,10:30:00+00:00]
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = include.from_date  | split: "T" -%}
+            {%- assign day_1690556229516486038 = include.from_date  | split: "T" -%}
 
             {%- comment -%}  getting the year-month-day
             => "2023-04-01"
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038[0] -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038[0] -%}
 
             {%- comment -%}  splitting in year,month,day
             => [2023,04,01]
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038 | split: "-" -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
 
             {%- comment -%} Main value : day
             => 01
             {%- endcomment -%}
-            {%- assign _day_1690556229516486038 = _day_1690556229516486038[2] -%}
+            {%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
 
         {%- endif -%}
 
@@ -69,8 +69,8 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _day_1690556229516486038 -%}
+{%- assign return = day_1690556229516486038 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _day_1690556229516486038 = null -%}
+{%- assign day_1690556229516486038 = null -%}
 {%- comment -%}{%- endcomment -%}

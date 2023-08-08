@@ -2,7 +2,7 @@
 
 {%- comment -%} initialization {%- endcomment -%}
 
-{%- assign _the_canonical_url_1690570308629 = null -%}
+{%- assign the_canonical_url_1690570308629 = null -%}
 
 
 {%- if site.name and site.url and include.from_url -%}
@@ -10,15 +10,15 @@
 
     {%- if site.name != "" and site.url != "" and include.from_url != "" -%}
 
-        {%- assign _the_canonical_url_1690570308629 = site.url | append: "/" | append: site.name | append: include.from_url -%}
+        {%- assign the_canonical_url_1690570308629 = site.url | append: "/" | append: site.name | append: include.from_url -%}
 
     {%- endif -%}
 
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _the_canonical_url_1690570308629 -%}
+{%- assign return = the_canonical_url_1690570308629 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _the_canonical_url_1690570308629 = null -%}
+{%- assign the_canonical_url_1690570308629 = null -%}
 {%- comment -%} {%- endcomment -%}

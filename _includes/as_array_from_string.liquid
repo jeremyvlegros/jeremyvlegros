@@ -1,23 +1,23 @@
 {%- comment -%} will try ',' then " " then "" {%- endcomment -%}
  
-{%- assign _array_from_string_1690570157462 = site.ARRAY_EMPTY -%}
+{%- assign array_from_string_1690570157462 = site.ARRAY_EMPTY -%}
 
 {%- if include.from_string contains "," -%}
 
-    {%- assign _array_from_string_1690570157462 = include.from_string | split: "," -%}
+    {%- assign array_from_string_1690570157462 = include.from_string | split: "," -%}
 
 {%- elsif include.from_string contains " " -%}
 
-    {%- assign _array_from_string_1690570157462 = include.from_string | split: " " -%}
+    {%- assign array_from_string_1690570157462 = include.from_string | split: " " -%}
 
 {%- else -%}
 
-    {%- assign _array_from_string_1690570157462 = include.from_string | split: "" -%}
+    {%- assign array_from_string_1690570157462 = include.from_string | split: "" -%}
 
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _array_from_string_1690570157462 -%}
+{%- assign return = array_from_string_1690570157462 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _array_from_string_1690570157462 = null -%}
+{%- assign array_from_string_1690570157462 = null -%}

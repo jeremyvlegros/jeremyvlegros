@@ -1,6 +1,6 @@
-{%- assign _test_array = "1,2" | split : "," -%}
+{%- assign _test_array_1691511589873233451 = "1,2" | split : "," -%}
 
 {%- comment -%} will crash if is not an array {%- endcomment -%}
-{%- assign _test_array_1 = _test_array | concat : include.from -%}
-{%- assign _test_array_2 = include.from | concat : _test_array -%}
-{%- comment -%} {%- assign _test_array = site.ARRAY_EMPTY | concat : include.from -%} {%- endcomment -%}
+{%- assign test_array_1 = _test_array_1691511589873233451 | concat : include.from -%}
+{%- assign test_array_2 = include.from | concat : _test_array_1691511589873233451 -%}
+{%- comment -%} {%- assign _test_array_1691511589873233451 = site.ARRAY_EMPTY | concat : include.from -%} {%- endcomment -%}

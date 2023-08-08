@@ -1,5 +1,5 @@
 {%- comment -%} as_html_the_post_list_with_url_from_posts.liquid {%- endcomment -%}
-{%- assign _html_the_post_list_with_url_1690556572317772128 = null -%}
+{%- assign html_the_post_list_with_url_1690556572317772128 = null -%}
 
 
 {%- if include.from_posts -%}
@@ -8,7 +8,7 @@
     {%- if include.from_posts != "" -%}
 
         {%- comment -%} main value {%- endcomment -%}
-        {%- capture _html_the_post_list_with_url_1690556572317772128 %}
+        {%- capture html_the_post_list_with_url_1690556572317772128 %}
             <ul>
                 {% comment %} generating the post list {% endcomment %}
 
@@ -36,8 +36,8 @@
 
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _html_the_post_list_with_url_1690556572317772128 -%}
+{%- assign return = html_the_post_list_with_url_1690556572317772128 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _html_the_post_list_with_url_1690556572317772128 = null -%}
+{%- assign html_the_post_list_with_url_1690556572317772128 = null -%}
 

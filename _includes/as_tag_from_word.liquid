@@ -1,23 +1,23 @@
 {%- comment -%} as_tag_from_word.liquid {%- endcomment -%}
 
 {%- include as_string_word_with_inseparable_spaces_from_word.liquid from_word=include.from_word -%}
-{%- assign _tag_1691339278938925411 = return -%}
+{%- assign tag_1691339278938925411 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%}  adding `#` if needed {%- endcomment -%}
-{%- if _tag_1691339278938925411 != "" -%}
+{%- if tag_1691339278938925411 != "" -%}
 
-    {%- if _tag_1691339278938925411 contains "#" -%}
+    {%- if tag_1691339278938925411 contains "#" -%}
         {%- comment -%} do nothing {%- endcomment -%}
     {%- else -%}
-        {%- assign _tag_1691339278938925411 = "#" | append: _tag_1691339278938925411 -%}
+        {%- assign tag_1691339278938925411 = "#" | append: tag_1691339278938925411 -%}
     {%- endif -%}
 
 {%- endif -%}
 
 {%- capture return -%}
     <a class="col button"
-       href=" {{ '/tag/' | append: include.from_word | replace: "#", "" | relative_url }} "> {{ _tag_1691339278938925411 }}
+       href=" {{ '/tag/' | append: include.from_word | replace: "#", "" | relative_url }} "> {{ tag_1691339278938925411 }}
     </a>
 {%- endcapture -%}

@@ -1,10 +1,10 @@
 {%- comment -%} as_date_utc_from_custom_date.liquid{%- endcomment -%}
 
 {%- comment -%} initialization {%- endcomment -%}
-{%- assign _date_utc_1690556102710521926 = null -%}
+{%- assign date_utc_1690556102710521926 = null -%}
 
 {%- comment -%} not used each time but allows to keep track of variables {%- endcomment -%}
-{%- assign _time_1690556102710521926 = null -%}
+{%- assign time_1690556102710521926 = null -%}
 
 
 {%- if include.from_custom_date -%}
@@ -17,53 +17,53 @@
             input  : "#date 2023-06-28 05:16 1687914994970097614 GMT"
             output : "2023-06-28 05:16 1687914994970097614"
         {%-endcomment-%}
-        {%- assign _date_utc_1690556102710521926 = include.from_custom_date | replace: "#date ", "" | replace: " GMT", "" -%}
+        {%- assign date_utc_1690556102710521926 = include.from_custom_date | replace: "#date ", "" | replace: " GMT", "" -%}
 
         {%-comment-%}
         date as array
              input  : "2023-06-28 05:16 1687914994970097614"
              output : ["2023-06-28", "05:16", "1687914994970097614"]
         {%-endcomment-%}
-        {%- assign _date_utc_1690556102710521926 = _date_utc_1690556102710521926 | split: " " -%}
+        {%- assign date_utc_1690556102710521926 = date_utc_1690556102710521926 | split: " " -%}
 
         {%-comment-%}
         time
              input  : ["2023-06-28", "05:16", "1687914994970097614"]
              output :  05:16
         {%-endcomment-%}
-        {%- assign _time_1690556102710521926 = _date_utc_1690556102710521926[1] -%}
+        {%- assign time_1690556102710521926 = date_utc_1690556102710521926[1] -%}
 
         {%-comment-%}
         time UTC
               input  :  "05:16"
               output :  "T05:16:00+00:00"
         {%-endcomment-%}
-        {%- assign _time_1690556102710521926 = "T" | append: _time_1690556102710521926 | append: ":00+00:00" -%}
+        {%- assign time_1690556102710521926 = "T" | append: time_1690556102710521926 | append: ":00+00:00" -%}
 
         {%-comment-%}
         date as string
               input  :  ["2023-06-28", "05:16", "1687914994970097614"]
               output :  "2023-06-28"
         {%-endcomment-%}
-        {%- assign _date_utc_1690556102710521926 = _date_utc_1690556102710521926[0] -%}
+        {%- assign date_utc_1690556102710521926 = date_utc_1690556102710521926[0] -%}
         {%-comment-%}
         Main value
-               input  : "2023-06-28", _time_1690556102710521926
+               input  : "2023-06-28", time_1690556102710521926
                output : "2023-06-28T05:16:00+00:00"
         {%-endcomment-%}
 
-        {%- assign _date_utc_1690556102710521926 = _date_utc_1690556102710521926 | append: _time_1690556102710521926 -%}
+        {%- assign date_utc_1690556102710521926 = date_utc_1690556102710521926 | append: time_1690556102710521926 -%}
         {%- comment -%} stripping white spaces and new lines {%- endcomment -%}
-        {%- assign _date_utc_1690556102710521926 = _date_utc_1690556102710521926 | strip | strip_newlines -%}
+        {%- assign date_utc_1690556102710521926 = date_utc_1690556102710521926 | strip | strip_newlines -%}
 
     {%- endif -%}
 
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _date_utc_1690556102710521926 -%}
+{%- assign return = date_utc_1690556102710521926 -%}
 
 {%- comment -%} resetting the variables {%- endcomment -%}
-{%- assign _time_1690556102710521926 = null -%}
-{%- assign _date_utc_1690556102710521926 = null -%}
+{%- assign time_1690556102710521926 = null -%}
+{%- assign date_utc_1690556102710521926 = null -%}
 {%- comment -%}{%- endcomment -%}
