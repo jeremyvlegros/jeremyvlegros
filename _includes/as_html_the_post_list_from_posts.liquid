@@ -1,23 +1,40 @@
 {%- comment -%} as_html_the_post_list_from_posts.liquid {%- endcomment -%}
 
-{%- comment -%} Initialization {%- endcomment -%}
-
 {%- comment -%} main value {%- endcomment -%}
-{%- assign _html_the_post_list_1690556428999239446 = null -%}
+{%- assign html_the_post_list_1690556428999239446 = null -%}
 
 {%- if include.from_posts -%}
 
-    {%- if include.from_posts != "" -%}
+    {%- if include.from_posts != "" -%}                
+
+        {%- assign first_post_id_date_1690556428999239446 = include.from_posts[0].date_of_creation-%}
+        {%- comment -%} first_post_id_1690556428999239446 {%- endcomment -%}
+        {%- include as_id_from_date.liquid from_date=first_post_id_date_1690556428999239446-%}
+        {%- assign first_post_id_1690556428999239446 = return -%}
+        {%- assign return = null -%}
+        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+        {%- assign last_post_id_date_1690556428999239446 = include.from_posts[-1].date_of_creation-%}
+        {%- comment -%} first_post_id_1690556428999239446 {%- endcomment -%}
+        {%- include as_id_from_date.liquid from_date=last_post_id_date_1690556428999239446-%}
+        {%- assign last_post_id_1690556428999239446 = return -%}
+        {%- assign return = null -%}
+        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+        {%- if first_post_id_1690556428999239446 == last_post_id_1690556428999239446 -%}
+            {%- assign first_post_id_1690556428999239446 = null -%}
+            {%- assign last_post_id_1690556428999239446 = null -%}
+        {%- endif -%}
 
         {%- comment -%} main value : post list {%- endcomment -%}
-        {%- capture _html_the_post_list_1690556428999239446 %}
+        {%- capture html_the_post_list_1690556428999239446 %}
 
             {%- comment -%} generating the post list {%- endcomment -%}
             {%- for post in include.from_posts -%}
 
                 {%- comment -%} enforcing posts with post layout {%- endcomment -%}
                 {%- if post.layout == "post"-%}
-                    {%- include procedure_post_content_from_post.liquid from_post=post -%}
+                    {%- include procedure_post_content_from_post.liquid from_post=post from_first_post_id=first_post_id_1690556428999239446 from_last_post_id=last_post_id_1690556428999239446-%}
                 {%- endif -%}
 
             {%- endfor -%}
@@ -28,9 +45,13 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = _html_the_post_list_1690556428999239446 -%}
+{%- assign return = html_the_post_list_1690556428999239446 -%}
 
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign _html_the_post_list_1690556428999239446 = null -%}
-{%- assign _modification_date_1690556428999239446 = null -%}
-{%- assign _color_background_1690556428999239446 = null -%}
+{%- assign html_the_post_list_1690556428999239446 = null -%}
+{%- assign modification_date_1690556428999239446 = null -%}
+{%- assign color_background_1690556428999239446 = null -%}
+{%- assign first_post_id_date_1690556428999239446 = null-%}
+{%- assign first_post_id_1690556428999239446 = null-%}
+{%- assign last_post_id_date_1690556428999239446 = null-%}
+{%- assign last_post_id_1690556428999239446 = null-%}
