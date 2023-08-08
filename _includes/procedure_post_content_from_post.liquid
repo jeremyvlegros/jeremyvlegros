@@ -1,21 +1,33 @@
-{%- assign post_content = null -%}
+{%- assign post_content_1691010490420939832 = null -%}
 {%- assign post_no_color_background_1691010490420939832 = include.from_post.no_color_background -%}
 {%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
 {%- assign post_date_of_modification_1691010490420939832 = include.from_post.date_of_modification -%}
 {%- assign post_title_1691010490420939832 = include.from_post.title -%}
 {%- assign post_tags_1691010490420939832 = include.from_post.tags -%}
 {%- assign post_id_1691010490420939832 = null -%}
+{%- assign first_post_id_1691010490420939832 = include.from_first_post_id-%}
+{%- assign last_post_id_1691010490420939832 = include.from_last_post_id-%}
+
+{%- comment -%} dealing with empty string : first_post_id_1691010490420939832  {%- endcomment -%}
+{%- if first_post_id_1691010490420939832 == "" -%}
+    {%- assign first_post_id_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} dealing with empty string : first_post_id_1691010490420939832  {%- endcomment -%}
+{%- if last_post_id_1691010490420939832 == "" -%}
+    {%- assign last_post_id_1691010490420939832 = null -%}
+{%- endif -%}
 
 
 {%- if include.from_post.layout == "post" -%}
 
     {%- if include.from_post.category == "post" -%}
 
-        {%- assign post_content = include.from_post.content -%}
+        {%- assign post_content_1691010490420939832 = include.from_post.content -%}
 
     {%- else -%}
 
-        {%- assign post_content = content -%}
+        {%- assign post_content_1691010490420939832 = content -%}
 
     {%- endif -%}
 
@@ -119,12 +131,47 @@
             {%- comment -%}  "post id" doesn't show in single posts {%- endcomment -%}
             {%- if page.category != "post" -%}
 
-                {%- assign _tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-                <a class="col button"
-                   href={{ _tag_url_1691010490420939832 }}> {{ "#" | append: post_id_1691010490420939832 }}
+                {%- capture bottom_1691010490420939832 -%}
+                    {%- assign tag_url_1691010490420939832 = page.url | append : "#" | append: last_post_id_1691010490420939832 | relative_url -%}
+                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> bottom</a>
+                {%- endcapture -%}
+
+                {%- capture top_1691010490420939832 -%}
+                    {%- assign tag_url_1691010490420939832 = page.url | append : "#" | append: first_post_id_1691010490420939832 | relative_url -%}
+                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> top</a>
+                {%- endcapture -%}
+
+
+                {%- capture index_1691010490420939832 -%}
+                {% comment %} index {% endcomment %}
+                <a class="col button" href="/"> #index </a>
+                {%- endcapture -%}
+                                
+                {%- if first_post_id_1691010490420939832 and post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
+                    {{ bottom_1691010490420939832 }}
+                    {{ index_1691010490420939832 }}
+                {%- elsif last_post_id_1691010490420939832 and post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
+                    {{ top_1691010490420939832 }}
+                    {{ index_1691010490420939832 }}
+                {%- else -%}
+
+                    {%- if last_post_id_1691010490420939832 -%}
+                        {{ bottom_1691010490420939832 }}
+                    {%- endif -%}
+
+                    {%- if first_post_id_1691010490420939832 -%}
+                        {{ top_1691010490420939832 }}
+                    {%- endif -%}
+
+                    {{ index_1691010490420939832 }}
+                {%- endif -%}
+
+                {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
+                <a class="col button " href={{ tag_url_1691010490420939832 }}> {{ "#" | append: post_id_1691010490420939832 }}
                 </a>
 
             {%- endif -%}
+
 
 
             {%- for tag in post_tags_1691010490420939832 -%}
@@ -165,9 +212,9 @@
 
                     {%- if tag == "#posts"-%}
 
-                        {%- assign _tag_url_1691010490420939832 = "/tag/posts#" | append: post_id_1691010490420939832 | relative_url -%}
+                        {%- assign tag_url_1691010490420939832 = "/tag/posts#" | append: post_id_1691010490420939832 | relative_url -%}
                         <a class="col button"
-                           href={{ _tag_url_1691010490420939832 }}> {{ "#posts"}}
+                           href={{ tag_url_1691010490420939832 }}> {{ "#posts"}}
                         </a>
 
                         {%- continue -%}
@@ -203,7 +250,7 @@
 
         <div class="post-content" itemprop="articleBody">
 
-            {{ post_content }}
+            {{ post_content_1691010490420939832 }}
 
         </div>
 
@@ -219,10 +266,16 @@
 
 
 {%- comment -%}  resetting {%- endcomment -%}
+{%- assign post_content_1691010490420939832 = null -%}
 {%- assign post_no_color_background_1691010490420939832 = null -%}
 {%- assign post_date_of_creation_1691010490420939832 = null -%}
 {%- assign post_date_of_modification_1691010490420939832 = null -%}
 {%- assign post_title_1691010490420939832 = null -%}
 {%- assign post_tags_1691010490420939832 = null -%}
 {%- assign post_id_1691010490420939832 = null -%}
-{%- assign _tag_url_1691010490420939832 = null -%}
+{%- assign tag_url_1691010490420939832 = null -%}
+{%- assign first_post_id_1691010490420939832 = null %}
+{%- assign last_post_id_1691010490420939832 = null %}
+{%- assign top_1691010490420939832 = null-%}
+{%- assign bottom_1691010490420939832 = null-%}
+{%- assign index_1691010490420939832 = null-%}
