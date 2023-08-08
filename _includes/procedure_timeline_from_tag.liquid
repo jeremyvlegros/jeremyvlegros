@@ -7,35 +7,23 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} page title {%- endcomment -%}
-{%- assign page_title = "#" | append : page.title -%}
+{%- assign page_title_1690569561039 = "#" | append : page.title -%}
 
-{%- comment -%} page_date_of_modification {%- endcomment -%}
+{%- comment -%} page_date_of_modification_1690569561039 {%- endcomment -%}
 {%- include as_modification_date_without_id_from_date.liquid from_date=page.date_of_modification -%}
-{%- assign page_date_of_modification = return -%}
+{%- assign page_date_of_modification_1690569561039 = return -%}
 {%- assign return = null -%}
-{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-{%- comment -%}  dates of first/top and last/bottom posts  {%- endcomment -%}
-{%- assign _date_top_1690569561039 = posts_1690569561039[0].date_of_creation -%}
-{%- assign _date_bottom_1690569561039 = posts_1690569561039[-1].date_of_creation -%}
-
-{%- comment -%}  HTML top and bottom arrows  {%- endcomment -%}
-{%- comment -%} {%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid
-         from_date_top=_date_top_1690569561039
-         from_date_bottom=_date_bottom_1690569561039 -%}
- {%- assign html_top_and_bottom_arrows = return -%}
- {%- assign return = null -%} {%- endcomment -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%}HTML index post list  {%- endcomment -%}
 {%- include as_html_the_post_index_list_from_posts.liquid from_posts=posts_1690569561039 -%}
-{%- assign html_post_index_list = return -%}
+{%- assign html_post_index_list_1690569561039 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%}HTML post list  {%- endcomment -%}
 {%- include as_html_the_post_list_from_posts.liquid from_posts=posts_1690569561039 -%}
-{%- assign html_post_list = return -%}
+{%- assign html_post_list_1690569561039 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -55,14 +43,14 @@
             <div id="side_index" class="row">
                 <div class="side_index_content">
                     <ul>
-                        {%- if page_title -%}
+                        {%- if page_title_1690569561039 -%}
                             <li>
-                                <h1 class="page-heading">{{ page_title }}</h1>
+                                <h1 class="page-heading">{{ page_title_1690569561039 }}</h1>
                             </li>
                         {%- endif -%}
 
                         {%- comment -%}printing HTML index post list  {%- endcomment -%}
-                        {{ html_post_index_list }}
+                        {{ html_post_index_list_1690569561039 }}
 
                     </ul>
                 </div>
@@ -73,7 +61,7 @@
             <ul class="post-list">
 
                 {%- comment -%}printing HTML post list  {%- endcomment -%}
-                {{ html_post_list }}
+                {{ html_post_list_1690569561039 }}
 
 
             </ul>
@@ -85,15 +73,15 @@
 
         <br>
 
-        {%- if page_date_of_creation -%}
-            <span class='date date_of_creation'> {{ page_date_of_creation }} </span>
+        {%- if page_date_of_creation_1690569561039 -%}
+            <span class='date date_of_creation'> {{ page_date_of_creation_1690569561039 }} </span>
         {%- endif -%}
 
         <br>
 
-        {%- if page_date_of_modification -%}
+        {%- if page_date_of_modification_1690569561039 -%}
             <span class="date date_of_modification">
-            {{ page_date_of_modification }}
+            {{ page_date_of_modification_1690569561039 }}
             </span>
         {%- endif -%}
 
@@ -101,10 +89,8 @@
 
 </div>
 
-
-{%- assign html_post_index_list = null -%}
-{%- assign html_post_list = null -%}
-{%- assign date_of_modification_short = null -%}
-{%- comment -%} {%- assign html_top_and_bottom_arrows = null -%} {%- endcomment -%}
-{%- assign _date_top_1690569561039 = null -%}
-{%- assign _date_bottom_1690569561039 = null -%}
+{%- assign html_post_index_list_1690569561039 = null -%}
+{%- assign html_post_list_1690569561039 = null -%}
+{%- assign page_date_of_modification_1690569561039 = null-%}
+{%- assign page_date_of_creation_1690569561039 = null-%}
+{%- assign page_title_1690569561039 = null-%}
