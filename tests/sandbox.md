@@ -370,25 +370,6 @@ TAG NOT PRESENT
 ```
 
 
-## `as_html_top_and_bottom_arrows_from_date_top_and_date_bottom`
-
-
-```liquid
-{% comment %}{% endcomment %}
-{%- assign _posts = site.posts -%}
-{%- assign _date_top = _posts[0].date_of_creation -%}
-{%- assign _date_bottom = _posts[-1].date_of_creation -%}
-
-{% comment %}{% endcomment %}
-{%- include as_html_top_and_bottom_arrows_from_date_top_and_date_bottom.liquid from_date_top=_date_top from_date_bottom=_date_bottom
--%}
-{{ return }}
-<!---->
-{% comment %}{% endcomment %}
-```
-
-
-
 ## `as_html_the_post_list_with_url_from_posts.liquid`
 
 
