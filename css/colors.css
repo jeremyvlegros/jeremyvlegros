@@ -12,7 +12,7 @@
   --color_07                            : hsl(125, 40%, 31%);
   --color_08                            : hsl(145, 50%, 31%);
   --color_09                            : hsl(165, 40%, 31%);
-  --color_10                            : hsl(185, 60%, 31%);
+  --color_10                            : hsl(185, 60%, 25%);
   --color_11                            : hsl(200, 50%, 31%);
   --color_12                            : hsl(220, 50%, 31%);
   --color_13                            : hsl(230, 50%, 31%);
@@ -273,4 +273,73 @@ body, html
 .color_background_31
 {
   background-color : var(--color_31) !important;
+}
+
+
+.color_background_tumblr
+{
+  background-color: var(--color_background_tumblr)!important;
+}
+.color_background_twitter
+{
+  background-color: var(--color_background_twitter)!important;
+}
+.color_background_linkedin
+{
+  background-color: var(--color_background_linkedin)!important;
+}
+.color_background_reddit
+{
+  background-color: var(--color_background_reddit)!important;
+}
+.color_background_nexus_mods
+{
+  background-color: var(--color_background_nexus_mods)!important;
+}
+.color_background_github
+{
+  background-color: var(--color_background_github)!important;
+}
+.color_background_twitch
+{
+  background-color: var(--color_background_twitch)!important;
+}
+.color_background_steam
+{
+  background-color: var(--color_background_steam)!important;
+}
+
+.color_background_x_corp
+{
+  background-color: black !important;
+}
+
+.color_background_php
+{
+ background-color: #7377AD!important;
+}
+
+.color_background_jekyll
+{
+ background-color: #3E1F1F!important;
+}
+
+.color_background_link_tree
+{
+ background-color: #254F1A!important;
+}
+
+.color_background_intellij
+{
+ background-color: #035DDF!important;
+}
+
+.color_background_liquid
+{
+ background-color: #3399CC!important;
+}
+
+.color_background_css
+{
+ background-color: #2D53E5!important;
 }
