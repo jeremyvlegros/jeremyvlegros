@@ -14,4 +14,4 @@ permalink            : links
 #- "#links"
 ---
 
-{% include links.liquid %}
+{% include procedure_print_links.liquid %}

@@ -1,7 +1,7 @@
 ---
 title                : sandbox
 layout               : post
-print_array          : print_array_content.html
+print_array          : procedure_print_array_content.html
 ---
 
 ## test `ARRAY_EMPTY`
@@ -159,7 +159,7 @@ result :
 ```liquid
 {% comment %}{% endcomment %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include print_array_content.html array = array_numbers  -%}
+{%- include procedure_print_array_content.html array = array_numbers  -%}
 {% comment %}{% endcomment %}
 ```
 
@@ -167,7 +167,7 @@ result :
 {% comment %}{% endcomment %}
 {% raw %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include print_array_content.html array = array_numbers  -%}
+{%- include procedure_print_array_content.html array = array_numbers  -%}
 {% endraw %}
 {% comment %}{% endcomment %}
 ```
@@ -222,7 +222,7 @@ result :
 ```liquid
 {% comment %}{% endcomment %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include print_array.liquid array=array_numbers  -%}
+{%- include procedure_print_array.liquid array=array_numbers  -%}
 {% comment %}{% endcomment %}
 ```
 
@@ -230,7 +230,7 @@ result :
 {% comment %}{% endcomment %}
 {% raw %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include print_array.liquid array=array_numbers  -%}
+{%- include procedure_print_array.liquid array=array_numbers  -%}
 {% endraw %}
 {% comment %}{% endcomment %}
 ```
