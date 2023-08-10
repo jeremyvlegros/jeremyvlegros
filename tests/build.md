@@ -1,5 +1,5 @@
 ---
-title     : "BUILD TEST"
+title     : build
 layout    : build_check
 permalink : /tests/build
 boolean_print_successful_tests : false
