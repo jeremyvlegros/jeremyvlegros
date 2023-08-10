@@ -1,7 +1,5 @@
 ---
 title                : "status > website > becoming better at using Jekyll"
-category             : post
-layout               : post
 date_of_creation     : "#date 2023-06-19 00:00 1687132800000000000 GMT"
 date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1687132800000000000

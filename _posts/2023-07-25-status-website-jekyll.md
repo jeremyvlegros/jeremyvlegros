@@ -1,7 +1,5 @@
 ---
 title                : "status > website > `Jekyll`"
-category             : post
-layout               : post
 date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
 date_of_modification : "#date 2023-08-01 12:13 1690877604636579823 GMT"
 post_id              : 1690231131792213244

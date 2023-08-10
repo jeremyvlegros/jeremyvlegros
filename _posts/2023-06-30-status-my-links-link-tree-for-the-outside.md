@@ -1,7 +1,5 @@
 ---
 title                : "status > my external links will be on `linkt.ree` "
-category             : post
-layout               : post
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747719 GMT"
 date_of_modification : "#date 2023-08-04 03:23 1691105008189619843 GMT"
 post_id              : 1688126427044747719

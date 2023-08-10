@@ -1,7 +1,5 @@
 ---
-title                : "About this website"
-category             : post
-layout               : post
+title                : "About > this website goals"
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
 date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1686614400000000000
@@ -10,6 +8,7 @@ tags                 :
 - "#posts"
 - "#about" 
 - "#website"
+- "#index"
 ---
 
 ## A reliable simple website

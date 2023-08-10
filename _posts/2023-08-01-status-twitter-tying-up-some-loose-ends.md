@@ -1,7 +1,5 @@
 ---
 title                : "status > `Twitter` > tying up some loose ends"
-layout               : post
-category             : post
 date_of_creation     : "#date 2023-08-01 13:00 1690880438954979985 GMT"
 date_of_modification : "#date 2023-08-05 13:11 1691226716114082423 GMT"
 post_id              : 1690880438954979985
@@ -10,6 +8,7 @@ tags                 :
 - "#posts"
 - "#twitter"
 - "#security"
+- "#status"
 ---
 
 I remembered that `Twitter` users can allow third party applications to get a person geolocation, meaning that somebody I follow can know my location.

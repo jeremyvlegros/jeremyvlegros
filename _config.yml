@@ -1,5 +1,23 @@
 name : "website"
 
+collections:
+  tag :
+    output: true
+    permalink : /tag/:path
+
+defaults :
+  - scope:
+      path: ""
+      type : "posts"
+    values:
+      layout: "post"
+      category: "post"
+  - scope:
+      path: ""
+      type: "tag"
+    values:
+      layout: "timeline"
+
 highlighter: rouge
 
 kramdown:

@@ -1,7 +1,5 @@
 ---
 title                : "status > website > preparing code for other pages"
-category             : post
-layout               : post
 date_of_creation     : "#date 2023-07-12 23:22 1689189755395272197 GMT"
 date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1689189755395272197

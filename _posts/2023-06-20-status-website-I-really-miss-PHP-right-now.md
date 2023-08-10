@@ -1,7 +1,5 @@
 ---
 title                : "status > website > Jekyll > I really miss PHP right now"
-category             : post
-layout               : post
 date_of_creation     : "#date 2023-06-20 14:49 1687258158499247037 GMT"
 date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
 post_id              : 1687258158499247037
