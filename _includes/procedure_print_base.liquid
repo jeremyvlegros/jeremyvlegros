@@ -177,6 +177,57 @@
         {{ page_meta_image_color_1690569717129 }}
         {{ page_url_bootstrap_1690569717129 }}
         {{ page_url_css_1690569717129 }}
+        {% comment %}The HTML favicon image code was copied from `CSS Tricks` https://css-tricks.com/emoji-as-a-favicon/ {% endcomment %}
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>
+        {%- if page.layout == "timeline" -%}
+
+            {%- if page.title == "posts"-%}
+            📖
+            {%- elsif page.title == "references"-%}
+             🏷
+            {%- elsif page.title == "status"-%}
+            📰
+            {%- elsif page.title == "informations"-%}
+            📚
+            {%- elsif page.title == "videos"-%}
+            📼
+            {%- elsif page.title == "linux"-%}
+            🐧
+            {%- elsif page.title == "twitter"-%}
+            🐦
+            {%- elsif page.title == "opinions"-%}
+            💡
+            {%- elsif page.title == "debian"-%}
+            🌀
+            {%- elsif page.title == "gnome"-%}
+            👣
+            {%- elsif page.title == "website"-%}
+            💼
+            {%- elsif page.title == "tumblr"-%}
+            🇹
+            {%- elsif page.title == "workshop"-%}
+            ⚙
+            {%- elsif page.title == "video games"-%}
+            🎮
+            {%- elsif page.title == "about"-%}
+            ❓
+            {%- else -%}
+            📃
+            {%- endif -%}
+        {%- elsif page.title == "Index" -%}
+        🔖
+        {%- elsif page.title == "sandbox"-%}
+        🪣
+        {%- elsif page.title == "build"-%}
+        🚦
+        {%- elsif page.title == "links"-%}
+        🔗
+        {%- elsif page.layout == "post" -%}
+        📄
+        {%- endif -%}
+        </text></svg>">
+
+        {%- comment -%}  📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}
     </head>
     <body>
         <main class="page-content" aria-label="Content">

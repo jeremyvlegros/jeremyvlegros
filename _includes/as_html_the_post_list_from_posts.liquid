@@ -34,7 +34,7 @@
 
                 {%- comment -%} enforcing posts with post layout {%- endcomment -%}
                 {%- if post.layout == "post"-%}
-                    {%- include procedure_print_post_content_from_post_with_first_post_id_with_last_post_id.liquid from_post=post from_first_post_id=first_post_id_1690556428999239446 from_last_post_id=last_post_id_1690556428999239446-%}
+                    {%- include procedure_print_post_content_from_post_with_first_post_id_with_last_post_id.liquid from_post=post with_first_post_id=first_post_id_1690556428999239446 with_last_post_id=last_post_id_1690556428999239446-%}
                 {%- endif -%}
 
             {%- endfor -%}
