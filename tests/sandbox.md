@@ -30,7 +30,7 @@ print_array          : print_array_content.html
 {%- assign result = array | append : null -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append '' " %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append '' " %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
@@ -53,7 +53,7 @@ print_array          : print_array_content.html
 {%- assign result = array | append : null -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append null " %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="array append null " %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
@@ -75,7 +75,7 @@ print_array          : print_array_content.html
 {%- assign result = null | append : array -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="null append array" %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success="1" with_warning="1" with_name="null append array" %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
@@ -96,7 +96,7 @@ print_array          : print_array_content.html
 
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="an empty capture is null"%}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success="1" with_warning="" with_name="an empty capture is null"%}
 
 
 {%- assign expected = null -%}
@@ -427,7 +427,7 @@ TAG NOT PRESENT
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="" %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="" %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
@@ -449,7 +449,7 @@ TAG NOT PRESENT
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="null" %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="null" %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
@@ -471,7 +471,7 @@ TAG NOT PRESENT
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-{% include procedure_assert_from_this_and_from_that.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="empty string" %}
+{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=true with_warning=true with_name="empty string" %}
 
 {%- assign expected = null -%}
 {%- assign result   = null -%}
