@@ -17,7 +17,9 @@
 {%- endif -%}
 
 {%- capture return -%}
-    <a class="col button"
+    {%- assign word = include.from_word | replace: "#", "" | replace : " ","_"-%}
+    {%- assign color_background = "color_background_" | append : word -%}
+    <a class="col button {{ color_background }}" style="text-decoration: none"
        href=" {{ '/tag/' | append: include.from_word | replace: "#", "" | relative_url }} "> {{ tag_1691339278938925411 }}
     </a>
 {%- endcapture -%}
