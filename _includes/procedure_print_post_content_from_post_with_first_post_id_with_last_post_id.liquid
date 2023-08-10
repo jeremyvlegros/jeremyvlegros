@@ -120,12 +120,17 @@
     <br>
 
     <div class="row tags">
+
+        {%- if include.from_post.title == "links" -%}
+
+        {%- else -%}
         {%- capture home_1691010490420939832 -%}
         {% comment %} Home button {% endcomment %}
         <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href="{{ '/' | relative_url }}"> Home </a>
         {%- endcapture -%}
-        {{ home_1691010490420939832 }}
 
+        {{ home_1691010490420939832 }}
+        {%- endif -%}
 
         {%- comment -%} skipping links for now {%- endcomment -%}
         {%- if include.from_post.title == "links" -%}
