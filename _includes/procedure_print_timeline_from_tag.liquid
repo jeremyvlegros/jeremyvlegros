@@ -7,7 +7,13 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} page title {%- endcomment -%}
-{%- assign page_title_1690569561039 = "#" | append : page.title -%}
+{%- assign page_title_1690569561039 = page.title | upcase -%}
+{%- if page.title != "HOME" or page.title != "INDEX" -%}
+    {%- assign page_title_1690569561039 = page.title -%}
+{%- else -%}
+    {%- assign page_title_1690569561039 = "#" | append : page.title -%}
+{%- endif -%}
+
 
 {%- comment -%} page_date_of_modification_1690569561039 {%- endcomment -%}
 {%- include as_modification_date_without_id_from_date.liquid from_date=page.date_of_modification -%}
