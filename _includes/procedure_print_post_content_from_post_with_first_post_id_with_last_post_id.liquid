@@ -120,6 +120,12 @@
     <br>
 
     <div class="row tags">
+        {%- capture home_1691010490420939832 -%}
+        {% comment %} Home button {% endcomment %}
+        <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href="{{ '/' | relative_url }}"> Home </a>
+        {%- endcapture -%}
+        {{ home_1691010490420939832 }}
+
 
         {%- comment -%} skipping links for now {%- endcomment -%}
         {%- if include.from_post.title == "links" -%}
@@ -132,28 +138,23 @@
             {%- comment -%}  "post id" doesn't show in single posts {%- endcomment -%}
             {%- if page.category != "post" -%}
 
+                {% comment %} bottom button {% endcomment %}
                 {%- capture bottom_1691010490420939832 -%}
                     {%- assign tag_url_1691010490420939832 = page.url | append : "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> bottom</a>
+                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> Bottom</a>
                 {%- endcapture -%}
 
+                {% comment %} top button {% endcomment %}
                 {%- capture top_1691010490420939832 -%}
                     {%- assign tag_url_1691010490420939832 = page.url | append : "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> top</a>
+                    <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px" href={{ tag_url_1691010490420939832 }}> Top</a>
                 {%- endcapture -%}
 
 
-                {%- capture index_1691010490420939832 -%}
-                {% comment %} index {% endcomment %}
-                <a class="col button" href="{{ '/' | relative_url }}"> #index </a>
-                {%- endcapture -%}
-                                
                 {%- if first_post_id_1691010490420939832 and post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
                     {{ bottom_1691010490420939832 }}
-                    {{ index_1691010490420939832 }}
                 {%- elsif last_post_id_1691010490420939832 and post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
                     {{ top_1691010490420939832 }}
-                    {{ index_1691010490420939832 }}
                 {%- else -%}
 
                     {%- if last_post_id_1691010490420939832 -%}
@@ -164,9 +165,9 @@
                         {{ top_1691010490420939832 }}
                     {%- endif -%}
 
-                    {{ index_1691010490420939832 }}
                 {%- endif -%}
 
+                {% comment %} id in timeline {% endcomment %}
                 {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
                 <a class="col button " href={{ tag_url_1691010490420939832 }}> {{ "#" | append: post_id_1691010490420939832 }}
                 </a>
@@ -213,6 +214,7 @@
 
                     {%- if tag == "#posts"-%}
 
+                        {% comment %} #posts {% endcomment %}
                         {%- assign tag_url_1691010490420939832 = "/tag/posts#" | append: post_id_1691010490420939832 | relative_url -%}
                         <a class="col button"
                            href={{ tag_url_1691010490420939832 }}> {{ "#posts"}}
@@ -220,7 +222,6 @@
 
                         {%- continue -%}
                     {%- endif -%}
-
                 {%- endif -%}
 
                 {%- comment -%} standard tag {%- endcomment -%}
@@ -279,4 +280,4 @@
 {%- assign last_post_id_1691010490420939832 = null %}
 {%- assign top_1691010490420939832 = null-%}
 {%- assign bottom_1691010490420939832 = null-%}
-{%- assign index_1691010490420939832 = null-%}
+{%- assign home_1691010490420939832 = null-%}
