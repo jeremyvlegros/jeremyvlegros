@@ -19,7 +19,7 @@
 {%- endif -%}
 
 
-
+{% comment %} dealing with non post parameter {% endcomment %}
 {%- if include.from_post.layout == "post" -%}
 
     {%- if include.from_post.category == "post" -%}
@@ -115,127 +115,194 @@
     {%- endcapture -%}
 {%- endif -%}
 
-{%- comment -%} getting the lines for tags{%- endcomment -%}
+{% comment %} bottom button {% endcomment %}
+{%- capture button_bottom_1691010490420939832 -%}
+    {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
+    <a class="col button"
+       style="background-color: rgba(0,0,0,60%);
+       border-width: 3px"
+       href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;oldest</a>
+{%- endcapture -%}
+
+{% comment %} top button {% endcomment %}
+{%- capture button_top_1691010490420939832 -%}
+    {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
+    <a class="col button"
+       style="background-color: rgba(0,0,0,60%);
+       border-width: 3px"
+       href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Newest</a>
+{%- endcapture -%}
+
+{%- comment -%} home button {%- endcomment -%}
+{%- capture button_home_1691010490420939832 -%}
+    <a class="col button"
+       style="background-color: rgba(0,0,0,60%);
+       border-width: 3px"
+       href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>
+{%- endcapture -%}
+
+{% comment %} id button in timeline {% endcomment %}
+{%- capture button_id_1691010490420939832 -%}
+{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
+<a class="col button "
+   style="background-color: rgba(0,0,0,60%);
+   border-width: 3px;"
+   href="{{ tag_url_1691010490420939832 }}"> Open
+</a>
+{%- endcapture -%}
+
+{% comment %} button tags {% endcomment %}
+{%- capture button_tags_1691010490420939832 -%}
+    {%- assign tag_url_1691010490420939832 = "/tag/tags" | relative_url -%}
+    <a class="col button"
+       style="background-color: rgba(0,0,0,60%);
+       border-width: 3px"
+       href="{{ tag_url_1691010490420939832 }}"> Tags
+    </a>
+{%- endcapture -%}
+
+
 {%- capture post_tags_1691010490420939832 -%}
+    
     <br>
 
     <div class="row tags">
 
-        {%- if include.from_post.title == "links" or include.from_post.title == "Index" -%}
+        {% comment %} first post : muting top button {% endcomment %}
+        {%- if first_post_id_1691010490420939832 -%}
 
-        {%- else -%}
-            {%- capture home_1691010490420939832 -%}
-                {% comment %} Home button {% endcomment %}
-                <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px"
-                   href="{{ '/' | relative_url }}"> ⌂&nbsp;Index </a>
-            {%- endcapture -%}
+            {% comment %} if the post id is the first one{% endcomment %}
+            {%- if post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
 
-            {{ home_1691010490420939832 }}
-
-
-        {%- comment -%} skipping links for now {%- endcomment -%}
-
-        {%- comment -%}  "post id" doesn't show in single posts {%- endcomment -%}
-        {%- if page.category != "post" -%}
-
-            {% comment %} bottom button {% endcomment %}
-            {%- capture bottom_1691010490420939832 -%}
-                {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-                <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px"
-                   href={{ tag_url_1691010490420939832 }}> ⇩&nbsp;Bottom</a>
-            {%- endcapture -%}
-
-                {% comment %} top button {% endcomment %}
-                {%- capture top_1691010490420939832 -%}
-                {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-                <a class="col button" style="background-color: rgba(0,0,0,60%);border-width: 2px"
-                   href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>
-            {%- endcapture -%}
-
-
-                {%- if first_post_id_1691010490420939832 and post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
-                {{ bottom_1691010490420939832 }}
-            {%- elsif last_post_id_1691010490420939832 and post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
-                {{ top_1691010490420939832 }}
-            {%- else -%}
-
-                {%- if last_post_id_1691010490420939832 -%}
-                    {{ bottom_1691010490420939832 }}
-                {%- endif -%}
-
-                {%- if first_post_id_1691010490420939832 -%}
-                    {{ top_1691010490420939832 }}
-                {%- endif -%}
+                {% comment %} don't display the top button {% endcomment %}
+                {%- assign button_top_1691010490420939832 = null -%}
 
             {%- endif -%}
-
-                {% comment %} id in timeline {% endcomment %}
-                {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-                <a class="col button " href={{ tag_url_1691010490420939832 }}> {{ "#" | append: post_id_1691010490420939832 }}
-                </a>
 
         {%- endif -%}
 
+        {% comment %} last post : muting last button {% endcomment %}
+        {%- if last_post_id_1691010490420939832 -%}
+
+            {% comment %} if the post id is the first one{% endcomment %}
+            {%- if post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
+
+                {% comment %} don't display the bottom button {% endcomment %}
+                {%- assign button_bottom_1691010490420939832 = null -%}
+
+            {%- endif -%}
+
+        {%- endif -%}
+
+        {%- comment -%} post button specifics  {%- endcomment -%}
+        {%- if page.category == "post" -%}
+
+            {% comment %}doesn't show id in single posts {% endcomment %}
+            {%- assign button_id_1691010490420939832 = null -%}
+
+            {% comment %}doesn't show bottom button in single posts {% endcomment %}
+            {%- assign button_bottom_1691010490420939832 = null -%}
+
+            {% comment %}doesn't show top button in single posts {% endcomment %}
+            {%- assign button_top_1691010490420939832 = null -%}
+
+            {% comment %} home {% endcomment %}
+
+            {%- capture button_home_1691010490420939832 -%}
+                <a class="col button"
+                   style="background-color: rgba(0,0,0,60%);
+                   border-width: 3px"
+                   href="{{ '/#' | append: post_id_1691010490420939832 | relative_url }}">
+                    ⌂&nbsp;Home
+                </a>
+            {%- endcapture -%}
+        {%- endif -%}
+        
+        {% comment %} home page : muting home button  {% endcomment %}
+        {%- if page.title == "Home" or page.title == "home"-%}
+            {%- assign button_home_1691010490420939832 = null -%}
+        {%- endif -%}
+
+        {% comment %} tags page : muting tags button  {% endcomment %}
+        {%- if page.title == "tags" -%}
+            {%- assign button_tags_1691010490420939832 = null -%}
+            {%- assign button_id_1691010490420939832 = null -%}
+            {%- assign button_top_1691010490420939832 = null -%}
+            {%- assign button_bottom_1691010490420939832 = null -%}
+        {%- endif -%}
 
 
+        {% comment %} home button {% endcomment %}
+        {{ button_home_1691010490420939832 }}
+
+        {% comment %} tags button {% endcomment %}
+        {{ button_tags_1691010490420939832 }}
+
+        {% comment %} bottom button {% endcomment %}
+        {{ button_bottom_1691010490420939832 }}
+
+        {% comment %} top button {% endcomment %}
+        {{ button_top_1691010490420939832 }}
+
+        {% comment %} id button {% endcomment %}
+        {{ button_id_1691010490420939832 }}
+
+        {% comment %} tags {% endcomment %}
         {%- for tag in post_tags_1691010490420939832 -%}
 
-            {%- comment -%} -------------------------------------------------------{%- endcomment -%}
-            {%- comment -%} do not display the tag when it is the same as the page {%- endcomment -%}
-
-            {%- assign page_permalink_tag = page.permalink | split: "/" | last -%}
-
-            {%- comment -%} dealing with empty string : permalink  {%- endcomment -%}
-            {%- if page_permalink_tag == "" -%}
-                {%- assign page_permalink_tag = null -%}
-            {%- endif -%}
-
-            {%- assign _tag = tag | replace: "#", "" -%}
-
-            {%- comment -%} dealing with empty string : _tag  {%- endcomment -%}
-            {%- if _tag == "" -%}
-                {%- assign _tag = null -%}
-            {%- endif -%}
+            {% comment %} --- skipping conditions --- {% endcomment %}
+            {%- if true -%}
+                {%- unless tag contains "#" -%}
+                    {%- continue -%}
+                {%- endunless -%}
 
 
-            {%- if page.permalink and _tag and page_permalink_tag == _tag -%}
-
-                {%- assign page_permalink_tag = null -%}
-                {%- assign _tag = null -%}
-
-                {%- continue -%}
-
-            {%- endif -%}
-            {%- comment -%} ---------------------------------------------------------- {%- endcomment -%}
-
-            {%- comment -%}  tag {%- endcomment -%}
-            {%- if tag contains "#" -%}
-
-                {%- comment -%}  get back to the timeline at the post position {%- endcomment -%}
-                {%- if page.category != "timeline" -%}
-
-                    {%- if tag == "#posts" and page.title != "tags" -%}
-
-                        {% comment %} #posts {% endcomment %}
-                        {%- assign tag_url_1691010490420939832 = "/tag/posts#" | append: post_id_1691010490420939832 | relative_url -%}
-                        <a class="col button"
-                           href={{ tag_url_1691010490420939832 }}> {{ "#posts"}}
-                        </a>
-
+                {%- if page.title != "tags"-%}
+                    {% comment %} skip #posts (it is inherently home) {% endcomment %}
+                    {%- if tag == "#posts" -%}
                         {%- continue -%}
                     {%- endif -%}
                 {%- endif -%}
-
-                {%- comment -%} standard tag {%- endcomment -%}
-                {%- include as_tag_from_word.liquid from_word=tag -%}
-                {{ return }}
-                {%- assign return = null -%}
-
             {%- endif -%}
 
-        {%- endfor -%}
-        {%- endif -%}
+            {% comment %} getting tag {% endcomment %}
+            {%- include as_tag_from_word.liquid from_word=tag -%}
+            {%- assign tag_1691010490420939832 = return -%}
+            {%- assign return = null-%}
+            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
+            {% comment %} only for timeline tags, ignore tag if same as page {% endcomment %}
+            {%- if page.category != "post" -%}
+
+                {% comment %} get the tag word {% endcomment %}
+                {%- assign tag_word_1691010490420939832 = tag | replace: "#", "" -%}
+
+                {% comment %} get the tag the page {% endcomment %}
+                {%- assign page_permalink_tag_1691010490420939832 = page.permalink | split: "/" | last -%}
+
+                {%- comment -%} dealing with empty string : permalink  {%- endcomment -%}
+                {%- if page_permalink_tag_1691010490420939832 == "" -%}
+                    {%- assign page_permalink_tag_1691010490420939832 = null -%}
+                {%- endif -%}
+
+                {%- comment -%} dealing with empty string : tag_word_1691010490420939832  {%- endcomment -%}
+                {%- if tag_word_1691010490420939832 == "" -%}
+                    {%- assign tag_word_1691010490420939832 = null -%}
+                {%- endif -%}
+
+                {%- comment -%} do not display the tag when it is the same as the page {%- endcomment -%}
+                {%- if page.permalink and tag_word_1691010490420939832 and page_permalink_tag_1691010490420939832 == tag_word_1691010490420939832 -%}
+
+                    {%- continue -%}
+
+                {%- endif -%}
+
+            {%- endif -%}
+            
+            {%- comment -%} tag {%- endcomment -%}
+            {{ tag_1691010490420939832 }}
+
+        {%- endfor -%}
     </div>
 {%- endcapture -%}
 
@@ -279,6 +346,8 @@
 {%- assign tag_url_1691010490420939832 = null -%}
 {%- assign first_post_id_1691010490420939832 = null %}
 {%- assign last_post_id_1691010490420939832 = null %}
-{%- assign top_1691010490420939832 = null -%}
-{%- assign bottom_1691010490420939832 = null -%}
-{%- assign home_1691010490420939832 = null -%}
+{%- assign button_top_1691010490420939832 = null -%}
+{%- assign button_bottom_1691010490420939832 = null -%}
+{%- assign button_home_1691010490420939832 = null -%}
+{%- assign page_permalink_tag_1691010490420939832 = null -%}
+{%- assign tag_word_1691010490420939832 = null -%}
