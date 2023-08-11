@@ -8,7 +8,6 @@ tags                 :
 - "#posts"
 - "#about" 
 - "#website"
-- "#index"
 ---
 
 ## A reliable simple website
