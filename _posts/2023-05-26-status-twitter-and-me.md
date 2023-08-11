@@ -7,8 +7,7 @@ permalink            : /post/1685059200000000000
 tags                 : 
 - "#posts"
 - "#status"
-- "#twitter" 
-- "#me"
+- "#twitter"
 ---
 
 
