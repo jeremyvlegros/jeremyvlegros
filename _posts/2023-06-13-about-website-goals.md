@@ -1,7 +1,7 @@
 ---
-title                : "About > this website goals"
+title                : "About > website > goals"
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
-date_of_modification : "#date 2023-07-28 15:11 1690542698891479547 GMT"
+date_of_modification : "#date 2023-08-11 17:28 1691760487859283875 GMT"
 post_id              : 1686614400000000000
 permalink            : /post/1686614400000000000
 tags                 : 
@@ -10,7 +10,7 @@ tags                 :
 - "#website"
 ---
 
-## A reliable simple website
+## Reliability & simplicity
 
 - no cookies prompt from me
 - no advertisements from me, except unadvertised links in the form of a ~ "more" link
@@ -21,7 +21,7 @@ tags                 :
 - no visible images except from sources such as video players
 - no mouse hover prompts, such as tips
 
-## Transparency & being useful
+## Transparency
 
 - people can see the post history
 
@@ -42,18 +42,15 @@ tags                 :
 		- video game mods
 	- creating an online hub for myself
 
-## Safeguard / backup
+## Safeguarding & backup
 
 - anybody can download the whole website
 - GitHub commits act as creation proof
 - online access to some of my data
 
-## More independence × flexibility
+## Independency & flexibility
 
 - I create the post format that I need
 - I can add functionalities
 - building × drafting × testing my workshop system
-
-## The `Read me`
-
-[`README.md`](https://github.com/jeremyvlegros/website/blob/main/README.md)
+  
