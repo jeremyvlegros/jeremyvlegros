@@ -8,10 +8,10 @@
 
 {%- comment -%} page title {%- endcomment -%}
 {%- assign page_title_1690569561039 = page.title | upcase -%}
-{%- if page.title != "HOME" or page.title != "INDEX" -%}
-    {%- assign page_title_1690569561039 = page.title -%}
+{%- if page_title_1690569561039 == "HOME" -%}
+    {%- assign page_title_1690569561039 = page.title | append : " : posts : newest to oldest" | capitalize -%}
 {%- else -%}
-    {%- assign page_title_1690569561039 = "#" | append : page.title -%}
+    {%- assign page_title_1690569561039 = "#" | append: page.title | append : " : newest to oldest" | capitalize -%}
 {%- endif -%}
 
 
