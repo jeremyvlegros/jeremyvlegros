@@ -143,11 +143,11 @@
 
 {% comment %} id button in timeline {% endcomment %}
 {%- capture button_id_1691010490420939832 -%}
-{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-<a class="col button "
-   style="background-color: rgba(0,0,0,60%);
+    {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
+    <a class="col button "
+       style="background-color: rgba(0,0,0,60%);
    border-width: 3px;"
-   href="{{ tag_url_1691010490420939832 }}"> Open
+       href="{{ tag_url_1691010490420939832 }}"> Open
 </a>
 {%- endcapture -%}
 
@@ -163,7 +163,7 @@
 
 
 {%- capture post_tags_1691010490420939832 -%}
-    
+
     <br>
 
     <div class="row tags">
@@ -197,9 +197,9 @@
         {% comment %} only one post : muting last and first button {% endcomment %}
         {%- if first_post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
 
-                {% comment %} don't display the buttons {% endcomment %}
-                {%- assign button_bottom_1691010490420939832 = null -%}
-                {%- assign button_top_1691010490420939832 = null -%}
+            {% comment %} don't display the buttons {% endcomment %}
+            {%- assign button_bottom_1691010490420939832 = null -%}
+            {%- assign button_top_1691010490420939832 = null -%}
 
         {%- endif -%}
 
@@ -269,7 +269,7 @@
                 {%- endunless -%}
 
 
-                {%- if _PAGE_TITLE_1691010490420939832 != "TAGS"-%}
+                {%- if _PAGE_TITLE_1691010490420939832 != "TAGS" -%}
                     {% comment %} skip #posts (it is inherently home) {% endcomment %}
                     {%- if tag == "#posts" -%}
                         {%- continue -%}
@@ -280,7 +280,7 @@
             {% comment %} getting tag {% endcomment %}
             {%- include as_html_the_tag_from_word.liquid from_word=tag -%}
             {%- assign tag_1691010490420939832 = return -%}
-            {%- assign return = null-%}
+            {%- assign return = null -%}
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
             {% comment %} only for timeline tags, ignore tag if same as page {% endcomment %}
@@ -310,7 +310,7 @@
                 {%- endif -%}
 
             {%- endif -%}
-            
+
             {%- comment -%} tag {%- endcomment -%}
             {{ tag_1691010490420939832 }}
 
