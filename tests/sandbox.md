@@ -1,5 +1,6 @@
 ---
 title                : sandbox
+layout               : post
 print_array          : procedure_print_array_content.html
 ---
 
