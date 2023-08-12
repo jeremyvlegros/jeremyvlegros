@@ -194,6 +194,15 @@
 
         {%- endif -%}
 
+        {% comment %} only one post : muting last and first button {% endcomment %}
+        {%- if first_post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
+
+                {% comment %} don't display the buttons {% endcomment %}
+                {%- assign button_bottom_1691010490420939832 = null -%}
+                {%- assign button_top_1691010490420939832 = null -%}
+
+        {%- endif -%}
+
         {%- comment -%} post button specifics  {%- endcomment -%}
         {%- if page.category == "post" -%}
 
