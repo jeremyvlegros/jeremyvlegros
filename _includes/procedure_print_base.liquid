@@ -1,6 +1,6 @@
 {%- comment -%}<!--   DECLARATION -->{%- endcomment -%}
 
-{%- assign page_title_1690569717129 = page.title -%}
+{%- assign page_title_1690569717129 = page.title | capitalize -%}
 {%- assign page_meta_description_1690569717129 = page.description -%}
 {%- assign page_date_of_creation_1690569717129 = page.date_of_creation -%}
 {%- assign date_of_modification_1690569717129 = page.date_of_modification -%}
@@ -84,7 +84,7 @@
 
 
 {%- if page_title_1690569717129 -%}
-    {%- assign page_title_1690569717129 = page_title_1690569717129 | escape | replace: " &gt;", "&nbsp;&gt;" -%}
+    {%- assign page_title_1690569717129 = page_title_1690569717129 | capitalize | escape | replace: " &gt;", "&nbsp;&gt;" -%}
 {%- endif -%}
 
 
@@ -179,52 +179,57 @@
         {{ page_url_css_1690569717129 }}
         {% comment %}The HTML favicon image code was copied from `CSS Tricks` https://css-tricks.com/emoji-as-a-favicon/ {% endcomment %}
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>
+
+        {%- comment -%} FAVICON {%- endcomment -%}
+        {%- assign _PAGE_TITLE = page.title | upcase -%}
+
         {%- if page.layout == "timeline" -%}
 
-            {%- if page.title == "posts"-%}
+            {%- if _PAGE_TITLE == "POSTS"-%}
             📖
-            {%- elsif page.title == "references"-%}
+            {%- elsif _PAGE_TITLE == "REFERENCES"-%}
              🏷
-            {%- elsif page.title == "status"-%}
+            {%- elsif _PAGE_TITLE == "STATUS"-%}
             📰
-            {%- elsif page.title == "informations"-%}
+            {%- elsif _PAGE_TITLE == "INFORMATIONS"-%}
             📚
-            {%- elsif page.title == "videos"-%}
+            {%- elsif _PAGE_TITLE == "VIDEOS"-%}
             📼
-            {%- elsif page.title == "linux"-%}
+            {%- elsif _PAGE_TITLE == "LINUX"-%}
             🐧
-            {%- elsif page.title == "twitter"-%}
+            {%- elsif _PAGE_TITLE == "TWITTER"-%}
             🐦
-            {%- elsif page.title == "opinions"-%}
+            {%- elsif _PAGE_TITLE == "OPINIONS"-%}
             💡
-            {%- elsif page.title == "debian"-%}
+            {%- elsif _PAGE_TITLE == "DEBIAN"-%}
             🌀
-            {%- elsif page.title == "gnome"-%}
+            {%- elsif _PAGE_TITLE == "GNOME"-%}
             👣
-            {%- elsif page.title == "website"-%}
+            {%- elsif _PAGE_TITLE == "WEBSITE"-%}
             💼
-            {%- elsif page.title == "tumblr"-%}
+            {%- elsif _PAGE_TITLE == "TUMBLR"-%}
             🇹
-            {%- elsif page.title == "workshop"-%}
+            {%- elsif _PAGE_TITLE == "WORKSHOP"-%}
             ⚙
-            {%- elsif page.title == "video games"-%}
+            {%- elsif _PAGE_TITLE == "VIDEO GAMES"-%}
             🎮
-            {%- elsif page.title == "about"-%}
+            {%- elsif _PAGE_TITLE == "ABOUT"-%}
             ❓
             {%- else -%}
             📃
             {%- endif -%}
-        {%- elsif page.title == "Index" -%}
+        {%- elsif _PAGE_TITLE == "INDEX" -%}
         🔖
-        {%- elsif page.title == "sandbox"-%}
+        {%- elsif _PAGE_TITLE == "SANDBOX"-%}
         🪣
-        {%- elsif page.title == "build"-%}
+        {%- elsif _PAGE_TITLE == "BUILD"-%}
         🚦
-        {%- elsif page.title == "links"-%}
+        {%- elsif _PAGE_TITLE == "LINKS"-%}
         🔗
         {%- elsif page.layout == "post" -%}
         📄
         {%- endif -%}
+        {%- assign _PAGE_TITLE = null -%}
         </text></svg>">
 
         {%- comment -%}  📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}

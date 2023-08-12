@@ -221,12 +221,13 @@
         {%- assign _PAGE_TITLE_1691010490420939832 = page.title | upcase -%}
 
         {% comment %} home page : muting home button  {% endcomment %}
-        {%- if page.title == "Home" or page.title == "home"-%}
+
+        {%- if _PAGE_TITLE_1691010490420939832 == "HOME" -%}
             {%- assign button_home_1691010490420939832 = null -%}
         {%- endif -%}
 
         {% comment %} tags page : muting tags button  {% endcomment %}
-        {%- if page.title == "tags" -%}
+        {%- if _PAGE_TITLE_1691010490420939832 == "TAGS" -%}
             {%- assign button_tags_1691010490420939832 = null -%}
             {%- assign button_id_1691010490420939832 = null -%}
             {%- assign button_top_1691010490420939832 = null -%}
@@ -259,7 +260,7 @@
                 {%- endunless -%}
 
 
-                {%- if page.title != "tags"-%}
+                {%- if _PAGE_TITLE_1691010490420939832 != "TAGS"-%}
                     {% comment %} skip #posts (it is inherently home) {% endcomment %}
                     {%- if tag == "#posts" -%}
                         {%- continue -%}
@@ -353,3 +354,4 @@
 {%- assign button_home_1691010490420939832 = null -%}
 {%- assign page_permalink_tag_1691010490420939832 = null -%}
 {%- assign tag_word_1691010490420939832 = null -%}
+{%- assign _PAGE_TITLE_1691010490420939832 = null -%}
