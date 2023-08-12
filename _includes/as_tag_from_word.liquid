@@ -1,0 +1,20 @@
+{%- include as_string_word_with_inseparable_spaces_from_word.liquid from_word=include.from_word -%}
+{%- assign tag_1691813254997621390 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%}  adding `#` if needed {%- endcomment -%}
+{%- if tag_1691813254997621390 != "" -%}
+
+    {%- if tag_1691813254997621390 contains "#" -%}
+        {%- comment -%} do nothing {%- endcomment -%}
+    {%- else -%}
+        {%- assign tag_1691813254997621390 = "#" | append: tag_1691813254997621390 -%}
+    {%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = tag_1691813254997621390 -%}
+
+{%- assign tag_1691813254997621390 = null -%}

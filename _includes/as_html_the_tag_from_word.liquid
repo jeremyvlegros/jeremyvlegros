@@ -1,20 +1,10 @@
 {%- comment -%} as_html_the_tag_from_word.liquid {%- endcomment -%}
 
-{%- include as_string_word_with_inseparable_spaces_from_word.liquid from_word=include.from_word -%}
+{%- comment -%} tag_1691339278938925411 {%- endcomment -%}
+{%- include as_tag_from_word.liquid from_word=include.from_word -%}
 {%- assign tag_1691339278938925411 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-{%- comment -%}  adding `#` if needed {%- endcomment -%}
-{%- if tag_1691339278938925411 != "" -%}
-
-    {%- if tag_1691339278938925411 contains "#" -%}
-        {%- comment -%} do nothing {%- endcomment -%}
-    {%- else -%}
-        {%- assign tag_1691339278938925411 = "#" | append: tag_1691339278938925411 -%}
-    {%- endif -%}
-
-{%- endif -%}
 
 {%- capture return -%}
     {%- assign word = include.from_word | replace: "#", "" | replace : " ","_"-%}
