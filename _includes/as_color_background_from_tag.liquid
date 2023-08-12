@@ -1,0 +1,57 @@
+
+{%- comment -%} tag_1691339278938925411 {%- endcomment -%}
+{%- include as_tag_from_word.liquid from_word=include.from_tag -%}
+{%- assign tag_1691814784734707996 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- assign return = "color_background_" -%}
+
+{%- case tag_1691814784734707996 -%}
+
+    {%- when "#syntax" -%}
+        {%- assign return = return | append: "tan" -%}
+
+    {%- when "#security" -%}
+        {%- assign return = return | append: "mild_violet" -%}
+
+    {%- when "#readme" -%}
+        {%- assign return = return | append: "nougat" -%}
+
+    {%- when "#highlighting" -%}
+        {%- assign return = return | append: "mild_nougat" -%}
+
+    {%- when "#links" -%}
+        {%- assign return = return | append: "sand_red" -%}
+
+    {%- when "#avatar" -%}
+        {%- assign return = return | append: "dark_tan" -%}
+
+    {%- when "#website" -%}
+        {%- assign return = return | append: "dark_orange" -%}
+
+    {%- when "#me" -%}
+        {%- assign return = return | append: "mild_brown" -%}
+
+    {%- when "#status" -%}
+    {% comment %}hsl(120, 30%, 31%);{% endcomment %}
+        {%- assign return = return | append: "brown" -%}
+
+    {%- when "#about" -%}
+    {% comment %}hsl(340, 50%, 31%);{% endcomment %}
+        {%- assign return = return | append: "darkbrown" -%}
+
+    {%- when "#opinions" or "#opinion" -%}
+    {% comment %}hsl(340, 50%, 31%);{% endcomment %}
+        {%- assign return = return | append: "dark_pink" -%}
+
+    {%- when "#references" or "#reference" -%}
+        {%- assign return = return | append: "magenta" -%}
+    
+    {%- when "#posts" or "#post" -%}
+    {% comment %}hsl(230, 50%, 31%);{% endcomment %}
+        {%- assign return = return | append: "lavender" -%}
+
+    {%- else -%}
+        {%- assign return = return | append : word -%}
+{%- endcase -%}
