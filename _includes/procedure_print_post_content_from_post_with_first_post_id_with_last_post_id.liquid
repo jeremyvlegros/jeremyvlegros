@@ -2,7 +2,7 @@
 {%- assign post_no_color_background_1691010490420939832 = include.from_post.no_color_background -%}
 {%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
 {%- assign post_date_of_modification_1691010490420939832 = include.from_post.date_of_modification -%}
-{%- assign post_title_1691010490420939832 = include.from_post.title -%}
+{%- assign post_title_1691010490420939832 = include.from_post.title | capitalize -%}
 {%- assign post_tags_1691010490420939832 = include.from_post.tags -%}
 {%- assign post_id_1691010490420939832 = null -%}
 {%- assign first_post_id_1691010490420939832 = include.with_first_post_id -%}
@@ -217,7 +217,9 @@
                 </a>
             {%- endcapture -%}
         {%- endif -%}
-        
+
+        {%- assign _PAGE_TITLE_1691010490420939832 = page.title | upcase -%}
+
         {% comment %} home page : muting home button  {% endcomment %}
         {%- if page.title == "Home" or page.title == "home"-%}
             {%- assign button_home_1691010490420939832 = null -%}

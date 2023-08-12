@@ -19,7 +19,7 @@
                         <li>
                             {%- comment -%} handling empty strings {%- endcomment -%}
 
-                            <a href="{{ post.url | relative_url }}"> {{ post.title }}</a>
+                            <a href="{{ post.url | relative_url }}"> {{ post.title | capitalize }}</a>
                             {% comment %}{% endcomment %}
                         </li>
                         {% comment %}{% endcomment %}
