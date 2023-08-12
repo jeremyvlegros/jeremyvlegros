@@ -479,13 +479,13 @@ TAG NOT PRESENT
 {% comment %} {% endcomment %}
 ```
 
-## `as_tag_from_word.liquid`
+## `as_html_the_tag_from_word.liquid`
 
-{% include as_tag_from_word.liquid from_word="aaaaaa" %}
+{% include as_html_the_tag_from_word.liquid from_word="aaaaaa" %}
 {{return}}
 
 
-{% include as_tag_from_word.liquid from_word="#aaaaaa" %}
+{% include as_html_the_tag_from_word.liquid from_word="#aaaaaa" %}
 {{return}}
 
 ## url relative with a space
