@@ -152,12 +152,12 @@
 {%- endcapture -%}
 
 {% comment %} button tags {% endcomment %}
-{%- capture button_tags_1691010490420939832 -%}
+{%- capture button_index_tags_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = "/tag/tags" | relative_url -%}
     <a class="col button"
        style="background-color: rgba(0,0,0,60%);
        border-width: 3px"
-       href="{{ tag_url_1691010490420939832 }}"> Tags
+       href="{{ tag_url_1691010490420939832 }}"> Index
     </a>
 {%- endcapture -%}
 
@@ -227,8 +227,8 @@
         {%- endif -%}
 
         {% comment %} tags page : muting tags button  {% endcomment %}
-        {%- if _PAGE_TITLE_1691010490420939832 == "TAGS" -%}
-            {%- assign button_tags_1691010490420939832 = null -%}
+        {%- if _PAGE_TITLE_1691010490420939832 == "TAGS / INDEX" -%}
+            {%- assign button_index_tags_1691010490420939832 = null -%}
             {%- assign button_id_1691010490420939832 = null -%}
             {%- assign button_top_1691010490420939832 = null -%}
             {%- assign button_bottom_1691010490420939832 = null -%}
@@ -239,7 +239,7 @@
         {{ button_home_1691010490420939832 }}
 
         {% comment %} tags button {% endcomment %}
-        {{ button_tags_1691010490420939832 }}
+        {{ button_index_tags_1691010490420939832 }}
 
         {% comment %} bottom button {% endcomment %}
         {{ button_bottom_1691010490420939832 }}
@@ -352,6 +352,7 @@
 {%- assign button_top_1691010490420939832 = null -%}
 {%- assign button_bottom_1691010490420939832 = null -%}
 {%- assign button_home_1691010490420939832 = null -%}
+{%- assign button_index_tags_1691010490420939832 = null -%}
 {%- assign page_permalink_tag_1691010490420939832 = null -%}
 {%- assign tag_word_1691010490420939832 = null -%}
 {%- assign _PAGE_TITLE_1691010490420939832 = null -%}
