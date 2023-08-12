@@ -8,7 +8,13 @@
 
 {%- capture return -%}
     {%- assign word = include.from_word | replace: "#", "" | replace : " ","_"-%}
-    {%- assign color_background = "color_background_" | append : word -%}
+
+    {%- comment -%} color_background {%- endcomment -%}
+    {%- include as_color_background_from_tag.liquid from_tag=tag_1691339278938925411 -%}
+    {%- assign color_background = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
     <a class="col button {{ color_background }}" style="text-decoration: none"
        href=" {{ '/tag/' | append: include.from_word | replace: "#", "" | relative_url }} "> {{ tag_1691339278938925411 }}
     </a>
