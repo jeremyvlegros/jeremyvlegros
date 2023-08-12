@@ -185,54 +185,48 @@
 
         {%- if page.layout == "timeline" -%}
 
-            {%- if _PAGE_TITLE == "POSTS"-%}
-            📖
-            {%- elsif _PAGE_TITLE == "REFERENCES"-%}
-             🏷
-            {%- elsif _PAGE_TITLE == "STATUS"-%}
-            📰
-            {%- elsif _PAGE_TITLE == "INFORMATIONS"-%}
-            📚
-            {%- elsif _PAGE_TITLE == "VIDEOS"-%}
-            📼
-            {%- elsif _PAGE_TITLE == "LINUX"-%}
-            🐧
-            {%- elsif _PAGE_TITLE == "TWITTER"-%}
-            🐦
-            {%- elsif _PAGE_TITLE == "OPINIONS"-%}
-            💡
-            {%- elsif _PAGE_TITLE == "DEBIAN"-%}
-            🌀
-            {%- elsif _PAGE_TITLE == "GNOME"-%}
-            👣
-            {%- elsif _PAGE_TITLE == "WEBSITE"-%}
-            💼
-            {%- elsif _PAGE_TITLE == "TUMBLR"-%}
-            🇹
-            {%- elsif _PAGE_TITLE == "WORKSHOP"-%}
-            ⚙
-            {%- elsif _PAGE_TITLE == "VIDEO GAMES"-%}
-            🎮
-            {%- elsif _PAGE_TITLE == "ABOUT"-%}
+            {%- if _PAGE_TITLE == "ABOUT"-%}
             ❓
+            {%- elsif _PAGE_TITLE == "HOME" -%}
+            🪴
+            {%- elsif _PAGE_TITLE == "SANDBOX"-%}
+            🪣
+            {%- elsif _PAGE_TITLE == "BUILD"-%}
+            🚦
+            {%- elsif _PAGE_TITLE == "LINKS"-%}
+            🔗
             {%- else -%}
-            📃
+            🌿
             {%- endif -%}
-        {%- elsif _PAGE_TITLE == "INDEX" -%}
-        🔖
-        {%- elsif _PAGE_TITLE == "SANDBOX"-%}
-        🪣
-        {%- elsif _PAGE_TITLE == "BUILD"-%}
-        🚦
-        {%- elsif _PAGE_TITLE == "LINKS"-%}
-        🔗
+
         {%- elsif page.layout == "post" -%}
-        📄
+
+            {%- assign _PAGE_TITLE_WORDS = _PAGE_TITLE | split : " "-%}
+
+            {%- assign _PAGE_TITLE_FIRST_WORD = _PAGE_TITLE_WORDS | first -%}
+
+            {%- if _PAGE_TITLE == "TAGS / INDEX" -%}
+            🌿
+            {%- elsif _PAGE_TITLE_FIRST_WORD == "ABOUT" -%}
+
+            {%- elsif _PAGE_TITLE_FIRST_WORD == "STATUS" -%}
+
+            {%- elsif _PAGE_TITLE_FIRST_WORD == "REFERENCE" -%}
+
+            {%- elsif _PAGE_TITLE_FIRST_WORD == "INFORMATION" -%}
+
+            {%- elsif _PAGE_TITLE_FIRST_WORD == "OPINION" -%}
+            🌱
+            {%- else -%}
+            🍃
+            {%- endif -%}
+
         {%- endif -%}
-        {%- assign _PAGE_TITLE = null -%}
+
+            {%- assign _PAGE_TITLE = null -%}
         </text></svg>">
 
-        {%- comment -%}  📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}
+        {%- comment -%} 📖 📰📚📼🐧🐦💡🌀👣💼🇹⚙🎮📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}
     </head>
     <body>
         <main class="page-content" aria-label="Content">
