@@ -313,14 +313,14 @@
 </div>
 
 <div>
-    {% comment %}<h3>`as_color_background_from_date.liquid`</h3>{% endcomment %}
+    {% comment %}<h3>`as_css_class_the_color_background_from_date.liquid`</h3>{% endcomment %}
     
     <pre>
     {%- assign input = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
         {%- assign expected = "color_background_28" -%}
     
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_color_background_from_date.liquid from_date=input -%}
+        {%- include as_css_class_the_color_background_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -329,7 +329,7 @@
     
     
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_color_background_from_date.liquid > custom_date" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_css_class_the_color_background_from_date.liquid > custom_date" -%}
     
     
         {%- assign expected = null -%}
@@ -342,7 +342,7 @@
         {%- assign expected = "color_background_01" -%}
     
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_color_background_from_date.liquid from_date=input -%}
+        {%- include as_css_class_the_color_background_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -351,7 +351,7 @@
     
     
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_color_background_from_date.liquid > normal date" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_css_class_the_color_background_from_date.liquid > normal date" -%}
     
     
         {%- assign expected = null -%}
@@ -364,7 +364,7 @@
         {%- assign expected = null -%}
     
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_color_background_from_date.liquid from_date=input -%}
+        {%- include as_css_class_the_color_background_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -373,7 +373,7 @@
     
     
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_color_background_from_date.liquid > date empty string" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_css_class_the_color_background_from_date.liquid > date empty string" -%}
     
     
         {%- assign expected = null -%}
@@ -386,7 +386,7 @@
         {%- assign expected = null -%}
     
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_color_background_from_date.liquid from_date=input -%}
+        {%- include as_css_class_the_color_background_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -395,7 +395,7 @@
     
     
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_color_background_from_date.liquid > date null" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_css_class_the_color_background_from_date.liquid > date null" -%}
     
     
         {%- assign expected = null -%}
