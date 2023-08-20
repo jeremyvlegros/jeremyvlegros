@@ -48,12 +48,10 @@
         <div class="col-12 col-sm-5 col-lg-5">
             <div id="side_index" class="row">
                 <div class="side_index_content">
+                    {%- if page_title_1690569561039 -%}
+                        <h1 class="page-heading">{{ page_title_1690569561039 }}</h1>
+                    {%- endif -%}
                     <ul>
-                        {%- if page_title_1690569561039 -%}
-                            <li>
-                                <h1 class="page-heading">{{ page_title_1690569561039 }}</h1>
-                            </li>
-                        {%- endif -%}
 
                         {%- comment -%}printing HTML index post list  {%- endcomment -%}
                         {{ html_post_index_list_1690569561039 }}
