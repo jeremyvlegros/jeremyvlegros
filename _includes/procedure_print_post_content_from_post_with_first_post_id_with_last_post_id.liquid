@@ -60,7 +60,7 @@
     {%- assign post_color_background_1691010490420939832 = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
 {%- else -%}
     {%- comment -%} generating post_color_background_1691010490420939832 {%- endcomment -%}
-    {%- include as_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+    {%- include as_css_class_the_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
     {%- assign post_color_background_1691010490420939832 = return -%}
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -115,51 +115,57 @@
     {%- endcapture -%}
 {%- endif -%}
 
-{% comment %} bottom button {% endcomment %}
-{%- capture button_bottom_1691010490420939832 -%}
-    {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-    <a class="col button"
-       style="background-color: rgba(0,0,0,60%);
-       border-width: 3px"
-       href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;oldest</a>
-{%- endcapture -%}
-
 {% comment %} top button {% endcomment %}
 {%- capture button_top_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-    <a class="col button"
-       style="background-color: rgba(0,0,0,60%);
-       border-width: 3px"
-       href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Newest</a>
+    <a class="col button color_background_lime"
+       style="border-width: 3px"
+       {% comment %}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{% endcomment %}
+       href={{ tag_url_1691010490420939832 }}> Top</a>
+{%- endcapture -%}
+
+{% comment %} bottom button {% endcomment %}
+{%- capture button_bottom_1691010490420939832 -%}
+    {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
+    <a class="col button color_background_olive"
+       style="border-width: 3px"
+       {% comment %}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{% endcomment %}
+       href="{{ tag_url_1691010490420939832 }}"> Bottom</a>
 {%- endcapture -%}
 
 {%- comment -%} home button {%- endcomment -%}
 {%- capture button_home_1691010490420939832 -%}
-    <a class="col button"
-       style="background-color: rgba(0,0,0,60%);
-       border-width: 3px"
-       href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>
+    <a class="col button color_background_purple"
+       style="border-width: 3px"
+       {% comment %}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{% endcomment %}
+       href="{{ '/' | relative_url }}"> Home </a>
 {%- endcapture -%}
 
 {% comment %} id button in timeline {% endcomment %}
 {%- capture button_id_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-    <a class="col button "
-       style="background-color: rgba(0,0,0,60%);
-   border-width: 3px;"
-       href="{{ tag_url_1691010490420939832 }}"> Open
+    <a class="col button color_background_sand_green"
+       style="border-width: 3px;"
+       href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }}
 </a>
 {%- endcapture -%}
 
-{% comment %} button tags {% endcomment %}
-{%- capture button_index_tags_1691010490420939832 -%}
+{%- comment -%}  button tags {%- endcomment -%}
+{%- include as_html_the_tag_from_word.liquid from_word="tags"-%}
+{%- assign button_tags_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{% comment %}
+{%- capture button_tags_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = "/tag/tags" | relative_url -%}
     <a class="col button"
        style="background-color: rgba(0,0,0,60%);
        border-width: 3px"
-       href="{{ tag_url_1691010490420939832 }}"> Index
+       href="{{ tag_url_1691010490420939832 }}"> tags
     </a>
 {%- endcapture -%}
+{% endcomment %}
 
 
 {%- capture post_tags_1691010490420939832 -%}
@@ -215,16 +221,21 @@
             {% comment %}doesn't show top button in single posts {% endcomment %}
             {%- assign button_top_1691010490420939832 = null -%}
 
-            {% comment %} home {% endcomment %}
+            {%- capture button_posts_1691010490420939832 -%}
 
-            {%- capture button_home_1691010490420939832 -%}
-                <a class="col button"
-                   style="background-color: rgba(0,0,0,60%);
-                   border-width: 3px"
-                   href="{{ '/#' | append: post_id_1691010490420939832 | relative_url }}">
-                    ⌂&nbsp;Home
+                {%- comment -%} color_background {%- endcomment -%}
+                {%- include as_css_class_the_color_background_from_tag.liquid from_tag="#posts" -%}
+                {%- assign color_background = return -%}
+                {%- assign return = null -%}
+                {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+                <a class="col button {{ color_background }}"
+                   style="border-width: 3px"
+                   href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
+                    #posts
                 </a>
             {%- endcapture -%}
+
         {%- endif -%}
 
         {%- assign _PAGE_TITLE_1691010490420939832 = page.title | upcase -%}
@@ -237,7 +248,7 @@
 
         {% comment %} tags page : muting tags button  {% endcomment %}
         {%- if _PAGE_TITLE_1691010490420939832 == "TAGS / INDEX" -%}
-            {%- assign button_index_tags_1691010490420939832 = null -%}
+            {%- assign button_tags_1691010490420939832 = null -%}
             {%- assign button_id_1691010490420939832 = null -%}
             {%- assign button_top_1691010490420939832 = null -%}
             {%- assign button_bottom_1691010490420939832 = null -%}
@@ -247,17 +258,20 @@
         {% comment %} home button {% endcomment %}
         {{ button_home_1691010490420939832 }}
 
-        {% comment %} tags button {% endcomment %}
-        {{ button_index_tags_1691010490420939832 }}
-
-        {% comment %} bottom button {% endcomment %}
-        {{ button_bottom_1691010490420939832 }}
-
         {% comment %} top button {% endcomment %}
         {{ button_top_1691010490420939832 }}
 
+        {% comment %} bottom button {% endcomment %}
+        {{ button_bottom_1691010490420939832 }}
+        
         {% comment %} id button {% endcomment %}
         {{ button_id_1691010490420939832 }}
+
+        {% comment %} post button {% endcomment %}
+        {{ button_posts_1691010490420939832 }}
+
+        {% comment %} tags button {% endcomment %}
+        {{ button_tags_1691010490420939832 }}
 
         {% comment %} tags {% endcomment %}
         {%- for tag in post_tags_1691010490420939832 -%}
@@ -268,13 +282,11 @@
                     {%- continue -%}
                 {%- endunless -%}
 
-
-                {%- if _PAGE_TITLE_1691010490420939832 != "TAGS" -%}
-                    {% comment %} skip #posts (it is inherently home) {% endcomment %}
-                    {%- if tag == "#posts" -%}
-                        {%- continue -%}
-                    {%- endif -%}
+            {%- if page.category == "post" -%}
+                {%- if tag == "#posts" -%}
+                    {%- continue -%}
                 {%- endif -%}
+            {%- endif -%}
             {%- endif -%}
 
             {% comment %} getting tag {% endcomment %}
@@ -361,7 +373,9 @@
 {%- assign button_top_1691010490420939832 = null -%}
 {%- assign button_bottom_1691010490420939832 = null -%}
 {%- assign button_home_1691010490420939832 = null -%}
-{%- assign button_index_tags_1691010490420939832 = null -%}
+{%- assign button_tags_1691010490420939832 = null -%}
 {%- assign page_permalink_tag_1691010490420939832 = null -%}
 {%- assign tag_word_1691010490420939832 = null -%}
 {%- assign _PAGE_TITLE_1691010490420939832 = null -%}
+{%- assign button_posts_1691010490420939832 = null -%}
+{%- assign color_background = null -%}
