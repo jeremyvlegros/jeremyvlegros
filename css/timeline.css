@@ -11,9 +11,9 @@
     /*display: none;*/
     /*text-align  : center;*/
     font-weight               : bolder;
-    font-variant-caps: all-small-caps;
-    display: flex;
-    font-size: 30px;
+    font-variant-caps         : all-small-caps;
+    display                   : flex;
+    font-size                 : 30px;
     color                     : black;
     position                  : fixed;
     left                      : 5px;
@@ -24,9 +24,9 @@
     /*text-decoration: underline;*/
     /*text-decoration-color: white;*/
     text-decoration-thickness : 3px;
-    border                    : 2px none black;
+    border                    : 2px none var(--color_post_shadow);
     border-left-style         : solid;
-    z-index: -1;
+    z-index                   : -1;
     height                    : 100%;
 }
 
@@ -50,14 +50,21 @@
 
 .timeline .post
 {
-    margin-bottom: 27vh;
+    /* spacing between posts */
+    margin-bottom : 20vh;
+    margin-top    : 0;
+    margin-right  : 0;
+    margin-left   : 0;
 }
 
 .timeline .post-list
 {
-    margin-top   : 30px;
-    margin-left  : 0;
+    /*margin-top   : 30px;*/
+    /*margin-top   : 0!important;*/
+    margin-left  : 10px;
+    margin-right : 4%;
     padding-left : 0;
+
 }
 
 .timeline .post-list .post
@@ -80,36 +87,27 @@
 
 /* ------------------ INDEX --------------------------- */
 
-#side_index
-{
-    left          : 0;
-    margin-bottom : 30px;
-    margin-top    : -30px;
-
-    /*background-color : var(--color_background_side_index);*/
-    color         : var(--color_text_side_index);
-    /*margin-right     : 40px;  */
-    /*margin-left      : 40px;*/
-    padding       : 0;
-    position      : fixed;
-    width         : inherit;
-}
-
-/* scrolling */
-
-#side_index
-{
-    overflow-y : scroll;
-    height     : 99%;
-
-}
-
-
 /*noinspection CssUnknownProperty*/
 #side_index
 {
+    left            : 0;
+    margin-top      : -30px;
+    margin-bottom   : 30px;
+
+    /*background-color : var(--color_background_side_index);*/
+    color           : var(--color_text_side_index);
+    /*margin-right     : 40px;  */
+    /*margin-left      : 40px;*/
+    padding         : 0;
+    position        : fixed;
+    width           : inherit;
+
+    /* scrolling */
+    overflow-y      : scroll;
+    height          : 99%;
     /*  firefox */
     scrollbar-width : none;
+    z-index         : 4;
 }
 
 #side_index::-webkit-scrollbar
@@ -126,7 +124,8 @@
 
 #side_index .side_index_content
 {
-    padding : 10%;
+    /*padding-bottom : 10%;*/
+    /*margin-left: 5%;*/
 }
 
 
@@ -134,51 +133,54 @@
 {
     /*position         : relative;*/
     /*left             : -30px;*/
-    /*padding-left     : 17%;*/
-    padding-right : 10%;
+    padding-left : 50px;
+    /*padding-right : 10%;*/
 }
 
 #side_index .side_index_content li
 {
-    margin-top    : 3%;
-    margin-bottom : 3%;
+    margin-top    : 8px;
+    margin-bottom : 8px;
     margin-left   : 0;
+    margin-right  : 10px;
+    padding       : 5px;
     display       : flex;
+
+    border-radius : 15px;
+    transition    : all .2s ease-in-out;
+    border        : 2px solid var(--color_post_shadow);
+    box-shadow    : 1px 1px 1px 1px var(--color_post_shadow);
 }
 
 
 /* buttons */
 #side_index .side_index_content a
 {
-    /*background-color : var(--color_background_post_header);*/
-    /*color            : black;*/
-    /*background-color : #DDD;*/
     color           : white;
-    padding         : 20px;
+    padding         : 15px;
+    margin-right    : 70px;
     text-decoration : none;
-    /*border-radius   : 30px;*/
-    border-radius   : 15px;
     transition      : all .2s ease-in-out;
-    border          : 2px solid #111;
-    /*box-shadow       : 1px 3px 1px 1px var(--color_post_shadow), 1px 3px 1px 1px var(--color_post_shadow);*/
-    box-shadow      : 1px 3px 1px 1px #222, 1px 3px 1px 1px #222;
     width           : 100%;
-    /*font-weight     : lighter;*/
-
 }
 
-#side_index .side_index_content a:hover
+#side_index .side_index_content li:hover
 {
-    transform        : scale(.97) !important;
-    background-color : white;
+    transform  : scale(.97) !important;
+    /*background-color : white;*/
     /*color            : black;            */
-    box-shadow       : 1px 1px 1px 1px black, 1px 1px 1px 1px black;
+    box-shadow : 1px 1px 1px 1px var(--color_post_shadow);
 }
 
 /* responsive tweak */
 
 @media screen and (max-width : 576px)
 {
+    #timeline
+    {
+        padding : 0;
+    }
+
     #side_index
     {
         position      : relative;
@@ -200,12 +202,19 @@
 
     .timeline .post-list
     {
-        margin-left : 13%;
+        margin-left : 10%;
+
+    }
+
+    .timeline .post
+    {
+        margin-bottom : 2vh;
+
     }
 
     .timeline .page-heading
     {
-        z-index: 1;
+        z-index : 1;
     }
 }
 
