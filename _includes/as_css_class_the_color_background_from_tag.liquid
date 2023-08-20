@@ -52,6 +52,10 @@
     {% comment %}hsl(230, 50%, 31%);{% endcomment %}
         {%- assign return = return | append: "lavender" -%}
 
+    {%- when "#tags" -%}
+    {% comment %}hsl(230, 50%, 31%);{% endcomment %}
+        {%- assign return = return | append: "blue_violet" -%}
+
     {%- else -%}
         {%- assign return = return | append : word -%}
 {%- endcase -%}
