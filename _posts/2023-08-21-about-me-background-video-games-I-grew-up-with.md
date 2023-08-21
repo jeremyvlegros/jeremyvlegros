@@ -33,7 +33,7 @@ tags                 :
 - Final Fantasy VII (Playstation)
 - Final Fantasy IX (Playstation)
 - Red Faction (Playstation 2)
-- Time splitters (Playstation 2)
+- Time splitters 2 (Playstation 2)
 - Command & conquer 3 red alert (PC & Playstation)
 - Command & conquer (PC)
 - Hear of Darkness (PC and Playstation)
