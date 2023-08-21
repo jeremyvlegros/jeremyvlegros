@@ -1,6 +1,7 @@
 ---
 title                : "About me > background > video games I grew up with"
 date_of_creation     : "#date 2023-08-21 17:01 1692622917001260457 GMT"
+date_of_modification : "#date 2023-08-21 18:45 1692629109447528014 GMT"
 post_id              : 1692622917001260457
 permalink            : /post/1692622917001260457
 tags                 : 
@@ -61,18 +62,19 @@ tags                 :
 - Medal of honor (Playstation)
 - Dino Crisis (Playstation)
 - Midnight Club (Playstation 2)
+- Kill Zone (Playstation 2)
 - Metal gear solid 2 (Playstation 2)
-- Metal gear solid 3 (Playstation 2 ?)
-- Parasite Eve 2 (Playstation 1 )
-- Resident Evil 1 (Playstation 1 )
-- Resident Evil 2 (Playstation 1 )
-- Resident Evil 3 (Playstation 1 )
+- Metal gear solid 3 (Playstation 2)
+- Parasite Eve 2 (Playstation 1)
+- Resident Evil 1 (Playstation 1)
+- Resident Evil 2 (Playstation 1)
+- Resident Evil 3 (Playstation 1)
 - Resident Evil Code Veronica (Playstation 2)
-- Resident Evil 4 (Playstation 2 ?)
-- Devil May Cry 1 (Playstation 2 )
-- Devil May Cry 2 (Playstation 2 )
-- Devil May Cry 3 (Playstation 2 )
-- Ace Combat 2 (Playstation 1 )
-- Ace Combat 3 (Playstation 1 )
-- Ace Combat 4 (Playstation 2 )
-- Ace Combat 5 (Playstation 2 )
+- Resident Evil 4 (Playstation 2)
+- Devil May Cry 1 (Playstation 2)
+- Devil May Cry 2 (Playstation 2)
+- Devil May Cry 3 (Playstation 2)
+- Ace Combat 2 (Playstation 1)
+- Ace Combat 3 (Playstation 1)
+- Ace Combat 4 (Playstation 2)
+- Ace Combat 5 (Playstation 2)
