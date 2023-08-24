@@ -6,7 +6,7 @@ post_id              : 1690880245921914510
 permalink            : /post/1690880245921914510
 tags :
 - "#posts"
-- "#opinions"
+- "#opinion"
 - "#twitter"
 - "#x corp"
 ---
