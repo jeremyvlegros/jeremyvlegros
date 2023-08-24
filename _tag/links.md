@@ -1,4 +1,4 @@
 ---
-title                : "links"
+title                : "#links"
 tag                  : "#links"
 ---

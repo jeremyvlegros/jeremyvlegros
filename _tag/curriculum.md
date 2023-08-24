@@ -1,4 +1,4 @@
 ---
-title                : curriculum
+title                : "#curriculum"
 tag                  : "#curriculum"
 ---
