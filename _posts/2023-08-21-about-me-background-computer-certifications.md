@@ -7,7 +7,6 @@ tags                 :
 - "#posts"
 - "#about"
 - "#me"
-- "#languages"
 ---
 
 - C2i (french certification stating that I know to use a computer)

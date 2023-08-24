@@ -8,7 +8,6 @@ tags                 :
 - "#posts"
 - "#about"
 - "#me"
-- "#languages"
 ---
 
 Main : 
