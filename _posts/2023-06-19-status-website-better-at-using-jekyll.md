@@ -14,4 +14,4 @@ I had to take a break and think calmly about it.
 
 The documentation was not clear enough (official and unofficial).
 
-By searching for specific things, then extrapolated with testing Liquid × variables × Jekyll, my scripting has leveled up.
+By searching for specific things, then extrapolated with testing Liquid × variables × Jekyll, my scripting leveled up.
