@@ -210,9 +210,9 @@
         {%- endif -%}
 
         {%- comment -%} post button specifics  {%- endcomment -%}
-        {%- if page.category == "post" -%}
+        {%- if page.layout == "post" -%}
 
-            {% comment %}doesn't show id in single posts {% endcomment %}
+            {% comment %} doesn't show id in single posts {% endcomment %}
             {%- assign button_id_1691010490420939832 = null -%}
 
             {% comment %}doesn't show bottom button in single posts {% endcomment %}
@@ -229,11 +229,22 @@
                 {%- assign return = null -%}
                 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-                <a class="col button {{ color_background }}"
+                {% comment %} the address doesn't exist go to posts {% endcomment %}
+                {%- if page.title =="tags"-%}
+                   <a class="col button {{ color_background }}"
                    style="border-width: 3px"
-                   href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
+                   href="{{ '/tag/posts' | relative_url }}">
                     #posts
-                </a>
+                    </a>
+
+                {%- else -%}
+                    <a class="col button {{ color_background }}"
+                       style="border-width: 3px"
+                       href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
+                        #posts
+                    </a>
+                {%- endif -%}
+
             {%- endcapture -%}
 
         {%- endif -%}
