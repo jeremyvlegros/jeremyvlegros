@@ -12,5 +12,5 @@ tags                 :
 
 - I create the post format that I need
 - I can add functionalities
-- building × drafting × my workshop system
+- I build × draft × parts of my workshop system online 
   
