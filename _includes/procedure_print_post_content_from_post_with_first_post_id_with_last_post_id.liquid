@@ -230,7 +230,7 @@
                 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
                 {% comment %} the address doesn't exist go to posts {% endcomment %}
-                {%- if page.title =="tags"-%}
+                {%- if page.title =="#tags"-%}
                    <a class="col button {{ color_background }}"
                    style="border-width: 3px"
                    href="{{ '/tag/posts' | relative_url }}">
@@ -258,7 +258,7 @@
         {%- endif -%}
 
         {% comment %} tags page : muting tags button  {% endcomment %}
-        {%- if _PAGE_TITLE_1691010490420939832 == "TAGS / INDEX" -%}
+        {%- if _PAGE_TITLE_1691010490420939832 == "#TAGS" -%}
             {%- assign button_tags_1691010490420939832 = null -%}
             {%- assign button_id_1691010490420939832 = null -%}
             {%- assign button_top_1691010490420939832 = null -%}
