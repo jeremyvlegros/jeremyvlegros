@@ -2,7 +2,6 @@
 title                : "status > `Twitter` > tying up some loose ends"
 date_of_creation     : "#date 2023-08-01 13:00 1690880438954979985 GMT"
 date_of_modification : "#date 2023-08-24 13:04 1692867888078813023 GMT"
-post_id              : 1690880438954979985
 permalink            : /post/1690880438954979985
 tags                 :
 - "#posts"

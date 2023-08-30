@@ -2,7 +2,6 @@
 title                : "opinion > `Twitter` &  `Tumblr`"
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914513 GMT"
 date_of_modification : "#date 2023-08-21 15:39 1692617940671929532 GMT"
-post_id              : 1690880245921914513
 permalink            : /post/1690880245921914513
 tags :
 - "#posts"

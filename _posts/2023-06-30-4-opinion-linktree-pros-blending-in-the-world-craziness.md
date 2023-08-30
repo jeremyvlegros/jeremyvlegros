@@ -2,7 +2,6 @@
 title                : "opinion > `linktree` > pros > Blending in the world craziness"
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747723 GMT"
 date_of_modification : "#date 2023-08-21 13:47 1692611263675258038 GMT"
-post_id              : 1688126427044747723
 permalink            : /post/1688126427044747723
 tags                 :
 - "#posts"             

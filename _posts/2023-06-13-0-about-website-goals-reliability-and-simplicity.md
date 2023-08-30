@@ -2,7 +2,6 @@
 title                : "About > website > goals > Reliability & simplicity"
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
 date_of_modification : "#date 2023-08-24 13:45 1692870325316194838 GMT"
-post_id              : 1686614400000000000
 permalink            : /post/1686614400000000000
 tags                 : 
 - "#posts"

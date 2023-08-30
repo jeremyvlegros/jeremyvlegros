@@ -2,7 +2,6 @@
 title                : "About me > background > video games I grew up with"
 date_of_creation     : "#date 2023-08-21 17:01 1692622917001260457 GMT"
 date_of_modification : "#date 2023-08-21 18:45 1692629109447528014 GMT"
-post_id              : 1692622917001260457
 permalink            : /post/1692622917001260457
 tags                 : 
 - "#posts"

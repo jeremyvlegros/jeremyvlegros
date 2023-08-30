@@ -2,7 +2,6 @@
 title                : "About me > building my dream job > reason"
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000003 GMT"
 date_of_modification : "#date 2023-08-24 10:54 1692860063589557058 GMT"
-post_id              : 1684454400000000003
 permalink            : /post/1684454400000000003
 tags                 : 
 - "#posts"

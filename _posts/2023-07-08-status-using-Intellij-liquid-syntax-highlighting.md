@@ -2,7 +2,6 @@
 title                : "status > using `Intellij` liquid syntax highlighting"
 date_of_creation     : "#date 2023-07-08 14:03 1688810620122102232 GMT"
 date_of_modification : "#date 2023-08-24 13:08 1692868093970018400 GMT"
-post_id              : 1688810620122102232
 permalink            : /post/1688810620122102232
 tags                 : 
 - "#posts"

@@ -2,7 +2,6 @@
 title                : "status > website > preparing code for other pages"
 date_of_creation     : "#date 2023-07-12 23:22 1689189755395272197 GMT"
 date_of_modification : "#date 2023-08-24 12:58 1692867520838836104 GMT"
-post_id              : 1689189755395272197
 permalink            : /post/1689189755395272197
 tags                 :
 - "#posts"

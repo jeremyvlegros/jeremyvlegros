@@ -2,7 +2,6 @@
 title                : "opinion > `linktree` > pros > constrasting my links"
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747722 GMT"
 date_of_modification : "#date 2023-08-24 11:20 1692861610334473934 GMT"
-post_id              : 1688126427044747722
 permalink            : /post/1688126427044747722
 tags                 :
 - "#posts"             

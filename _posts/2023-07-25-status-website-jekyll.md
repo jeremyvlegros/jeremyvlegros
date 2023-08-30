@@ -2,7 +2,6 @@
 title                : "status > website > `Jekyll`"
 date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
 date_of_modification : "#date 2023-08-11 17:28 1691760487859283875 GMT"
-post_id              : 1690231131792213244
 permalink            : /post/1690231131792213244
 tags                 : 
 - "#posts"

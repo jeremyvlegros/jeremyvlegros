@@ -2,7 +2,6 @@
 title                : "About > website > goals > code & referencing"
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000004 GMT"
 date_of_modification : "#date 2023-08-21 16:07 1692619645241676913 GMT"
-post_id              : 1686614400000000004
 permalink            : /post/1686614400000000004
 tags                 : 
 - "#posts"
