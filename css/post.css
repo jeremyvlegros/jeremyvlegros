@@ -1,9 +1,7 @@
-
 :root
 {
     --post_border_radius : 18px;
 }
-
 
 .version
 {
@@ -50,12 +48,6 @@
 .post a
 {
     color : var(--color_text_post_button);
-}
-
-.post hr
-{
-    /*display : none;*/
-
 }
 
 .post_title
@@ -107,35 +99,29 @@
 
 .post_content h4
 {
-
     font-size        : 1.6em;
     color            : #CCC;
     padding          : 1.5%;
     border-color     : rgba(0, 0, 0, var(--opacity_border_post_h4));
     background-color : rgba(0, 0, 0, var(--opacity_border_post_h4));
-
 }
 
 .post_content h5
 {
-
     font-size        : 1.5em;
     color            : #BBB;
     padding          : 1%;
     border-color     : rgba(0, 0, 0, var(--opacity_border_post_h5));
     background-color : rgba(0, 0, 0, var(--opacity_border_post_h5));
-
 }
 
 .post_content h6
 {
-
     font-size        : 1.4em;
     color            : #AAA;
     padding          : .5%;
     border-color     : rgba(0, 0, 0, var(--opacity_border_post_h6));
     background-color : rgba(0, 0, 0, var(--opacity_border_post_h6));
-
 }
 
 .post_content ul
@@ -177,8 +163,6 @@
     margin-left   : 10px;
     margin-right  : 10px;
     margin-bottom : 10px;
-
-
 }
 
 .tags a
@@ -228,137 +212,8 @@
     border-radius: 10px;
 }
 
-/*.post_content p*/
-/*{*/
-/*  margin-left : 4%;*/
-/*}*/
-
-/* testing title symbols */
-
-/*.post_content h2:before
-{
-  content: "└─┤ ";
-}*/
-
-
-/*.post_content h2:before*/
-/*{*/
-/*  content: "🮤 ";*/
-/*}*/
-
-/*.post_content h3:before*/
-/*{*/
-/*  content: "🮫 ";*/
-/*}*/
-
-/*.post_content h4:before*/
-/*{*/
-/*  content: "🮮 ";*/
-/*}*/
-
-/*.post_content h5:before*/
-/*{*/
-/*  content: "🮮🮣 ";*/
-/*}*/
-
-/*.post_content h5:before*/
-/*{*/
-/*  content: "🮮🮤 ";*/
-/*}*/
-
-
-/*.post_content h2:before*/
-/*{*/
-/*  content: "> ";*/
-/*}*/
-
-/*.post_content h3:before*/
-/*{*/
-/*  content: ">> ";*/
-/*}*/
-
-/*.post_content h4:before*/
-/*{*/
-/*  content: ">>> ";*/
-/*}*/
-
-/*.post_content h5:before*/
-/*{*/
-/*  content: ">>>> ";*/
-/*}*/
-
-/*.post_content h5:before*/
-/*{*/
-/*  content: ">>>>> ";*/
-/*}*/
-
-
-/*.post_content h2:before
-{
-  content: "🯲 ";
-}
-
-.post_content h3:before
-{
-  content: "🯳 ";
-}
-
-.post_content h4:before
-{
-  content: "🯴 ";
-}
-
-.post_content h5:before
-{
-  content: "🯵 ";
-}
-
-.post_content h5:before
-{
-  content: "🯶 ";
-}*/
-
-/*.post_content h2:before
-{
-  content: "🭷 ";
-}
-
-.post_content h3:before
-{
-  content: "🭸 ";
-}
-
-.post_content h4:before
-{
-  content: "🭹 ";
-}
-
-.post_content h5:before
-{
-  content: "🭺 ";
-}
-
-.post_content h5:before
-{
-  content: "🭻 ";
-}
-*/
-
-/* testing black on white */
-
-/*@media screen and (min-width: 885px)
-{ *
-  {--post_luminosity_trigger : 0%!important;}
-
-  body,.page
-  {
-    background-color: black;
-  }
-}
-*/
 
 /* error highlighting if using h1 in post content*/
-
 .post_content h1
 {
     text-decoration       : underline;
@@ -369,10 +224,4 @@
     color                 : black;
     /*  background-color : red;*/
 }
-
-.post_content h1:after
-{
-    content : " <== this needs to be upgraded to level 2 "
-}
-
 
