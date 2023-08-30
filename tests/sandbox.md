@@ -495,3 +495,78 @@ TAG NOT PRESENT
 
 {{"/tag/x corp" | relative_url}}
 
+## testing building an array of posts (this time I'll keep the code as reminder)
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign array = site.EMPTY_ARRAY -%}
+
+{%- for post in site.posts -%}
+
+{% comment %}{%- assign tag = post.tag -%}{% endcomment %}
+
+{%- assign tags = post.tags -%}
+
+{%- for tag in tags -%}
+
+    {{ tag | jsonify }}
+
+     {%- if tag == "#about" -%}
+        
+        {%- assign compacted_post = post | compact -%}        
+        {%- assign array = array | push : compacted_post -%}  
+        
+     {%- endif -%}
+      
+{%- endfor -%}
+
+{% comment %}{{ tag }}{% endcomment %}
+{% comment %}{{ post.tags }}{% endcomment %}
+{% comment %}{{ post.tag }}{% endcomment %}
+    
+{% endfor %}
+
+-----------------------------------------------------------
+
+{{ array |jsonify }}
+
+------------------------
+
+{% comment %}{{ site.posts | compact }}{% endcomment %}
+
+{% comment %}{% endcomment %}
+```
+
+
+## testing post index list from tags
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign tags = "#about #jekyll" | split :" " -%}
+
+{%- comment -%} post html index list {%- endcomment -%}
+{%- include as_html_the_post_index_list_from_array_of_tags.liquid from_array_of_tags=tags -%}
+
+{{ return }}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{% comment %} {% endcomment %}
+
+```
+
+## testing `as_array_the_first_and_last_post_id_from_array_of_tags.liquid`
+
+```liquid
+{% comment %}{% endcomment %}
+
+{%- assign tags = "#about #jekyll" | split :" " -%}
+{%- include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags= tags-%}
+{%- assign array = return -%}
+{%- assign return = null -%}
+{{ array | jsonify }}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{% comment %}{% endcomment %}
+```
+
+
