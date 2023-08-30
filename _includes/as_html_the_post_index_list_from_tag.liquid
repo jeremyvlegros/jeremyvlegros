@@ -1,0 +1,12 @@
+{%- comment -%} posts {%- endcomment -%}
+{%- include as_posts_from_tag.liquid from_tag=include.from_tag -%}
+{%- assign posts = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} the_post_index_list {%- endcomment -%}
+{%- include as_html_the_post_index_list_from_posts.liquid from_posts=posts -%}
+{% comment %} result is in the return {% endcomment %}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
