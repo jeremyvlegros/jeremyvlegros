@@ -22,8 +22,8 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%}HTML post list  {%- endcomment -%}
-{%- include as_html_the_post_list_from_posts.liquid from_posts=posts_1690569561039 -%}
-{%- assign html_post_list_1690569561039 = return -%}
+{%- include as_html_the_posts_from_posts.liquid from_posts=posts_1690569561039 -%}
+{%- assign html_posts_1690569561039 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -53,12 +53,12 @@
         </div>
 
         <div class="col-12 col-sm-7 col-lg-7">
-            <ul class="posts">
+            <div class="posts">
 
-                {%- comment -%}printing HTML post list  {%- endcomment -%}
-                {{ html_post_list_1690569561039 }}
+                {%- comment -%}printing HTML posts  {%- endcomment -%}
+                {{ html_posts_1690569561039 }}
 
-            </ul>
+            </div>
         </div>
 
     </div>
@@ -84,7 +84,7 @@
 </div>
 
 {%- assign html_post_index_list_1690569561039 = null -%}
-{%- assign html_post_list_1690569561039 = null -%}
+{%- assign html_posts_1690569561039 = null -%}
 {%- assign page_date_of_modification_1690569561039 = null-%}
 {%- assign page_date_of_creation_1690569561039 = null-%}
 {%- assign page_title_1690569561039 = null-%}
