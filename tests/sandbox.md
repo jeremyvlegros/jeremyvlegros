@@ -380,12 +380,12 @@ TAG NOT PRESENT
 {% comment %}{% endcomment %}
 ```
 
-## `as_html_the_post_list_from_posts.liquid`
+## `as_html_the_posts_from_posts.liquid`
 
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_post_list_from_posts.liquid from_posts=site.posts %}
+{% include as_html_the_posts_from_posts.liquid from_posts=site.posts %}
 {{ return }}
 {% comment %}{% endcomment %}
 ```
