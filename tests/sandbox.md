@@ -665,7 +665,7 @@ array pop 1 {{ array[0] | pop | jsonify }}
    <br>  value : {{ value }}  <br>  
  {%- endfor -%}
  
- => it didn't crash, I can use it without mercy -%}
+ => it didn't crash, I can use it without mercy
  {% comment %}{% endcomment %}
  ```
 
