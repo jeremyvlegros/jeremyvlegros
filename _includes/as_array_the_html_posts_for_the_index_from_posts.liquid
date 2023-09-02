@@ -1,0 +1,64 @@
+{%- comment -%} as_html_the_posts_for_the_index_from_posts.liquid {%- endcomment -%}
+
+{%- assign array_the_html_posts_for_the_index_1693649612738133574 = site.ARRAY_EMPTY -%}
+
+{%- comment -%} Initialization {%- endcomment -%}
+
+{%- if include.from_posts -%}
+
+    {%- if include.from_posts != "" -%}
+
+        {%- comment -%} generating the post list {%- endcomment -%}
+
+        {%- for post in include.from_posts -%}
+
+            {%- comment -%} enforcing posts with post layout {%- endcomment -%}
+            {%- if post.layout == "post" -%}
+
+                {%- if post.date_of_creation -%}
+
+                    {%- if post.date_of_creation != "" -%}
+
+                        {%- capture the_post_for_the_index_1693649612738133574 -%}
+
+                            {%- comment -%} color_background_1693649612738133574 {%- endcomment -%}
+                            {%- include as_css_class_the_color_background_from_date.liquid from_date=post.date_of_creation -%}
+                            {%- assign color_background_1693649612738133574 = return -%}
+                            {%- assign return = null -%}
+                            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+                            {%- comment -%} post_id_1693649612738133574 {%- endcomment -%}
+                            {%- include as_id_from_post.liquid from_date=post -%}
+                            {%- assign post_id_1693649612738133574 = return -%}
+                            {%- assign return = null -%}
+                            {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+                            <li>
+
+                                <a class="{{ color_background_1693649612738133574 }}"
+                                   href="#{{ post_id_1693649612738133574 }}"> {{ post.title | capitalize | escape }}
+                                </a>
+
+                            </li>
+
+                        {%- endcapture -%}
+
+                        {%- assign array_the_html_posts_for_the_index_1693649612738133574 = array_the_html_posts_for_the_index_1693649612738133574  | push : the_post_for_the_index_1693649612738133574 -%}
+
+                    {%- endif -%}
+                {%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = array_the_html_posts_for_the_index_1693649612738133574 | uniq -%}
+
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign the_post_for_the_index_1693649612738133574 = null -%}
+{%- assign post_id_1693649612738133574 = null -%}
+{%- assign color_background_1693649612738133574 = null -%}
+{%- comment -%} {%- endcomment -%}
+

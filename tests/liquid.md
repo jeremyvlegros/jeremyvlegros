@@ -588,7 +588,7 @@ result   : `{{ captured_text|replace : " ", "," }}`
 ```liquid
 {% comment %}{% endcomment %}
 {%- capture captured_text -%}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+  {%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {%- endcapture -%}
 {% comment %}{% endcomment %}
 ```
@@ -602,7 +602,7 @@ result : `{{ captured_text }}`
 {% raw %}
 {% comment %}{% endcomment %}
 {%- capture captured_text -%}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+  {%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {%- endcapture -%}
 {% comment %}{% endcomment %}
 
@@ -623,7 +623,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+  {%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {%- endcapture -%}
 
 value of result after call include : `{{ result }}`
@@ -638,7 +638,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture captured_text %}
-  {%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+  {%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -656,7 +656,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture sum %}
-  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {%- include test_function_sum_of_a_and_b.liquid a=3 b=2 -%}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`
@@ -674,7 +674,7 @@ Resetting the `result` variable
 value of result before call include : `{{ result }}`
 
 {% capture sum %}
-  {%- include function_sum_of_a_and_b.liquid a=3 b=2 -%}
+  {%- include test_function_sum_of_a_and_b.liquid a=3 b=2 -%}
 {% endcapture %}
 
 value of result after call include : `{{ result }}`

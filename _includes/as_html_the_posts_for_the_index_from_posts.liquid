@@ -1,0 +1,22 @@
+{%- comment -%} as_html_the_posts_for_the_index_from_posts.liquid {%- endcomment -%}
+
+{%- comment -%} Initialization {%- endcomment -%}
+
+{%- assign html_the_post_index_list = null -%}
+
+{%- comment -%} array_the_html_posts_for_the_index_1690556288006533672 {%- endcomment -%}
+{%- include as_array_the_html_posts_for_the_index_from_posts.liquid from_posts=include.from_posts -%}
+{%- assign array_the_html_posts_for_the_index_1690556288006533672 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- for html_post in array_the_html_posts_for_the_index_1690556288006533672 -%}
+    {%- assign html_the_post_index_list = html_the_post_index_list | append : html_post -%}
+{%- endfor -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = html_the_post_index_list -%}
+
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign html_the_post_index_list = null -%}
+{%- comment -%} {%- endcomment -%}

@@ -2,7 +2,7 @@
 
 {%- assign posts_1690556793031296570 = site.ARRAY_EMPTY -%}
 
-{%- include procedure_check_type_array_from.liquid from=posts_1690556793031296570 -%}
+{%- include procedure_crash_if_not_array_from.liquid from=posts_1690556793031296570 -%}
 
 {% for tag in site.tags %}
 
@@ -18,7 +18,7 @@
 {% endfor %}
 
 {%- comment -%}  sanity check, but even if it is an array, concat won't work with it, because it's an array of dictionnaries {%- endcomment -%}
-{%- include procedure_check_type_array_from.liquid from=posts_1690556793031296570 -%}
+{%- include procedure_crash_if_not_array_from.liquid from=posts_1690556793031296570 -%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- assign return = posts_1690556793031296570 -%}

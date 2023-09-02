@@ -3,7 +3,7 @@
 {%- assign array_from_string_and_separator_1690570208534 = include.from_string | split : include.from_separator -%}
 
 {%- comment -%} checking array {%- endcomment -%}
-{%- include procedure_check_type_array_from.liquid from=array_from_string_and_separator_1690570208534-%}
+{%- include procedure_crash_if_not_array_from.liquid from=array_from_string_and_separator_1690570208534-%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- assign return = array_from_string_and_separator_1690570208534 -%}

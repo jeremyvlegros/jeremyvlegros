@@ -102,7 +102,7 @@
 {%- endif -%}
 
 {%- comment -%} post_date_of_modification_1691010490420939832 processing {%- endcomment -%}
-{%- include as_modification_date_without_id_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
+{%- include as_string_the_modification_date_without_id_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
 {%- assign post_date_of_modification_1691010490420939832 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -346,7 +346,7 @@
 
 
 {%- comment -%} main HTML {%- endcomment -%}
-
+<!-- @id:{{ post_id_1691010490420939832 }} @title:{{ include.from_post.title | capitalize }} -->
 <article class="post {{ post_color_background_1691010490420939832 }}" itemscope
          itemtype="http://schema.org/BlogPosting">
 

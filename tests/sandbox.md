@@ -1,7 +1,7 @@
 ---
 title                : sandbox
 layout               : post
-print_array          : procedure_print_array_content.html
+print_array          : procedure_print_array_content.liquid
 ---
 
 ## test `ARRAY_EMPTY`
@@ -159,7 +159,7 @@ result :
 ```liquid
 {% comment %}{% endcomment %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include procedure_print_array_content.html array = array_numbers  -%}
+{%- include procedure_print_array_content.liquid array = array_numbers  -%}
 {% comment %}{% endcomment %}
 ```
 
@@ -167,7 +167,7 @@ result :
 {% comment %}{% endcomment %}
 {% raw %}
 {% assign array_numbers = "1,2,3,4,5" | split : ',' %}
-{%- include procedure_print_array_content.html array = array_numbers  -%}
+{%- include procedure_print_array_content.liquid array = array_numbers  -%}
 {% endraw %}
 {% comment %}{% endcomment %}
 ```
@@ -248,14 +248,14 @@ result :
 
 ```liquid
 {% comment %}{% endcomment %}
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+{%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {% comment %}{% endcomment %}
 ```
 
 ```liquid
 {% comment %}{% endcomment %}
 {% raw %}
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+{%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {% endraw %}
 {% comment %}{% endcomment %}
 ```
@@ -273,7 +273,7 @@ result :
 
 ```liquid
 {% comment %}{% endcomment %}
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+{%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {{ result }}
 {% comment %}{% endcomment %}
 ```
@@ -281,7 +281,7 @@ result :
 ```liquid
 {% comment %}{% endcomment %}
 {% raw %}
-{%- include function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
+{%- include test_function_persistent_sum_of_a_and_b.liquid a=3 b=2  -%}
 {{ result }}
 {% endraw %}
 {% comment %}{% endcomment %}
@@ -359,12 +359,12 @@ TAG NOT PRESENT
 {% comment %}{% endcomment %}
 ```
 
-## `as_html_the_post_index_list_from_posts.liquid`
+## `as_html_the_posts_for_the_index_from_posts.liquid`
 
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_post_index_list_from_posts.liquid from_posts=site.posts %}
+{% include as_html_the_posts_for_the_index_from_posts.liquid from_posts=site.posts %}
     {{ return }}
 {% comment %}{% endcomment %}
 ```
@@ -375,17 +375,17 @@ TAG NOT PRESENT
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_post_list_with_url_from_posts.liquid from_posts=site.posts %}
+{% include as_html_the_post_links_from_posts.liquid from_posts=site.posts %}
 {{ return }}
 {% comment %}{% endcomment %}
 ```
 
-## `as_html_the_posts_from_posts.liquid`
+## `as_html_the_post_contents_from_posts.liquid`
 
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_posts_from_posts.liquid from_posts=site.posts %}
+{% include as_html_the_post_contents_from_posts.liquid from_posts=site.posts %}
 {{ return }}
 {% comment %}{% endcomment %}
 ```
@@ -412,7 +412,7 @@ TAG NOT PRESENT
 {% comment %}{% endcomment %}
 ```
 
-## `as_string_word_with_inseparable_spaces_from_word.liquid`
+## `as_string_the_word_with_inseparable_spaces_from_word.liquid`
 
 ```liquid
 {% comment %} {% endcomment %} 
@@ -421,7 +421,7 @@ TAG NOT PRESENT
 {%- assign expected = "aaa&nbsp;aaa" -%}
 
 {%- comment -%} result {%- endcomment -%}
-{% include as_string_word_with_inseparable_spaces_from_word.liquid from_word=input %}
+{% include as_string_the_word_with_inseparable_spaces_from_word.liquid from_word=input %}
 {%- assign result = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -443,7 +443,7 @@ TAG NOT PRESENT
 {%- assign expected = "" -%}
 
 {%- comment -%} result {%- endcomment -%}
-{% include as_string_word_with_inseparable_spaces_from_word.liquid from_word=input %}
+{% include as_string_the_word_with_inseparable_spaces_from_word.liquid from_word=input %}
 {%- assign result = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -465,7 +465,7 @@ TAG NOT PRESENT
 {%- assign expected = "" -%}
 
 {%- comment -%} result {%- endcomment -%}
-{% include as_string_word_with_inseparable_spaces_from_word.liquid from_word=input %}
+{% include as_string_the_word_with_inseparable_spaces_from_word.liquid from_word=input %}
 {%- assign result = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -549,7 +549,7 @@ JSONIFIED {{ array | jsonify }}
 {%- assign tags = "#about #jekyll" | split :" " -%}
 
 {%- comment -%} post html index list {%- endcomment -%}
-{%- include as_html_the_post_index_list_from_array_of_tags.liquid from_array_of_tags=tags -%}
+{%- include as_array_the_html_posts_for_the_index_from_array_of_tags.liquid from_array_of_tags=tags -%}
 
 {{ return }}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -616,7 +616,7 @@ the array not jsonified : {{ array | compact }}
 {% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
 
 {%- comment -%} cleaned_array {%- endcomment -%}
-{%- include as_array_clean_from_array_of_tags.liquid from_array_of_tags=array-%}
+{%- include as_array_the_tags_from_array_of_compacted_tags.liquid from_array_of_compacted_tags=array-%}
 {%- assign cleaned_array = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -634,7 +634,7 @@ the array not jsonified : {{ array | compact }}
 {%- assign tags = tags | split :"#" -%}
 
 {%- comment -%} cleaned_array {%- endcomment -%}
-{%- include as_array_clean_from_array_of_tags.liquid from_array_of_tags=tags-%}
+{%- include as_array_the_tags_from_array_of_compacted_tags.liquid from_array_of_compacted_tags=tags-%}
 {%- assign cleaned_array = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -679,7 +679,7 @@ array pop 1 {{ array[0] | pop | jsonify }}
 array before : {{array | jsonify}}
 
 {%- comment -%} array {%- endcomment -%}
-{%- include as_array_without_duplicates_from_array.liquid from_array=array -%}
+{%- include as_array_posts_without_duplicates_from_array.liquid from_array=array -%}
 {%- assign array = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -688,3 +688,23 @@ array after : {{array | jsonify}}
 {% comment %}{% endcomment %}
 ```
 
+## displaying `site.post[0].content`
+
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign post = site.posts[0].content -%}
+{{ post }}
+<!---->
+{% comment %}{% endcomment %}
+```
+
+## displaying `site.post[0].output`
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign post = site.posts[0].output -%}
+{{ post }}
+<!---->
+{% comment %}{% endcomment %}
+```
