@@ -121,7 +121,7 @@
     <a class="col button color_background_lime"
        style="border-width: 3px"
        {% comment %}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{% endcomment %}
-       href={{ tag_url_1691010490420939832 }}> Top</a>
+       href="{{ tag_url_1691010490420939832 }}"> Top</a>
 {%- endcapture -%}
 
 {% comment %} bottom button {% endcomment %}
@@ -288,16 +288,19 @@
         {%- for tag in post_tags_1691010490420939832 -%}
 
             {% comment %} --- skipping conditions --- {% endcomment %}
+            {% comment %} using `if` to collapse code in IDE {% endcomment %}
             {%- if true -%}
+
                 {%- unless tag contains "#" -%}
                     {%- continue -%}
                 {%- endunless -%}
 
-            {%- if page.category == "post" -%}
-                {%- if tag == "#posts" -%}
-                    {%- continue -%}
+                {%- if page.category == "post" -%}
+                    {%- if tag == "#posts" -%}
+                        {%- continue -%}
+                    {%- endif -%}
                 {%- endif -%}
-            {%- endif -%}
+
             {%- endif -%}
 
             {% comment %} getting tag {% endcomment %}
