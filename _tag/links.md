@@ -1,4 +1,5 @@
 ---
 title                : "#links"
-tag                  : "#links"
+tags : 
+- "#links"
 ---

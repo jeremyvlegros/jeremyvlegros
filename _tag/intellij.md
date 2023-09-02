@@ -1,5 +1,6 @@
 ---
 title                : "#intellij"
-tag                  : "#intellij"
+tags : 
+- "#intellij"
 
 ---

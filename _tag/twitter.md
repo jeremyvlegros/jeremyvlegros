@@ -1,5 +1,6 @@
 ---
 title                : "#twitter"
-tag                  : "#twitter"
+tags : 
+- "#twitter"
 
 ---

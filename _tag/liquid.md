@@ -1,5 +1,6 @@
 ---
 title                : "#liquid"
-tag                  : "#liquid"
+tags : 
+- "#liquid"
 
 ---

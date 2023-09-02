@@ -1,5 +1,6 @@
 ---
 title                : "#tumblr"
-tag                  : "#tumblr"
+tags : 
+- "#tumblr"
 
 ---

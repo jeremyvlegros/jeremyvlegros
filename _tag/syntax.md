@@ -1,5 +1,6 @@
 ---
 title                : "#syntax"
-tag                  : "#syntax"
+tags : 
+- "#syntax"
 
 ---

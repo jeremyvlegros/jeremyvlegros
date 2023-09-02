@@ -1,5 +1,6 @@
 ---
 title                : "#avatar"
-tag                  : "#avatar"
+tags : 
+- "#avatar"
 
 ---

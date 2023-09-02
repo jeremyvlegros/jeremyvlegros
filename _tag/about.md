@@ -1,4 +1,5 @@
 ---
 title     : "#about"
-tag       : "#about"
+tags : 
+- "#about"
 ---

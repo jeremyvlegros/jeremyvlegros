@@ -1,5 +1,6 @@
 ---
 title                : "#highlighting"
-tag                  : "#highlighting"
+tags : 
+- "#highlighting"
 
 ---

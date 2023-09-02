@@ -1,5 +1,6 @@
 ---
 title                : "#php"
-tag                  : "#php"
+tags : 
+- "#php"
 
 ---

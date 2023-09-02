@@ -1,5 +1,6 @@
 ---
 title                : "#website"
-tag                  : "#website"
+tags : 
+- "#website"
 
 ---

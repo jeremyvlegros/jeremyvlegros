@@ -503,40 +503,44 @@ TAG NOT PRESENT
 
 {%- for post in site.posts -%}
 
-{% comment %}{%- assign tag = post.tag -%}{% endcomment %}
-
-{%- assign tags = post.tags -%}
-
-{%- for tag in tags -%}
-
-    {{ tag | jsonify }}
-
-     {%- if tag == "#about" -%}
-        
-        {%- assign compacted_post = post | compact -%}        
-        {%- assign array = array | push : compacted_post -%}  
-        
-     {%- endif -%}
-      
-{%- endfor -%}
-
-{% comment %}{{ tag }}{% endcomment %}
-{% comment %}{{ post.tags }}{% endcomment %}
-{% comment %}{{ post.tag }}{% endcomment %}
-    
+    {%- assign array = array | push : post -%}
+          
 {% endfor %}
 
------------------------------------------------------------
-
-{{ array |jsonify }}
-
-------------------------
-
-{% comment %}{{ site.posts | compact }}{% endcomment %}
-
+JSONIFIED {{ array | jsonify }}
 {% comment %}{% endcomment %}
 ```
 
+## testing flattening posts
+
+```liquid
+{% comment %}{% endcomment %}
+{% comment %}{% endcomment %}
+{%- assign array = site.EMPTY_ARRAY -%}
+
+{{site.posts | compact | jsonify }}
+{% comment %}{% endcomment %}
+```
+
+## testing flattening each post of posts into an array
+
+```liquid
+{% comment %}{% endcomment %}
+{%- assign array = site.EMPTY_ARRAY -%}
+
+{%- for post in site.posts -%}
+
+    {%- assign inner_post = post -%}
+    
+    {%- assign inner_post = post | compact -%}
+
+    {%- assign array = array | push : inner_post -%}
+          
+{% endfor %}
+
+JSONIFIED {{ array | jsonify }}
+{% comment %}{% endcomment %}
+```
 
 ## testing post index list from tags
 
@@ -569,4 +573,86 @@ TAG NOT PRESENT
 {% comment %}{% endcomment %}
 ```
 
+## testing array `| first` on string 
+
+printing first element of string {{ "first_element middle element last_element" | first }}
+
+=> array first don't crash if used on string
+
+## testing flattening `|compact` a string like an array
+
+flattening the string {{ "first_element middle element last_element" | compact }}
+
+=> array flattening don't crash if used on string
+
+## testing flattening `|compact` an array of tags
+
+{% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
+
+array : {{ array | jsonify }} 
+
+flattening the array {{ array | compact | jsonify }}
+
+the array not jsonified : {{ array | compact }}
+
+=> works as expected, I will have to split on the hashtag, and maybe re-add it
+
+## testing  `as_array_clean_from_array_of_tags`
+
+{% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
+
+{%- comment -%} cleaned_array {%- endcomment -%}
+{%- include as_array_clean_from_array_of_tags.liquid from_array_of_tags=array-%}
+{%- assign cleaned_array = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{{cleaned_array}}
+
+## testing  `as_array_clean_from_array_of_tags` with string converted to array
+
+{% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
+{%- assign tags = array | compact -%}
+{%- assign tags = tags | split :"#" -%}
+
+{%- comment -%} cleaned_array {%- endcomment -%}
+{%- include as_array_clean_from_array_of_tags.liquid from_array_of_tags=tags-%}
+{%- assign cleaned_array = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{{cleaned_array}}
+
+## testing pop array
+
+{% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" | push : "4" | push : "5" %}
+
+array {{ array | jsonify }}
+
+array pop 1 {{ array[0] | pop | jsonify }}
+
+## testing array offset going over the limit
+
+{% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" %}
+
+{%- for value in array offset:20 -%}
+  <br>  value : {{ value }}  <br>  
+{%- endfor -%}
+
+=> it didn't crash, I can use it without mercy
+
+## testing `as_array_without_duplicates_from_array.liquid`
+
+
+{% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" | push : "3" | push : "5" %}
+
+array before : {{array | jsonify}}
+
+{%- comment -%} array {%- endcomment -%}
+{%- include as_array_without_duplicates_from_array.liquid from_array=array -%}
+{%- assign array = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+array after : {{array | jsonify}}
 

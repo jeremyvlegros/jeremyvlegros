@@ -1,5 +1,6 @@
 ---
 title                : "#jekyll"
-tag                  : "#jekyll"
+tags : 
+- "#jekyll"
 
 ---
