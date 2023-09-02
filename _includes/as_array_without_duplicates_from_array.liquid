@@ -1,0 +1,36 @@
+{% comment %} the uniq function seems to not work on long strings or whatever {% endcomment %}
+
+{%- assign array = include.from_array -%}
+{%- assign cleaned_array = site.ARRAY_EMPTY -%}
+
+{%- assign array_length = array | size -%}
+
+{%- assign array_length_for_range = array_length | minus : 1 -%}
+
+{%- assign range = (0..array_length_for_range) -%}
+
+{%- assign inner_array = site.ARRAY_EMPTY -%}
+
+{%- for index in range -%}
+
+    {%- assign element_to_compare_to_everything_else = array[index]-%}
+
+    {%- assign inner_index  = index | plus : 1 -%}
+
+    {% comment %} building inner array to compare {% endcomment %}
+    {% comment %} that's a new way of doing a reduce {% endcomment %}
+    {%- for element in array offset:inner_index -%}
+
+        {%- if element ==  element_to_compare_to_everything_else-%}
+            {%- continue -%}
+        {%- else -%}
+            {%- assign cleaned_array =  cleaned_array | push : element_to_compare_to_everything_else -%}
+        {%- endif -%}
+
+    {%- endfor -%}
+
+{%- endfor -%}
+
+{%- assign return = cleaned_array -%}
+
+{%- assign cleaned_array =  null -%}
