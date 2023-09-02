@@ -60,7 +60,7 @@
     {%- assign post_color_background_1691010490420939832 = null -%}{%- comment -%} preventing random behavior{%- endcomment -%}
 {%- else -%}
     {%- comment -%} generating post_color_background_1691010490420939832 {%- endcomment -%}
-    {%- include as_string_the_css_class_for_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+    {%- include as_string_the_css_class_for_the_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
     {%- assign post_color_background_1691010490420939832 = return -%}
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
