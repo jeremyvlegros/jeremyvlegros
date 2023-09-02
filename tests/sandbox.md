@@ -575,18 +575,28 @@ JSONIFIED {{ array | jsonify }}
 
 ## testing array `| first` on string 
 
+```liquid
+{% comment %}{% endcomment %}
 printing first element of string {{ "first_element middle element last_element" | first }}
 
 => array first don't crash if used on string
+{% comment %}{% endcomment %}
+```
 
 ## testing flattening `|compact` a string like an array
 
+```liquid
+{% comment %}{% endcomment %}
 flattening the string {{ "first_element middle element last_element" | compact }}
 
 => array flattening don't crash if used on string
+{% comment %}{% endcomment %}
+```
 
 ## testing flattening `|compact` an array of tags
 
+```liquid
+{% comment %}{% endcomment %}
 {% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
 
 array : {{ array | jsonify }} 
@@ -596,9 +606,13 @@ flattening the array {{ array | compact | jsonify }}
 the array not jsonified : {{ array | compact }}
 
 => works as expected, I will have to split on the hashtag, and maybe re-add it
+{% comment %}{% endcomment %}
+```
 
 ## testing  `as_array_clean_from_array_of_tags`
 
+```liquid
+{% comment %}{% endcomment %}
 {% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
 
 {%- comment -%} cleaned_array {%- endcomment -%}
@@ -608,9 +622,13 @@ the array not jsonified : {{ array | compact }}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {{cleaned_array}}
+{% comment %}{% endcomment %}
+```
 
 ## testing  `as_array_clean_from_array_of_tags` with string converted to array
 
+```liquid
+{% comment %}{% endcomment %}
 {% assign array = site.ARRAY_EMPTY | push : "#about" | push : "#me" %}
 {%- assign tags = array | compact -%}
 {%- assign tags = tags | split :"#" -%}
@@ -622,28 +640,36 @@ the array not jsonified : {{ array | compact }}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {{cleaned_array}}
+{% comment %}{% endcomment %}
+```
 
 ## testing pop array
 
+```liquid
+{% comment %}{% endcomment %}
 {% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" | push : "4" | push : "5" %}
 
 array {{ array | jsonify }}
 
 array pop 1 {{ array[0] | pop | jsonify }}
+{% comment %}{% endcomment %}
+```
 
 ## testing array offset going over the limit
 
-{% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" %}
-
-{%- for value in array offset:20 -%}
-  <br>  value : {{ value }}  <br>  
-{%- endfor -%}
-
-=> it didn't crash, I can use it without mercy
+{%- {% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" %}
+ 
+ {%- for value in array offset:20 -%}
+   <br>  value : {{ value }}  <br>  
+ {%- endfor -%}
+ 
+ => it didn't crash, I can use it without mercy -%}
 
 ## testing `as_array_without_duplicates_from_array.liquid`
 
 
+```liquid
+{% comment %}{% endcomment %}
 {% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" | push : "3" | push : "5" %}
 
 array before : {{array | jsonify}}
@@ -655,4 +681,6 @@ array before : {{array | jsonify}}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 array after : {{array | jsonify}}
+{% comment %}{% endcomment %}
+```
 
