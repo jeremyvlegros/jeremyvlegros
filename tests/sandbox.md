@@ -657,13 +657,17 @@ array pop 1 {{ array[0] | pop | jsonify }}
 
 ## testing array offset going over the limit
 
-{%- {% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" %}
+ ```liquid
+ {% comment %}{% endcomment %}
+ {% assign array = site.ARRAY_EMPTY | push : "1" | push : "2" | push : "3" %}
  
  {%- for value in array offset:20 -%}
    <br>  value : {{ value }}  <br>  
  {%- endfor -%}
  
  => it didn't crash, I can use it without mercy -%}
+ {% comment %}{% endcomment %}
+ ```
 
 ## testing `as_array_without_duplicates_from_array.liquid`
 
