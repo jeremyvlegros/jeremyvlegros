@@ -1,0 +1,28 @@
+{%- assign clean_array = site.ARRAY_EMPTY -%}
+
+{%- for element in include.from_array_of_tags -%}
+
+    {%- assign inner_element = element
+            | replace :"'",""
+            | replace : '"',''
+            | replace :"[",""
+            | replace :"]",""
+            | replace :", ",""
+    -%}
+
+    {%- if inner_element == "" -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- if inner_element contains "#" -%}
+
+        {% comment %}INNER ELEMENT {{ inner_element }}{% endcomment %}
+    {%- else -%}
+        {%- assign inner_element = "#" | append : inner_element -%}
+    {%- endif -%}
+
+    {%- assign clean_array = clean_array | push : inner_element -%}
+
+{%- endfor -%}
+
+{%- assign return = clean_array -%}
