@@ -89,14 +89,14 @@
 
     {%- assign SUCCESS = page.boolean_print_successful_tests -%}
 
-    <div>{% comment %}<h3>`as_date_utc_from_custom_date.liquid`</h3>{% endcomment %}
+    <div>{% comment %}<h3>`as_string_the_date_utc_from_custom_date.liquid`</h3>{% endcomment %}
 
         <pre>
     {%- assign input = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
             {%- assign expected = "2023-06-28T05:16:00+00:00" -%}
 
             {%- comment -%} result {%- endcomment -%}
-            {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+            {%- include as_string_the_date_utc_from_custom_date.liquid from_custom_date=input -%}
             {%- assign result = return -%}
             {%- assign return = null -%}
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -104,7 +104,7 @@
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
             {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-            {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_utc_from_custom_date.liquid > testing the date" -%}
+            {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_string_the_date_utc_from_custom_date.liquid > testing the date" -%}
 
             {%- assign expected = null -%}
             {%- assign result = null -%}
@@ -116,7 +116,7 @@
         {%- assign expected = null -%}
 
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+        {%- include as_string_the_date_utc_from_custom_date.liquid from_custom_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -125,7 +125,7 @@
 
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_utc_from_custom_date.liquid > date with null returning null" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_string_the_date_utc_from_custom_date.liquid > date with null returning null" -%}
 
 
         {%- assign expected = null -%}
@@ -136,13 +136,13 @@
     {%- assign input = "" -%}
         {%- assign expected = null -%}
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_date_utc_from_custom_date.liquid from_custom_date=input -%}
+        {%- include as_string_the_date_utc_from_custom_date.liquid from_custom_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_date_utc_from_custom_date.liquid > date with empty string returning null" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_string_the_date_utc_from_custom_date.liquid > date with empty string returning null" -%}
         {%- assign expected = null -%}
         {%- assign result = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -150,14 +150,14 @@
 
 </div>
 
-    <div> {% comment  %} <h3>`as_id_from_date.liquid`</h3> {%- endcomment -%}
+    <div> {% comment  %} <h3>`as_string_the_id_from_date.liquid`</h3> {%- endcomment -%}
 
         <pre>
     {%- assign input = "#date 2023-06-28 05:16 1687914994970097614 GMT" -%}
             {%- assign expected = "1687914994970097614" -%}
 
             {%- comment -%} result {%- endcomment -%}
-            {%- include as_id_from_date.liquid from_date=input -%}
+            {%- include as_string_the_id_from_date.liquid from_date=input -%}
             {% assign result = return %}
             {%- assign return = null -%}
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -166,7 +166,7 @@
 
 
             {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-            {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_id_from_date.liquid > correct date format" -%}
+            {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid > correct date format" -%}
 
             {%- assign expected = null -%}
             {%- assign result = null -%}
@@ -178,7 +178,7 @@
         {%- assign expected = null -%}
 
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_id_from_date.liquid from_date=input -%}
+        {%- include as_string_the_id_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -187,7 +187,7 @@
 
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_id_from_date.liquid > date empty string" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid > date empty string" -%}
 
 
         {%- assign expected = null -%}
@@ -200,7 +200,7 @@
         {%- assign expected = null -%}
 
         {%- comment -%} result {%- endcomment -%}
-        {%- include as_id_from_date.liquid from_date=input -%}
+        {%- include as_string_the_id_from_date.liquid from_date=input -%}
         {% assign result = return %}
         {%- assign return = null -%}
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -209,7 +209,7 @@
 
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_id_from_date.liquid > date null" -%}
+        {%- include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid > date null" -%}
 
 
         {%- assign expected = null -%}
@@ -1011,7 +1011,7 @@
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
             {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-            {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_id_from_date.liquid > as array from empty string" %}
+            {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid > as array from empty string" %}
 
             {%- assign expected = null -%}
             {%- assign result = null -%}
@@ -1033,7 +1033,7 @@
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_id_from_date.liquid > as array from string with commas and multiple spaces" %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid > as array from string with commas and multiple spaces" %}
 
         {%- assign expected = null -%}
         {%- assign result = null -%}
@@ -1055,7 +1055,7 @@
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_id_from_date.liquid > as array from string with multiple spaces" %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid > as array from string with multiple spaces" %}
 
         {%- assign expected = null -%}
         {%- assign result = null -%}
@@ -1077,7 +1077,7 @@
         {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
         {%- comment -%} procedure_assert_from_this_and_from_that {%- endcomment -%}
-        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_id_from_date.liquid > as array from string with null" %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name.liquid from_this=expected from_that=result with_success=SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid > as array from string with null" %}
 
         {%- assign expected = null -%}
         {%- assign result = null -%}
