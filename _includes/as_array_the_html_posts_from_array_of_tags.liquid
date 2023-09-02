@@ -23,7 +23,7 @@
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
     {%- comment -%} getting the posts as html {%- endcomment -%}
-    {%- include as_html_the_post_contents_from_posts.liquid
+    {%- include as_string_the_html_post_contents_from_posts.liquid
             from_posts=posts
             with_first_post_id=first_post_id
             with_last_post_id=last_post_id

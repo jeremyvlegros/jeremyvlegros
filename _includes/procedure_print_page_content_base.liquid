@@ -77,7 +77,7 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} page_canonical_url_1690569717129 {%- endcomment -%}
-{%- include as_canonical_the_page_url.liquid -%}
+{%- include as_string_the_canonical_page_url.liquid -%}
 {%- assign page_canonical_url_1690569717129 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -119,7 +119,7 @@
 {%- if site_name_1690569717129 -%}
 
     {%- capture page_canonical_url_1690569717129 -%}
-        {% comment %}{%- include as_canonical_the_page_url.liquid -%}{% endcomment %}
+        {% comment %}{%- include as_string_the_canonical_page_url.liquid -%}{% endcomment %}
         {% comment %}<link rel="canonical" href="{{ return }}"/>{% endcomment %}
         {% comment %}<meta property="og:url" content="{{ return }}"/>{% endcomment %}
     {%- endcapture -%}

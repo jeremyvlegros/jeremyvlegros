@@ -359,12 +359,12 @@ TAG NOT PRESENT
 {% comment %}{% endcomment %}
 ```
 
-## `as_html_the_posts_for_the_index_from_posts.liquid`
+## `as_string_the_html_posts_for_the_index_from_posts.liquid`
 
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_posts_for_the_index_from_posts.liquid from_posts=site.posts %}
+{% include as_string_the_html_posts_for_the_index_from_posts.liquid from_posts=site.posts %}
     {{ return }}
 {% comment %}{% endcomment %}
 ```
@@ -375,17 +375,17 @@ TAG NOT PRESENT
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_post_links_from_posts.liquid from_posts=site.posts %}
+{% include as_string_the_html_post_links_from_posts.liquid from_posts=site.posts %}
 {{ return }}
 {% comment %}{% endcomment %}
 ```
 
-## `as_html_the_post_contents_from_posts.liquid`
+## `as_string_the_html_post_contents_from_posts.liquid`
 
 
 ```liquid
 {% comment %}{% endcomment %}
-{% include as_html_the_post_contents_from_posts.liquid from_posts=site.posts %}
+{% include as_string_the_html_post_contents_from_posts.liquid from_posts=site.posts %}
 {{ return }}
 {% comment %}{% endcomment %}
 ```
