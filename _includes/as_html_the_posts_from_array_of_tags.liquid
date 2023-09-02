@@ -1,14 +1,52 @@
-{%- assign html_the_post_list_1693416139391094441 = null -%}
+
+{%- assign array_tags = include.from_array_of_tags | uniq -%}
 
 {%- comment -%} array_first_and_last_post_id {%- endcomment -%}
-{%- include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags= include.from_array_of_tags -%}
+{%- include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags=array_tags -%}
 {%- assign array_first_and_last_post_id = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
+{%- assign first_post_id = array_first_and_last_post_id[0]-%}
+{%- assign last_post_id  = array_first_and_last_post_id[1]-%}
+
+{% comment %} main value {% endcomment %}
+{%- assign array_html_posts= site.ARRAY_EMPTY -%}
+
+{% comment %} for each tag {% endcomment %}
+{%- for tag in array_tags -%}
+
+    {%- comment -%} getting the posts for a tag {%- endcomment -%}
+    {%- include as_posts_from_tag.liquid from_tag=tag -%}
+    {%- assign posts = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+    {%- comment -%} getting the posts as html {%- endcomment -%}
+    {%- include as_html_the_posts_from_posts.liquid
+            from_posts=posts
+            with_first_post_id=first_post_id
+            with_last_post_id=last_post_id
+    -%}
+    {%- assign html_posts = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+    {% comment %} placing the posts in the array {% endcomment %}
+    {%- assign array_html_posts = array_html_posts | push : html_posts -%}
+
+{%- endfor -%}
 
 
 
 
+{% comment %} removing duplicates{% endcomment %}
+{%- assign array_html_posts = array_html_posts | uniq -%}
+
+{% comment %}array without duplicates {{ array_html_posts | jsonify }}{% endcomment %}
+
+{%- assign return = array_html_posts -%}
 
 
+{%- assign array_html_posts = null -%}
