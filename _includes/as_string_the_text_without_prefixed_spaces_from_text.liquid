@@ -1,0 +1,42 @@
+{%- include config.liquid -%} 
+{%- comment -%}
+I don't trust the lstrip because the strip removes every blank character and lstrip does not.
+If it changes, it would break my functions
+{%- endcomment -%}
+
+{%- assign the_text_without_prefixed_spaces_1694501198622021886 = "" -%}
+
+{%- comment -%} for <element> in <sequence> doesn't work on strings ... {%- endcomment -%}
+{%- assign array_text_1694501198622021886 = include.from_text | split : ""-%}
+
+{%- assign boolean_encountered_a_letter = false -%}
+
+
+{%- for character in array_text_1694501198622021886 -%}
+
+  {%- if character != " " -%}
+
+    {%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
+
+    {%- assign boolean_encountered_a_letter = true -%}
+
+  {%- else -%}
+
+    {%- if boolean_encountered_a_letter -%}
+
+          {%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
+
+      {%- else -%}
+
+        {%- continue -%}
+
+      {%- endif -%}
+
+  {%- endif -%}
+
+{%- endfor -%}
+
+{%- assign return = the_text_without_prefixed_spaces_1694501198622021886 -%}
+
+{%- assign the_text_without_prefixed_spaces_1694501198622021886 = null -%}
+{%- assign array_text_1694501198622021886 = null -%}
