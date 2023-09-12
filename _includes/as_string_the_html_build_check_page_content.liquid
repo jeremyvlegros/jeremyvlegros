@@ -1299,6 +1299,85 @@
 	</div>
 
 
+    <div> {% comment %} as_array_the_first_and_last_post_id_from_array_of_tags.liquid {% endcomment %}
+
+        {%- comment %} array_input {%- endcomment %}
+        {%- include as_array_from_string.liquid from_string= "#starfield "%}
+        {% assign array_input = return %}
+        {% assign return = null %}
+        {%- comment %} `Liquid` does not have functions {%- endcomment %}
+
+        {%- comment %} array_expected {%- endcomment %}
+        {%- include as_array_from_string.liquid from_string= "1693549959611808252 1693549959611808252"%}
+        {% assign array_expected = return %}
+        {% assign return = null %}
+        {%- comment %} `Liquid` does not have functions {%- endcomment %}
+
+        {% assign input = array_input %}
+        {% assign with_input = array_input %}
+        {% assign expected = array_expected %}
+
+        {%- comment %} result {%- endcomment %}
+        {% include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags=input %}
+        {% assign result = return %}
+        {% assign return = null %}
+        {%- comment %} `Liquid` does not have functions {%- endcomment %}
+
+        <br>{%- comment %} procedure_assert_from_this_and_from_that {%- endcomment %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_array_the_first_and_last_post_id_from_array_of_tags.liquid" with_input=with_input %}
+
+        {% assign expected = null %}
+        {% assign result = null %}
+        {% assign input = null %}
+        {% assign with_input = null %}
+
+        {% comment %} {% endcomment %}
+
+
+
+        {% comment %} assert {% endcomment %}
+
+        {% assign input = null %}
+        {% assign with_input = null %}
+        {% assign expected = null %}
+
+        {%- comment %} result {%- endcomment %}
+        {% include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags=input %}
+        {% assign result = return %}
+        {% assign return = null %}
+        {%- comment %} `Liquid` does not have functions {%- endcomment %}
+
+        <br>{%- comment %} procedure_assert_from_this_and_from_that {%- endcomment %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_array_the_first_and_last_post_id_from_array_of_tags.liquid" with_input=with_input%}
+
+        {% assign expected = null %}
+        {% assign result = null %}
+        {% assign input = null %}
+        {% assign with_input = null %}
+
+        {% comment %} {% endcomment %}
+
+
+
+        {% comment %} assert empty string {% endcomment %}
+
+        {% assign input = "" %}
+        {% assign with_input = "" %}
+        {% assign expected = null %}
+
+        {%- comment %} result {%- endcomment %}
+        {% include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags=input %}
+        {% assign result = return %}
+        {% assign return = null %}
+        {%- comment %} `Liquid` does not have functions {%- endcomment %}
+
+        <br>{%- comment %} procedure_assert_from_this_and_from_that {%- endcomment %}
+        {% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=SUCCESS with_warning=true with_name="as_array_the_first_and_last_post_id_from_array_of_tags.liquid" with_input=with_input%}
+
+        {% assign expected = null %}
+        {% assign result = null %}
+        {% assign input = null %}
+        {% assign with_input = null %}
 
         {% comment %} {% endcomment %}
 
@@ -1306,3 +1385,9 @@
 
 
 {% endcapture %}
+
+{%- comment -%}  {%- endcomment -%}
+{%- include as_string_the_text_without_empty_lines_from_text.liquid from_text=return-%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
