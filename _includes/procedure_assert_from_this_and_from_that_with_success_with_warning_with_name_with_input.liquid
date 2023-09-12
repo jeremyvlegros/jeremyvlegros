@@ -47,8 +47,7 @@
 {%- if with_version_1691511512413600519 -%}
     {%- comment -%} formatting version {%- endcomment -%}
     {%- capture with_version_1691511512413600519 -%}
-        <li> version : <span class="language-liquid highlighter-rouge"><span
-                        class="highlight"><code>`{{ with_version_1691511512413600519 }}`</code></span></span></li>
+        <li> version : <span class="language-liquid highlighter-rouge"><span class="highlight"><code>`{{ with_version_1691511512413600519 }}`</code></span></span></li>
     {%- endcapture -%}
 {%- endif -%}
 
@@ -84,9 +83,7 @@
         {%- capture with_warning_1691511512413600519 %}
             <li>
                 <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested null value
-                    <span class="language-liquid highlighter-rouge">
-                        <span class="highlight"><code>`this` and empty string `that`</code>
-                        </span>
+                    <span class="language-liquid highlighter-rouge"> <span class="highlight"><code>`this` and empty string `that`</code> </span>
                     </span>
                 </span>
             </li>
@@ -99,13 +96,7 @@
 
         {%- capture with_warning_1691511512413600519 %}
             <li>
-                <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested empty string
-                    <span class="language-liquid highlighter-rouge">
-                        <span class="highlight">
-                            <code>`this` and null value `that`</code>
-                        </span>
-                    </span>
-                </span>
+                <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested empty string<span class="language-liquid highlighter-rouge"><span class="highlight"><code>`this` and null value `that`</code></span></span></span>
             </li>
         {%- endcapture -%}
     {%- endif -%}
@@ -151,10 +142,7 @@
 
     {%- comment -%} failed message {%- endcomment -%}
     {%- capture message_1691511512413600519 -%}
-        <span style="font-weight: bold;background-color: red; padding: 6px; border-radius: 2px;color:black">
-        [failed]
-        </span>
-        {{ message_1691511512413600519 }}
+        <span style="font-weight: bold;background-color: red; padding: 6px; border-radius: 2px;color:black">[failed]</span>{{ message_1691511512413600519 }}
     {%- endcapture -%}
 
     {%- comment -%} [passed] {%- endcomment -%}
@@ -164,10 +152,7 @@
 
         {%- comment -%} passed message {%- endcomment -%}
         {%- capture message_1691511512413600519 -%}
-            <span style="font-weight: bold;background-color: greenyellow; color: dodgerblue;padding: 6px; border-radius: 2px">
-            [passed]
-            </span>
-            {{ message_1691511512413600519 }}
+            <span style="font-weight: bold;background-color: greenyellow; color: dodgerblue;padding: 6px; border-radius: 2px">[passed]</span>{{ message_1691511512413600519 }}
         {%- endcapture -%}
 
     {%- endif -%}
