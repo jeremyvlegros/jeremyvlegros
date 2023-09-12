@@ -62,9 +62,18 @@
 
 {%- endfor -%}
 
-{% comment %} assigning values to the array with precaution {% endcomment %}
-{%- assign array_the_first_and_last_post_id = array_the_first_and_last_post_id | push : final_first_post_id -%}
-{%- assign array_the_first_and_last_post_id = array_the_first_and_last_post_id | push : final_last_post_id -%}
+{%- if final_first_post_id and final_last_post_id-%}
+
+    {% comment %} assigning values to the array with precaution {% endcomment %}
+    {%- assign array_the_first_and_last_post_id = array_the_first_and_last_post_id | push : final_first_post_id -%}
+    {%- assign array_the_first_and_last_post_id = array_the_first_and_last_post_id | push : final_last_post_id -%}
+
+{%- else -%}
+
+    {%- assign array_the_first_and_last_post_id = null -%}
+
+{%- endif -%}
+
 
 {% comment %} return {% endcomment %}
 {%- assign return = array_the_first_and_last_post_id -%}
