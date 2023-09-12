@@ -1,0 +1,28 @@
+{%- comment -%} as_string_the_text_without_suffixed_spaces_from_text.liquid {%- endcomment -%}
+{%- include config.liquid -%}
+
+{%- comment -%}
+I don't trust the lstrip because the strip removes every blank character and lstrip does not.
+If it changes, it would break my functions
+{%- endcomment -%}
+
+{%- assign text_1694501438604221562 = include.from_text -%}
+
+{%- comment -%} reversing the text {%- endcomment -%}
+{%- include as_string_reversed_from_text.liquid from_text = text_1694501438604221562 -%}
+{%- assign text_1694501438604221562 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} removing spaces on prefixe {%- endcomment -%}
+{%- include as_string_the_text_without_prefixed_spaces_from_text.liquid from_text= text_1694501438604221562-%}
+{%- assign text_1694501438604221562 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} reversing the text to order it back {%- endcomment -%}
+{%- include as_string_reversed_from_text.liquid from_text = text_1694501438604221562 -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+
+
