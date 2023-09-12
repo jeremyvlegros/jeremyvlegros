@@ -1,7 +1,7 @@
 {% comment %} the uniq function seems to not work on long strings or whatever {% endcomment %}
-
+{%- include config.liquid -%}
 {%- assign array_1693648756141731329 = include.from_array -%}
-{%- assign cleaned_array_1693648756141731329 = site.ARRAY_EMPTY -%}
+{%- assign cleaned_array_1693648756141731329 = ARRAY_EMPTY -%}
 
 {%- assign array_length_1693648756141731329 = array_1693648756141731329 | size -%}
 
@@ -9,7 +9,7 @@
 
 {%- assign range_1693648756141731329 = (0..array_length_for_range_1693648756141731329) -%}
 
-{%- assign inner_array = site.ARRAY_EMPTY -%}
+{%- assign inner_array = ARRAY_EMPTY -%}
 
 {%- for index in range_1693648756141731329 -%}
 

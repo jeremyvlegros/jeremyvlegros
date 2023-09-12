@@ -1,3 +1,4 @@
+{%- include config.liquid -%}
 
 {%- assign array_tags = include.from_array_of_tags | uniq -%}
 
@@ -11,7 +12,7 @@
 {%- assign last_post_id  = array_first_and_last_post_id[1]-%}
 
 {% comment %} main value {% endcomment %}
-{%- assign array_html_posts= site.ARRAY_EMPTY -%}
+{%- assign array_html_posts= ARRAY_EMPTY -%}
 
 {% comment %} for each tag {% endcomment %}
 {%- for tag in array_tags -%}

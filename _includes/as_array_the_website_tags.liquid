@@ -1,12 +1,13 @@
+{%- include config.liquid -%}
 
-{%- assign array_website_tags_1691511380762726624 = site.ARRAY_EMPTY -%}
+{%- assign array_website_tags_1691511380762726624 = ARRAY_EMPTY -%}
 
 
-{% for tag in site.tags %}
+{%- for tag in site.tags -%}
 
   {%- assign array_website_tags_1691511380762726624 = array_website_tags_1691511380762726624 | push : tag[0]-%}
 
-{% endfor %}
+{%- endfor -%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- assign return = array_website_tags_1691511380762726624 | sort -%}

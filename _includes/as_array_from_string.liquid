@@ -1,6 +1,6 @@
 {%- comment -%} will try ',' then " " then "" {%- endcomment -%}
- 
-{%- assign array_from_string_1690570157462 = site.ARRAY_EMPTY -%}
+{%- include config.liquid -%}
+{%- assign array_from_string_1690570157462 = ARRAY_EMPTY -%}
 
 {%- if include.from_string contains "," -%}
 

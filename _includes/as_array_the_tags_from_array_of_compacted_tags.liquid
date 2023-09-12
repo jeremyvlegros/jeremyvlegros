@@ -1,4 +1,6 @@
-{%- assign clean_array = site.ARRAY_EMPTY -%}
+{%- include config.liquid -%}
+
+{%- assign clean_array = ARRAY_EMPTY -%}
 
 {%- for element in include.from_array_of_compacted_tags -%}
 

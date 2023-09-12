@@ -1,4 +1,6 @@
-{%- assign array_the_html_posts_for_index_1693648124486032494 =  site.ARRAY_EMPTY -%}
+{%- include config.liquid -%}
+
+{%- assign array_the_html_posts_for_index_1693648124486032494 =  ARRAY_EMPTY -%}
 {%- assign array_1693648124486032494 = include.from_array_of_tags | uniq -%}
 
 {%- for tag in array_1693648124486032494 -%}

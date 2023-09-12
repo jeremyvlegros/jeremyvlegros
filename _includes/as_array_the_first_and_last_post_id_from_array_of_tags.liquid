@@ -1,9 +1,11 @@
+{%- include config.liquid -%}
+
 {%- assign final_first_post_id = null -%}
 {%- assign final_last_post_id = null -%}
 
 {%- assign boolean_first_run = true -%}
 
-{%- assign array_the_first_and_last_post_id = site.ARRAY_EMPTY -%}
+{%- assign array_the_first_and_last_post_id = ARRAY_EMPTY -%}
 
 {%- for tag in include.from_array_of_tags -%}
 

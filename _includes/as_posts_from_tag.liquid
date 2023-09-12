@@ -1,6 +1,7 @@
 {%- comment -%} as_posts_from_tag.liquid {%- endcomment -%}
+{%- include config.liquid -%}
 
-{%- assign posts_1690556793031296570 = site.ARRAY_EMPTY -%}
+{%- assign posts_1690556793031296570 = ARRAY_EMPTY -%}
 
 {%- include procedure_crash_if_not_array_from.liquid from=posts_1690556793031296570 -%}
 
