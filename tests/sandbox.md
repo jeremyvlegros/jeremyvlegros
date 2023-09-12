@@ -708,3 +708,17 @@ array after : {{array | jsonify}}
 <!---->
 {% comment %}{% endcomment %}
 ```
+
+## Empty array boolean value
+
+```liquid
+{% comment %}{% endcomment %}
+
+{%- if site.ARRAY_EMPTY -%}
+    Empty array is boolean True
+{%- else -%}
+    Empty array is boolean False
+{%- endif -%}
+
+{% comment %}{% endcomment %}
+```
