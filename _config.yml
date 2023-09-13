@@ -10,13 +10,13 @@ defaults :
       path: ""
       type : "posts"
     values:
-      layout: "post"
+      layout: "post_layout"
       category: "post"
   - scope:
       path: ""
       type: "tag"
     values:
-      layout: "timeline"
+      layout: "timeline_layout"
 
 highlighter: rouge
 

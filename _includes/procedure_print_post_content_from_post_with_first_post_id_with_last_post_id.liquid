@@ -20,7 +20,7 @@
 
 
 {% comment %} dealing with non post parameter {% endcomment %}
-{%- if include.from_post.layout == "post" -%}
+{%- if include.from_post.layout == "post_layout" -%}
 
     {%- if include.from_post.category == "post" -%}
 
@@ -210,7 +210,7 @@
         {%- endif -%}
 
         {%- comment -%} post button specifics  {%- endcomment -%}
-        {%- if page.layout == "post" -%}
+        {%- if page.layout == "post_layout" -%}
 
             {% comment %} doesn't show id in single posts {% endcomment %}
             {%- assign button_id_1691010490420939832 = null -%}
