@@ -1,7 +1,13 @@
 ---
 title                : README
-layout               : post
+layout               : post_layout
+permalink            : /readme
+date_of_creation     : "#date 2023-03-09 14:19"
 date_of_modification : "#date 2023-08-04 06:24 1691115887739957772 GMT"
+tags :
+- "#about"
+- "#website"
+- "#readme"
 ---
 ## Author
 
