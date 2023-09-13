@@ -1,0 +1,32 @@
+{%- comment -%}
+
+WARNING :
+  DO NOT WRITE ANYTHING ELSE THAN VARIABLES !
+
+GOALS :
+  - my variables in one place instead of `_data` x `_config`
+  - edition :
+    - my brain itches when seeing `<name_in_lowercase>.<variable_name_uppercase>`
+    - I don't want to type `site.DEBUG` when I could type `DEBUG` :
+      - I use a file template in my IDE that creates a file with `{%- include CONFIGURATION/ALL -%}`
+    - I can find my variables fast
+    - I can change values individually
+  - preventing cyclic imports, everything variable is split. Imports :
+    -  either happen separately
+    -  either happen separately by importing the `ALL`
+  - clean structure
+  - I don't want to find out if it can or can't deal with cyclic redundancy on include/imports.
+
+CONS :
+  - does nothing more that the _config.yaml file already does/(can do)
+  - implementation is circonvoluted
+  - waste : I will most likely never use anything separately
+{%- endcomment -%}
+
+{%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
+{%- include CONFIGURATION/EMPTY_ARRAY.liquid -%}
+{%- include CONFIGURATION/NEW_LINE.liquid -%}
+{%- include CONFIGURATION/BUILD.liquid -%}
+{%- include CONFIGURATION/DEBUG.liquid -%}
+
+
