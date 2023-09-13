@@ -1,8 +1,13 @@
-{%- include config.liquid -%}
+{% comment %} as_array_the_tags_from_tags.liquid {% endcomment %}
+
+{% comment %} I don't know if I will ever use this function {% endcomment %}
+{%- include ARRAY_EMPTY.liquid -%}
 
 {%- assign clean_array = ARRAY_EMPTY -%}
 
-{%- for element in include.from_array_of_compacted_tags -%}
+{%- assign string_tags = include.from_tags | compact -%}
+
+{%- for element in string_tags -%}
 
     {%- assign inner_element = element
             | replace :"'",""
@@ -18,9 +23,13 @@
 
     {%- if inner_element contains "#" -%}
 
-        {% comment %}INNER ELEMENT {{ inner_element }}{% endcomment %}
+        {% comment %} do nothing {% endcomment %}
+        {% comment %} INNER ELEMENT {{ inner_element }}{% endcomment %}
+
     {%- else -%}
+
         {%- assign inner_element = "#" | append : inner_element -%}
+
     {%- endif -%}
 
     {%- assign clean_array = clean_array | push : inner_element -%}

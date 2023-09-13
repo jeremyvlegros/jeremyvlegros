@@ -1,5 +1,3 @@
-{%- comment -%} as_string_the_html_post_contents_from_posts.liquid {%- endcomment -%}
-
 {%- comment -%} main value {%- endcomment -%}
 {%- assign html_the_posts_1690556428999239446 = null -%}
 
@@ -32,7 +30,7 @@
         {%- for post in include.from_posts -%}
 
             {%- comment -%} enforcing posts with post layout {%- endcomment -%}
-            {%- if post.layout == "post" -%}
+            {%- if post.layout == "post_layout" -%}
                 {%- include procedure_print_post_content_from_post_with_first_post_id_with_last_post_id.liquid
                         from_post=post
                         with_first_post_id=first_post_id_1690556428999239446
