@@ -1,4 +1,4 @@
-{%- include config.liquid -%}
+{%- include ARRAY_EMPTY.liquid -%}
 
 {%- assign array_the_html_posts_for_index_1693648124486032494 =  ARRAY_EMPTY -%}
 {%- assign array_1693648124486032494 = include.from_array_of_tags | uniq -%}
@@ -6,7 +6,7 @@
 {%- for tag in array_1693648124486032494 -%}
 
     {%- comment -%} inner_post_index_list {%- endcomment -%}
-    {%- include as_html_the_posts_for_the_index_from_tag.liquid from_tag=tag -%}
+    {%- include as_string_the_timeline_html_index_from_tag.liquid from_tag=tag -%}
     {%- assign html_post_index_list_1693648124486032494 = return -%}
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}

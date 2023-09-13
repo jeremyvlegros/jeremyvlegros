@@ -1,4 +1,1 @@
-{%- comment -%} as_string_reversed_from_text {%- endcomment -%}
-{%- include config.liquid -%}
-
 {%- assign return = include.from_text | split: "" | reverse | join :""-%}

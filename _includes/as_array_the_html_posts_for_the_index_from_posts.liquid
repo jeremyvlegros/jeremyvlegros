@@ -1,5 +1,5 @@
-{%- comment -%} as_string_the_html_posts_for_the_index_from_posts.liquid {%- endcomment -%}
-{%- include config.liquid -%}
+{%- comment -%} as_string_the_html_content_for_the_timeline_index_from_posts.liquid {%- endcomment -%}
+{%- include ARRAY_EMPTY.liquid -%}
 {%- assign array_the_html_posts_for_the_index_1693649612738133574 = ARRAY_EMPTY -%}
 
 {%- comment -%} Initialization {%- endcomment -%}
@@ -13,7 +13,7 @@
         {%- for post in include.from_posts -%}
 
             {%- comment -%} enforcing posts with post layout {%- endcomment -%}
-            {%- if post.layout == "post" -%}
+            {%- if post.layout == "post_layout" -%}
 
                 {%- if post.date_of_creation -%}
 

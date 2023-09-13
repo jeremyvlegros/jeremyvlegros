@@ -1,8 +1,12 @@
-{%- include config.liquid -%}
+{%- include ARRAY_EMPTY.liquid -%}
 
 {%- assign array_tags = include.from_array_of_tags | uniq -%}
 
 {%- comment -%} array_first_and_last_post_id {%- endcomment -%}
+
+{% comment %}
+@task : this is not how it should work > it should take only posts where all tags searched are present !
+{% endcomment %}
 {%- include as_array_the_first_and_last_post_id_from_array_of_tags.liquid from_array_of_tags=array_tags -%}
 {%- assign array_first_and_last_post_id = return -%}
 {%- assign return = null -%}
@@ -17,6 +21,9 @@
 {% comment %} for each tag {% endcomment %}
 {%- for tag in array_tags -%}
 
+    {% comment %}
+    @task : this is not how it should work > it should take only posts where all tags searched are present !
+    {% endcomment %}
     {%- comment -%} getting the posts for a tag {%- endcomment -%}
     {%- include as_posts_from_tag.liquid from_tag=tag -%}
     {%- assign posts = return -%}
@@ -24,7 +31,7 @@
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
     {%- comment -%} getting the posts as html {%- endcomment -%}
-    {%- include as_string_the_html_post_contents_from_posts.liquid
+    {%- include as_string_the_html_content_for_the_posts_from_posts.liquid
             from_posts=posts
             with_first_post_id=first_post_id
             with_last_post_id=last_post_id
