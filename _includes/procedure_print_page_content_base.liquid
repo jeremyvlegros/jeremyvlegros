@@ -147,10 +147,18 @@
 {%- else -%}
 
     {%- capture page_url_bootstrap_1690569717129 -%}
+
+        <!-- for offline development, will prompt a css error online though -->
+        <link href="{{ "/offline/bootstrap.css" | relative_url }}"
+              rel="stylesheet"
+        />
+
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
               crossorigin="anonymous"/>
+
     {%- endcapture -%}
 
 {% endif %}
@@ -199,7 +207,7 @@
             🌿
             {%- endif -%}
 
-        {%- elsif page.layout == "post" -%}
+        {%- elsif page.layout == "post_layout" -%}
 
             {%- assign _PAGE_TITLE_WORDS = _PAGE_TITLE | split : " "-%}
 
