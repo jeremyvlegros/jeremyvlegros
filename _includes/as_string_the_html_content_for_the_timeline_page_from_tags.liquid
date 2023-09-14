@@ -55,60 +55,63 @@
 
 {%- comment -%}  main HTML {%- endcomment -%}
 
-<div class="timeline container-fluid">
+{%- capture return -%}
 
-    {%- comment -%}printing content of the next thing  {%- endcomment -%}
-    {{ content }}
+    <div class="timeline container-fluid">
 
-    <div class="row">
+        {%- comment -%}printing content of the next thing  {%- endcomment -%}
+        {{ content }}
 
-        <div class="col-12 col-sm-5 col-lg-5">
-            <div id="side_index" class="row">
-                <div class="side_index_content">
-                    {%- if page_title_1690569561039 -%}
-                        <h1 class="page-heading">{{ page_title_1690569561039 }}</h1>
-                    {%- endif -%}
-                    <ul>
+        <div class="row">
 
-                        {%- comment -%}printing HTML index post list  {%- endcomment -%}
-                        {{ html_post_index_list_1690569561039 }}
+            <div class="col-12 col-sm-5 col-lg-5">
+                <div id="side_index" class="row">
+                    <div class="side_index_content">
+                        {%- if page_title_1690569561039 -%}
+                            <h1 class="page-heading">{{ page_title_1690569561039 }}</h1>
+                        {%- endif -%}
+                        <ul>
 
-                    </ul>
+                            {%- comment -%}printing HTML index post list  {%- endcomment -%}
+                            {{ html_post_index_list_1690569561039 }}
+
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-sm-7 col-lg-7">
-            <div class="posts">
+            <div class="col-12 col-sm-7 col-lg-7">
+                <div class="posts">
 
-                {%- comment -%} printing HTML posts  {%- endcomment -%}
+                    {%- comment -%} printing HTML posts  {%- endcomment -%}
 
                     {{ html_posts_1690569561039 }}
 
+                </div>
             </div>
+
+        </div>
+
+        <div class="dates">
+
+            <br>
+
+            {%- if page_date_of_creation_1690569561039 -%}
+                <span class='date date_of_creation'> {{ page_date_of_creation_1690569561039 }} </span>
+            {%- endif -%}
+
+            <br>
+
+            {%- if page_date_of_modification_1690569561039 -%}
+                <span class="date date_of_modification">
+                {{ page_date_of_modification_1690569561039 }}
+                </span>
+            {%- endif -%}
+
         </div>
 
     </div>
-
-    <div class="dates">
-
-        <br>
-
-        {%- if page_date_of_creation_1690569561039 -%}
-            <span class='date date_of_creation'> {{ page_date_of_creation_1690569561039 }} </span>
-        {%- endif -%}
-
-        <br>
-
-        {%- if page_date_of_modification_1690569561039 -%}
-            <span class="date date_of_modification">
-            {{ page_date_of_modification_1690569561039 }}
-            </span>
-        {%- endif -%}
-
-    </div>
-
-</div>
+{%- endcapture -%}
 
 {%- assign html_post_index_list_1690569561039 = null -%}
 {%- assign html_posts_1690569561039 = null -%}

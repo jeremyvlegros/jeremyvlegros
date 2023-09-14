@@ -5,4 +5,4 @@ layout               : post_layout
 date_of_creation     : "#date 2023-08-04 05:04 1691111094630537940 GMT"
 ---
 
-{%- include procedure_print_website_tags.liquid -%}
+{%- include as_string_the_html_content_for_the_website_tags.liquid -%} {{return}}

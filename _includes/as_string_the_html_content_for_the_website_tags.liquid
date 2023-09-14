@@ -1,0 +1,23 @@
+{%- comment -%} tags_1691512008716947037 {%- endcomment -%}
+{%- include as_array_the_website_tags.liquid -%}
+{%- assign tags_1691512008716947037 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- capture return -%}
+  <div class="row">
+      {% for tag in tags_1691512008716947037 %}
+
+        {%- comment -%} tag {%- endcomment -%}
+        {%- include as_html_the_tag_from_word.liquid from_word=tag -%}
+        {%- assign formatted_tag_1691512008716947037 = return -%}
+        {%- assign return = null -%}
+        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+        {{ formatted_tag_1691512008716947037 }}
+      {% endfor %}
+    </div>
+{%- endcapture -%}
+
+{%- assign tags_1691512008716947037 = null -%}
+{%- assign formatted_tag_1691512008716947037 = null -%}
+

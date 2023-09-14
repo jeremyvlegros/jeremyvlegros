@@ -1,14 +1,5 @@
 ---
 layout: base_layout
 ---
-<article class="post">
 
-  <header class="post_header">
-    <h1 class="post_title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post_content color_background_{{ page.color_background }}">
-    {{ content }}
-  </div>
-
-</article>
+{%- include as_string_the_html_content_for_the_page_layout.liquid -%} {{return}}

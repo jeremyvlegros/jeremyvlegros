@@ -1,0 +1,14 @@
+{%- capture return -%}
+  <article class="post">
+
+      <header class="post_header">
+        <h1 class="post_title">{{ page.title | escape }}</h1>
+      </header>
+
+      <div class="post_content color_background_{{ page.color_background }}">
+        {{ content }}
+      </div>
+
+    </article>
+{%- endcapture -%}
+

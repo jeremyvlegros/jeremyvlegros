@@ -167,82 +167,86 @@
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
 {%- endcapture -%}
 {%- comment -%}  {%- endcomment -%}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta property="og:locale" content="en_US"/>
-        <meta name="twitter:creator" content="jeremyvlegros"/>
-        {%- comment -%}  {%- endcomment -%}
-        {{ page_meta_date_of_creation_1690569717129 }}
-        {{ page_meta_description_1690569717129 }}
-        {{ page_meta_type_1690569717129 }}
-        {{ page_meta_title_1690569717129 }}
-        {% comment %}{{ page_canonical_url_1690569717129 }}{% endcomment %}
-        {{ page_meta_site_name_1690569717129 }}
-        {{ page_meta_image_color_1690569717129 }}
-        {{ page_url_bootstrap_1690569717129 }}
-        {{ page_url_css_1690569717129 }}
-        {% comment %}The HTML favicon image code was copied from `CSS Tricks` https://css-tricks.com/emoji-as-a-favicon/ {% endcomment %}
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>
 
-        {%- comment -%} FAVICON {%- endcomment -%}
-        {%- assign _PAGE_TITLE = page.title | upcase -%}
+{%- capture return -%}
 
-        {%- if page.layout == "timeline" -%}
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta property="og:locale" content="en_US"/>
+            <meta name="twitter:creator" content="jeremyvlegros"/>
+            {%- comment -%}  {%- endcomment -%}
+            {{ page_meta_date_of_creation_1690569717129 }}
+            {{ page_meta_description_1690569717129 }}
+            {{ page_meta_type_1690569717129 }}
+            {{ page_meta_title_1690569717129 }}
+            {% comment %}{{ page_canonical_url_1690569717129 }}{% endcomment %}
+            {{ page_meta_site_name_1690569717129 }}
+            {{ page_meta_image_color_1690569717129 }}
+            {{ page_url_bootstrap_1690569717129 }}
+            {{ page_url_css_1690569717129 }}
+            {% comment %}The HTML favicon image code was copied from `CSS Tricks` https://css-tricks.com/emoji-as-a-favicon/ {% endcomment %}
+            <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>
 
-            {%- if _PAGE_TITLE == "ABOUT"-%}
-            ❓
-            {%- elsif _PAGE_TITLE == "HOME" -%}
-            🪴
-            {%- elsif _PAGE_TITLE == "SANDBOX"-%}
-            🪣
-            {%- elsif _PAGE_TITLE == "BUILD"-%}
-            🚦
-            {%- elsif _PAGE_TITLE == "LINKS"-%}
-            🔗
-            {%- else -%}
-            🌿
+            {%- comment -%} FAVICON {%- endcomment -%}
+            {%- assign _PAGE_TITLE = page.title | upcase -%}
+
+            {%- if page.layout == "timeline" -%}
+
+                {%- if _PAGE_TITLE == "ABOUT" -%}
+                ❓
+                {%- elsif _PAGE_TITLE == "HOME" -%}
+                🪴
+                {%- elsif _PAGE_TITLE == "SANDBOX" -%}
+                🪣
+                {%- elsif _PAGE_TITLE == "BUILD" -%}
+                🚦
+                {%- elsif _PAGE_TITLE == "LINKS" -%}
+                🔗
+                {%- else -%}
+                🌿
+                {%- endif -%}
+
+            {%- elsif page.layout == "post_layout" -%}
+
+                {%- assign _PAGE_TITLE_WORDS = _PAGE_TITLE | split: " " -%}
+
+                {%- assign _PAGE_TITLE_FIRST_WORD = _PAGE_TITLE_WORDS | first -%}
+
+                {%- if _PAGE_TITLE == "#TAGS" -%}
+                🌿
+                {%- elsif _PAGE_TITLE_FIRST_WORD == "ABOUT" -%}
+
+                {%- elsif _PAGE_TITLE_FIRST_WORD == "STATUS" -%}
+
+                {%- elsif _PAGE_TITLE_FIRST_WORD == "REFERENCE" -%}
+
+                {%- elsif _PAGE_TITLE_FIRST_WORD == "INFORMATION" -%}
+
+                {%- elsif _PAGE_TITLE_FIRST_WORD == "OPINION" -%}
+                🌱
+                {%- else -%}
+                🍃
+                {%- endif -%}
+
             {%- endif -%}
 
-        {%- elsif page.layout == "post_layout" -%}
+                {%- assign _PAGE_TITLE = null -%}
+            </text></svg>">
 
-            {%- assign _PAGE_TITLE_WORDS = _PAGE_TITLE | split : " "-%}
+            {%- comment -%} 📖 📰📚📼🐧🐦💡🌀👣💼🇹⚙🎮📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}
+        </head>
+        <body>
+            <main class="page" aria-label="Content">
+            {{ content }}
+            </main>
+        </body>
+    </html>
 
-            {%- assign _PAGE_TITLE_FIRST_WORD = _PAGE_TITLE_WORDS | first -%}
-
-            {%- if _PAGE_TITLE == "#TAGS" -%}
-            🌿
-            {%- elsif _PAGE_TITLE_FIRST_WORD == "ABOUT" -%}
-
-            {%- elsif _PAGE_TITLE_FIRST_WORD == "STATUS" -%}
-
-            {%- elsif _PAGE_TITLE_FIRST_WORD == "REFERENCE" -%}
-
-            {%- elsif _PAGE_TITLE_FIRST_WORD == "INFORMATION" -%}
-
-            {%- elsif _PAGE_TITLE_FIRST_WORD == "OPINION" -%}
-            🌱
-            {%- else -%}
-            🍃
-            {%- endif -%}
-
-        {%- endif -%}
-
-            {%- assign _PAGE_TITLE = null -%}
-        </text></svg>">
-
-        {%- comment -%} 📖 📰📚📼🐧🐦💡🌀👣💼🇹⚙🎮📑 🕸 🔩 📟 📬 📁 📓 📮 🍃 🌱 🎐 🌿 🔖 🏁 🚩🎌🌲 🎋 💧 ☘️ 🍀 🌀 🌵 📜 📝 🆘  👣 💬 {%- endcomment -%}
-    </head>
-    <body>
-        <main class="page" aria-label="Content">
-        {{ content }}
-        </main>
-    </body>
-</html>
-
+{%- endcapture -%}
 
 
 {%- comment -%} resetting {%- endcomment -%}

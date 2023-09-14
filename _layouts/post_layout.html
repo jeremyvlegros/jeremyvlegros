@@ -6,6 +6,8 @@ date_of_modification : null
 no_color_background  : null
 ---
 
-{%- include procedure_print_post_content_from_post_with_first_post_id_with_last_post_id.liquid from_post=page -%}
+{%- include as_string_the_html_content_for_the_post_from_post_with_first_post_id_with_last_post_id.liquid
+    from_post=page
+-%}
 
-
+{{return}}
