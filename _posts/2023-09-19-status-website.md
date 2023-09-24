@@ -2,7 +2,7 @@
 title                : "status > website"
 date_of_creation     : "#date 2023-09-19 02:14 1695075266894964254 GMT"
 date_of_modification : null
-permalink            : "/posts/1695075266894964254"
+permalink            : "/post/1695075266894964254"
 tags :
 - "#posts"
 - "#status"

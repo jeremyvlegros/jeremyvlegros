@@ -2,7 +2,7 @@
 title                : "status > unity and modding"
 date_of_creation     : "#date 2023-09-19 01:08 1695071288479771244 GMT"
 date_of_modification : "#date 2023-09-19 02:11 1695075098514458602 GMT"
-permalink            : "/posts/1695071288479771244"
+permalink            : "/post/1695071288479771244"
 tags :
 
 - "#posts"
