@@ -1,0 +1,7 @@
+---
+title                : "#doctest"
+tags                 :
+
+- "#doctest"
+
+---

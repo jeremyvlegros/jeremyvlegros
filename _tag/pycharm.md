@@ -1,0 +1,7 @@
+---
+title                : "#pycharm"
+tags                 :
+
+- "#pycharm"
+
+---
