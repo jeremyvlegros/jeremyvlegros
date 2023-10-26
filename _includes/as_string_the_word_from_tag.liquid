@@ -1,0 +1,28 @@
+
+{%- comment -%} tag_1698346566303429674 {%- endcomment -%}
+{%- comment -%} making sure that the word is a tag before removing the `#` {%- endcomment -%}
+{%- include as_string_the_tag_from_word.liquid from_word=include.from_tag -%}
+{%- assign tag_1698346566303429674 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} lower casing {%- endcomment -%}
+{%- assign tag_1698346566303429674 = tag_1698346566303429674 | downcase -%}
+{%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > lower casing `{{tag_1698346566303429674}}` --> {%- endcomment -%}
+
+{%- comment -%} removing the first `#` {%- endcomment -%}
+{%- assign tag_1698346566303429674 = tag_1698346566303429674 | replace_first : "#", "" -%}
+{%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > without the first "#" `{{tag_1698346566303429674}}` --> {%- endcomment -%}
+
+{%- comment -%} replacing the spaces with underscores {%- endcomment -%}
+{%- assign tag_1698346566303429674 = tag_1698346566303429674 | replace : " ", "_" -%}
+{%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > replaced spaces with underscore `{{tag_1698346566303429674}}` --> {%- endcomment -%}
+
+{%- comment -%} replacing the html character spaces with underscores {%- endcomment -%}
+{%- assign tag_1698346566303429674 = tag_1698346566303429674 | replace : "&nbsp;", "_" -%}
+{%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > replaced html spaces with underscore `{{tag_1698346566303429674}}` --> {%- endcomment -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = tag_1698346566303429674 -%}
+
+{%- assign tag_1698346566303429674 = null -%}
