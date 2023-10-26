@@ -1,5 +1,7 @@
 {%- comment -%} as_string_the_color_image_link_from_date.liquid {%- endcomment -%}
- 
+
+{%- include CONFIGURATION/ALL.liquid -%}
+
 {%- assign image_color_1690569252052 = null -%}
 
 {%- comment -%} day {%- endcomment -%}
@@ -8,76 +10,73 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-
-
 {%- if day_1690569252052 -%}
-
 
     {%- if day_1690569252052 != "" -%}
 
         {%- case day_1690569252052 -%}
             {%- when "01" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/BpwYECq.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_01 -%}
             {%- when "02" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/UNPogEC.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_02 -%}
             {%- when "03" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/WeQ9pUI.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_03 -%}
             {%- when "04" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/rwMJzJY.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_04 -%}
             {%- when "05" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/y4GOWP8.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_05 -%}
             {%- when "06" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/XmCbs0H.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_06 -%}
             {%- when "07" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/Oc2vg4j.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_07 -%}
             {%- when "08" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/1LxHBZo.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_08 -%}
             {%- when "09" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/A74C7te.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_09 -%}
             {%- when "10" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/ld3Y0ZH.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_10 -%}
             {%- when "11" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/vE1poN2.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_11 -%}
             {%- when "12" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/6H0pWyd.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_12 -%}
             {%- when "13" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/H426FqL.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_13 -%}
             {%- when "14" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/rvT3aBX.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_14 -%}
             {%- when "15" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/NzqdErY.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_15 -%}
             {%- when "16" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/XRItiBv.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_16 -%}
             {%- when "17" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/EFiyrR0.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_17 -%}
             {%- when "18" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/HlEsCy0.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_18 -%}
             {%- when "19" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/NoDA2YL.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_19 -%}
             {%- when "20" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/LZTjWOv.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_20 -%}
             {%- when "21" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/t4trRjd.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_21 -%}
             {%- when "22" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/PWIooMi.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_22 -%}
             {%- when "23" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/Sp0JMH7.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_23 -%}
             {%- when "24" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/iyKhqH3.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_24 -%}
             {%- when "25" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/dSz3lXU.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_25 -%}
             {%- when "26" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/1S9qN2X.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_26 -%}
             {%- when "27" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/C3KnBzl.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_27 -%}
             {%- when "28" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/kPf02Ou.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_28 -%}
             {%- when "29" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/uDvk9ZQ.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_29 -%}
             {%- when "30" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/GomogEH.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_30 -%}
             {%- when "31" -%}
-                {%- assign image_color_1690569252052 = "https://i.imgur.com/0VgppgF.png" -%}
+                {%- assign image_color_1690569252052 = IMAGE_COLOR_31 -%}
         {%- endcase -%}
     {%- endif -%}
 
