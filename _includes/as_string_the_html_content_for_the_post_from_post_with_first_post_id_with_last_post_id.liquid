@@ -151,7 +151,7 @@
 {%- endcapture -%}
 
 {%- comment -%}  button tags {%- endcomment -%}
-{%- include as_html_the_tag_from_word.liquid from_word="tags"-%}
+{%- include as_string_the_html_content_for_the_tag_from_word.liquid from_word="tags"-%}
 {%- assign button_tags_1691010490420939832 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -304,7 +304,7 @@
             {%- endif -%}
 
             {% comment %} getting tag {% endcomment %}
-            {%- include as_html_the_tag_from_word.liquid from_word=tag -%}
+            {%- include as_string_the_html_content_for_the_tag_from_word.liquid from_word=tag -%}
             {%- assign tag_1691010490420939832 = return -%}
             {%- assign return = null -%}
             {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
