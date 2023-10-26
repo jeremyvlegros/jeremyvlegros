@@ -1,15 +1,12 @@
 .timeline
 {
     margin-top : 30px;
-    /*margin-right  : 100px;*/
     padding    : 0;
 }
 
 
 .timeline .page-heading
 {
-    /*display: none;*/
-    /*text-align  : center;*/
     font-weight               : bolder;
     font-variant-caps         : all-small-caps;
     display                   : flex;
@@ -19,10 +16,7 @@
     left                      : 5px;
     top                       : 1%;
     writing-mode              : vertical-lr;
-    /*text-orientation          : revert;*/
     text-orientation          : upright;
-    /*text-decoration: underline;*/
-    /*text-decoration-color: white;*/
     text-decoration-thickness : 3px;
     border                    : 2px none var(--color_post_shadow);
     border-left-style         : solid;
@@ -30,12 +24,6 @@
     height                    : 100%;
 }
 
-/*.timeline .page-heading:after*/
-/*{*/
-/*    content  : ": last to first";*/
-/*    position : relative;*/
-/*    top      : 1%;*/
-/*}*/
 
 .timeline .page
 {
@@ -59,8 +47,6 @@
 
 .timeline .posts
 {
-    /*margin-top   : 30px;*/
-    /*margin-top   : 0!important;*/
     margin-left  : 10px;
     margin-right : 4%;
     padding-left : 0;
@@ -69,7 +55,6 @@
 
 .timeline .posts .post
 {
-    /*margin-left  : 1%;*/
     padding-left : 0;
 }
 
@@ -94,10 +79,7 @@
     margin-top      : -30px;
     margin-bottom   : 30px;
 
-    /*background-color : var(--color_background_side_index);*/
     color           : var(--color_text_side_index);
-    /*margin-right     : 40px;  */
-    /*margin-left      : 40px;*/
     padding         : 0;
     position        : fixed;
     width           : inherit;
@@ -131,10 +113,7 @@
 
 #side_index .side_index_content ul
 {
-    /*position         : relative;*/
-    /*left             : -30px;*/
     padding-left : 50px;
-    /*padding-right : 10%;*/
 }
 
 #side_index .side_index_content li
@@ -158,8 +137,10 @@
     width           : 100%;
     border-radius : 15px;
     /*transition    : all .2s ease-in-out;*/
-    border        : 2px solid var(--color_post_shadow);
-    box-shadow    : 1px 1px 1px 1px var(--color_post_shadow);
+    border        : 3px solid var(--color_post_shadow);
+    box-shadow    : 2px 1px 0 1px var(--color_post_shadow);
+    font-variant: petite-caps;
+    font-weight: bolder;
 }
 
 #side_index .side_index_content a:hover
@@ -215,5 +196,3 @@
         z-index : 1;
     }
 }
-
-
