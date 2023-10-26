@@ -1,6 +1,7 @@
 :root
 {
     --post_border_radius : 18px;
+    --post_border_thickness : 3px;
 }
 
 .version
@@ -23,9 +24,9 @@
     /*margin-top: 3%;*/
     /*border-radius: var(--post_border_radius);*/
     border-radius    : var(--post_border_radius) var(--post_border_radius) var(--post_border_radius) var(--post_border_radius);
-    box-shadow       : 5px 1px 0 1px var(--color_post_shadow), 5px 7px 1px 1px var(--color_post_shadow);
+    box-shadow       : 2px 1px 0 1px var(--color_post_shadow), 2px 1px 1px 1px var(--color_post_shadow);
     background-color : var(--color_background_post_content); /* old setup serving as fallback color */
-    border           : 2px solid var(--color_post_shadow)
+    border : var(--post_border_thickness) solid var(--color_post_shadow)
     /*overflow-inline: scroll; can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set*/
 }
 
@@ -68,8 +69,8 @@
 {
     margin-bottom : 3%;
     margin-top    : 3%;
-    border        : 2px solid; /* common border */
-    box-shadow    : 1px 1px 2px var(--color_background_post_content_title);
+    border : var(--post_border_thickness) solid; /* common border */
+    box-shadow    : 1px 1px 1px var(--color_background_post_content_title);
     border-radius : 20px 20px 20px 20px;
 
 }
@@ -187,7 +188,7 @@
     padding-top :0px;
     padding-bottom :20px;
     border-radius: 0 0 var(--post_border_radius) var(--post_border_radius);
-    border : 2px solid var(--color_post_shadow);
+    border : var(--post_border_thickness) solid var(--color_post_shadow);
     /*z-index: 1;*/
     color : white;
     height : 10%;
