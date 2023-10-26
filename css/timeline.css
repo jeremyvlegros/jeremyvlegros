@@ -137,10 +137,10 @@
     width           : 100%;
     border-radius : 15px;
     /*transition    : all .2s ease-in-out;*/
-    border        : 3px solid var(--color_post_shadow);
-    box-shadow    : 2px 1px 0 1px var(--color_post_shadow);
-    font-variant: petite-caps;
-    font-weight: bolder;
+    border          : 2px solid var(--color_post_shadow);
+    box-shadow      : 2px 1px 0 1px var(--color_post_shadow);
+    /*font-variant    : petite-caps;*/
+    font-weight     : bolder;
 }
 
 #side_index .side_index_content a:hover
