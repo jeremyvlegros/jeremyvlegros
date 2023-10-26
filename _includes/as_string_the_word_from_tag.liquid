@@ -11,7 +11,7 @@
 {%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > lower casing `{{tag_1698346566303429674}}` --> {%- endcomment -%}
 
 {%- comment -%} removing the first `#` {%- endcomment -%}
-{%- assign tag_1698346566303429674 = tag_1698346566303429674 | replace_first : "#", "" -%}
+{%- assign tag_1698346566303429674 = tag_1698346566303429674 | replace : "#", "" -%}
 {%- comment -%} <!--DEBUG : as_string_the_word_from_tag.liquid > without the first "#" `{{tag_1698346566303429674}}` --> {%- endcomment -%}
 
 {%- comment -%} replacing the spaces with underscores {%- endcomment -%}
