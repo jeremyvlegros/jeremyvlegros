@@ -29,84 +29,42 @@
 
 #links #steam
 {
-  background-color : var(--color_button_steam);
+  background-color : var(--color_steam);
 }
 
 #links #github
 {
-  background-color : var(--color_button_github);
+  background-color : var(--color_github);
 }
 
 #links #nexus_mods
 {
-  background-color : var(--color_button_nexus_mods);
+  background-color : var(--color_nexus_mods);
 }
 
 #links #reddit
 {
-  background-color : var(--color_button_reddit);
+  background-color : var(--color_reddit);
 }
 
 #links #tumblr
 {
-  background-color : var(--color_button_tumblr);
+  background-color : var(--color_tumblr);
 }
 
 #links #twitter
 {
-  background-color : var(--color_button_twitter);
+  background-color : var(--color_twitter);
 }
 
 #links #linkedin
 {
-  background-color : var(--color_button_linkedin);
+  background-color : var(--color_linkedin);
 }
 
 #links #twitch
 {
-  background-color : var(--color_button_twitch);
-}
-
-/*hover colors*/
-
-#links #steam:hover
-{
-  background-color : var(--color_button_hover_steam);
-}
-
-#links #github:hover
-{
-  background-color : var(--color_button_hover_github);
-}
-
-#links #nexus_mods:hover
-{
-  background-color : var(--color_button_hover_nexus_mods);
-}
-
-#links #reddit:hover
-{
-  background-color : var(--color_button_hover_reddit);
-}
-
-#links #tumblr:hover
-{
-  background-color : var(--color_button_hover_tumblr);
-}
-
-#links #twitter:hover
-{
-  background-color : var(--color_button_hover_twitter);
-}
-
-#links #linkedin:hover
-{
-  background-color : var(--color_button_hover_linkedin);
-}
-
-#links #twitch:hover
-{
-  background-color : var(--color_button_hover_twitch);
+  background-color : var(--color_twitch);
 }
 
 #links #version

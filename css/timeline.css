@@ -4,7 +4,6 @@
     padding    : 0;
 }
 
-
 .timeline .page-heading
 {
     font-weight               : bolder;
@@ -39,10 +38,7 @@
 .timeline .post
 {
     /* spacing between posts */
-    margin-bottom : 20vh;
-    margin-top    : 0;
-    margin-right  : 0;
-    margin-left   : 0;
+    margin : 0 0 20vh;
 }
 
 .timeline .posts
@@ -70,7 +66,7 @@
     /*margin-top : 50px;*/
 }
 
-/* ------------------ INDEX --------------------------- */
+/* ////////////////////////////INDEX//////////////////////////// */
 
 /*noinspection CssUnknownProperty*/
 #side_index
@@ -79,7 +75,7 @@
     margin-top      : -30px;
     margin-bottom   : 30px;
 
-    color           : var(--color_text_side_index);
+    color           : var(--color_side_index_text);
     padding         : 0;
     position        : fixed;
     width           : inherit;
@@ -87,6 +83,7 @@
     /* scrolling */
     overflow-y      : scroll;
     height          : 99%;
+
     /*  firefox */
     scrollbar-width : none;
     z-index         : 4;
@@ -118,10 +115,7 @@
 
 #side_index .side_index_content li
 {
-    margin-top    : 8px;
-    margin-bottom : 8px;
-    margin-left   : 0;
-    margin-right  : 10px;
+    margin        : 8px 10px 8px 0;
     display       : flex;
 }
 
@@ -136,22 +130,18 @@
     transition      : all .2s ease-in-out;
     width           : 100%;
     border-radius : 15px;
-    /*transition    : all .2s ease-in-out;*/
     border          : 2px solid var(--color_post_shadow);
     box-shadow      : 2px 1px 0 1px var(--color_post_shadow);
-    /*font-variant    : petite-caps;*/
     font-weight     : bolder;
 }
 
 #side_index .side_index_content a:hover
 {
     transform  : scale(.97) !important;
-    /*background-color : white;*/
-    /*color            : black;            */
     box-shadow : 1px 1px 1px 1px var(--color_post_shadow);
 }
 
-/* responsive tweak */
+/* ///////////////////// responsive tweaks ///////////////////// */
 
 @media screen and (max-width : 576px)
 {
