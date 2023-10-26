@@ -108,6 +108,8 @@
   --color_background_code               : var(--color_background_dracula);
   --color_text_back_ticks               : yellowgreen;
   --color_border_code                   : rgba(0, 0, 0, .5);
+
+
 }
 
 body, html
@@ -274,7 +276,6 @@ body, html
 {
   background-color : var(--color_31) !important;
 }
-
 
 .color_background_tumblr
 {
@@ -449,4 +450,52 @@ body, html
 .color_background_dark_red
 {
   background-color: #3F1415!important;
+}
+.color_background_starfield
+{
+  background-color: #C82337!important;
+}
+
+.color_background_star_citizen
+{
+  background-color: #000!important;
+}
+
+.color_background_pycharm
+{
+  background-color: #29D891!important;
+}
+
+.color_background_minecraft
+{
+  background-color: #679C3C!important;
+}
+
+.color_background_python
+{
+  background-color: #3E75A8!important;
+}
+
+.color_background_doctest
+{
+  background-color: #3E75A8!important;
+}
+
+.color_background_youtube
+{
+  background-color: #FF0000!important;
+}
+
+.color_background_mojang
+{
+  background-color: #F03843!important;
+}
+
+.color_background_unity
+{
+  background-color: #848484!important;
+}
+.color_background_star_engine
+{
+  background-color: #B19D7A!important;
 }
