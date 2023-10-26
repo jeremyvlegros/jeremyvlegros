@@ -1,7 +1,7 @@
 ---
 title                : "Opinion > video > `Star Engine`"
 date_of_creation     : "#date 2023-10-25 21:18 1698254295589450229 GMT"
-date_of_modification : null
+date_of_modification : "#date 2023-10-26 02:03 1698271395450784813 GMT"
 permalink            : "/post/1698254295589450229"
 tags :
 - "#posts"
@@ -18,4 +18,4 @@ I don't know if `Star Citizen` will look that good, but if it does, I can imagin
 
 If this doesn't wake up players I don't know what will, this is the kind of technology you would pay 70€ for.
 
-[The video](/post/1698253192118430040)
+[The video]({{"/post/1698253192118430040" | relative_url}})
