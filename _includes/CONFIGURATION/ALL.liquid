@@ -1,14 +1,14 @@
 {%- comment -%}
 
 WARNING :
-  DO NOT WRITE ANYTHING ELSE THAN VARIABLES !
+  ONLY WRITE VARIABLES !
 
 GOALS :
   - my variables in one place instead of `_data` x `_config`
   - edition :
     - my brain itches when seeing `<name_in_lowercase>.<variable_name_uppercase>`
     - I don't want to type `site.DEBUG` when I could type `DEBUG` :
-      - I use a file template in my IDE that creates a file with `{%- include CONFIGURATION/ALL -%}`
+      - I use a file template in my IDE that creates a file with `{%- include CONFIGURATION/ALL.liquid -%}`
     - I can find my variables fast
     - I can change values individually
   - preventing cyclic imports, everything variable is split. Imports :
@@ -28,5 +28,6 @@ CONS :
 {%- include CONFIGURATION/NEW_LINE.liquid -%}
 {%- include CONFIGURATION/BUILD.liquid -%}
 {%- include CONFIGURATION/DEBUG.liquid -%}
+{%- include CONFIGURATION/IMAGE_COLORS.liquid -%}
 
 
