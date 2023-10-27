@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#twitter"
-- "#x corp"
+- "#x_corp"
 ---
 
 It feels unorganic. It doesn't fit in a social experience :  

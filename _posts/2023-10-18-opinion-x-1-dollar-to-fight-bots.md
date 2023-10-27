@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#twitter"
-- "#x corp"
+- "#x_corp"
 ---
 
 - bots maker wouldn't most likely be deterred to pay 100$ per year to run 100 bots

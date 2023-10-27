@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#twitter"
-- "#x corp"
+- "#x_corp"
 - "#tumblr"
 ---
 The more `Twitter` becomes `X` the more `Tumblr` becomes like `Twitter`, I may prefer being on `Tumblr` if both of them keep evolving in their respective directions

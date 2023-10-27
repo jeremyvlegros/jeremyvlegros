@@ -6,8 +6,8 @@ permalink            : "/post/1698254295589450229"
 tags :
 - "#posts"
 - "#opinion"
-- "#star citizen"
-- "#star engine"
+- "#star_citizen"
+- "#star_engine"
 
 ---
 

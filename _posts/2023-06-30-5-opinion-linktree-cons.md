@@ -6,7 +6,7 @@ permalink            : /post/1688126427044747724
 tags                 :
 - "#posts"             
 - "#opinion"
-- "#link tree"
+- "#link_tree"
 ---
 
 - I don't like the `Link Tree` page structure, not enough customization (even when with paid things)

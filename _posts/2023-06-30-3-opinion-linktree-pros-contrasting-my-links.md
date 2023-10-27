@@ -6,7 +6,7 @@ permalink            : /post/1688126427044747722
 tags                 :
 - "#posts"             
 - "#opinion"
-- "#link tree"
+- "#link_tree"
 ---
 
 It will constrast with my website, appearing as even more peaceful :

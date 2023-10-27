@@ -8,7 +8,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#starfield"
-- "#star citizen"
+- "#star_citizen"
 
 ---
 

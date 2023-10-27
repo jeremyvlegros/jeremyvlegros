@@ -8,8 +8,8 @@ tags :
 - "#posts"
 - "#reference"
 - "#video"
-- "#star engine"
-- "#video games"
+- "#star_engine"
+- "#video_games"
 - "#youtube"
 
 ---

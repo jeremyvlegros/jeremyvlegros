@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#twitter"
-- "#x corp"
+- "#x_corp"
 - "#tumblr"
 ---
 

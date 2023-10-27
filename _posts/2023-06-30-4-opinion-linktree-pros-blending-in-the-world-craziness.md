@@ -6,7 +6,7 @@ permalink            : /post/1688126427044747723
 tags                 :
 - "#posts"             
 - "#opinion"
-- "#link tree"
+- "#link_tree"
 ---
 
 Sometimes I want to be normal, to fit the norm, after all, being crazy in a crazy world, is being normal.

@@ -6,7 +6,7 @@ permalink            : /post/1688126427044747721
 tags                 :
 - "#posts"             
 - "#opinion"
-- "#link tree"
+- "#link_tree"
 ---
 
 I like seeing if people click on my links.

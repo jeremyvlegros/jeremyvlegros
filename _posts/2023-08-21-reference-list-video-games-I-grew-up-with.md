@@ -8,7 +8,7 @@ tags                 :
 - "#reference"
 - "#about"
 - "#me"
-- "#video games"
+- "#video_games"
 ---
 
 - `SuperMario` (`Gameboy`)

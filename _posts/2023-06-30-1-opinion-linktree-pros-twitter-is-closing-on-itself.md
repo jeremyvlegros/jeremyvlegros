@@ -7,7 +7,7 @@ tags                 :
 - "#posts"
 - "#twitter"
 - "#opinion"
-- "#link tree"
+- "#link_tree"
 ---
 
 I can't use `Twitter` as a HUB, and now even less, because my links are not public depending on ... unknown factors.

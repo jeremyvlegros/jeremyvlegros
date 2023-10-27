@@ -6,7 +6,7 @@ permalink            : /post/1688126427044747719
 tags                 :
 - "#posts"
 - "#status"
-- "#link tree"
+- "#link_tree"
 ---
 
 Added external links on `linkt.ree` 

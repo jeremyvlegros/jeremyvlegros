@@ -6,7 +6,7 @@ permalink            : "/post/1697600461867097726"
 tags :
 - "#posts"
 - "#status"
-- "#x corp"
+- "#x_corp"
 - "#twitter"
 ---
                                                  

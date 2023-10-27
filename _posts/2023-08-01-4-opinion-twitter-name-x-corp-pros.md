@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#opinion"
 - "#twitter"
-- "#x corp"
+- "#x_corp"
 ---
 
 Having a trademark described in one letter would be cool, a `x` being undefined, it could rassemble many products, but ... it is not `X` it's `X corp`.

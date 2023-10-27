@@ -7,7 +7,7 @@ tags :
 - "#opinion"
 - "#posts"
 - "#starfield"
-- "#video games"
+- "#video_games"
 ---
 
 I watched one live stream yesterday, and a few more videos today.
