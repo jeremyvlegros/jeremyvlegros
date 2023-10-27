@@ -1,7 +1,7 @@
 ---
 title                : "information > `Pycharm` > `doctest` > absurd result"
 date_of_creation     : "#date 2023-09-29 07:18 1695957483470493710 GMT"
-date_of_modification : null
+date_of_modification : "#date 2023-10-27 06:50 1698375005566153180 GMT"
 permalink            : "/post/1695957483470493710"
 tags :
 - "#posts"
@@ -10,9 +10,13 @@ tags :
 - "#configurations"
 ---
 
-Got a failed `doctest` test :
+Got a failed `doctest` test, this :
 
-`['/ROOT//a', '/ROOT//b', '/ROOT//c', '/ROOT//d', '/ROOT//e']` instead of `['/ROOT/a', '/ROOT/b','/ROOT/c', '/ROOT/d', '/ROOT/e']`
+`['/ROOT//a', '/ROOT//b', '/ROOT//c', '/ROOT//d', '/ROOT//e']`
+
+instead of :
+
+`['/ROOT/a', '/ROOT/b','/ROOT/c', '/ROOT/d', '/ROOT/e']`
 
 The problem was that the script directory wasn't set in the `doctest` run configuration : 
 - didn't stop the `doctest` to run okay without it (until this)
