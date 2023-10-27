@@ -561,3 +561,115 @@ body, html
 {
   background-color : var(--color_star_engine) !important;
 }
+
+
+.color_background_tags
+{
+  background-color:var(--color_tags)!important;
+}
+
+.color_background_posts
+{
+  background-color:var(--color_posts)!important;
+}
+
+.color_background_opinions
+{
+  background-color:var(--color_opinions)!important;
+}
+
+.color_background_ide
+{
+  background-color:var(--color_ide)!important;
+}
+
+.color_background_about
+{
+  background-color:var(--color_about)!important;
+}
+
+.color_background_avatar
+{
+  background-color:var(--color_avatar)!important;
+}
+
+.color_background_configuration
+{
+  background-color:var(--color_configuration)!important;
+}
+
+.color_background_languages
+{
+  background-color:var(--color_languages)!important;
+}
+
+.color_background_dream_jobs
+{
+  background-color:var(--color_dream_job)!important;
+}
+
+.color_background_highlighting
+{
+  background-color:var(--color_highlighting)!important;
+}
+
+.color_background_me
+{
+  background-color:var(--color_me)!important;
+}
+
+.color_background_mob
+{
+  background-color:var(--color_mob)!important;
+}
+
+.color_background_modding
+{
+  background-color:var(--color_modding)!important;
+}
+
+.color_background_readme
+{
+  background-color:var(--color_readme)!important;
+}
+
+.color_background_reference
+{
+  background-color:var(--color_reference)!important;
+}
+
+.color_background_security
+{
+  background-color:var(--color_security)!important;
+}
+
+.color_background_status
+{
+  background-color:var(--color_status)!important;
+}
+
+.color_background_syntax
+{
+  background-color:var(--color_syntax)!important;
+}
+
+.color_background_video
+{
+  background-color:var(--color_video)!important;
+}
+
+.color_background_video_games
+{
+  background-color:var(--color_video_games)!important;
+}
+
+.color_background_vote
+{
+  background-color:var(--color_vote)!important;
+}
+
+.color_background_website
+{
+  background-color:var(--color_website)!important;
+}
+
