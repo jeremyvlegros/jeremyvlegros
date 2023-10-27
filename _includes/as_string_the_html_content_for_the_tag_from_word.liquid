@@ -14,11 +14,18 @@
     {%- assign return = null -%}
     {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
+    {%- comment -%} word {%- endcomment -%}
+    {%- comment -%} this call is a bit of a waste but I don't have time to split the enforced tag function {%- endcomment -%}
+    {%- include as_string_the_word_from_tag.liquid from_tag=tag_1691339278938925411 -%}
+    {%- assign path_suffix_1691339278938925411 = return -%}
+    {%- assign return = null -%}
+    {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
     <a class="col button {{ color_background }}"
-       href=" {{ '/tag/' | append: include.from_word | replace_first: "#", "" | relative_url }} "> {{ tag_1691339278938925411 }}
+       href=" {{ '/tag/' | append: path_suffix_1691339278938925411 | relative_url }} "> {{ tag_1691339278938925411 }}
     </a>
 {%- endcapture -%}
 
 {%- assign color_background = null -%}
 {%- assign tag_1691339278938925411 = null -%}
-{%- assign word = null -%}
+{%- assign path_suffix_1691339278938925411 = null -%}
