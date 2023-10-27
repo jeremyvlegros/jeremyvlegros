@@ -1,5 +1,5 @@
 ---
-title                : "opinions > `Twitter` > pros"
+title                : "opinion > `Twitter` > pros"
 date_of_creation     : "#date 2023-05-26 00:00 1685059200000000007 GMT"
 date_of_modification : "#date 2023-08-21 15:39 1692617940671929532 GMT"
 permalink            : /post/1685059200000000007

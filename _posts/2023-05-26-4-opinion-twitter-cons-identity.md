@@ -1,5 +1,5 @@
 ---
-title                : "opinions > `Twitter` > cons > identity"
+title                : "opinion > `Twitter` > cons > identity"
 date_of_creation     : "#date 2023-05-26 00:00 1685059200000000004 GMT"
 date_of_modification : "#date 2023-08-24 13:18 1692868685768532959 GMT"
 permalink            : /post/1685059200000000004

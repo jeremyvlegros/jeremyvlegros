@@ -1,7 +1,0 @@
----
-title                : "#configuration"
-tags                 :
-
-- "#configuration"
-
----

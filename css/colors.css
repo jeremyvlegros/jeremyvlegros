@@ -93,22 +93,22 @@
   --color_opinions                       : #935EE9;
   --color_ide                           : #3C6160;
   --color_about                         : #9CB70A;
-  --color_avatar                        : #51558E;
-  --color_configuration                 : #D0C32E;
+  --color_avatars                        : #51558E;
+  --color_configurations                 : #D0C32E;
   --color_languages                     : #EC3A33;
-  --color_dream_job                     : #C57C2F;
+  --color_dream_jobs                     : #C57C2F;
   --color_highlighting                  : #6779A5;
   --color_me                            : #997D73;
-  --color_mob                           : #51558E;
+  --color_mobs                           : #51558E;
   --color_modding                       : #1F0937;
   --color_readme                        : #AF6B96;
-  --color_reference                     : #B89C6C;
+  --color_references                     : #B89C6C;
   --color_security                      : #BDC417;
   --color_status                        : #665925;
   --color_syntax                        : #E5BB34;
-  --color_video                         : #0D5DEA;
+  --color_videos                         : #0D5DEA;
   --color_video_games                   : #451A64;
-  --color_vote                          : #665925;
+  --color_votes                          : #665925;
   --color_website                       : #7DA466;
   /* Dracula syntax highlighting */
   --color_background_dracula            : #282a36;
@@ -588,14 +588,14 @@ body, html
   background-color:var(--color_about)!important;
 }
 
-.color_background_avatar
+.color_background_avatars
 {
-  background-color:var(--color_avatar)!important;
+  background-color:var(--color_avatars)!important;
 }
 
-.color_background_configuration
+.color_background_configurations
 {
-  background-color:var(--color_configuration)!important;
+  background-color:var(--color_configurations)!important;
 }
 
 .color_background_languages
@@ -605,7 +605,7 @@ body, html
 
 .color_background_dream_jobs
 {
-  background-color:var(--color_dream_job)!important;
+  background-color:var(--color_dream_jobs)!important;
 }
 
 .color_background_highlighting
@@ -618,9 +618,9 @@ body, html
   background-color:var(--color_me)!important;
 }
 
-.color_background_mob
+.color_background_mobs
 {
-  background-color:var(--color_mob)!important;
+  background-color:var(--color_mobs)!important;
 }
 
 .color_background_modding
@@ -633,9 +633,9 @@ body, html
   background-color:var(--color_readme)!important;
 }
 
-.color_background_reference
+.color_background_references
 {
-  background-color:var(--color_reference)!important;
+  background-color:var(--color_references)!important;
 }
 
 .color_background_security
@@ -653,9 +653,9 @@ body, html
   background-color:var(--color_syntax)!important;
 }
 
-.color_background_video
+.color_background_videos
 {
-  background-color:var(--color_video)!important;
+  background-color:var(--color_videos)!important;
 }
 
 .color_background_video_games
@@ -663,9 +663,9 @@ body, html
   background-color:var(--color_video_games)!important;
 }
 
-.color_background_vote
+.color_background_votes
 {
-  background-color:var(--color_vote)!important;
+  background-color:var(--color_votes)!important;
 }
 
 .color_background_website

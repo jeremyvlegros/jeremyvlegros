@@ -7,7 +7,7 @@ tags :
 - "#posts"
 - "#pycharm"
 - "#doctest"
-- "#configuration"
+- "#configurations"
 ---
 
 Got a failed `doctest` test :
