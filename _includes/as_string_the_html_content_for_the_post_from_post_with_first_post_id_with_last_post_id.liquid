@@ -118,7 +118,7 @@
 {% comment %} top button {% endcomment %}
 {%- capture button_top_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-    <a class="col button color_background_lime"
+    <a class="col button color_background_top"
        style="border-width: 3px"
        {% comment %}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{% endcomment %}
        href="{{ tag_url_1691010490420939832 }}"> Top</a>
@@ -127,7 +127,7 @@
 {% comment %} bottom button {% endcomment %}
 {%- capture button_bottom_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-    <a class="col button color_background_olive"
+    <a class="col button color_background_bottom"
        style="border-width: 3px"
        {% comment %}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{% endcomment %}
        href="{{ tag_url_1691010490420939832 }}"> Bottom</a>
@@ -135,7 +135,7 @@
 
 {%- comment -%} home button {%- endcomment -%}
 {%- capture button_home_1691010490420939832 -%}
-    <a class="col button color_background_purple"
+    <a class="col button color_background_home"
        style="border-width: 3px"
        {% comment %}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{% endcomment %}
        href="{{ '/' | relative_url }}"> Home </a>
@@ -144,7 +144,7 @@
 {% comment %} id button in timeline {% endcomment %}
 {%- capture button_id_1691010490420939832 -%}
     {%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-    <a class="col button color_background_sand_green"
+    <a class="col button {{ post_color_background_1691010490420939832 }}"
        style="border-width: 3px;"
        href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }}
 </a>
