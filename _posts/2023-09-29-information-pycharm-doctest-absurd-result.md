@@ -8,6 +8,7 @@ tags :
 - "#pycharm"
 - "#doctest"
 - "#configurations"
+- "#ide"
 ---
 
 Got a failed `doctest` test, this :

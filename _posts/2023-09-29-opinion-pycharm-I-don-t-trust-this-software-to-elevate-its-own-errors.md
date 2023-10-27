@@ -8,7 +8,7 @@ tags :
 - "#posts"
 - "#opinions"
 - "#pycharm"
-- "#IDE"
+- "#ide"
 ---
 
 This cost me a lot of sanity  c.f <a href="{{ "post/1695957483470493710" | relative_url }}"> post</a>

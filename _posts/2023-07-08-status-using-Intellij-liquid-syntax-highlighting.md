@@ -11,6 +11,7 @@ tags                 :
 - "#syntax" 
 - "#highlighting"
 - "#languages"
+- "#ide"
 ---
 
 It comes with an official plugin.
