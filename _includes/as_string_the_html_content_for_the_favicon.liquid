@@ -1,0 +1,116 @@
+{%- comment -%} page title in uppercase {%- endcomment -%}
+{%- assign page_raw_title_1698359087216322566 = page.title | downcase -%}
+
+{%- assign page_layout_1698359087216322566 = page.layout -%}
+
+{%- assign page_favicon_1698359087216322566 = null -%}
+
+{%- capture page_favicon_1698359087216322566 -%}
+
+  {%- comment -%} TAGS (MOSTLY) {%- endcomment -%}
+  {%- if page_layout_1698359087216322566 == "timeline_layout" -%}
+
+    {%- case page_raw_title_1698359087216322566 -%}
+
+      {%- when "home" -%}
+        📦
+      {%- when "#posts" -%}
+        📚
+      {%- when "#opinions" -%}
+        📕
+      {%- when "#references" -%}
+        📙
+      {%- when "#informations" -%}
+        📘
+      {%- when "#gnome" -%}
+        👣
+      {%- when "#about" -%}
+        🚏
+      {%- when "#linux" or "#ubuntu" or "#pingouin" or "#pengouin" -%}
+        🐧
+      {%- when "#debian" -%}
+        🌀
+      {%- when "sandbox" -%}
+        🪣
+      {%- when "#links" -%}
+        🔗
+      {%- when "#tv" or "#tv_show" -%}
+        📺
+      {%- when "#movie" or "#film" -%}
+        🎬
+      {%- when "#videos" -%}
+        📼
+      {%- when "#video_games" -%}
+        🎮
+      {%- when "#jobs" -%}
+        💼
+      {%- when "#status" -%}
+        🗞️
+      {%- when "#androids" or "#robots" or "#android" or "#bots" -%}
+        🤖
+      {%- when "#me" -%}
+        🪪
+      {%- when "#python" or "#snakes" or "#metal_gear_solid" -%}
+        🐍
+      {%- when "#traps" or "#dont_starve" -%}
+        🪤
+      {%- when "#minecraft" -%}
+        🧊
+      {%- when "#votes" -%}
+        🗳️
+      {%- else -%}
+        🌿
+    {%- endcase -%}
+
+  {%- elsif page_layout_1698359087216322566 == "post_layout" -%}
+
+    {%- assign split_title = page_raw_title_1698359087216322566 | split: " " -%}
+
+    {%- assign first_word_1698359087216322566 = split_title | first -%}
+
+    {%- comment -%} <!-- split_title space : `{{ split_title }}` !--> {%- endcomment -%}
+
+    {% comment %}{% endcomment %}
+    {%- comment -%} single page {%- endcomment -%}
+    {%- case first_word_1698359087216322566 -%}
+
+      {%- when "home" -%}
+        📦
+      {%- when "#tags" -%}
+        🏷️
+      {%- when "about" -%}
+        ️🪧
+      {%- when "status" -%}
+        📰
+      {%- when "opinion" -%}
+        📝
+      {%- when "reference" -%}
+        📃
+      {%- when "information" -%}
+        📄
+      {%- when "help" -%}
+        🃏
+      {%- when "build" -%}
+        🏗
+      {%- else -%}
+        🍃
+    {%- endcase -%}
+
+  {%- endif -%}
+
+{%- endcapture -%}
+
+{%- assign prefix = '<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>' -%}
+{%- assign suffix = '</text></svg>">' -%}
+
+{%- capture return -%}
+  {% comment %}The HTML favicon image code was copied from `CSS Tricks` https://css-tricks.com/emoji-as-a-favicon/ {% endcomment %}
+  {{ prefix }} {{ page_favicon_1698359087216322566 }} {{ suffix }}
+{%- endcapture -%}
+
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign page_raw_title_1698359087216322566 = null -%}
+{%- assign page_layout_1698359087216322566 = null -%}
+{%- assign page_favicon_1698359087216322566 = null -%}
+{%- assign first_word_1698359087216322566 = null -%}
+
