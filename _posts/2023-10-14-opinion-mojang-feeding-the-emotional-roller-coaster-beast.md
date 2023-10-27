@@ -1,11 +1,11 @@
 ---
-title                : "opinion > `Mojang`> feeding the emotional roller coaster beast"
+title                : "opinions > `Mojang`> feeding the emotional roller coaster beast"
 date_of_creation     : "#date 2023-10-14 13:05 1697274328022936769 GMT"
 date_of_modification : "#date 2023-10-18 08:07 1697602020650049934 GMT"
 permalink            : "/post/1697274328022936769"
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#minecraft"
 - "#mojang"
 ---

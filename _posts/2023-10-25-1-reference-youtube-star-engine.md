@@ -6,8 +6,8 @@ permalink            : "/post/1698253192118430040"
 tags :
 
 - "#posts"
-- "#reference"
-- "#video"
+- "#references"
+- "#videos"
 - "#star_engine"
 - "#video_games"
 - "#youtube"

@@ -1,11 +1,11 @@
 ---
-title                : "opinion > x > 1$ to fight bots"
+title                : "opinions > x > 1$ to fight bots"
 date_of_creation     : "#date 2023-10-18 05:37 1697593035612355255 GMT"
 date_of_modification : "#date 2023-10-18 08:24 1697603043625671648 GMT"
 permalink            : "/post/1697593035612355255"
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#twitter"
 - "#x_corp"
 ---

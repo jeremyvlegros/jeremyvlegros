@@ -5,7 +5,7 @@ date_of_modification : "#date 2023-10-26 02:03 1698271395450784813 GMT"
 permalink            : "/post/1698254295589450229"
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#star_citizen"
 - "#star_engine"
 

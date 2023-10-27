@@ -1,11 +1,11 @@
 ---
-title                : "opinion > `Twitter` &  `Tumblr`"
+title                : "opinions > `Twitter` &  `Tumblr`"
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914513 GMT"
 date_of_modification : "#date 2023-08-21 15:39 1692617940671929532 GMT"
 permalink            : /post/1690880245921914513
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#twitter"
 - "#x_corp"
 - "#tumblr"

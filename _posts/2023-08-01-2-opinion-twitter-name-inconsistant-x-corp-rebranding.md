@@ -1,11 +1,11 @@
 ---
-title                : "opinion > `Twitter` > name > `X-corp` > Inconsistant rebranding "
+title                : "opinions > `Twitter` > name > `X-corp` > Inconsistant rebranding "
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914512 GMT"
 date_of_modification : "#date 2023-08-21 15:39 1692617940671929532 GMT"
 permalink            : /post/1690880245921914512
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#twitter"
 - "#x_corp"
 - "#tumblr"

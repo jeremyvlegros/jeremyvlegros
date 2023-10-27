@@ -5,7 +5,7 @@ date_of_modification : "#date 2023-10-25 23:33 1698262382634497272 GMT"
 permalink            : /post/1692622917001260457
 tags                 : 
 - "#posts"
-- "#reference"
+- "#references"
 - "#about"
 - "#me"
 - "#video_games"

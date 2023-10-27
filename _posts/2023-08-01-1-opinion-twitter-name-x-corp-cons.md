@@ -1,11 +1,11 @@
 ---
-title                : "opinion > `Twitter` > name > `X-corp` > cons "
+title                : "opinions > `Twitter` > name > `X-corp` > cons "
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914511 GMT"
 date_of_modification : "#date 2023-08-11 17:28 1691760487859283875 GMT"
 permalink            : /post/1690880245921914511
 tags :
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#twitter"
 - "#x_corp"
 ---

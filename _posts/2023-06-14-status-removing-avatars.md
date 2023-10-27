@@ -6,6 +6,6 @@ permalink            : /post/1686700800000000000
 tags                 :
 - "#posts"
 - "#status"
-- "#avatar"
+- "#avatars"
 ---
 Images can't be used as a person identity on the web.

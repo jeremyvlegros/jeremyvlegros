@@ -1,7 +1,0 @@
----
-title                : "#vote"
-tags                 :
-
-- "#vote"
-
----

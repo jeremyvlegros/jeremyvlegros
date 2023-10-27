@@ -1,12 +1,12 @@
 ---
-title                : "opinion > `Pycharm` > I don't trust this software to elevate its own errors"
+title                : "opinions > `Pycharm` > I don't trust this software to elevate its own errors"
 date_of_creation     : "#date 2023-09-29 08:07 1695960451210113915 GMT"
 date_of_modification : null
 permalink            : "/post/1695960451210113915"
 tags :
 
 - "#posts"
-- "#opinion"
+- "#opinions"
 - "#pycharm"
 - "#IDE"
 ---

@@ -6,7 +6,7 @@ permalink            : /post/1685059200000000003
 tags                 : 
 - "#posts"
 - "#status"
-- "#opinion"
+- "#opinions"
 ---
 
 The API is restricted in the free version

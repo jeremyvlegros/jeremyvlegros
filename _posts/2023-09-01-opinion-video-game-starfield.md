@@ -1,10 +1,10 @@
 ---
-title                : "opinion > video game > `Starfield`"
+title                : "opinions > video game > `Starfield`"
 date_of_creation     : "#date 2023-09-01 10:32 1693549959611808252 GMT"
 date_of_modification : null
 permalink            : "/post/1693549959611808252"
 tags :
-- "#opinion"
+- "#opinions"
 - "#posts"
 - "#starfield"
 - "#video_games"

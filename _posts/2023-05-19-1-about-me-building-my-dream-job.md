@@ -7,7 +7,7 @@ tags                 :
 - "#posts"
 - "#about"
 - "#me"
-- "#dream_job"
+- "#dream_jobs"
 ---
 
 Earning a living by building a recursive content publishing system around video games :

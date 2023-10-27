@@ -8,8 +8,8 @@ tags :
 - "#posts"
 - "#status"
 - "#minecraft"
-- "#vote"
-- "#mob"
+- "#votes"
+- "#mobs"
 
 ---
 

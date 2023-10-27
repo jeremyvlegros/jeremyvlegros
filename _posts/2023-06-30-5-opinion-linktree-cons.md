@@ -1,11 +1,11 @@
 ---
-title                : "opinion > `linktree` > cons"
+title                : "opinions > `linktree` > cons"
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747724 GMT"
 date_of_modification : "#date 2023-08-21 15:39 1692617940671929532 GMT"
 permalink            : /post/1688126427044747724
 tags                 :
 - "#posts"             
-- "#opinion"
+- "#opinions"
 - "#link_tree"
 ---
 

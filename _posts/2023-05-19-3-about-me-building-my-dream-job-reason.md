@@ -7,7 +7,7 @@ tags                 :
 - "#posts"
 - "#about"
 - "#me"
-- "#dream_job"
+- "#dream_jobs"
 ---
 
 ## *Surviving "happy" or surviving "unhappy" ?*
