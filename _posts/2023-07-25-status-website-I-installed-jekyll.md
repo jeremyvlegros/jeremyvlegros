@@ -1,18 +1,17 @@
 ---
-title                : "status > website > `Jekyll`"
+title                : "status > website > I installed `Jekyll`"
 date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
-date_of_modification : "#date 2023-08-11 17:28 1691760487859283875 GMT"
+date_of_modification : "#date 2023-11-01 05:10 1698801011794136408 GMT"
 permalink            : /post/1690231131792213244
 tags                 : 
 - "#posts"
 - "#status"
 - "#website"
 - "#jekyll"
+- "#github"
 ---
 
-### I installed `Jekyll`
-
-it just became impossible without more feedback, error details : 
+It just became impossible without more feedback, error details : 
 - before testing on `Github` 
 - in which file
 - in which line (not always)
