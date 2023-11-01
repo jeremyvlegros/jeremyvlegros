@@ -1,4 +1,3 @@
-/*##date 2023-07-05 13:36 1688549783580299955 GMT */
 :root
 {
 
@@ -90,25 +89,25 @@
   --color_star_engine                   : #B19D7A;
   --color_tags                          : #374124;
   --color_posts                         : #8A87AE;
-  --color_opinions                       : #935EE9;
+  --color_opinions                      : #935EE9;
   --color_ide                           : #3C6160;
   --color_about                         : #9CB70A;
-  --color_avatars                        : #51558E;
-  --color_configurations                 : #D0C32E;
+  --color_avatars                       : #51558E;
+  --color_configurations                : #D0C32E;
   --color_languages                     : #EC3A33;
-  --color_dream_jobs                     : #C57C2F;
+  --color_dream_jobs                    : #C57C2F;
   --color_highlighting                  : #6779A5;
   --color_me                            : #997D73;
-  --color_mobs                           : #51558E;
+  --color_mobs                          : #51558E;
   --color_modding                       : #1F0937;
   --color_readme                        : #AF6B96;
-  --color_references                     : #B89C6C;
+  --color_references                    : #B89C6C;
   --color_security                      : #BDC417;
   --color_status                        : #665925;
   --color_syntax                        : #E5BB34;
-  --color_videos                         : #0D5DEA;
+  --color_videos                        : #0D5DEA;
   --color_video_games                   : #451A64;
-  --color_votes                          : #665925;
+  --color_votes                         : #665925;
   --color_website                       : #7DA466;
   /* Dracula syntax highlighting */
   --color_background_dracula            : #282a36;
@@ -565,111 +564,111 @@ body, html
 
 .color_background_tags
 {
-  background-color:var(--color_tags)!important;
+  background-color : var(--color_tags) !important;
 }
 
 .color_background_posts
 {
-  background-color:var(--color_posts)!important;
+  background-color : var(--color_posts) !important;
 }
 
 .color_background_opinions
 {
-  background-color:var(--color_opinions)!important;
+  background-color : var(--color_opinions) !important;
 }
 
 .color_background_ide
 {
-  background-color:var(--color_ide)!important;
+  background-color : var(--color_ide) !important;
 }
 
 .color_background_about
 {
-  background-color:var(--color_about)!important;
+  background-color : var(--color_about) !important;
 }
 
 .color_background_avatars
 {
-  background-color:var(--color_avatars)!important;
+  background-color : var(--color_avatars) !important;
 }
 
 .color_background_configurations
 {
-  background-color:var(--color_configurations)!important;
+  background-color : var(--color_configurations) !important;
 }
 
 .color_background_languages
 {
-  background-color:var(--color_languages)!important;
+  background-color : var(--color_languages) !important;
 }
 
 .color_background_dream_jobs
 {
-  background-color:var(--color_dream_jobs)!important;
+  background-color : var(--color_dream_jobs) !important;
 }
 
 .color_background_highlighting
 {
-  background-color:var(--color_highlighting)!important;
+  background-color : var(--color_highlighting) !important;
 }
 
 .color_background_me
 {
-  background-color:var(--color_me)!important;
+  background-color : var(--color_me) !important;
 }
 
 .color_background_mobs
 {
-  background-color:var(--color_mobs)!important;
+  background-color : var(--color_mobs) !important;
 }
 
 .color_background_modding
 {
-  background-color:var(--color_modding)!important;
+  background-color : var(--color_modding) !important;
 }
 
 .color_background_readme
 {
-  background-color:var(--color_readme)!important;
+  background-color : var(--color_readme) !important;
 }
 
 .color_background_references
 {
-  background-color:var(--color_references)!important;
+  background-color : var(--color_references) !important;
 }
 
 .color_background_security
 {
-  background-color:var(--color_security)!important;
+  background-color : var(--color_security) !important;
 }
 
 .color_background_status
 {
-  background-color:var(--color_status)!important;
+  background-color : var(--color_status) !important;
 }
 
 .color_background_syntax
 {
-  background-color:var(--color_syntax)!important;
+  background-color : var(--color_syntax) !important;
 }
 
 .color_background_videos
 {
-  background-color:var(--color_videos)!important;
+  background-color : var(--color_videos) !important;
 }
 
 .color_background_video_games
 {
-  background-color:var(--color_video_games)!important;
+  background-color : var(--color_video_games) !important;
 }
 
 .color_background_votes
 {
-  background-color:var(--color_votes)!important;
+  background-color : var(--color_votes) !important;
 }
 
 .color_background_website
 {
-  background-color:var(--color_website)!important;
+  background-color : var(--color_website) !important;
 }
 
