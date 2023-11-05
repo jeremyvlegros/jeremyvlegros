@@ -12,10 +12,11 @@ GOALS :
     - I can find my variables fast
     - I can change values individually
   - preventing cyclic imports, everything variable is split. Imports :
-    -  either happen separately
-    -  either happen separately by importing the `ALL`
   - clean structure
-  - I don't want to find out if it can or can't deal with cyclic redundancy on include/imports.
+  - I don't want to find out if it can or can't deal with cyclic redundancy on include/imports :
+      -  either happen separately
+      -  either happen separately by importing the `ALL`
+  - optimizing my functions a little by avoiding computations already made
 
 CONS :
   - does nothing more that the _config.yaml file already does/(can do)
@@ -29,5 +30,7 @@ CONS :
 {%- include CONFIGURATION/BUILD.liquid -%}
 {%- include CONFIGURATION/DEBUG.liquid -%}
 {%- include CONFIGURATION/IMAGE_COLORS.liquid -%}
+{%- include CONFIGURATION/TAGS.liquid -%}
+{%- include CONFIGURATION/POSTS.liquid -%}
 
 
