@@ -1,0 +1,14 @@
+{%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
+
+{%- assign array_website_tags_1691511380762726624 = ARRAY_EMPTY -%}
+
+{%- if TAGS == null -%}
+
+  {%- for tag in site.tags -%}
+
+    {%- assign TAGS = TAGS | push : tag[0]-%}
+
+  {%- endfor -%}
+
+{%- endif -%}
+
