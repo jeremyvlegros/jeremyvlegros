@@ -6,4 +6,4 @@ permalink            : "/links"
 color_background     : 28
 ---
 
-{%- include as_string_the_html_content_for_the_links_page.liquid -%} {{ return }}
+{%- include as_string_the_html_page_links.liquid -%} {{ return }}

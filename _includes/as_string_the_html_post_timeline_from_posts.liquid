@@ -31,7 +31,7 @@
 
             {%- comment -%} enforcing posts with post layout {%- endcomment -%}
             {%- if post.layout == "post_layout" -%}
-                {%- include as_string_the_html_content_for_the_post_from_post_with_first_post_id_with_last_post_id.liquid
+                {%- include as_string_the_html_post_from_post_with_first_post_id_with_last_post_id.liquid
                         from_post=post
                         with_first_post_id=first_post_id_1690556428999239446
                         with_last_post_id=last_post_id_1690556428999239446
