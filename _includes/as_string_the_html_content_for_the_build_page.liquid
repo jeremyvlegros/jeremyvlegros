@@ -1,3 +1,4 @@
+{%- include CONFIGURATION/ALL.liquid -%}
 
 {% capture return %}
     <div>
@@ -1222,8 +1223,8 @@
     {% comment %}<pre>{% endcomment %}
         {% comment %} as_string_the_id_from_post.liquid {% endcomment %}
 
-        {% assign input = site.posts[-1] %}
-        {% assign with_input= site.posts[-1] %}
+        {% assign input = POSTS[-1] %}
+        {% assign with_input= POSTS[-1] %}
         {% assign expected = "1684454400000000000" %}
 
         {% comment %} result {% endcomment %}
