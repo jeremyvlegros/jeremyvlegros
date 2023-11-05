@@ -1,7 +1,7 @@
 ---
-title                : "About me > building my dream job > reason"
+title                : "About > me > building my dream job > reason"
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000003 GMT"
-date_of_modification : "#date 2023-08-24 10:54 1692860063589557058 GMT"
+date_of_modification : "#date 2023-11-05 14:42 1699180954039988946 GMT"
 permalink            : /post/1684454400000000003
 tags                 : 
 - "#posts"
@@ -10,14 +10,12 @@ tags                 :
 - "#dream_jobs"
 ---
 
-## *Surviving "happy" or surviving "unhappy" ?*
+A job is always renting my alive time, for money : 
 
-Working a job that I like with a low income, is surviving.
+- a job that I like with a low income, is surviving
+- a job that I don't like with a moderate income is surviving
+- a job that I don't like with high income and low ethics is surviving
 
-Working a job that I don't like with a moderate income is surviving. 
-
-Working a job that I don't like with high income and low ethics is surviving.
-
-I am trading time of my life for something, I want that something to be happiness.
-
-Happiness for me only comes if my logic and my feeling are agreeing about choices I make.
+In the end I asked myself which one I preferred :
+- surviving happy ?
+- surviving unhappy ? 
