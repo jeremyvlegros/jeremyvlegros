@@ -1,8 +1,15 @@
 {%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
 
-{%- assign array_website_tags_1691511380762726624 = ARRAY_EMPTY -%}
+{% comment %}
+I thought I could optimize things, but I can't declare global variables in liquid code.
+What a shame.
+{% endcomment %}
+
+{% comment %}<!-- TAGS BEFORE INIT : `{{ TAGS | JSONIFY }}` !-->{% endcomment %}
 
 {%- if TAGS == null -%}
+
+  {%- assign TAGS = ARRAY_EMPTY -%}
 
   {%- for tag in site.tags -%}
 
@@ -10,5 +17,7 @@
 
   {%- endfor -%}
 
+{% comment %}<!-- TAGS AFTER INIT : `{{ TAGS | JSONIFY }}` !-->{% endcomment %}
+  
 {%- endif -%}
 
