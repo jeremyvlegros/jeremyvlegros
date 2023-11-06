@@ -1,32 +1,32 @@
 {%- comment -%} as_posts_from_tag.liquid {%- endcomment -%}
 {%- include CONFIGURATION/ALL.liquid -%}
 
-{%- assign input_tags_1699279504384616093 = include.from_tags -%}
+{%- assign input_tags_1699286259496417423 = include.from_tags -%}
 
 {%- comment -%} dealing with empty string : tags  {%- endcomment -%}
-{%- if input_tags_1699279504384616093 == "" -%}
-  {%- assign input_tags_1699279504384616093 = null -%}
+{%- if input_tags_1699286259496417423 == "" -%}
+  {%- assign input_tags_1699286259496417423 = null -%}
 {%- endif -%}
 
-{%- if input_tags_1699279504384616093 -%}
+{%- if input_tags_1699286259496417423 -%}
 
-  {%- assign array_the_posts_1690556793031296570 = ARRAY_EMPTY -%}
+  {%- assign array_the_posts_1699286259496417423 = ARRAY_EMPTY -%}
   
   {%- for post in POSTS -%}
 
-    {%- for tag in input_tags_1699279504384616093 -%}
+    {%- for tag in input_tags_1699286259496417423 -%}
 
       {%- comment -%} the tag is present in the post tags ? {%- endcomment -%}
       {%- include as_boolean_the_array_contains_the_value_from_array_from_value.liquid from_array=post.tags from_value=tag -%}
-      {%- assign the_post_contains_the_tag_1699279504384616093 = return -%}
+      {%- assign the_post_contains_the_tag_1699286259496417423 = return -%}
       {%- assign return = null -%}
       {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
       {% comment %} POSTS contains the tag (this comment is ...) {% endcomment %}
-      {%- if the_post_contains_the_tag_1699279504384616093 == true -%}
+      {%- if the_post_contains_the_tag_1699286259496417423 == true -%}
 
         {% comment %} adding the post to the return array {% endcomment %}
-        {%- assign array_the_posts_1690556793031296570 = array_the_posts_1690556793031296570 | push: post -%}
+        {%- assign array_the_posts_1699286259496417423 = array_the_posts_1699286259496417423 | push: post -%}
 
       {%- endif -%}
 
@@ -37,10 +37,12 @@
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = array_the_posts_1690556793031296570 -%}
+{%- assign return = array_the_posts_1699286259496417423 -%}
 
 {% comment %}{% endcomment %}
-{%- assign array_the_posts_1690556793031296570 = null -%}
-{%- assign posts_with_tag_name_1690569479499 = null -%}
+{%- assign array_the_posts_1699286259496417423 = null -%}
+{%- assign input_tags_1699286259496417423 = null -%}
+{%- assign the_post_contains_the_tag_1699286259496417423 = null -%}
+
 
 
