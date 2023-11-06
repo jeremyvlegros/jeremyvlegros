@@ -1,0 +1,22 @@
+{%- assign value_1699147476367269147 = include.from_value -%}
+
+{%- assign array_1699147476367269147 = include.from_array -%}
+{%- assign boolean_the_array_contains_the_value_1699147476367269147 = false -%}
+
+{%- for element in array_1699147476367269147 -%}
+
+  {%- if element == value_1699147476367269147 -%}
+
+    {%- assign boolean_the_array_contains_the_value_1699147476367269147 = true -%}
+
+  {%- endif -%}
+
+{%- endfor -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = boolean_the_array_contains_the_value_1699147476367269147 -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign value_1699147476367269147 = null -%}
+{%- assign array_1699147476367269147 = null -%}
+
