@@ -1,7 +1,7 @@
 ---
 title                : "Opinion > video > `Star Engine`"
 date_of_creation     : "#date 2023-10-25 21:18 1698254295589450229 GMT"
-date_of_modification : "#date 2023-10-26 02:03 1698271395450784813 GMT"
+date_of_modification : "#date 2023-11-11 16:10 1699704641874666866 GMT"
 permalink            : "/post/1698254295589450229"
 tags :
 - "#posts"
@@ -11,7 +11,7 @@ tags :
 
 ---
 
-I don't know if `Star Citizen` will look that good, but if it does, I can imagine some developers adding Star Citizen as an anomaly :
+I don't know if `Star Citizen` will look that good, but if it does, I can imagine some developers adding `Star Citizen` as an anomaly :
 - half of the features in this video are what every AAA space video game must have
 - the other half left me in total disbelief ... is that ... what ?
 - I was sold three minutes in, and it kept going, showing other features for 23 more minutes
