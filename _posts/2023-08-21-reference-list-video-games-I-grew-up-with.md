@@ -7,7 +7,7 @@ tags                 :
 - "#posts"
 - "#references"
 - "#about"
-- "#me"
+- "#jeremyvlegros"
 - "#video_games"
 ---
 

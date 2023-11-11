@@ -1,11 +1,11 @@
 ---
-title                : "About me > background > computer languages"
+title                : "About > me > background > computer languages"
 date_of_creation     : "#date 2023-08-21 17:13 1692623599154600247 GMT"
 permalink            : /post/1692623599154600247
 tags                 : 
 - "#posts"
 - "#about"
-- "#me"
+- "#jeremyvlegros"
 - "#languages"
 ---
 

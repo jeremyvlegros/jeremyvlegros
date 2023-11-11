@@ -6,7 +6,7 @@ permalink            : "post/0000000000000000001"
 tags                 : 
 - "#posts"
 - "#about"
-- "#me"
+- "#jeremyvlegros"
 - "#links"
 ---
 

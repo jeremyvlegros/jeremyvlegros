@@ -1,6 +1,6 @@
 ---
-title                : "#me"
-permalink            : "/tag/me"
+title                : "#jeremyvlegros"
+permalink            : "/tag/jeremyvlegros"
 tags : 
-- "#me"
+- "#jeremyvlegros"
 ---

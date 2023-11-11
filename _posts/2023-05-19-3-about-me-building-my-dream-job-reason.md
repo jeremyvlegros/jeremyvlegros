@@ -6,7 +6,7 @@ permalink            : /post/1684454400000000003
 tags                 : 
 - "#posts"
 - "#about"
-- "#me"
+- "#jeremyvlegros"
 - "#dream_jobs"
 ---
 

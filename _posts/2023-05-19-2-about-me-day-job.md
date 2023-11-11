@@ -6,7 +6,7 @@ permalink            : /post/1684454400000000002
 tags                 : 
 - "#posts"
 - "#about"
-- "#me"
+- "#jeremyvlegros"
 ---
 
 I am self-employed, helping people with anything computer related, this is my day job when I get calls.
