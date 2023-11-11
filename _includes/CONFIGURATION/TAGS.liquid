@@ -1,23 +1,23 @@
 {%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
 
-{% comment %}
+{%- comment -%}
 I thought I could optimize things, but I can't declare global variables in liquid code.
 What a shame.
-{% endcomment %}
+{%- endcomment -%}
 
-{% comment %}<!-- TAGS BEFORE INIT : `{{ TAGS | JSONIFY }}` !-->{% endcomment %}
+{%- comment -%}<!-- TAGS BEFORE INIT : `{{ TAGS | JSONIFY }}` !-->{%- endcomment -%}
 
 {%- if TAGS == null -%}
 
-  {%- assign TAGS = ARRAY_EMPTY -%}
+	{%- assign TAGS = ARRAY_EMPTY -%}
 
-  {%- for tag in site.tags -%}
+	{%- for tag in site.tags -%}
 
-    {%- assign TAGS = TAGS | push : tag[0]-%}
+	{%- assign TAGS = TAGS | push : tag[0]-%}
 
-  {%- endfor -%}
+	{%- endfor -%}
 
-{% comment %}<!-- TAGS AFTER INIT : `{{ TAGS | JSONIFY }}` !-->{% endcomment %}
-  
+{%- comment -%}<!-- TAGS AFTER INIT : `{{ TAGS | JSONIFY }}` !-->{%- endcomment -%}
+
 {%- endif -%}
 

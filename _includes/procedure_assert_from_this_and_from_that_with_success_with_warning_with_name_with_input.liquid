@@ -12,150 +12,260 @@
 {%- assign version_1691511512413600519 = "1694350214249531982" -%}
 {%- assign message_1691511512413600519 = null -%}
 
-{% comment %} dealing with empty string {% endcomment %}
+{%- comment -%} dealing with empty string {%- endcomment -%}
 
 {%- if with_warning_1691511512413600519 == "" -%}
-    {%- comment -%}resetting{%- endcomment -%}
-    {%- assign with_warning_1691511512413600519 = null -%}
+	{%- comment -%}resetting{%- endcomment -%}
+	{%- assign with_warning_1691511512413600519 = null -%}
 {%- endif -%}
 
 {%- if with_success_1691511512413600519 == "" -%}
-    {%- comment -%}resetting{%- endcomment -%}
-    {%- assign with_success_1691511512413600519 = null -%}
+	{%- comment -%}resetting{%- endcomment -%}
+	{%- assign with_success_1691511512413600519 = null -%}
 {%- endif -%}
 
 {%- if with_name_1691511512413600519 == "" -%}
-    {%- comment -%}resetting{%- endcomment -%}
-    {%- assign with_name_1691511512413600519 = null -%}
+	{%- comment -%}resetting{%- endcomment -%}
+	{%- assign with_name_1691511512413600519 = null -%}
 {%- endif -%}
 
 {%- if with_version_1691511512413600519 == "" -%}
-    {%- comment -%}resetting{%- endcomment -%}
-    {%- assign with_version_1691511512413600519 = null -%}
+	{%- comment -%}resetting{%- endcomment -%}
+	{%- assign with_version_1691511512413600519 = null -%}
 {%- endif -%}
 
 {%- if with_input_1691511512413600519 == "" -%}
-    {%- comment -%}resetting{%- endcomment -%}
-    {%- assign with_input_1691511512413600519 = null -%}
+	{%- comment -%}resetting{%- endcomment -%}
+	{%- assign with_input_1691511512413600519 = null -%}
 {%- endif -%}
 
-{% comment %} end of dealing with empty string {% endcomment %}
+{%- comment -%} end of dealing with empty string {%- endcomment -%}
 
-{% comment %} start options {% endcomment %}
+{%- comment -%} start options {%- endcomment -%}
 
 {%- comment -%} option with version{%- endcomment -%}
 {%- if with_version_1691511512413600519 -%}
-    {%- comment -%} formatting version {%- endcomment -%}
-    {%- capture with_version_1691511512413600519 -%}
-        <li> version : <span class="language-liquid highlighter-rouge"><span class="highlight"><code>`{{ with_version_1691511512413600519 }}`</code></span></span></li>
-    {%- endcapture -%}
+
+	{%- comment -%} formatting version {%- endcomment -%}
+	{%- capture with_version_1691511512413600519 -%}
+
+		<li> version :
+
+			<span class="language-liquid highlighter-rouge">
+
+				<span class="highlight">
+
+					<code>
+						`{{ with_version_1691511512413600519 }}`
+					</code>
+
+				</span>
+
+			</span>
+
+		</li>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 {%- comment -%} option with test name{%- endcomment -%}
 {%- if with_name_1691511512413600519 -%}
-    {%- comment -%} formatting name test {%- endcomment -%}
-    {%- capture with_name_1691511512413600519 -%}
-        <span style="background-color: #0d6efd;color:white;border-radius: 2px;padding: 5px">`{{ with_name_1691511512413600519 }}`</span>
-    {%- endcapture -%}
+
+	{%- comment -%} formatting name test {%- endcomment -%}
+	{%- capture with_name_1691511512413600519 -%}
+
+		<span style="background-color: #0d6efd;color:white;border-radius: 2px;padding: 5px">
+			`{{ with_name_1691511512413600519 }}`
+		</span>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 {%- comment -%} option warnings {%- endcomment -%}
 {%- if with_warning_1691511512413600519 -%}
 
-    {%- comment -%} recycling `with_warning_1691511512413600519` as string {%- endcomment -%}
-    {%- assign with_warning_1691511512413600519 = "" -%}
+	{%- comment -%} recycling `with_warning_1691511512413600519` as string {%- endcomment -%}
+	{%- assign with_warning_1691511512413600519 = "" -%}
 
-    {%- comment -%} null == null {%- endcomment -%}
-    {%- if this_1691511512413600519 == null and that_1691511512413600519 == null -%}
-        {%- comment -%} warning contains a message {%- endcomment -%}
+	{%- comment -%} null == null {%- endcomment -%}
+	{%- if this_1691511512413600519 == null and that_1691511512413600519 == null -%}
+		{%- comment -%} warning contains a message {%- endcomment -%}
 
-        {%- capture with_warning_1691511512413600519 %}
-            <li>
-                <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested null values</span>
-            </li>
-        {%- endcapture -%}
-    {%- endif -%}
+		{%- capture with_warning_1691511512413600519 -%}
 
-    {%- comment -%} null == ""{%- endcomment -%}
-    {%- if this_1691511512413600519 == null and that_1691511512413600519 == "" -%}
-        {%- comment -%} warning contains a message {%- endcomment -%}
+			<li>
 
-        {%- capture with_warning_1691511512413600519 %}
-            <li>
-                <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested null value
-                    <span class="language-liquid highlighter-rouge"> <span class="highlight"><code>`this` and empty string `that`</code> </span>
-                    </span>
-                </span>
-            </li>
-        {%- endcapture -%}
-    {%- endif -%}
+				<span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered">
+					warning : tested null values
+				</span>
 
-    {%- comment -%} "" == null {%- endcomment -%}
-    {%- if this_1691511512413600519 == "" and that_1691511512413600519 == null -%}
-        {%- comment -%} warning contains a message {%- endcomment -%}
+			</li>
 
-        {%- capture with_warning_1691511512413600519 %}
-            <li>
-                <span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered"> warning : tested empty string<span class="language-liquid highlighter-rouge"><span class="highlight"><code>`this` and null value `that`</code></span></span></span>
-            </li>
-        {%- endcapture -%}
-    {%- endif -%}
+		{%- endcapture -%}
+
+	{%- endif -%}
+
+	{%- comment -%} null == ""{%- endcomment -%}
+	{%- if this_1691511512413600519 == null and that_1691511512413600519 == "" -%}
+		{%- comment -%} warning contains a message {%- endcomment -%}
+
+		{%- capture with_warning_1691511512413600519 -%}
+
+			<li>
+
+				<span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered">
+
+					warning : tested null value
+
+						<span class="language-liquid highlighter-rouge">
+
+							<span class="highlight">
+
+								<code>
+									`this` and empty string `that`
+								</code>
+
+							</span>
+
+						</span>
+
+				</span>
+
+			</li>
+
+		{%- endcapture -%}
+
+	{%- endif -%}
+
+	{%- comment -%} "" == null {%- endcomment -%}
+	{%- if this_1691511512413600519 == "" and that_1691511512413600519 == null -%}
+		{%- comment -%} warning contains a message {%- endcomment -%}
+
+		{%- capture with_warning_1691511512413600519 -%}
+
+			<li>
+
+				<span style="background-color: darkred;padding:6px;border-radius:6px;color:orangered">
+
+					warning : tested empty string
+
+					<span class="language-liquid highlighter-rouge">
+
+						<span class="highlight">
+
+							<code>
+								`this` and null value `that`
+							</code>
+
+						</span>
+
+					</span>
+
+				</span>
+
+			</li>
+
+		{%- endcapture -%}
+
+	{%- endif -%}
 
 {%- endif -%}
 
 {%- comment -%} option with input {%- endcomment -%}
 {%- if with_input_1691511512413600519 -%}
-    {%- comment -%} formatting test name => test : `test_name` >{%- endcomment -%}
+	{%- comment -%} formatting test name => test : `test_name` >{%- endcomment -%}
 
-    {%- capture with_input_1691511512413600519 -%}
-        <li><span style="background-color: lightgreen"> `{{ with_input_1691511512413600519 }}` </span> </li>
-    {%- endcapture -%}
+	{%- capture with_input_1691511512413600519 -%}
+		<li>
+
+			<span style="background-color: lightgreen">
+				`{{ with_input_1691511512413600519 }}`
+			</span>
+
+		</li>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 
-{% comment %} end options {% endcomment %}
-
+{%- comment -%} /// end options /// {%- endcomment -%}
 
 {%- comment -%} prettier print {%- endcomment -%}
 {%- assign this_1691511512413600519 = this_1691511512413600519 | jsonify -%}
 {%- assign that_1691511512413600519 = that_1691511512413600519 | jsonify -%}
 
-{% comment %} result {% endcomment %}
+{%- comment -%} result {%- endcomment -%}
 {%- capture result_1691511512413600519 -%}
-    <li> <span class="language-liquid highlighter-rouge"><span class="highlight"><code>`{{ this_1691511512413600519 }}` == `{{ that_1691511512413600519 }}`</code></span></span></li>
+
+	<li>
+
+		<span class="language-liquid highlighter-rouge">
+
+			<span class="highlight">
+
+				<code>
+					`{{ this_1691511512413600519 }}` == `{{ that_1691511512413600519 }}`
+				</code>
+
+			</span>
+
+		</span>
+
+	</li>
+
 {%- endcapture -%}
 
 
 {%- comment -%} common message {%- endcomment -%}
 {%- capture message_1691511512413600519 -%}
-    {{ with_name_1691511512413600519 }}
-    <ul>
-    {{ with_input_1691511512413600519 }}
-        {{ with_version_1691511512413600519 }}
-        {{ result_1691511512413600519 }}
-        {{ with_warning_1691511512413600519 }}
-    </ul>
+
+	{{ with_name_1691511512413600519 }}
+
+	<ul>
+	{{ with_input_1691511512413600519 }}
+		{{ with_version_1691511512413600519 }}
+		{{ result_1691511512413600519 }}
+		{{ with_warning_1691511512413600519 }}
+	</ul>
+
 {%- endcapture -%}
 
 {%- comment -%} [failed] {%- endcomment -%}
 {%- if this_1691511512413600519 != that_1691511512413600519 -%}
 
-    {%- comment -%} failed message {%- endcomment -%}
-    {%- capture message_1691511512413600519 -%}
-        <span style="font-weight: bold;background-color: red; padding: 6px; border-radius: 2px;color:black">[failed]</span>{{ message_1691511512413600519 }}
-    {%- endcapture -%}
+	{%- comment -%} failed message {%- endcomment -%}
+	{%- capture message_1691511512413600519 -%}
 
-    {%- comment -%} [passed] {%- endcomment -%}
+		<span style="font-weight: bold;background-color: red; padding: 6px; border-radius: 2px;color:black">
+			[failed]
+		</span>
+
+		{{ message_1691511512413600519 }}
+
+	{%- endcapture -%}
+
+	{%- comment -%} [passed] {%- endcomment -%}
 {%- else -%}
-    {%- comment -%} option with success {%- endcomment -%}
-    {%- if with_success_1691511512413600519 -%}
 
-        {%- comment -%} passed message {%- endcomment -%}
-        {%- capture message_1691511512413600519 -%}
-            <span style="font-weight: bold;background-color: greenyellow; color: dodgerblue;padding: 6px; border-radius: 2px">[passed]</span>{{ message_1691511512413600519 }}
-        {%- endcapture -%}
+	{%- comment -%} option with success {%- endcomment -%}
+	{%- if with_success_1691511512413600519 -%}
 
-    {%- endif -%}
+		{%- comment -%} passed message {%- endcomment -%}
+		{%- capture message_1691511512413600519 -%}
+
+			<span style="font-weight: bold;background-color: greenyellow; color: dodgerblue;padding: 6px; border-radius: 2px">
+				[passed]
+			</span>
+
+			{{ message_1691511512413600519 }}
+
+		{%- endcapture -%}
+
+	{%- endif -%}
+
 {%- endif -%}
 
 {%- comment -%} printing the message {%- endcomment -%}

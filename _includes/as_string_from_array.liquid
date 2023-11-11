@@ -1,11 +1,7 @@
 {%- assign the_string_1694501019405346838 = "" -%}
 
-{%- comment -%} I don't even think that an array in Jekyll can exists in Liquid by itself  {%- endcomment -%}
-{%- comment -%}{%- include procedure_crash_if_not_array_from.liquid from_array= include.from_array -%}{%- endcomment -%}
-{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
 {%- for value in include.from_array -%}
-    {%- assign the_string_1694501019405346838 = the_string_1694501019405346838 | append : value -%}
+	{%- assign the_string_1694501019405346838 = the_string_1694501019405346838 | append: value -%}
 {%- endfor -%}
 
 {%- assign return = the_string_1694501019405346838 -%}

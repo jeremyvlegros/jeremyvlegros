@@ -2,5 +2,5 @@
 layout: base_layout
 ---
 
-{%- include as_string_the_html_page_index.liquid -%} {{ return }}
+{%- include as_string_the_html_page_index.liquid -%}{{ return | strip_newlines | replace : TABULATION, ""}}
 

@@ -3,14 +3,18 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%}  adding `#` if needed {%- endcomment -%}
+{%- comment -%} adding `#` if needed {%- endcomment -%}
 {%- if tag_1691813254997621390 != "" -%}
 
-    {%- if tag_1691813254997621390 contains "#" -%}
-        {%- comment -%} do nothing {%- endcomment -%}
-    {%- else -%}
-        {%- assign tag_1691813254997621390 = "#" | append: tag_1691813254997621390 -%}
-    {%- endif -%}
+	{%- if tag_1691813254997621390 contains "#" -%}
+
+		{%- comment -%} do nothing {%- endcomment -%}
+
+	{%- else -%}
+
+		{%- assign tag_1691813254997621390 = "#" | append: tag_1691813254997621390 -%}
+
+	{%- endif -%}
 
 {%- endif -%}
 

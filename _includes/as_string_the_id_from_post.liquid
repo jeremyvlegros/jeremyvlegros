@@ -1,8 +1,11 @@
 {%- if include.from_post.date_of_creation -%}
-    {%- if include.from_post.date_of_creation != "" -%}
-        {%- comment -%}  {%- endcomment -%}
-        {%- include as_string_the_id_from_date.liquid from_date=include.from_post.date_of_creation -%}
-        {% comment %}the result is in the return {% endcomment %}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-    {%- endif -%}
+
+	{%- if include.from_post.date_of_creation != "" -%}
+
+		{%- include as_string_the_id_from_date.liquid from_date=include.from_post.date_of_creation -%}
+		{%- comment -%}the result is in the return {%- endcomment -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- endif -%}
+
 {%- endif -%}

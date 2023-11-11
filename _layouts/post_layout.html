@@ -6,8 +6,5 @@ date_of_modification : null
 no_color_background  : null
 ---
 
-{%- include as_string_the_html_post_from_post_with_first_post_id_with_last_post_id.liquid
-    from_post=page
--%}
+{%- include as_string_the_html_post_from_post_with_first_post_id_with_last_post_id.liquid from_post=page -%}{{ return | strip_newlines | replace : TABULATION, ""}}
 
-{{return}}

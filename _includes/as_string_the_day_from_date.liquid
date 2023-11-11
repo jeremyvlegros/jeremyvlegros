@@ -1,70 +1,66 @@
-{%- comment -%} as_string_the_day_from_date.liquid {%- endcomment -%}
-
 {%- comment -%} initialization {%- endcomment -%}
 
 {%- comment -%} main value {%- endcomment -%}
 {%- assign day_1690556229516486038 = null -%}
 
-
 {%- if include.from_date -%}
 
+	{%- if include.from_date != "" -%}
 
-    {%- if include.from_date != "" -%}
+		{%- comment -%} date is custom, created, deleted, modified {%- endcomment -%}
+		{%- if include.from_date contains "#date" or include.from_date contains "#deleted" or include.from_date contains "#modified" -%}
 
-        {%- comment -%} date is custom, created, deleted, modified {%- endcomment -%}
-        {%- if include.from_date contains "#date" or include.from_date contains "#deleted" or include.from_date contains "#modified" -%}
+			{%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
 
-            {%- comment -%} format : #date 2023-04-01 10:30 168784723873385 GMT {%- endcomment -%}
-
-            {%- comment -%}
-            everything as array
-                => [#date,2023-04-01,10:30,168784723873385,GMT]
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = include.from_date  | split: " " -%}
+			{%- comment -%}
+			everything as array
+					=> [#date,2023-04-01,10:30,168784723873385,GMT]
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = include.from_date | split: " " -%}
 
 
-            {%- comment -%}  get year month day
-                => 2023-04-01
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038[1] -%}
+			{%- comment -%} get year month day
+					=> 2023-04-01
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038[1] -%}
 
-            {%- comment -%} split date in year month day
-                => [2023,04,01]
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
+			{%- comment -%} split date in year month day
+					=> [2023,04,01]
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
 
-            {%- comment -%} Main value : day
-                => 01
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
+			{%- comment -%} Main value : day
+					=> 01
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
 
-        {%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
+		{%- else -%}{%- comment -%} format : 2023-04-01T10:30:00+00:00 {%- endcomment -%}
 
-            {%- comment -%} hmm... parsing joy {%- endcomment -%}
+			{%- comment -%} hmm... parsing joy {%- endcomment -%}
 
-            {%- comment -%}  splitting the date by `T` to array
-            => [2023-04-01,10:30:00+00:00]
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = include.from_date  | split: "T" -%}
+			{%- comment -%} splitting the date by `T` to array
+			=> [2023-04-01,10:30:00+00:00]
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = include.from_date | split: "T" -%}
 
-            {%- comment -%}  getting the year-month-day
-            => "2023-04-01"
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038[0] -%}
+			{%- comment -%} getting the year-month-day
+			=> "2023-04-01"
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038[0] -%}
 
-            {%- comment -%}  splitting in year,month,day
-            => [2023,04,01]
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
+			{%- comment -%} splitting in year,month,day
+			=> [2023,04,01]
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038 | split: "-" -%}
 
-            {%- comment -%} Main value : day
-            => 01
-            {%- endcomment -%}
-            {%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
+			{%- comment -%} Main value : day
+			=> 01
+			{%- endcomment -%}
+			{%- assign day_1690556229516486038 = day_1690556229516486038[2] -%}
 
-        {%- endif -%}
+		{%- endif -%}
 
-    {%- endif -%}
+	{%- endif -%}
 
 {%- endif -%}
 

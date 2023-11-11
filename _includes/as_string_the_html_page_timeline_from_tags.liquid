@@ -2,30 +2,30 @@
 
 {% assign tags_1690569561039 = include.from_tags %}
 
-{%- comment -%} dealing with empty string : tags_1690569561039  {%- endcomment -%}
+{%- comment -%} dealing with empty string : tags_1690569561039 {%- endcomment -%}
 {%- if tags_1690569561039 == "" -%}
-  {%- assign tags_1690569561039 = null -%}
+	{%- assign tags_1690569561039 = null -%}
 {%- endif -%}
 
 {%- if tags_1690569561039 -%}
 
-  {%- comment -%} posts {%- endcomment -%}
-  {%- include as_array_the_posts_from_tags.liquid from_tags=tags_1690569561039 -%}
-  {%- assign posts_1690569561039 = return -%}
-  {%- assign return = null -%}
-  {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	{%- comment -%} posts {%- endcomment -%}
+	{%- include as_array_the_posts_from_tags.liquid from_tags=tags_1690569561039 -%}
+	{%- assign posts_1690569561039 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-  {%- comment -%} HTML index post list  {%- endcomment -%}
-  {%- include as_string_the_html_timeline_index_from_posts.liquid from_posts=posts_1690569561039 -%}
-  {%- assign html_post_index_list_1690569561039 = return -%}
-  {%- assign return = null -%}
-  {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	{%- comment -%} HTML index post list {%- endcomment -%}
+	{%- include as_string_the_html_timeline_index_from_posts.liquid from_posts=posts_1690569561039 -%}
+	{%- assign html_post_index_list_1690569561039 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-  {%- comment -%} HTML post list  {%- endcomment -%}
-  {%- include as_string_the_html_post_timeline_from_posts.liquid from_posts=posts_1690569561039 -%}
-  {%- assign html_posts_1690569561039 = return -%}
-  {%- assign return = null -%}
-  {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	{%- comment -%} HTML post list {%- endcomment -%}
+	{%- include as_string_the_html_post_timeline_from_posts.liquid from_posts=posts_1690569561039 -%}
+	{%- assign html_posts_1690569561039 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- endif -%}
 
@@ -39,65 +39,75 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%}  main HTML {%- endcomment -%}
+{%- comment -%} main HTML {%- endcomment -%}
 
 {%- capture return -%}
 
-  <div class="timeline container-fluid">
+	<div class="timeline container-fluid">
+		{%- comment -%}printing content of the next thing {%- endcomment -%}
+		{{ content }}
 
-    {%- comment -%}printing content of the next thing  {%- endcomment -%}
-    {{ content }}
+		<div class="row">
 
-    <div class="row">
+			<div class="col-12 col-sm-5 col-lg-5">
 
-            <div class="col-12 col-sm-5 col-lg-5">
-                <div id="side_index" class="row">
-                    <div class="side_index_content">
-                        {%- if page_title_1690569561039 -%}
-                          {% comment %} #tag page title {% endcomment %}
-                          <h1 class="page-heading">{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}</h1>
-                        {%- endif -%}
-                      <ul>
+				<div id="side_index" class="row">
 
-                            {%- comment -%}printing HTML index post list  {%- endcomment -%}
-                        {{ html_post_index_list_1690569561039 }}
+						<div class="side_index_content">
 
-                        </ul>
-                    </div>
-                </div>
-            </div>
+							{%- if page_title_1690569561039 -%}
 
-            <div class="col-12 col-sm-7 col-lg-7">
-                <div class="posts">
+								{% comment %} #tag page title {% endcomment %}
+								<h1 class="page-heading">{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}</h1>
 
-                    {%- comment -%} printing HTML posts  {%- endcomment -%}
+							{%- endif -%}
 
-                  {{ html_posts_1690569561039 }}
+							<ul>
+								{{ html_post_index_list_1690569561039 }}
+							</ul>
 
-                </div>
-            </div>
+						</div>
 
-        </div>
+				</div>
 
-        <div class="dates">
+			</div>
 
-            <br>
+			<div class="col-12 col-sm-7 col-lg-7">
 
-          {%- if page_date_of_creation_1690569561039 -%}
-            <span class='date date_of_creation'> {{ page_date_of_creation_1690569561039 }} </span>
-          {%- endif -%}
+				<div class="posts">
+					{{ html_posts_1690569561039 }}
+				</div>
 
-          <br>
+			</div>
 
-          {%- if page_date_of_modification_1690569561039 -%}
-            <span class="date date_of_modification">
-                {{ page_date_of_modification_1690569561039 }}
-                </span>
-          {%- endif -%}
+		</div>
 
-        </div>
+		<div class="dates">
 
-    </div>
+			<br>
+
+			{%- if page_date_of_creation_1690569561039 -%}
+
+				<span class='date date_of_creation'>
+					{{ page_date_of_creation_1690569561039 }}
+				</span>
+
+			{%- endif -%}
+
+			<br>
+
+			{%- if page_date_of_modification_1690569561039 -%}
+
+				<span class="date date_of_modification">
+						{{ page_date_of_modification_1690569561039 }}
+				</span>
+
+			{%- endif -%}
+
+		</div>
+
+	</div>
+
 {%- endcapture -%}
 
 {%- assign html_post_index_list_1690569561039 = null -%}

@@ -7,16 +7,16 @@
 
 {%- if date_1690822023129951239[0] == "#date" or date_1690822023129951239[0] == "#modified" or date_1690822023129951239[0] == "#deleted" -%}
 
-    {%- comment -%} [#date,YYYY-MM-DD, HH:MM, ID, GMT]
-    {%- endcomment -%}
-    {%- assign length_1690822023129951239 = date_1690822023129951239 | size -%}
+	{%- comment -%} [#date,YYYY-MM-DD, HH:MM, ID, GMT]
+	{%- endcomment -%}
+	{%- assign length_1690822023129951239 = date_1690822023129951239 | size -%}
 
-    {%- if length_1690822023129951239 == 5 -%}
+	{%- if length_1690822023129951239 == 5 -%}
 
-        {%- assign the_date_is_custom_1690822023129951239 = true -%}
+		{%- assign the_date_is_custom_1690822023129951239 = true -%}
 
-    {%- endif -%}
-    
+	{%- endif -%}
+
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}

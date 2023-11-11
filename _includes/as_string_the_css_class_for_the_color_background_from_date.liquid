@@ -1,5 +1,3 @@
-{%- comment -%}as_string_the_css_class_for_the_color_background_from_date.liquid {%- endcomment -%}
-
 {%- comment -%} main value {%- endcomment -%}
 {%- assign background_color_1690570371841 = null -%}
 
@@ -9,15 +7,13 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-
-
 {%- if day_1690570371841 -%}
 
-    {%- if day_1690570371841 != "" -%}
+	{%- if day_1690570371841 != "" -%}
 
-        {%- assign background_color_1690570371841 = "color_background_" | append: day_1690570371841 | strip_newlines -%}
+		{%- assign background_color_1690570371841 = "color_background_" | append: day_1690570371841 | strip_newlines -%}
 
-    {%- endif -%}
+	{%- endif -%}
 
 {%- endif -%}
 

@@ -10,28 +10,27 @@ If it changes, it would break my functions
 
 {%- assign boolean_encountered_a_letter = false -%}
 
-
 {%- for character in array_text_1694501198622021886 -%}
 
-  {%- if character != " " -%}
+	{%- if character != " " -%}
 
-    {%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
+		{%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
 
-    {%- assign boolean_encountered_a_letter = true -%}
+		{%- assign boolean_encountered_a_letter = true -%}
 
-  {%- else -%}
+	{%- else -%}
 
-    {%- if boolean_encountered_a_letter -%}
+		{%- if boolean_encountered_a_letter -%}
 
-          {%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
+			{%- assign the_text_without_prefixed_spaces_1694501198622021886 = the_text_without_prefixed_spaces_1694501198622021886 | append : character -%}
 
-      {%- else -%}
+		{%- else -%}
 
-        {%- continue -%}
+			{%- continue -%}
 
-      {%- endif -%}
+		{%- endif -%}
 
-  {%- endif -%}
+	{%- endif -%}
 
 {%- endfor -%}
 

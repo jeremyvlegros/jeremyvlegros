@@ -1,14 +1,14 @@
 {%- if POSTS == null -%}
 
-  {%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
+	{%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
 
-  {%- assign POSTS = ARRAY_EMPTY -%}
+	{%- assign POSTS = ARRAY_EMPTY -%}
 
-  {%- for post in site.posts -%}
+	{%- for post in site.posts -%}
 
-    {%- assign POSTS = POSTS | push : post -%}
+	{%- assign POSTS = POSTS | push : post -%}
 
-  {%- endfor -%}
+	{%- endfor -%}
 
 {%- endif -%}
 

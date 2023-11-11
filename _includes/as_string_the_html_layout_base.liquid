@@ -1,4 +1,4 @@
-{%- comment -%}<!--   DECLARATION -->{%- endcomment -%}
+{%- comment -%}<!-- DECLARATION -->{%- endcomment -%}
 
 {%- assign page_title_1690569717129 = page.title | capitalize -%}
 {%- assign page_meta_description_1690569717129 = page.description -%}
@@ -22,35 +22,35 @@
 {%- comment -%}<!-- handling empty strings -->{%- endcomment -%}
 
 {%- if page_title_1690569717129 == "" -%}
-    {%- assign page_title_1690569717129 = null -%}
+	{%- assign page_title_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if page_meta_description_1690569717129 == "" -%}
-    {%- assign page_meta_description_1690569717129 = null -%}
+	{%- assign page_meta_description_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if page_date_of_creation_1690569717129 == "" -%}
-    {%- assign page_date_of_creation_1690569717129 = null -%}
+	{%- assign page_date_of_creation_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if date_of_modification_1690569717129 == "" -%}
-    {%- assign date_of_modification_1690569717129 = null -%}
+	{%- assign date_of_modification_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if page_type_1690569717129 == "" -%}
-    {%- assign page_type_1690569717129 = null -%}
+	{%- assign page_type_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if boolean_remove_bootstrap_1690569717129 == "" -%}
-    {%- assign boolean_remove_bootstrap_1690569717129 = null -%}
+	{%- assign boolean_remove_bootstrap_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if page_url_1690569717129 == "" -%}
-    {%- assign page_url_1690569717129 = null -%}
+	{%- assign page_url_1690569717129 = null -%}
 {%- endif -%}
 
 {%- if site_name_1690569717129 == "" -%}
-    {%- assign site_name_1690569717129 = null -%}
+	{%- assign site_name_1690569717129 = null -%}
 {%- endif -%}
 
 {%- comment -%}<!-- PROCESSING -->{%- endcomment -%}
@@ -60,8 +60,6 @@
 {%- assign page_date_of_creation_utc_1690569717129 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-
 
 {%- comment -%} date_of_modification_1690569717129 {%- endcomment -%}
 {%- include as_string_the_date_utc_from_custom_date.liquid from_custom_date=date_of_modification_1690569717129 -%}
@@ -84,139 +82,156 @@
 
 
 {%- if page_title_1690569717129 -%}
-    {%- assign page_title_1690569717129 = "@jeremyvlegros > " | append : page_title_1690569717129 | capitalize | escape | replace: " &gt;", "&nbsp;&gt;" -%}
+	{%- assign page_title_1690569717129 = "@jeremyvlegros > " | append: page_title_1690569717129 | capitalize | escape | replace: " &gt;", "&nbsp;&gt;" -%}
 {%- endif -%}
 
 
 {%- if page_date_of_creation_utc_1690569717129 -%}
-    {%- capture page_meta_date_of_creation_1690569717129 -%}
-        <meta property="article:published_time" content="{{ page_date_of_creation_utc_1690569717129 }}"/>
-    {%- endcapture -%}
+
+	{%- capture page_meta_date_of_creation_1690569717129 -%}
+		<meta property="article:published_time" content="{{ page_date_of_creation_utc_1690569717129 }}"/>
+	{%- endcapture -%}
+
 {%- endif -%}
 
 {%- if page_meta_description_1690569717129 -%}
-    {%- capture page_meta_description_1690569717129 -%}
-        <meta name="description" content="{{ page_meta_description_1690569717129 }}"/>
-        <meta property="og:description" content="{{ page_meta_description_1690569717129 }}"/>
-    {%- endcapture -%}
+
+	{%- capture page_meta_description_1690569717129 -%}
+
+		<meta name="description" content="{{ page_meta_description_1690569717129 }}"/>
+		<meta property="og:description" content="{{ page_meta_description_1690569717129 }}"/>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 {%- if page_meta_type_1690569717129 -%}
-    {%- capture page_meta_type_1690569717129 -%}
-        <meta property="og:type" content="{{ page_type_1690569717129 }}"/>
-    {%- endcapture -%}
+
+	{%- capture page_meta_type_1690569717129 -%}
+
+		<meta property="og:type" content="{{ page_type_1690569717129 }}"/>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
+
+{%- comment -%} @task : split this to `title` to please `PHP storm` ... {%- endcomment -%}
 {%- if page_title_1690569717129 -%}
-    {%- capture page_meta_title_1690569717129 -%}
-        <meta property="og:title" content="{{ page_title_1690569717129 }}"/>
-        <meta name="twitter:card" content="summary"/>
-        <meta property="twitter:title" content="{{ page_title_1690569717129 }}"/>
-        <title>{{ page_title_1690569717129 }}</title>
-    {%- endcapture -%}
+
+	{%- capture page_meta_title_1690569717129 -%}
+
+		<meta property="og:title" content="{{ page_title_1690569717129 }}"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="{{ page_title_1690569717129 }}"/>
+
+		<title>
+			{{ page_title_1690569717129 }}
+		</title>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 {%- if site_name_1690569717129 -%}
 
-    {%- capture page_canonical_url_1690569717129 -%}
-        {% comment %}{%- include as_string_the_canonical_page_url.liquid -%}{% endcomment %}
-        {% comment %}<link rel="canonical" href="{{ return }}"/>{% endcomment %}
-        {% comment %}<meta property="og:url" content="{{ return }}"/>{% endcomment %}
-    {%- endcapture -%}
-
-    {%- capture page_meta_site_name_1690569717129 -%}
-        <meta property="og:{{ site_name_1690569717129 }}" content="{{ site_name_1690569717129 }}"/>
-    {%- endcapture -%}
+	{%- capture page_meta_site_name_1690569717129 -%}
+		<meta property="og:{{ site_name_1690569717129 }}" content="{{ site_name_1690569717129 }}"/>
+	{%- endcapture -%}
 
 {%- endif -%}
 
 {%- if page_image_color_1690569717129 -%}
 
-    {%- capture page_meta_image_color_1690569717129 -%}
-        <meta name='og:image' content="{{ page_image_color_1690569717129 }}"/>
-        <meta name='twitter:image' content='{{ page_image_color_1690569717129 }}'/>
-    {%- endcapture -%}
+	{%- capture page_meta_image_color_1690569717129 -%}
+
+		<meta name='og:image' content="{{ page_image_color_1690569717129 }}"/>
+		<meta name='twitter:image' content='{{ page_image_color_1690569717129 }}'/>
+
+	{%- endcapture -%}
 
 {%- endif -%}
 
 
-{% if boolean_remove_bootstrap_1690569717129 %}
+{%- if boolean_remove_bootstrap_1690569717129 -%}
 
-    {%- assign boolean_remove_bootstrap_1690569717129 = null -%}
+	{%- assign boolean_remove_bootstrap_1690569717129 = null -%}
 
 {%- else -%}
 
-    {%- capture page_url_bootstrap_1690569717129 -%}
+	{%- capture page_url_bootstrap_1690569717129 -%}
 
-        <!-- for offline development, will prompt a css error online though -->
-        <link href="{{ "/offline/bootstrap.css" | relative_url }}"
-              rel="stylesheet"
-        />
+		<!-- Bootstrap for offline development, will prompt a css error when online -->
+		<link href="{{ "/offline/bootstrap.css" | relative_url }}" rel="stylesheet"/>
 
+		<!-- for offline development, will prompt a css error online though -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-              crossorigin="anonymous"/>
+	{%- endcapture -%}
 
-    {%- endcapture -%}
-
-{% endif %}
+{%- endif -%}
 
 {%- capture page_url_css_1690569717129 -%}
-    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
+	<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}"/>
 {%- endcapture -%}
-{%- comment -%}  {%- endcomment -%}
+{%- comment -%} {%- endcomment -%}
 
 {%- capture return -%}
 
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8"/>
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta property="og:locale" content="en_US"/>
-            <meta name="twitter:creator" content="jeremyvlegros"/>
-            {%- comment -%}  {%- endcomment -%}
-            {{ page_meta_date_of_creation_1690569717129 }}
-            {{ page_meta_description_1690569717129 }}
-            {{ page_meta_type_1690569717129 }}
-            {{ page_meta_title_1690569717129 }}
-            {% comment %}{{ page_canonical_url_1690569717129 }}{% endcomment %}
-            {{ page_meta_site_name_1690569717129 }}
-            {{ page_meta_image_color_1690569717129 }}
-            {{ page_url_bootstrap_1690569717129 }}
-            {{ page_url_css_1690569717129 }}
+	<!DOCTYPE html>
+	<html lang="en">
 
-            {%- comment -%}  favicon {%- endcomment -%}
-            {%- include as_string_the_html_favicon.liquid -%}{{ return }}
+	<head>
 
-        </head>
-        <body>
-            <main class="page" aria-label="Content">
-            {{ content }}
-            </main>
-        </body>
-    </html>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta property="og:locale" content="en_US"/>
+		<meta name="twitter:creator" content="jeremyvlegros"/>
+
+		{{ page_meta_date_of_creation_1690569717129 }}
+		{{ page_meta_description_1690569717129 }}
+		{{ page_meta_type_1690569717129 }}
+		{{ page_meta_title_1690569717129 }}
+		{{ page_meta_site_name_1690569717129 }}
+		{{ page_meta_image_color_1690569717129 }}
+		{{ page_url_bootstrap_1690569717129 }}
+		{{ page_url_css_1690569717129 }}
+
+		{%- comment -%} favicon {%- endcomment -%}
+		{%- include as_string_the_html_favicon.liquid -%}{{ return }}
+
+	</head>
+
+	<body>
+
+			{% comment %} @task : study aria-label {% endcomment %}
+			<main class="page" aria-label="Content">
+
+			{{ content }}
+
+			</main>
+
+	</body>
+
+</html>
 
 {%- endcapture -%}
 
-
 {%- comment -%} resetting {%- endcomment -%}
-{%- assign page_title_1690569717129               = null -%}
-{%- assign page_meta_description_1690569717129    = null -%}
-{%- assign page_date_of_creation_1690569717129    = null -%}
-{%- assign date_of_modification_1690569717129     = null -%}
-{%- assign page_type_1690569717129                = null -%}
+{%- assign page_title_1690569717129 = null -%}
+{%- assign page_meta_description_1690569717129 = null -%}
+{%- assign page_date_of_creation_1690569717129 = null -%}
+{%- assign date_of_modification_1690569717129 = null -%}
+{%- assign page_type_1690569717129 = null -%}
 {%- assign boolean_remove_bootstrap_1690569717129 = null -%}
-{%- assign page_url_1690569717129                 = null -%}
-{%- assign site_name_1690569717129                = null -%}
+{%- assign page_url_1690569717129 = null -%}
+{%- assign site_name_1690569717129 = null -%}
 {%- assign page_meta_date_of_creation_1690569717129 = null -%}
-{%- assign page_meta_type_1690569717129             = null -%}
-{%- assign page_meta_title_1690569717129            = null -%}
-{%- assign page_canonical_url_1690569717129         = null -%}
-{%- assign page_meta_site_name_1690569717129        = null -%}
-{%- assign page_meta_image_color_1690569717129      = null -%}
-{%- assign page_url_bootstrap_1690569717129         = null -%}
-{%- assign page_url_css_1690569717129               = null -%}
+{%- assign page_meta_type_1690569717129 = null -%}
+{%- assign page_meta_title_1690569717129 = null -%}
+{%- assign page_canonical_url_1690569717129 = null -%}
+{%- assign page_meta_site_name_1690569717129 = null -%}
+{%- assign page_meta_image_color_1690569717129 = null -%}
+{%- assign page_url_bootstrap_1690569717129 = null -%}
+{%- assign page_url_css_1690569717129 = null -%}

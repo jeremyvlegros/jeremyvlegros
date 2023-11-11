@@ -2,10 +2,9 @@
 
 {%- assign array_website_tags_1691511380762726624 = ARRAY_EMPTY -%}
 
-
 {%- for tag in site.tags -%}
 
-  {%- assign array_website_tags_1691511380762726624 = array_website_tags_1691511380762726624 | push : tag[0]-%}
+	{%- assign array_website_tags_1691511380762726624 = array_website_tags_1691511380762726624 | push: tag[0] -%}
 
 {%- endfor -%}
 

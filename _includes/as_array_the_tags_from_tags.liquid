@@ -1,6 +1,6 @@
-{% comment %} as_array_the_tags_from_tags.liquid {% endcomment %}
+{%- comment -%} as_array_the_tags_from_tags.liquid {%- endcomment -%}
 
-{% comment %} I don't know if I will ever use this function {% endcomment %}
+{%- comment -%} @task : I don't know if I will ever use this function {%- endcomment -%}
 {%- include CONFIGURATION/ALL.liquid -%}
 
 {%- assign clean_array = ARRAY_EMPTY -%}
@@ -9,30 +9,24 @@
 
 {%- for element in string_tags -%}
 
-    {%- assign inner_element = element
-            | replace :"'",""
-            | replace : '"',''
-            | replace :"[",""
-            | replace :"]",""
-            | replace :", ",""
-    -%}
+	{%- assign inner_element = element | replace :"'","" | replace : '"','' | replace :"[","" | replace :"]","" | replace :", ","" -%}
 
-    {%- if inner_element == "" -%}
-        {%- continue -%}
-    {%- endif -%}
+	{%- if inner_element == "" -%}
+		{%- continue -%}
+	{%- endif -%}
 
-    {%- if inner_element contains "#" -%}
+	{%- if inner_element contains "#" -%}
 
-        {% comment %} do nothing {% endcomment %}
-        {% comment %} INNER ELEMENT {{ inner_element }}{% endcomment %}
+		{%- comment -%} do nothing {%- endcomment -%}
+		{%- comment -%} INNER ELEMENT {{ inner_element }}{%- endcomment -%}
 
-    {%- else -%}
+	{%- else -%}
 
-        {%- assign inner_element = "#" | append : inner_element -%}
+		{%- assign inner_element = "#" | append : inner_element -%}
 
-    {%- endif -%}
+	{%- endif -%}
 
-    {%- assign clean_array = clean_array | push : inner_element -%}
+	{%- assign clean_array = clean_array | push : inner_element -%}
 
 {%- endfor -%}
 

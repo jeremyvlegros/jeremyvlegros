@@ -1,16 +1,22 @@
 {%- include CONFIGURATION/ALL.liquid -%}
 
 {%- capture return -%}
-  <div class="row">
-      {% for tag in TAGS %}
-        {%- comment -%} tag {%- endcomment -%}
-        {%- include as_string_the_html_tag_from_word.liquid from_word=tag -%}
-        {%- assign formatted_tag_1691512008716947037 = return -%}
-        {%- assign return = null -%}
-        {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-        {{ formatted_tag_1691512008716947037 }}
-      {% endfor %}
-    </div>
+	<div class="row">
+
+		{%- for tag in TAGS -%}
+
+			{%- comment -%} tag {%- endcomment -%}
+			{%- include as_string_the_html_tag_from_word.liquid from_word=tag -%}
+			{%- assign formatted_tag_1691512008716947037 = return -%}
+			{%- assign return = null -%}
+			{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+			{{ formatted_tag_1691512008716947037 }}
+
+		{%- endfor -%}
+
+	</div>
+
 {%- endcapture -%}
 
 {%- assign formatted_tag_1691512008716947037 = null -%}

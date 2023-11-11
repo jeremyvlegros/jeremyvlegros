@@ -4,33 +4,33 @@
 
 {%- assign text_1694501746411632861 = include.from_text -%}
 
-{% comment %} splitting into elements {% endcomment %}
+{%- comment -%} splitting into elements {%- endcomment -%}
 {%- assign array_text_1694501746411632861 = text_1694501746411632861 | split : NEW_LINE -%}
 
 {%- comment -%}ARRAY_TEXT : {{ array_text_1694501746411632861 | jsonify }}{%- endcomment -%}
 
 {%- comment -%} searching for empty line {%- endcomment -%}
 {%- for value in array_text_1694501746411632861 -%}
-  
-  {%- assign value_stripped_1694501746411632861 = value | lstrip | rstrip -%}
 
-  {%- comment -%} value_stripped of space prefixes/suffixes {%- endcomment -%}
-  {%- include as_string_the_text_without_surrounding_spaces_from_text.liquid from_text = value-%}
-  {%- assign value_stripped_1694501746411632861 = return -%}
-  {%- assign return = null -%}
-  {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	{%- assign value_stripped_1694501746411632861 = value | lstrip | rstrip -%}
 
-  {%- comment -%}VALUE_STRIPPED : {{ value_stripped_1694501746411632861 }}{%- endcomment -%}
+	{%- comment -%} value_stripped of space prefixes/suffixes {%- endcomment -%}
+	{%- include as_string_the_text_without_surrounding_spaces_from_text.liquid from_text = value-%}
+	{%- assign value_stripped_1694501746411632861 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-  {%- if value_stripped_1694501746411632861 == "" -%}
+	{%- comment -%}VALUE_STRIPPED : {{ value_stripped_1694501746411632861 }}{%- endcomment -%}
 
-    {%- comment -%}VALUE_RECOGNIZED_AS_EMPTY_LINE : {{ value_stripped_1694501746411632861 }}{%- endcomment -%}
+	{%- if value_stripped_1694501746411632861 == "" -%}
 
-    {%- continue -%}
+		{%- comment -%}VALUE_RECOGNIZED_AS_EMPTY_LINE : {{ value_stripped_1694501746411632861 }}{%- endcomment -%}
 
-  {%- endif -%}
+		{%- continue -%}
 
-  {%- assign the_text_without_empty_lines_1694501746411632861 = the_text_without_empty_lines_1694501746411632861 | push : value -%}
+	{%- endif -%}
+
+	{%- assign the_text_without_empty_lines_1694501746411632861 = the_text_without_empty_lines_1694501746411632861 | push : value -%}
 
 {%- endfor -%}
 
@@ -40,19 +40,19 @@
 {%- comment -%} adding back the `\n` to the array {%- endcomment -%}
 {%- for value in the_text_without_empty_lines_1694501746411632861 -%}
 
-  {%- assign value_with_new_line_1694501746411632861 = value | append : NEW_LINE -%}
+	{%- assign value_with_new_line_1694501746411632861 = value | append : NEW_LINE -%}
 
-  {% comment %} using array_text as a copy of the main array but with processed data {% endcomment %}
-  {%- assign array_text_1694501746411632861 = array_text_1694501746411632861 | push : value_with_new_line_1694501746411632861 -%}
+	{%- comment -%} using array_text as a copy of the main array but with processed data {%- endcomment -%}
+	{%- assign array_text_1694501746411632861 = array_text_1694501746411632861 | push : value_with_new_line_1694501746411632861 -%}
 
 {%- endfor -%}
 
-{%- comment -%} the_text_without_empty_lines > final  {%- endcomment -%}
+{%- comment -%} the_text_without_empty_lines > final {%- endcomment -%}
 {%- include as_string_from_array.liquid from_array= array_text_1694501746411632861 -%}
 {%- assign the_text_without_empty_lines_1694501746411632861 = return -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{% comment %} resetting {% endcomment %}
+{%- comment -%} resetting {%- endcomment -%}
 {%- assign the_text_without_empty_lines_1694501746411632861 = null -%}
 {%- assign array_text_1694501746411632861 = null -%}
 {%- assign value_with_new_line_1694501746411632861 = null -%}

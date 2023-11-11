@@ -3,43 +3,43 @@
 
 {%- assign input_tags_1699286259496417423 = include.from_tags -%}
 
-{%- comment -%} dealing with empty string : tags  {%- endcomment -%}
+{%- comment -%} dealing with empty string : tags {%- endcomment -%}
 {%- if input_tags_1699286259496417423 == "" -%}
-  {%- assign input_tags_1699286259496417423 = null -%}
+	{%- assign input_tags_1699286259496417423 = null -%}
 {%- endif -%}
 
 {%- if input_tags_1699286259496417423 -%}
 
-  {%- assign array_the_posts_1699286259496417423 = ARRAY_EMPTY -%}
-  
-  {%- for post in POSTS -%}
+	{%- assign array_the_posts_1699286259496417423 = ARRAY_EMPTY -%}
 
-    {%- for tag in input_tags_1699286259496417423 -%}
+	{%- for post in POSTS -%}
 
-      {%- comment -%} the tag is present in the post tags ? {%- endcomment -%}
-      {%- include as_boolean_the_array_contains_the_value_from_array_from_value.liquid from_array=post.tags from_value=tag -%}
-      {%- assign the_post_contains_the_tag_1699286259496417423 = return -%}
-      {%- assign return = null -%}
-      {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	{%- for tag in input_tags_1699286259496417423 -%}
 
-      {% comment %} POSTS contains the tag (this comment is ...) {% endcomment %}
-      {%- if the_post_contains_the_tag_1699286259496417423 == true -%}
+		{%- comment -%} the tag is present in the post tags ? {%- endcomment -%}
+		{%- include as_boolean_the_array_contains_the_value_from_array_from_value.liquid from_array=post.tags from_value=tag -%}
+	  {%- assign the_post_contains_the_tag_1699286259496417423 = return -%}
+	  {%- assign return = null -%}
+	  {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-        {% comment %} adding the post to the return array {% endcomment %}
-        {%- assign array_the_posts_1699286259496417423 = array_the_posts_1699286259496417423 | push: post -%}
+	  {%- comment -%} POSTS contains the tag (this comment is ...) {%- endcomment -%}
+	  {%- if the_post_contains_the_tag_1699286259496417423 == true -%}
 
-      {%- endif -%}
+		{%- comment -%} adding the post to the return array {%- endcomment -%}
+		{%- assign array_the_posts_1699286259496417423 = array_the_posts_1699286259496417423 | push: post -%}
 
-    {%- endfor -%}
+	  {%- endif -%}
+
+	{%- endfor -%}
 
   {%- endfor -%}
-  
+
 {%- endif -%}
 
 {%- comment -%} return {%- endcomment -%}
 {%- assign return = array_the_posts_1699286259496417423 -%}
 
-{% comment %}{% endcomment %}
+{%- comment -%}{%- endcomment -%}
 {%- assign array_the_posts_1699286259496417423 = null -%}
 {%- assign input_tags_1699286259496417423 = null -%}
 {%- assign the_post_contains_the_tag_1699286259496417423 = null -%}

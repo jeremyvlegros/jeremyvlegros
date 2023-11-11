@@ -4,15 +4,15 @@
 
 {%- if include.from_string contains "," -%}
 
-    {%- assign array_from_string_1690570157462 = include.from_string | split: "," -%}
+	{%- assign array_from_string_1690570157462 = include.from_string | split: "," -%}
 
 {%- elsif include.from_string contains " " -%}
 
-    {%- assign array_from_string_1690570157462 = include.from_string | split: " " -%}
+	{%- assign array_from_string_1690570157462 = include.from_string | split: " " -%}
 
 {%- else -%}
 
-    {%- assign array_from_string_1690570157462 = include.from_string | split: "" -%}
+	{%- assign array_from_string_1690570157462 = include.from_string | split: "" -%}
 
 {%- endif -%}
 

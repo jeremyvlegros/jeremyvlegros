@@ -1,35 +1,32 @@
 {%- assign html_the_post_list_with_url_1690556572317772128 = null -%}
 
-
 {%- if include.from_posts -%}
 
+	{%- if include.from_posts != "" -%}
 
-    {%- if include.from_posts != "" -%}
+		{%- comment -%} main value {%- endcomment -%}
+		{%- capture html_the_post_list_with_url_1690556572317772128 -%}
 
-        {%- comment -%} main value {%- endcomment -%}
-        {%- capture html_the_post_list_with_url_1690556572317772128 %}
-            <ul>
-                {% comment %} generating the post list {% endcomment %}
+			<ul>
 
-                {%- for post in include.from_posts -%}
-                    
-                    {%- comment -%} enforcing posts with post layout {%- endcomment -%}
-                    {%- if post.layout == "post_layout"-%}
-                        <li>
-                            {%- comment -%} handling empty strings {%- endcomment -%}
+				{%- comment -%} generating the post list {%- endcomment -%}
+				{%- for post in include.from_posts -%}
 
-                            <a href="{{ post.url | relative_url }}"> {{ post.title | capitalize }}</a>
-                            {% comment %}{% endcomment %}
-                        </li>
-                        {% comment %}{% endcomment %}
-                    {%- endif -%}
+					{%- comment -%} enforcing posts with post layout {%- endcomment -%}
+					{%- if post.layout == "post_layout"-%}
+						<li>
+							{%- comment -%} handling empty strings {%- endcomment -%}
+							<a href="{{ post.url | relative_url }}"> {{ post.title | capitalize }}</a>
+						</li>
+					{%- endif -%}
 
-                {%- endfor -%}
-        </ul>
+				{%- endfor -%}
 
-        {%- endcapture -%}
+			</ul>
 
-    {%- endif -%}
+		{%- endcapture -%}
+
+	{%- endif -%}
 
 {%- endif -%}
 
