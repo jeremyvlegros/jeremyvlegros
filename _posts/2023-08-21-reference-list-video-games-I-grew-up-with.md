@@ -6,7 +6,6 @@ permalink            : /post/1692622917001260457
 tags                 : 
 - "#posts"
 - "#references"
-- "#about"
 - "#jeremyvlegros"
 - "#video_games"
 ---
