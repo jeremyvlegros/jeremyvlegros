@@ -1,0 +1,20 @@
+{%- assign machine_date = null -%}
+
+{%- comment -%} removing ID (and doing some checks) {%- endcomment -%}
+{%- include as_string_the_date_without_id_from_date.liquid from_date=include.from_date -%}
+{%- assign machine_date = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} as array {%- endcomment -%}
+{%- assign machine_date = post_date_of_creation_1691010490420939832 | split :" " -%}
+
+{%- comment -%} keeping YYYY-MM-DD and time separated with a `T` for time {%- endcomment -%}
+{%- assign machine_date = "" | append : machine_date[1] | append : "T" | append : machine_date[2] -%}
+{%- assign machine_date = machine_date | append: "Z" -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = machine_date -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign machine_date = null -%}
