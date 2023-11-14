@@ -21,9 +21,11 @@
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	<a class="col button {{ color_background }}" href=" {{ '/tag/' | append: path_suffix_1691339278938925411 | relative_url }} ">
+
+	<a class="col button {{ color_background }}" href=" {{ '/tag/' | append: path_suffix_1691339278938925411 | relative_url }}" role="link">
 		{{ tag_1691339278938925411 }}
 	</a>
+
 {%- endcapture -%}
 
 {%- assign color_background = null -%}
