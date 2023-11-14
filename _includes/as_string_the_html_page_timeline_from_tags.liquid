@@ -33,8 +33,15 @@
 {% comment %}{%- assign page_title_1690569561039 = page.title | append: " : newest to oldest" | capitalize -%}{% endcomment %}
 {%- assign page_title_1690569561039 = page.title | capitalize -%}
 
+
 {%- comment -%} page_date_of_modification_1690569561039 {%- endcomment -%}
-{%- include as_string_the_modification_date_without_id_from_date.liquid from_date=page.date_of_modification -%}
+{%- include as_string_the_formatted_creation_date_from_date.liquid from_date=page.date_of_creation -%}
+{%- assign page_date_of_creation_1690569561039 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} page_date_of_modification_1690569561039 {%- endcomment -%}
+{%- include as_string_the_formatted_modification_date_from_date.liquid from_date=page.date_of_modification -%}
 {%- assign page_date_of_modification_1690569561039 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}

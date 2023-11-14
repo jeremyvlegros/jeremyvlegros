@@ -6,15 +6,12 @@
 	{%- if include.from_date != "" -%}
 
 		{%- include as_string_the_date_without_id_from_date.liquid from_date=include.from_date -%}
+		{%- assign date_without_id_1690569345905 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		{%- comment -%} the date is not modified nor deleted {%- endcomment -%}
-
-		{%- if return contains "#date" -%}
-
-			{%- comment -%}#date 2023-07-25 23:11 GMT {%- endcomment -%}
-			{%- assign modification_date_1690569345905 = return | replace :"#date", "#modified"-%}
-
-		{%- endif -%}
+		{%- comment -%} format : #date 2023-07-25 23:11 GMT {%- endcomment -%}
+		{%- assign modification_date_1690569345905 = date_without_id_1690569345905 | replace :"#date", "Modified :" | replace : " ", "&nbsp;" -%}
 
 		{%- assign return = null -%}
 

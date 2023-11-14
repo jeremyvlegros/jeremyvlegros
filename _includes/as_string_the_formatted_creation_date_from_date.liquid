@@ -1,0 +1,28 @@
+{%- comment -%} main value {%- endcomment -%}
+{%- assign formatted_date_1699941442683430751 = null -%}
+
+{%- if include.from_date -%}
+
+	{%- if include.from_date != "" -%}
+
+		{%- include as_string_the_date_without_id_from_date.liquid from_date=include.from_date -%}
+		{%- assign date_without_id_1699941442683430751 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		{%- comment -%} format : #date 2023-07-25 23:11 GMT {%- endcomment -%}
+		{%- assign formatted_date_1699941442683430751 = date_without_id_1699941442683430751 | replace :"#date", "Created&nbsp;&nbsp;:" | replace : " ", "&nbsp;" -%}
+
+		{%- assign return = null -%}
+
+	{%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = formatted_date_1699941442683430751 -%}
+
+{%- comment -%} resetting {%- endcomment -%}
+{%- assign formatted_date_1699941442683430751 = null -%}
+{%- comment -%} {%- endcomment -%}
+
