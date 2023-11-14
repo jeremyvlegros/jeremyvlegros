@@ -1,6 +1,6 @@
 ---
 title                : README
-layout               : post_layout
+layout               : layout_post
 permalink            : /readme
 date_of_creation     : "#date 2023-03-09 14:19"
 date_of_modification : "#date 2023-08-04 06:24 1691115887739957772 GMT"

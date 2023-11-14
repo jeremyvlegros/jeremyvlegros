@@ -8,7 +8,7 @@
 {%- capture page_favicon_1698359087216322566 -%}
 
 	{%- comment -%} TAGS (MOSTLY) {%- endcomment -%}
-	{%- if page_layout_1698359087216322566 == "timeline_layout" -%}
+	{%- if page_layout_1698359087216322566 == "layout_timeline" -%}
 
 		{%- case page_raw_title_1698359087216322566 -%}
 
@@ -62,7 +62,7 @@
 				🌿
 		{%- endcase -%}
 
-	{%- elsif page_layout_1698359087216322566 == "post_layout" -%}
+	{%- elsif page_layout_1698359087216322566 == "layout_post" -%}
 
 		{%- assign split_title = page_raw_title_1698359087216322566 | split: " " -%}
 
