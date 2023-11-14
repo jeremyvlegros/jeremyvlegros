@@ -32,6 +32,20 @@
   border-radius : 0 0 var(--post_border_radius) var(--post_border_radius);
 }
 
+/* trying to help the `Firefox reader` parser */
+.post h1
+{
+  background-color : var(--color_post_header_background);
+  display          : block;
+  border-radius    : var(--post_border_radius) var(--post_border_radius) 0 0;
+  border-bottom    : 2px solid var(--color_post_shadow);
+  color             : var(--color_post_title_text);
+  text-align        : center;
+  font-size         : 2em;
+  font-weight       : bold;
+  font-variant-caps : all-small-caps;
+  padding           : 2%;
+}
 
 .post_header
 {

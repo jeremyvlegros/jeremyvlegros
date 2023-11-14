@@ -86,7 +86,12 @@
 
 	{%- capture post_title_1691010490420939832 -%}
 
-		<h1 id="{{ post_id_1691010490420939832 }}" class="post_header post_title" itemprop="name headline" aria-label="post title">
+		{%- comment -%} <h1 id="{{ post_id_1691010490420939832 }}" class="post_header post_title" itemprop="name headline" aria-label="post title">
+ 			{{ post_title_1691010490420939832 }}
+ 		</h1> {%- endcomment -%}
+
+		{%- comment -%} trying to help the `Firefox reader` parser {%- endcomment -%}
+		<h1 id="{{ post_id_1691010490420939832 }}" itemprop="name headline" aria-label="post title">
 			{{ post_title_1691010490420939832 }}
 		</h1>
 
