@@ -1,25 +1,25 @@
 /* ///////////////////////// backticks ///////////////////////// */
 .language-plaintext
 {
-  padding       : 1px;
+  padding       : 3px;
   border-radius : 7px;
   border-color  : var(--color_background_dracula);
 }
 
-.language-plaintext:before
-{
-  content     : "`";
-  color       : var(--color_text_back_ticks);
-  font-weight : bold;
+/*.language-plaintext:before*/
+/*{*/
+/*  content     : "`";*/
+/*  color       : var(--color_text_back_ticks);*/
+/*  font-weight : bold;*/
 
-}
+/*}*/
 
-.language-plaintext:after
-{
-  content     : "`";
-  color       : var(--color_text_back_ticks);
-  font-weight : bold;
-}
+/*.language-plaintext:after*/
+/*{*/
+/*  content     : "`";*/
+/*  color       : var(--color_text_back_ticks);*/
+/*  font-weight : bold;*/
+/*}*/
 
 /* code highlighter */
 
