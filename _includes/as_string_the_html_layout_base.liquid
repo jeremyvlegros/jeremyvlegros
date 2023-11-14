@@ -82,7 +82,13 @@
 
 
 {%- if page_title_1690569717129 -%}
-	{%- assign page_title_1690569717129 = "@jeremyvlegros > " | append: page_title_1690569717129 | capitalize | escape | replace: " &gt;", "&nbsp;&gt;" -%}
+
+	{%- comment -%} page_title_1690569717129 {%- endcomment -%}
+	{%- include as_string_the_formatted_title_from_title.liquid from_title=page_title_1690569717129 -%}
+	{%- assign page_title_1690569717129 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
 {%- endif -%}
 
 
@@ -115,8 +121,6 @@
 
 {%- endif -%}
 
-
-{%- comment -%} @task : split this to `title` to please `PHP storm` ... {%- endcomment -%}
 {%- if page_title_1690569717129 -%}
 
 	{%- capture page_meta_title_1690569717129 -%}
@@ -124,10 +128,6 @@
 		<meta property="og:title" content="{{ page_title_1690569717129 }}"/>
 		<meta name="twitter:card" content="summary"/>
 		<meta property="twitter:title" content="{{ page_title_1690569717129 }}"/>
-
-		<title>
-			{{ page_title_1690569717129 }}
-		</title>
 
 	{%- endcapture -%}
 
@@ -201,6 +201,12 @@
 		{%- comment -%} favicon {%- endcomment -%}
 		{%- include as_string_the_html_favicon.liquid -%}{{ return }}
 
+		{%- comment -%} now PHP STORM happy {%- endcomment -%}
+		{%- if page_title_1690569717129 -%}
+			<title>
+				{{ page_title_1690569717129 }}
+			</title>
+		{%- endif -%}
 	</head>
 
 	<body>
