@@ -214,9 +214,7 @@ basically a copy of class button because of problems with HTML x Markdown x Liqu
 
 .date
 {
-  /*margin-left   : 20px;*/
-  /*margin-top    : 0;*/
-  /*margin-bottom : 20px;*/
+  font-style: italic;
 }
 
 .post_content
