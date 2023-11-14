@@ -105,7 +105,13 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		<span class='date date_of_creation'> {{ formatted_date_1691010490420939832 }} </span>
+		{%- comment -%} machine_date {%- endcomment -%}
+		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+		{%- assign machine_date_1691010490420939832 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		<time class='date date_of_creation' datetime="{{ machine_date_1691010490420939832 }}" aria-label="creation date"> {{ formatted_date_1691010490420939832 }} </time>
 
 	{%- endcapture -%}
 
@@ -114,14 +120,22 @@
 {%- comment -%} post_date_of_modification_1691010490420939832 HTML {%- endcomment -%}
 {%- if post_date_of_modification_1691010490420939832 -%}
 
+	{%- capture post_date_of_modification_1691010490420939832 -%}
+
 		{%- comment -%} formatted_date_1691010490420939832 {%- endcomment -%}
 		{%- include as_string_the_formatted_modification_date_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
 		{%- assign formatted_date_1691010490420939832 = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- capture post_date_of_modification_1691010490420939832 -%}
-		<span class="date date_of_modification"> {{ formatted_date_1691010490420939832 }} </span>
+		{%- comment -%} machine_date_1691010490420939832 {%- endcomment -%}
+		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
+		{%- assign machine_date_1691010490420939832 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		<time class="date date_of_modification" datetime="{{ machine_date_1691010490420939832 }}" aria-label="modification date" > {{ formatted_date_1691010490420939832 }} </time>
+
 	{%- endcapture -%}
 
 {%- endif -%}
@@ -365,7 +379,7 @@
 
 		{{ post_title_1691010490420939832 }}
 
-		<div class="post_content" itemprop="articleBody">
+		<div class="post_content" itemprop="articleBody" aria-label="post content">
 
 			{{ post_content_1691010490420939832 }}
 
@@ -375,11 +389,13 @@
 			{%- comment -%} for `Firefox` reader {%- endcomment -%}
 			<br style="display: none">
 
+			<hr style="display: none"> {%- comment -%} memo : it's not a second br ... {%- endcomment -%}
+
 		</div>
 
-		<div class="row footer">
+		<div class="row footer" aria-label="footer">
 
-				<div class="col">
+				<div class="col" aria-label="tags">
 						{{ post_tags_1691010490420939832 }}
 				</div>
 
@@ -409,3 +425,4 @@
 {%- assign _PAGE_TITLE_1691010490420939832 = null -%}
 {%- assign button_posts_1691010490420939832 = null -%}
 {%- assign color_background = null -%}
+{%- assign machine_date_1691010490420939832 = null -%}
