@@ -1,7 +1,7 @@
 ---
-title                : "status > website > automating tasks with `Python`"
+title                : "status : automating tasks with `Python` for the website"
 date_of_creation     : "#date 2023-09-19 02:14 1695075266894964254 GMT"
-date_of_modification : "#date 2023-11-11 17:42 1699710165589541524 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1695075266894964254"
 tags :
 - "#posts"

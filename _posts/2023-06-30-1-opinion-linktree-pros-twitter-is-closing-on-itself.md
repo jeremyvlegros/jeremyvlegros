@@ -1,7 +1,7 @@
 ---
-title                : "opinion > `linktree` > pros > Twitter` is closing on itself"
+title                : "opinion : `linktree` pros : because `Twitter` is closing on itself"
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747720 GMT"
-date_of_modification : "#date 2023-08-24 13:11 1692868303259855331 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1688126427044747720
 tags                 :
 - "#posts"

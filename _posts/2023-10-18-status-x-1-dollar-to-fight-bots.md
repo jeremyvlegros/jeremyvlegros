@@ -1,7 +1,7 @@
 ---
-title                : "status > x > 1$ to fight bots"
+title                : "status : `X` asking 1$ to fight bots is making me smile"
 date_of_creation     : "#date 2023-10-18 07:41 1697600461867097726 GMT"
-date_of_modification : "#date 2023-10-18 08:24 1697603095861129652 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1697600461867097726"
 tags :
 - "#posts"
@@ -10,6 +10,6 @@ tags :
 - "#twitter"
 ---
                                                  
-It's making me smile, I am grateful for the `Twitter` buyout, I become a little more independent at each new policy × drama.
+I am grateful for the `Twitter` buyout, I become a little more independent at each new policy × drama.
 
-If they want to monetize the likes, I would not be able to use them anymore, so I will remove them from there.
+Monetizing the likes means I would not be able to use them anymore, so be it, I will remove them from there.

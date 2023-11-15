@@ -1,7 +1,7 @@
 ---
-title                : "information > `Pycharm` > `doctest` > absurd result"
+title                : "information : `Pycharm` created a `doctest` absurd result"
 date_of_creation     : "#date 2023-09-29 07:18 1695957483470493710 GMT"
-date_of_modification : "#date 2023-10-27 06:50 1698375005566153180 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1695957483470493710"
 tags :
 - "#posts"

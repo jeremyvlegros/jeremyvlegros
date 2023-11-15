@@ -1,7 +1,7 @@
 ---
-title                : "Status > `Minecraft` > mob vote"
+title                : "Status : the `Minecraft` mob vote"
 date_of_creation     : "#date 2023-10-07 04:48 1696639687579940434 GMT"
-date_of_modification : "#date 2023-10-27 02:04 1698357891752541213 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1696639687579940434"
 tags :
 

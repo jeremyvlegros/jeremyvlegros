@@ -1,7 +1,7 @@
 ---
-title                : "status > website > I installed `Jekyll`"
+title                : "status : I installed `Jekyll`"
 date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
-date_of_modification : "#date 2023-11-01 05:10 1698801011794136408 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1690231131792213244
 tags                 : 
 - "#posts"

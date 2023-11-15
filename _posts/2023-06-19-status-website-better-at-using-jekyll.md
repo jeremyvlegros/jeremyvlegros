@@ -1,7 +1,7 @@
 ---
-title                : "status > website > becoming better at using Jekyll"
+title                : "status : I am becoming better at using Jekyll"
 date_of_creation     : "#date 2023-06-19 00:00 1687132800000000000 GMT"
-date_of_modification : "#date 2023-08-24 11:11 1692861093977939448 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1687132800000000000
 tags                 : 
 - "#posts"

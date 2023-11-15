@@ -1,6 +1,7 @@
 ---
-title                : "About > me > background > computer languages"
+title                : "About me : the computer languages I used"
 date_of_creation     : "#date 2023-08-21 17:13 1692623599154600247 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1692623599154600247
 tags                 : 
 - "#posts"

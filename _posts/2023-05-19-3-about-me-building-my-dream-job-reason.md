@@ -1,7 +1,7 @@
 ---
-title                : "About > me > building my dream job > reason"
+title                : "About me : the reason I am building my dream job"
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000003 GMT"
-date_of_modification : "#date 2023-11-05 14:42 1699180954039988946 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1684454400000000003
 tags                 : 
 - "#posts"

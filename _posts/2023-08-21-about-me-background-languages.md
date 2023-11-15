@@ -1,7 +1,7 @@
 ---
-title                : "About > me > background > languages"
+title                : "About me : the languages I practised"
 date_of_creation     : "#date 2023-08-21 17:04 1692623040008566017 GMT"
-date_of_modification : "#date 2023-09-01 11:28 1693553292103441034 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1692623040008566017
 tags                 : 
 - "#posts"

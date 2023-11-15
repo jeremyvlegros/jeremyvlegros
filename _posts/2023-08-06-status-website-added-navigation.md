@@ -1,7 +1,7 @@
 ---                               
-title : "status > website > added navigation"
+title                : "status : the website has navigation"
 date_of_creation     : "#date 2023-08-06 23:18 1691349508425322037 GMT"
-date_of_modification : "#date 2023-08-11 03:11 1691709095832687459 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1691349508425322037
 tags                 :
 - "#posts"

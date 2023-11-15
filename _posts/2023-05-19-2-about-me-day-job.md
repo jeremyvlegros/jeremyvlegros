@@ -1,7 +1,7 @@
 ---
-title                : "About > me > my day job"
+title                : "About me : my day job"
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000002 GMT"
-date_of_modification : "#date 2023-08-24 09:47 1692856079197667837 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1684454400000000002
 tags                 : 
 - "#posts"

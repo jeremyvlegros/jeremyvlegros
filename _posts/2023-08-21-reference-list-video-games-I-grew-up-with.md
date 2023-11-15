@@ -1,13 +1,14 @@
 ---
-title                : "Reference > list > video games I grew up with"
+title                : "Reference : a list of video games I grew up with"
 date_of_creation     : "#date 2023-08-21 17:01 1692622917001260457 GMT"
-date_of_modification : "#date 2023-10-25 23:33 1698262382634497272 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1692622917001260457
 tags                 : 
 - "#posts"
 - "#references"
 - "#jeremyvlegros"
 - "#video_games"
+- "#lists"
 ---
 
 - `SuperMario` (`Gameboy`)

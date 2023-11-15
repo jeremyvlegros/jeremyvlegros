@@ -1,7 +1,7 @@
 ---
-title                : "reference > `YouTube` > `Star Engine`"
+title                : "reference : `Star Engine` `YouTube` video"
 date_of_creation     : "#date 2023-10-25 20:59 1698253192118430040 GMT"
-date_of_modification : "#date 2023-10-26 00:17 1698265025877658452 GMT"
+date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1698253192118430040"
 tags :
 
