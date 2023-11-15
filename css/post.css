@@ -245,6 +245,11 @@ basically a copy of class button because of problems with HTML x Markdown x Liqu
 }
 
 
+.post_splitter
+{
+  display: none; /* For `Firefox` reader (I hope), and no `CSS` view */
+}
+
 /* error highlighting if using h1 in post content*/
 .post_content h1
 {
