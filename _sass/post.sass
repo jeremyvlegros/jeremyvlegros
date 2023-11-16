@@ -2,164 +2,165 @@
 
 .post
 
-  margin           : 20px 30px 50px
-  border-radius    : $post_border_radius
-  box-shadow       : 2px 1px 0 1px $color_post_shadow
-  background-color : $color_post_content_background  // old setup serving as fallback color
-  border           : $color_post_shadow
-  //overflow-inline: scroll  // can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set
+	margin: 20px 30px 50px
+	border-radius: $post_border_radius
+	box-shadow: 2px 1px 0 1px $color_post_shadow
+	// old setup serving as fallback color
+	background-color: $color_post_content_background
+	border: $color_post_shadow
+	//overflow-inline: scroll  // can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set
 
-  .button
+	.button
 
-    color            : $color_post_button_text
-    background-color : $color_post_button_background
+		color: $color_post_button_text
+		background-color: $color_post_button_background
 
-  .version
+	.version
 
-    color : #AAA
-
-
-  // helping the `Firefox reader` parser
-  h1
-
-    background-color : $color_post_header_background
-    display          : block
-    border-radius    : $post_border_radius 0 0
-    border-bottom    : 2px solid $color_post_shadow
-    color             : $color_post_title_text
-    text-align        : center
-    font-size         : 2em
-    font-weight       : bold
-    font-variant-caps : all-small-caps
-    padding           : 2%
+		color: #AAA
 
 
-  .post_header
+	// helping the `Firefox reader` parser
+	h1
 
-    background-color : $color_post_header_background
-    display          : block
-    border-radius    : $post_border_radius 0 0
-    border-bottom    : 2px solid $color_post_shadow
-
-
-  // treating links as buttons as basically a copy of class button because of problems with HTML x Markdown x Liquid
-  a
-
-    transition       : all .2s ease-in-out
-    border-radius    : 10px !important
-    padding          : 10px !important
-    margin           : 5px !important
-    text-decoration  : none
-    text-align       : center
-    color            : white
-    font-weight      : bolder
-    border           : 1px solid black
-    box-shadow       : 2px 2px 2px #000
-    font-size        : smaller
-    background-color : rgba(0, 0, 0, .3)
+		background-color: $color_post_header_background
+		display: block
+		border-radius: $post_border_radius 0 0
+		border-bottom: 2px solid $color_post_shadow
+		color: $color_post_title_text
+		text-align: center
+		font-size: 2em
+		font-weight: bold
+		font-variant-caps: all-small-caps
+		padding: 2%
 
 
-    &:hover
+	.post_header
 
-      transform  : scale(0.97)
-      box-shadow : none
-      color      : white
-      border     : 1px solid rgba(0, 0, 0, 0.5)
-
-
-
-  .post_title
-
-    color             : $color_post_title_text
-    text-align        : center
-    font-size         : 2em
-    font-weight       : bold
-    font-variant-caps : all-small-caps
-    padding           : 2%
-
-  .post_content
-
-    padding       : 5% 10%
-    color         : $color_post_text
-    border-radius : 0 0 $post_border_radius
-
-    ul
-
-      margin-top    : 1%
-      margin-bottom : 1%
-
-    p, li
-
-      background-color : rgba(0, 0, 0, 8%)
-      padding          : 10px
-      border-radius    : 10px
-
-    p
-
-      margin-bottom : 2%
-
-      &:first-letter
-
-        font-size : 1.1em
+		background-color: $color_post_header_background
+		display: block
+		border-radius: $post_border_radius 0 0
+		border-bottom: 2px solid $color_post_shadow
 
 
-    li
+	// treating links as buttons as basically a copy of class button because of problems with HTML x Markdown x Liquid
+	a
 
-      margin-left : 7%
-      //list-style  : none!important
-
-
-    hr
-
-      margin-bottom : 3%
-      margin-top    : 3%
-
-    border-radius : 0    //@task this is most likely the good one
-    //background-color: white
-
-   .date
-
-    font-style: italic
-
-  .footer
-
-    display          : flex
-    align-content    : space-around
-    background-color : rgba(0, 0, 0, 75%)
-    margin           : 0
-    //padding :20px
-    padding-top      : 0
-    padding-bottom   : 20px
-    border-radius    : 0 0 $post_border_radius
-    border           : $color_post_shadow
-    //z-index: 1
-    color            : white
-    height           : 10%
-
-    .tags
-
-      //margin-top  : 10px
-      //background-color: black
-      display       : flex
-      align-items   : center
-      margin-left   : 10px
-      margin-right  : 10px
-      margin-bottom : 10px
-
-      a
-
-        text-decoration : none
+		transition: all .2s ease-in-out
+		border-radius: 10px !important
+		padding: 10px !important
+		margin: 5px !important
+		text-decoration: none
+		text-align: center
+		color: white
+		font-weight: bolder
+		border: 1px solid black
+		box-shadow: 2px 2px 2px #000
+		font-size: smaller
+		background-color: rgba(0, 0, 0, .3)
 
 
-      .button
+		&:hover
 
-        //border-radius : 10px
-        padding     : 2px
-        margin-left : 3px
+			transform: scale(0.97)
+			box-shadow: none
+			color: white
+			border: 1px solid rgba(0, 0, 0, 0.5)
 
 
-  // For `Firefox` reader and no `CSS` view
-  .post_splitter
+	.post_title
 
-    // yes, it is used
-    display: none
+		color: $color_post_title_text
+		text-align: center
+		font-size: 2em
+		font-weight: bold
+		font-variant-caps: all-small-caps
+		padding: 2%
+
+	.post_content
+
+		padding: 5% 10%
+		color: $color_post_text
+		border-radius: 0 0 $post_border_radius
+
+		ul
+
+			margin-top: 1%
+			margin-bottom: 1%
+
+		p, li
+
+			background-color: rgba(0, 0, 0, 8%)
+			padding: 10px
+			border-radius: 10px
+
+		p
+
+			margin-bottom: 2%
+
+			&:first-letter
+
+				font-size: 1.1em
+
+
+		li
+
+			margin-left: 7%
+		//list-style  : none!important
+
+
+		hr
+
+			margin-bottom: 3%
+			margin-top: 3%
+
+		//@task this is most likely the good one
+		border-radius: 0
+		//background-color: white
+
+		.date
+
+			font-style: italic
+
+	.footer
+
+		display: flex
+		align-content: space-around
+		background-color: rgba(0, 0, 0, 75%)
+		margin: 0
+		//padding :20px
+		padding-top: 0
+		padding-bottom: 20px
+		border-radius: 0 0 $post_border_radius
+		border: $color_post_shadow
+		//z-index: 1
+		color: white
+		height: 10%
+
+		.tags
+
+			//margin-top  : 10px
+			//background-color: black
+			display: flex
+			align-items: center
+			margin-left: 10px
+			margin-right: 10px
+			margin-bottom: 10px
+
+			a
+
+				text-decoration: none
+
+
+			.button
+
+				//border-radius : 10px
+				padding: 2px
+				margin-left: 3px
+
+
+	// For `Firefox` reader and no `CSS` view
+	.post_splitter
+
+		// yes, it is used
+		display: none
