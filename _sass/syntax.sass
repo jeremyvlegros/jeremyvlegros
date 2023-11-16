@@ -1,0 +1,41 @@
+/* ///////////////////////// backticks ///////////////////////// */
+.language-plaintext
+
+  padding       : 3px
+  border-radius : 7px
+  border-color  : var(--color_background_dracula)
+
+
+/*.language-plaintext:before*/
+/* */
+/*  content     : "`" */
+/*  color       : var(--color_text_back_ticks) */
+/*  font-weight : bold */
+
+/* */
+
+/*.language-plaintext:after*/
+/* */
+/*  content     : "`" */
+/*  color       : var(--color_text_back_ticks) */
+/*  font-weight : bold */
+/* */
+
+/* code highlighter */
+
+.highlighter-rouge
+
+  overflow-x       : scroll  /*overflow part 1*/
+  margin-top       : 1px
+  margin-bottom    : 1px
+  border           : 1px solid var(--color_border_code)
+  border-radius    : 6px
+  background-color : var(--color_background_code)  /*overflow part 3 - filling the color gap*/
+  color            : var(--color_backticks_text)
+
+
+.highlighter-rouge .highlight
+
+  width : fit-content  /*overflow part 2*/
+
+
