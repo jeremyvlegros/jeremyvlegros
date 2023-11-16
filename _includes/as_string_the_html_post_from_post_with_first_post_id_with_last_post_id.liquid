@@ -153,7 +153,7 @@
 {%- capture button_top_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_top" href="{{ tag_url_1691010490420939832 }}">
+	<a class="col button color_background_top" href="{{ tag_url_1691010490420939832 }}" role="button">
 	Top
 		{%- comment -%}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{%- endcomment -%}
 	</a>
@@ -164,7 +164,7 @@
 {%- capture button_bottom_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_bottom" href="{{ tag_url_1691010490420939832 }}">
+	<a class="col button color_background_bottom" href="{{ tag_url_1691010490420939832 }}" role="button">
 		Bottom
 		{%- comment -%}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{%- endcomment -%}
 	</a>
