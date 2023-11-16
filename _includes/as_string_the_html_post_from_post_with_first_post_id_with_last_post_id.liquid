@@ -264,9 +264,10 @@
 				</a>
 
 			{%- else -%}
-				<a class="col button {{ color_background }}"
+				{%- comment -%} <a class="col button {{ color_background }}" {%- endcomment -%}
+				<a class="col button color_background_button_home"
 					 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
-				#posts
+				Back
 				</a>
 			{%- endif -%}
 
