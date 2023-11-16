@@ -116,7 +116,9 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		<time class='date date_of_creation' datetime="{{ machine_date_1691010490420939832 }}" aria-label="creation date"> {{ formatted_date_1691010490420939832 }} </time>
+		<!--suppress GrazieInspection -->
+		<time class='date date_of_creation' datetime="{{ machine_date_1691010490420939832 }}"
+					aria-label="creation date"> {{ formatted_date_1691010490420939832 }} </time>
 
 	{%- endcapture -%}
 
@@ -139,7 +141,9 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		<time class="date date_of_modification" datetime="{{ machine_date_1691010490420939832 }}" aria-label="modification date" > {{ formatted_date_1691010490420939832 }} </time>
+		<!--suppress GrazieInspection -->
+		<time class="date date_of_modification" datetime="{{ machine_date_1691010490420939832 }}"
+					aria-label="modification date"> {{ formatted_date_1691010490420939832 }} </time>
 
 	{%- endcapture -%}
 
