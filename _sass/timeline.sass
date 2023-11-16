@@ -1,63 +1,59 @@
+.page li
+
+    list-style : none
+
 .timeline
 
     margin-top : 30px
     padding    : 0
 
 
-.timeline .page-heading
+    .page-heading
 
-    font-weight               : bolder
-    font-variant-caps         : all-small-caps
-    display                   : flex
-    font-size                 : 30px
-    color                     : black
-    position                  : fixed
-    left                      : 5px
-    top                       : 1%
-    writing-mode              : vertical-lr
-    text-orientation          : upright
-    text-decoration-thickness : 3px
-    border                    : 2px none var(--color_post_shadow)
-    border-left-style         : solid
-    z-index                   : -1
-    height                    : 100%
-
-
-
-.timeline .page
-
-    padding : 0
-
-
-.page li
-
-    list-style : none
+        font-weight               : bolder
+        font-variant-caps         : all-small-caps
+        display                   : flex
+        font-size                 : 30px
+        color                     : black
+        position                  : fixed
+        left                      : 5px
+        top                       : 1%
+        writing-mode              : vertical-lr
+        text-orientation          : upright
+        text-decoration-thickness : 3px
+        border                    : 2px none var(--color_post_shadow)
+        border-left-style         : solid
+        z-index                   : -1
+        height                    : 100%
 
 
 
-.timeline .post
+    .page
 
-    // spacing between posts
-    margin : 0 0 20vh
-
-
-.timeline .posts
-
-    margin-left  : 10px
-    margin-right : 4%
-    padding-left : 0
+        padding : 0
 
 
+    .post
 
-.timeline .posts .post
+        // spacing between posts
+        margin : 0 0 20vh
 
-    padding-left : 0
+
+    .posts
+
+        margin-left  : 10px
+        margin-right : 4%
+        padding-left : 0
+
+        .post
+
+            padding-left : 0
 
 
-.timeline .post_content li
+    .post_content li //@task : do something about that if possible
 
-    list-style : square
-    margin-top : 2%
+        list-style : square
+        margin-top : 2%
 
 
 
@@ -88,47 +84,45 @@
     z-index         : 4
 
 
-#side_index::-webkit-scrollbar
+    &::-webkit-scrollbar
 
-    //untested
-    display : none
-
-
-//#side_index .side_index_content
-
-    //padding-bottom : 10%
-    //margin-left: 5%
+        //untested
+        display : none
 
 
+    .side_index_content
 
-#side_index .side_index_content ul
+        //margin-left: 5%
+        //padding-bottom : 10%
 
-    padding-left : 50px
+        ul
+
+            padding-left : 50px
 
 
-#side_index .side_index_content li
+        li
 
-    margin        : 8px 10px 8px 0
-    display       : flex
+            margin        : 8px 10px 8px 0
+            display       : flex
 
 
 
-// buttons
-#side_index .side_index_content a
+        // buttons
+        a
 
-    color           : white
-    padding         : 15px
-    margin-right    : 70px
-    text-decoration : none
-    transition      : all .2s ease-in-out
-    width           : 100%
-    border-radius : 15px
-    border          : 2px solid var(--color_post_shadow)
-    box-shadow      : 2px 1px 0 1px var(--color_post_shadow)
-    font-weight     : bolder
+            color           : white
+            padding         : 15px
+            margin-right    : 70px
+            text-decoration : none
+            transition      : all .2s ease-in-out
+            width           : 100%
+            border-radius : 15px
+            border          : 2px solid var(--color_post_shadow)
+            box-shadow      : 2px 1px 0 1px var(--color_post_shadow)
+            font-weight     : bolder
 
 
-#side_index .side_index_content a:hover
+            &:hover
 
-    transform  : scale(.97) !important
-    box-shadow : 1px 1px 1px 1px var(--color_post_shadow)
+                transform  : scale(.97) !important
+                box-shadow : 1px 1px 1px 1px var(--color_post_shadow)
