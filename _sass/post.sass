@@ -1,16 +1,18 @@
+@import variables
+
 .post
 
   margin           : 20px 30px 50px
-  border-radius    : var(--post_border_radius) var(--post_border_radius) var(--post_border_radius) var(--post_border_radius)
-  box-shadow       : 2px 1px 0 1px var(--color_post_shadow), 2px 1px 1px 1px var(--color_post_shadow)
-  background-color : var(--color_post_content_background)  // old setup serving as fallback color
-  border           : var(--post_border_thickness) solid var(--color_post_shadow)
+  border-radius    : $post_border_radius
+  box-shadow       : 2px 1px 0 1px $color_post_shadow
+  background-color : $color_post_content_background  // old setup serving as fallback color
+  border           : $color_post_shadow
   //overflow-inline: scroll  // can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set
 
   .button
 
-    color            : var(--color_post_button_text)
-    background-color : var(--color_post_button_background)
+    color            : $color_post_button_text
+    background-color : $color_post_button_background
 
   .version
 
@@ -20,11 +22,11 @@
   // helping the `Firefox reader` parser
   h1
 
-    background-color : var(--color_post_header_background)
+    background-color : $color_post_header_background
     display          : block
-    border-radius    : var(--post_border_radius) var(--post_border_radius) 0 0
-    border-bottom    : 2px solid var(--color_post_shadow)
-    color             : var(--color_post_title_text)
+    border-radius    : $post_border_radius 0 0
+    border-bottom    : 2px solid $color_post_shadow
+    color             : $color_post_title_text
     text-align        : center
     font-size         : 2em
     font-weight       : bold
@@ -34,10 +36,10 @@
 
   .post_header
 
-    background-color : var(--color_post_header_background)
+    background-color : $color_post_header_background
     display          : block
-    border-radius    : var(--post_border_radius) var(--post_border_radius) 0 0
-    border-bottom    : 2px solid var(--color_post_shadow)
+    border-radius    : $post_border_radius 0 0
+    border-bottom    : 2px solid $color_post_shadow
 
 
   // treating links as buttons as basically a copy of class button because of problems with HTML x Markdown x Liquid
@@ -68,7 +70,7 @@
 
   .post_title
 
-    color             : var(--color_post_title_text)
+    color             : $color_post_title_text
     text-align        : center
     font-size         : 2em
     font-weight       : bold
@@ -78,8 +80,8 @@
   .post_content
 
     padding       : 5% 10%
-    color         : var(--color_post_text)
-    border-radius : 0 0 var(--post_border_radius) var(--post_border_radius)
+    color         : $color_post_text
+    border-radius : 0 0 $post_border_radius
 
     ul
 
@@ -128,8 +130,8 @@
     //padding :20px
     padding-top      : 0
     padding-bottom   : 20px
-    border-radius    : 0 0 var(--post_border_radius) var(--post_border_radius)
-    border           : var(--post_border_thickness) solid var(--color_post_shadow)
+    border-radius    : 0 0 $post_border_radius
+    border           : $color_post_shadow
     //z-index: 1
     color            : white
     height           : 10%

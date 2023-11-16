@@ -1,3 +1,4 @@
+@import variables
 .page li
 
     list-style : none
@@ -21,7 +22,7 @@
         writing-mode              : vertical-lr
         text-orientation          : upright
         text-decoration-thickness : 3px
-        border                    : 2px none var(--color_post_shadow)
+        border                    : 2px none $color_post_shadow
         border-left-style         : solid
         z-index                   : -1
         height                    : 100%
@@ -70,7 +71,7 @@
     margin-top      : -30px
     margin-bottom   : 30px
 
-    color           : var(--color_side_index_text)
+    color           : $color_side_index_text
     padding         : 0
     position        : fixed
     width           : inherit
@@ -117,12 +118,12 @@
             transition      : all .2s ease-in-out
             width           : 100%
             border-radius : 15px
-            border          : 2px solid var(--color_post_shadow)
-            box-shadow      : 2px 1px 0 1px var(--color_post_shadow)
+            border          : 2px solid $color_post_shadow
+            box-shadow      : 2px 1px 0 1px $color_post_shadow
             font-weight     : bolder
 
 
             &:hover
 
                 transform  : scale(.97) !important
-                box-shadow : 1px 1px 1px 1px var(--color_post_shadow)
+                box-shadow : 1px 1px 1px 1px $color_post_shadow

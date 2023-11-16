@@ -1,21 +1,23 @@
+@import variables
+
 ///////////////////////// backticks /////////////////////////
 .language-plaintext
 
   padding       : 3px
   border-radius : 7px
-  border-color  : var(--color_background_dracula)
+  border-color  : $color_background_dracula
 
 
   //&:before
 
   //  content     : "`"
-  //  color       : var(--color_text_back_ticks)
+  //  color       : $color_text_back_ticks
   //  font-weight : bold
 
   //&:after
   //
   //  content     : "`"
-  //  color       : var(--color_text_back_ticks)
+  //  color       : $color_text_back_ticks
   //  font-weight : bold
 
 
@@ -25,16 +27,16 @@
 
   margin-top       : 1px
   margin-bottom    : 1px
-  border           : 1px solid var(--color_border_code)
+  border           : 1px solid $color_border_code
   border-radius    : 6px
-  color            : var(--color_backticks_text)
+  color            : $color_backticks_text
   overflow-x       : scroll  // overflow part 1
 
   .highlight
 
     width : fit-content  // overflow part 2
 
-  background-color : var(--color_background_code)  // overflow part 3 - filling the color gap
+  background-color : $color_background_code  // overflow part 3 - filling the color gap
 
 
 
