@@ -149,7 +149,7 @@
 {%- capture button_top_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_top" style="border-width: 3px" href="{{ tag_url_1691010490420939832 }}">
+	<a class="col button color_background_top" href="{{ tag_url_1691010490420939832 }}">
 	Top
 		{%- comment -%}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{%- endcomment -%}
 	</a>
@@ -160,7 +160,7 @@
 {%- capture button_bottom_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_bottom" style="border-width: 3px" href="{{ tag_url_1691010490420939832 }}">
+	<a class="col button color_background_bottom" href="{{ tag_url_1691010490420939832 }}">
 		Bottom
 		{%- comment -%}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{%- endcomment -%}
 	</a>
@@ -170,7 +170,7 @@
 {%- comment -%} home button {%- endcomment -%}
 {%- capture button_home_1691010490420939832 -%}
 
-	<a class="col button color_background_button_home" style="border-width: 3px" href="{{ '/' | relative_url }}">
+	<a class="col button color_background_button_home" href="{{ '/' | relative_url }}">
 	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
 		Home
 	</a>
@@ -181,9 +181,9 @@
 {%- capture button_id_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-	<a class="col button {{ post_color_background_1691010490420939832 }}"
-		 style="border-width: 3px;"
-		 href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }}
+	<a class="col button color_background_button_home {{ post_color_background_1691010490420939832 }}"
+		{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
+		href="{{ tag_url_1691010490420939832 }}"> Open
 	</a>
 
 {%- endcapture -%}
@@ -255,12 +255,13 @@
 
 			{%- comment -%} the address doesn't exist go to posts {%- endcomment -%}
 			{%- if page.title == "#tags" -%}
-				<a class="col button {{ color_background }}" style="border-width: 3px" href="{{ '/tag/posts' | relative_url }}">
+				<a class="col button {{ color_background }}" href="{{ '/tag/posts' | relative_url }}">
 				#posts
 				</a>
 
 			{%- else -%}
-				<a class="col button {{ color_background }}" style="border-width: 3px" href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
+				<a class="col button {{ color_background }}"
+					 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
 				#posts
 				</a>
 			{%- endif -%}
