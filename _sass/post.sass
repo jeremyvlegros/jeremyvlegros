@@ -25,7 +25,7 @@
 
 		background-color: $color_post_header_background
 		display: block
-		border-radius: $post_border_radius 0 0
+		border-radius: $post_border_radius $post_border_radius 0 0
 		border-bottom: 2px solid $color_post_shadow
 		color: $color_post_title_text
 		text-align: center
@@ -35,12 +35,12 @@
 		padding: 2%
 
 
-	.post_header
-
-		background-color: $color_post_header_background
-		display: block
-		border-radius: $post_border_radius 0 0
-		border-bottom: 2px solid $color_post_shadow
+	//.post_header // @task : remove from HTML then remove from here
+	//
+	//	background-color: $color_post_header_background
+	//	display: block
+	//	border-radius: $post_border_radius 0 0
+	//	border-bottom: 2px solid $color_post_shadow
 
 
 	// treating links as buttons as basically a copy of class button because of problems with HTML x Markdown x Liquid
@@ -115,7 +115,7 @@
 			margin-top: 3%
 
 		//@task this is most likely the good one
-		border-radius: 0
+		//border-radius: 0
 		//background-color: white
 
 		.date
@@ -131,7 +131,7 @@
 		//padding :20px
 		padding-top: 0
 		padding-bottom: 20px
-		border-radius: 0 0 $post_border_radius
+		border-radius: 0 0 $post_border_radius $post_border_radius
 		border: $color_post_shadow
 		//z-index: 1
 		color: white
