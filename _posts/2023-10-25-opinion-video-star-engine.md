@@ -18,4 +18,5 @@ I don't know if `Star Citizen` will look that good, but if it does, I can imagin
 
 If this doesn't wake up players I don't know what will, this is the kind of technology you would pay 70€ for.
 
-[The video]({{"/post/1698253192118430040" | relative_url}})
+[The post reference]({{"/tag/posts#1698253192118430040" | relative_url}})
+
