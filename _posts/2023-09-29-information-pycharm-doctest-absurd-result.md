@@ -9,6 +9,7 @@ tags :
 - "#doctest"
 - "#configurations"
 - "#ide"
+- "#informations"
 ---
 
 Got a failed `doctest` test, this :
