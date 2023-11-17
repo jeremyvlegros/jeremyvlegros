@@ -1,10 +1,10 @@
 ---
-title                : "About me : my links"
+title                : "Reference : my links"
 date_of_creation     : "#date 2023-05-28 15:40 1685288400000 GMT"
 permalink            : "post/1685288400000"
 tags                 : 
 - "#posts"
-- "#about"
+- "#references"
 - "#jeremyvlegros"
 - "#links"
 ---
