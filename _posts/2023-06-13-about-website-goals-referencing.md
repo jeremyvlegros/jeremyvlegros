@@ -9,8 +9,6 @@ tags                 :
 - "#website"
 ---
 
-## Referencing
-
 What I use/like :
   - articles
   - videos
