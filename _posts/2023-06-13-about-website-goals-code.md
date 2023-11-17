@@ -1,20 +1,20 @@
 ---
 title                : "About the website code goals"
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
-date_of_modification : "#date 2023-11-17 09:22 1700198548750968010 GMT"
+date_of_modification : "#date 2023-11-17 09:54 1700200481520880252 GMT"
 permalink            : /post/1686614400000000000
 tags                 : 
 - "#posts"
 - "#about" 
 - "#website"
+- "#github"
 ---
 
-## code
-  - only uses text
-  - syntax colored
-  - copy-able, hence testable
-  - see the post history
-  - see my coding struggles :
-    - the ones I solved
-    - the ones I didn't solve
-    - extract knowledge from them
+The code :
+- is only using text characters (emojis are text characters)
+- is syntax colored
+- is copy-able, hence testable
+- has a history, viewable on the `GitHub` repository :
+  - transparency
+  - accountability
+- can help readers for their own code (I hope)
