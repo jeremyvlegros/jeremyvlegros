@@ -1,5 +1,5 @@
 ---
-title                : "opinion : `Mojang` is feeding the emotional roller coaster beast"
+title                : "Opinion : `Mojang` is feeding the emotional roller coaster beast"
 date_of_creation     : "#date 2023-10-14 13:05 1697274328022936769 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1697274328022936769"

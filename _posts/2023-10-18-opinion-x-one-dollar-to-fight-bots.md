@@ -1,5 +1,5 @@
 ---
-title                : "opinion : `X` is asking 1$ to fight bots"
+title                : "Opinion : `X` is asking 1$ to fight bots"
 date_of_creation     : "#date 2023-10-18 05:37 1697593035612355255 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1697593035612355255"

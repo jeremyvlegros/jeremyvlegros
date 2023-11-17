@@ -1,5 +1,5 @@
 ---
-title                : "status : I am tying up some loose ends off `Twitter`"
+title                : "Status : I am tying up some loose ends off `Twitter`"
 date_of_creation     : "#date 2023-08-01 13:00 1690880438954979985 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1690880438954979985

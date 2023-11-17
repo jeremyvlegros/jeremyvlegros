@@ -1,5 +1,5 @@
 ---
-title                : "opinion : `linktree` pros : blending in the world craziness"
+title                : "Opinion : `linktree` pros : blending in the world craziness"
 date_of_creation     : "#date 2023-06-30 16:00 1688126427044747723 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1688126427044747723
