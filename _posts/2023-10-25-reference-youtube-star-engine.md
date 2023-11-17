@@ -1,7 +1,7 @@
 ---
 title                : "Reference : `Star Engine` `YouTube` video"
 date_of_creation     : "#date 2023-10-25 20:59 1698253192118430040 GMT"
-date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
+date_of_modification : "#date 2023-11-17 12:42 1700210544609167197 GMT"
 permalink            : "/post/1698253192118430040"
 tags :
 
@@ -14,6 +14,5 @@ tags :
 
 ---
 
-<div class="ratio ratio-16x9">
-<iframe src="https://www.youtube-nocookie.com/embed/jfLxMvDp1Lo" title="Star Engine" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<a href="https://www.youtube-nocookie.com/embed/jfLxMvDp1Lo" target="_blank"> Star Engine </a>
+
