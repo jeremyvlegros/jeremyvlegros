@@ -9,17 +9,6 @@ tags                 :
 - "#website"
 ---
 
-## code
-  - only uses text
-  - syntax colored
-  - copy-able, hence testable
-  - see the post history
-  - see my coding struggles :
-    - the ones I solved
-    - the ones I didn't solve
-    - extract knowledge from them
-
-
 ## Referencing
 
 What I use/like :
