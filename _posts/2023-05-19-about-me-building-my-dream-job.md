@@ -1,7 +1,7 @@
 ---
 title                : "About building my dream job"
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000000 GMT"
-date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
+date_of_modification : "#date 2023-11-17 23:12 1700248377528448288 GMT"
 permalink            : /post/1684454400000000000
 tags                 : 
 - "#posts"
@@ -10,10 +10,13 @@ tags                 :
 - "#dream_jobs"
 ---
 
-Earning a living by building a recursive content publishing system around video games :
+I am building a system to earn a living around video games by :
 
 - registering what I do / how I do it
 - writing tools
 - automating my workflow with tools  
 - publishing articles, software, tools
 - documenting all of the above
+- repeat
+
+Ultimately, the goal is to become proficient, pertinent, in content related to video games.
