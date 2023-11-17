@@ -1,7 +1,7 @@
 ---
 title                : "About me : my links"
-date_of_creation     : "#date 2023-05-28 15:40 0000000000000000001 GMT"
-permalink            : "post/0000000000000000001"
+date_of_creation     : "#date 2023-05-28 15:40 1685288400000 GMT"
+permalink            : "post/1685288400000"
 tags                 : 
 - "#posts"
 - "#about"
