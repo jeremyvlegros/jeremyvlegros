@@ -9,21 +9,20 @@ tags                 :
 - "#twitter"
 ---
 
-## public access to a timeline  
-- still being bugged with sign-in prompts
-- when it's allowed (I don't know the conditions since `Twitter` has closed on itself)
+Public access to a timeline, but ... :
+- still nagging people with sign-in prompts
+- it's not valid for all timelines, I don't know/understand the viewing rules
 
+Interaction :
+- with lots of people :
+  - well known
+  - strangers
+  - companies
+- simple buttons "like" "bookmark", "retweet"
+- safeguards as people can choose:
+  - who can respond to a post (the reason that made me come back at the time)
+  - who can message them by setting on only accounts I follow
 
-## interaction :
-- with lots of people
-- with lots of known people
-- with strangers, including known people
-- with lots of companies
-- buttons, "like", "bookmark", maybe I can find a use for the "retweet"
-- safeguards :
-  - can choose who can respond to posts (made me come back at the time)
-  - can choose who can message me by setting on only accounts I follow
-
-## fast content consuming : 
-- short posts (at the time)
-- embedding media is effortless, and comes with a built-in preview 
+Fast content consumption : 
+- short posts but ... paying people get longer ones
+- embedding media is effortless, comes with a built-in preview
