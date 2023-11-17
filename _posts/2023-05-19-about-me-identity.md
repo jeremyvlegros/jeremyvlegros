@@ -1,8 +1,8 @@
 ---
 title                : "About me : identity"
-date_of_creation     : "#date 2023-05-19 00:00 1684454400000000000 GMT"
-date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
-permalink            : /post/1684454400000000000
+date_of_creation     : "#date 2023-05-19 00:00 1684454400000000003 GMT"
+date_of_modification : "#date 2023-11-17 09:22 1700198548750968010 GMT"
+permalink            : /post/1684454400000000003
 tags                 : 
 - "#posts"
 - "#about"
