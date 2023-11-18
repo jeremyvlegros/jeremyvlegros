@@ -7,6 +7,9 @@ tags                 :
 - "#posts"
 - "#status"
 - "#website"
+- "#liquid"
+- "#computer"
+- "#languages"
 ---
 
 The timeline page code is cleaned, using `.liquid` files from `_include`, I call them `Liquid` functions.

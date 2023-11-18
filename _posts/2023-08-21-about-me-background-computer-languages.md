@@ -8,6 +8,7 @@ tags                 :
 - "#about"
 - "#jeremyvlegros"
 - "#languages"
+- "#computer"
 ---
 
 From most used to least used :

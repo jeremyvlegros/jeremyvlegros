@@ -7,6 +7,11 @@ tags :
 - "#posts"
 - "#status"
 - "#website"
+- "#html"
+- "#css"
+- "#javascript"
+- "#computer"
+- "#languages"
 ---
 
 `HTML` :

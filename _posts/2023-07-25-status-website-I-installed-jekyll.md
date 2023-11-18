@@ -9,6 +9,7 @@ tags                 :
 - "#website"
 - "#jekyll"
 - "#github"
+- "#computer"
 ---
 
 It just became impossible without more feedback, error details : 

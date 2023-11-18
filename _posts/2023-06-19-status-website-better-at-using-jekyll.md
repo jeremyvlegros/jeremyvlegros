@@ -8,6 +8,7 @@ tags                 :
 - "#status"
 - "#website"
 - "#jekyll"
+- "#computer"
 ---
 I had to take a break and think calmly about it.
 

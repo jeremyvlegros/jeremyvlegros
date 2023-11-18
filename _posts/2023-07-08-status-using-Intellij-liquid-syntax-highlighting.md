@@ -10,8 +10,9 @@ tags                 :
 - "#liquid" 
 - "#syntax" 
 - "#highlighting"
-- "#languages"
 - "#ide"
+- "#computer"
+- "#languages"
 ---
 
 It comes with an official plugin.

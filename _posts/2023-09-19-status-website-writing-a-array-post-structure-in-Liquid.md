@@ -10,6 +10,8 @@ tags :
 - "#python"
 - "#jekyll"
 - "#liquid"
+- "#computer"
+- "#languages"
 ---
 
 I am emulating a structure from `Liquid` code using arrays and access functions, instead of using `site.posts` directly. 

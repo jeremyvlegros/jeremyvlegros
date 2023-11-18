@@ -6,10 +6,13 @@ permalink            : "/post/1695957483470493710"
 tags :
 - "#posts"
 - "#pycharm"
+- "#python"
 - "#doctest"
 - "#configurations"
 - "#ide"
 - "#informations"
+- "#computer"
+- "#languages"
 ---
 
 Got a failed `doctest` test, this :

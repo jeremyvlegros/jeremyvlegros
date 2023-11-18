@@ -8,6 +8,12 @@ tags :
 - "#posts"
 - "#status"
 - "#website"
+- "#markdown"
+- "#css"
+- "#sass"
+- "#liquid"
+- "#computer"
+- "#languages"
 
 ---
 

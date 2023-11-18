@@ -10,12 +10,14 @@ tags :
 - "#python"
 - "#jekyll"
 - "#liquid"
+- "#computer"
+- "#languages"
 ---
 
 Currently, I am writing functions :
 - to check :
   - `%- include -%` undefined and unused usages 
   - `from_...` parameters key names
-- to automate the build page `liquid` parts:
+- to automate the build page `Liquid` parts:
   - code snippets are not enough to deal with the code chunks
   - listing functions that have not been tested

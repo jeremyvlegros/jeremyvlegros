@@ -1,0 +1,7 @@
+---
+title                : "#computer"
+tags                 :
+
+- "#computer"
+
+---

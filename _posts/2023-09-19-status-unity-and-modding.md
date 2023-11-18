@@ -9,6 +9,9 @@ tags :
 - "#unity"
 - "#modding"
 - "#status"
+- "#c_sharp"
+- "#computer"
+- "#languages"
 
 ---
 

@@ -10,6 +10,7 @@ tags :
 - "#minecraft"
 - "#votes"
 - "#mobs"
+- "#video_games"
 
 ---
 

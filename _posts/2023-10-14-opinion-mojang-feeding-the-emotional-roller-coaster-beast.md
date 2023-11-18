@@ -8,6 +8,7 @@ tags :
 - "#opinions"
 - "#minecraft"
 - "#mojang"
+- "#video_games"
 ---
 
 `Minecraft` updates, new biomes, new mobs always makes me happier :

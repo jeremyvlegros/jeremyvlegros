@@ -8,6 +8,8 @@ tags                 :
 - "#status"
 - "#website"
 - "#php"
+- "#computer"
+- "#languages"
 ---
 The time I spent searching how Jekyll and Liquid works ... The Liquid syntax ... is ... *sigh* ... the documentations are ... *sigh*.
 

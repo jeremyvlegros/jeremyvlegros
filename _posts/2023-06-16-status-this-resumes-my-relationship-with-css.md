@@ -7,6 +7,8 @@ tags                 :
 - "#posts"
 - "#status"
 - "#css"
+- "#computer"
+- "#languages"
 ---
 
 At this time of writing, the whole Firefox column is red, version 2 to version 115, and my version is the 113 ...
