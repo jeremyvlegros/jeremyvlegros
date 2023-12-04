@@ -7,7 +7,7 @@
 	box-shadow: 2px 1px 0 1px $color_post_shadow
 	// old setup serving as fallback color
 	background-color: $color_post_content_background
-	border: $color_post_shadow
+	border: $post_border_thickness solid $color_post_shadow
 	//overflow-inline: scroll  // can't use it, it overwrites the bottom border ... when Firefox "always show scrollbar" is set
 
 	.button
@@ -119,7 +119,7 @@
 		padding-top: 0
 		padding-bottom: 20px
 		border-radius: 0 0 $post_border_radius $post_border_radius
-		border: $color_post_shadow
+		border: $post_border_thickness $color_post_shadow solid
 		//z-index: 1
 		color: white
 		height: 10%
