@@ -1,3 +1,4 @@
+@import variables
 .button
 
 	transition: all .2s ease-in-out
@@ -9,7 +10,8 @@
 	color: white
 	font-weight: bolder
 	//border: 2px solid black !important
-	box-shadow: 1px 3px 1px rgba(0, 0, 0, .5) !important
+	//box-shadow: 1px 3px 1px rgba(0, 0, 0, .5) !important
+	box-shadow: $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color !important
 	font-size: smaller
 	//background-color : rgba(0, 0, 0, .5) !important
 	//background-color:black
