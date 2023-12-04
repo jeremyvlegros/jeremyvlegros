@@ -9,7 +9,7 @@ tags                 :
 - "#twitter"
 ---
 
-`Twitter` is changing :
+__`Twitter`__ is changing :
 - posts are becoming enormous
 - verified identity had value, as a social/web acknowledgment
 - it is essentially becoming a mirror of its owner

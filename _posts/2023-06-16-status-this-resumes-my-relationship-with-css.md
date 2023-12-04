@@ -15,4 +15,4 @@ At this time of writing, the whole Firefox column is red, version 2 to version 1
 
 I do not even want to think about it anymore.
 
-[`can I use` website / css "has"](https://caniuse.com/css-has)
+[__`can I use`__ website / css "has"](https://caniuse.com/css-has)

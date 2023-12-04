@@ -12,6 +12,6 @@ tags :
 
 It feels unorganic. It doesn't fit in a social experience :  
 - black and white color, it feels ominous
-- `X` ? `x` is used for undefined things ... and for adult things
+- __`X`__ ? __`x`__ is used for undefined things ... and for adult things
 
-I think that the `X` brand was too generic to be trademarked as it is, they needed more letters, which squeezed the swag out of the name.
+I think that the __`X`__ brand was too generic to be trademarked as it is, they needed more letters, which squeezed the swag out of the name.

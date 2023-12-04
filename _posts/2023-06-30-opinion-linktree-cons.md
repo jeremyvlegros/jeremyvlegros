@@ -9,6 +9,6 @@ tags                 :
 - "#link_tree"
 ---
 
-- I don't like the `Link Tree` page structure, not enough customization (even when with paid things)
+- I don't like the __`Link Tree`__ page structure, not enough customization (even when with paid things)
 - I feel bad using for the user because of cookies
 - it distorts the perception of who I am

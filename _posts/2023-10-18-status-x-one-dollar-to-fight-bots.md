@@ -10,6 +10,6 @@ tags :
 - "#twitter"
 ---
                                                  
-I am grateful for the `Twitter` buyout, I become a little more independent at each new policy × drama.
+I am grateful for the __`Twitter`__ buyout, I become a little more independent at each new policy × drama.
 
 Monetizing the likes means I would not be able to use them anymore, so be it, I will remove them from there.

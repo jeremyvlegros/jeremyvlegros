@@ -12,18 +12,18 @@ tags                 :
 ---
 
 From most used to least used :
-- `Python`
-- `PHP`
-- `Markdown`
-- `Liquid`
-- `HTML` & `CSS`
-- `JavaScript`
-- `Script Shell`
-- `C`
-- `Java`
-- `SCALA`
-- `LUA`
-- `BATCH` (Windows)
-- `Livecode`
-- `OCAML`
-- `ASSEMBLY`
+- __`Python`__
+- __`PHP`__
+- __`Markdown`__
+- __`Liquid`__
+- __`HTML`__ & __`CSS`__
+- __`JavaScript`__
+- __`Script Shell`__
+- __`C`__
+- __`Java`__
+- __`SCALA`__
+- __`LUA`__
+- __`BATCH`__ (Windows)
+- __`Livecode`__
+- __`OCAML`__
+- __`ASSEMBLY`__

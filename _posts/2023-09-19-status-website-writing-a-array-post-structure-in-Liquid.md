@@ -14,8 +14,8 @@ tags :
 - "#languages"
 ---
 
-I am emulating a structure from `Liquid` code using arrays and access functions, instead of using `site.posts` directly. 
+I am emulating a structure from __`Liquid`__ code using arrays and access functions, instead of using __`site.posts`__ directly. 
 
-Problems I have with `Jekyll` posts :
-- they are made with a structure that doesn't exist in `Liquid`
+Problems I have with __`Jekyll`__ posts :
+- they are made with a structure that doesn't exist in __`Liquid`__
 - they have fields and field access are obscure, I can't waste more time on this

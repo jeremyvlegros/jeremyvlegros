@@ -11,12 +11,12 @@ tags :
 - "#tumblr"
 ---
 
-Someparts are kept as `Twitter` and some parts named `X`.
+Someparts are kept as __`Twitter`__ and some parts named __`X`__.
 
 The blue color is still there, whereas the logo is black and white.
 
-The website address is `Twitter` whereas the website is named `X` :
-- typing `www.x.com` redirects to `Twitter`, why didn't they do it in one go ?
-- the handle `Twitter` was not replaced by `X`, I don't know if it still the case
+The website address is __`Twitter`__ whereas the website is named __`X`__ :
+- typing __`www.x.com`__ redirects to __`Twitter`__, why didn't they do it in one go ?
+- the handle __`Twitter`__ was not replaced by __`X`__, I don't know if it still the case
 - for a company this big to do that quality of a rebranding, worries me enough to change my plans about it
 

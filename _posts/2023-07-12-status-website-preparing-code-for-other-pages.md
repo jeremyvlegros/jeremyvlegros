@@ -12,11 +12,11 @@ tags                 :
 - "#languages"
 ---
 
-The timeline page code is cleaned, using `.liquid` files from `_include`, I call them `Liquid` functions.
+The timeline page code is cleaned, using __`.liquid`__ files from __`_include`__, I call them __`Liquid`__ functions.
 
-I had to dive deeper into `Jekyll ` and `Liquid`, into `include` and `capture`.
+I had to dive deeper into __`Jekyll `__ and __`Liquid`__, into __`include`__ and __`capture`__.
 
-Many pages (and future pages) depend on `Liquid` functions, as of now it should be much easier and cleaner. 
+Many pages (and future pages) depend on __`Liquid`__ functions, as of now it should be much easier and cleaner. 
 
 remark :
 - the "functions" are lousy based on my naming convention

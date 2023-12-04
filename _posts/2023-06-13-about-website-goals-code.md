@@ -14,7 +14,7 @@ The code :
 - is only using text characters (emojis are text characters)
 - is syntax colored
 - is copy-able, hence testable
-- has a history, viewable on the `GitHub` repository :
+- has a history, viewable on the __`GitHub`__ repository :
   - transparency
   - accountability
 - can help readers for their own code (I hope)

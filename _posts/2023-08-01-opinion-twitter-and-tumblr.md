@@ -10,4 +10,4 @@ tags :
 - "#x_corp"
 - "#tumblr"
 ---
-The more `Twitter` becomes `X` the more `Tumblr` becomes like `Twitter`, I may prefer being on `Tumblr` if both of them keep evolving in their respective directions
+The more __`Twitter`__ becomes __`X`__ the more __`Tumblr`__ becomes like __`Twitter`__, I may prefer being on __`Tumblr`__ if both of them keep evolving in their respective directions

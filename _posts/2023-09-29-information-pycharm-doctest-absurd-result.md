@@ -15,18 +15,18 @@ tags :
 - "#languages"
 ---
 
-Got a failed `doctest` test, this :
+Got a failed __`doctest`__ test, this :
 
-`['/ROOT//a', '/ROOT//b', '/ROOT//c', '/ROOT//d', '/ROOT//e']`
+__`['/ROOT//a', '/ROOT//b', '/ROOT//c', '/ROOT//d', '/ROOT//e']`__
 
 instead of :
 
-`['/ROOT/a', '/ROOT/b','/ROOT/c', '/ROOT/d', '/ROOT/e']`
+__`['/ROOT/a', '/ROOT/b','/ROOT/c', '/ROOT/d', '/ROOT/e']`__
 
-The problem was that the script directory wasn't set in the `doctest` run configuration : 
-- didn't stop the `doctest` to run okay without it (until this)
+The problem was that the script directory wasn't set in the __`doctest`__ run configuration : 
+- didn't stop the __`doctest`__ to run okay without it (until this)
 - didn't stop the configuration to be saved
 - didn't prompt errors 
 - didn't prompt the Python console crash
 
-After setting the directory, the `doctest` test worked.
+After setting the directory, the __`doctest`__ test worked.

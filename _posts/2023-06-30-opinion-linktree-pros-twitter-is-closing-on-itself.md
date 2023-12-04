@@ -10,10 +10,10 @@ tags                 :
 - "#link_tree"
 ---
 
-I can't use `Twitter` as a HUB, and now even less, because my links are not public depending on ... unknown factors.
+I can't use __`Twitter`__ as a HUB, and now even less, because my links are not public depending on ... unknown factors.
 
 Tweets, accounts, or even the main page, are inaccessible without being logged in :
-- `Twitter` becomes accessible only to `Twitter` users
-- advertisements only target `Twitter` users, with accounts
+- __`Twitter`__ becomes accessible only to __`Twitter`__ users
+- advertisements only target __`Twitter`__ users, with accounts
 - it seems that some accounts work as usual, without me being logged in, paid accounts maybe ?
 

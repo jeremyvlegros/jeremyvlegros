@@ -11,7 +11,7 @@ tags :
 - "#video_games"
 ---
 
-`Minecraft` updates, new biomes, new mobs always makes me happier :
+__`Minecraft`__ updates, new biomes, new mobs always makes me happier :
 
 - a free update every here and then up to this day
 - a massive update once a year
@@ -19,10 +19,10 @@ tags :
 
 But : 
 - updates focus too much on the world structure and too little in filling them with life, resulting in pretty static empty landscapes
-- each year the wait for the next `Minecraft live`, then the wait for the update implementation, then playing for a bit, then the wait for the next `Minecraft live` ...
+- each year the wait for the next __`Minecraft live`__, then the wait for the update implementation, then playing for a bit, then the wait for the next __`Minecraft live`__ ...
 
-During these 10 years of `Minecraft` updates, the game rarely felt alive.
+During these 10 years of __`Minecraft`__ updates, the game rarely felt alive.
 
-`Mojang` is accountable for the content they release, paid content _and_ free content.
+__`Mojang`__ is accountable for the content they release, paid content _and_ free content.
 
-It is a disturbing relationship between the community and `Mojang`, the community being lit on fire and `Mojang` remaining silent.
+It is a disturbing relationship between the community and __`Mojang`__, the community being lit on fire and __`Mojang`__ remaining silent.

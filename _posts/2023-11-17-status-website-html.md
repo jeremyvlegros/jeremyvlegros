@@ -14,12 +14,12 @@ tags :
 - "#languages"
 ---
 
-`HTML` :
+__`HTML`__ :
 - minified
 - contains some aria labels
 - contains some item properties
 - can be browsed :
-  - without `CSS`
-  - in `Firefox` Reader mode
-  - without `JavaScript` (I won't use embedded videos anymore)
+  - without __`CSS`__
+  - in __`Firefox`__ Reader mode
+  - without __`JavaScript`__ (I won't use embedded videos anymore)
 - has navigation buttons

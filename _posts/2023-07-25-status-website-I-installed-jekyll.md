@@ -13,8 +13,8 @@ tags                 :
 ---
 
 It just became impossible without more feedback, error details : 
-- before testing on `Github` 
+- before testing on __`Github`__ 
 - in which file
 - in which line (not always)
-- now I can program offline with faster builds ~ 1/2 second against sometimes 3 minutes on `GitHub`
-- I wasn't sure of the software until today, it needed comparisons and testing, the version being 4 offline and 3 on `GitHub` 
+- now I can program offline with faster builds ~ 1/2 second against sometimes 3 minutes on __`GitHub`__
+- I wasn't sure of the software until today, it needed comparisons and testing, the version being 4 offline and 3 on __`GitHub`__ 

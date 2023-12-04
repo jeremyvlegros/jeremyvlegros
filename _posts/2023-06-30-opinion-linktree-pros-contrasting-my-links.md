@@ -20,4 +20,4 @@ It will constrast with my website, appearing as even more peaceful :
 - no refusing cookie button requiring the un-toggling one by one, 10+ elements 
 - no refusing cookie button enforcing ... mandatory functionality cookies
 
-N.B : I do my best to remove cookies, but some external content such as `Youtube` requires cookies to work ... there are ways to go around them (open source even), but I don't know if they are legal (yet) 
+N.B : I do my best to remove cookies, but some external content such as __`Youtube`__ requires cookies to work ... there are ways to go around them (open source even), but I don't know if they are legal (yet) 

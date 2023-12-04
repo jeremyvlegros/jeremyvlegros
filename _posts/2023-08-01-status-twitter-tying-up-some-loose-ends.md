@@ -10,10 +10,10 @@ tags                 :
 - "#status"
 ---
 
-`Twitter` users can allow third party applications to get a person geolocation, meaning that they can know my location.
+__`Twitter`__ users can allow third party applications to get a person geolocation, meaning that they can know my location.
 
 I did not have a problem about that because :
 - companies know my IP because I have accounts for most of them
 - I only followed people that I chose
 
-The problem is that I don't trust `Twitter` abilities to maintain the platform code anymore, and by extension, security. 
+The problem is that I don't trust __`Twitter`__ abilities to maintain the platform code anymore, and by extension, security. 

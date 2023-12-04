@@ -10,4 +10,4 @@ tags                 :
 ---
 
 
-Impulsive decisions changing the meaning/usage of `Twitter` almost each week, makes it a very confusing to stay on
+Impulsive decisions changing the meaning/usage of __`Twitter`__ almost each week, makes it a very confusing to stay on

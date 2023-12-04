@@ -10,9 +10,9 @@ tags                 :
 - "#tumblr"
 ---
 
-The original plan was to use `Twitter` as a HUB and `Tumblr` as a blog.
+The original plan was to use __`Twitter`__ as a HUB and __`Tumblr`__ as a blog.
  
-One problem though, my access to `Tumblr` was bugged asking for cookies forever ... hence `Twitter` became an all-in-one solution.
+One problem though, my access to __`Tumblr`__ was bugged asking for cookies forever ... hence __`Twitter`__ became an all-in-one solution.
 
 Now I am reconsidering :
 
@@ -20,8 +20,8 @@ Now I am reconsidering :
 
 - I obtained a shard of courage, and started writing my website
 
-- I want to keep my handle, and to keep it, I need to post, so I'll stay on `Twitter`
+- I want to keep my handle, and to keep it, I need to post, so I'll stay on __`Twitter`__
  
 - I will do mostly what companies do, i.e. re-directions to their website/products/store.
 
-- I discovered a way to optimize the use of `Twitter`
+- I discovered a way to optimize the use of __`Twitter`__

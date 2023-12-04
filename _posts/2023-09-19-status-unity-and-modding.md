@@ -21,4 +21,4 @@ It's the same thing again and again, companies decide what makes more money for 
 
 I don't want to learn a game engine for modding when it decides that is okay to put developers, games in development, and *even* already released games, at risk.
 
-I will focus on parts that are not in `C#` *sigh*, it's the best compromise I have right now.  
+I will focus on parts that are not in __`C#`__ *sigh*, it's the best compromise I have right now.  

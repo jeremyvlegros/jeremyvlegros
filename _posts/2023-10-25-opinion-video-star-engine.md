@@ -11,7 +11,7 @@ tags :
 
 ---
 
-I don't know if `Star Citizen` will look that good, but if it does, I can imagine some developers adding `Star Citizen` as an anomaly :
+I don't know if __`Star Citizen`__ will look that good, but if it does, I can imagine some developers adding __`Star Citizen`__ as an anomaly :
 - half of the features in this video are what every AAA space video game must have
 - the other half left me in total disbelief ... is that ... what ?
 - I was sold three minutes in, and it kept going, showing other features for 23 more minutes

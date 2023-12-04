@@ -9,4 +9,4 @@ tags                 :
 - "#jeremyvlegros"
 ---
 
-- `C2i` (french certification stating that I know to use a computer)
+- __`C2i`__ (french certification stating that I know to use a computer)
