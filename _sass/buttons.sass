@@ -1,27 +1,25 @@
 @import variables
+
 .button
 
-	transition: all .2s ease-in-out
-	border-radius: 10px !important
-	text-decoration: none
-	padding: 10px !important
-	margin: 5px !important
+	transition: $button_transition
+	border-radius: $button_border_radius
+	text-decoration: none !important
+	padding: $button_padding
+	margin: $button_margin
 	text-align: center
-	color: white
+	color: $button_border_color
 	font-weight: bolder
-	//border: 2px solid black !important
-	//box-shadow: 1px 3px 1px rgba(0, 0, 0, .5) !important
-	box-shadow: $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $color_button_shadow !important
+	border: $button_border_width solid $button_border_color
+	box-shadow: $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color
 	font-size: smaller
-	//background-color : rgba(0, 0, 0, .5) !important
-	//background-color:black
-	//width: 100%
-	//height: 100%
+	background-color: $button_background_color
+	width: $button_height
+	height: $button_width
 
 	&:hover
 
-		//transform: scale(1.02)
-		transform: scale(0.97)
+		transform: $button_transform_scale
 		box-shadow: none !important
 		color: white
-		border: 1px solid rgba(0, 0, 0, 0.5)
+		border: $button_border_width_over solid $button_border_color !important
