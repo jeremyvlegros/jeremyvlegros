@@ -2,3 +2,6 @@
 /.idea/**
 /_site/**
 
+/development/_offline/
+/development/.storage/
+/development/between_worlds/css/
