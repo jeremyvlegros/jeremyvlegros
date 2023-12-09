@@ -20,9 +20,9 @@
 
 						{%- capture the_post_for_the_index_1693649612738133574 -%}
 
-							{%- comment -%} color_background_1693649612738133574 {%- endcomment -%}
-							{%- include as_string_the_css_class_for_the_color_background_from_date.liquid from_date=post.date_of_creation -%}
-							{%- assign color_background_1693649612738133574 = return -%}
+							{%- comment -%} background_color_1693649612738133574 {%- endcomment -%}
+							{%- include as_string_the_css_class_for_the_background_color_from_date.liquid from_date=post.date_of_creation -%}
+							{%- assign background_color_1693649612738133574 = return -%}
 							{%- assign return = null -%}
 							{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -34,7 +34,7 @@
 
 							<li role="menuitem">
 								{%- comment -%} I don't use `button` because overwriting the CSS is CSS-Y {%- endcomment -%}
-								<a role="button" class="{{ color_background_1693649612738133574 }}" href="#{{ post_id_1693649612738133574 }}"> {{ post.title }}
+								<a role="button" class="{{ background_color_1693649612738133574 }}" href="#{{ post_id_1693649612738133574 }}"> {{ post.title }}
 								</a>
 							</li>
 
@@ -60,6 +60,6 @@
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign the_post_for_the_index_1693649612738133574 = null -%}
 {%- assign post_id_1693649612738133574 = null -%}
-{%- assign color_background_1693649612738133574 = null -%}
+{%- assign background_color_1693649612738133574 = null -%}
 {%- comment -%} {%- endcomment -%}
 

@@ -1,5 +1,5 @@
 {%- assign post_content_1691010490420939832 = null -%}
-{%- assign post_no_color_background_1691010490420939832 = include.from_post.no_color_background -%}
+{%- assign post_no_background_color_1691010490420939832 = include.from_post.no_background_color -%}
 {%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
 {%- assign post_date_of_modification_1691010490420939832 = include.from_post.date_of_modification -%}
 {%- assign post_title_1691010490420939832 = include.from_post.title -%}
@@ -33,9 +33,9 @@
 
 {%- endif -%}
 
-{%- comment -%} dealing with empty string : no_color_background {%- endcomment -%}
-{%- if post_no_color_background_1691010490420939832 == "" -%}
-	{%- assign post_no_color_background_1691010490420939832 = null -%}
+{%- comment -%} dealing with empty string : no_background_color {%- endcomment -%}
+{%- if post_no_background_color_1691010490420939832 == "" -%}
+	{%- assign post_no_background_color_1691010490420939832 = null -%}
 {%- endif -%}
 
 {%- comment -%} dealing with empty string : date_of_creation {%- endcomment -%}
@@ -53,18 +53,18 @@
 	{%- assign post_title_1691010490420939832 = null -%}
 {%- endif -%}
 
-{%- comment -%} generating post_no_color_background_1691010490420939832 {%- endcomment -%}
+{%- comment -%} generating post_no_background_color_1691010490420939832 {%- endcomment -%}
 {%- comment -%} option {%- endcomment -%}
-{%- if post_no_color_background_1691010490420939832 -%}
+{%- if post_no_background_color_1691010490420939832 -%}
 
 	{%- comment -%} preventing random behavior{%- endcomment -%}
-	{%- assign post_color_background_1691010490420939832 = null -%}
+	{%- assign post_background_color_1691010490420939832 = null -%}
 
 {%- else -%}
 
-	{%- comment -%} generating post_color_background_1691010490420939832 {%- endcomment -%}
-	{%- include as_string_the_css_class_for_the_color_background_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
-	{%- assign post_color_background_1691010490420939832 = return -%}
+	{%- comment -%} generating post_background_color_1691010490420939832 {%- endcomment -%}
+	{%- include as_string_the_css_class_for_the_background_color_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+	{%- assign post_background_color_1691010490420939832 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -153,7 +153,7 @@
 {%- capture button_top_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_top" href="{{ tag_url_1691010490420939832 }}" role="button">
+	<a class="col button button_top_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
 	Top
 		{%- comment -%}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{%- endcomment -%}
 	</a>
@@ -164,7 +164,7 @@
 {%- capture button_bottom_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_bottom" href="{{ tag_url_1691010490420939832 }}" role="button">
+	<a class="col button button_bottom_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
 		Bottom
 		{%- comment -%}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{%- endcomment -%}
 	</a>
@@ -174,7 +174,7 @@
 {%- comment -%} home button {%- endcomment -%}
 {%- capture button_home_1691010490420939832 -%}
 
-	<a class="col button color_background_button_home" href="{{ '/' | relative_url }}">
+	<a class="col button button_home_background_color" href="{{ '/' | relative_url }}">
 	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
 		Home
 	</a>
@@ -185,9 +185,9 @@
 {%- capture button_id_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-	<a class="col button color_background_button_open {{ post_color_background_1691010490420939832 }}"
-		{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
-		href="{{ tag_url_1691010490420939832 }}"> Open
+	<a class="col button button_open_background_color"
+			{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
+		 href="{{ tag_url_1691010490420939832 }}"> Open
 	</a>
 
 {%- endcapture -%}
@@ -251,21 +251,21 @@
 		{%- comment -%} buttom `#posts` {%- endcomment -%}
 		{%- capture button_posts_1691010490420939832 -%}
 
-			{%- comment -%} color_background {%- endcomment -%}
-			{%- include as_string_the_css_class_for_the_color_background_from_tag.liquid from_tag="#posts" -%}
-			{%- assign color_background = return -%}
+			{%- comment -%} background_color {%- endcomment -%}
+			{%- include as_string_the_css_class_for_the_background_color_from_tag.liquid from_tag="#posts" -%}
+			{%- assign background_color = return -%}
 			{%- assign return = null -%}
 			{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 			{%- comment -%} the address doesn't exist go to posts {%- endcomment -%}
 			{%- if page.title == "#tags" -%}
-				<a class="col button {{ color_background }}" href="{{ '/tag/posts' | relative_url }}">
+				<a class="col button {{ background_color }}" href="{{ '/tag/posts' | relative_url }}">
 				#posts
 				</a>
 
 			{%- else -%}
-				{%- comment -%} <a class="col button {{ color_background }}" {%- endcomment -%}
-				<a class="col button color_background_button_home"
+				{%- comment -%} <a class="col button {{ background_color }}" {%- endcomment -%}
+				<a class="col button button_home_background_color"
 					 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
 				Back
 				</a>
@@ -376,7 +376,7 @@
 		{{ button_tags_1691010490420939832 }}
 
 		{%- comment -%} other buttons {%- endcomment -%}
-	 	{{ other_buttons_1691010490420939832 }}
+		{{ other_buttons_1691010490420939832 }}
 
 	</div>
 
@@ -386,7 +386,7 @@
 {%- comment -%} page HTML {%- endcomment -%}
 {%- capture return -%}
 
-	<article class="post {{ post_color_background_1691010490420939832 }}" itemscope itemtype="http://schema.org/BlogPosting">
+	<article class="post {{ post_background_color_1691010490420939832 }}" itemscope itemtype="http://schema.org/BlogPosting">
 
 		{{ post_title_1691010490420939832 }}
 
@@ -417,7 +417,7 @@
 
 {%- comment -%} resetting {%- endcomment -%}
 {%- assign post_content_1691010490420939832 = null -%}
-{%- assign post_no_color_background_1691010490420939832 = null -%}
+{%- assign post_no_background_color_1691010490420939832 = null -%}
 {%- assign post_date_of_creation_1691010490420939832 = null -%}
 {%- assign post_date_of_modification_1691010490420939832 = null -%}
 {%- assign post_title_1691010490420939832 = null -%}
@@ -434,5 +434,5 @@
 {%- assign tag_word_1691010490420939832 = null -%}
 {%- assign _PAGE_TITLE_1691010490420939832 = null -%}
 {%- assign button_posts_1691010490420939832 = null -%}
-{%- assign color_background = null -%}
+{%- assign background_color = null -%}
 {%- assign machine_date_1691010490420939832 = null -%}
