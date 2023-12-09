@@ -1,31 +1,27 @@
-///////////////////// responsive tweaks /////////////////////
+@import setup
 
-@media screen and (max-width: 576px)
+@media screen and (max-width: $responsive_screen_width)
 
 	#timeline_index
 
 		position: relative
-		width: 115%
-		padding-top: 1%
-		// mitigating the scroll ending cut
-		padding-bottom: 20%
-
+		width: $responsive_screen_timeline_index_width
+		padding-top: $responsive_screen_timeline_index_padding_top
+		padding-bottom: $responsive_screen_timeline_index_padding_bottom
 
 	.timeline
 
-		padding: 0
+		padding: $responsive_screen_timeline_padding
 
 		.posts
 
-			margin-left: 10%
-
+			margin-left: $responsive_screen_timeline_posts_margin_left
 
 		.post
 
-			margin-bottom: 2vh
-
+			margin-bottom: $responsive_screen_timeline_post_margin_bottom
 
 		.page-heading
 
-			z-index: 1
+			z-index: $responsive_screen_timeline_page_heading_z_index
 

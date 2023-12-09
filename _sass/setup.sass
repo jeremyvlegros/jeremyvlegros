@@ -1,0 +1,396 @@
+// @main
+
+$main_margin: 0
+$main_padding: 0
+$main_font_size: 1.01em
+$main_height: 2
+
+
+// @main @colors
+
+$background_color: #B5ABAAFF
+
+
+// @buttons
+
+$button_shadow_offset_x: 7px
+$button_shadow_offset_y: 7px
+$button_shadow_blurriness: 0px
+$button_border_radius: 10px
+$button_border_width: 2px
+$button_width: 2px
+$button_height: inherit
+$button_width: inherit
+$button_padding: 10px
+$button_margin: 5px
+$button_transform_scale: scale(0.97)
+$button_transition: all .2s ease-in-out
+$button_border_width_over: 1px
+$button_text_decoration: none !important
+
+// @buttons @colors
+$button_default_color: #111
+$button_home_color: $button_default_color
+$button_top_color: $button_default_color
+$button_bottom_color: $button_default_color
+$button_open_color: $button_default_color
+$button_shadow_color: black
+$button_background_color: rgba(0, 0, 0, .5)
+$button_border_color: black
+$button_text_color: white
+$button_font_weight: bolder
+$button_font_size: smaller
+$button_box_shadow : $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color !important
+
+// @buttons @hover
+$button_border_hover : $button_border_width_over solid $button_border_color !important
+$button_box_shadow_hover : none !important
+$button_text_color_hover : $button_text_color
+
+// @post
+
+$post_text_color: #FFF
+$post_title_text_color: #000
+$post_header_background_color: #F3F1F1FF
+$post_title_background_color: hsla(0, 0%, 10%, 0.4)
+$post_background_color: #222
+$post_shadow_color: #111
+
+// @post @button
+
+$post_button_background_color: rgba(255, 255, 255, .3)
+$post_button_text_color: #FFF
+
+// @post @margin
+
+$post_margin_top: 20px
+$post_margin_right: 30px
+$post_margin_bottom: 50px
+$post_margin_left: 0px
+
+
+// @post @border
+
+$post_border_radius: 18px
+$post_border_thickness: 3px
+$post_border_style: solid
+$post_border_opacity_h2_color: 0.7
+$post_border_opacity_h3_color: 0.6
+$post_border_opacity_h4_color: 0.5
+$post_border_opacity_h5_color: 0.4
+$post_border_opacity_h6_color: 0.3
+
+
+// @post @h1
+
+$post_h1_border_style: solid
+$post_h1_border_width: 2px
+$post_h1_font_size: 2em
+$post_h1_align: center
+$post_h1_font_weight: bold
+$post_h1_font_variant_caps: all-small-caps
+$post_h1_padding: $button_padding
+
+// @post @content
+
+$post_content_padding_top: 5%
+$post_content_padding_bottom: $post_content_padding_top
+$post_content_padding_left: 10%
+$post_content_padding_right: $post_content_padding_left
+
+// @post @content @border-radius
+
+$post_content_border_radius_top_left: 0
+$post_content_border_radius_top_right: $post_content_border_radius_top_left
+$post_content_border_radius_bottom_right: $post_content_border_radius_top_left
+$post_content_border_radius_bottom_left: $post_content_border_radius_top_left
+
+// @post @content @margin
+
+$post_content_margin_top: 1%
+$post_content_margin_bottom: $post_content_margin_top
+
+// @post @content @ul @unordered-list
+
+$post_content_unordered_list_margin_top: 1%
+$post_content_unordered_list_margin_bottom: $post_content_unordered_list_margin_top
+
+
+// @post @content @list @li
+
+$post_content_list_margin_top: 2%
+$post_content_list_margin_left: 7%
+$post_content_list_padding: 10px
+$post_content_list_background_color: rgba(0, 0, 0, 8%)
+$post_content_list_style: square
+$post_content_list_border_radius: $button_border_radius
+
+// @post @content @paragraph @p
+
+$post_content_paragraph_background_color: rgba(0, 0, 0, 8%)
+$post_content_paragraph_padding: 10px
+$post_content_paragraph_margin_bottom: 2%
+$post_content_paragraph_border_radius: $button_border_radius
+// not sure if I can keep that
+$post_content_paragraph_first_letter_font_size: $main_font_size
+
+
+// @post @content @horizontal @rule @hr
+
+$post_content_horizontal_rule_margin_top: 2%
+$post_content_horizontal_rule_margin_bottom: $post_content_horizontal_rule_margin_top
+
+// @post @content @date
+
+$post_content_date_font_style: italic
+
+// @post @footer
+
+$post_footer_border_radius: calc($post_border_radius - $post_border_thickness)
+$post_footer_background_color: rgba(0, 0, 0, 75%)
+
+$post_footer_margin: 0
+$post_footer_padding_top: 0
+$post_footer_padding_right: 0
+$post_footer_padding_left: 0
+$post_footer_padding_bottom: 20px
+
+$post_footer_border_style: solid
+$post_footer_border_radius_top_left: 0
+$post_footer_border_radius_top_right: 0
+$post_footer_border_radius_bottom_right: $post_footer_border_radius
+$post_footer_border_radius_bottom_left: $post_footer_border_radius_bottom_right
+
+$post_footer_height: 10%
+$post_footer_text_color: white
+
+// @post @footer @tags
+
+$post_footer_tags_margin_left: 10px
+$post_footer_tags_margin_right: $post_footer_tags_margin_left
+$post_footer_tags_margin_bottom: $post_footer_tags_margin_left
+
+
+// @timeline @margin
+
+$timeline_margin_top: 30px
+$timeline_margin_left: 0px
+$timeline_margin_right: 0px
+$timeline_margin_bottom: 0px
+
+// @timeline @padding
+
+$timeline_padding_top: 0px
+$timeline_padding_left: 0px
+$timeline_padding_right: 0px
+$timeline_padding_bottom: 0px
+
+// @timeline @page_heading
+$timeline_page_heading_font_weight: bolder
+$timeline_page_heading_font_variant_caps: all-small-caps
+$timeline_page_heading_font_size: 30px
+$timeline_page_heading_text_color: black
+$timeline_page_heading_position_left: 5px
+$timeline_page_heading_position_top: 1%
+$timeline_page_heading_writing_mode: vertical-lr
+$timeline_page_heading_text_orientation: upright
+$timeline_page_heading_text_decoration_thickness: 3px
+$timeline_page_heading_border_width: 2px
+$timeline_page_heading_border_style: solid
+$timeline_page_heading_border_color: $post_shadow_color
+$timeline_page_heading_z_index: -1
+$timeline_page_heading_height: 100%
+
+// @timeline @page
+$timeline_page_padding: 0
+
+// @timeline @list
+$timeline_list_style: none
+
+// @timeline @posts
+
+$timeline_posts_margin_left: 10px
+$timeline_posts_margin_right: 4%
+$timeline_posts_padding_left: 0
+
+// spacing between posts
+$timeline_posts_post_margin: 0 0 20vh
+$timeline_posts_post_padding_left: 0
+
+// @timeline_index
+
+$timeline_index_position_left: 0px
+$timeline_index_margin_top: -30px
+$timeline_index_margin_bottom: 30px
+$timeline_index_padding: 0
+$timeline_index_z_index: 4
+$timeline_index_height: 99%
+
+$timeline_index_background_color: hsla(9, 0%, 0%, 0.5)
+$timeline_index_text_color: #FFF
+
+// @timeline_index @content @unordered
+$timeline_index_content_unordered_list_padding_left: 50px
+
+// @timeline_index @content @list
+$timeline_index_content_list_margin: 8px 10px 8px 0
+$timeline_index_content_list_padding: 3px
+
+// @timeline_index @content @link
+$timeline_index_content_link_text_color: $button_text_color
+$timeline_index_content_link_padding: $button_padding
+$timeline_index_content_link_margin_right: 70px
+$timeline_index_content_link_text_decoration: $button_text_decoration
+$timeline_index_content_link_transition: $button_transition
+$timeline_index_content_link_width: 100%
+$timeline_index_content_link_border_radius: $button_border_radius
+$timeline_index_content_link_border_width: $button_border_width
+$timeline_index_content_link_border_color: $button_border_color
+$timeline_index_content_link_font_weight: $button_font_weight
+$timeline_index_content_link_box_shadow: $button_box_shadow
+$timeline_index_content_link_border_hover: $button_border_hover
+$timeline_index_content_link_transform_scale:  $button_transform_scale
+
+// @code @colors
+
+$code_dracula_background_color: #282a36
+$code_background_color: $code_dracula_background_color
+$code_backticks_text_color: #FFF
+$code_border_color: rgba(0, 0, 0, .5)
+
+// @responsive @screen
+
+$responsive_screen_width : 576px
+
+// @responsive @screen @timeline_index
+
+$responsive_screen_timeline_index_width : 115%
+$responsive_screen_timeline_index_padding_top : 1%
+// mitigating the scroll ending cut
+$responsive_screen_timeline_index_padding_bottom : 20%
+
+// @responsive @screen @timeline
+
+$responsive_screen_timeline_padding :  0
+$responsive_screen_timeline_posts_margin_left : 10%
+$responsive_screen_timeline_post_margin_bottom : 2vh
+$responsive_screen_timeline_page_heading_z_index : 1
+
+
+// @days @colors
+$day_01_color: #863C2DFF
+$day_02_color: #86592DFF
+$day_03_color: #86682DFF
+$day_04_color: #86862DFF
+$day_05_color: #68862DFF
+$day_06_color: #4A862DFF
+$day_07_color: #367D3CFF
+$day_08_color: #2D8652FF
+$day_09_color: #367D6BFF
+$day_10_color: #24868FFF
+$day_11_color: #2D6886FF
+$day_12_color: #2D4A86FF
+$day_13_color: #2D3C86FF
+$day_14_color: #3C2D86FF
+$day_15_color: #59367DFF
+$day_16_color: #71367DFF
+$day_17_color: #7D367DFF
+$day_18_color: #7D3665FF
+$day_19_color: #862D4AFF
+$day_20_color: #74473EFF
+$day_21_color: #74593EFF
+$day_22_color: #74623EFF
+$day_23_color: #74743EFF
+$day_24_color: #62743EFF
+$day_25_color: #50743EFF
+$day_26_color: #3E743EFF
+$day_27_color: #3E7450FF
+$day_28_color: #3E7462FF
+$day_29_color: #3E7474FF
+$day_30_color: #3E6274FF
+$day_31_color: #3E5074FF
+
+// @tag @colors
+$tag_tumblr_color: #001833FF
+$tag_twitter_color: #1CA0F2FF
+$tag_linkedin_color: #0074B3FF
+$tag_reddit_color: #FA4300FF
+$tag_nexus_mods_color: #D98F3FFF
+$tag_github_color: #282C34FF
+$tag_twitch_color: #9147FFFF
+$tag_steam_color: #171A21FF
+$tag_x_corp_color: #051620
+$tag_php_color: #7377AD
+$tag_jekyll_color: #3E1F1F
+$tag_link_tree_color: #254F1A
+$tag_intellij_color: #035DDF
+$tag_liquid_color: #3399CC
+$tag_css_color: #2D53E5
+$tag_tan_color: #D2BB7A
+$tag_mild_violet_color: #214997
+$tag_light_nougat_color: #DFBC96
+$tag_nougat_color: #C9874D
+$tag_mild_nougat_color: #6C3F12
+$tag_sand_red_color: #987564
+$tag_dark_tan_color: #87754D
+$tag_dark_orange_color: #864824
+$tag_mild_brown_color: #5A452E
+$tag_brown_color: #332418
+$tag_dark_brown_color: #262422
+$tag_dark_pink_color: #C62E70
+$tag_magenta_color: #6E0B33
+$tag_coral_color: #F87851
+$tag_lavender_color: #9789BF
+$tag_blue_violet_color: #124196
+$tag_light_purple_color: #771B61
+$tag_purple_color: #330D42
+$tag_dark_purple_color: #1B1E5F
+$tag_lime_color: #86A809
+$tag_olive_color: #67651E
+$tag_sand_green_color: #477250
+$tag_turquoise_color: #02657A
+$tag_red_color: #AF1512
+$tag_dark_red_color: #3F1415
+$tag_starfield_color: #C82337
+$tag_star_citizen_color: #141921
+$tag_pycharm_color: #24c181
+$tag_minecraft_color: #679C3C
+$tag_python_color: #3E75A8
+$tag_doctest_color: #3E75A8
+$tag_youtube_color: #ba0000
+$tag_mojang_color: #D10F1C
+$tag_unity_color: #848484
+$tag_star_engine_color: $tag_star_citizen_color
+$tag_tags_color: #937d4b
+$tag_posts_color: #524c9f
+$tag_opinions_color: #935EE9
+$tag_ide_color: #3C6160
+$tag_about_color: #9CB70A
+$tag_avatars_color: #51558E
+$tag_configurations_color: #958c21
+$tag_languages_color: #ca312b
+$tag_dream_jobs_color: #C57C2F
+$tag_highlighting_color: #6779A5
+$tag_me_color: #997D73
+$tag_mobs_color: #51558E
+$tag_modding_color: #1F0937
+$tag_readme_color: #AF6B96
+$tag_references_color: #B89C6C
+$tag_security_color: #ABB214
+$tag_status_color: #974a04
+$tag_syntax_color: #d48000
+$tag_videos_color: #0D5DEA
+$tag_video_games_color: #451A64
+$tag_votes_color: #665925
+$tag_website_color: #6d8f59
+$tag_monkey_type_color: #323437
+$tag_jeremyvlegros_color: #3D452D
+$tag_lists_color: #9527AB
+$tag_links_color: #6694FE
+$tag_informations_color: #008F84
+$tag_sass_color: #BF4080
+$tag_javascript_color: #c76122
+$tag_html_color: #E14B25
+$tag_csharp_color: #66007D
+$tag_computer_color: #7790A1
+$tag_markdown_color: #4C4C4C

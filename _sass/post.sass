@@ -1,12 +1,12 @@
-@import variables
+@import setup
 
 .post
 
-	margin: 20px 30px 50px
+	// can't use `overflow-inline: scroll` it overwrites the bottom border when Firefox `always show scrollbar` is set
+	margin: $post_margin_top $post_margin_right $post_margin_bottom $post_margin_left
 	border-radius: $post_border_radius
 	background-color: $post_background_color
-	border: $post_border_thickness solid $post_shadow_color
-	//overflow-inline: scroll  // can't use it, it overwrites the bottom border when Firefox `always show scrollbar` is set
+	border: $post_border_thickness $post_border_style $post_shadow_color
 
 	.version
 
@@ -19,85 +19,74 @@
 		background-color: $post_header_background_color
 		display: block
 		border-radius: $post_border_radius $post_border_radius 0 0
-		border-bottom: 2px solid $post_shadow_color
+		border-bottom: $post_h1_border_width $post_h1_border_style $post_shadow_color
 		color: $post_title_text_color
-		text-align: center
-		font-size: 2em
-		font-weight: bold
-		font-variant-caps: all-small-caps
-		padding: 2%
-
-	.post_title
-
-		color: $post_title_text_color
-		text-align: center
-		font-size: 2em
-		font-weight: bold
-		font-variant-caps: all-small-caps
-		padding: 2%
+		text-align: $post_h1_align
+		font-size: $post_h1_font_size
+		font-weight: $post_h1_font_weight
+		font-variant-caps: $post_h1_font_variant_caps
+		padding: $post_h1_padding
 
 	.post_content
 
-		padding: 5% 10%
+		padding: $post_content_padding_top $post_content_padding_right $post_content_padding_bottom $post_content_padding_left
 		color: $post_text_color
-		border-radius: 0 0 $post_border_radius
+		border-radius: $post_content_border_radius_top_left $post_content_border_radius_top_right $post_content_border_radius_bottom_right $post_content_border_radius_bottom_left
 
 		ul
 
-			margin-top: 1%
-			margin-bottom: 1%
-
-		p, li
-
-			background-color: rgba(0, 0, 0, 8%)
-			padding: 10px
-			border-radius: 10px
+			margin-top: $post_content_unordered_list_margin_top
+			margin-bottom: $post_content_unordered_list_margin_bottom
 
 		p
 
-			margin-bottom: 2%
+			background-color: $post_content_paragraph_background_color
+			padding: $post_content_paragraph_padding
+			border-radius: $post_content_paragraph_border_radius
+			margin-bottom: $post_content_paragraph_margin_bottom
 
 			&:first-letter
 
-				font-size: 1.1em
-
+				font-size: $post_content_paragraph_first_letter_font_size
 
 		li
 
-			margin-top: 2%
-			margin-left: 7%
-			list-style: square!important
+			background-color: $post_content_list_background_color
+			padding: $post_content_list_padding
+			border-radius: $post_content_list_border_radius
+			margin-top: $post_content_list_margin_top
+			margin-left: $post_content_list_margin_left
+			list-style: $post_content_list_style !important
 
 		hr
 
-			margin-bottom: 3%
-			margin-top: 3%
+			margin-top: $post_content_horizontal_rule_margin_top
+			margin-bottom: $post_content_horizontal_rule_margin_bottom
 
 		.date
 
-			font-style: italic
+			font-style: $post_content_date_font_style
 
 	.footer
 
 		display: flex
 		align-content: space-around
-		background-color: rgba(0, 0, 0, 75%)
-		margin: 0
-		padding-top: 0
-		padding-bottom: 20px
-		border-radius: 0 0 $post_footer_border_radius $post_footer_border_radius
-		border-top: $post_border_thickness $post_shadow_color solid
+		background-color: $post_footer_background_color
+		margin: $post_footer_margin
+		padding: $post_footer_padding_top $post_footer_padding_right $post_footer_padding_bottom $post_footer_padding_left
+		border-radius: $post_footer_border_radius_top_left $post_footer_border_radius_top_right $post_footer_border_radius_bottom_right $post_footer_border_radius_bottom_left
+		border-top: $post_border_thickness $post_shadow_color $post_footer_border_style
 
-		color: white
-		height: 10%
+		color: $post_footer_text_color
+		height: $post_footer_height
 
 		.tags
 
 			display: flex
 			align-items: center
-			margin-left: 10px
-			margin-right: 10px
-			margin-bottom: 10px
+			margin-left: $post_footer_tags_margin_left
+			margin-right: $post_footer_tags_margin_right
+			margin-bottom: $post_footer_tags_margin_bottom
 
 
 	// For `Firefox` reader and no `CSS` view

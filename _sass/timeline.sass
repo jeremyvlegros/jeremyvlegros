@@ -1,114 +1,45 @@
-@import variables
+@import setup
 
 
 .timeline
 
-	margin-top: 30px
-	padding: 0
-
+	margin: $timeline_margin_top $timeline_margin_right $timeline_margin_bottom $timeline_margin_left
+	padding: $timeline_padding_top $timeline_padding_right $timeline_padding_bottom $timeline_padding_left
 
 	.page-heading
 
-		font-weight: bolder
-		font-variant-caps: all-small-caps
+		font-weight: $timeline_page_heading_font_weight
+		font-variant-caps: $timeline_page_heading_font_variant_caps
 		display: flex
-		font-size: 30px
-		color: black
+		font-size: $timeline_page_heading_font_size
+		color: $timeline_page_heading_text_color
 		position: fixed
-		left: 5px
-		top: 1%
-		writing-mode: vertical-lr
-		text-orientation: upright
-		text-decoration-thickness: 3px
-		border: 2px none $post_shadow_color
-		border-left-style: solid
-		z-index: -1
-		height: 100%
+		left: $timeline_page_heading_position_left
+		top: $timeline_page_heading_position_top
+		writing-mode: $timeline_page_heading_writing_mode
+		text-orientation: $timeline_page_heading_text_orientation
+		text-decoration-thickness: $timeline_page_heading_text_decoration_thickness
+		border: $timeline_page_heading_border_width none $timeline_page_heading_border_color
+		border-left-style: $timeline_page_heading_border_style
+		z-index: $timeline_page_heading_z_index
+		height: $timeline_page_heading_height
 
 
 	.page
 
-		padding: 0
+		padding: $timeline_page_padding
 
 	li
 
-		list-style: none
+		list-style: $timeline_list_style
 
 	.posts
 
-		margin-left: 10px
-		margin-right: 4%
-		padding-left: 0
+		margin-left: $timeline_posts_margin_left
+		margin-right: $timeline_posts_margin_right
+		padding-left: $timeline_posts_padding_left
 
 		.post
 
-			// spacing between posts
-			margin: 0 0 20vh
-			padding-left: 0
-
-
-////////////////////////////INDEX////////////////////////////
-
-//noinspection CssUnknownProperty
-#timeline_index
-
-	left: 0
-	margin-top: -30px
-	margin-bottom: 30px
-
-	color: $timeline_index_text_color
-	padding: 0
-	position: fixed
-	width: inherit
-
-	// scrolling
-	overflow-y: scroll
-	height: 99%
-
-	////  firefox
-	scrollbar-width: none
-	z-index: 4
-
-
-	&::-webkit-scrollbar
-
-		//untested
-		display: none
-
-
-	.timeline_index_content
-
-		//margin-left: 5%
-		//padding-bottom : 10%
-
-		ul
-
-			padding-left: 50px
-
-
-		li
-
-			margin: 8px 10px 8px 0
-			display: flex
-			padding: 3px
-
-
-		// buttons
-		a
-
-			color: white
-			padding: 15px
-			margin-right: 70px
-			text-decoration: none
-			transition: all .2s ease-in-out
-			width: 100%
-			border-radius: 15px
-			border: 2px solid $post_shadow_color
-			box-shadow: 7px 7px 0 1px $post_shadow_color
-			font-weight: bolder
-
-
-			&:hover
-
-				transform: scale(.97) !important
-				box-shadow: 1px 1px 1px 1px $post_shadow_color
+			margin: $timeline_posts_post_margin
+			padding-left: $timeline_posts_post_padding_left

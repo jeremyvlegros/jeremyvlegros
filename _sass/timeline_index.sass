@@ -1,0 +1,62 @@
+@import setup
+
+//noinspection CssUnknownProperty
+#timeline_index
+
+	left: $timeline_index_position_left
+	margin-top: $timeline_index_margin_top
+	margin-bottom: $timeline_index_margin_bottom
+
+	color: $timeline_index_text_color
+	padding: $timeline_index_padding
+	position: fixed
+	width: inherit
+
+	// scrolling
+	overflow-y: scroll
+	height: $timeline_index_height
+
+	// scrolling > firefox
+	scrollbar-width: none
+	z-index: $timeline_index_z_index
+
+
+	&::-webkit-scrollbar
+
+		//untested
+		display: none
+
+
+	.timeline_index_content
+
+		ul
+
+			padding-left: $timeline_index_content_unordered_list_padding_left
+
+
+		li
+
+			margin: $timeline_index_content_list_margin
+			display: flex
+			padding: $timeline_index_content_list_padding
+
+
+		// buttons
+		a
+
+			color: $timeline_index_content_link_text_color
+			padding: $timeline_index_content_link_padding
+			margin-right: $timeline_index_content_link_margin_right
+			text-decoration: $timeline_index_content_link_text_decoration
+			transition: $timeline_index_content_link_transition
+			width: $timeline_index_content_link_width
+			border-radius: $timeline_index_content_link_border_radius
+			border: $timeline_index_content_link_border_width solid $timeline_index_content_link_border_color
+			box-shadow: $timeline_index_content_link_box_shadow
+			font-weight: $timeline_index_content_link_font_weight
+
+
+			&:hover
+
+				transform: $timeline_index_content_link_transform_scale
+				box-shadow: $timeline_index_content_link_border_hover
