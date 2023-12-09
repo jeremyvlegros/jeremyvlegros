@@ -4,16 +4,9 @@
 
 	margin: 20px 30px 50px
 	border-radius: $post_border_radius
-	//box-shadow: 2px 1px 0 1px $post_shadow_color
-	// old setup serving as fallback color
 	background-color: $post_background_color
 	border: $post_border_thickness solid $post_shadow_color
 	//overflow-inline: scroll  // can't use it, it overwrites the bottom border when Firefox `always show scrollbar` is set
-
-	.button
-
-		color: $post_button_text_color
-		background-color: $post_button_background_color
 
 	.version
 
@@ -90,35 +83,21 @@
 		align-content: space-around
 		background-color: rgba(0, 0, 0, 75%)
 		margin: 0
-		//padding :20px
 		padding-top: 0
 		padding-bottom: 20px
 		border-radius: 0 0 $post_footer_border_radius $post_footer_border_radius
 		border-top: $post_border_thickness $post_shadow_color solid
-		//z-index: 1
+
 		color: white
 		height: 10%
 
 		.tags
 
-			//margin-top  : 10px
-			//background-color: black
 			display: flex
 			align-items: center
 			margin-left: 10px
 			margin-right: 10px
 			margin-bottom: 10px
-
-			a
-
-				text-decoration: none
-
-
-			.button
-
-				//border-radius : 10px
-				padding: 2px
-				margin-left: 3px
 
 
 	// For `Firefox` reader and no `CSS` view
