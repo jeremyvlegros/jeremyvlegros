@@ -18,5 +18,4 @@ I don't know if __`Star Citizen`__ will look that good, but if it does, I can im
 
 If this doesn't wake up players I don't know what will, this is the kind of technology you would pay 70€ for.
 
-[The post reference]({{"/tag/posts#1698253192118430040" | relative_url}})
-
+<a class="button" href="{{"/tag/posts#1698253192118430040" | relative_url}}"> The post reference </a>
