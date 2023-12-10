@@ -3,13 +3,11 @@
 $main_margin: 0
 $main_padding: 0
 $main_font_size: 1.01em
-$main_height: 2
-
-
-// @main @colors
+$main_line_height : 2
 
 $background_color: #B5ABAAFF
-
+$border_width : 2px
+$spacing : 15px
 
 // @buttons
 
@@ -17,7 +15,7 @@ $button_shadow_offset_x: 7px
 $button_shadow_offset_y: 7px
 $button_shadow_blurriness: 0px
 $button_border_radius: 10px
-$button_border_width: 2px
+$button_border_width: $border_width
 $button_width: 2px
 $button_height: inherit
 $button_width: inherit
@@ -25,8 +23,9 @@ $button_padding: 10px
 $button_margin: 5px
 $button_transform_scale: scale(0.97)
 $button_transition: all .1s ease-in-out
-$button_border_width_over: 1px
 $button_text_decoration: none
+
+$button_border_width_active: 1px
 
 // @buttons @colors
 $button_default_color: #111
@@ -43,7 +42,7 @@ $button_font_size: smaller
 $button_box_shadow : $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color
 
 // @buttons @active
-$button_border_active : $button_border_width_over solid $button_border_color
+$button_border_active : $button_border_width_active solid $button_border_color
 $button_box_shadow_active : none
 $button_text_color_active : $button_text_color
 
@@ -72,7 +71,7 @@ $post_margin_left: 50px
 // @post @border
 
 $post_border_radius: 18px
-$post_border_thickness: 3px
+$post_border_width: $border_width
 $post_border_style: solid
 $post_border_opacity_h2_color: 0.7
 $post_border_opacity_h3_color: 0.6
@@ -84,7 +83,7 @@ $post_border_opacity_h6_color: 0.3
 // @post @h1
 
 $post_h1_border_style: solid
-$post_h1_border_width: 2px
+$post_h1_border_width: $border_width
 $post_h1_font_size: 2em
 $post_h1_align: center
 $post_h1_font_weight: bold
@@ -93,10 +92,16 @@ $post_h1_padding: $button_padding
 
 // @post @content
 
-$post_content_padding_top: 5%
-$post_content_padding_bottom: $post_content_padding_top
-$post_content_padding_left: 10%
-$post_content_padding_right: $post_content_padding_left
+$post_content_padding_top: $spacing
+$post_content_padding_bottom: $spacing
+$post_content_padding_left: $spacing
+$post_content_padding_right: $spacing
+
+// @post @content @margin
+
+$post_content_margin_top: $spacing
+$post_content_margin_bottom: $spacing
+
 
 // @post @content @border-radius
 
@@ -105,22 +110,18 @@ $post_content_border_radius_top_right: $post_content_border_radius_top_left
 $post_content_border_radius_bottom_right: $post_content_border_radius_top_left
 $post_content_border_radius_bottom_left: $post_content_border_radius_top_left
 
-// @post @content @margin
-
-$post_content_margin_top: 1%
-$post_content_margin_bottom: $post_content_margin_top
 
 // @post @content @ul @unordered-list
 
-$post_content_unordered_list_margin_top: 1%
-$post_content_unordered_list_margin_bottom: $post_content_unordered_list_margin_top
+$post_content_unordered_list_margin_top: $spacing
+$post_content_unordered_list_margin_bottom: $spacing
 
 
 // @post @content @list @li
 
-$post_content_list_margin_top: 2%
-$post_content_list_margin_left: 7%
-$post_content_list_padding: 10px
+$post_content_list_margin_top: $spacing
+$post_content_list_margin_left: $spacing
+$post_content_list_padding: $spacing
 $post_content_list_background_color: rgba(0, 0, 0, 8%)
 $post_content_list_style: square
 $post_content_list_border_radius: $button_border_radius
@@ -128,8 +129,8 @@ $post_content_list_border_radius: $button_border_radius
 // @post @content @paragraph @p
 
 $post_content_paragraph_background_color: rgba(0, 0, 0, 8%)
-$post_content_paragraph_padding: 10px
-$post_content_paragraph_margin_bottom: 2%
+$post_content_paragraph_padding: $spacing
+$post_content_paragraph_margin_bottom: $spacing
 $post_content_paragraph_border_radius: $button_border_radius
 // not sure if I can keep that
 $post_content_paragraph_first_letter_font_size: $main_font_size
@@ -137,8 +138,8 @@ $post_content_paragraph_first_letter_font_size: $main_font_size
 
 // @post @content @horizontal @rule @hr
 
-$post_content_horizontal_rule_margin_top: 2%
-$post_content_horizontal_rule_margin_bottom: $post_content_horizontal_rule_margin_top
+$post_content_horizontal_rule_margin_top: $spacing
+$post_content_horizontal_rule_margin_bottom: $spacing
 
 // @post @content @date
 
@@ -146,14 +147,14 @@ $post_content_date_font_style: italic
 
 // @post @footer
 
-$post_footer_border_radius: calc($post_border_radius - $post_border_thickness)
+$post_footer_border_radius: calc($post_border_radius - $post_border_width)
 $post_footer_background_color: rgba(0, 0, 0, 75%)
 
 $post_footer_margin: 0
 $post_footer_padding_top: 0
 $post_footer_padding_right: 0
 $post_footer_padding_left: 0
-$post_footer_padding_bottom: 20px
+$post_footer_padding_bottom: $post_content_unordered_list_margin_top
 
 $post_footer_border_style: solid
 $post_footer_border_radius_top_left: 0
@@ -194,8 +195,8 @@ $timeline_page_heading_position_left: 5px
 $timeline_page_heading_position_top: 1%
 $timeline_page_heading_writing_mode: vertical-lr
 $timeline_page_heading_text_orientation: upright
-$timeline_page_heading_text_decoration_thickness: 3px
-$timeline_page_heading_border_width: 2px
+$timeline_page_heading_text_decoration_width: 3px
+$timeline_page_heading_border_width: $border_width
 $timeline_page_heading_border_style: solid
 $timeline_page_heading_border_color: $post_shadow_color
 $timeline_page_heading_z_index: -1
@@ -209,8 +210,8 @@ $timeline_list_style: none
 
 // @timeline @posts
 
-$timeline_posts_margin_left: 10px
-$timeline_posts_margin_right: 4%
+$timeline_posts_margin_left: $spacing
+$timeline_posts_margin_right: $spacing
 $timeline_posts_padding_left: 0
 
 // spacing between posts
