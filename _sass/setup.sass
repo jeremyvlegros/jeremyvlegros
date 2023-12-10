@@ -24,7 +24,7 @@ $button_width: inherit
 $button_padding: 10px
 $button_margin: 5px
 $button_transform_scale: scale(0.97)
-$button_transition: all .2s ease-in-out
+$button_transition: all .1s ease-in-out
 $button_border_width_over: 1px
 $button_text_decoration: none
 
@@ -42,10 +42,10 @@ $button_font_weight: bolder
 $button_font_size: smaller
 $button_box_shadow : $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color
 
-// @buttons @hover
-$button_border_hover : $button_border_width_over solid $button_border_color
-$button_box_shadow_hover : none
-$button_text_color_hover : $button_text_color
+// @buttons @active
+$button_border_active : $button_border_width_over solid $button_border_color
+$button_box_shadow_active : none
+$button_text_color_active : $button_text_color
 
 // @post
 
@@ -63,10 +63,10 @@ $post_button_text_color: #FFF
 
 // @post @margin
 
-$post_margin_top: 20px
-$post_margin_right: 30px
+$post_margin_top: 50px
+$post_margin_right: 50px
 $post_margin_bottom: 50px
-$post_margin_left: 0px
+$post_margin_left: 50px
 
 
 // @post @border
@@ -248,8 +248,10 @@ $timeline_index_content_link_border_width: $button_border_width
 $timeline_index_content_link_border_color: $button_border_color
 $timeline_index_content_link_font_weight: $button_font_weight
 $timeline_index_content_link_box_shadow: $button_box_shadow
-$timeline_index_content_link_border_hover: $button_border_hover
 $timeline_index_content_link_transform_scale:  $button_transform_scale
+
+$timeline_index_content_link_box_shadow_active : $button_box_shadow_active
+$timeline_index_content_link_border_active: $button_border_active
 
 // @code @colors
 
