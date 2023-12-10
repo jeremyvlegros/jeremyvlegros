@@ -1,3 +1,5 @@
+{%- include CONFIGURATION/ALL.liquid -%}
+
 {%- assign post_content_1691010490420939832 = null -%}
 {%- assign post_no_background_color_1691010490420939832 = include.from_post.no_background_color -%}
 {%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
@@ -154,8 +156,7 @@
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
 	<a class="col button button_top_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-	Top
-		{%- comment -%}href={{ tag_url_1691010490420939832 }}> ⇧&nbsp;Top</a>{%- endcomment -%}
+	{{ BUTTON_TOP }}
 	</a>
 
 {%- endcapture -%}
@@ -165,8 +166,7 @@
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
 	<a class="col button button_bottom_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-		Bottom
-		{%- comment -%}href="{{ tag_url_1691010490420939832 }}"> ⇩&nbsp;Bottom</a>{%- endcomment -%}
+		{{ BUTTON_BOTTOM }}
 	</a>
 
 {%- endcapture -%}
@@ -176,7 +176,7 @@
 
 	<a class="col button button_home_background_color" href="{{ '/' | relative_url }}">
 	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
-		Home
+		{{ BUTTON_HOME }}
 	</a>
 
 {%- endcapture -%}
@@ -187,7 +187,7 @@
 	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
 	<a class="col button button_open_background_color"
 			{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
-		 href="{{ tag_url_1691010490420939832 }}"> Open
+		 href="{{ tag_url_1691010490420939832 }}"> {{ BUTTON_POST }}
 	</a>
 
 {%- endcapture -%}
@@ -383,7 +383,8 @@
 {%- endcapture -%}
 
 
-{%- comment -%} page HTML {%- endcomment -%}
+{%- comment -%}////////////////////////////////////// page HTML //////////////////////////////////////{%- endcomment -%}
+
 {%- capture return -%}
 
 	<article class="post {{ post_background_color_1691010490420939832 }}" itemscope itemtype="http://schema.org/BlogPosting">
@@ -415,7 +416,7 @@
 
 {%- endcapture -%}
 
-{%- comment -%} resetting {%- endcomment -%}
+{%- comment -%}////////////////////////////////////// resetting //////////////////////////////////////{%- endcomment -%}
 {%- assign post_content_1691010490420939832 = null -%}
 {%- assign post_no_background_color_1691010490420939832 = null -%}
 {%- assign post_date_of_creation_1691010490420939832 = null -%}
