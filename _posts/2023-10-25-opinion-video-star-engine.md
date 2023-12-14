@@ -1,5 +1,6 @@
 ---
-title                : "Opinion : `Star Engine` `YouTube` video"
+title                : "`Star Engine` `YouTube` video"
+category             : opinion
 date_of_creation     : "#date 2023-10-25 21:18 1698254295589450229 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1698254295589450229"

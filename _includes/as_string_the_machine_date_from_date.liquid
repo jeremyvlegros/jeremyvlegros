@@ -6,13 +6,18 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%} as array {%- endcomment -%}
-{%- assign machine_date = post_date_of_creation_1691010490420939832 | split :" " -%}
+{%- if machine_date == null -%}
+	{% comment %} do nothing {% endcomment %}
+{%- else -%}
 
-{%- comment -%} keeping YYYY-MM-DD and time separated with a `T` for time {%- endcomment -%}
-{%- assign machine_date = "" | append : machine_date[1] | append : "T" | append : machine_date[2] -%}
-{%- assign machine_date = machine_date | append: "Z" -%}
+	{%- comment -%} as array {%- endcomment -%}
+	{%- assign machine_date = post_date_of_creation_1691010490420939832 | split: " " -%}
 
+	{%- comment -%} keeping YYYY-MM-DD and time separated with a `T` for time {%- endcomment -%}
+	{%- assign machine_date = "" | append: machine_date[1] | append: "T" | append: machine_date[2] -%}
+	{%- assign machine_date = machine_date | append: "Z" -%}
+
+{%- endif -%}
 {%- comment -%} return {%- endcomment -%}
 {%- assign return = machine_date -%}
 

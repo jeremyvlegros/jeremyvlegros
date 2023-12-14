@@ -1,5 +1,6 @@
 ---
-title                : "Status : I don't use `Twitter` as a blog anymore"
+title                : "I don't use `Twitter` as a blog anymore"
+category             : status
 date_of_creation     : "#date 2023-05-26 00:00 1685059200000000008 GMT"
 date_of_modification : "#date 2023-11-17 10:01 1700200864238711221 GMT"
 permalink            : /post/1685059200000000008

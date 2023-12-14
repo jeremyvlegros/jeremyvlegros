@@ -1,5 +1,6 @@
 ---
-title                : "Opinion : `X-corp` is doing an inconsistant rebranding"
+title                : "`X-corp` is doing an inconsistant rebranding"
+category             : opinion
 date_of_creation     : "#date 2023-08-01 12:57 1690880245921914512 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1690880245921914512

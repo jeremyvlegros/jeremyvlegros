@@ -1,5 +1,6 @@
 ---
-title                : "Status : I installed `Jekyll`"
+title                : "I installed `Jekyll`"
+category             : status
 date_of_creation     : "#date 2023-07-25 00:38 1690231131792213244 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1690231131792213244

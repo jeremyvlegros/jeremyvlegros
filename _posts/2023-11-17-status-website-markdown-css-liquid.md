@@ -1,5 +1,6 @@
 ---
-title                : "status : website `Markdown` × `CSS` × `Liquid`"
+title                : "website `Markdown` × `CSS` × `Liquid`"
+category             :  status
 date_of_creation     : "#date 2023-11-17 22:42 1700246548637560692 GMT"
 date_of_modification : ""
 permalink            : "/post/1700246548637560692"

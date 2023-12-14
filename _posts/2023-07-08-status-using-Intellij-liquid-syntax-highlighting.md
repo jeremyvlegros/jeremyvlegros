@@ -1,5 +1,6 @@
 ---
-title                : "Status : using `Intellij` `Liquid` syntax highlighting"
+title                : "using `Intellij` `Liquid` syntax highlighting"
+category             : status
 date_of_creation     : "#date 2023-07-08 14:03 1688810620122102232 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1688810620122102232

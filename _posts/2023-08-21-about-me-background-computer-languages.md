@@ -1,5 +1,6 @@
 ---
-title                : "About the computer languages I used"
+title                : "the computer languages I used"
+category             : about
 date_of_creation     : "#date 2023-08-21 17:13 1692623599154600247 GMT"
 date_of_modification : "#date 2023-11-17 23:34 1700249694890286700 GMT"
 permalink            : /post/1692623599154600247

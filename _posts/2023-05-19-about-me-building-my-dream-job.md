@@ -1,5 +1,6 @@
 ---
-title                : "About building my dream job"
+title                : "building my dream job"
+category             : about
 date_of_creation     : "#date 2023-05-19 00:00 1684454400000000000 GMT"
 date_of_modification : "#date 2023-11-17 23:12 1700248377528448288 GMT"
 permalink            : /post/1684454400000000000

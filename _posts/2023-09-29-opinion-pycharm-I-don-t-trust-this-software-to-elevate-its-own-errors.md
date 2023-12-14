@@ -1,5 +1,6 @@
 ---
-title                : "Opinion : I don't trust `Pycharm` to elevate its own errors"
+title                : "I don't trust `Pycharm` to elevate its own errors"
+category             : opinion
 date_of_creation     : "#date 2023-09-29 08:07 1695960451210113915 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1695960451210113915"

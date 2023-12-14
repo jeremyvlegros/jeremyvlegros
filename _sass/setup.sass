@@ -6,16 +6,20 @@ $main_font_size: 1.01em
 $main_line_height : 2
 
 $background_color: #B5ABAAFF
-$border_width : 2px
-$spacing : 28px
+$main_border_width : 2px
+$main_border_radius : 10px
+$main_border_color : #000
+//$main_spacing : 28px
+$main_spacing : 17px
 
 // @buttons
 
+$button_text_align : center
 $button_shadow_offset_x: 7px
 $button_shadow_offset_y: 7px
 $button_shadow_blurriness: 0px
-$button_border_radius: 10px
-$button_border_width: $border_width
+$button_border_radius: $main_border_radius
+$button_border_width: $main_border_width
 $button_width: 2px
 $button_height: inherit
 $button_width: inherit
@@ -35,10 +39,10 @@ $button_bottom_color: $button_default_color
 $button_open_color: $button_default_color
 $button_shadow_color: black
 $button_background_color: rgba(0, 0, 0, .5)
-$button_border_color: black
+$button_border_color: $main_border_color
 $button_text_color: white
 $button_font_weight: bolder
-$button_font_size: smaller
+$button_font_size: normal
 $button_box_shadow : $button_shadow_offset_x $button_shadow_offset_y $button_shadow_blurriness $button_shadow_color
 
 // @buttons @active
@@ -46,12 +50,18 @@ $button_border_active : $button_border_width_active solid $button_border_color
 $button_box_shadow_active : none
 $button_text_color_active : $button_text_color
 
+// @category
+
+$category_border_radius : 10px
+//$category_font_size : calc($main_font_size * 0.5) // erf
+$category_font_size : 0.5em
+$category_padding : 5px
+$category_margin : 0px
+$category_text_align : left
+
 // @post
 
 $post_text_color: #FFF
-$post_title_text_color: #000
-$post_header_background_color: #F3F1F1FF
-$post_title_background_color: hsla(0, 0%, 10%, 0.4)
 $post_background_color: #222
 $post_shadow_color: #111
 
@@ -67,12 +77,12 @@ $post_margin_right: 50px
 $post_margin_bottom: 50px
 $post_margin_left: 50px
 
-
 // @post @border
 
-$post_border_radius: 18px
-$post_border_width: $border_width
+$post_border_radius: $main_border_radius
+$post_border_width: $main_border_width
 $post_border_style: solid
+$post_border_color : $main_border_color
 $post_border_opacity_h2_color: 0.7
 $post_border_opacity_h3_color: 0.6
 $post_border_opacity_h4_color: 0.5
@@ -83,24 +93,31 @@ $post_border_opacity_h6_color: 0.3
 // @post @h1
 
 $post_h1_border_style: solid
-$post_h1_border_width: $border_width
+$post_h1_border_width: $main_border_width
 $post_h1_font_size: 2em
-$post_h1_align: center
-$post_h1_font_weight: bold
+//$post_h1_align: center
+$post_h1_align: left
+//$post_h1_font_weight: bold
+$post_h1_font_weight: normal
 $post_h1_font_variant_caps: all-small-caps
 $post_h1_padding: $button_padding
+$post_h1_border_color: $post_border_color
+//$post_title_text_color: #000
+$post_title_text_color: #FFF
+//$post_title_background_color: #F3F1F1FF
+$post_title_background_color: hsla(0, 0%, 0%, 0.8)
 
 // @post @content
 
-$post_content_padding_top: $spacing
-$post_content_padding_bottom: $spacing
-$post_content_padding_left: $spacing
-$post_content_padding_right: $spacing
+$post_content_padding_top: $main_spacing
+$post_content_padding_bottom: $main_spacing
+$post_content_padding_left: $main_spacing
+$post_content_padding_right: $main_spacing
 
 // @post @content @margin
 
-$post_content_margin_top: $spacing
-$post_content_margin_bottom: $spacing
+$post_content_margin_top: $main_spacing
+$post_content_margin_bottom: $main_spacing
 
 
 // @post @content @border-radius
@@ -113,15 +130,15 @@ $post_content_border_radius_bottom_left: $post_content_border_radius_top_left
 
 // @post @content @ul @unordered-list
 
-$post_content_unordered_list_margin_top: $spacing
-$post_content_unordered_list_margin_bottom: $spacing
+$post_content_unordered_list_margin_top: $main_spacing
+$post_content_unordered_list_margin_bottom: $main_spacing
 
 
 // @post @content @list @li
 
-$post_content_list_margin_top: $spacing
-$post_content_list_margin_left: $spacing
-$post_content_list_padding: $spacing
+$post_content_list_margin_top: $main_spacing
+$post_content_list_margin_left: $main_spacing
+$post_content_list_padding: $main_spacing
 $post_content_list_background_color: rgba(0, 0, 0, 8%)
 $post_content_list_style: square
 $post_content_list_border_radius: $button_border_radius
@@ -129,8 +146,8 @@ $post_content_list_border_radius: $button_border_radius
 // @post @content @paragraph @p
 
 $post_content_paragraph_background_color: rgba(0, 0, 0, 8%)
-$post_content_paragraph_padding: $spacing
-$post_content_paragraph_margin_bottom: $spacing
+$post_content_paragraph_padding: $main_spacing
+$post_content_paragraph_margin_bottom: $main_spacing
 $post_content_paragraph_border_radius: $button_border_radius
 // not sure if I can keep that
 $post_content_paragraph_first_letter_font_size: $main_font_size
@@ -138,12 +155,8 @@ $post_content_paragraph_first_letter_font_size: $main_font_size
 
 // @post @content @horizontal @rule @hr
 
-$post_content_horizontal_rule_margin_top: $spacing
-$post_content_horizontal_rule_margin_bottom: $spacing
-
-// @post @content @date
-
-$post_content_date_font_style: italic
+$post_content_horizontal_rule_margin_top: $main_spacing
+$post_content_horizontal_rule_margin_bottom: $main_spacing
 
 // @post @footer
 
@@ -171,6 +184,10 @@ $post_footer_tags_margin_left: 10px
 $post_footer_tags_margin_right: $post_footer_tags_margin_left
 $post_footer_tags_margin_bottom: $post_footer_tags_margin_left
 
+// @date
+$date_font_style: italic 
+//$date_font_size: smaller
+$date_font_size: normal
 
 // @timeline @margin
 
@@ -196,9 +213,9 @@ $timeline_page_heading_position_top: 1%
 $timeline_page_heading_writing_mode: vertical-lr
 $timeline_page_heading_text_orientation: upright
 $timeline_page_heading_text_decoration_width: 3px
-$timeline_page_heading_border_width: $border_width
+$timeline_page_heading_border_width: $main_border_width
 $timeline_page_heading_border_style: solid
-$timeline_page_heading_border_color: $post_shadow_color
+$timeline_page_heading_border_color: $post_border_color
 $timeline_page_heading_z_index: -1
 $timeline_page_heading_height: 100%
 
@@ -210,18 +227,21 @@ $timeline_list_style: none
 
 // @timeline @posts
 
-$timeline_posts_margin_left: $spacing
-$timeline_posts_margin_right: $spacing
+$timeline_posts_margin_left: $main_spacing
+$timeline_posts_margin_right: $main_spacing
 $timeline_posts_padding_left: 0
 
 // spacing between posts
 $timeline_posts_post_margin: 0 0 20vh
+//$timeline_posts_post_margin: 0 0 1vh
 $timeline_posts_post_padding_left: 0
 
 // @timeline_index
 
 $timeline_index_position_left: 0px
 $timeline_index_margin_top: -30px
+$timeline_index_margin_top: -30px
+$timeline_index_margin_bottom: 30px
 $timeline_index_margin_bottom: 30px
 $timeline_index_padding: 0
 $timeline_index_z_index: 4
@@ -234,7 +254,8 @@ $timeline_index_text_color: #FFF
 $timeline_index_content_unordered_list_padding_left: 50px
 
 // @timeline_index @content @list
-$timeline_index_content_list_margin: 8px 10px 8px 0
+
+$timeline_index_content_list_margin: 0
 $timeline_index_content_list_padding: 3px
 
 // @timeline_index @content @link
@@ -246,7 +267,7 @@ $timeline_index_content_link_transition: $button_transition
 $timeline_index_content_link_width: 100%
 $timeline_index_content_link_border_radius: $button_border_radius
 $timeline_index_content_link_border_width: $button_border_width
-$timeline_index_content_link_border_color: $button_border_color
+$timeline_index_content_link_border_color: $main_border_color
 $timeline_index_content_link_font_weight: $button_font_weight
 $timeline_index_content_link_box_shadow: $button_box_shadow
 $timeline_index_content_link_transform_scale:  $button_transform_scale
@@ -260,6 +281,9 @@ $code_dracula_background_color: #282a36
 $code_background_color: $code_dracula_background_color
 $code_backticks_text_color: #FFF
 $code_border_color: rgba(0, 0, 0, .5)
+//$code_border : $main_border_width solid $code_border_color
+$code_border : none
+
 
 // @responsive @screen
 
@@ -280,7 +304,7 @@ $responsive_screen_timeline_post_margin_bottom : 2vh
 $responsive_screen_timeline_page_heading_z_index : 1
 
 
-// @days @colors
+// @day @colors
 $day_01_color: #863C2DFF
 $day_02_color: #86592DFF
 $day_03_color: #86682DFF
@@ -366,9 +390,11 @@ $tag_unity_color: #848484
 $tag_star_engine_color: $tag_star_citizen_color
 $tag_tags_color: #937d4b
 $tag_posts_color: #524c9f
-$tag_opinions_color: #935EE9
+//$tag_opinions_color: #935EE9
+$tag_opinions_color: #8201AA
 $tag_ide_color: #3C6160
-$tag_about_color: #9CB70A
+//$tag_about_color: #9CB70A
+$tag_about_color: #65AA31
 $tag_avatars_color: #51558E
 $tag_configurations_color: #958c21
 $tag_languages_color: #ca312b
@@ -378,9 +404,11 @@ $tag_me_color: #997D73
 $tag_mobs_color: #51558E
 $tag_modding_color: #1F0937
 $tag_readme_color: #AF6B96
-$tag_references_color: #B89C6C
+//$tag_references_color: #B89C6C
+$tag_references_color: #3B03A2
 $tag_security_color: #ABB214
-$tag_status_color: #974a04
+//$tag_status_color: #974a04
+$tag_status_color: #038DC8
 $tag_syntax_color: #d48000
 $tag_videos_color: #0D5DEA
 $tag_video_games_color: #451A64
@@ -390,7 +418,8 @@ $tag_monkey_type_color: #323437
 $tag_jeremyvlegros_color: #3D452D
 $tag_lists_color: #9527AB
 $tag_links_color: #6694FE
-$tag_informations_color: #008F84
+//$tag_informations_color: #008F84
+$tag_informations_color: #0345F4
 $tag_sass_color: #BF4080
 $tag_javascript_color: #c76122
 $tag_html_color: #E14B25

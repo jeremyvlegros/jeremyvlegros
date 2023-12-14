@@ -1,5 +1,6 @@
 ---
-title                : "About the website reliability & simplicity & privacy goals"
+title                : "the website reliability & simplicity & privacy goals"
+category             : about
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000003 GMT"
 date_of_modification : "#date 2023-11-17 12:44 1700210676639154696 GMT"
 permalink            : /post/1686614400000000003

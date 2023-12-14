@@ -1,5 +1,6 @@
 ---
-title                : "About the website code goals"
+title                : "the website code goals"
+category             : about
 date_of_creation     : "#date 2023-06-13 00:00 1686614400000000000 GMT"
 date_of_modification : "#date 2023-11-17 09:54 1700200481520880252 GMT"
 permalink            : /post/1686614400000000000

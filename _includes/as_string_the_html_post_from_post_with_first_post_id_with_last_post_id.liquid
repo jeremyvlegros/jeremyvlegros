@@ -23,13 +23,16 @@
 {%- comment -%} dealing with non post parameter {%- endcomment -%}
 {%- if include.from_post.layout == "layout_post" -%}
 
-	{%- if include.from_post.category == "post" -%}
 
-		{%- assign post_content_1691010490420939832 = include.from_post.content -%}
+	{%- comment -%}  {%- endcomment -%}
+
+	{%- if include.from_post.category == "" or include.from_post.category == null -%}
+
+		{%- assign post_content_1691010490420939832 = content -%}
 
 	{%- else -%}
 
-		{%- assign post_content_1691010490420939832 = content -%}
+		{%- assign post_content_1691010490420939832 = include.from_post.content -%}
 
 	{%- endif -%}
 
@@ -86,16 +89,32 @@
 {%- comment -%} post_title_1691010490420939832 HTML {%- endcomment -%}
 {%- if post_title_1691010490420939832 -%}
 
+	{%- assign category_background_color = null -%}
+	{%- assign prefix_category = "category_" -%}
+	{%- assign suffix_category = "_background_color" -%}
+
+	{%- if post.category == null or post.category == "" -%}
+
+		{%- comment -%} do nothing {%- endcomment -%}
+
+	{%- else -%}
+
+		{%- assign category_background_color = prefix_category | append: post.category | append: suffix_category -%}
+
+	{%- endif -%}
+
 	{%- capture post_title_1691010490420939832 -%}
 
-		{%- comment -%} <h1 id="{{ post_id_1691010490420939832 }}" class="post_header post_title" itemprop="name headline" aria-label="post title">
- 			{{ post_title_1691010490420939832 }}
- 		</h1> {%- endcomment -%}
-
-		{%- comment -%} trying to help the `Firefox reader` parser {%- endcomment -%}
 		<h1 id="{{ post_id_1691010490420939832 }}" itemprop="name headline" aria-label="post title">
-			{{ post_title_1691010490420939832 }}
-		</h1>
+  			 {%- comment -%} <span class="category">⌜{{ post.category | capitalize }}⌟</span> {%- endcomment -%}
+			<span class="category {{ category_background_color }}">
+				<span class="reader">[</span>
+				{{ post.category | capitalize }}
+				<span class="reader">]</span>
+			</span>
+			{%- comment -%} thank you `PHP Storm` for making me writing spaces the hard way, I can level up my patience skills {%- endcomment -%}
+			{{ " " | append: post_title_1691010490420939832 }}
+  		</h1>
 
 	{%- endcapture -%}
 
@@ -118,10 +137,7 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		<!--suppress GrazieInspection -->
-		<time class='date date_of_creation' datetime="{{ machine_date_1691010490420939832 }}"
-					aria-label="creation date"> {{ formatted_date_1691010490420939832 }} </time>
-
+		<time class='date' datetime="{{ machine_date_1691010490420939832 }}" aria-label="creation date">{{ formatted_date_1691010490420939832 }}</time>
 	{%- endcapture -%}
 
 {%- endif -%}
@@ -138,14 +154,21 @@
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 		{%- comment -%} machine_date_1691010490420939832 {%- endcomment -%}
+		{% comment %} @task: I need to test the machine date function with modification dates
+		{% endcomment %}
+		
 		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
 		{%- assign machine_date_1691010490420939832 = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		<!--suppress GrazieInspection -->
-		<time class="date date_of_modification" datetime="{{ machine_date_1691010490420939832 }}"
-					aria-label="modification date"> {{ formatted_date_1691010490420939832 }} </time>
+		{% comment %}{% endcomment %}
+
+		<!-- machine_date_1691010490420939832 : `{{ machine_date_1691010490420939832 | JSONIFY }}` !-->
+
+		{% comment %}{% endcomment %}
+
+		<time class="date" datetime="{{ machine_date_1691010490420939832 }}" aria-label="modification date"> {{ formatted_date_1691010490420939832 }} </time>
 
 	{%- endcapture -%}
 
@@ -156,7 +179,7 @@
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
 	<a class="col button button_top_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-	{{ BUTTON_TOP }}
+	{{ BUTTON_TOP | append: " " }}
 	</a>
 
 {%- endcapture -%}
@@ -166,7 +189,7 @@
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
 	<a class="col button button_bottom_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-		{{ BUTTON_BOTTOM }}
+		{{ BUTTON_BOTTOM | append: " " }}
 	</a>
 
 {%- endcapture -%}
@@ -176,7 +199,7 @@
 
 	<a class="col button button_home_background_color" href="{{ '/' | relative_url }}">
 	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
-		{{ BUTTON_HOME }}
+		{{ BUTTON_HOME }} 
 	</a>
 
 {%- endcapture -%}
@@ -185,9 +208,9 @@
 {%- capture button_id_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-	<a class="col button button_open_background_color"
-			{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
-		 href="{{ tag_url_1691010490420939832 }}"> {{ BUTTON_POST }}
+	{%- comment -%} don't place this on an other line, PHP storm × Liquid is weird with spaces, one liner are the only safe way{%- endcomment -%}
+	<a class="col button button_open_background_color" href="{{ tag_url_1691010490420939832 }}">{{ BUTTON_POST | append: " " }}
+		{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
 	</a>
 
 {%- endcapture -%}
@@ -197,7 +220,7 @@
 
 	{%- comment -%} button `#tags` {%- endcomment -%}
 	{%- include as_string_the_html_tag_from_word.liquid from_word="tags" -%}
-	{%- assign button_tags_1691010490420939832 = return -%}
+	{%- assign button_tags_1691010490420939832 = return | append: " " -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -260,14 +283,14 @@
 			{%- comment -%} the address doesn't exist go to posts {%- endcomment -%}
 			{%- if page.title == "#tags" -%}
 				<a class="col button {{ background_color }}" href="{{ '/tag/posts' | relative_url }}">
-				#posts
+				#posts 
 				</a>
 
 			{%- else -%}
 				{%- comment -%} <a class="col button {{ background_color }}" {%- endcomment -%}
 				<a class="col button button_home_background_color"
 					 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
-				Back
+				Back 
 				</a>
 			{%- endif -%}
 
@@ -275,15 +298,15 @@
 
 	{%- endif -%}
 
-	{%- assign _PAGE_TITLE_1691010490420939832 = page.title | upcase -%}
+	{%- assign _page_title_1691010490420939832 = page.title | downcase -%}
 
 	{%- comment -%} home page : muting home button {%- endcomment -%}
-	{%- if _PAGE_TITLE_1691010490420939832 == "HOME" -%}
+	{%- if _page_title_1691010490420939832 == "home" -%}
 		{%- assign button_home_1691010490420939832 = null -%}
 	{%- endif -%}
 
 	{%- comment -%} tags page : muting tags button & other {%- endcomment -%}
-	{%- if _PAGE_TITLE_1691010490420939832 == "#TAGS" -%}
+	{%- if _page_title_1691010490420939832 == "#tags" -%}
 
 		{%- assign button_tags_1691010490420939832 = null -%}
 		{%- assign button_id_1691010490420939832 = null -%}
@@ -317,11 +340,18 @@
 
 			{%- comment -%} getting tag {%- endcomment -%}
 			{%- include as_string_the_html_tag_from_word.liquid from_word=tag -%}
-			{%- assign tag_1691010490420939832 = return -%}
+
+			{%- comment -%} 
+			the space is just for PHP storm because it keeps removing trailing and starting space at reformatting
+			{%- endcomment -%}
+
+			{%- assign tag_1691010490420939832 = return | append: " " -%}
 			{%- assign return = null -%}
 			{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 			{%- comment -%} only for timeline tags, ignore tag if same as page {%- endcomment -%}
+			{% comment %}@task : category
+			{% endcomment %}
 			{%- if page.category != "post" -%}
 
 				{%- comment -%} get the tag word {%- endcomment -%}
@@ -351,7 +381,6 @@
 
 			{%- comment -%} tag {%- endcomment -%}
 			{{ tag_1691010490420939832 }}
-
 		{%- endfor -%}
 	{%- endcapture -%}
 
@@ -387,7 +416,10 @@
 
 {%- capture return -%}
 
-	<article class="post {{ post_background_color_1691010490420939832 }}" itemscope itemtype="http://schema.org/BlogPosting">
+
+	<article class="post {{ post_background_color_1691010490420939832 }}" itemscope
+					 itemtype="http://schema.org/BlogPosting">
+
 
 		{{ post_title_1691010490420939832 }}
 
@@ -396,8 +428,9 @@
 			{{ post_content_1691010490420939832 }}
 
 			{{ post_date_of_creation_1691010490420939832 }}
+			<br>
 			{{ post_date_of_modification_1691010490420939832 }}
-
+			<br>
 
 
 		</div>
@@ -410,7 +443,7 @@
 
 		</div>
 
-		<hr class="post_splitter">
+		<hr class="reader">
 
 	</article>
 
@@ -433,7 +466,7 @@
 {%- assign button_tags_1691010490420939832 = null -%}
 {%- assign page_permalink_tag_1691010490420939832 = null -%}
 {%- assign tag_word_1691010490420939832 = null -%}
-{%- assign _PAGE_TITLE_1691010490420939832 = null -%}
+{%- assign _page_title_1691010490420939832 = null -%}
 {%- assign button_posts_1691010490420939832 = null -%}
 {%- assign background_color = null -%}
 {%- assign machine_date_1691010490420939832 = null -%}

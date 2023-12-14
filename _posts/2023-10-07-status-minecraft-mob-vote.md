@@ -1,5 +1,6 @@
 ---
-title                : "Status : the `Minecraft` mob vote"
+title                : "the `Minecraft` mob vote"
+category             : status
 date_of_creation     : "#date 2023-10-07 04:48 1696639687579940434 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1696639687579940434"

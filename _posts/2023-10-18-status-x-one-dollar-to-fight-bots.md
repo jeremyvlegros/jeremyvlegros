@@ -1,5 +1,6 @@
 ---
-title                : "Status : `X` asking 1$ to fight bots is making me smile"
+title                : "`X` asking 1$ to fight bots is making me smile"
+category             : status
 date_of_creation     : "#date 2023-10-18 07:41 1697600461867097726 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : "/post/1697600461867097726"

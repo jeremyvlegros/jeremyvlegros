@@ -1,5 +1,6 @@
 ---
-title                : "Status : preparing the code for other pages of the website"
+title                : "preparing the code for other pages of the website"
+category             : status
 date_of_creation     : "#date 2023-07-12 23:22 1689189755395272197 GMT"
 date_of_modification : "#date 2023-11-15 12:20 1700036405502184887 GMT"
 permalink            : /post/1689189755395272197
