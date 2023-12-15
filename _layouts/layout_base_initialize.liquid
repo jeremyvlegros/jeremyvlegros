@@ -1,5 +1,3 @@
-{%- comment -%} <!-- INITIALIZATION --> {%- endcomment -%}
-
 {%- comment -%} page_title_1690569717129 {%- endcomment -%}
 {%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=page.title -%}
 {%- assign page_title_1690569717129 = return -%}
@@ -43,8 +41,6 @@
 {%- assign site_name_1690569717129 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-{%- comment -%}<!-- PROCESSING -->{%- endcomment -%}
 
 {%- comment -%} page_date_of_creation_utc_1690569717129 {%- endcomment -%}
 {%- include as_string_the_date_utc_from_custom_date.liquid from_custom_date=page_date_of_creation_1690569717129 -%}
@@ -111,62 +107,11 @@
 {%- endcapture -%}
 {%- comment -%} {%- endcomment -%}
 
-{%- capture return -%}
+{%- comment -%} page_favicon_1690569717129 {%- endcomment -%}
 
-	<!DOCTYPE html>
-	<html lang="en">
+{%- comment -%} favicon {%- endcomment -%}
+{%- include as_string_the_html_favicon.liquid -%}
+{%- assign page_favicon_1690569717129 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	<head>
-
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta property="og:locale" content="en_US"/>
-
-		{{ page_meta_date_of_creation_1690569717129 }}
-		{{ page_meta_description_1690569717129 }}
-		{{ page_meta_type_1690569717129 }}
-		{{ page_meta_title_1690569717129 }}
-		{{ page_meta_site_name_1690569717129 }}
-		{{ page_url_bootstrap_1690569717129 }}
-		{{ page_url_css_1690569717129 }}
-
-		{%- comment -%} favicon {%- endcomment -%}
-		{%- include as_string_the_html_favicon.liquid -%}{{ return }}
-
-		{%- comment -%} now PHP STORM happy {%- endcomment -%}
-		{%- if page_title_1690569717129 -%}
-			<title>
-				{{ page_title_1690569717129 }}
-			</title>
-		{%- endif -%}
-	</head>
-
-	<body>
-
-			{% comment %} @task : study aria-label {% endcomment %}
-			<main class="page" aria-label="Content">
-
-			{{ content }}
-
-			</main>
-
-	</body>
-
-</html>
-
-{%- endcapture -%}
-
-{%- comment -%} resetting {%- endcomment -%}
-{%- assign page_title_1690569717129 = null -%}
-{%- assign page_meta_description_1690569717129 = null -%}
-{%- assign page_date_of_creation_1690569717129 = null -%}
-{%- assign date_of_modification_1690569717129 = null -%}
-{%- assign page_type_1690569717129 = null -%}
-{%- assign page_url_1690569717129 = null -%}
-{%- assign site_name_1690569717129 = null -%}
-{%- assign page_meta_date_of_creation_1690569717129 = null -%}
-{%- assign page_meta_type_1690569717129 = null -%}
-{%- assign page_meta_title_1690569717129 = null -%}
-{%- assign page_meta_site_name_1690569717129 = null -%}
-{%- assign page_url_css_1690569717129 = null -%}
