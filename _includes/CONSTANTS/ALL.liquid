@@ -4,12 +4,12 @@ WARNING :
   ONLY WRITE VARIABLES !
 
 GOALS :
-  - my variables in one place instead of `_data` x `_config`
+  - my constants in one place instead of `_data` x `_config`
   - edition :
 		- my brain itches when seeing `<name_in_lowercase>.<variable_name_uppercase>`
     - I don't want to type `site.DEBUG` when I could type `DEBUG` :
-      - I use a file template in my IDE that creates a file with `{%- include CONFIGURATION/ALL.liquid -%}`
-    - I can find my variables fast
+      - I use a file template in my IDE that creates a file with `{%- include ALL.liquid -%}`
+    - I can find my variable fast
     - I can change values individually
   - preventing cyclic imports, everything variable is split. Imports :
   - clean structure
@@ -24,15 +24,16 @@ CONS :
   - waste : I will most likely never use anything separately
 {%- endcomment -%}
 
-{%- include CONFIGURATION/ARRAY_EMPTY.liquid -%}
-{%- include CONFIGURATION/EMPTY_ARRAY.liquid -%}
-{%- include CONFIGURATION/NEW_LINE.liquid -%}
-{%- include CONFIGURATION/BUILD.liquid -%}
-{%- include CONFIGURATION/DEBUG.liquid -%}
-{%- include CONFIGURATION/IMAGE_COLORS.liquid -%}
-{%- include CONFIGURATION/TAGS.liquid -%}
-{%- include CONFIGURATION/POSTS.liquid -%}
-{%- include CONFIGURATION/TABULATION.liquid -%}
-{%- include CONFIGURATION/BUTTON_NAMES.liquid -%}
+{%- include CONSTANTS/ARRAY_EMPTY.liquid -%}
+{%- include CONSTANTS/EMPTY_ARRAY.liquid -%}
+{%- include CONSTANTS/NEW_LINE.liquid -%}
+{%- include CONSTANTS/BUILD.liquid -%}
+{%- include CONSTANTS/DEBUG.liquid -%}
+{%- include CONSTANTS/IMAGE_COLORS.liquid -%}
+{%- include CONSTANTS/TAGS.liquid -%}
+{%- include CONSTANTS/POSTS.liquid -%}
+{%- include CONSTANTS/TABULATION.liquid -%}
+{%- include CONSTANTS/BUTTON_NAMES.liquid -%}
+{%- include CONSTANTS/DOCTYPE_HTML.liquid -%}
 
 
