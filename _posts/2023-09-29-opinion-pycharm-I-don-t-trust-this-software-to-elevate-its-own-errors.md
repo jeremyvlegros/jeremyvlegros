@@ -13,7 +13,7 @@ tags :
 - "#computer"
 ---
 
-This cost me a lot of sanity  c.f <a href="{{ "post/1695957483470493710" | relative_url }}"> post</a>
+This cost me a lot of sanity  c.f <a class="button" href="{{ "post/1695957483470493710" | relative_url }}"> post</a>
 
 I could report those kinds of bugs if :
 - I would not lose time by reporting it 
