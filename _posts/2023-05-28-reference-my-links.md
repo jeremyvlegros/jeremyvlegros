@@ -10,4 +10,4 @@ tags                 :
 - "#links"
 ---
 
-{% include as_string_the_html_page_links.liquid %} {{return}}
+{% include as_string_the_html_links.liquid %} {{return}}
