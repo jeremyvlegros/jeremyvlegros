@@ -4,11 +4,8 @@ description              : null
 date_of_creation         : null
 date_of_modification     : null
 boolean_remove_bootstrap : null
-
 ---
-{%- comment -%} @task : this will fail 
-{%- endcomment -%}
-{%- include layout/layout_base_initialize.liquid -%}
+{%- include procedure_initialize_layout_base.liquid -%}
 
 {%- comment -%} Because PHP Storm is screaming *red* at me that it is a liquid file {%- endcomment -%}
 {%- include CONSTANTS/DOCTYPE_HTML.liquid -%}
@@ -44,7 +41,6 @@ boolean_remove_bootstrap : null
 
 	<body>
 
-			{% comment %} @task : study aria-label {% endcomment %}
 			<main class="page" aria-label="Content">
 
 			{{ content }}
@@ -60,8 +56,16 @@ boolean_remove_bootstrap : null
 {%- comment -%} @display  {%- endcomment -%}
 {%- include procedure_display_the_minified_html_from_html.liquid from_html=html_1690569717129 -%}
 
-{%- comment -%} @task : this will fail 
-{%- endcomment -%}
-{% comment %} @resetting {% endcomment %}
-{%- include layout/layout_base_reset.liquid -%}
+{% comment %} resetting {% endcomment %}
+{%- assign page_favicon_1690569717129 = null -%}
+{%- assign page_meta_date_of_creation_1690569717129 = null -%}
+{%- assign page_meta_description_1690569717129 = null -%}
+{%- assign page_meta_site_name_1690569717129 = null -%}
+{%- assign page_meta_type_1690569717129 = null -%}
+{%- assign page_title_1690569717129 = null -%}
+{%- assign page_url_1690569717129 = null -%}
+{%- assign page_url_css_1690569717129 = null -%}
+{%- assign html = null -%}
+
+
 
