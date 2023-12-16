@@ -5,12 +5,15 @@ $main_padding: 0
 $main_font_size: 1.01em
 $main_line_height : 2
 
-$background_color: #B5ABAAFF
-$main_border_width : 2px
+$background_color: #F4ECD8
+//$background_color: #B5ABAAFF
+$main_border_width : 1px
 $main_border_radius : 10px
 $main_border_color : #000
-//$main_spacing : 28px
-$main_spacing : 17px
+//$main_text_color   : #291612
+$main_text_color   : black
+$main_spacing : 10px
+$main_line_background_color : rgba(0, 0, 0, 5%)
 
 // @buttons
 
@@ -23,7 +26,7 @@ $button_border_width: $main_border_width
 $button_width: 2px
 $button_height: inherit
 $button_width: inherit
-$button_padding: 10px
+$button_padding: 7px
 $button_margin: 5px
 $button_transform_scale: scale(0.97)
 $button_transition: all .1s ease-in-out
@@ -50,18 +53,12 @@ $button_border_active : $button_border_width_active solid $button_border_color
 $button_box_shadow_active : none
 $button_text_color_active : $button_text_color
 
-// @category
 
-$category_border_radius : 10px
-//$category_font_size : calc($main_font_size * 0.5) // erf
-$category_font_size : 0.5em
-$category_padding : 5px
-$category_margin : 0px
-$category_text_align : left
 
 // @post
 
-$post_text_color: #FFF
+//$post_text_color: #FFF
+$post_text_color: $main_text_color
 $post_background_color: #222
 $post_shadow_color: #111
 
@@ -72,10 +69,15 @@ $post_button_text_color: #FFF
 
 // @post @margin
 
-$post_margin_top: 50px
-$post_margin_right: 50px
-$post_margin_bottom: 50px
-$post_margin_left: 50px
+//$post_margin_top: 50px
+//$post_margin_right: 50px
+//$post_margin_bottom: 50px
+//$post_margin_left: 50px
+
+$post_margin_top: $main_spacing
+$post_margin_right: $main_spacing
+$post_margin_bottom: $main_spacing
+$post_margin_left: $main_spacing
 
 // @post @border
 
@@ -89,6 +91,11 @@ $post_border_opacity_h4_color: 0.5
 $post_border_opacity_h5_color: 0.4
 $post_border_opacity_h6_color: 0.3
 
+// @title
+
+$post_title_background_color : white
+
+
 
 // @post @h1
 
@@ -97,21 +104,38 @@ $post_h1_border_width: $main_border_width
 $post_h1_font_size: 2em
 //$post_h1_align: center
 $post_h1_align: left
-//$post_h1_font_weight: bold
-$post_h1_font_weight: normal
+$post_h1_font_weight: bolder
 $post_h1_font_variant_caps: all-small-caps
-$post_h1_padding: $button_padding
+$post_h1_padding: $main_spacing
 $post_h1_border_color: $post_border_color
-//$post_title_text_color: #000
-$post_title_text_color: #FFF
-//$post_title_background_color: #F3F1F1FF
-$post_title_background_color: hsla(0, 0%, 0%, 0.8)
+$post_h1_text_color: black
+$post_h1_font_style : normal
+//$post_h1_background_color: hsla(0, 0%, 0%, 0.8)
+$post_h1_background_color: $button_text_color
+$post_h1_text_decoration_thickness: from-font
+$post_h1_text_decoration_line: none
+
+// @category
+
+$post_category_border_radius : 0px
+$post_category_padding : $post_h1_padding
+$post_category_padding-left : $post_h1_padding
+$post_category_margin : 0px
+$post_category_text_align : left
+$post_category_font_size: $post_h1_font_size
+$post_category_font_weight: $post_h1_font_weight
+$post_category_font_variant_caps: $post_h1_font_variant_caps
+$post_category_font_style: $post_h1_font_style
+$post_category_text_color : $button_text_color
+$post_category_text_decoration : none
+$post_category_border : 1px solid $button_text_color
 
 // @post @content
 
 $post_content_padding_top: $main_spacing
 $post_content_padding_bottom: $main_spacing
-$post_content_padding_left: $main_spacing
+//$post_content_padding_left: $main_spacing
+$post_content_padding_left: inherit
 $post_content_padding_right: $main_spacing
 
 // @post @content @margin
@@ -130,24 +154,34 @@ $post_content_border_radius_bottom_left: $post_content_border_radius_top_left
 
 // @post @content @ul @unordered-list
 
-$post_content_unordered_list_margin_top: $main_spacing
-$post_content_unordered_list_margin_bottom: $main_spacing
-
+$post_content_unordered_list_margin_top: 0
+$post_content_unordered_list_margin_bottom: 0
+$post_content_unordered_list_margin_left : 0
+//$post_content_unordered_list_background_color: $main_line_background_color
+$post_content_unordered_list_background_color: none
 
 // @post @content @list @li
 
 $post_content_list_margin_top: $main_spacing
-$post_content_list_margin_left: $main_spacing
-$post_content_list_padding: $main_spacing
-$post_content_list_background_color: rgba(0, 0, 0, 8%)
+$post_content_list_margin_bottom: $main_spacing
+$post_content_list_margin_left: calc($main_spacing * 4)
+
+$post_content_list_padding_top: $main_spacing
+$post_content_list_padding_right: $main_spacing
+$post_content_list_padding_bottom: $main_spacing
+$post_content_list_padding_left: $main_spacing
+
+$post_content_list_background_color: $main_line_background_color
 $post_content_list_style: square
 $post_content_list_border_radius: $button_border_radius
 
 // @post @content @paragraph @p
 
-$post_content_paragraph_background_color: rgba(0, 0, 0, 8%)
+$post_content_paragraph_background_color: $main_line_background_color
 $post_content_paragraph_padding: $main_spacing
-$post_content_paragraph_margin_bottom: $main_spacing
+$post_content_paragraph_margin_bottom: 0
+$post_content_paragraph_margin_top: $main_spacing
+$post_content_paragraph_margin_left: 0
 $post_content_paragraph_border_radius: $button_border_radius
 // not sure if I can keep that
 $post_content_paragraph_first_letter_font_size: $main_font_size
@@ -180,14 +214,17 @@ $post_footer_text_color: white
 
 // @post @footer @tags
 
-$post_footer_tags_margin_left: 10px
+$post_footer_tags_margin_left: $main_spacing
+$post_footer_tags_margin_left: $main_spacing
 $post_footer_tags_margin_right: $post_footer_tags_margin_left
 $post_footer_tags_margin_bottom: $post_footer_tags_margin_left
 
 // @date
-$date_font_style: italic 
+//$date_font_style: italic 
+$date_font_style: normal 
 //$date_font_size: smaller
 $date_font_size: normal
+$date_color : $main_text_color
 
 // @timeline @margin
 
@@ -232,8 +269,8 @@ $timeline_posts_margin_right: $main_spacing
 $timeline_posts_padding_left: 0
 
 // spacing between posts
-$timeline_posts_post_margin: 0 0 20vh
-//$timeline_posts_post_margin: 0 0 1vh
+//$timeline_posts_post_margin: 0 0 20vh
+$timeline_posts_post_margin: calc($main_spacing * 3)
 $timeline_posts_post_padding_left: 0
 
 // @timeline_index
@@ -299,7 +336,7 @@ $responsive_screen_timeline_index_padding_bottom : 20%
 // @responsive @screen @timeline
 
 $responsive_screen_timeline_padding :  0
-$responsive_screen_timeline_posts_margin_left : 13%
+$responsive_screen_timeline_posts_margin_left : 5%
 $responsive_screen_timeline_post_margin_bottom : 2vh
 $responsive_screen_timeline_page_heading_z_index : 1
 
