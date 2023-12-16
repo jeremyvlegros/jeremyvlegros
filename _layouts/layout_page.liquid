@@ -2,16 +2,22 @@
 layout: layout_base
 ---
 
-<article class="post">
+{%- capture html -%}
+	<article class="post">
+    
+    <header>
+    	<h1 class="post_title">{{ page.title | escape }}</h1>
+    </header>
+    
+    <div class="post_content background_color_{{ page.background_color }}">
+    	{{ content }}
+    </div>
+    
+    </article>
+{%- endcapture -%}
 
-<header >
-	<h1 class="post_title">{{ page.title | escape }}</h1>
-</header>
-
-<div class="post_content background_color_{{ page.background_color }}">
-	{{ content }}
-</div>
-
-</article>
-
-{%- include as_string_the_html_layout_page.liquid -%}{{ return | strip_newlines | replace : TABULATION, ""}}
+{%- comment -%} html {%- endcomment -%}
+{%- include procedure_display_the_minified_html_from_html.liquid from_html=html -%}
+{%- assign html = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}

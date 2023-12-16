@@ -2,5 +2,37 @@
 layout: layout_base
 ---
 
-{%- include as_string_the_html_page_index.liquid -%}{{ return | strip_newlines | replace : TABULATION, ""}}
+{%- capture html -%}
 
+	{{ content }}
+
+	<div >
+
+		<a class="button background_color_posts" href="{{ '/tag/posts' | relative_url }}">
+			posts
+		</a>
+
+		<a class="button background_color_links" href="{{ '/links' | relative_url }}">
+			links
+		</a>
+
+		<a class="button background_color_readme" href="{{ '/readme' | relative_url }}">
+			readme
+		</a>
+
+		<a class="button background_color_build" href="{{ '/build' | relative_url }}">
+			build
+		</a>
+
+		<a class="button background_color_tags" href="{{ '/tag/tags' | relative_url }}">
+			tags
+		</a>
+
+	</div>
+
+{%- endcapture -%}
+
+{%- include procedure_display_the_minified_html_from_html.liquid from_html=html-%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign html = null -%}
