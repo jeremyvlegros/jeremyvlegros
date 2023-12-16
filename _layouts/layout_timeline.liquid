@@ -2,4 +2,72 @@
 layout : layout_base
 ---
 
-{%- include as_string_the_html_page_timeline_from_tags.liquid from_tags=page.tags -%}{{ return | strip_newlines | replace : TABULATION, ""}}
+{%- include procedure_initialize_layout_timeline_from_tags.liquid from_tags=page.tags -%}
+
+{%- capture html_1690569561039 -%}
+
+	<div class="timeline">
+		{%- comment -%}printing content of the next thing {%- endcomment -%}
+		{{ content }}
+
+			<div id="timeline_index">
+
+						<div class="timeline_index_content">
+
+							{%- if page_title_1690569561039 -%}
+
+								{% comment %} #tag page title {% endcomment %}
+								<h1 class="page_title">
+									{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}
+								</h1>
+
+							{%- endif -%}
+
+							<ul role="menu">
+								{{ html_timeline_index_list_1690569561039 }}
+							</ul>
+
+						</div>
+
+				</div>
+			
+			<div class="posts">
+				{{ html_posts_1690569561039 }}
+			</div>
+		
+		<div class="dates">
+
+
+			{%- if page_date_of_creation_1690569561039 -%}
+
+				<span class='date'>
+					{{ page_date_of_creation_1690569561039 }}
+				</span>
+
+			{%- endif -%}
+
+			
+			{%- if page_date_of_modification_1690569561039 -%}
+
+				<span class="date">
+						{{ page_date_of_modification_1690569561039 }}
+				</span>
+
+			{%- endif -%}
+
+		</div>
+
+	</div>
+
+{%- endcapture -%}
+
+{%- comment -%} @display  {%- endcomment -%}
+{%- include procedure_display_the_minified_html_from_html.liquid from_html=html_1690569561039 -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign html_timeline_index_list_1690569561039 = null -%}
+{%- assign html_posts_1690569561039 = null -%}
+{%- assign page_date_of_modification_1690569561039 = null -%}
+{%- assign page_date_of_creation_1690569561039 = null -%}
+{%- assign page_title_1690569561039 = null -%}
+{%- assign html = null -%}
