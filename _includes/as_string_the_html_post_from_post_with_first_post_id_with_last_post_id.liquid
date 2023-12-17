@@ -86,22 +86,20 @@
 {%- endif -%}
 
 
-{%- comment -%} post_title_1691010490420939832 HTML {%- endcomment -%}
+{%- comment -%} post_title_1691010490420939832 @title {%- endcomment -%}
 {%- if post_title_1691010490420939832 -%}
 
-	{%- assign category_background_color = null -%}
-	{%- assign prefix_category = "category_" -%}
-	{%- assign suffix_category = "_background_color" -%}
+	{%- comment -%} category_background_color {%- endcomment -%}
+	{%- include as_string_the_css_category_background_color_from_post.liquid from_post=include.from_post -%}
+	{%- assign category_background_color = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- if post.category == null or post.category == "" -%}
-
-		{%- comment -%} do nothing {%- endcomment -%}
-
-	{%- else -%}
-
-		{%- assign category_background_color = prefix_category | append: post.category | append: suffix_category -%}
-
-	{%- endif -%}
+	{%- comment -%} post_title_1691010490420939832 {%- endcomment -%}
+	{%- include as_string_the_processed_markdown_without_paragraph_tags_from_text.liquid from_text = post_title_1691010490420939832 -%}
+	{%- assign post_title_1691010490420939832 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 	{%- capture post_title_1691010490420939832 -%}
 		<div class="post_title">
@@ -113,7 +111,7 @@
 		<h1 id="{{ post_id_1691010490420939832 }}" itemprop="name headline" aria-label="post title">
 			{%- comment -%} <span class="category">⌜{{ post.category | capitalize }}⌟</span> {%- endcomment -%}
 			{%- comment -%} thank you `PHP Storm` for making me writing spaces the hard way, I can level up my patience skills {%- endcomment -%}
-			{{ " " | append: post_title_1691010490420939832 }}
+			{{ " " | append: post_title_1691010490420939832  }}
 		</h1>
 	</div>
 
