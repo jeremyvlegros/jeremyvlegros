@@ -1,0 +1,21 @@
+{%- assign category_background_color_1702840891478266847 = null -%}
+{%- assign prefix_category_1702840891478266847 = "category_" -%}
+{%- assign suffix_category_1702840891478266847 = "_background_color" -%}
+
+{%- if include.from_post.category == null or include.from_post.category == "" -%}
+
+	{%- comment -%} do nothing {%- endcomment -%}
+
+{%- else -%}
+
+	{%- assign category_background_color_1702840891478266847 = prefix_category_1702840891478266847 | append: post.category | append: suffix_category_1702840891478266847 -%}
+
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = category_background_color_1702840891478266847-%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign category_background_color_1702840891478266847 = null -%}
+{%- assign prefix_category_1702840891478266847 = null -%}
+{%- assign suffix_category_1702840891478266847 = null -%}
