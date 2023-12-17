@@ -3,119 +3,122 @@
 .post
 
 	// can't use `overflow-inline: scroll` it overwrites the bottom border when Firefox `always show scrollbar` is set
-	margin: $post_margin_top $post_margin_right $post_margin_bottom $post_margin_left
+	background-color: $post_background_color
+	border: $post_border
 	border-radius: $post_border_radius
-	//background-color: $post_background_color
-	//border: $post_border_width $post_border_style $post_border_color
-
+	padding: $post_padding !important
+	margin: $post_margin
+	color: $post_text_color
+	display: flex
+	flex-direction: column
 
 	.post_title
 
-		display: flex
+		display: inline
+		
+		// I let it here for the responsive wrap
 		flex-direction: row
 		flex-wrap: wrap
-		//background-color: $post_title_background_color!important
+		
+		background-color: $post_title_background_color !important
+		margin: $post_title_margin
 
+	.post_category
 
-		.post_category
+		display: inline
+		font-size: $post_category_font_size !important
+		// $post_category_font_size !important
+		font-weight: $post_category_font_weight !important
+		font-style: $post_category_font_style !important
+		font-variant: $post_category_font_variant_caps
+		padding: $post_category_padding !important
+		margin: $post_category_margin !important
+		color: $post_category_text_color
+		text-align: $post_category_text_align
+		text-decoration: $post_category_text_decoration !important
+		border: $post_category_border
+		border: $button_border_width solid $main_text_color
+		border-right: 0
+		border-radius: $main_border_radius 0 0 $main_border_radius !important
+		width: $post_category_width
+		
+		// I let it here for the responsive wrap
+		align-self: center
 
-			font-size: $post_category_font_size !important
-			// $post_category_font_size !important
-			font-weight: $post_category_font_weight !important
-			font-style: $post_category_font_style !important
-			font-variant: $post_category_font_variant_caps
-			padding: $post_category_padding !important
-			padding-left: $post_category_padding-left
-			margin: $post_category_margin !important
-			color: $post_category_text_color
-			text-align: $post_category_text_align
-			text-decoration: $post_category_text_decoration !important
-			border: $post_category_border
-			border: $button_border_width solid $main_text_color
-			border-right: 0
-			border-radius: $main_border_radius 0 0 $main_border_radius !important
-
-		// helping the `Firefox reader` parser
-		h1
-			border-radius: 0 $main_border_radius $main_border_radius 0 !important
-			background-color: $post_h1_background_color
-			width: fit-content
-			display: block
-			border: $button_border_width solid $main_text_color
-			color: $post_h1_text_color
-			text-align: $post_h1_align
-			font-size: $post_h1_font_size
-			font-weight: $post_h1_font_weight
-			font-variant-caps: $post_h1_font_variant_caps
-			padding: $post_h1_padding !important
-			text-decoration-thickness: $post_h1_text_decoration_thickness
-			text-decoration-line: $post_h1_text_decoration_line
-			text-decoration-color: $button_text_color
-			margin-left: 0
-			padding-left: 0
-			//margin-bottom: $main_spacing
+	// helping the `Firefox reader` parser
+	h1
+		border-radius: 0 $main_border_radius $main_border_radius 0 !important
+		background-color: $post_h1_background_color
+		width: $post_h1_width
+		border: $button_border_width solid $main_text_color
+		color: $post_h1_text_color
+		text-align: $post_h1_align
+		font-size: $post_h1_font_size
+		font-weight: $post_h1_font_weight
+		font-variant-caps: $post_h1_font_variant_caps
+		padding: $post_h1_padding !important
+		margin: $post_h1_margin !important
+		text-decoration-thickness: $post_h1_text_decoration_thickness
+		text-decoration-line: $post_h1_text_decoration_line
+		text-decoration-color: $button_text_color
+		align-self: center
+		//@testing changing to flex when small
+		display: inline
+		
+	//margin-bottom: $main_spacing
 
 
 	.version
 
 		color: #AAA
 
+	ul
 
-	.post_content
+		//margin-top: $main_spacing
+		margin-bottom: $main_spacing
+		margin-left: $post_unordered_list_margin_left
+		background-color: $post_unordered_list_background_color
+		border-radius: $main_border_radius
+		padding: $main_spacing
 
-		padding: $post_content_padding_top $post_content_padding_right $post_content_padding_bottom $post_content_padding_left
-		color: $post_text_color
-		border-radius: $post_content_border_radius_top_left $post_content_border_radius_top_right $post_content_border_radius_bottom_right $post_content_border_radius_bottom_left
-		margin-top: calc($main_spacing * 3)
-		display: flex
-		flex-direction: column
+	p
 
-		ul
+		background-color: $post_paragraph_background_color
+		padding: $post_paragraph_padding
+		border-radius: $post_paragraph_border_radius
+		margin-bottom: $post_paragraph_margin_bottom
+		margin-top: $post_paragraph_margin_top
+		margin-left: $post_paragraph_margin_left
 
-			//margin-top: $main_spacing
-			margin-bottom: $main_spacing
-			margin-left: $post_content_unordered_list_margin_left
-			background-color: $post_content_unordered_list_background_color
-			border-radius: $main_border_radius
-			padding: $main_spacing
-			
-		p
+		&:first-letter
 
-			background-color: $post_content_paragraph_background_color
-			padding: $post_content_paragraph_padding
-			border-radius: $post_content_paragraph_border_radius
-			margin-bottom: $post_content_paragraph_margin_bottom
-			margin-top: $post_content_paragraph_margin_top
-			margin-left: $post_content_paragraph_margin_left
+			font-size: $post_paragraph_first_letter_font_size
 
-			&:first-letter
+	li
 
-				font-size: $post_content_paragraph_first_letter_font_size
+		background-color: $post_list_background_color
+		padding: $post_list_padding_top $post_list_padding_right $post_list_padding_bottom $post_list_padding_left !important
+		border-radius: $post_list_border_radius
+		margin-top: $post_list_margin_top
+		margin-bottom: $post_list_margin_bottom
+		margin-left: $post_list_margin_left
+		list-style: $post_list_style !important
 
-		li
+	.date
 
-			background-color: $post_content_list_background_color
-			padding: $post_content_list_padding_top $post_content_list_padding_right $post_content_list_padding_bottom $post_content_list_padding_left !important
-			border-radius: $post_content_list_border_radius
-			margin-top: $post_content_list_margin_top
-			margin-bottom: $post_content_list_margin_bottom
-			margin-left: $post_content_list_margin_left
-			list-style: $post_content_list_style !important
+		margin-top: $main_spacing
 
-		.date
+	//hr
 
-			margin-top: $main_spacing
+		//margin-top: $post_horizontal_rule_margin_top
+		//margin-bottom: $post_horizontal_rule_margin_bottom
 
-		//hr
-
-			//margin-top: $post_content_horizontal_rule_margin_top
-			//margin-bottom: $post_content_horizontal_rule_margin_bottom
 
 	.footer
 
 		display: flex
 		align-content: space-around
-		//background-color: $post_footer_background_color
+		background-color: $post_footer_background_color
 		margin: $post_footer_margin
 		padding: $post_footer_padding_top $post_footer_padding_right $post_footer_padding_bottom $post_footer_padding_left
 		border-radius: $post_footer_border_radius_top_left $post_footer_border_radius_top_right $post_footer_border_radius_bottom_right $post_footer_border_radius_bottom_left !important

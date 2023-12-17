@@ -1,10 +1,11 @@
 @import setup
 
 
-.timeline
+#timeline
 
 	margin: $timeline_margin_top $timeline_margin_right $timeline_margin_bottom $timeline_margin_left
 	padding: $timeline_padding_top $timeline_padding_right $timeline_padding_bottom $timeline_padding_left
+	display: flex
 
 	.page_title
 
@@ -38,6 +39,8 @@
 		margin-left: $timeline_posts_margin_left
 		margin-right: $timeline_posts_margin_right
 		padding-left: $timeline_posts_padding_left
+		display: flex
+		flex-direction: column
 
 		.post
 

@@ -2,21 +2,14 @@
 
 @media screen and (max-width: $responsive_screen_width)
 
-	#timeline_index
-
-		//display: none
-		//position: relative
-		width: $responsive_screen_timeline_index_width
-		padding-top: $responsive_screen_timeline_index_padding_top
-		padding-bottom: $responsive_screen_timeline_index_padding_bottom
-
-	.timeline
+	#timeline
 
 		padding: $responsive_screen_timeline_padding
+		flex-wrap: wrap
 
 		.posts
 
-			margin-left:  $responsive_screen_timeline_posts_margin_left
+			margin-left: $responsive_screen_timeline_posts_margin_left
 			margin-right: $responsive_screen_timeline_posts_margin_left
 
 		.post
@@ -25,5 +18,29 @@
 
 		.page_title
 
+			display: flex
 			z-index: $responsive_screen_timeline_page_heading_z_index
 
+	#timeline_index
+
+		//display: none
+		//position: relative
+		width: $responsive_screen_timeline_index_width
+		padding-top: $responsive_screen_timeline_index_padding_top
+		padding-bottom: $responsive_screen_timeline_index_padding_bottom
+
+	.post
+
+		h1
+
+			width: 100%
+			border-radius: 0 0 $main_border_radius $main_border_radius !important
+			display: flex
+			
+		.post_category
+
+			width: 100%
+			border-radius: $main_border_radius $main_border_radius 0 0 !important
+			display: flex
+			text-align: center
+		

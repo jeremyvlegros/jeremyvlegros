@@ -6,30 +6,26 @@ layout : layout_base
 
 {%- capture html_1690569561039 -%}
 
-	<div class="timeline">
+	<div id="timeline">
 		{%- comment -%}printing content of the next thing {%- endcomment -%}
 		{{ content }}
 
-			<div id="timeline_index">
+		<div id="timeline_index">
 
-						<div class="timeline_index_content">
+			{%- if page_title_1690569561039 -%}
 
-							{%- if page_title_1690569561039 -%}
+				{% comment %} #tag page title {% endcomment %}
+				<h1 class="page_title">
+					{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}
+				</h1>
 
-								{% comment %} #tag page title {% endcomment %}
-								<h1 class="page_title">
-									{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}
-								</h1>
+			{%- endif -%}
 
-							{%- endif -%}
+			<ul role="menu">
+				{{ html_timeline_index_list_1690569561039 }}
+			</ul>
 
-							<ul role="menu">
-								{{ html_timeline_index_list_1690569561039 }}
-							</ul>
-
-						</div>
-
-				</div>
+		</div>
 			
 			<div class="posts">
 				{{ html_posts_1690569561039 }}
@@ -46,7 +42,7 @@ layout : layout_base
 
 			{%- endif -%}
 
-			
+
 			{%- if page_date_of_modification_1690569561039 -%}
 
 				<span class="date">
