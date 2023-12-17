@@ -1,6 +1,5 @@
 name : "website"
 
-
 sass:
   style: compressed
   sourcemap: never
