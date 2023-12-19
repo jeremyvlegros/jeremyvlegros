@@ -1,7 +1,7 @@
 name : "website"
 
 sass:
-  style: compressed
+  style: nested
   sourcemap: never
 
 collections:
