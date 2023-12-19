@@ -1,4 +1,32 @@
 name : "website"
 
+sass:
+  style: compressed
+  sourcemap: never
+
+collections:
+  tag :
+    output: true
+    permalink : /tag/:path
+
+defaults :
+  - scope:
+      path: ""
+      type : "posts"
+    values:
+      layout: "layout_post"
+      category: "post"
+  - scope:
+      path: ""
+      type: "tag"
+    values:
+      layout: "layout_timeline"
+
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+
 ARRAY_EMPTY : []
 
