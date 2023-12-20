@@ -1,19 +1,24 @@
 {%- comment -%} main value {%- endcomment -%}
 {%- assign html_the_posts_1690556428999239446 = null -%}
 
-{%- comment -%} using two conditions in one if because the code is becoming too convoluted {%- endcomment -%}
-{%- if include.from_posts and include.from_posts != "" -%}
+{%- comment -%} posts_1690556428999239446 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_posts -%}
+{%- assign posts_1690556428999239446 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign first_post_1690556428999239446 = include.from_posts[0] -%}
+{%- if posts_1690556428999239446 -%}
+
+	{%- assign first_post_1690556428999239446 = posts_1690556428999239446[0] -%}
 	{%- comment -%} first_post_id_1690556428999239446 {%- endcomment -%}
-	{%- include as_string_the_id_from_post.liquid from_post=first_post_1690556428999239446 -%}
+	{%- include as_string_the_post_id_from_post.liquid from_post=first_post_1690556428999239446 -%}
 	{%- assign first_post_id_1690556428999239446 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign last_post_1690556428999239446 = include.from_posts[-1] -%}
+	{%- assign last_post_1690556428999239446 = posts_1690556428999239446[-1] -%}
 	{%- comment -%} first_post_id_1690556428999239446 {%- endcomment -%}
-	{%- include as_string_the_id_from_post.liquid from_post=last_post_1690556428999239446 -%}
+	{%- include as_string_the_post_id_from_post.liquid from_post=last_post_1690556428999239446 -%}
 	{%- assign last_post_id_1690556428999239446 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -27,7 +32,7 @@
 	{%- capture html_the_posts_1690556428999239446 -%}
 
 		{%- comment -%} generating the post list {%- endcomment -%}
-		{%- for post in include.from_posts -%}
+		{%- for post in posts_1690556428999239446 -%}
 
 			{%- comment -%} enforcing posts with post layout {%- endcomment -%}
 			{%- if post.layout == "layout_post" -%}

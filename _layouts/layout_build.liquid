@@ -164,7 +164,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 	</div>
 
-	<div> {% comment  %} <h3>`as_string_the_id_from_date.liquid`</h3> {% endcomment %}
+	<div> {% comment  %} <h3>`as_string_the_post_id_from_date.liquid`</h3> {% endcomment %}
 
 		{% comment %}<pre>{% endcomment %}
 		{% assign input = "#date 2023-06-28 05:16 1687914994970097614 GMT" %}
@@ -172,7 +172,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 		{% assign expected = "1687914994970097614" %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_date.liquid from_date=input %}
+		{% include as_string_the_post_id_from_date.liquid from_date=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}
@@ -182,7 +182,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ correct date format]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 		{% assign expected = null %}
 		{% assign result = null %}
@@ -196,7 +196,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 		{% assign expected = null %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_date.liquid from_date=input %}
+		{% include as_string_the_post_id_from_date.liquid from_date=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}
@@ -206,7 +206,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ date empty string]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 
 		{% assign expected = null %}
@@ -221,7 +221,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 		{% assign expected = null %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_date.liquid from_date=input %}
+		{% include as_string_the_post_id_from_date.liquid from_date=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}
@@ -231,7 +231,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ date null]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 
 		{% assign expected = null %}
@@ -1110,7 +1110,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ as array from empty string]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 		{% assign expected = null %}
 		{% assign result = null %}
@@ -1135,7 +1135,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ as array from string with commas and multiple spaces]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 		{% assign expected = null %}
 		{% assign result = null %}
@@ -1160,7 +1160,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ as array from string with multiple spaces]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 		{% assign expected = null %}
 		{% assign result = null %}
@@ -1185,7 +1185,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 		{% comment %} procedure_assert_from_this_and_from_that {% endcomment %}
 		{% comment %}[ as array from string with null]{% endcomment %}
-		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_id_from_date.liquid" with_input=with_input%}
+		{% include procedure_assert_from_this_and_from_that_with_success_with_warning_with_name_with_input.liquid from_this=expected from_that=result with_success=BUILD_WITH_SUCCESS with_warning="1" with_name="as_string_the_post_id_from_date.liquid" with_input=with_input%}
 
 		{% assign expected = null %}
 		{% assign result = null %}
@@ -1201,14 +1201,14 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 
 	<div>
 	{% comment %}<pre>{% endcomment %}
-		{% comment %} as_string_the_id_from_post.liquid {% endcomment %}
+		{% comment %} as_string_the_post_id_from_post.liquid {% endcomment %}
 
 		{% assign input = POSTS[-1] %}
 		{% assign with_input= POSTS[-1] %}
 		{% assign expected = "1684454400000000000" %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_post.liquid from_post=input %}
+		{% include as_string_the_post_id_from_post.liquid from_post=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}
@@ -1233,7 +1233,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 		{% assign expected = null %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_post.liquid from_post=input %}
+		{% include as_string_the_post_id_from_post.liquid from_post=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}
@@ -1258,7 +1258,7 @@ date_of_creation : #date 2023-08-05 13:33 1691228001990694083 GMT
 		{% assign expected = null %}
 
 		{% comment %} result {% endcomment %}
-		{% include as_string_the_id_from_post.liquid from_post=input %}
+		{% include as_string_the_post_id_from_post.liquid from_post=input %}
 		{% assign result = return %}
 		{% assign return = null %}
 		{% comment %} `Liquid` does not have functions {% endcomment %}

@@ -23,13 +23,13 @@
 	{%- if boolean_first_run == true -%}
 
 		{%- comment -%} final_first_post_id {%- endcomment -%}
-		{%- include as_string_the_id_from_post.liquid from_post=first_post -%}
+		{%- include as_string_the_post_id_from_post.liquid from_post=first_post -%}
 		{%- assign final_first_post_id = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 		{%- comment -%} final_post_id {%- endcomment -%}
-		{%- include as_string_the_id_from_post.liquid from_post=last_post -%}
+		{%- include as_string_the_post_id_from_post.liquid from_post=last_post -%}
 		{%- assign final_last_post_id = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -39,13 +39,13 @@
 	{%- else -%}
 
 		{%- comment -%} first_post_id {%- endcomment -%}
-		{%- include as_string_the_id_from_post.liquid from_post=first_post -%}
+		{%- include as_string_the_post_id_from_post.liquid from_post=first_post -%}
 		{%- assign first_post_id=return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 		{%- comment -%} last_post_id {%- endcomment -%}
-		{%- include as_string_the_id_from_post.liquid from_post=last_post -%}
+		{%- include as_string_the_post_id_from_post.liquid from_post=last_post -%}
 		{%- assign last_post_id=return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}

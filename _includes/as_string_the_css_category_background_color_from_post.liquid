@@ -8,7 +8,7 @@
 
 {%- else -%}
 
-	{%- assign category_background_color_1702840891478266847 = prefix_category_1702840891478266847 | append: post.category | append: suffix_category_1702840891478266847 -%}
+	{%- assign category_background_color_1702840891478266847 = prefix_category_1702840891478266847 | append: include.from_post.category | append: suffix_category_1702840891478266847 -%}
 
 {%- endif -%}
 

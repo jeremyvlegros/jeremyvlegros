@@ -79,7 +79,7 @@
 {%- if post_date_of_creation_1691010490420939832 -%}
 
 	{%- comment -%} id {%- endcomment -%}
-	{%- include as_string_the_id_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+	{%- include as_string_the_post_id_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
 	{%- assign post_id_1691010490420939832 = return -%}
 	{%- assign return = null -%}
 
@@ -221,7 +221,7 @@
 {%- capture post_tags_1691010490420939832 -%}
 
 	{%- comment -%} button `#tags` {%- endcomment -%}
-	{%- include as_string_the_html_tag_from_word.liquid from_word="tags" -%}
+	{%- include as_string_the_html_button_tag_from_word.liquid from_word="tags" -%}
 	{%- assign button_tags_1691010490420939832 = return | append: " " -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -341,7 +341,7 @@
 			{%- endif -%}
 
 			{%- comment -%} getting tag {%- endcomment -%}
-			{%- include as_string_the_html_tag_from_word.liquid from_word=tag -%}
+			{%- include as_string_the_html_button_tag_from_word.liquid from_word=tag -%}
 
 			{%- comment -%} 
 			the space is just for PHP storm because it keeps removing trailing and starting space at reformatting
