@@ -20,17 +20,18 @@
 	{%- assign last_post_id_1691010490420939832 = null -%}
 {%- endif -%}
 
-{%- comment -%} dealing with non post parameter {%- endcomment -%}
+{%- comment -%} post_content_1691010490420939832 {%- endcomment -%}
 {%- if include.from_post.layout == "layout_post" -%}
-
-
-	{%- comment -%}  {%- endcomment -%}
+	
+	{%- comment -%} page {%- endcomment -%}
 
 	{%- if include.from_post.category == "" or include.from_post.category == null -%}
 
 		{%- assign post_content_1691010490420939832 = content -%}
 
 	{%- else -%}
+		
+	{%- comment -%} post {%- endcomment -%}
 
 		{%- assign post_content_1691010490420939832 = include.from_post.content -%}
 
@@ -85,127 +86,43 @@
 
 {%- endif -%}
 
+{%- comment -%} post_title_1691010490420939832 {%- endcomment -%}
+{%- include as_string_the_html_post_title_from_post.liquid from_post=include.from_post -%}
+{%- assign post_title_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%} post_title_1691010490420939832 @title {%- endcomment -%}
-{%- if post_title_1691010490420939832 -%}
+{%- comment -%} post_date_of_creation_1691010490420939832 {%- endcomment -%}
+{%- include as_string_the_html_date_of_creation_from_post.liquid from_post=include.from_post -%}
+{%- assign post_date_of_creation_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- comment -%} category_background_color {%- endcomment -%}
-	{%- include as_string_the_css_category_background_color_from_post.liquid from_post=include.from_post -%}
-	{%- assign category_background_color = return -%}
-	{%- assign return = null -%}
-	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- comment -%} post_date_of_modification_1691010490420939832 {%- endcomment -%}
+{%- include as_string_the_html_date_of_modification_from_post.liquid from_post=include.from_post -%}
+{%- assign post_date_of_modification_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- comment -%} post_title_1691010490420939832 {%- endcomment -%}
-	{%- include as_string_the_processed_markdown_without_paragraph_tags_from_text.liquid from_text = post_title_1691010490420939832 -%}
-	{%- assign post_title_1691010490420939832 = return -%}
-	{%- assign return = null -%}
-	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+{%- comment -%} button newest_post {%- endcomment -%}
+{%- include as_string_the_html_button_newest_post_from_post_id.liquid from_post_id=first_post_id_1691010490420939832 -%}
+{%- assign button_newest_post_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- capture post_title_1691010490420939832 -%}
-		<div class="post_title">
-		<span class="post_category {{ category_background_color }}">
-			<span class="reader">[</span>
-			{{ post.category | capitalize }}
-			<span class="reader">]</span>
-		</span>
-		<h1 id="{{ post_id_1691010490420939832 }}" itemprop="name headline" aria-label="post title">
-			{%- comment -%} <span class="category">⌜{{ post.category | capitalize }}⌟</span> {%- endcomment -%}
-			{%- comment -%} thank you `PHP Storm` for making me writing spaces the hard way, I can level up my patience skills {%- endcomment -%}
-			{{ " " | append: post_title_1691010490420939832  }}
-		</h1>
-	</div>
+{%- comment -%} button oldest_post {%- endcomment -%}
+{%- include as_string_the_html_button_oldest_post_from_post_id.liquid from_post_id=last_post_id_1691010490420939832 -%}
+{%- assign button_oldest_post_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- endcapture -%}
+{%- comment -%} button_home_1691010490420939832 {%- endcomment -%}
+{%- include as_string_the_html_button_home.liquid -%}
+{%- assign button_home_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- endif -%}
-
-{%- comment -%} post_date_of_creation_1691010490420939832 HTML {%- endcomment -%}
-{%- if post_date_of_creation_1691010490420939832 -%}
-
-	{%- capture post_date_of_creation_1691010490420939832 -%}
-
-		{%- comment -%} formatted_date_1691010490420939832 {%- endcomment -%}
-		{%- include as_string_the_formatted_creation_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
-		{%- assign formatted_date_1691010490420939832 = return -%}
-		{%- assign return = null -%}
-		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-		{%- comment -%} machine_date {%- endcomment -%}
-		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
-		{%- assign machine_date_1691010490420939832 = return -%}
-		{%- assign return = null -%}
-		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-		<time class='date' datetime="{{ machine_date_1691010490420939832 }}"
-					aria-label="creation date">{{ formatted_date_1691010490420939832 }}</time>
-	{%- endcapture -%}
-
-{%- endif -%}
-
-{%- comment -%} post_date_of_modification_1691010490420939832 HTML {%- endcomment -%}
-{%- if post_date_of_modification_1691010490420939832 -%}
-
-	{%- capture post_date_of_modification_1691010490420939832 -%}
-
-		{%- comment -%} formatted_date_1691010490420939832 {%- endcomment -%}
-		{%- include as_string_the_formatted_modification_date_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
-		{%- assign formatted_date_1691010490420939832 = return -%}
-		{%- assign return = null -%}
-		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-		{%- comment -%} machine_date_1691010490420939832 {%- endcomment -%}
-		{% comment -%} @task: I need to test the machine date function with modification dates
-		{% endcomment -%}
-
-		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_modification_1691010490420939832 -%}
-		{%- assign machine_date_1691010490420939832 = return -%}
-		{%- assign return = null -%}
-		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-		{% comment -%}{% endcomment -%}
-
-		<!-- machine_date_1691010490420939832 : `{{ machine_date_1691010490420939832 | JSONIFY }}` !-->
-
-		{% comment -%}{% endcomment -%}
-
-		<time class="date" datetime="{{ machine_date_1691010490420939832 }}"
-					aria-label="modification date"> {{ formatted_date_1691010490420939832 }} </time>
-
-	{%- endcapture -%}
-
-{%- endif -%}
-
-{%- comment -%} top button {%- endcomment -%}
-{%- capture button_newest_post_1691010490420939832 -%}
-
-	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-	<a class="button button_newest_post_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-	{{ BUTTON_TOP | append: " " }}
-	</a>
-
-{%- endcapture -%}
-
-{%- comment -%} bottom button {%- endcomment -%}
-{%- capture button_bottom_1691010490420939832 -%}
-
-	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-	<a class="button button_oldest_post_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
-		{{ BUTTON_BOTTOM | append: " " }}
-	</a>
-
-{%- endcapture -%}
-
-{%- comment -%} home button {%- endcomment -%}
-{%- capture button_home_1691010490420939832 -%}
-
-	<a class="button button_home_background_color" href="{{ '/' | relative_url }}">
-	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
-		{{ BUTTON_HOME }} 
-	</a>
-
-{%- endcapture -%}
-
-{%- comment -%} id button in timeline {%- endcomment -%}
+{%- comment -%} button post {%- endcomment -%}
 {%- capture button_id_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
@@ -226,13 +143,13 @@
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- comment -%} first post : muting top button {%- endcomment -%}
+	{%- comment -%} first post : muting newest post button {%- endcomment -%}
 	{%- if first_post_id_1691010490420939832 -%}
 
 		{%- comment -%} if the post id is the first one{%- endcomment -%}
 		{%- if post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
 
-			{%- comment -%} don't display the top button {%- endcomment -%}
+			{%- comment -%} don't display the newest button {%- endcomment -%}
 			{%- assign button_newest_post_1691010490420939832 = null -%}
 
 		{%- endif -%}
@@ -245,7 +162,7 @@
 		{%- comment -%} if the post id is the first one{%- endcomment -%}
 		{%- if post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
 
-			{%- comment -%} don't display the bottom button {%- endcomment -%}
+			{%- comment -%} don't display the oldest post button {%- endcomment -%}
 			{%- assign button_oldest_post_1691010490420939832 = null -%}
 
 		{%- endif -%}
@@ -267,10 +184,10 @@
 		{%- comment -%} doesn't show id in single posts {%- endcomment -%}
 		{%- assign button_id_1691010490420939832 = null -%}
 
-		{%- comment -%}doesn't show bottom button in single posts {%- endcomment -%}
+		{%- comment -%}doesn't show oldest post button in single posts {%- endcomment -%}
 		{%- assign button_oldest_post_1691010490420939832 = null -%}
 
-		{%- comment -%}doesn't show the newest top button in single posts {%- endcomment -%}
+		{%- comment -%}doesn't show the newest newest post button in single posts {%- endcomment -%}
 		{%- assign button_newest_post_1691010490420939832 = null -%}
 
 		{%- comment -%} buttom `#posts` {%- endcomment -%}
@@ -391,10 +308,10 @@
 		{%- comment -%} home button {%- endcomment -%}
 		{{ button_home_1691010490420939832 }}
 
-		{%- comment -%} top button {%- endcomment -%}
+		{%- comment -%} newest post button {%- endcomment -%}
 		{{ button_newest_post_1691010490420939832 }}
 
-		{%- comment -%} bottom button {%- endcomment -%}
+		{%- comment -%} oldest post button {%- endcomment -%}
 		{{ button_oldest_post_1691010490420939832 }}
 
 		{%- comment -%} id button {%- endcomment -%}
