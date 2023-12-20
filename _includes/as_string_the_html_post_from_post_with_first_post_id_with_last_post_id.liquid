@@ -176,10 +176,10 @@
 {%- endif -%}
 
 {%- comment -%} top button {%- endcomment -%}
-{%- capture button_top_1691010490420939832 -%}
+{%- capture button_newest_post_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: first_post_id_1691010490420939832 | relative_url -%}
-	<a class="button button_top_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
+	<a class="button button_newest_post_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
 	{{ BUTTON_TOP | append: " " }}
 	</a>
 
@@ -189,7 +189,7 @@
 {%- capture button_bottom_1691010490420939832 -%}
 
 	{%- assign tag_url_1691010490420939832 = page.url | append: "#" | append: last_post_id_1691010490420939832 | relative_url -%}
-	<a class="button button_bottom_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
+	<a class="button button_oldest_post_background_color" href="{{ tag_url_1691010490420939832 }}" role="button">
 		{{ BUTTON_BOTTOM | append: " " }}
 	</a>
 
@@ -233,7 +233,7 @@
 		{%- if post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
 
 			{%- comment -%} don't display the top button {%- endcomment -%}
-			{%- assign button_top_1691010490420939832 = null -%}
+			{%- assign button_newest_post_1691010490420939832 = null -%}
 
 		{%- endif -%}
 
@@ -257,7 +257,7 @@
 
 		{%- comment -%} don't display the buttons {%- endcomment -%}
 		{%- assign button_bottom_1691010490420939832 = null -%}
-		{%- assign button_top_1691010490420939832 = null -%}
+		{%- assign button_newest_post_1691010490420939832 = null -%}
 
 	{%- endif -%}
 
@@ -271,7 +271,7 @@
 		{%- assign button_bottom_1691010490420939832 = null -%}
 
 		{%- comment -%}doesn't show top button in single posts {%- endcomment -%}
-		{%- assign button_top_1691010490420939832 = null -%}
+		{%- assign button_newest_post_1691010490420939832 = null -%}
 
 		{%- comment -%} buttom `#posts` {%- endcomment -%}
 		{%- capture button_posts_1691010490420939832 -%}
@@ -312,7 +312,7 @@
 
 		{%- assign button_tags_1691010490420939832 = null -%}
 		{%- assign button_id_1691010490420939832 = null -%}
-		{%- assign button_top_1691010490420939832 = null -%}
+		{%- assign button_newest_post_1691010490420939832 = null -%}
 		{%- assign button_bottom_1691010490420939832 = null -%}
 
 	{%- endif -%}
@@ -392,7 +392,7 @@
 		{{ button_home_1691010490420939832 }}
 
 		{%- comment -%} top button {%- endcomment -%}
-		{{ button_top_1691010490420939832 }}
+		{{ button_newest_post_1691010490420939832 }}
 
 		{%- comment -%} bottom button {%- endcomment -%}
 		{{ button_bottom_1691010490420939832 }}
@@ -457,7 +457,7 @@
 {%- assign tag_url_1691010490420939832 = null -%}
 {%- assign first_post_id_1691010490420939832 = null -%}
 {%- assign last_post_id_1691010490420939832 = null -%}
-{%- assign button_top_1691010490420939832 = null -%}
+{%- assign button_newest_post_1691010490420939832 = null -%}
 {%- assign button_bottom_1691010490420939832 = null -%}
 {%- assign button_home_1691010490420939832 = null -%}
 {%- assign button_tags_1691010490420939832 = null -%}
