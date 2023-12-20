@@ -15,7 +15,6 @@ defaults :
       type : "posts"
     values:
       layout: "layout_post"
-      category: "post"
   - scope:
       path: ""
       type: "tag"
