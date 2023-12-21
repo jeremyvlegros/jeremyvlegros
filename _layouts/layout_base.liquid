@@ -7,11 +7,11 @@ boolean_remove_bootstrap : null
 ---
 {%- include procedure_initialize_layout_base.liquid -%}
 
-{%- comment -%} Because PHP Storm is screaming *red* at me that it is a liquid file {%- endcomment -%}
 {%- include CONSTANTS/DOCTYPE_HTML.liquid -%}
 
 {%- capture html_1690569717129 -%}
 
+	{%- comment -%} Because PHP Storm is screaming *red* that it is a liquid file {%- endcomment -%}
 	{{ DOCTYPE_HTML }}
 	
 	<html lang="en">
@@ -31,7 +31,7 @@ boolean_remove_bootstrap : null
 		{{ page_url_css_1690569717129 }}
 		{{ page_favicon_1690569717129 }}
 		
-		{%- comment -%} now PHP STORM happy, for information, it is still needed when this file was renamed to `.liquid` whereas doctype html was showed as error {%- endcomment -%}
+		{%- comment -%} now PHP STORM happy, it is still needed even when the file is `.liquid` whereas doctype html was showed as error {%- endcomment -%}
 		{%- if page_title_1690569717129 -%}
 			<title>
 				{{ page_title_1690569717129 }}
@@ -41,7 +41,7 @@ boolean_remove_bootstrap : null
 
 	<body>
 
-			<main class="page" aria-label="Content">
+			<main class="page" aria-label="page">
 
 			{{ content }}
 
