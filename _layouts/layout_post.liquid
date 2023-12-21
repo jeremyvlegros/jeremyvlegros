@@ -6,5 +6,9 @@ date_of_modification : null
 no_background_color  : null
 ---
 
-{%- include as_string_the_html_post_from_post_with_first_post_id_with_last_post_id.liquid from_post=page -%}{{ return | strip_newlines | replace : TABULATION, ""}}
+{% comment %} Do not split the function into a layout, it is used in timeline {% endcomment %}
+
+{%- include as_string_the_html_post_from_post_with_first_post_id_with_last_post_id.liquid from_post=page -%}
+
+{%- include procedure_display_the_minified_html_from_html.liquid from_html=return -%}
 
