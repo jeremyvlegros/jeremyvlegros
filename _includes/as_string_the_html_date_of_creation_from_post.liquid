@@ -1,0 +1,34 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} post_date_of_creation_1691010490420939832 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_post.date_of_creation -%}
+{%- assign post_date_of_creation_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} post_date_of_creation_1691010490420939832 HTML {%- endcomment -%}
+{%- if post_date_of_creation_1691010490420939832 -%}
+
+	{%- capture post_date_of_creation_1691010490420939832 -%}
+
+		{%- comment -%} formatted_date_1691010490420939832 {%- endcomment -%}
+		{%- include as_string_the_formatted_creation_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+		{%- assign formatted_date_1691010490420939832 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		
+		{%- comment -%} machine_date {%- endcomment -%}
+		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
+		{%- assign machine_date_1691010490420939832 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+		
+		<time class='date' datetime="{{ machine_date_1691010490420939832 }}"
+					aria-label="creation date">{{ formatted_date_1691010490420939832 }}</time>
+	{%- endcapture -%}
+
+{%- endif -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = post_date_of_creation_1691010490420939832 -%}

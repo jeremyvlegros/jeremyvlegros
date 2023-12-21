@@ -1,0 +1,20 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} post_id_1703036136228950062 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_post_id -%}
+{%- assign post_id_1703036136228950062 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- capture return -%}
+
+	{%- assign tag_url_1703036136228950062 = page.url | append: "#" | append: post_id_1703036136228950062 | relative_url -%}
+	<a class="button button_oldest_post_background_color" href="{{ tag_url_1703036136228950062 }}" role="button">
+		{{ BUTTON_OLDEST_POST | append: " " }}
+	</a>
+
+{%- endcapture -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign tag_url_1703036136228950062 = null -%}
+{%- assign post_id_1703036136228950062 = null -%}

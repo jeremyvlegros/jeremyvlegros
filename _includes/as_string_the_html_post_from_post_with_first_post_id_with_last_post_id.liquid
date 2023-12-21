@@ -1,28 +1,22 @@
 {%- include CONSTANTS/ALL.liquid -%}
 
-{%- assign post_content_1691010490420939832 = null -%}
-{% comment %}{%- assign post_no_background_color_1691010490420939832 = include.from_post.no_background_color -%}{% endcomment %}
-{%- assign post_date_of_creation_1691010490420939832 = include.from_post.date_of_creation -%}
-{%- assign post_date_of_modification_1691010490420939832 = include.from_post.date_of_modification -%}
-{%- assign post_title_1691010490420939832 = include.from_post.title -%}
 {%- assign post_tags_1691010490420939832 = include.from_post.tags -%}
-{%- assign post_id_1691010490420939832 = null -%}
-{%- assign first_post_id_1691010490420939832 = include.with_first_post_id -%}
-{%- assign last_post_id_1691010490420939832 = include.with_last_post_id -%}
 
-{%- comment -%} dealing with empty string : first_post_id_1691010490420939832 {%- endcomment -%}
-{%- if first_post_id_1691010490420939832 == "" -%}
-	{%- assign first_post_id_1691010490420939832 = null -%}
-{%- endif -%}
+{%- comment -%} first_post_id_1691010490420939832 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.with_first_post_id -%}
+{%- assign first_post_id_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%} dealing with empty string : first_post_id_1691010490420939832 {%- endcomment -%}
-{%- if last_post_id_1691010490420939832 == "" -%}
-	{%- assign last_post_id_1691010490420939832 = null -%}
-{%- endif -%}
+{%- comment -%} last_post_id_1691010490420939832 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.with_last_post_id -%}
+{%- assign last_post_id_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} post_content_1691010490420939832 {%- endcomment -%}
 {%- if include.from_post.layout == "layout_post" -%}
-	
+
 	{%- comment -%} page {%- endcomment -%}
 
 	{%- if include.from_post.category == "" or include.from_post.category == null -%}
@@ -30,8 +24,8 @@
 		{%- assign post_content_1691010490420939832 = content -%}
 
 	{%- else -%}
-		
-	{%- comment -%} post {%- endcomment -%}
+
+		{%- comment -%} post {%- endcomment -%}
 
 		{%- assign post_content_1691010490420939832 = include.from_post.content -%}
 
@@ -39,52 +33,10 @@
 
 {%- endif -%}
 
-{%- comment -%} dealing with empty string : no_background_color {%- endcomment -%}
-{%- if post_no_background_color_1691010490420939832 == "" -%}
-	{%- assign post_no_background_color_1691010490420939832 = null -%}
-{%- endif -%}
-
-{%- comment -%} dealing with empty string : date_of_creation {%- endcomment -%}
-{%- if post_date_of_creation_1691010490420939832 == "" -%}
-	{%- assign post_date_of_creation_1691010490420939832 = null -%}
-{%- endif -%}
-
-{%- comment -%} dealing with empty string : date_of_modification {%- endcomment -%}
-{%- if post_date_of_modification_1691010490420939832 == "" -%}
-	{%- assign post_date_of_modification_1691010490420939832 = null -%}
-{%- endif -%}
-
-{%- comment -%} dealing with empty string : title {%- endcomment -%}
-{%- if post_title_1691010490420939832 == "" -%}
-	{%- assign post_title_1691010490420939832 = null -%}
-{%- endif -%}
-
-{%- comment -%} generating post_no_background_color_1691010490420939832 {%- endcomment -%}
-{%- comment -%} option {%- endcomment -%}
-{%- if post_no_background_color_1691010490420939832 -%}
-
-	{%- comment -%} preventing random behavior{%- endcomment -%}
-	{%- assign post_background_color_1691010490420939832 = null -%}
-
-{%- else -%}
-
-	{%- comment -%} generating post_background_color_1691010490420939832 {%- endcomment -%}
-	{%- include as_string_the_css_class_for_the_background_color_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
-	{%- assign post_background_color_1691010490420939832 = return -%}
-	{%- assign return = null -%}
-	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-{%- endif -%}
-
-{%- comment -%} post ID {%- endcomment -%}
-{%- if post_date_of_creation_1691010490420939832 -%}
-
-	{%- comment -%} id {%- endcomment -%}
-	{%- include as_string_the_post_id_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
-	{%- assign post_id_1691010490420939832 = return -%}
-	{%- assign return = null -%}
-
-{%- endif -%}
+{%- comment -%} post id {%- endcomment -%}
+{%- include as_string_the_post_id_from_date.liquid from_date=include.from_post.date_of_creation -%}
+{%- assign post_id_1691010490420939832 = return -%}
+{%- assign return = null -%}
 
 {%- comment -%} post_title_1691010490420939832 {%- endcomment -%}
 {%- include as_string_the_html_post_title_from_post.liquid from_post=include.from_post -%}
@@ -116,196 +68,188 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- comment -%} button_home_1691010490420939832 {%- endcomment -%}
+{%- comment -%} button home {%- endcomment -%}
 {%- include as_string_the_html_button_home.liquid -%}
 {%- assign button_home_1691010490420939832 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button post {%- endcomment -%}
-{%- capture button_id_1691010490420939832 -%}
+{%- include as_string_the_html_button_post_from_post.liquid from_post=include.from_post -%}
+{%- assign button_post_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign tag_url_1691010490420939832 = "/post/" | append: post_id_1691010490420939832 | relative_url -%}
-	{%- comment -%} don't place this on an other line, PHP storm × Liquid is weird with spaces, one liner are the only safe way{%- endcomment -%}
-	<a class="button button_open_background_color"
-		 href="{{ tag_url_1691010490420939832 }}">{{ BUTTON_POST | append: " " }}
-		{%- comment -%} href="{{ tag_url_1691010490420939832 }}"> #{{ post_id_1691010490420939832 }} {%- endcomment -%}
-	</a>
+{%- comment -%} button `#tags` {%- endcomment -%}
+{%- include as_string_the_html_button_tag_from_word.liquid from_word="tags" -%}
+{%- assign button_tags_1691010490420939832 = return | append: " " -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} buttom `#posts` for post layout {%- endcomment -%}
+{%- capture button_posts_1691010490420939832 -%}
+	{%- if page.layout == "layout_post" -%}
+
+		{%- comment -%} when in `#tags` post {%- endcomment -%}
+		{%- if page.title == "#tags" -%}
+			<a class="button {{ background_color }}" href="{{ '/tag/posts' | relative_url }}">
+			#posts 
+			</a>
+
+		{%- else -%}
+			{%- comment -%} <a class="button {{ background_color }}" {%- endcomment -%}
+			<a class="button button_home_background_color"
+				 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
+			Back 
+			</a>
+		{%- endif -%}
+
+	{%- endif -%}
 
 {%- endcapture -%}
 
-{%- comment -%} post tags {%- endcomment -%}
+{% comment %} vvvvvvvvvvvvvvv MUTING BUTTONS vvvvvvvvvvvvvvv {% endcomment %}
+
+{%- assign _page_title_1691010490420939832 = page.title | downcase -%}
+
+{%- comment -%} home page : muting home button {%- endcomment -%}
+{%- if _page_title_1691010490420939832 == "home" -%}
+	{%- assign button_home_1691010490420939832 = null -%}
+{%- endif -%}
+
+{%- comment -%} tags page : muting tags button & other {%- endcomment -%}
+{%- if _page_title_1691010490420939832 == "#tags" -%}
+
+	{%- assign button_tags_1691010490420939832 = null -%}
+	{%- assign button_post_1691010490420939832 = null -%}
+	{%- assign button_newest_post_1691010490420939832 = null -%}
+	{%- assign button_oldest_post_1691010490420939832 = null -%}
+
+{%- endif -%}
+
+{%- if first_post_id_1691010490420939832 -%}
+
+	{%- comment -%} if the post id is the first one{%- endcomment -%}
+	{%- if post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
+
+		{%- comment -%} don't display the newest button {%- endcomment -%}
+		{%- assign button_newest_post_1691010490420939832 = null -%}
+
+	{%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%} last post : muting last button {%- endcomment -%}
+{%- if last_post_id_1691010490420939832 -%}
+
+	{%- comment -%} if the post id is the first one{%- endcomment -%}
+	{%- if post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
+
+		{%- comment -%} don't display the oldest post button {%- endcomment -%}
+		{%- assign button_oldest_post_1691010490420939832 = null -%}
+
+	{%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%} only one post : muting last and first button {%- endcomment -%}
+{%- if first_post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
+
+	{%- comment -%} don't display the buttons {%- endcomment -%}
+	{%- assign button_oldest_post_1691010490420939832 = null -%}
+	{%- assign button_newest_post_1691010490420939832 = null -%}
+
+{%- endif -%}
+
+{%- if page.layout == "layout_post" -%}
+
+	{%- comment -%} doesn't show id in single posts {%- endcomment -%}
+	{%- assign button_post_1691010490420939832 = null -%}
+
+	{%- comment -%}doesn't show oldest post button in single posts {%- endcomment -%}
+	{%- assign button_oldest_post_1691010490420939832 = null -%}
+
+	{%- comment -%}doesn't show the newest newest post button in single posts {%- endcomment -%}
+	{%- assign button_newest_post_1691010490420939832 = null -%}
+
+{%- endif -%}
+{% comment %} ^^^^^^^^^^^^^^ END OF MUTING BUTTONS ^^^^^^^^^^^^^^ {% endcomment %}
+
+{%- comment -%} tags {%- endcomment -%}
+{%- capture tags_1691010490420939832 -%}
+
+	{%- for tag in post_tags_1691010490420939832 -%}
+
+		{%- comment -%} --- skipping conditions --- {%- endcomment -%}
+		{%- comment -%} using `if` to collapse code in IDE {%- endcomment -%}
+		{%- if true -%}
+
+			{%- unless tag contains "#" -%}
+				{%- continue -%}
+			{%- endunless -%}
+
+			{%- if page.category == "post" -%}
+
+				{%- if tag == "#posts" -%}
+					{%- continue -%}
+				{%- endif -%}
+
+			{%- endif -%}
+
+		{%- endif -%}
+
+		{%- comment -%} getting tag {%- endcomment -%}
+		{%- include as_string_the_html_button_tag_from_word.liquid from_word=tag -%}
+
+		{%- comment -%} 
+		the space is just for PHP storm because it keeps removing trailing and starting space at reformatting
+		{%- endcomment -%}
+
+		{%- assign tag_1691010490420939832 = return | append: " " -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		{%- comment -%} only for timeline tags, ignore tag if same as page {%- endcomment -%}
+		{% comment -%}@task : category
+		{% endcomment -%}
+		{%- if page.category != "post" -%}
+
+			{%- comment -%} get the tag word {%- endcomment -%}
+			{%- assign tag_word_1691010490420939832 = tag | replace: "#", "" -%}
+
+			{%- comment -%} get the tag the page {%- endcomment -%}
+			{%- assign page_permalink_tag_1691010490420939832 = page.permalink | split: "/" | last -%}
+
+			{%- comment -%} dealing with empty string : permalink {%- endcomment -%}
+			{%- if page_permalink_tag_1691010490420939832 == "" -%}
+				{%- assign page_permalink_tag_1691010490420939832 = null -%}
+			{%- endif -%}
+
+			{%- comment -%} dealing with empty string : tag_word_1691010490420939832 {%- endcomment -%}
+			{%- if tag_word_1691010490420939832 == "" -%}
+				{%- assign tag_word_1691010490420939832 = null -%}
+			{%- endif -%}
+
+			{%- comment -%} do not display the tag when it is the same as the page {%- endcomment -%}
+			{%- if page.permalink and tag_word_1691010490420939832 and page_permalink_tag_1691010490420939832 == tag_word_1691010490420939832 -%}
+
+				{%- continue -%}
+
+			{%- endif -%}
+
+		{%- endif -%}
+
+		{%- comment -%} tag {%- endcomment -%}
+		{{ tag_1691010490420939832 }}
+	{%- endfor -%}
+{%- endcapture -%}
+
+{% comment %} tags render {% endcomment %}
 {%- capture post_tags_1691010490420939832 -%}
-
-	{%- comment -%} button `#tags` {%- endcomment -%}
-	{%- include as_string_the_html_button_tag_from_word.liquid from_word="tags" -%}
-	{%- assign button_tags_1691010490420939832 = return | append: " " -%}
-	{%- assign return = null -%}
-	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-	{%- comment -%} first post : muting newest post button {%- endcomment -%}
-	{%- if first_post_id_1691010490420939832 -%}
-
-		{%- comment -%} if the post id is the first one{%- endcomment -%}
-		{%- if post_id_1691010490420939832 == first_post_id_1691010490420939832 -%}
-
-			{%- comment -%} don't display the newest button {%- endcomment -%}
-			{%- assign button_newest_post_1691010490420939832 = null -%}
-
-		{%- endif -%}
-
-	{%- endif -%}
-
-	{%- comment -%} last post : muting last button {%- endcomment -%}
-	{%- if last_post_id_1691010490420939832 -%}
-
-		{%- comment -%} if the post id is the first one{%- endcomment -%}
-		{%- if post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
-
-			{%- comment -%} don't display the oldest post button {%- endcomment -%}
-			{%- assign button_oldest_post_1691010490420939832 = null -%}
-
-		{%- endif -%}
-
-	{%- endif -%}
-
-	{%- comment -%} only one post : muting last and first button {%- endcomment -%}
-	{%- if first_post_id_1691010490420939832 == last_post_id_1691010490420939832 -%}
-
-		{%- comment -%} don't display the buttons {%- endcomment -%}
-		{%- assign button_oldest_post_1691010490420939832 = null -%}
-		{%- assign button_newest_post_1691010490420939832 = null -%}
-
-	{%- endif -%}
-
-	{%- comment -%} post button specifics {%- endcomment -%}
-	{%- if page.layout == "layout_post" -%}
-
-		{%- comment -%} doesn't show id in single posts {%- endcomment -%}
-		{%- assign button_id_1691010490420939832 = null -%}
-
-		{%- comment -%}doesn't show oldest post button in single posts {%- endcomment -%}
-		{%- assign button_oldest_post_1691010490420939832 = null -%}
-
-		{%- comment -%}doesn't show the newest newest post button in single posts {%- endcomment -%}
-		{%- assign button_newest_post_1691010490420939832 = null -%}
-
-		{%- comment -%} buttom `#posts` {%- endcomment -%}
-		{%- capture button_posts_1691010490420939832 -%}
-
-			{%- comment -%} background_color {%- endcomment -%}
-			{% comment %}{%- include as_string_the_css_class_for_the_background_color_from_tag.liquid from_tag="#posts" -%}{% endcomment %}
-			{% comment %}{%- assign background_color = return -%}{% endcomment %}
-			{% comment %}{%- assign return = null -%}{% endcomment %}
-			{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-			{%- comment -%} the address doesn't exist go to posts {%- endcomment -%}
-			{%- if page.title == "#tags" -%}
-				<a class="button {{ background_color }}" href="{{ '/tag/posts' | relative_url }}">
-				#posts 
-				</a>
-
-			{%- else -%}
-				{%- comment -%} <a class="button {{ background_color }}" {%- endcomment -%}
-				<a class="button button_home_background_color"
-					 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
-				Back 
-				</a>
-			{%- endif -%}
-
-		{%- endcapture -%}
-
-	{%- endif -%}
-
-	{%- assign _page_title_1691010490420939832 = page.title | downcase -%}
-
-	{%- comment -%} home page : muting home button {%- endcomment -%}
-	{%- if _page_title_1691010490420939832 == "home" -%}
-		{%- assign button_home_1691010490420939832 = null -%}
-	{%- endif -%}
-
-	{%- comment -%} tags page : muting tags button & other {%- endcomment -%}
-	{%- if _page_title_1691010490420939832 == "#tags" -%}
-
-		{%- assign button_tags_1691010490420939832 = null -%}
-		{%- assign button_id_1691010490420939832 = null -%}
-		{%- assign button_newest_post_1691010490420939832 = null -%}
-		{%- assign button_oldest_post_1691010490420939832 = null -%}
-
-	{%- endif -%}
-
-	{%- comment -%} other buttons {%- endcomment -%}
-	{%- capture other_buttons_1691010490420939832 -%}
-
-		{%- for tag in post_tags_1691010490420939832 -%}
-
-			{%- comment -%} --- skipping conditions --- {%- endcomment -%}
-			{%- comment -%} using `if` to collapse code in IDE {%- endcomment -%}
-			{%- if true -%}
-
-				{%- unless tag contains "#" -%}
-					{%- continue -%}
-				{%- endunless -%}
-
-				{%- if page.category == "post" -%}
-
-					{%- if tag == "#posts" -%}
-						{%- continue -%}
-					{%- endif -%}
-
-				{%- endif -%}
-
-			{%- endif -%}
-
-			{%- comment -%} getting tag {%- endcomment -%}
-			{%- include as_string_the_html_button_tag_from_word.liquid from_word=tag -%}
-
-			{%- comment -%} 
-			the space is just for PHP storm because it keeps removing trailing and starting space at reformatting
-			{%- endcomment -%}
-
-			{%- assign tag_1691010490420939832 = return | append: " " -%}
-			{%- assign return = null -%}
-			{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-
-			{%- comment -%} only for timeline tags, ignore tag if same as page {%- endcomment -%}
-			{% comment -%}@task : category
-			{% endcomment -%}
-			{%- if page.category != "post" -%}
-
-				{%- comment -%} get the tag word {%- endcomment -%}
-				{%- assign tag_word_1691010490420939832 = tag | replace: "#", "" -%}
-
-				{%- comment -%} get the tag the page {%- endcomment -%}
-				{%- assign page_permalink_tag_1691010490420939832 = page.permalink | split: "/" | last -%}
-
-				{%- comment -%} dealing with empty string : permalink {%- endcomment -%}
-				{%- if page_permalink_tag_1691010490420939832 == "" -%}
-					{%- assign page_permalink_tag_1691010490420939832 = null -%}
-				{%- endif -%}
-
-				{%- comment -%} dealing with empty string : tag_word_1691010490420939832 {%- endcomment -%}
-				{%- if tag_word_1691010490420939832 == "" -%}
-					{%- assign tag_word_1691010490420939832 = null -%}
-				{%- endif -%}
-
-				{%- comment -%} do not display the tag when it is the same as the page {%- endcomment -%}
-				{%- if page.permalink and tag_word_1691010490420939832 and page_permalink_tag_1691010490420939832 == tag_word_1691010490420939832 -%}
-
-					{%- continue -%}
-
-				{%- endif -%}
-
-			{%- endif -%}
-
-			{%- comment -%} tag {%- endcomment -%}
-			{{ tag_1691010490420939832 }}
-		{%- endfor -%}
-	{%- endcapture -%}
 
 	<div class="tags">
 
-		{%- comment -%} home button {%- endcomment -%}
+	{%- comment -%} home button {%- endcomment -%}
 		{{ button_home_1691010490420939832 }}
 
 		{%- comment -%} newest post button {%- endcomment -%}
@@ -315,7 +259,7 @@
 		{{ button_oldest_post_1691010490420939832 }}
 
 		{%- comment -%} id button {%- endcomment -%}
-		{{ button_id_1691010490420939832 }}
+		{{ button_post_1691010490420939832 }}
 
 		{%- comment -%} post button {%- endcomment -%}
 		{{ button_posts_1691010490420939832 }}
@@ -324,14 +268,12 @@
 		{{ button_tags_1691010490420939832 }}
 
 		{%- comment -%} other buttons {%- endcomment -%}
-		{{ other_buttons_1691010490420939832 }}
-
-	</div>
-
+		{{ tags_1691010490420939832 }}
+	
+</div>
 {%- endcapture -%}
 
-
-{%- comment -%}////////////////////////////////////// page HTML //////////////////////////////////////{%- endcomment -%}
+{%- comment -%} vvvvvvvvvvvvvvvv page HTML vvvvvvvvvvvvvvvv {%- endcomment -%}
 
 {%- capture return -%}
 
@@ -343,14 +285,14 @@
 
 		<div class="dates">
 		{{ post_date_of_creation_1691010490420939832 }}
-		<br>
-		{{ post_date_of_modification_1691010490420939832 }}
-		<br>
+			<br>
+			{{ post_date_of_modification_1691010490420939832 }}
+			<br>
 		</div>
 		
 		<div class="footer" aria-label="footer">
 
-				<div  aria-label="tags">
+				<div aria-label="tags">
 						{{ post_tags_1691010490420939832 }}
 				</div>
 
@@ -363,9 +305,8 @@
 
 {%- endcapture -%}
 
-{%- comment -%}////////////////////////////////////// resetting //////////////////////////////////////{%- endcomment -%}
+{%- comment -%}/// resetting ///{%- endcomment -%}
 {%- assign post_content_1691010490420939832 = null -%}
-{% comment %}{%- assign post_no_background_color_1691010490420939832 = null -%}{% endcomment %}
 {%- assign post_date_of_creation_1691010490420939832 = null -%}
 {%- assign post_date_of_modification_1691010490420939832 = null -%}
 {%- assign post_title_1691010490420939832 = null -%}
@@ -382,5 +323,3 @@
 {%- assign tag_word_1691010490420939832 = null -%}
 {%- assign _page_title_1691010490420939832 = null -%}
 {%- assign button_posts_1691010490420939832 = null -%}
-{% comment %}{%- assign background_color = null -%}{% endcomment %}
-{%- assign machine_date_1691010490420939832 = null -%}
