@@ -9,9 +9,9 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- if with_offset -%}
-{% comment %} 0 being truthly makes sense {% endcomment %}
+{% comment %} 0 being truthy makes sense {% endcomment %}
 
-	{% comment %} the offset if outsite of the array {% endcomment %}
+	{% comment %} the offset if outside of the array {% endcomment %}
 	{%- if offset > length_minus_one -%}
 
 		{% comment %} do nothing {% endcomment %}
