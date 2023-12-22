@@ -1,0 +1,8 @@
+{%- assign return = include.from_array | size | minus : 1 %}
+
+{%- if return < 0 -%}
+
+	{%- assign return = 0 -%}
+
+{%- endif -%}
+
