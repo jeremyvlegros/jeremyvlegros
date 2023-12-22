@@ -1,0 +1,38 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} array {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_array -%}
+{%- assign array = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} with_offset {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.with_offset -%}
+{%- assign with_offset = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- if array and with_offset -%}
+
+	{%- comment -%} range_with_offset {%- endcomment -%}
+	{%- include as_range_from_array_with_offset.liquid from_array=array with_offset=with_offset -%}
+	{%- assign range_with_offset = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- assign array_offset = ARRAY_EMPTY-%}
+
+	{% comment %} filling the array starting at the offset {% endcomment %}
+	{%- for index in range_with_offset -%}
+
+		{%- assign element = array[index] -%}
+
+		{%- assign array_offset = array_offset | push: element -%}
+
+	{%- endfor -%}
+
+	{% comment %} merging the array {% endcomment %}
+	{%- assign return = array_offset | join :""-%}
+
+{%- endif -%}
+
