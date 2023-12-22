@@ -1,0 +1,58 @@
+{%- comment -%} Because the normal filter changes the first letter, *and* the remaining of the string {%- endcomment -%}
+{% comment %} only works with words separated with space ! {% endcomment %}
+{% comment %} seems to work with a tabulation {% endcomment %}
+{% comment %} really not stable, Liquid 4.X has offset for arrays, version 3.X doesn't (at least doesn't work with me) {% endcomment %}
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} text {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_text -%}
+{%- assign text = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- if text -%}
+
+	{% comment %} making an array from text {% endcomment %}
+
+	{%- assign array_words = text | split: " " -%}
+	
+	{% comment %} first word {% endcomment %}
+	{%- assign first_word = array_words[0]-%}
+
+	{%- comment -%} first word [capitalized] {%- endcomment -%}
+	{%- include as_string_the_word_capitalized_from_word.liquid from_word=first_word -%}
+	{%- assign first_word = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+	
+	{%- comment -%} range without first element {%- endcomment -%}
+	{%- include as_range_from_array_with_offset.liquid from_array=array_words with_offset=1 -%}
+	{%- assign range_without_first_element = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- assign array_capitalized = ARRAY_EMPTY -%}
+	
+	{% comment %} adding the capitalized word to the array capitalized {% endcomment %}
+	{%- assign array_capitalized = array_capitalized | push: first_word -%}
+
+	{% comment %} copying the array without the first word {% endcomment %}
+	{%- for index in range_without_first_element -%}
+
+		{%- assign word = array_words[index] -%}
+
+		{%- assign array_capitalized = array_capitalized | push: word -%}
+
+	{%- endfor -%}
+	
+	{%- comment -%} joining the the capitalized word and the text {%- endcomment -%}
+	{%- assign return = array_capitalized | join : " " -%}
+	
+{%- endif -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign array_capitalized = null -%}
+{%- assign word = null -%}
+{%- assign range_without_first_element = null -%}
+{%- assign first_word = null -%}
+{%- assign text = null -%}
