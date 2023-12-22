@@ -1,0 +1,48 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- assign array_result_word= EMPTY_ARRAY -%}
+{%- assign string_word = include.from_word -%}
+
+{%- comment -%} string_word {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_word -%}
+{%- assign string_word = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- if string_word -%}
+
+	{%- assign array_word= string_word | split : "" -%}
+
+	{%- assign string_first_letter= array_word[0] -%}
+
+	{%- comment -%} string_first_letter {%- endcomment -%}
+	{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_first_letter -%}
+	{%- assign string_first_letter = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- if string_first_letter -%}
+
+		{% comment %} first letter [upcased] {% endcomment %}
+		{%- assign string_first_letter = string_first_letter | upcase -%}
+
+		{%- comment -%} string_the_word_without_the_first_letter {%- endcomment -%}
+		{%- include as_string_the_array_merged_from_array_with_offset.liquid from_array=array_word with_offset=1 -%}
+		{%- assign string_word_without_first_letter = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		{% comment %} string_word [capitalized] {% endcomment %}
+		{%- assign string_word = string_first_letter | append : string_word_without_first_letter -%}
+		
+	{%- endif -%}
+
+	{%- comment -%} return {%- endcomment -%}
+	{%- assign return = string_word -%}
+
+{%- endif -%}
+
+
+
+
+
