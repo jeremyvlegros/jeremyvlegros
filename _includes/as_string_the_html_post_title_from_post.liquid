@@ -14,6 +14,12 @@
 {%- if post_title_1703034642003921101 -%}
 	
 {% comment %}@task : make function to capitalize the title {% endcomment %}
+
+	{%- comment -%} post_title_1703034642003921101 {%- endcomment -%}
+	{%- include as_string_the_text_capitalized_from_text.liquid from_text=post_title_1703034642003921101 -%}
+	{%- assign post_title_1703034642003921101 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 	
 	{%- comment -%} category_background_color {%- endcomment -%}
 	{%- include as_string_the_css_category_background_color_from_post.liquid from_post=post_1703034642003921101 -%}
