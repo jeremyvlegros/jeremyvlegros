@@ -1,48 +1,47 @@
 {%- include CONSTANTS/ALL.liquid -%}
 
-{%- assign array_result_word= EMPTY_ARRAY -%}
-{%- assign string_word = include.from_word -%}
+{%- assign string_word_1703318951831992227 = include.from_word -%}
 
-{%- comment -%} string_word {%- endcomment -%}
-{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_word -%}
-{%- assign string_word = return -%}
+{%- comment -%} string_word_1703318951831992227 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_word_1703318951831992227 -%}
+{%- assign string_word_1703318951831992227 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- if string_word -%}
+{%- if string_word_1703318951831992227 -%}
 
-	{%- assign array_word= string_word | split : "" -%}
+	{%- assign array_word_1703318951831992227= string_word_1703318951831992227 | split : "" -%}
 
-	{%- assign string_first_letter= array_word[0] -%}
+	{%- assign string_first_letter_1703318951831992227= array_word_1703318951831992227[0] -%}
 
-	{%- comment -%} string_first_letter {%- endcomment -%}
-	{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_first_letter -%}
-	{%- assign string_first_letter = return -%}
+	{%- comment -%} string_first_letter_1703318951831992227 {%- endcomment -%}
+	{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=string_first_letter_1703318951831992227 -%}
+	{%- assign string_first_letter_1703318951831992227 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- if string_first_letter -%}
+	{%- if string_first_letter_1703318951831992227 -%}
 
 		{% comment %} first letter [upcased] {% endcomment %}
-		{%- assign string_first_letter = string_first_letter | upcase -%}
+		{%- assign string_first_letter_1703318951831992227 = string_first_letter_1703318951831992227 | upcase -%}
 
 		{%- comment -%} string_the_word_without_the_first_letter {%- endcomment -%}
-		{%- include as_string_the_array_merged_from_array_with_offset.liquid from_array=array_word with_offset=1 -%}
-		{%- assign string_word_without_first_letter = return -%}
+		{%- include as_string_the_array_merged_from_array_with_offset.liquid from_array=array_word_1703318951831992227 with_offset=1 -%}
+		{%- assign string_word_1703318951831992227_without_first_letter = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		{% comment %} string_word [capitalized] {% endcomment %}
-		{%- assign string_word = string_first_letter | append : string_word_without_first_letter -%}
-		
+		{% comment %} string_word  [capitalized] {% endcomment %}
+		{%- assign string_word_1703318951831992227 = string_first_letter_1703318951831992227 | append: string_word_1703318951831992227_without_first_letter -%}
+
 	{%- endif -%}
 
 	{%- comment -%} return {%- endcomment -%}
-	{%- assign return = string_word -%}
+	{%- assign return = string_word_1703318951831992227 -%}
 
 {%- endif -%}
 
-
-
-
-
+{% comment %} resetting {% endcomment %}
+{%- assign string_word_1703318951831992227 = null -%}
+{%- assign array_word_1703318951831992227 = null -%}
+{%- assign string_first_letter_1703318951831992227 = null -%}
