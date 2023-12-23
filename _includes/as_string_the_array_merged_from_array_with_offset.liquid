@@ -1,38 +1,45 @@
 {%- include CONSTANTS/ALL.liquid -%}
 
-{%- comment -%} array {%- endcomment -%}
+{%- comment -%} array_1703318641944259546 {%- endcomment -%}
 {%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_array -%}
-{%- assign array = return -%}
+{%- assign array_1703318641944259546 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} with_offset {%- endcomment -%}
 {%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.with_offset -%}
-{%- assign with_offset = return -%}
+{%- assign with_offset_1703318641944259546 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- if array and with_offset -%}
+{%- if array_1703318641944259546 and with_offset_1703318641944259546 -%}
 
-	{%- comment -%} range_with_offset {%- endcomment -%}
-	{%- include as_range_from_array_with_offset.liquid from_array=array with_offset=with_offset -%}
-	{%- assign range_with_offset = return -%}
+	{%- comment -%} range with offset {%- endcomment -%}
+	{%- include as_range_from_array_with_offset.liquid from_array=array_1703318641944259546 with_offset=with_offset_1703318641944259546 -%}
+	{%- assign range_with_offset_1703318641944259546 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign array_offset = ARRAY_EMPTY-%}
+	{%- assign array_offset_1703318641944259546 = ARRAY_EMPTY-%}
 
-	{% comment %} filling the array starting at the offset {% endcomment %}
-	{%- for index in range_with_offset -%}
+	{% comment %} filling the array_1703318641944259546 starting at the offset {% endcomment %}
+	{%- for index in range_with_offset_1703318641944259546 -%}
 
-		{%- assign element = array[index] -%}
+		{%- assign element_1703318641944259546 = array_1703318641944259546[index] -%}
 
-		{%- assign array_offset = array_offset | push: element -%}
+		{%- assign array_offset_1703318641944259546 = array_offset_1703318641944259546 | push: element_1703318641944259546 -%}
 
 	{%- endfor -%}
 
-	{% comment %} merging the array {% endcomment %}
-	{%- assign return = array_offset | join :""-%}
+	{% comment %} merging the array_1703318641944259546 {% endcomment %}
+	{%- assign return = array_offset_1703318641944259546 | join :""-%}
 
 {%- endif -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign array_1703318641944259546 = null -%}
+{%- assign with_offset_1703318641944259546 = null -%}
+{%- assign range_with_offset_1703318641944259546 = null -%}
+{%- assign array_offset_1703318641944259546 = null -%}
+{%- assign element_1703318641944259546 = null -%}
 
