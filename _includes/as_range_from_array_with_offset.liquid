@@ -1,32 +1,33 @@
-{%- assign length_minus_one = include.from_array | size | minus: 1 -%}
+{%- assign length_minus_one_1703317731862172547 = include.from_array | size | minus: 1 -%}
 
-{%- assign with_offset = include.with_offset -%}
+{%- assign with_offset_1703317731862172547 = include.with_offset -%}
 
-{%- comment -%} with_offset {%- endcomment -%}
-{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=with_offset -%}
-{%- assign with_offset = return -%}
+{%- comment -%} with_offset_1703317731862172547 {%- endcomment -%}
+{%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=with_offset_1703317731862172547 -%}
+{%- assign with_offset_1703317731862172547 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- if with_offset -%}
+{%- if with_offset_1703317731862172547 -%}
 {% comment %} 0 being truthy makes sense {% endcomment %}
 
 	{% comment %} the offset if outside of the array {% endcomment %}
-	{%- if offset > length_minus_one -%}
+	{%- if with_offset_1703317731862172547 > length_minus_one_1703317731862172547 -%}
 
 		{% comment %} do nothing {% endcomment %}
 
 	{%- else -%}
 
-		{%- assign return = (with_offset..length_minus_one) -%}
+		{%- assign return = (with_offset_1703317731862172547..length_minus_one_1703317731862172547) -%}
 
 	{%- endif -%}
 	
 {%- else -%}
 
-	{%- assign return = (0..length_minus_one) -%}
+	{%- assign return = (0..length_minus_one_1703317731862172547) -%}
 
 {%- endif -%}
 
 {%- comment -%}resetting {%- endcomment -%}
-{%- assign length_minus_one = null -%}
+{%- assign length_minus_one_1703317731862172547 = null -%}
+{%- assign with_offset_1703317731862172547 = null -%}
