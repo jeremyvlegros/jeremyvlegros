@@ -1,58 +1,63 @@
-{%- comment -%} Because the normal filter changes the first letter, *and* the remaining of the string {%- endcomment -%}
-{% comment %} only works with words separated with space ! {% endcomment %}
-{% comment %} seems to work with a tabulation {% endcomment %}
-{% comment %} really not stable, Liquid 4.X has offset for arrays, version 3.X doesn't (at least doesn't work with me) {% endcomment %}
+{%- comment -%} Because the normal filter changes the first letter **and** the whole string {%- endcomment -%}
+
+{% comment %}
+caution : only works with words separated with space !
+seems to work with a tabulation
+really not stable, Liquid 4.X has offset for arrays, version 3.X doesn't (at least doesn't work with me) 
+{% endcomment %}
+
 {%- include CONSTANTS/ALL.liquid -%}
 
-{%- comment -%} text {%- endcomment -%}
+{%- comment -%} text_1703318662945500644 {%- endcomment -%}
 {%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=include.from_text -%}
-{%- assign text = return -%}
+{%- assign text_1703318662945500644 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- if text -%}
+{%- if text_1703318662945500644 -%}
 
 	{% comment %} making an array from text {% endcomment %}
 
-	{%- assign array_words = text | split: " " -%}
-	
+	{%- assign array_words_1703318662945500644 = text_1703318662945500644 | split: " " -%}
+
 	{% comment %} first word {% endcomment %}
-	{%- assign first_word = array_words[0]-%}
+	{%- assign first_word_1703318662945500644 = array_words_1703318662945500644[0] -%}
 
 	{%- comment -%} first word [capitalized] {%- endcomment -%}
-	{%- include as_string_the_word_capitalized_from_word.liquid from_word=first_word -%}
-	{%- assign first_word = return -%}
-	{%- assign return = null -%}
-	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-	
-	{%- comment -%} range without first element {%- endcomment -%}
-	{%- include as_range_from_array_with_offset.liquid from_array=array_words with_offset=1 -%}
-	{%- assign range_without_first_element = return -%}
+	{%- include as_string_the_word_capitalized_from_word.liquid from_word=first_word_1703318662945500644 -%}
+	{%- assign first_word_1703318662945500644 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign array_capitalized = ARRAY_EMPTY -%}
-	
+	{%- comment -%} range without first element {%- endcomment -%}
+	{%- include as_range_from_array_with_offset.liquid from_array=array_words_1703318662945500644 with_offset=1 -%}
+	{%- assign range_without_first_element_1703318662945500644 = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- assign array_capitalized_1703318662945500644 = ARRAY_EMPTY -%}
+
 	{% comment %} adding the capitalized word to the array capitalized {% endcomment %}
-	{%- assign array_capitalized = array_capitalized | push: first_word -%}
+	{%- assign array_capitalized_1703318662945500644 = array_capitalized_1703318662945500644 | push: first_word_1703318662945500644 -%}
 
 	{% comment %} copying the array without the first word {% endcomment %}
-	{%- for index in range_without_first_element -%}
+	{%- for index in range_without_first_element_1703318662945500644 -%}
 
-		{%- assign word = array_words[index] -%}
+		{%- assign word_1703318662945500644 = array_words_1703318662945500644[index] -%}
 
-		{%- assign array_capitalized = array_capitalized | push: word -%}
+		{%- assign array_capitalized_1703318662945500644 = array_capitalized_1703318662945500644 | push: word_1703318662945500644 -%}
 
 	{%- endfor -%}
-	
+
 	{%- comment -%} joining the the capitalized word and the text {%- endcomment -%}
-	{%- assign return = array_capitalized | join : " " -%}
-	
+	{%- assign return = array_capitalized_1703318662945500644 | join: " " -%}
+
 {%- endif -%}
 
 {% comment %} resetting {% endcomment %}
-{%- assign array_capitalized = null -%}
-{%- assign word = null -%}
-{%- assign range_without_first_element = null -%}
-{%- assign first_word = null -%}
-{%- assign text = null -%}
+{%- assign array_capitalized_1703318662945500644 = null -%}
+{%- assign word_1703318662945500644 = null -%}
+{%- assign range_without_first_element_1703318662945500644 = null -%}
+{%- assign first_word_1703318662945500644 = null -%}
+{%- assign text_1703318662945500644 = null -%}
+{%- assign array_words_1703318662945500644 = null -%}
