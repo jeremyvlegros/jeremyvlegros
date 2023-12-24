@@ -11,12 +11,11 @@
 		{%- assign date_without_id_1690569345905 = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-		                                 
 
-		{%- assign date_modified_html = DATE_MODIFIED | append :"&nbsp;&nbsp;&nbsp;:" -%}
-		
+		{%- assign date_modified_html = DATE_MODIFIED | append: "&nbsp;&nbsp;&nbsp;:" -%}
+
 		{%- comment -%} format : #date 2023-07-25 23:11 GMT {%- endcomment -%}
-		{%- assign modification_date_1690569345905 = date_without_id_1690569345905 | replace :"#date", date_modified_html -%}
+		{%- assign modification_date_1690569345905 = date_without_id_1690569345905 | replace: "#date", date_modified_html -%}
 
 		{%- assign return = null -%}
 

@@ -9,7 +9,7 @@
 {%- comment -%} post_date_of_creation_1691010490420939832 HTML {%- endcomment -%}
 {%- if post_date_of_creation_1691010490420939832 -%}
 
-	{%- capture post_date_of_creation_1691010490420939832 -%}
+	{%- capture return -%}
 
 		{%- comment -%} formatted_date_1691010490420939832 {%- endcomment -%}
 		{%- include as_string_the_formatted_creation_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
@@ -17,18 +17,23 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		
+
 		{%- comment -%} machine_date {%- endcomment -%}
 		{%- include as_string_the_machine_date_from_date.liquid from_date=post_date_of_creation_1691010490420939832 -%}
 		{%- assign machine_date_1691010490420939832 = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-		
-		<time class='date' datetime="{{ machine_date_1691010490420939832 }}"
-					aria-label="creation date">{{ formatted_date_1691010490420939832 }}</time>
+
+		{% comment %} code formatting is creating needless formatting problems, what is the point of using it, if need to write this ?  {% endcomment %}
+		{%- assign formatted_date_1691010490420939832 = '<time class="date" datetime="' | append: machine_date_1691010490420939832 | append: '" aria-label="creation date">' | append: formatted_date_1691010490420939832 | append: '</time>' -%}
+
+		{{ formatted_date_1691010490420939832 }}
+
 	{%- endcapture -%}
 
 {%- endif -%}
 
-{%- comment -%} return {%- endcomment -%}
-{%- assign return = post_date_of_creation_1691010490420939832 -%}
+{% comment %} resetting {% endcomment %}
+{%- assign post_date_of_creation_1691010490420939832 = null -%}
+{%- assign formatted_date_1691010490420939832 = null -%}
+{%- assign machine_date_1691010490420939832 = null -%}

@@ -12,9 +12,9 @@
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-		{%- assign date_created_html = DATE_CREATED | append :"&nbsp;&nbsp;:" -%}
+		{%- assign date_created_html = DATE_CREATED | append: "&nbsp;&nbsp;:" -%}
 		{%- comment -%} format : #date 2023-07-25 23:11 GMT {%- endcomment -%}
-		{%- assign formatted_date_1699941442683430751 = date_without_id_1699941442683430751 | replace :"#date", date_created_html -%}
+		{%- assign formatted_date_1699941442683430751 = date_without_id_1699941442683430751 | replace: "#date", date_created_html -%}
 
 		{%- assign return = null -%}
 
