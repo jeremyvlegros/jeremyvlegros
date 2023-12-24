@@ -1,25 +1,23 @@
-{%- assign machine_date = null -%}
-
 {%- comment -%} removing ID (and doing some checks) {%- endcomment -%}
 {%- include as_string_the_date_without_id_from_date.liquid from_date=include.from_date -%}
-{%- assign machine_date = return -%}
+{%- assign machine_date_1703408531267943545 = return -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- if machine_date == null -%}
+{%- if machine_date_1703408531267943545 == null -%}
 	{% comment %} do nothing {% endcomment %}
 {%- else -%}
 
 	{%- comment -%} as array {%- endcomment -%}
-	{%- assign machine_date = post_date_of_creation_1691010490420939832 | split: " " -%}
+	{%- assign machine_date_1703408531267943545 = machine_date_1703408531267943545 | split: " " -%}
 
 	{%- comment -%} keeping YYYY-MM-DD and time separated with a `T` for time {%- endcomment -%}
-	{%- assign machine_date = "" | append: machine_date[1] | append: "T" | append: machine_date[2] -%}
-	{%- assign machine_date = machine_date | append: "Z" -%}
+	{%- assign machine_date_1703408531267943545 = "" | append: machine_date_1703408531267943545[1] | append: "T" | append: machine_date_1703408531267943545[2] -%}
+	{%- assign machine_date_1703408531267943545 = machine_date_1703408531267943545 | append: "Z" -%}
 
 {%- endif -%}
 {%- comment -%} return {%- endcomment -%}
-{%- assign return = machine_date -%}
+{%- assign return = machine_date_1703408531267943545 -%}
 
 {% comment -%} resetting {%- endcomment -%}
-{%- assign machine_date = null -%}
+{%- assign machine_date_1703408531267943545 = null -%}
