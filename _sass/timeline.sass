@@ -7,34 +7,6 @@
 	padding: $timeline_padding_top $timeline_padding_right $timeline_padding_bottom $timeline_padding_left
 	display: flex
 
-	.page_title
-
-		font-weight: $timeline_page_heading_font_weight
-		font-variant-caps: $timeline_page_heading_font_variant_caps
-		display: flex
-		font-size: $timeline_page_heading_font_size
-		color: $timeline_page_heading_text_color
-		position: fixed
-		left: $timeline_page_heading_position_left
-		top: $timeline_page_heading_position_top
-		writing-mode: $timeline_page_heading_writing_mode
-		text-orientation: $timeline_page_heading_text_orientation
-		text-decoration: underline
-		text-decoration-thickness: $timeline_page_heading_text_decoration_width
-		border: $timeline_page_heading_border_width none $timeline_page_heading_border_color
-		border-left-style: $timeline_page_heading_border_style
-		z-index: $timeline_page_heading_z_index
-		height: $timeline_page_heading_height
-
-		&:after
-	
-			// using a border gives a spacing that is not modifiable
-			content : "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-
-	.page
-
-		padding: $timeline_page_padding
-
 	li
 
 		list-style: $timeline_list_style
@@ -46,8 +18,4 @@
 		padding-left: $timeline_posts_padding_left
 		display: flex
 		flex-direction: column
-
-		.post
-
-			margin: $timeline_posts_post_margin
-			padding-left: $timeline_posts_post_padding_left
+		z-index: 4

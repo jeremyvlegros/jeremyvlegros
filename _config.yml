@@ -1,18 +1,18 @@
-name : "website"
+name: "jeremyvlegros"
 
 sass:
   style: compressed
   sourcemap: never
 
 collections:
-  tag :
+  tag:
     output: true
-    permalink : /tag/:path
+    permalink: /tag/:path
 
-defaults :
+defaults:
   - scope:
       path: ""
-      type : "posts"
+      type: "posts"
     values:
       layout: "layout_post"
   - scope:
@@ -27,6 +27,6 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
-ARRAY_EMPTY : []
+ARRAY_EMPTY: [ ]
 
 

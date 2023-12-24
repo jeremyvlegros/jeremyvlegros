@@ -6,20 +6,20 @@ layout : layout_base
 
 {%- capture html_1690569561039 -%}
 
+	{%- if page_title_1690569561039 -%}
+
+		{% comment %} page inner title {% endcomment %}
+		<h1 class="page_inner_title">
+			{{ page_inner_title_1690569561039 }}
+		</h1>
+
+	{%- endif -%}
+
 	<div id="timeline">
 		{%- comment -%}printing content of the next thing {%- endcomment -%}
 		{{ content }}
 
 		<div id="timeline_index">
-
-			{%- if page_title_1690569561039 -%}
-
-				{% comment %} #tag page title {% endcomment %}
-				<h1 class="page_title">
-					{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}
-				</h1>
-
-			{%- endif -%}
 
 			<ul role="menu">
 				{{ html_timeline_index_list_1690569561039 }}
@@ -67,3 +67,4 @@ layout : layout_base
 {%- assign page_date_of_creation_1690569561039 = null -%}
 {%- assign page_title_1690569561039 = null -%}
 {%- assign html = null -%}
+{%- assign page_inner_title_1690569561039 = null -%}

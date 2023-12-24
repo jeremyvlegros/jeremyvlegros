@@ -1,27 +1,9 @@
 {%- comment -%}
 
-WARNING :
-  ONLY WRITE VARIABLES !
-
-GOALS :
-  - my constants in one place instead of `_data` x `_config`
-  - edition :
-		- my brain itches when seeing `<name_in_lowercase>.<variable_name_uppercase>`
-    - I don't want to type `site.DEBUG` when I could type `DEBUG` :
-      - I use a file template in my IDE that creates a file with `{%- include CONSTANTS/ALL.liquid -%}`
-    - I can find my variable fast
-    - I can change values individually
-  - preventing cyclic imports, everything variable is split. Imports :
-  - clean structure
-  - I don't want to find out if it can or can't deal with cyclic redundancy on include/imports :
-      -  either happen separately
-      -  either happen separately by importing the `ALL`
-  - optimizing my functions a little by avoiding computations already made
-
-CONS :
-  - does nothing more that the _config.yaml file already does/(can do)
-  - implementation is circonvoluted
-  - waste : I will most likely never use anything separately
+Avoids : 
+- searching for variables written in `YAML` and `liquid`
+- rebooting at each variable modification (can easily take several minutes to reboot on `GitHub`)
+ 
 {%- endcomment -%}
 
 {%- include CONSTANTS/ARRAY_EMPTY.liquid -%}
@@ -37,5 +19,4 @@ CONS :
 {%- include CONSTANTS/DOCTYPE_HTML.liquid -%}
 {%- include CONSTANTS/DATE_CREATED.liquid -%}
 {%- include CONSTANTS/DATE_MODIFIED.liquid -%}
-
-
+{%- include CONSTANTS/NAME.liquid -%}

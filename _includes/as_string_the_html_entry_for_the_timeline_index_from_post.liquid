@@ -9,14 +9,14 @@
 	{%- capture return -%}
 
 		{% comment %} the capitalize function ... works here ? {% endcomment %}
-		{%- assign title_1693649612738133574 = include.from_post.title  | capitalize -%}
-		
+		{%- assign title_1693649612738133574 = include.from_post.title | capitalize -%}
+
 		{%- comment -%} css_background {%- endcomment -%}
 		{%- include as_string_the_css_category_background_color_from_post.liquid from_post=include.from_post -%}
 		{%- assign css_background = return -%}
 		{%- assign return = null -%}
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-		
+
 		{%- comment -%} title_1693649612738133574 {%- endcomment -%}
 		{%- include as_string_the_html_post_title_from_post.liquid from_post=include.from_post -%}
 		{%- assign title_1693649612738133574 = return -%}
@@ -24,11 +24,14 @@
 		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 		{% comment %} removing the id duplication (should only exist in the post timeline){% endcomment %}
-		{%- assign title_1693649612738133574 = title_1693649612738133574 | replace : "id=","class="%}
-		
+		{%- assign title_1693649612738133574 = title_1693649612738133574 | replace: "id=", "class=" %}
+
 		{% comment %} replacing aria label {% endcomment %}
-		{%- assign title_1693649612738133574 = title_1693649612738133574 | replace : "post title","menu entry content"%}
-		
+		{%- assign title_1693649612738133574 = title_1693649612738133574 | replace: "post title", "menu entry content" %}
+
+		{% comment %} replacing h1 with span {% endcomment %}
+		{%- assign title_1693649612738133574 = title_1693649612738133574 | replace: "<h1", "<span" | replace: "</h1>", "</h1>" %}
+
 		<li role="menuitem">
 			<a role="button" class="button {{ css_background }}"
 				 href="#{{ post_id_1703108384034307744 }}"> {{ title_1693649612738133574 }}
