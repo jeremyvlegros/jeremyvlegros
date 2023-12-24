@@ -12,15 +12,13 @@
 
 {%- comment -%} post_title_1703034642003921101 @title {%- endcomment -%}
 {%- if post_title_1703034642003921101 -%}
-	
-{% comment %}@task : make function to capitalize the title {% endcomment %}
 
 	{%- comment -%} post_title_1703034642003921101 {%- endcomment -%}
 	{%- include as_string_the_text_capitalized_from_text.liquid from_text=post_title_1703034642003921101 -%}
 	{%- assign post_title_1703034642003921101 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-	
+
 	{%- comment -%} category_background_color {%- endcomment -%}
 	{%- include as_string_the_css_category_background_color_from_post.liquid from_post=post_1703034642003921101 -%}
 	{%- assign category_background_color = return -%}
@@ -28,7 +26,7 @@
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 	{%- comment -%} post_title_1703034642003921101 {%- endcomment -%}
-	{%- include as_string_the_processed_markdown_without_paragraph_tags_from_text.liquid from_text = post_title_1703034642003921101 -%}
+	{%- include as_string_the_processed_markdown_without_paragraph_tags_from_text.liquid from_text=post_title_1703034642003921101 -%}
 	{%- assign post_title_1703034642003921101 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -40,7 +38,7 @@
 	{%- assign post_id_1703034642003921101 = return -%}
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
-	
+
 	{%- capture post_title_1703034642003921101 -%}
 		<div class="post_title">
 		<span class="post_category {{ category_background_color }}">
@@ -51,7 +49,7 @@
 		<h1 id="{{ post_id_1703034642003921101 }}" itemprop="name headline" aria-label="post title">
 			{%- comment -%} <span class="category">⌜{{ post.category | capitalize }}⌟</span> {%- endcomment -%}
 			{%- comment -%} thank you `PHP Storm` for making me writing spaces the hard way, I can level up my patience skills {%- endcomment -%}
-			{{ " " | append: post_title_1703034642003921101  }}
+			{{ " " | append: post_title_1703034642003921101 }}
 		</h1>
 	</div>
 
@@ -63,6 +61,6 @@
 {%- assign return = post_title_1703034642003921101 -%}
 
 {% comment %} resetting {% endcomment %}
-{%- assign post_title_1703034642003921101 = null-%}
-{%- assign post_id_1703034642003921101 = null-%}
-{%- assign post_1703034642003921101 = null-%}
+{%- assign post_title_1703034642003921101 = null -%}
+{%- assign post_id_1703034642003921101 = null -%}
+{%- assign post_1703034642003921101 = null -%}
