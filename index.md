@@ -1,6 +1,8 @@
 ---
 title                : Home
 layout               : layout_timeline
-tags                 : 
+tags                 :
+
 - "#posts"
+
 ---
