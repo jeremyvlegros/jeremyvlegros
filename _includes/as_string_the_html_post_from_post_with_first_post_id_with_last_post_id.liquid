@@ -69,14 +69,14 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button home {%- endcomment -%}
-{%- include as_string_the_html_button_home.liquid -%}
-{%- assign button_home_1691010490420939832 = return -%}
-{%- assign return = null -%}
+{% comment %}{%- include as_string_the_html_button_home.liquid -%}{% endcomment %}
+{% comment %}{%- assign button_home_1691010490420939832 = return | append: " " -%}{% endcomment %}
+{% comment %}{%- assign return = null -%}{% endcomment %}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button post {%- endcomment -%}
 {%- include as_string_the_html_button_post_from_post.liquid from_post=include.from_post -%}
-{%- assign button_post_1691010490420939832 = return -%}
+{%- assign button_post_1691010490420939832 = return | append: " " -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
@@ -111,11 +111,6 @@
 {% comment %} vvvvvvvvvvvvvvv MUTING BUTTONS vvvvvvvvvvvvvvv {% endcomment %}
 
 {%- assign _page_title_1691010490420939832 = page.title | downcase -%}
-
-{%- comment -%} home page : muting home button {%- endcomment -%}
-{%- if _page_title_1691010490420939832 == "home" -%}
-	{%- assign button_home_1691010490420939832 = null -%}
-{%- endif -%}
 
 {%- comment -%} tags page : muting tags button & other {%- endcomment -%}
 {%- if _page_title_1691010490420939832 == "#tags" -%}
@@ -248,9 +243,6 @@
 
 	<div class="tags">
 
-	{%- comment -%} home button {%- endcomment -%}
-		{{ button_home_1691010490420939832 }}
-
 		{%- comment -%} newest post button {%- endcomment -%}
 		{{ button_newest_post_1691010490420939832 }}
 
@@ -316,7 +308,6 @@
 {%- assign last_post_id_1691010490420939832 = null -%}
 {%- assign button_newest_post_1691010490420939832 = null -%}
 {%- assign button_oldest_post_1691010490420939832 = null -%}
-{%- assign button_home_1691010490420939832 = null -%}
 {%- assign button_tags_1691010490420939832 = null -%}
 {%- assign page_permalink_tag_1691010490420939832 = null -%}
 {%- assign tag_word_1691010490420939832 = null -%}
