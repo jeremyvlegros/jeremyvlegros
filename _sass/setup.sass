@@ -4,17 +4,21 @@
 
 $main_margin: 0
 $main_padding: 0
+
+$main_spacing: 10px
+
 $main_font_size: 1.01em
 $main_line_height: 2.7
 
 $background_color: #D2C7C6FF
+
 $main_border_width: 1px
 $main_border_radius: 10px
 $main_border_color: #000
-//$main_text_color   : #291612
-//$main_text_color   : black
+$main_border_style: solid
+
 $main_text_color: #111
-$main_spacing: 10px
+
 $main_line_background_color: rgba(0, 0, 0, 5%)
 
 // @buttons
@@ -31,7 +35,7 @@ $button_width: inherit
 $button_padding: 7px
 $button_margin: 5px
 $button_transform_scale: scale(0.97)
-$button_transition: all .1s ease-in-out
+$button_transition: all .2s ease-in-out
 $button_text_decoration: none
 
 $button_border_width_active: 1px
@@ -54,7 +58,7 @@ $button_box_shadow: $button_shadow_offset_x $button_shadow_offset_y $button_shad
 $button_border_active: $button_border_width_active solid $button_border_color
 $button_box_shadow_active: none
 $button_text_color_active: $button_text_color
-
+$button_background_color_active: unset
 
 // @post
 
@@ -63,16 +67,16 @@ $post_text_color: $main_text_color
 $post_background_color: #EEE
 $post_shadow_color: #111
 
-// @post @button
-
 $post_button_background_color: rgba(255, 255, 255, .3)
 $post_button_text_color: #FFF
 
-$post_margin_top: calc($main_spacing * 3)
-$post_margin_right: $main_spacing
-$post_margin_bottom: $main_spacing
-$post_margin_left: $main_spacing
+$post_margin_top: calc($main_spacing * 5)
+$post_margin_right: calc($main_spacing * 8)
+$post_margin_left: $post_margin_right
+$post_margin_bottom: $post_margin_top
 $post_margin: $post_margin_top $post_margin_right $post_margin_bottom $post_margin_left
+$post_margin_left_responsive_small_screen: calc($main_spacing * 8)
+$post_margin_right_responsive_small_screen: $main_spacing
 
 $post_padding_top: calc($main_spacing * 2)
 $post_padding_right: $post_padding_top
@@ -102,7 +106,7 @@ $post_border: $post_border_width $post_border_style $post_border_color
 $post_title_background_color: none
 $post_title_margin_top: 0
 $post_title_margin_right: 0
-$post_title_margin_bottom: calc($main_spacing *3)
+$post_title_margin_bottom: calc($main_spacing * 3)
 $post_title_margin_left: 0
 $post_title_margin: $post_title_margin_top $post_title_margin_right $post_title_margin_bottom $post_title_margin_left
 
@@ -160,7 +164,6 @@ $post_category_text_color: $button_text_color
 $post_category_text_decoration: none
 $post_category_border: 1px solid $button_text_color
 $post_category_width: fit-content
-
 
 
 $post_unordered_list_margin_top: 0
@@ -247,11 +250,10 @@ $dates_margin_left: 0
 $dates_margin: $dates_margin_top $dates_margin_right $dates_margin_bottom $dates_margin_left
 
 
-
 // @timeline @margin
 
-$timeline_margin_top: 30px
-$timeline_margin_left: 30px
+$timeline_margin_top: calc($main_spacing * 3)
+$timeline_margin_left: calc($main_spacing * 5)
 $timeline_margin_right: 0px
 $timeline_margin_bottom: 0px
 
@@ -262,21 +264,22 @@ $timeline_padding_left: 0px
 $timeline_padding_right: 0px
 $timeline_padding_bottom: 0px
 
-// @page_inner_title
-$page_inner_title_font_weight: bolder
-$page_inner_title_font_variant_caps: all-small-caps
-$page_inner_title_font_size: 30px
-$page_inner_title_text_color: $main_text_color
-$page_inner_title_position_left: -14px
-$page_inner_title_position_top: $timeline_margin_top
-$page_inner_title_writing_mode: vertical-lr
-$page_inner_title_text_orientation: upright
-$page_inner_title_text_decoration_width: 1px
-$page_inner_title_border_width: $main_border_width
-$page_inner_title_border_style: none
-$page_inner_title_border_color: $post_border_color
-$page_inner_title_z_index: 2
-$page_inner_title_height: 100%
+// @path_breadcrumbs
+$path_breadcrumbs_font_weight: bolder
+$path_breadcrumbs_font_variant_caps: all-small-caps
+$path_breadcrumbs_font_size: 20px
+$path_breadcrumbs_text_color: $main_text_color
+$path_breadcrumbs_position_left: 0px
+$path_breadcrumbs_position_top: calc($main_spacing * 3)
+$path_breadcrumbs_writing_mode: vertical-lr
+$path_breadcrumbs_text_orientation: upright
+$path_breadcrumbs_text_decoration: none
+$path_breadcrumbs_text_decoration_width: 1px
+$path_breadcrumbs_border_width: $main_border_width
+$path_breadcrumbs_border_style: none
+$path_breadcrumbs_border_color: $post_border_color
+$path_breadcrumbs_z_index: 2
+$path_breadcrumbs_height: fit-content
 
 // @timeline @page
 $timeline_page_padding: 0
@@ -344,21 +347,22 @@ $code_border: none
 
 // @responsive @screen
 
-$responsive_screen_width: 576px
+$width_responsive_small_screen: 576px
 
 // @responsive @screen @timeline_index
 
-$responsive_screen_timeline_index_width: 100%
-$responsive_screen_timeline_index_padding_top: 1%
+$timeline_index_width_responsive_small_screen: 100%
+$timeline_index_padding_top_responsive_small_screen: 1%
 // mitigating the scroll ending cut
-$responsive_screen_timeline_index_padding_bottom: 20%
+$timeline_index_padding_bottom_responsive_small_screen: 20%
 
 // @responsive @screen @timeline
 
-$responsive_screen_timeline_padding: 0
-$responsive_screen_timeline_posts_margin_left: 5%
-$responsive_screen_timeline_post_margin_bottom: 2vh
-$responsive_screen_timeline_page_heading_z_index: 1
+$timeline_padding_responsive_small_screen: 0
+$timeline_margin_left_responsive_small_screen: calc($main_spacing * 7)
+$timeline_posts_margin_left_responsive_small_screen: 5%
+$timeline_post_margin_bottom_responsive_small_screen: 2vh
+$timeline_page_heading_z_index_responsive_small_screen: 1
 
 
 // @day @colors

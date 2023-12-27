@@ -1,35 +1,41 @@
 @import setup
 
-@media screen and (max-width: $responsive_screen_width)
+@media screen and (max-width: $width_responsive_small_screen)
 
 	#timeline
 
-		padding: $responsive_screen_timeline_padding
+		padding: $timeline_padding_responsive_small_screen
+		margin-left : $timeline_margin_left_responsive_small_screen 
 		flex-wrap: wrap
 
 		.posts
 
-			margin-left: $responsive_screen_timeline_posts_margin_left
-			margin-right: $responsive_screen_timeline_posts_margin_left
+			margin-left: $timeline_posts_margin_left_responsive_small_screen
+			margin-right: $timeline_posts_margin_left_responsive_small_screen
 
-		.post
+			.post
 
-			margin-bottom: $responsive_screen_timeline_post_margin_bottom
+				margin-bottom: $timeline_post_margin_bottom_responsive_small_screen
+				margin-left: 0
+				margin-right: 0
 
 		.page_title
 
 			display: flex
-			z-index: $responsive_screen_timeline_page_heading_z_index
+			z-index: $timeline_page_heading_z_index_responsive_small_screen
 
 	#timeline_index
 
 		//display: none
 		//position: relative
-		width: $responsive_screen_timeline_index_width
-		padding-top: $responsive_screen_timeline_index_padding_top
-		padding-bottom: $responsive_screen_timeline_index_padding_bottom
+		width: $timeline_index_width_responsive_small_screen
+		padding-top: $timeline_index_padding_top_responsive_small_screen
+		padding-bottom: $timeline_index_padding_bottom_responsive_small_screen
 
 	.post
+
+		margin-right: $post_margin_right_responsive_small_screen
+		margin-left: $post_margin_left_responsive_small_screen
 
 		h1
 
@@ -43,12 +49,19 @@
 			width: 100%
 			border-radius: $main_border_radius $main_border_radius 0 0 !important
 			display: flex
-			text-align: center!important
+			text-align: center !important
 			//noinspection CssReplaceWithShorthandSafely
 			border: $main_border_width $post_border_style $post_border_color
 			//noinspection CssReplaceWithShorthandSafely
 			border-bottom: none
 
 		.post_title
-			
-			margin-right : 20px!important
+
+			margin-right: 20px !important
+
+@media screen and (min-width: 1000px)
+
+	.post
+
+		margin-left: 220px
+		margin-right: 220px

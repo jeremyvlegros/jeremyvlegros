@@ -1,3 +1,5 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
 {%- comment -%} page_title_1690569717129 {%- endcomment -%}
 {%- include as_self_or_null_the_variable_initialized_from_variable.liquid from_variable=page.title -%}
 {%- assign page_title_1690569717129 = return -%}
@@ -61,6 +63,23 @@
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
+	{%- capture path_breadcrumbs_1690569717129 -%}
+
+		{%- comment -%} path_breadcrumbs {%- endcomment -%}
+		{%- include as_string_the_formatted_path_breadcrumbs_from_title.liquid from_title=page.title -%}
+		{%- assign path_breadcrumbs_1690569717129 = return -%}
+		{%- assign return = null -%}
+		{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+		{% comment %} path_breadcrumbs {% endcomment %}
+		<h1 class="path_breadcrumbs">
+			{% comment %}<a class="button" href="{{ "/" | relative_url }}">{% endcomment %}
+			{{ path_breadcrumbs_1690569717129 }}
+			{% comment %}</a>{% endcomment %}
+		</h1>
+
+	{%- endcapture -%}
+
 {%- endif -%}
 
 
@@ -102,14 +121,11 @@
 {%- endif -%}
 
 {%- capture page_url_css_1690569717129 -%}
-
 	<link rel="stylesheet" href="{{ './styles/main.css' | relative_url }}"/>
 {%- endcapture -%}
-{%- comment -%} {%- endcomment -%}
+
 
 {%- comment -%} page_favicon_1690569717129 {%- endcomment -%}
-
-{%- comment -%} favicon {%- endcomment -%}
 {%- include as_string_the_html_favicon.liquid -%}
 {%- assign page_favicon_1690569717129 = return -%}
 {%- assign return = null -%}

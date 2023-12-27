@@ -30,8 +30,8 @@ boolean_remove_bootstrap : null
 		{{ page_meta_site_name_1690569717129 }}
 		{{ page_url_css_1690569717129 }}
 		{{ page_favicon_1690569717129 }}
-		
-		{%- comment -%} now PHP STORM happy, it is still needed even when the file is `.liquid` whereas doctype html was showed as error {%- endcomment -%}
+
+		{%- comment -%} now PHP STORM happy even if the file is `.liquid` whereas `<doctype html>` was showed as error {%- endcomment -%}
 		{%- if page_title_1690569717129 -%}
 			<title>
 				{{ page_title_1690569717129 }}
@@ -43,7 +43,8 @@ boolean_remove_bootstrap : null
 
 			<main class="page" aria-label="page">
 
-			{{ content }}
+				{{ path_breadcrumbs_1690569717129 }}
+				{{ content }}
 
 			</main>
 
@@ -66,6 +67,7 @@ boolean_remove_bootstrap : null
 {%- assign page_url_1690569717129 = null -%}
 {%- assign page_url_css_1690569717129 = null -%}
 {%- assign html = null -%}
+{%- assign path_breadcrumbs_1690569717129 = null -%}
 
 
 

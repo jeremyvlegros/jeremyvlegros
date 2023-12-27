@@ -1,0 +1,66 @@
+{% comment %} part of that function returns some HTML, it needs splitting, I don't have to think about that right now{% endcomment %}
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} post_title_1703034642003921101 {%- endcomment -%}
+{%- include as_string_the_text_capitalized_from_text.liquid from_text=page.title -%}
+{%- assign page_title = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- comment -%} button_home {%- endcomment -%}
+{%- include as_string_the_html_button_home.liquid -%}
+{%- assign button_home = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+{%- capture breadcrumbs_end_title -%}
+
+	<span class="path_breadcrumbs_end">
+		{% comment %} Need to consider the length of tags, this is only to not deal with `CSS` overflow madness {% endcomment %}
+		{{ page_title | truncate: 23 }} 
+	</span>
+
+{%- endcapture -%}
+
+{%- if page_title == "Home" -%}
+
+	{%- assign return = breadcrumbs_end_title -%}
+
+{%- elsif page.layout == "layout_post" -%}
+
+	{%- assign button_tag = null -%}
+
+	{%- assign tag = null -%}
+
+	{% comment %} unless the category ends with a `s` , need to be brave to write this function, not difficult, just pointless {% endcomment %}
+	{%- if page.category == "status" or page.category == "about" -%}
+
+		{%- assign tag = page.category -%}
+
+	{%- else -%}
+
+		{%- assign tag = "" | append: page.category | append: "s" -%}
+
+	{%- endif -%}
+
+	{%- comment -%} button_tag {%- endcomment -%}
+	{%- include as_string_the_html_button_tag_from_word.liquid from_word=tag -%}
+	{%- assign button_tag = return -%}
+	{%- assign return = null -%}
+	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
+	{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_tag | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: breadcrumbs_end_title -%}
+
+{%- else -%}
+
+	{%- if page.category == "tag" -%}
+
+		{% comment %}{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_tag -%}{% endcomment %}
+		{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: breadcrumbs_end_title -%}
+
+	{%- endif -%}
+
+{%- endif -%}
+
+
+{% comment %}{{ page_title_1690569561039 | replace: " ", "#" | replace: "_", "&nbsp;" }}{% endcomment %}

@@ -1,0 +1,41 @@
+@import "setup"
+
+.path_breadcrumbs
+
+	font-weight: $path_breadcrumbs_font_weight
+	//noinspection CssBrowserCompatibilityForProperties
+	font-variant-caps: $path_breadcrumbs_font_variant_caps
+	// hacky way to display it vertically in line
+	display: block ruby
+	font-size: $path_breadcrumbs_font_size
+	color: $path_breadcrumbs_text_color
+	position: fixed
+	left: $path_breadcrumbs_position_left
+	top: $path_breadcrumbs_position_top
+	writing-mode: $path_breadcrumbs_writing_mode
+	//noinspection CssBrowserCompatibilityForProperties
+	text-orientation: $path_breadcrumbs_text_orientation
+	text-decoration: $path_breadcrumbs_text_decoration
+	//noinspection CssBrowserCompatibilityForProperties
+	text-decoration-thickness: $path_breadcrumbs_text_decoration_width
+	border: $path_breadcrumbs_border_width none $path_breadcrumbs_border_color
+	border-left-style: $path_breadcrumbs_border_style
+	z-index: $path_breadcrumbs_z_index
+	height: $path_breadcrumbs_height
+
+	.button
+
+		// band aid for the clicking area
+		// unesting would require a lot of functions, or I am missing something in `CSS` 
+		padding-right: 0
+		padding-left: 0
+
+	.path_breadcrumbs_end
+
+		background-color: $post_background_color
+		border-radius: $main_spacing
+		padding: $main_spacing
+		border-color: $main_border_color
+		border-width: $main_border_width
+		border-style: $main_border_style
+
