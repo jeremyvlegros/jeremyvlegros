@@ -1,6 +1,8 @@
 ---
-title                : "#liquid"
-tags : 
+title    : "#liquid"
+category : "tag"
+tags     :
+
 - "#liquid"
 
 ---

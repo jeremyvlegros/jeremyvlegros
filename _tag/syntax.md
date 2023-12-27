@@ -1,6 +1,8 @@
 ---
-title                : "#syntax"
-tags : 
+title    : "#syntax"
+category : "tag"
+tags     :
+
 - "#syntax"
 
 ---

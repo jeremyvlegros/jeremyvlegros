@@ -1,6 +1,8 @@
 ---
-title                : "#twitter"
-tags : 
+title    : "#twitter"
+category : "tag"
+tags     :
+
 - "#twitter"
 
 ---

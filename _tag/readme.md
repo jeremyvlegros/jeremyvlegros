@@ -1,6 +1,8 @@
 ---
-title                : "#readme"
+title    : "#readme"
 permalink            : "/tag/readme"
-tags : 
+category : "tag"
+tags     :
+
 - "#readme"
 ---

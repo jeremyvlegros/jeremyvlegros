@@ -1,6 +1,7 @@
 ---
-title                : "#c_sharp"
-tags                 :
+title    : "#c_sharp"
+category : "tag"
+tags     :
 
 - "#c_sharp"
 

@@ -1,5 +1,7 @@
 ---
-title                : "#lists"
-tags                 :
+title    : "#lists"
+category : "tag"
+tags     :
+
 - "#lists"
 ---

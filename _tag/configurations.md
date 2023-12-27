@@ -1,6 +1,7 @@
 ---
-title                : "#configurations"
-tags                 :
+title    : "#configurations"
+category : "tag"
+tags     :
 
 - "#configurations"
 

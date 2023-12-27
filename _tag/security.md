@@ -1,6 +1,8 @@
 ---
-title                : "#security"
+title    : "#security"
 permalink            : /tag/security
-tags : 
+category : "tag"
+tags     :
+
 - "#security"
 ---

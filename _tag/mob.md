@@ -1,6 +1,7 @@
 ---
-title                : "#mob"
-tags                 :
+title    : "#mob"
+category : "tag"
+tags     :
 
 - "#mob"
 

@@ -1,6 +1,7 @@
 ---
-title                : "#javascript"
-tags                 :
+title    : "#javascript"
+category : "tag"
+tags     :
 
 - "#javascript"
 

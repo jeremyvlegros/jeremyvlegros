@@ -1,6 +1,7 @@
 ---
-title                : "#informations"
-tags                 :
+title    : "#informations"
+category : "tag"
+tags     :
 
 - "#informations"
 

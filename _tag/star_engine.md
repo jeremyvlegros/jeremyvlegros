@@ -1,6 +1,7 @@
 ---
-title                : "#star_engine"
-tags                 :
+title    : "#star_engine"
+category : "tag"
+tags     :
 
 - "#star_engine"
 

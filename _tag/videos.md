@@ -1,6 +1,7 @@
 ---
-title                : "#videos"
-tags                 :
+title    : "#videos"
+category : "tag"
+tags     :
 
 - "#videos"
 

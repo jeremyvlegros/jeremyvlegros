@@ -1,6 +1,8 @@
 ---
-title                : "#website"
-tags : 
+title    : "#website"
+category : "tag"
+tags     :
+
 - "#website"
 
 ---

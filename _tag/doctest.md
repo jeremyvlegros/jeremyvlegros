@@ -1,6 +1,7 @@
 ---
-title                : "#doctest"
-tags                 :
+title    : "#doctest"
+category : "tag"
+tags     :
 
 - "#doctest"
 

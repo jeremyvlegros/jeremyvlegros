@@ -1,6 +1,8 @@
 ---
-title                : "#tumblr"
-tags : 
+title    : "#tumblr"
+category : "tag"
+tags     :
+
 - "#tumblr"
 
 ---

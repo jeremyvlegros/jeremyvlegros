@@ -1,6 +1,7 @@
 ---
-title                : "#votes"
-tags                 :
+title    : "#votes"
+category : "tag"
+tags     :
 
 - "#votes"
 

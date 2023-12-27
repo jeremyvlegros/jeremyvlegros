@@ -1,6 +1,8 @@
 ---
-title                : "#link_tree"
+title    : "#link_tree"
 permalink            : "/tag/link_tree"
-tags : 
+category : "tag"
+tags     :
+
 - "#link_tree"
 ---

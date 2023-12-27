@@ -1,6 +1,8 @@
 ---
-title                : "#languages"
+title    : "#languages"
 permalink            : "/tag/languages"
-tags : 
+category : "tag"
+tags     :
+
 - "#languages"
 ---

@@ -1,6 +1,9 @@
 ---
-title                : "#dream_jobs"
+title    : "#dream_jobs"
 permalink            : "/tag/dream_jobs"
-tags : 
+category : "tag"
+tags     :
+
 - "#dream_jobs"
+
 ---

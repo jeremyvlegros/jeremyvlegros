@@ -1,6 +1,8 @@
 ---
-title                : "#opinions"
+title    : "#opinions"
 permalink            : "/tag/opinions"
-tags : 
+category : "tag"
+tags     :
+
 - "#opinions"
 ---

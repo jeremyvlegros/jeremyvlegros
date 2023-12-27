@@ -1,6 +1,7 @@
 ---
-title                : "#ide"
-tags                 :
+title    : "#ide"
+category : "tag"
+tags     :
 
 - "#ide"
 

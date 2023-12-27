@@ -1,5 +1,7 @@
 ---
-title                : "#mojang"
-tags                 :
+title    : "#mojang"
+category : "tag"
+tags     :
+
 - "#mojang"
 ---

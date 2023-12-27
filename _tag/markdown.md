@@ -1,6 +1,7 @@
 ---
-title                : "#markdown"
-tags                 :
+title    : "#markdown"
+category : "tag"
+tags     :
 
 - "#markdown"
 

@@ -1,6 +1,8 @@
 ---
-title                : "#x_corp"
+title    : "#x_corp"
 permalink            : "/tag/x_corp" 
-tags : 
+category : "tag"
+tags     :
+
 - "#x_corp"
 ---

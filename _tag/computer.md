@@ -1,6 +1,7 @@
 ---
-title                : "#computer"
-tags                 :
+title    : "#computer"
+category : "tag"
+tags     :
 
 - "#computer"
 

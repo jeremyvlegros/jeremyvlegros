@@ -1,6 +1,8 @@
 ---
-title                : "#php"
-tags : 
+title    : "#php"
+category : "tag"
+tags     :
+
 - "#php"
 
 ---

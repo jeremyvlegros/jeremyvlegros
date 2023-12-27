@@ -1,6 +1,7 @@
 ---
-title                : "#references"
-tags                 :
+title    : "#references"
+category : "tag"
+tags     :
 
 - "#references"
 

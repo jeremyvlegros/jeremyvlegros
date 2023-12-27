@@ -1,6 +1,7 @@
 ---
-title                : "#sass"
-tags                 :
+title    : "#sass"
+category : "tag"
+tags     :
 
 - "#sass"
 

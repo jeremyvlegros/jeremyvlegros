@@ -1,5 +1,7 @@
 ---
-title                : "#modding"
-tags                 :
+title    : "#modding"
+category : "tag"
+tags     :
+
 - "#modding"
 ---

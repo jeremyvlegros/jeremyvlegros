@@ -1,6 +1,7 @@
 ---
-title                : "#pycharm"
-tags                 :
+title    : "#pycharm"
+category : "tag"
+tags     :
 
 - "#pycharm"
 

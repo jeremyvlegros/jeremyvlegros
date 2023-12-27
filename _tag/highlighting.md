@@ -1,6 +1,8 @@
 ---
-title                : "#highlighting"
-tags : 
+title    : "#highlighting"
+category : "tag"
+tags     :
+
 - "#highlighting"
 
 ---

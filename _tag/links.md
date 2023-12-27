@@ -1,5 +1,7 @@
 ---
-title                : "#links"
-tags : 
+title    : "#links"
+category : "tag"
+tags     :
+
 - "#links"
 ---

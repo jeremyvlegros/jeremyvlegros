@@ -1,6 +1,8 @@
 ---
-title                : "#video_games"
+title    : "#video_games"
 permalink            : "/tag/video_games"
-tags : 
+category : "tag"
+tags     :
+
 - "#video_games"
 ---

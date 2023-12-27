@@ -1,6 +1,8 @@
 ---
-title                : "#starfield"
+title    : "#starfield"
 permalink            : "/tag/starfield"
-tags : 
+category : "tag"
+tags     :
+
 - "#starfield"
 ---

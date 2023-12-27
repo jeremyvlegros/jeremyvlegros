@@ -1,5 +1,7 @@
 ---
-title                : "#python"
-tags                 :
+title    : "#python"
+category : "tag"
+tags     :
+
 - "#python"
 ---

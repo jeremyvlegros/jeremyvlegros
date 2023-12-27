@@ -1,6 +1,8 @@
 ---
-title                : "#status"
+title    : "#status"
 permalink            : tag/status
-tags : 
+category : "tag"
+tags     :
+
 - "#status"
 ---

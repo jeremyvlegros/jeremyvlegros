@@ -1,5 +1,8 @@
 ---
-title                : "#curriculum"
-tags : 
+title    : "#curriculum"
+category : "tag"
+tags     :
+
 - "#curriculum"
+
 ---

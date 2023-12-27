@@ -1,6 +1,7 @@
 ---
-title                : "#youtube"
-tags                 :
+title    : "#youtube"
+category : "tag"
+tags     :
 
 - "#youtube"
 

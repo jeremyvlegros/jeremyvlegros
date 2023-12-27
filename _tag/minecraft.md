@@ -1,6 +1,7 @@
 ---
-title                : "#minecraft"
-tags                 :
+title    : "#minecraft"
+category : "tag"
+tags     :
 
 - "#minecraft"
 

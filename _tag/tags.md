@@ -1,5 +1,5 @@
 ---
-title                : "#tags"
+title    : "#tags"
 layout               : layout_post
 category             : reference
 #permalink           : "/tag/tags"

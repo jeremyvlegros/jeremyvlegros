@@ -1,6 +1,8 @@
 ---
-title                : "#jeremyvlegros"
+title    : "#jeremyvlegros"
 permalink            : "/tag/jeremyvlegros"
-tags : 
+category : "tag"
+tags     :
+
 - "#jeremyvlegros"
 ---
