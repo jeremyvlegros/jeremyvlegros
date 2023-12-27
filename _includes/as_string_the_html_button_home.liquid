@@ -4,8 +4,7 @@
 {%- capture button_home_1703036931045883445 -%}
 
 	<a class="button button_home_background_color" href="{{ '/' | relative_url }}">
-	{%- comment -%}href="{{ '/' | relative_url }}"> ⌂&nbsp;Home </a>{%- endcomment -%}
-		{{ BUTTON_HOME }} 
+		{{ BUTTON_HOME | append: " " }} 
 	</a>
 
 {%- endcapture -%}
