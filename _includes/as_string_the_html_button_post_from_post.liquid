@@ -14,9 +14,7 @@
 	*** else there is no spacing between the button post and the button tag ***
 	{%- endcomment -%}
 	{%- assign tag_url_1703036688300648989 = "/post/" | append: post_id_1703036688300648989 | relative_url -%}
-	<a class="button button_open_background_color"
-			{% comment %}href="{{ tag_url_1703036688300648989 }}">{{ BUTTON_POST | append: " " }}{% endcomment %}
-		 href="{{ tag_url_1703036688300648989 }}">
+	<a class="button button_open_background_color" href="{{ tag_url_1703036688300648989 }}">
 		{{ BUTTON_POST }}
 	</a>
 
