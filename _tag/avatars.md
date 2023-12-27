@@ -1,6 +1,8 @@
 ---
-title                : "#avatars"
-tags : 
+title    : "#avatars"
+category : "tag"
+tags     :
+
 - "#avatars"
 
 ---
