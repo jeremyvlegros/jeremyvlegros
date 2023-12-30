@@ -28,7 +28,6 @@ $button_shadow_offset_x: 9px
 $button_shadow_offset_y: 9px
 $button_shadow_blurriness: 0px
 
-$button_width: 2px
 $button_height: inherit
 $button_width: inherit
 $button_padding: $main_spacing
@@ -270,7 +269,7 @@ $path_breadcrumbs_font_weight: bolder
 $path_breadcrumbs_font_variant_caps: all-small-caps
 $path_breadcrumbs_font_size: 20px
 $path_breadcrumbs_text_color: $main_text_color
-$path_breadcrumbs_position_left: 0px
+$path_breadcrumbs_position_left: $button_margin
 $path_breadcrumbs_position_top: $main_spacing
 $path_breadcrumbs_writing_mode: vertical-lr
 $path_breadcrumbs_text_orientation: upright
@@ -281,7 +280,9 @@ $path_breadcrumbs_border_style: none
 $path_breadcrumbs_border_color: $post_border_color
 $path_breadcrumbs_z_index: 2
 $path_breadcrumbs_height: fit-content
-$path_breadcrumbs_padding: $main_spacing
+$path_breadcrumbs_padding: 0px
+// @task : why do I need to increase this to match the button padding, that is 4px less ?
+$path_breadcrumbs_end_padding: 14px
 
 // @timeline @page
 $timeline_page_padding: 0
