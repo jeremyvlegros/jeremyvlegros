@@ -24,15 +24,14 @@ $main_line_background_color: rgba(0, 0, 0, 5%)
 // @buttons
 
 $button_text_align: center
-$button_shadow_offset_x: 7px
-$button_shadow_offset_y: 7px
+$button_shadow_offset_x: 9px
+$button_shadow_offset_y: 9px
 $button_shadow_blurriness: 0px
-$button_border_radius: $main_border_radius
-$button_border_width: $main_border_width
+
 $button_width: 2px
 $button_height: inherit
 $button_width: inherit
-$button_padding: 7px
+$button_padding: $main_spacing
 $button_margin: 5px
 $button_transform_scale: scale(0.97)
 $button_transition: all .2s ease-in-out
@@ -41,13 +40,15 @@ $button_text_decoration: none
 $button_border_width_active: 1px
 
 // @buttons @colors
-$button_default_color: #111
+$button_default_color: #3d452d
 $button_home_color: $button_default_color
 $button_newest_post_color: $button_default_color
 $button_oldest_post_color: $button_default_color
 $button_open_color: $button_default_color
 $button_shadow_color: black
 $button_background_color: rgba(0, 0, 0, .5)
+$button_border_radius: $main_border_radius
+$button_border_width: calc($main_border_width * 2)
 $button_border_color: $main_border_color
 $button_text_color: white
 $button_font_weight: bolder
@@ -270,7 +271,7 @@ $path_breadcrumbs_font_variant_caps: all-small-caps
 $path_breadcrumbs_font_size: 20px
 $path_breadcrumbs_text_color: $main_text_color
 $path_breadcrumbs_position_left: 0px
-$path_breadcrumbs_position_top: calc($main_spacing * 3)
+$path_breadcrumbs_position_top: $main_spacing
 $path_breadcrumbs_writing_mode: vertical-lr
 $path_breadcrumbs_text_orientation: upright
 $path_breadcrumbs_text_decoration: none
@@ -280,6 +281,7 @@ $path_breadcrumbs_border_style: none
 $path_breadcrumbs_border_color: $post_border_color
 $path_breadcrumbs_z_index: 2
 $path_breadcrumbs_height: fit-content
+$path_breadcrumbs_padding: $main_spacing
 
 // @timeline @page
 $timeline_page_padding: 0
@@ -338,7 +340,7 @@ $timeline_index_link_border_active: $button_border_active
 // @code @colors
 
 $code_dracula_background_color: #282a36
-$code_background_color: $code_dracula_background_color
+$code_background_color: #444
 $code_backticks_text_color: #FFF
 $code_border_color: rgba(0, 0, 0, .5)
 //$code_border : $main_border_width solid $code_border_color
@@ -407,7 +409,8 @@ $tag_nexus_mods_color: #D98F3FFF
 $tag_github_color: #282C34FF
 $tag_twitch_color: #9147FFFF
 $tag_steam_color: #171A21FF
-$tag_x_corp_color: #051620
+//$tag_x_corp_color: #051620
+$tag_x_corp_color: $tag_twitter_color
 $tag_php_color: #7377AD
 $tag_jekyll_color: #3E1F1F
 $tag_link_tree_color: #254F1A
@@ -440,7 +443,7 @@ $tag_turquoise_color: #02657A
 $tag_red_color: #AF1512
 $tag_dark_red_color: #3F1415
 $tag_starfield_color: #C82337
-$tag_star_citizen_color: #141921
+$tag_star_citizen_color: #344157
 $tag_pycharm_color: #24c181
 $tag_minecraft_color: #679C3C
 $tag_python_color: #3E75A8
