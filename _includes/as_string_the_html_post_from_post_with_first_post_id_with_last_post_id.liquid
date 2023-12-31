@@ -56,16 +56,23 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
+
+{%- comment -%} button_index_1691010490420939832 {%- endcomment -%}
+{%- include as_string_the_html_button_index.liquid -%}
+{%- assign button_index_1691010490420939832 = return -%}
+{%- assign return = null -%}
+{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
+
 {%- comment -%} button newest_post {%- endcomment -%}
-{% comment %}{%- include as_string_the_html_button_newest_post_from_post_id.liquid from_post_id=first_post_id_1691010490420939832 -%}{% endcomment %}
-{% comment %}{%- assign button_newest_post_1691010490420939832 = return -%}{% endcomment %}
-{% comment %}{%- assign return = null -%}{% endcomment %}
+{%- include as_string_the_html_button_newest_post_from_post_id.liquid from_post_id=first_post_id_1691010490420939832 -%}
+{%- assign button_newest_post_1691010490420939832 = return -%}
+{%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button oldest_post {%- endcomment -%}
-{% comment %}{%- include as_string_the_html_button_oldest_post_from_post_id.liquid from_post_id=last_post_id_1691010490420939832 -%}{% endcomment %}
-{% comment %}{%- assign button_oldest_post_1691010490420939832 = return -%}{% endcomment %}
-{% comment %}{%- assign return = null -%}{% endcomment %}
+{%- include as_string_the_html_button_oldest_post_from_post_id.liquid from_post_id=last_post_id_1691010490420939832 -%}
+{%- assign button_oldest_post_1691010490420939832 = return -%}
+{%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button home {%- endcomment -%}
@@ -242,6 +249,9 @@
 {%- capture post_tags_1691010490420939832 -%}
 
 	<div class="tags">
+
+		{%- comment -%} newest post button {%- endcomment -%}
+		{{ button_index_1691010490420939832 }}
 
 		{%- comment -%} newest post button {%- endcomment -%}
 		{{ button_newest_post_1691010490420939832 }}

@@ -1,0 +1,16 @@
+{%- include CONSTANTS/ALL.liquid -%}
+
+{%- comment -%} index button {%- endcomment -%}
+{%- capture button_index_1704022850210252799 -%}
+
+	<a class="button button_index_background_color" href="#timeline_index">
+		{{ BUTTON_INDEX | append: " " }} 
+	</a>
+
+{%- endcapture -%}
+
+{%- comment -%} return {%- endcomment -%}
+{%- assign return = button_index_1704022850210252799 -%}
+
+{% comment %} resetting {% endcomment %}
+{%- assign button_index_1704022850210252799 = null -%}
