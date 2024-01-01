@@ -82,7 +82,7 @@
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
 {%- comment -%} button post {%- endcomment -%}
-{%- include as_string_the_html_button_post_from_post.liquid from_post=include.from_post -%}
+{%- include as_string_the_html_button_post_in_posts_from_post.liquid from_post=include.from_post -%}
 {%- assign button_post_1691010490420939832 = return | append: " " -%}
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
@@ -107,7 +107,7 @@
 			{%- comment -%} <a class="button {{ background_color }}" {%- endcomment -%}
 			<a class="button button_home_background_color"
 				 href="{{ '/tag/posts#' | append: post_id_1691010490420939832 | relative_url }}">
-			{{ BUTTON_POSTS }} 
+			{{ BUTTON_POST_IN_POSTS }} 
 			</a>
 		{%- endif -%}
 
@@ -173,6 +173,10 @@
 
 	{%- comment -%}doesn't show the newest newest post button in single posts {%- endcomment -%}
 	{%- assign button_newest_post_1691010490420939832 = null -%}
+
+	{%- assign button_newest_post_1691010490420939832 = null -%}
+
+	{%- assign button_index_1691010490420939832 = null -%}
 
 {%- endif -%}
 {% comment %} ^^^^^^^^^^^^^^ END OF MUTING BUTTONS ^^^^^^^^^^^^^^ {% endcomment %}
@@ -280,9 +284,12 @@
 
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
+
 		{{ post_title_1691010490420939832 }}
 
 		{{ post_content_1691010490420939832 }}
+
+
 
 		<div class="dates">
 		{{ post_date_of_creation_1691010490420939832 }}
@@ -290,6 +297,7 @@
 			{{ post_date_of_modification_1691010490420939832 }}
 			<br>
 		</div>
+
 		
 		<div class="footer" aria-label="footer">
 

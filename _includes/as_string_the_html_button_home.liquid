@@ -3,7 +3,7 @@
 {%- comment -%} home button {%- endcomment -%}
 {%- capture button_home_1703036931045883445 -%}
 
-	<a class="button button_home_background_color" href="{{ '/' | relative_url }}">
+	<a class="button button_home_background_color" role="button" href="{{ '/' | relative_url }}" aria-label="button home">
 		{{ BUTTON_HOME | append: " " }} 
 	</a>
 

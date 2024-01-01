@@ -9,7 +9,7 @@
 {%- capture return -%}
 
 	{%- assign tag_url_1703036136228950062 = page.url | append: "#" | append: post_id_1703036136228950062 | relative_url -%}
-	<a class="button button_oldest_post_background_color" href="{{ tag_url_1703036136228950062 }}" role="button">
+	<a class="button button_oldest_post_background_color" href="{{ tag_url_1703036136228950062 }}" role="button" aria-label="button oldest post in the page">
 		{{ BUTTON_OLDEST_POST | append: " " }}
 	</a>
 

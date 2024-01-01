@@ -13,9 +13,9 @@
 {%- assign return = null -%}
 {%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-{%- capture breadcrumbs_end_title -%}
+{%- capture button_staying_pressed_title -%}
 
-	<span class="path_breadcrumbs_end">
+	<span class="path_button_staying_pressed">
 		{% comment %} Need to consider the length of tags, this is only to not deal with `CSS` overflow madness {% endcomment %}
 		{{ page_title | truncate: 23 }} 
 	</span>
@@ -24,7 +24,7 @@
 
 {%- if page_title == "Home" -%}
 
-	{%- assign return = breadcrumbs_end_title -%}
+	{%- assign return = button_staying_pressed_title -%}
 
 {%- elsif page.layout == "layout_post" -%}
 
@@ -49,14 +49,14 @@
 	{%- assign return = null -%}
 	{%- comment -%} `Liquid` does not have functions {%- endcomment -%}
 
-	{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_tag | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: breadcrumbs_end_title -%}
+	{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_tag | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_staying_pressed_title -%}
 
 {%- else -%}
 
 	{%- if page.category == "tag" -%}
 
 		{% comment %}{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_tag -%}{% endcomment %}
-		{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: breadcrumbs_end_title -%}
+		{%- assign return = button_home | append: WEBSITE_PATH_VERTICAL_SEPARATOR | append: button_staying_pressed_title -%}
 
 	{%- endif -%}
 
