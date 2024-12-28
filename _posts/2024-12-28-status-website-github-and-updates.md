@@ -46,5 +46,5 @@ Modding :
 - I often think about fairness towards modders from : developers;publishers;gamers;fellow modders;the laws.I try to create a workflow to encounter the least of problems, but it implies a lot of sacrificed methods. 
 
 IDE / text editor :
-- I bought a `sublime text` licence, It takes care of large file markdown files without problems
+- I bought a `sublime text` licence, It takes care of large files (`python`,`markdown`) without problems
 - I am using `Pycharm community` for `Python`, until I can modify `sublime text` enough to become an IDE or choose to install the `anaconda` package
